@@ -17,3 +17,4 @@ mapas/*/dados/*_prancha*.svg
 scripts/colecoes/cache/
 # anexos das releases das coleções (bioenergia-sp-2026, …)
 mapas/*/dados/*.gpkg.zip
+__pycache__/

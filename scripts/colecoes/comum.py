@@ -307,6 +307,77 @@ def zipar(arq: Path) -> Path:
     return z
 
 
+# Albers equivalente do IBGE para o Brasil: áreas em km² sem a distorção da policônica.
+AREA_BR = "+proj=aea +lat_0=-12 +lon_0=-54 +lat_1=-2 +lat_2=-22 +x_0=5000000 +y_0=10000000 +ellps=GRS80 +units=m +no_defs"
+
+
+def km2(g: gpd.GeoSeries | gpd.GeoDataFrame) -> pd.Series:
+    return g.to_crs(AREA_BR).area / 1e6
+
+
+def km_geodesico(g: gpd.GeoSeries) -> float:
+    """Comprimento de linhas em km, no elipsoide (GRS80)."""
+    from pyproj import Geod
+
+    geod = Geod(ellps="GRS80")
+    return float(sum(geod.geometry_length(x) for x in g.to_crs(GEO).geometry) / 1000)
+
+
+def _horario(geom):
+    """d3-geo espera o anel externo no sentido horário (o contrário da RFC 7946)."""
+    import shapely
+    from shapely.geometry.polygon import orient
+
+    if geom is None or geom.is_empty:
+        return geom
+    if geom.geom_type == "Polygon":
+        return orient(geom, sign=-1.0)
+    if geom.geom_type == "MultiPolygon":
+        return shapely.MultiPolygon([orient(p, sign=-1.0) for p in geom.geoms])
+    if geom.geom_type == "GeometryCollection":  # make_valid pode devolver polígonos misturados com linhas
+        polis = [p for g in geom.geoms for p in (g.geoms if g.geom_type == "MultiPolygon" else [g]) if p.geom_type == "Polygon"]
+        if polis:
+            return shapely.MultiPolygon([orient(p, sign=-1.0) for p in polis])
+        linhas = [g for g in geom.geoms if g.geom_type in ("LineString", "MultiLineString")]
+        return shapely.union_all(linhas) if linhas else None
+    return geom
+
+
+def _arredonda_coords(o, casas):
+    if isinstance(o, float):
+        return round(o, casas)
+    if isinstance(o, (list, tuple)):
+        return [_arredonda_coords(v, casas) for v in o]
+    return o
+
+
+def para_d3(gdf: gpd.GeoDataFrame, campos: list[str], tol: float | None = None, casas: int = 4,
+            cobertura: bool = True) -> dict:
+    """FeatureCollection para a prancha (só desenho): simplificada em graus, anéis no sentido do d3.
+
+    `cobertura=False` para polígonos que se sobrepõem (unidades de conservação): simplifica um a um.
+    """
+    import shapely
+    from shapely.geometry import mapping
+
+    g = gdf.to_crs(GEO)
+    geoms = g.geometry.values
+    if tol:
+        poli = g.geom_type.isin(["Polygon", "MultiPolygon"]).all()
+        geoms = (shapely.coverage_simplify(shapely.make_valid(geoms), tol) if poli and cobertura and len(g) > 1
+                 else shapely.make_valid(shapely.simplify(geoms, tol, preserve_topology=True)))
+    feats = []
+    for (_, linha_), geom in zip(g.iterrows(), geoms):
+        if geom is None or geom.is_empty:
+            continue
+        p = {c: (None if not isinstance(linha_[c], str) and pd.isna(linha_[c]) else
+                 (linha_[c].item() if hasattr(linha_[c], "item") else linha_[c])) for c in campos}
+        m = mapping(_horario(geom))
+        feats.append({"type": "Feature", "properties": p,
+                      "geometry": {"type": m["type"], "coordinates": _arredonda_coords(m["coordinates"], casas)}})
+    return {"type": "FeatureCollection", "features": feats}
+
+
 def _sem_nan(o):
     """NaN não existe em JSON: vira null (= sem informação)."""
     if isinstance(o, float) and math.isnan(o):
@@ -328,5 +399,5 @@ __all__ = [
     "RAIZ", "DADOS", "GEO", "PLASMA", "VIRIDIS", "ZERO", "SEM_INFO", "TINTA", "PAPEL", "MINERAIS", "infra", "siga",
     "malha_uf", "sidra", "valor_sidra", "quebras", "classe", "nf", "rotulos_classes",
     "estilo_graduado", "estilo_contorno", "estilo_regras", "marcador", "linha", "igual", "preenchimento",
-    "gravar_estilos", "zipar", "gravar_cache",
+    "gravar_estilos", "zipar", "gravar_cache", "AREA_BR", "km2", "km_geodesico", "para_d3",
 ]

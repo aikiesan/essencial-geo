@@ -13,7 +13,7 @@ import { readFile, writeFile, mkdir, stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
-import { geoTransverseMercator, geoConicEqualArea, geoPath, geoGraticule, geoDistance, geoBounds } from 'd3-geo';
+import { geoTransverseMercator, geoConicEqualArea, geoPath, geoGraticule, geoDistance, geoBounds, geoArea } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { norteFolha, molecula, microtexto, ASSINATURA, ESTRELAS } from '../../lib/identidade.mjs';
 import { motivo, chamada } from './arte.mjs';
@@ -154,6 +154,21 @@ function projetar(w, h, pad) {
   return { proj, path: geoPath(proj).digits(1), pathR: geoPath(recorte).digits(1), pxKm };
 }
 
+/** Polígono pronto para o d3: sem partes invertidas (ver camadas extras em quadroMapa). */
+function sanear(f) {
+  const g = f.geometry;
+  const avesso = (coords) => geoArea({ type: 'Polygon', coordinates: coords }) > 2 * Math.PI;
+  if (g.type === 'Polygon') {
+    if (!avesso(g.coordinates)) return f;
+    return { ...f, geometry: { type: 'Polygon', coordinates: g.coordinates.map((r) => [...r].reverse()) } };
+  }
+  if (g.type === 'MultiPolygon') {
+    const partes = g.coordinates.filter((p) => !avesso(p));
+    return partes.length ? { ...f, geometry: { type: 'MultiPolygon', coordinates: partes } } : null;
+  }
+  return f;
+}
+
 /* ------------------------------------------------------------------ um quadro de mapa */
 let uid = 0;
 /**
@@ -195,7 +210,22 @@ function quadroMapa(w, h, mapa) {
     s.push(`<defs><pattern id="${id}x" width="${passo}" height="${passo}" patternUnits="userSpaceOnUse" patternTransform="rotate(${angulo})"><path d="M0 0V${passo}" stroke="${cor}" stroke-width="${lh}" stroke-opacity=".75"/></pattern></defs>`);
     s.push(`<g fill="url(#${id}x)">${municipios.filter((m) => cds.has(m.properties.CD_MUN)).map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
   }
-  s.push(`<path d="${cache.rgint.features.map((r) => path(r)).join('')}" fill="none" stroke="${LIM_RGINT}" stroke-width="${mapa.bordaRgint ?? 1.4}" stroke-linejoin="round" stroke-opacity=".85"/>`);
+  // Camadas extras (bacias, áreas protegidas…): [{ feats, cor(f) | cor, borda, largura, opacidade, hachura }].
+  for (const [k, c] of (mapa.camadas ?? []).entries()) {
+    let padrao = '';
+    if (c.hachura) {
+      const { cor: hc, passo = 6, largura: hl = 1, angulo = 45, fundo = 'none' } = c.hachura;
+      padrao = `${id}c${k}`;
+      s.push(`<defs><pattern id="${padrao}" width="${passo}" height="${passo}" patternUnits="userSpaceOnUse" patternTransform="rotate(${angulo})"><rect width="${passo}" height="${passo}" fill="${fundo}"/><path d="M0 0V${passo}" stroke="${hc}" stroke-width="${hl}"/></pattern></defs>`);
+    }
+    // Anel no sentido errado vira o avesso do mundo no d3. Em lascas de recorte (partes de poucos metros que o
+    // arredondamento das coordenadas inverte), a parte é descartada; um polígono inteiro invertido é desvirado.
+    const feats = c.feats.map((f) => sanear(f)).filter(Boolean);
+    const corDe = (f) => (padrao ? `url(#${padrao})` : typeof c.cor === 'function' ? c.cor(f) : (c.cor ?? 'none'));
+    s.push(`<g stroke="${c.borda ?? 'none'}" stroke-width="${c.largura ?? 0}" stroke-linejoin="round" fill-opacity="${c.opacidade ?? 1}"${c.tracejado ? ` stroke-dasharray="${c.tracejado}"` : ''}>${feats
+      .map((f) => [f, path(f)]).filter(([, d]) => d).map(([f, d]) => `<path d="${d}" fill="${corDe(f)}"/>`).join('')}</g>`);
+  }
+  if (!mapa.semRgint) s.push(`<path d="${cache.rgint.features.map((r) => path(r)).join('')}" fill="none" stroke="${LIM_RGINT}" stroke-width="${mapa.bordaRgint ?? 1.4}" stroke-linejoin="round" stroke-opacity=".85"/>`);
   s.push(`<path d="${path(limite)}" fill="none" stroke="${TINTA}" stroke-width="${mapa.bordaEstado ?? 2.6}" stroke-linejoin="round"/>`);
   // Pontos: maiores por baixo.
   for (const p of [...(mapa.pontos ?? [])].sort((a, b) => b.r - a.r)) {
@@ -492,10 +522,11 @@ ${norteFolha({ cx: qw - 110, cy: 60 + 30 + 55, altura: 110 })}
   const fim = MH - 24;
   const c = carimbo(tema, numero, data, fim);
   // Friso da coleção: só quando sobra respiro entre o conteúdo e a escala.
-  if (tema.motivo && c.y0 - y > 300) {
-    const yM = y + Math.min(60, (c.y0 - y - 300) / 2 + 24);
-    p.push(`<g transform="translate(0 ${f1(yM)})">${motivo(tema.motivo, LP, 84)}</g>`);
-    y = yM + 84;
+  if (tema.motivo && c.y0 - y > 250) {
+    const hM = Math.min(84, c.y0 - y - 196);
+    const yM = y + Math.min(60, Math.max(18, (c.y0 - y - 196 - hM) / 2 + 18));
+    p.push(`<g transform="translate(0 ${f1(yM)})">${motivo(tema.motivo, LP, hM)}</g>`);
+    y = yM + hM;
   }
   const yEsc = y + Math.max(10, (c.y0 - y - 110) / 2) + 46;
   p.push(blocoEscala(pxKm, yEsc, tema.layout === 'um' ? '' : 'a mesma nos três mapas'));
