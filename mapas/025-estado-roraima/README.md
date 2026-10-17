@@ -4,6 +4,7 @@ titulo: "Roraima"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-12-18
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, roraima, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

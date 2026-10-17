@@ -4,6 +4,7 @@ titulo: "Bahia"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-11-18
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, bahia, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

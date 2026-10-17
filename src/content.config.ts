@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { CATEGORIA_IDS, FORMATO_IDS } from './site.config';
+import { CATEGORIA_IDS, COLECAO_IDS, FORMATO_IDS } from './site.config';
 
 /** Um parágrafo só, sem linhas em branco — vale para o contexto nas duas línguas. */
 const paragrafo = z
@@ -51,6 +51,8 @@ const mapas = defineCollection({
       data: z.coerce.date(),
       atualizado: z.coerce.date().optional(),
       categoria: z.enum(CATEGORIA_IDS),
+      /** Série a que o mapa pertence (src/site.config.ts → COLECOES). A ordem de leitura é o número. */
+      colecao: z.enum(COLECAO_IDS).optional(),
       tags: z.array(z.string()).default([]),
       rascunho: z.boolean().default(false),
       /** Marca pranchas-modelo com dados sintéticos. */

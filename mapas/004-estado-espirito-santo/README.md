@@ -4,6 +4,7 @@ titulo: "Espírito Santo"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-10-30
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, espirito-santo, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

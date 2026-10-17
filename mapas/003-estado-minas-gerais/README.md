@@ -4,6 +4,7 @@ titulo: "Minas Gerais"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-10-28
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, minas-gerais, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

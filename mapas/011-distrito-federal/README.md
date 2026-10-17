@@ -4,6 +4,7 @@ titulo: "Distrito Federal"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-11-16
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, distrito-federal, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

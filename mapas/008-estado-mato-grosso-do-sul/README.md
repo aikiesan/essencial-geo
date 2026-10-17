@@ -4,6 +4,7 @@ titulo: "Mato Grosso do Sul"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-11-09
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, mato-grosso-do-sul, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

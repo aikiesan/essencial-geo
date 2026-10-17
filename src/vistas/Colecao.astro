@@ -1,0 +1,74 @@
+---
+/** Página de uma coleção: apresentação, andamento e as pranchas em ordem de leitura. */
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import ListaFeed from '../components/ListaFeed.astro';
+import PainelFichas from '../components/PainelFichas.astro';
+import Progresso from '../components/Progresso.astro';
+import Icone from '../components/Icone.astro';
+import type { Colecao } from '../lib/colecoes';
+import { dataCurta, linguaDe, rota, t } from '../i18n';
+
+interface Props { colecao: Colecao }
+const { colecao: c } = Astro.props;
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const total = Math.max(c.ordem.length, c.mapas.length);
+---
+
+<Base titulo={c.titulo} descricao={c.resumo} imagem={c.mapas[0]?.data.imagem.src}>
+  <div class="feed">
+    <CabecalhoPagina
+      sobre={`${tx.colecoes.colecao} · ${total} ${total === 1 ? tx.colecoes.mapa : tx.colecoes.mapas}`}
+      titulo={c.titulo}
+      linhaFina={c.resumo}
+    >
+      <div class="andamento">
+        <Progresso feitos={c.mapas.length} total={total} />
+        {
+          c.proxima && (
+            <p class="rotulo">
+              {tx.colecoes.proxima}: <span class="mono">{dataCurta(c.proxima, lingua)}</span>
+            </p>
+          )
+        }
+      </div>
+      <p class="ordem">
+        <span>{tx.colecoes.ordem}</span>
+        <a class="rotulo" href={rota(lingua, 'colecoes')}><Icone nome="voltar" tamanho={11} /> {tx.colecoes.todas}</a>
+      </p>
+    </CabecalhoPagina>
+  </div>
+  <ListaFeed mapas={c.mapas} />
+  <PainelFichas slot="direita" mapas={c.mapas} />
+</Base>
+
+<style>
+  .andamento {
+    margin-top: var(--e-5);
+    max-width: 420px;
+  }
+  .andamento .rotulo {
+    margin: var(--e-2) 0 0;
+  }
+  .ordem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--e-2) var(--e-4);
+    margin: var(--e-5) 0 0;
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+  }
+  .ordem a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    min-height: 24px;
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .ordem a:hover {
+    color: var(--acento);
+  }
+</style>

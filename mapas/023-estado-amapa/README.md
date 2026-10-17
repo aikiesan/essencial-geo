@@ -4,6 +4,7 @@ titulo: "Amapá"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-12-14
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, amapa, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

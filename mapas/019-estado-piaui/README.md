@@ -4,6 +4,7 @@ titulo: "Piauí"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-12-04
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, piaui, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

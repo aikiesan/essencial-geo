@@ -7,6 +7,7 @@ import { Image, getImage } from 'astro:assets';
 import Ficha from './Ficha.astro';
 import Icone from './Icone.astro';
 import { linkMapa, nomeFonte, numeroFormatado, type Mapa } from '../lib/mapas';
+import { colecaoDoMapa } from '../lib/colecoes';
 import { dataExtensa, dataIso, rota, t } from '../i18n';
 
 interface Props {
@@ -35,6 +36,7 @@ const alta = await getImage({
   quality: 86,
 });
 const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]))].join(', ');
+const serie = await colecaoDoMapa(mapa);
 ---
 
 <article class:list={['cartao', { 'cartao--destaque': destaque }]} id={mapa.id} data-mapa={mapa.id}>
@@ -43,6 +45,16 @@ const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — 
       <span>{tx.geral.no} {num}</span>
       <span aria-hidden="true">/</span>
       <a href={rota(lingua, 'categoria', d.categoria)}>{cat.curto}</a>
+      {
+        serie && (
+          <>
+            <span aria-hidden="true">/</span>
+            <a href={rota(lingua, 'colecoes', serie.colecao.id)} class="cartao__colecao">
+              {serie.colecao.titulo} <span class="mono">{serie.posicao}/{serie.total}</span>
+            </a>
+          </>
+        )
+      }
       <span class="cartao__selos">
         {mapa.agendado && <span class="selo selo--agenda">{tx.cartao.agendado}</span>}
         {mapa.traducaoPendente && <span class="selo selo--alerta">{tx.cartao.traducaoPendente}</span>}
@@ -66,6 +78,14 @@ const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — 
         )
       }
     </p>
+    {
+      /* Na página do mapa, a ficha é o que mais se procura: o botão vem logo no cabeçalho. */
+      destaque && (
+        <a class="botao abrir-ficha cartao__ficha" href={linkMapa(mapa)} data-abrir-ficha={mapa.id} aria-haspopup="dialog">
+          <Icone nome="ficha" /> {tx.gaveta.abrir}
+        </a>
+      )
+    }
   </header>
 
   <figure class="prancha">
@@ -84,7 +104,7 @@ const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — 
           src={d.imagem}
           alt={d.imagem_alt}
           widths={[480, 760, 1140, 1520]}
-          sizes="(min-width: 1240px) 700px, (min-width: 860px) calc(100vw - 340px), calc(100vw - 48px)"
+          sizes="(min-width: 1100px) 750px, (min-width: 860px) calc(100vw - 340px), calc(100vw - 48px)"
           loading={prioridade ? 'eager' : 'lazy'}
           fetchpriority={prioridade ? 'high' : 'auto'}
           decoding="async"
@@ -106,6 +126,13 @@ const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — 
   <p class="cartao__contexto">{d.contexto}</p>
 
   <footer class="cartao__rodape">
+    {
+      !destaque && (
+        <a class="botao abrir-ficha" href={linkMapa(mapa)} data-abrir-ficha={mapa.id} aria-haspopup="dialog">
+          <Icone nome="ficha" /> {tx.gaveta.abrir}
+        </a>
+      )
+    }
     {
       d.discussoes.length > 0 && (
         <ul class="cartao__discussoes" role="list" aria-label={tx.cartao.discussoes}>
@@ -208,6 +235,15 @@ const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — 
   }
   .linha-data time::first-letter {
     text-transform: uppercase;
+  }
+  .cartao__ficha {
+    margin-top: var(--e-4);
+    background: var(--tinta);
+    color: var(--papel);
+  }
+  .cartao__ficha:hover {
+    background: var(--acento);
+    border-color: var(--acento);
   }
   .cartao__titulo {
     font-size: var(--t-xl);

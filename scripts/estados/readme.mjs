@@ -142,6 +142,7 @@ titulo: ${aspas(e.nome)}
 subtitulo: "Divisão territorial e rodovias"
 data: ${e.data}
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, ${slug}, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

@@ -15,6 +15,7 @@ import { LINGUAS, IDIOMA, rota, type Lingua } from '../i18n';
 import { mapasPublicados } from '../lib/mapas';
 import { notasPublicadas } from '../lib/notas';
 import { POR_FOLHA } from '../lib/rotas';
+import { colecoesNoAr } from '../lib/colecoes';
 
 interface Entrada {
   /** Caminho em cada língua. */
@@ -31,6 +32,7 @@ export const GET: APIRoute = async ({ site }) => {
 
   const mapas = await mapasPublicados('pt');
   const notas = await notasPublicadas('pt');
+  const colecoes = await colecoesNoAr('pt');
   const recente = (datas: Date[]) => (datas.length ? new Date(Math.max(...datas.map((d) => d.getTime()))) : undefined);
   const dataDe = (m: { data: { data: Date; atualizado?: Date } }) => m.data.atualizado ?? m.data.data;
 
@@ -41,6 +43,11 @@ export const GET: APIRoute = async ({ site }) => {
     ...CATEGORIA_IDS.filter((c) => mapas.some((m) => m.data.categoria === c)).map((c) => ({
       caminhos: nas((l) => rota(l, 'categoria', c)),
       ultima: recente(mapas.filter((m) => m.data.categoria === c).map(dataDe)),
+    })),
+    { caminhos: nas((l) => rota(l, 'colecoes')), ultima: recente(mapas.filter((m) => m.data.colecao).map(dataDe)) },
+    ...colecoes.map((c) => ({
+      caminhos: nas((l) => rota(l, 'colecoes', c.id)),
+      ultima: recente(c.mapas.map(dataDe)),
     })),
     ...mapas.map((m) => ({ caminhos: nas((l) => rota(l, 'mapas', m.id)), ultima: dataDe(m) })),
     { caminhos: nas((l) => rota(l, 'indice')), ultima: recente(mapas.map(dataDe)) },

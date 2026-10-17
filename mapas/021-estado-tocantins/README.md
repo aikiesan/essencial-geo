@@ -4,6 +4,7 @@ titulo: "Tocantins"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-12-09
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, tocantins, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

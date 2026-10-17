@@ -4,6 +4,7 @@ titulo: "Paraná"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-11-02
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, parana, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

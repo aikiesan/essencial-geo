@@ -81,7 +81,6 @@
   --e-8: 64px;
 
   --col-esq: 272px;
-  --col-dir: 344px;
   --feed-max: 760px;
 
   /* Grão de papel: ruído neutro quase imperceptível, sem tingir o fundo */
@@ -352,8 +351,7 @@ hr {
   min-height: 100vh;
 }
 
-.col-esq,
-.col-dir {
+.col-esq {
   min-width: 0;
 }
 
@@ -362,8 +360,15 @@ hr {
   padding: var(--e-5) var(--e-4) var(--e-8);
 }
 
-.col-dir {
-  display: none;
+/* Ficha técnica: com JavaScript abre na gaveta (botão .abrir-ficha); sem ele, embutida no cartão. */
+.abrir-ficha {
+  display: none !important;
+}
+.js .abrir-ficha {
+  display: inline-flex !important;
+}
+.js .so-estreito {
+  display: none !important;
 }
 
 @media (min-width: 860px) {
@@ -381,26 +386,6 @@ hr {
   }
   .col-centro {
     padding: var(--e-7) var(--e-6) var(--e-8);
-  }
-}
-
-@media (min-width: 1240px) {
-  .estrutura {
-    grid-template-columns: var(--col-esq) minmax(0, 1fr) var(--col-dir);
-  }
-  .col-dir {
-    display: block;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    background: var(--painel);
-    border-left: 1px solid var(--linha);
-    scrollbar-width: thin;
-  }
-  /* Em telas largas, a ficha vive na coluna direita, não dentro do cartão */
-  .so-estreito {
-    display: none !important;
   }
 }
 
@@ -521,7 +506,8 @@ hr {
     background: #fff;
   }
   .col-esq,
-  .col-dir,
+  .gaveta,
+  .abrir-ficha,
   .so-estreito,
   .divisor {
     display: none !important;

@@ -89,6 +89,76 @@ export const CATEGORIA_IDS = [
 ] as const;
 export type CategoriaId = (typeof CATEGORIA_IDS)[number];
 
+/**
+ * Coleções: séries de pranchas sobre um mesmo tema, lidas em ordem. Cada mapa
+ * aponta para a sua no campo `colecao` do README.md. A ordem aqui é a ordem da
+ * página de coleções e da barra lateral; uma coleção só aparece quando tem mapa no ar.
+ */
+export const COLECOES = {
+  'brasil-estado-por-estado': {
+    pt: {
+      titulo: 'Brasil, estado por estado',
+      resumo: 'Uma base cartográfica de cada unidade da federação — municípios, regiões geográficas, limite e rodovias —, todas com o mesmo desenho e os mesmos arquivos.',
+    },
+    en: {
+      titulo: 'Brazil, state by state',
+      resumo: 'A cartographic base for each federative unit — municipalities, geographic regions, boundary and highways — all with the same design and the same files.',
+    },
+  },
+  'bioenergia-sp': {
+    pt: {
+      titulo: 'Bioenergia em São Paulo',
+      resumo: 'Usinas de biogás, rebanhos, cana-de-açúcar e usinas sucroenergéticas: onde estão os resíduos que podem virar energia no estado.',
+    },
+    en: {
+      titulo: 'Bioenergy in São Paulo',
+      resumo: 'Biogas plants, livestock, sugarcane and sugar-energy mills: where the residues that can become energy are found across the state.',
+    },
+  },
+  rmc: {
+    pt: {
+      titulo: 'Região Metropolitana de Campinas',
+      resumo: 'Uso da terra, domicílios, renda e água na região onde este atlas é composto.',
+    },
+    en: {
+      titulo: 'Campinas Metropolitan Region',
+      resumo: 'Land use, households, income and water in the region where this atlas is made.',
+    },
+  },
+  'agua-sp': {
+    pt: {
+      titulo: 'Água em São Paulo',
+      resumo: 'Bacias hidrográficas, rede de drenagem e unidades de conservação: o caminho da água no estado.',
+    },
+    en: {
+      titulo: 'Water in São Paulo',
+      resumo: 'River basins, the drainage network and protected areas: the path of water across the state.',
+    },
+  },
+  relevo: {
+    pt: {
+      titulo: 'Relevo paulista',
+      resumo: 'Serra da Mantiqueira, Serra do Mar e cuestas, em hipsometria e sombreamento.',
+    },
+    en: {
+      titulo: 'The relief of São Paulo',
+      resumo: 'The Mantiqueira range, the Serra do Mar and the cuestas, in hypsometric tints and hillshade.',
+    },
+  },
+  'energia-eletrica': {
+    pt: {
+      titulo: 'Energia elétrica no Brasil',
+      resumo: 'Linhas de transmissão e subestações, usinas por fonte e geração solar distribuída por município.',
+    },
+    en: {
+      titulo: 'Electricity in Brazil',
+      resumo: 'Transmission lines and substations, power plants by source and distributed solar generation by municipality.',
+    },
+  },
+} as const;
+export type ColecaoId = keyof typeof COLECOES;
+export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
+
 /** Formatos de download aceitos. Rótulos dos botões: src/i18n/ui.ts. */
 export const FORMATOS = {
   gpkg: { sigla: 'GPKG', ext: '.gpkg' },

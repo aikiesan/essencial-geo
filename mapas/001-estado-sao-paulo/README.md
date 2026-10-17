@@ -4,6 +4,7 @@ titulo: "São Paulo"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-10-17
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, sao-paulo, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-

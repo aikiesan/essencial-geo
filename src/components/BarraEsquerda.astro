@@ -1,32 +1,47 @@
 ---
 /**
- * Coluna esquerda: identidade, seletor de língua, manifesto, estado da
- * plataforma, índice do atlas por categoria e ligações acadêmicas.
+ * Coluna esquerda: identidade, língua, boas-vindas, navegação, coleções em
+ * andamento, temas, a nota mais recente e — recolhidos — os perfis do autor.
  * Em telas estreitas vira um cabeçalho com menu recolhível.
  */
 import Logo from './Logo.astro';
 import Estrela from './Estrela.astro';
 import Icone from './Icone.astro';
+import Progresso from './Progresso.astro';
 import { CATEGORIA_IDS, LINKS, SITE, type CategoriaId } from '../site.config';
-import { contarPorCategoria, mapasPublicados, numeroFormatado, proximaPublicacao } from '../lib/mapas';
+import { contarPorCategoria, mapasPublicados, proximaPublicacao } from '../lib/mapas';
+import { colecoesNoAr } from '../lib/colecoes';
 import { notasPublicadas } from '../lib/notas';
-import { IDIOMA, LINGUAS, caminhoEquivalente, dataCurta, dataIso, linguaDe, rota, t, url } from '../i18n';
+import { IDIOMA, LINGUAS, caminhoEquivalente, dataCurta, dataExtensa, dataIso, linguaDe, rota, t, url } from '../i18n';
 
 interface Props {
-  /** Categoria ativa no filtro (undefined = todas). */
+  /** Categoria ativa (undefined = nenhuma; 'todas' = feed). */
   categoriaAtiva?: CategoriaId | 'todas';
 }
 const { categoriaAtiva } = Astro.props;
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
+const b = tx.barra;
 
 const mapas = await mapasPublicados(lingua);
 const contagem = contarPorCategoria(mapas);
-const ultima = mapas[0]?.data.atualizado ?? mapas[0]?.data.data;
 const proxima = await proximaPublicacao();
 const ultimaNota = (await notasPublicadas(lingua))[0];
+const series = await colecoesNoAr(lingua);
 
-const p = tx.barra.perfis;
+// Item ativo da navegação, pelo caminho da página.
+const caminho = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const comeca = (destino: string) => caminho.startsWith(destino);
+const navegacao = [
+  { icone: 'casa', rotulo: b.feed, href: rota(lingua), ativo: categoriaAtiva === 'todas', conta: mapas.length },
+  { icone: 'colecoes', rotulo: b.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')), conta: series.length },
+  { icone: 'lista', rotulo: b.indice, href: rota(lingua, 'indice'), ativo: comeca(rota(lingua, 'indice')) },
+  { icone: 'nota', rotulo: b.notas, href: rota(lingua, 'notas'), ativo: comeca(rota(lingua, 'notas')) },
+  { icone: 'info', rotulo: b.sobre, href: rota(lingua, 'sobre'), ativo: comeca(rota(lingua, 'sobre')) },
+] as const;
+const temas = CATEGORIA_IDS.filter((id) => contagem[id] > 0);
+
+const p = b.perfis;
 const ligacoes = [
   { rotulo: p.lattes, href: LINKS.lattes },
   { rotulo: p.orcid, href: LINKS.orcid },
@@ -68,33 +83,76 @@ const ligacoes = [
   </div>
 
   <div class="esq__corpo" id="esq-corpo">
-    <span class="meandro" aria-hidden="true"></span>
-    <p class="lema">
-      <span class="lema__a">{tx.site.slogan}</span>
-      <span class="lema__b">{tx.site.complemento}</span>
-    </p>
+    <div class="boas-vindas">
+      <p class="boas-vindas__lema">{tx.site.slogan}</p>
+      <p class="boas-vindas__texto">{b.boasVindas}</p>
+      {
+        proxima && (
+          <p class="proximo">
+            <Estrela tamanho={10} />
+            <span class="proximo__rotulo">{b.proximoMapa}</span>
+            <time datetime={dataIso(proxima)}>{dataExtensa(proxima, lingua).replace(/,? de \d{4}$| \d{4}$/, '')}</time>
+          </p>
+        )
+      }
+    </div>
 
-    <section aria-labelledby="t-manifesto">
-      <h2 class="secao" id="t-manifesto">{tx.barra.manifesto}</h2>
-      <p class="manifesto">{tx.barra.manifestoTexto}</p>
-      <a class="esq__link-sobre rotulo" href={rota(lingua, 'sobre')}>{tx.barra.lerManifesto} <Icone nome="seta" tamanho={11} /></a>
-    </section>
+    <nav aria-labelledby="t-explorar">
+      <h2 class="secao" id="t-explorar">{b.explorar}</h2>
+      <ul class="navegacao" role="list">
+        {
+          navegacao.map((n) => (
+            <li>
+              <a href={n.href} aria-current={n.ativo ? 'page' : undefined}>
+                <Icone nome={n.icone} tamanho={16} />
+                <span class="navegacao__rotulo">{n.rotulo}</span>
+                {'conta' in n && n.conta > 0 && <span class="contagem mono">{n.conta}</span>}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
 
-    <section aria-labelledby="t-estado">
-      <h2 class="secao" id="t-estado">{tx.barra.estado}</h2>
-      <dl class="estado">
-        <div><dt>{tx.barra.mapas}</dt><dd class="mono">{numeroFormatado(mapas.length)}</dd></div>
-        {ultima && <div><dt>{tx.barra.atualizado}</dt><dd class="mono">{dataCurta(ultima, lingua)}</dd></div>}
-        {proxima && <div><dt>{tx.barra.proxima}</dt><dd class="mono estado__proxima">{dataCurta(proxima, lingua)}</dd></div>}
-        <div><dt>{tx.barra.cadencia}</dt><dd class="mono">{tx.site.cadencia}</dd></div>
-        <div><dt>{tx.barra.licenca}</dt><dd><a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a></dd></div>
-      </dl>
-    </section>
+    {
+      series.length > 0 && (
+        <section aria-labelledby="t-colecoes">
+          <h2 class="secao" id="t-colecoes">{b.colecoes}</h2>
+          <ul class="series" role="list">
+            {series.map((c) => (
+              <li>
+                <a href={rota(lingua, 'colecoes', c.id)} aria-current={comeca(rota(lingua, 'colecoes', c.id)) ? 'page' : undefined}>
+                  <span class="series__titulo">{c.titulo}</span>
+                  <Progresso feitos={c.mapas.length} total={Math.max(c.ordem.length, c.mapas.length)} compacto />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      temas.length > 0 && (
+        <nav aria-labelledby="t-temas">
+          <h2 class="secao" id="t-temas">{b.temas}</h2>
+          <ul class="temas" role="list">
+            {temas.map((id) => (
+              <li>
+                <a href={rota(lingua, 'categoria', id)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
+                  {tx.categorias[id].curto} <span class="mono">{contagem[id]}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )
+    }
 
     {
       ultimaNota && (
         <section aria-labelledby="t-nota" class="nota-recente">
-          <h2 class="secao" id="t-nota">{tx.barra.notas}</h2>
+          <h2 class="secao" id="t-nota">{b.notas}</h2>
           <a href={rota(lingua, 'notas', ultimaNota.pasta)}>
             <time class="rotulo" datetime={dataIso(ultimaNota.data.data)}>{dataCurta(ultimaNota.data.data, lingua)}</time>
             <span class="nota-recente__titulo">{ultimaNota.data.titulo}</span>
@@ -103,40 +161,11 @@ const ligacoes = [
       )
     }
 
-    <nav aria-labelledby="t-atlas">
-      <h2 class="secao" id="t-atlas">{tx.barra.atlas}</h2>
-      <ul class="indice" role="list">
-        <li>
-          <a href={rota(lingua)} aria-current={categoriaAtiva === 'todas' ? 'page' : undefined}>
-            <span>{tx.barra.todos}</span><span class="indice__guia" /><span class="mono">{numeroFormatado(mapas.length)}</span>
-          </a>
-        </li>
-        {
-          CATEGORIA_IDS.map((id) => (
-            <li class:list={{ vazio: contagem[id] === 0 }}>
-              <a href={rota(lingua, 'categoria', id)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
-                <span>{tx.categorias[id].rotulo}</span>
-                <span class="indice__guia" />
-                <span class="mono">{numeroFormatado(contagem[id])}</span>
-              </a>
-            </li>
-          ))
-        }
-        <li>
-          <a href={rota(lingua, 'indice')}>
-            <span class="italico">{tx.barra.indice}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
-          </a>
-        </li>
-        <li>
-          <a href={rota(lingua, 'notas')}>
-            <span class="italico">{tx.barra.notas}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <section aria-labelledby="t-ligacoes">
-      <h2 class="secao" id="t-ligacoes">{tx.barra.ligacoes}</h2>
+    <details class="perfis">
+      <summary>
+        <span>{b.autor}</span>
+        <span class="perfis__sinal" aria-hidden="true"></span>
+      </summary>
       <ul class="ligacoes" role="list">
         {
           ligacoes.map((l) => (
@@ -148,10 +177,10 @@ const ligacoes = [
           ))
         }
         <li>
-          <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>{tx.barra.rss} <Icone nome="rss" tamanho={11} /></a>
+          <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>{b.rss} <Icone nome="rss" tamanho={11} /></a>
         </li>
       </ul>
-    </section>
+    </details>
 
     <div class="esq__pe">
       <span class="meandro esq__meandro" aria-hidden="true"></span>
@@ -166,6 +195,7 @@ const ligacoes = [
         <span>{tx.geral.tema}: <span data-tema-nome>{tx.geral.temaNomes.claro}</span></span>
       </button>
       <p class="colofao rotulo">
+        <a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a> · {tx.site.cadencia}<br />
         <Estrela tamanho={9} /> {tx.site.colofao}<br />
         22°49′S · 47°04′W · SIRGAS 2000
       </p>
@@ -249,8 +279,6 @@ const ligacoes = [
   .esq__menu .rotulo {
     color: var(--tinta);
   }
-  /* Telas muito estreitas (320 px, ou zoom de 400%): o menu fica só com o ícone,
-     e o nome continua para leitores de tela. */
   @media (max-width: 400px) {
     .esq__menu {
       min-width: 40px;
@@ -285,7 +313,8 @@ const ligacoes = [
     display: block;
   }
   .esq__corpo > section,
-  .esq__corpo > nav {
+  .esq__corpo > nav,
+  .esq__corpo > .boas-vindas {
     margin-bottom: var(--e-6);
   }
 
@@ -315,67 +344,149 @@ const ligacoes = [
     }
   }
 
-  .lema {
-    margin: 0 0 var(--e-6);
-    padding: var(--e-4) 0;
+  /* Boas-vindas: o lema em itálico e uma frase simples sobre o que se encontra aqui */
+  .boas-vindas {
+    padding-bottom: var(--e-5);
     border-bottom: 1px solid var(--linha);
+  }
+  .boas-vindas__lema {
+    margin: 0 0 var(--e-2);
     font-family: var(--f-titulo);
     font-style: italic;
     font-size: 1.125rem;
     line-height: 1.35;
   }
-  .lema__a,
-  .lema__b {
-    display: block;
-  }
-  .lema__b {
-    color: var(--tinta-2);
-    font-size: 0.95rem;
-    margin-top: var(--e-1);
-  }
-
-  .manifesto {
+  .boas-vindas__texto {
+    margin: 0;
     font-size: var(--t-sm);
     line-height: 1.6;
     color: var(--tinta-2);
-    margin-bottom: var(--e-2);
   }
-  .esq__link-sobre {
-    display: inline-flex;
+  .proximo {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    min-height: 24px;
-    gap: var(--e-1);
-    color: var(--tinta);
-    text-decoration: none;
-  }
-  .esq__link-sobre:hover {
-    color: var(--acento);
-  }
-
-  .estado {
-    margin: 0;
+    gap: var(--e-1) var(--e-2);
+    margin: var(--e-4) 0 0;
+    padding: var(--e-2) var(--e-3);
+    background: var(--papel);
+    border: 1px solid var(--linha-fina);
     font-size: var(--t-sm);
   }
-  .estado > div {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--e-3);
-    padding: var(--e-1) 0;
-    border-bottom: 1px solid var(--linha-fina);
-  }
-  .estado dt {
+  .proximo__rotulo {
     font-family: var(--f-mono);
     font-size: var(--t-xs);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--tinta-3);
   }
-  .estado dd {
-    margin: 0;
-    text-align: right;
+  .proximo time {
+    font-style: italic;
   }
-  .estado__proxima {
+  .proximo time::first-letter {
+    text-transform: uppercase;
+  }
+
+  /* Navegação principal: itens grandes, com ícone, fáceis de tocar */
+  .navegacao,
+  .series,
+  .temas,
+  .ligacoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navegacao a {
+    display: flex;
+    align-items: center;
+    gap: var(--e-3);
+    min-height: 40px;
+    padding: var(--e-1) var(--e-2);
+    margin: 0 calc(-1 * var(--e-2));
+    text-decoration: none;
+    color: var(--tinta);
+    transition: background-color 120ms linear;
+  }
+  .navegacao a :global(.icone) {
+    flex: none;
+    color: var(--tinta-3);
+  }
+  .navegacao__rotulo {
+    flex: 1;
+  }
+  .navegacao a:hover {
+    background: var(--papel-2);
+  }
+  .navegacao a:hover :global(.icone) {
     color: var(--acento);
+  }
+  .navegacao a[aria-current='page'] {
+    background: var(--trigo);
+    font-weight: 600;
+  }
+  .navegacao a[aria-current='page'] :global(.icone) {
+    color: var(--tinta);
+  }
+  .contagem {
+    min-width: 2em;
+    padding: 0 var(--e-1);
+    font-size: var(--t-xs);
+    text-align: center;
+    color: var(--tinta-3);
+    border: 1px solid var(--linha-fina);
+  }
+
+  /* Coleções em andamento */
+  .series li + li {
+    margin-top: var(--e-2);
+  }
+  .series a {
+    display: grid;
+    gap: var(--e-2);
+    padding: var(--e-3);
+    border: 1px solid var(--linha-fina);
+    text-decoration: none;
+    transition: border-color 120ms linear;
+  }
+  .series a:hover {
+    border-color: var(--linha);
+  }
+  .series a[aria-current='page'] {
+    border-color: var(--linha);
+    background: var(--papel);
+  }
+  .series__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    line-height: 1.25;
+  }
+
+  /* Temas: etiquetas */
+  .temas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+  .temas a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: 32px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha-fina);
+    font-size: var(--t-sm);
+    text-decoration: none;
+  }
+  .temas a:hover {
+    border-color: var(--linha);
+  }
+  .temas a[aria-current='page'] {
+    background: var(--trigo);
+    border-color: var(--linha);
+  }
+  .temas .mono {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
   }
 
   /* Última nota: uma manchete curta, como o "último minuto" de um jornal */
@@ -400,43 +511,51 @@ const ligacoes = [
     line-height: 1.25;
   }
 
-  /* Índice de atlas: rótulo, guia pontilhada, número */
-  .indice,
-  .ligacoes {
+  /* Perfis do autor: recolhidos, para não pesar na primeira leitura */
+  .perfis {
+    margin-bottom: var(--e-5);
+    border-top: 1px solid var(--linha-fina);
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .perfis > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    cursor: pointer;
     font-size: var(--t-sm);
   }
-  .indice a {
-    display: flex;
-    align-items: baseline;
-    gap: var(--e-2);
-    padding: 5px 0;
-    text-decoration: none;
+  .perfis > summary::-webkit-details-marker {
+    display: none;
   }
-  .indice__guia {
-    flex: 1;
-    border-bottom: 1px dotted var(--tinta-3);
-    transform: translateY(-0.25em);
-  }
-  .indice .mono {
-    font-size: 0.75rem;
-  }
-  .indice a:hover {
+  .perfis > summary:hover {
     color: var(--acento);
   }
-  .indice a[aria-current='page'] {
-    font-weight: 600;
+  .perfis__sinal {
+    position: relative;
+    width: 11px;
+    height: 11px;
   }
-  .indice a[aria-current='page'] span:first-child::before {
-    content: '▸ ';
-    color: var(--acento);
+  .perfis__sinal::before,
+  .perfis__sinal::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 11px;
+    border-top: 1px solid currentColor;
   }
-  .indice .vazio a {
-    color: var(--tinta-3);
+  .perfis__sinal::after {
+    transform: rotate(90deg);
   }
-
+  .perfis[open] .perfis__sinal::after {
+    display: none;
+  }
+  .ligacoes {
+    padding-bottom: var(--e-2);
+    font-size: var(--t-sm);
+  }
   .ligacoes li + li {
     border-top: 1px solid var(--linha-fina);
   }
@@ -453,7 +572,7 @@ const ligacoes = [
 
   .esq__pe {
     margin-top: auto;
-    padding-top: var(--e-5);
+    padding-top: var(--e-4);
   }
   .esq__meandro {
     margin-bottom: var(--e-4);
@@ -465,5 +584,8 @@ const ligacoes = [
   .colofao {
     margin: var(--e-4) 0 0;
     line-height: 1.7;
+  }
+  .colofao a {
+    color: inherit;
   }
 </style>

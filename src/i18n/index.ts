@@ -19,6 +19,7 @@ const SEGMENTOS = {
   indice: { pt: 'indice', en: 'contents' },
   sobre: { pt: 'sobre', en: 'about' },
   notas: { pt: 'notas', en: 'notes' },
+  colecoes: { pt: 'colecoes', en: 'collections' },
 } as const;
 export type Secao = keyof typeof SEGMENTOS;
 

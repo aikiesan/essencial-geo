@@ -111,43 +111,40 @@ function selecionar(el: Element) {
   s?.addRange(r);
 }
 
-/* ---------- Painel direito acompanha o cartão em foco -------------------- */
-function iniciarPainel() {
-  const fichas = $$('[data-ficha-de]');
-  if (fichas.length < 2) return;
-  const cartoes = $$('[data-mapa]');
-  const indicador = document.querySelector<HTMLElement>('[data-painel-indice]');
-  let atual = fichas.find((f) => !f.hidden)?.dataset.fichaDe;
+/* ---------- Gaveta da ficha: abre pela direita ao clicar ----------------- */
+function iniciarGaveta() {
+  const gaveta = document.querySelector<HTMLDialogElement>('[data-gaveta]');
+  if (!gaveta || typeof gaveta.showModal !== 'function') return;
+  const corpo = gaveta.querySelector<HTMLElement>('[data-gaveta-corpo]');
+  const fichas = $$('[data-ficha-de]', gaveta);
+  let origem: HTMLElement | null = null;
 
-  const mostrar = (id: string) => {
-    if (id === atual) return;
-    atual = id;
-    fichas.forEach((f) => (f.hidden = f.dataset.fichaDe !== id));
-    if (indicador) {
-      const i = cartoes.findIndex((c) => c.dataset.mapa === id);
-      indicador.textContent = `${String(i + 1).padStart(2, '0')} / ${String(cartoes.length).padStart(2, '0')}`;
-    }
-  };
+  document.addEventListener('click', (ev) => {
+    const gatilho = (ev.target as Element).closest<HTMLElement>('[data-abrir-ficha]');
+    if (!gatilho) return;
+    const alvo = fichas.find((f) => f.dataset.fichaDe === gatilho.dataset.abrirFicha);
+    if (!alvo) return; // sem ficha nesta página: o link leva à página do mapa
+    ev.preventDefault();
+    fichas.forEach((f) => (f.hidden = f !== alvo));
+    origem = gatilho;
+    gaveta.showModal();
+    if (corpo) corpo.scrollTop = 0;
+    document.documentElement.style.overflow = 'hidden';
+  });
 
-  // O cartão "em foco" é o que cruza a faixa a ~35% da altura da janela.
-  const visiveis = new Map<string, number>();
-  const obs = new IntersectionObserver(
-    (entradas) => {
-      for (const e of entradas) {
-        const id = (e.target as HTMLElement).dataset.mapa!;
-        if (e.isIntersecting) visiveis.set(id, e.boundingClientRect.top);
-        else visiveis.delete(id);
-      }
-      const primeiro = cartoes.find((c) => visiveis.has(c.dataset.mapa!));
-      if (primeiro) mostrar(primeiro.dataset.mapa!);
-    },
-    { rootMargin: '-35% 0px -60% 0px' },
-  );
-  cartoes.forEach((c) => obs.observe(c));
+  gaveta.querySelector('[data-gaveta-fechar]')?.addEventListener('click', () => gaveta.close());
+  // Clique fora do painel (no fundo escurecido) fecha a gaveta.
+  gaveta.addEventListener('click', (ev) => {
+    if (ev.target === gaveta) gaveta.close();
+  });
+  gaveta.addEventListener('close', () => {
+    document.documentElement.style.overflow = '';
+    origem?.focus({ preventScroll: true });
+  });
 }
 
 iniciarTema();
 iniciarMenu();
 iniciarCitacoes();
-iniciarPainel();
+iniciarGaveta();
 iniciarVisor();

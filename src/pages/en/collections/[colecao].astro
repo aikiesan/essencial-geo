@@ -1,0 +1,6 @@
+---
+import Colecao from '../../../vistas/Colecao.astro';
+import { caminhosColecao } from '../../../lib/rotas';
+export const getStaticPaths = caminhosColecao('en');
+---
+<Colecao {...(Astro.props as any)} />

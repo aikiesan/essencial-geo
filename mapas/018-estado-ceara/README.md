@@ -4,6 +4,7 @@ titulo: "Ceará"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-12-02
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, ceara, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-
