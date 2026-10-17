@@ -16,7 +16,7 @@ function iniciarTema() {
     claro: botao?.dataset.nomeClaro ?? 'papel',
     escuro: botao?.dataset.nomeEscuro ?? 'nanquim',
   };
-  const atualizar = () => $('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
+  const atualizar = () => $$('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
   atualizar();
   $$('[data-tema-botao]').forEach((b) =>
     b.addEventListener('click', () => {
