@@ -2,7 +2,7 @@
 /**
  * Coleção «Água em SP» — desenha uma prancha a partir do cache de preparar.py (uso interno).
  *
- *   node scripts/colecoes/agua-sp/prancha.mjs bacias|ucs
+ *   node scripts/colecoes/agua-sp/prancha.mjs bacias|drenagem|ucs
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -132,6 +132,102 @@ async function bacias() {
   });
 }
 
+/* ------------------------------------------------------------------ 2/3 rede de drenagem */
+async function drenagem() {
+  const c = await ler('drenagem');
+  const ATL = '#9c4a32';
+  const corV = { p: AZUL, a: ATL };
+  const esp = (q) => 0.3 + Math.log10(1 + q);
+  const rios = [...c.rios.features].sort((a, b) => a.properties.q - b.properties.q);
+  const kmP = c.km_vertente.prata;
+  const kmA = c.km_vertente.atlantico;
+  // Ponto do rótulo «Tietê»: o vértice do meio da parte mais longa do traçado.
+  const partes = c.tiete.features.flatMap((f) => (f.geometry.type === 'LineString' ? [f.geometry.coordinates] : f.geometry.coordinates));
+  const longa = partes.sort((a, b) => b.length - a.length)[0];
+  const pRot = longa[Math.floor(longa.length * 0.42)];
+  return () => ({
+    layout: 'um',
+    motivo: 'agua',
+    serie: serie(2),
+    titulo: () => L('Rede de drenagem', 'Drainage network'),
+    subtitulo: () => L('Os rios que dão as costas ao mar', 'Rivers that turn their backs on the sea'),
+    descricao: () => L(
+      `${nf(c.km_total / 1000, 0)} mil km de rios em SP, com a espessura pela vazão média e a cor pela vertente: rumo ao Prata, pelo interior, ou direto para o Atlântico`,
+      `${nf(c.km_total / 1000, 0)} thousand km of rivers in São Paulo, with width by mean discharge and colour by slope: inland towards the River Plate, or straight to the Atlantic`),
+    mapa: () => ({
+      preencher: () => PAPEL,
+      bordaMunicipio: 0,
+      semRgint: true,
+      bordaEstado: 1.6,
+      linhas: [
+        { feats: c.fora.features, cor: '#b9c0c6', largura: (f) => 0.3 + 0.18 * f.properties.o, opacidade: 0.9 },
+        { feats: rios, cor: (f) => corV[f.properties.v], largura: (f) => f1(esp(f.properties.q)), opacidade: 0.95 },
+        { feats: c.tiete.features, cor: AZUL, largura: 2.6, halo: 3 },
+      ],
+      chamadas: [
+        {
+          coord: c.nascente_tiete, dx: 40, dy: 150,
+          titulo: L(`A ${nf(c.nascente_mar_km, 1)} KM DO MAR`, `${nf(c.nascente_mar_km, 1)} KM FROM THE SEA`),
+          linhas: L(['nasce o Tietê, que corre', `${nf(c.tiete_km)} km para o interior`], ['rises the Tietê, which runs', `${nf(c.tiete_km)} km inland`]),
+        },
+        {
+          coord: c.maior_vazao.coord, dx: 150, dy: 150,
+          titulo: L(`${nf(c.maior_vazao.q)} M³/S`, `${nf(c.maior_vazao.q)} M³/S`),
+          linhas: L(['a maior vazão média,', 'no Paraná, na divisa'], ['the largest mean flow,', 'on the Paraná, at the border']),
+        },
+      ],
+    }),
+    sobreMapa: (proj) => {
+      const [x, y] = proj(pRot);
+      return `<text x="${f1(x)}" y="${f1(y - 14)}" text-anchor="middle" font-family="${SERIF}" font-style="italic" font-size="24" letter-spacing="2" fill="${AZUL}" ${halo(5)}>Tietê</text>`;
+    },
+    numeros: () => [
+      [`${nf(c.km_total)} km`, [L('de rios no estado', 'of rivers in the state'), L(`em ${nf(c.n_trechos)} trechos`, `in ${nf(c.n_trechos)} reaches`)]],
+      [`${nf(c.pct_prata, 1)} %`, [L('da área drena para', 'of the land drains'), L('o interior, rumo ao Prata', 'inland, to the Plate')]],
+      [`${nf(c.tiete_km)} km`, [L('do Tietê, da cabeceira', 'of the Tietê, from source'), L('ao rio Paraná', 'to the Paraná')]],
+      [nf(c.fozes_mar), [L('rios chegam ao mar', 'rivers reach the sea'), L('no litoral paulista', 'on the São Paulo coast')]],
+    ],
+    painel: (y) => {
+      const s = [rotuloPainel(L('VERTENTE', 'SLOPE'), y)];
+      y += 24;
+      for (const [cor, rot, km] of [[AZUL, L('para o interior, bacia do Prata', 'inland, River Plate basin'), kmP], [ATL, L('direto para o Atlântico', 'straight to the Atlantic'), kmA]]) {
+        s.push(`<path d="M0 ${y - 5}h34" stroke="${cor}" stroke-width="3.2" stroke-linecap="round"/>`);
+        s.push(`<text x="46" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+        s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13">${nf(km)} km</text>`);
+        y += 25;
+      }
+      y += 16;
+      s.push(rotuloPainel(L('VAZÃO MÉDIA (M³/S)', 'MEAN DISCHARGE (M³/S)'), y));
+      y += 26;
+      [1, 10, 100, 1000, 5000].forEach((q, i) => {
+        const x = i * (LP / 5);
+        s.push(`<path d="M${x} ${y}h${LP / 5 - 26}" stroke="${AZUL}" stroke-width="${f1(esp(q))}" stroke-linecap="round"/>`);
+        s.push(`<text x="${x}" y="${y + 24}" font-family="${MONO}" font-size="12">${nf(q)}</text>`);
+      });
+      y += 52;
+      s.push(rotuloPainel(L('KM DE RIO POR ORDEM DE STRAHLER', 'KM OF RIVER BY STRAHLER ORDER'), y));
+      y += 14;
+      const ords = Object.entries(c.km_ordem).map(([o, km]) => [Number(o), km]);
+      const max = Math.max(...ords.map((o) => o[1]));
+      const x0 = 34;
+      const larg = LP - x0 - 80;
+      ords.forEach(([o, km], i) => {
+        const yy = y + i * 19;
+        s.push(`<text x="${x0 - 10}" y="${f1(yy + 11)}" text-anchor="end" font-family="${MONO}" font-size="12" fill="${AZUL}">${o}</text>`);
+        s.push(`<rect x="${x0}" y="${f1(yy + 2)}" width="${f1(Math.max((km / max) * larg, 1))}" height="${f1(Math.min(11, 3 + o))}" fill="${AZUL}"/>`);
+        s.push(`<text x="${f1(x0 + (km / max) * larg + 6)}" y="${f1(yy + 11)}" font-family="${MONO}" font-size="12">${nf(km)}</text>`);
+      });
+      y += ords.length * 19 + 6;
+      s.push(`<text x="${x0}" y="${y + 8}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('1 = cabeceira; cada encontro de dois rios de mesma ordem sobe um', '1 = headwater; each meeting of two equal orders adds one')}</text>`);
+      return { svg: s.join('\n'), y: y + 18 };
+    },
+    fontes: () => [
+      L('WWF/HydroSHEDS, HydroRIVERS v1.0', 'WWF/HydroSHEDS, HydroRIVERS v1.0'),
+      L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025'),
+    ],
+  });
+}
+
 /* ------------------------------------------------------------------ 3/3 unidades de conservação */
 async function ucs() {
   const c = await ler('ucs');
@@ -211,7 +307,7 @@ async function ucs() {
 }
 
 /* ------------------------------------------------------------------ */
-const TEMAS = { bacias, ucs };
+const TEMAS = { bacias, drenagem, ucs };
 const nome = process.argv[2];
 if (!TEMAS[nome]) {
   console.error(`uso: node scripts/colecoes/agua-sp/prancha.mjs <${Object.keys(TEMAS).join('|')}>`);

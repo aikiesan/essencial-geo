@@ -23,3 +23,5 @@ mapas/043-usinas-por-fonte-brasil/dados/br_usinas_por_fonte.csv
 
 # rasters das coleções vão para a release (rmc-2026, …)
 mapas/*/dados/*.tif.zip
+# CSV grande vai para a release agua-sp-2026
+mapas/037-drenagem-sp/dados/sp_drenagem.csv
