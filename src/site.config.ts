@@ -15,7 +15,7 @@ export const SITE = {
   horaPublicacaoUtc: 12,
   /** Códigos de verificação de propriedade (só o valor de content="…"). Vazio = sem etiqueta. */
   verificacao: {
-    google: '', // Google Search Console → etiqueta HTML
+    google: '6AO0_cB4UqZfjnteowBYa91HsgxbVIKEzjuA9TSsPCQ', // Google Search Console → etiqueta HTML
     bing: '', // Bing Webmaster Tools → etiqueta HTML
   },
 };
