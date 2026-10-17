@@ -7,7 +7,7 @@
  *   node scripts/estados/readme.mjs RJ MG    # só estes
  *
  * Nada é escrito à mão aqui além dos moldes de texto: todo número sai do cache.
- * GPKG e DXF compactados ficam fora do Git e vão como anexos da release `estados-2025`.
+ * O GPKG compactado (com os estilos do QGIS) fica fora do Git e vai como anexo da release `estados-2025`.
  */
 import { readFile, writeFile, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
@@ -133,7 +133,7 @@ async function escrever(e) {
     : null;
   const extra = (texto) => (texto ? `\n\n${texto}` : '');
   const linhaAgua = (geom, l) => (agua.length ? `| \`areas_operacionais\` | ${geom} | ${nomesAgua(l)}, ${l === 'en' ? 'with' : 'com'} \`area_km2\` |\n` : '');
-  const camadaDxfAgua = (l) => (agua.length ? `${l === 'en' ? ', plus' : ', além de'} \`AREAS_OPERACIONAIS_LIMITES\`` : '');
+  const camadaAgua = agua.length ? ', `areas_operacionais`' : '';
   const nCamadas = agua.length ? ['Sete camadas', 'Seven layers'] : ['Seis camadas', 'Six layers'];
 
   const pt = `---
@@ -166,9 +166,9 @@ fontes:
   - nome: "Natural Earth — países (só na prancha)"
     nome_en: "Natural Earth — countries (plate only)"
     url: https://www.naturalearthdata.com/
-crs: "SIRGAS 2000 (EPSG:4674) · DXF em Policônica SIRGAS (EPSG:5880)"
+crs: "SIRGAS 2000 (EPSG:4674)"
 epsg: 4674
-software: ["Python", "GeoPandas", "GDAL", "Node.js", "d3-geo"]
+software: ["Python", "GeoPandas", "GDAL", "QGIS", "Node.js", "d3-geo"]
 metodo: "Limites da Malha Municipal do IBGE, dissolvidos em regiões imediatas, intermediárias e limite estadual; rodovias recortadas pelo limite da unidade."
 
 camadas:
@@ -205,14 +205,9 @@ ${df ? '' : `    nota: "Maior município: ${N.maior_municipio.nome} (${fpt(N.mai
 downloads:
   - formato: gpkg
     url: ${RELEASE}/${uf}_divisao_territorial.gpkg.zip
-    rotulo: "${nCamadas[0]}, SIRGAS 2000"
-    rotulo_en: "${nCamadas[1]}, SIRGAS 2000"
+    rotulo: "${nCamadas[0]}, SIRGAS 2000, com estilos do QGIS"
+    rotulo_en: "${nCamadas[1]}, SIRGAS 2000, with QGIS styles"
     tamanho: "${await tam(`dados/${uf}_divisao_territorial.gpkg.zip`)}"
-  - formato: dxf
-    url: ${RELEASE}/${uf}_divisao_territorial.dxf.zip
-    rotulo: "Limites, rodovias e nomes, em metros (EPSG:5880)"
-    rotulo_en: "Boundaries, highways and names, in metres (EPSG:5880)"
-    tamanho: "${await tam(`dados/${uf}_divisao_territorial.dxf.zip`)}"
   - formato: csv
     arquivo: dados/${uf}_municipios.csv
     rotulo: "Municípios com códigos e regiões"
@@ -254,15 +249,18 @@ para baixar e começar a trabalhar.${extra(ilhas?.pt)}${extra(notaAgua?.pt)}
 | \`rodovias\` | linha | federais e estaduais: \`sigla\`, \`revestimento\`, \`situacao_fisica\`, \`n_pistas\`, \`pavimentada\` |
 | \`capital\` | ponto | ponto indicativo, dentro do município (não é a sede) |
 ${linhaAgua('polígono', 'pt')}
-O **GPKG** e o **DXF** vão compactados (ZIP) e ficam nos anexos da
+O **GPKG** vai compactado (ZIP) e fica nos anexos da
 [release \`estados-2025\`](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025)
 do repositório, junto com os das outras 26 unidades.
 
-O **DXF** está em metros (SIRGAS 2000 / Policônica, EPSG:5880 — o mesmo sistema para as
-27 unidades, de modo que as bases se encaixam no CAD). As camadas são
-\`MUNICIPIOS_LIMITES\`, \`REGIOES_IMEDIATAS_LIMITES\`, \`REGIOES_INTERMEDIARIAS_LIMITES\`,
-\`LIMITE_ESTADUAL\`, \`RODOVIAS_FEDERAIS\`, \`RODOVIAS_ESTADUAIS\`, \`CAPITAL\` e
-\`MUNICIPIOS_NOMES\` (texto)${camadaDxfAgua('pt')}. Cada limite comum aparece uma só vez, como uma polilinha.
+O GPKG já traz os **estilos do QGIS**, gravados como estilo padrão de cada camada: ao
+arrastar o arquivo para o QGIS, os municípios aparecem com as cores das regiões
+intermediárias, os limites e as rodovias com o traço da prancha e os nomes com halo.
+Os trechos de rodovia sem situação física confirmada ficam numa regra desligada da
+legenda, como na prancha; basta marcá-la para vê-los. Em outros SIGs as camadas abrem
+normalmente, sem o estilo. Para repetir a ordem da prancha, empilhe de cima para baixo
+\`capital\`, \`rodovias\`, \`limite_estadual\`, \`regioes_intermediarias\`,
+\`regioes_imediatas\`${camadaAgua} e \`municipios\`.
 
 O **CSV** traz a tabela dos municípios, em UTF-8, pronta para cruzar com dados do
 Censo ou de qualquer base que use o código IBGE de sete dígitos.
@@ -280,6 +278,7 @@ Censo ou de qualquer base que use o código IBGE de sete dígitos.
    a unidade, as vizinhas e o litoral compartilhem as mesmas bordas.
 
 Scripts: [\`scripts/estados/preparar.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (dados),
+[\`scripts/estados/estilos.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/estilos.py) (estilos do QGIS),
 [\`scripts/estados/prancha.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (prancha) e
 [\`scripts/estados/readme.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (esta ficha).
 
@@ -324,15 +323,18 @@ ready to download and get to work.${extra(ilhas?.en)}${extra(notaAgua?.en)}
 | \`rodovias\` | line | federal and state highways: \`sigla\`, \`revestimento\`, \`situacao_fisica\`, \`n_pistas\`, \`pavimentada\` |
 | \`capital\` | point | indicative point inside the municipality (not the seat) |
 ${linhaAgua('polygon', 'en')}
-The **GPKG** and **DXF** are zipped and attached to the repository’s
+The **GPKG** is zipped and attached to the repository’s
 [\`estados-2025\` release](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025),
 together with those of the other 26 units.
 
-The **DXF** is in metres (SIRGAS 2000 / Brazil Polyconic, EPSG:5880 — the same system
-for all 27 units, so the bases fit together in CAD). Its layers are
-\`MUNICIPIOS_LIMITES\`, \`REGIOES_IMEDIATAS_LIMITES\`, \`REGIOES_INTERMEDIARIAS_LIMITES\`,
-\`LIMITE_ESTADUAL\`, \`RODOVIAS_FEDERAIS\`, \`RODOVIAS_ESTADUAIS\`, \`CAPITAL\` and
-\`MUNICIPIOS_NOMES\` (text)${camadaDxfAgua('en')}. Every shared boundary appears once, as a single polyline.
+The GPKG carries its own **QGIS styles**, saved as each layer’s default style: drag the
+file into QGIS and the municipalities appear in the colours of their intermediate
+regions, boundaries and highways with the plate’s strokes, and names with a halo.
+Highway sections without a confirmed physical status sit in a legend rule that is
+switched off, as on the plate; tick it to see them. Other GIS software opens the layers
+as usual, without the style. To match the plate, stack them from top to bottom:
+\`capital\`, \`rodovias\`, \`limite_estadual\`, \`regioes_intermediarias\`,
+\`regioes_imediatas\`${camadaAgua} and \`municipios\`.
 
 The **CSV** holds the municipal table in UTF-8, ready to join with Census data or any
 dataset keyed on the seven-digit IBGE code.
@@ -350,6 +352,7 @@ dataset keyed on the seven-digit IBGE code.
    neighbours and the coastline share the same edges.
 
 Scripts: [\`scripts/estados/preparar.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (data),
+[\`scripts/estados/estilos.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/estilos.py) (QGIS styles),
 [\`scripts/estados/prancha.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (plate) and
 [\`scripts/estados/readme.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (this sheet).
 

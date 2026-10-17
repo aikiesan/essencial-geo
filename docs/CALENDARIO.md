@@ -106,7 +106,7 @@ do Sudeste ao Norte.
 | 21/12 | seg | 026 | Acre (AC) | `026-estado-acre` |
 | 23/12 | qua | 027 | Rondônia (RO) | `027-estado-rondonia` |
 
-**Antes de cada saída:** o GPKG e o DXF compactados daquele estado precisam estar nos anexos da release
+**Antes de cada saída:** o GPKG compactado daquele estado precisa estar nos anexos da release
 `estados-2025` (veja [`PUBLICAR.md`](PUBLICAR.md#série-brasil-estado-por-estado)). Como a release sobe de
 uma vez, isso vale para a série inteira no primeiro push.
 

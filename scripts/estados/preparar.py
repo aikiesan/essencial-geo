@@ -9,7 +9,6 @@ Entradas (caminhos por variável de ambiente, com os padrões desta máquina):
 
 Saídas:
     mapas/<pasta>/dados/<uf>_divisao_territorial.gpkg.zip   camadas em SIRGAS 2000 geográfico (EPSG:4674)
-    mapas/<pasta>/dados/<uf>_divisao_territorial.dxf.zip    mesmas camadas para CAD, Policônica SIRGAS (EPSG:5880)
     mapas/<pasta>/dados/<uf>_municipios.csv             tabela dos municípios
     scripts/estados/cache/<uf>.json                     geometrias simplificadas para a prancha (não versionado)
 
@@ -40,7 +39,6 @@ RODOVIAS = os.environ.get(
 )
 
 GEO = "EPSG:4674"  # SIRGAS 2000 geográfico — o da malha do IBGE
-CAD = "EPSG:5880"  # SIRGAS 2000 / Brazil Polyconic — metros, igual para os 27 estados
 AREA = "+proj=aea +lat_1=-2 +lat_2=-22 +lat_0=-12 +lon_0=-54 +ellps=GRS80 +units=m"  # Albers do IBGE, para km
 
 # Município-sede da capital de cada UF (código IBGE de 7 dígitos), conferido pelo nome.
@@ -211,51 +209,11 @@ def main() -> None:
         ] + ([("areas_operacionais", agua[["CD_MUN", "NM_MUN", "AREA_KM2", "geometry"]].rename(columns={"AREA_KM2": "area_km2"}))] if len(agua) else []):
             camada.to_file(gpkg, layer=nome, driver="GPKG", engine="pyogrio")
 
-        # ---- DXF: linhas por camada + nomes como texto ----------------------
-        def linhas(gdf, camada):
-            # Rede de limites sem duplicatas: a fronteira entre dois municípios vira UMA polilinha.
-            rede = shapely.line_merge(shapely.union_all(gdf.to_crs(CAD).geometry.boundary.values))
-            partes = list(getattr(rede, "geoms", [rede]))
-            return gpd.GeoDataFrame({"Layer": [camada] * len(partes)}, geometry=partes, crs=CAD)
-
-        textos = mun.to_crs(CAD).copy()
-        textos["geometry"] = textos.geometry.representative_point()
-        textos = gpd.GeoDataFrame(
-            {
-                "Layer": "MUNICIPIOS_NOMES",
-                "OGR_STYLE": [f'LABEL(f:"Arial",t:"{n.replace(chr(34), "")}",s:400g,p:5)' for n in textos["NM_MUN"]],
-            },
-            geometry=textos.geometry.values, crs=CAD,
-        )
-        rod_cad = rod.to_crs(CAD)
-        rod_dxf = gpd.GeoDataFrame(
-            {"Layer": ["RODOVIAS_FEDERAIS" if j == "federal" else "RODOVIAS_ESTADUAIS" for j in rod_cad["jurisdicao_mapa"]]},
-            geometry=rod_cad.geometry.values, crs=CAD,
-        )
-        cap_cad = ponto_cap.to_crs(CAD)
-        dxf = pd.concat(
-            [
-                linhas(municipios, "MUNICIPIOS_LIMITES"),
-                linhas(rgi, "REGIOES_IMEDIATAS_LIMITES"),
-                linhas(rgint, "REGIOES_INTERMEDIARIAS_LIMITES"),
-                linhas(limite, "LIMITE_ESTADUAL"),
-                *([linhas(agua, "AREAS_OPERACIONAIS_LIMITES")] if len(agua) else []),
-                rod_dxf,
-                gpd.GeoDataFrame({"Layer": ["CAPITAL"]}, geometry=cap_cad.geometry.values, crs=CAD),
-                textos,
-            ],
-            ignore_index=True,
-        )
-        dxf = gpd.GeoDataFrame(dxf, geometry="geometry", crs=CAD)
-        caminho_dxf = destino / f"{base}.dxf"
-        caminho_dxf.unlink(missing_ok=True)
-        dxf.to_file(caminho_dxf, driver="DXF", engine="pyogrio")
-
-        # GPKG e DXF vão compactados (metade do tamanho); os originais saem da pasta.
-        for arq in (gpkg, caminho_dxf):
-            with zipfile.ZipFile(f"{arq}.zip", "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-                z.write(arq, arq.name)
-            arq.unlink()
+        # O GPKG vai compactado (metade do tamanho); o original sai da pasta.
+        # Os estilos do QGIS entram depois da prancha, com as mesmas cores: scripts/estados/estilos.py.
+        with zipfile.ZipFile(f"{gpkg}.zip", "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+            z.write(gpkg, gpkg.name)
+        gpkg.unlink()
 
         # ---- CSV -----------------------------------------------------------
         municipios.drop(columns="geometry").sort_values("NM_MUN").to_csv(destino / f"{uf.lower()}_municipios.csv", index=False, encoding="utf-8")

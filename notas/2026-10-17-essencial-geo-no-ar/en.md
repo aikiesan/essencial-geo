@@ -8,7 +8,7 @@ tags: [launch, atlas, open-data]
 
 Essencial Geo starts today as three things at once: a **feed** of thematic maps of Brazil, an
 **open-data repository** and a **cartography portfolio** that grows in public. Each plate comes
-with the files that produced it (GeoPackage, DXF, CSV), with its projection and sources declared
+with the files that produced it (GeoPackage, CSV, SVG), with its projection and sources declared
 and — from the maps with real data onwards — with its own DOI on Zenodo, so that it can be cited
 in a paper, a design drawing or an academic CV.
 
@@ -16,7 +16,7 @@ in a paper, a design drawing or an academic CV.
 
 Plate 001 opens the first series, **Brazil, state by state**: a cartographic base for each
 federative unit, with municipalities, immediate and intermediate geographic regions, the boundary
-and highways, in GeoPackage, DXF and CSV. It starts with São Paulo, today, and continues on
+and highways, as a GeoPackage pre-styled for QGIS, CSV and SVG. It starts with São Paulo, today, and continues on
 Mondays, Wednesdays and Fridays until 23 December, when it reaches Rondônia — 27 plates, all with
 the same design.
 
