@@ -1,0 +1,185 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2300101,Abaiara,230012,Brejo Santo,2304,Juazeiro do Norte,,,180.833,False
+2300150,Acarape,230003,Redenção-Acarape,2301,Fortaleza,,,129.767,False
+2300200,Acaraú,230017,Acaraú,2306,Sobral,,,842.469,False
+2300309,Acopiara,230009,Iguatu,2303,Iguatu,,,2254.279,False
+2300408,Aiuaba,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,2438.563,False
+2300507,Alcântaras,230015,Sobral,2306,Sobral,,,135.76,False
+2300606,Altaneira,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,72.675,False
+2300705,Alto Santo,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,1147.209,False
+2300754,Amontada,230002,Itapipoca,2301,Fortaleza,,,1175.044,False
+2300804,Antonina do Norte,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,259.706,False
+2300903,Apuiarés,230005,Itapagé,2301,Fortaleza,,,543.98,False
+2301000,Aquiraz,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,480.236,False
+2301109,Aracati,230008,Aracati,2302,Quixadá,,,1227.196,False
+2301208,Aracoiaba,230003,Redenção-Acarape,2301,Fortaleza,,,643.988,False
+2301257,Ararendá,230013,Crateús,2305,Crateús,,,342.302,False
+2301307,Araripe,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,1097.345,False
+2301406,Aratuba,230003,Redenção-Acarape,2301,Fortaleza,,,119.758,False
+2301505,Arneiroz,230014,Tauá,2305,Crateús,,,1068.447,False
+2301604,Assaré,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,1155.124,False
+2301703,Aurora,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,885.87,False
+2301802,Baixio,230010,Icó,2303,Iguatu,,,145.556,False
+2301851,Banabuiú,230006,Quixadá,2302,Quixadá,,,1080.983,False
+2301901,Barbalha,230011,Juazeiro do Norte,2304,Juazeiro do Norte,2307304,Juazeiro do Norte/CE,608.142,False
+2301950,Barreira,230003,Redenção-Acarape,2301,Fortaleza,,,260.237,False
+2302008,Barro,230012,Brejo Santo,2304,Juazeiro do Norte,,,711.346,False
+2302057,Barroquinha,230018,Camocim,2306,Sobral,,,385.59,False
+2302107,Baturité,230003,Redenção-Acarape,2301,Fortaleza,,,314.075,False
+2302206,Beberibe,230001,Fortaleza,2301,Fortaleza,,,1596.75,False
+2302305,Bela Cruz,230017,Acaraú,2306,Sobral,,,842.106,False
+2302404,Boa Viagem,230004,Canindé,2301,Fortaleza,,,2835.037,False
+2302503,Brejo Santo,230012,Brejo Santo,2304,Juazeiro do Norte,,,654.658,False
+2302602,Camocim,230018,Camocim,2306,Sobral,,,1120.449,False
+2302701,Campos Sales,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,1082.581,False
+2302800,Canindé,230004,Canindé,2301,Fortaleza,,,3032.39,False
+2302909,Capistrano,230003,Redenção-Acarape,2301,Fortaleza,,,226.549,False
+2303006,Caridade,230004,Canindé,2301,Fortaleza,,,926.271,False
+2303204,Caririaçu,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,634.179,False
+2303105,Cariré,230015,Sobral,2306,Sobral,,,755.597,False
+2303303,Cariús,230009,Iguatu,2303,Iguatu,,,1036.417,False
+2303402,Carnaubal,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,363.212,False
+2303501,Cascavel,230001,Fortaleza,2301,Fortaleza,,,838.115,False
+2303600,Catarina,230009,Iguatu,2303,Iguatu,,,488.153,False
+2303659,Catunda,230015,Sobral,2306,Sobral,,,784.022,False
+2303709,Caucaia,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,1223.199,False
+2303808,Cedro,230009,Iguatu,2303,Iguatu,,,729.97,False
+2303907,Chaval,230018,Camocim,2306,Sobral,,,237.239,False
+2303956,Chorozinho,230001,Fortaleza,2301,Fortaleza,,,296.431,False
+2303931,Choró,230006,Quixadá,2302,Quixadá,,,815.268,False
+2304004,Coreaú,230015,Sobral,2306,Sobral,,,750.333,False
+2304103,Crateús,230013,Crateús,2305,Crateús,,,2981.462,False
+2304202,Crato,230011,Juazeiro do Norte,2304,Juazeiro do Norte,2307304,Juazeiro do Norte/CE,1138.15,False
+2304236,Croatá,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,696.351,False
+2304251,Cruz,230017,Acaraú,2306,Sobral,,,335.921,False
+2304269,Deputado Irapuan Pinheiro,230006,Quixadá,2302,Quixadá,,,471.134,False
+2304277,Ereré,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,349.034,False
+2304285,Eusébio,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,78.818,False
+2304301,Farias Brito,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,530.54,False
+2304350,Forquilha,230015,Sobral,2306,Sobral,2312908,Sobral/CE,568.778,False
+2304400,Fortaleza,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,312.353,True
+2304459,Fortim,230008,Aracati,2302,Quixadá,,,285.024,False
+2304509,Frecheirinha,230015,Sobral,2306,Sobral,,,210.284,False
+2304608,General Sampaio,230005,Itapagé,2301,Fortaleza,,,230.371,False
+2304707,Granja,230018,Camocim,2306,Sobral,,,2663.178,False
+2304806,Granjeiro,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,111.528,False
+2304657,Graça,230015,Sobral,2306,Sobral,,,258.943,False
+2304905,Groaíras,230015,Sobral,2306,Sobral,,,155.68,False
+2304954,Guaiúba,230001,Fortaleza,2301,Fortaleza,,,256.053,False
+2305001,Guaraciaba do Norte,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,624.61,False
+2305100,Guaramiranga,230003,Redenção-Acarape,2301,Fortaleza,,,90.817,False
+2305209,Hidrolândia,230015,Sobral,2306,Sobral,,,926.592,False
+2305233,Horizonte,230001,Fortaleza,2301,Fortaleza,,,160.556,False
+2305266,Ibaretama,230006,Quixadá,2302,Quixadá,,,879.253,False
+2305308,Ibiapina,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,414.092,False
+2305332,Ibicuitinga,230006,Quixadá,2302,Quixadá,,,423.856,False
+2305357,Icapuí,230008,Aracati,2302,Quixadá,,,421.441,False
+2305407,Icó,230010,Icó,2303,Iguatu,,,1865.86,False
+2305506,Iguatu,230009,Iguatu,2303,Iguatu,,,977.311,False
+2305605,Independência,230013,Crateús,2305,Crateús,,,3237.132,False
+2305654,Ipaporanga,230013,Crateús,2305,Crateús,,,704.773,False
+2305704,Ipaumirim,230010,Icó,2303,Iguatu,,,276.508,False
+2305803,Ipu,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,626.049,False
+2305902,Ipueiras,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,1483.262,False
+2306009,Iracema,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,839.174,False
+2306108,Irauçuba,230005,Itapagé,2301,Fortaleza,,,1466.413,False
+2306256,Itaitinga,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,153.686,False
+2306207,Itaiçaba,230008,Aracati,2302,Quixadá,,,213.604,False
+2306306,Itapajé,230005,Itapagé,2301,Fortaleza,,,436.32,False
+2306405,Itapipoca,230002,Itapipoca,2301,Fortaleza,2306405,Itapipoca,1596.225,False
+2306504,Itapiúna,230003,Redenção-Acarape,2301,Fortaleza,,,593.232,False
+2306553,Itarema,230017,Acaraú,2306,Sobral,,,714.833,False
+2306603,Itatira,230004,Canindé,2301,Fortaleza,,,829.211,False
+2306702,Jaguaretama,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,1826.829,False
+2306801,Jaguaribara,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,622.963,False
+2306900,Jaguaribe,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,1877.062,False
+2307007,Jaguaruana,230008,Aracati,2302,Quixadá,,,854.36,False
+2307106,Jardim,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,544.995,False
+2307205,Jati,230012,Brejo Santo,2304,Juazeiro do Norte,,,368.357,False
+2307254,Jijoca de Jericoacoara,230017,Acaraú,2306,Sobral,,,209.029,False
+2307304,Juazeiro do Norte,230011,Juazeiro do Norte,2304,Juazeiro do Norte,2307304,Juazeiro do Norte/CE,258.788,False
+2307403,Jucás,230009,Iguatu,2303,Iguatu,,,940.336,False
+2307502,Lavras da Mangabeira,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,945.263,False
+2307601,Limoeiro do Norte,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,794.688,False
+2307635,Madalena,230004,Canindé,2301,Fortaleza,,,998.195,False
+2307650,Maracanaú,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,105.084,False
+2307700,Maranguape,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,583.506,False
+2307809,Marco,230017,Acaraú,2306,Sobral,,,573.611,False
+2307908,Martinópole,230015,Sobral,2306,Sobral,,,303.445,False
+2308005,Massapê,230015,Sobral,2306,Sobral,,,567.78,False
+2308104,Mauriti,230012,Brejo Santo,2304,Juazeiro do Norte,,,1079.01,False
+2308203,Meruoca,230015,Sobral,2306,Sobral,,,151.651,False
+2308302,Milagres,230012,Brejo Santo,2304,Juazeiro do Norte,,,579.097,False
+2308351,Milhã,230006,Quixadá,2302,Quixadá,,,502.136,False
+2308377,Miraíma,230002,Itapipoca,2301,Fortaleza,,,708.678,False
+2308401,Missão Velha,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,613.317,False
+2308500,Mombaça,230009,Iguatu,2303,Iguatu,,,2105.518,False
+2308609,Monsenhor Tabosa,230013,Crateús,2305,Crateús,,,892.538,False
+2308708,Morada Nova,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,2822.836,False
+2308807,Moraújo,230015,Sobral,2306,Sobral,,,414.445,False
+2308906,Morrinhos,230015,Sobral,2306,Sobral,,,411.608,False
+2309003,Mucambo,230015,Sobral,2306,Sobral,,,192.19,False
+2309102,Mulungu,230003,Redenção-Acarape,2301,Fortaleza,,,97.951,False
+2309201,Nova Olinda,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,282.584,False
+2309300,Nova Russas,230013,Crateús,2305,Crateús,,,736.911,False
+2309409,Novo Oriente,230013,Crateús,2305,Crateús,,,954.384,False
+2309458,Ocara,230003,Redenção-Acarape,2301,Fortaleza,,,763.075,False
+2309508,Orós,230010,Icó,2303,Iguatu,,,577.526,False
+2309607,Pacajus,230001,Fortaleza,2301,Fortaleza,,,250.305,False
+2309706,Pacatuba,230001,Fortaleza,2301,Fortaleza,2304400,Fortaleza/CE,133.223,False
+2309805,Pacoti,230003,Redenção-Acarape,2301,Fortaleza,,,112.433,False
+2309904,Pacujá,230015,Sobral,2306,Sobral,,,88.355,False
+2310001,Palhano,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,436.98,False
+2310100,Palmácia,230001,Fortaleza,2301,Fortaleza,,,128.896,False
+2310209,Paracuru,230001,Fortaleza,2301,Fortaleza,,,304.734,False
+2310258,Paraipaba,230001,Fortaleza,2301,Fortaleza,,,289.231,False
+2310308,Parambu,230014,Tauá,2305,Crateús,,,2313.868,False
+2310407,Paramoti,230004,Canindé,2301,Fortaleza,,,539.238,False
+2310506,Pedra Branca,230006,Quixadá,2302,Quixadá,,,1328.779,False
+2310605,Penaforte,230012,Brejo Santo,2304,Juazeiro do Norte,,,150.536,False
+2310704,Pentecoste,230005,Itapagé,2301,Fortaleza,,,1379.836,False
+2310803,Pereiro,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,449.74,False
+2310852,Pindoretama,230001,Fortaleza,2301,Fortaleza,,,74.033,False
+2310902,Piquet Carneiro,230009,Iguatu,2303,Iguatu,,,589.601,False
+2310951,Pires Ferreira,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,244.464,False
+2311009,Poranga,230013,Crateús,2305,Crateús,,,1310.768,False
+2311108,Porteiras,230012,Brejo Santo,2304,Juazeiro do Norte,,,224.86,False
+2311207,Potengi,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,343.264,False
+2311231,Potiretama,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,409.137,False
+2311264,Quiterianópolis,230013,Crateús,2305,Crateús,,,1022.896,False
+2311306,Quixadá,230006,Quixadá,2302,Quixadá,,,2020.587,False
+2311355,Quixelô,230009,Iguatu,2303,Iguatu,,,620.242,False
+2311405,Quixeramobim,230006,Quixadá,2302,Quixadá,,,3302.144,False
+2311504,Quixeré,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,609.438,False
+2311603,Redenção,230003,Redenção-Acarape,2301,Fortaleza,,,247.989,False
+2311702,Reriutaba,230015,Sobral,2306,Sobral,,,372.949,False
+2311801,Russas,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,1505.726,False
+2311900,Saboeiro,230009,Iguatu,2303,Iguatu,,,1381.274,False
+2311959,Salitre,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,806.254,False
+2312205,Santa Quitéria,230015,Sobral,2306,Sobral,,,4262.293,False
+2312007,Santana do Acaraú,230015,Sobral,2306,Sobral,,,972.551,False
+2312106,Santana do Cariri,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,855.159,False
+2312700,Senador Pompeu,230006,Quixadá,2302,Quixadá,,,963.256,False
+2312809,Senador Sá,230015,Sobral,2306,Sobral,,,424.642,False
+2312908,Sobral,230015,Sobral,2306,Sobral,2312908,Sobral/CE,2068.474,False
+2313005,Solonópole,230006,Quixadá,2302,Quixadá,,,1535.856,False
+2312304,São Benedito,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,350.847,False
+2312403,São Gonçalo do Amarante,230001,Fortaleza,2301,Fortaleza,,,842.679,False
+2312502,São João do Jaguaribe,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,279.451,False
+2312601,São Luís do Curu,230001,Fortaleza,2301,Fortaleza,,,122.865,False
+2313104,Tabuleiro do Norte,230007,Russas - Limoeiro do Norte,2302,Quixadá,,,1047.637,False
+2313203,Tamboril,230013,Crateús,2305,Crateús,,,2011.781,False
+2313252,Tarrafas,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,412.719,False
+2313302,Tauá,230014,Tauá,2305,Crateús,,,4010.609,False
+2313351,Tejuçuoca,230005,Itapagé,2301,Fortaleza,,,758.706,False
+2313401,Tianguá,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,909.853,False
+2313500,Trairi,230002,Itapipoca,2301,Fortaleza,,,928.726,False
+2313559,Tururu,230002,Itapipoca,2301,Fortaleza,,,197.193,False
+2313609,Ubajara,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,423.673,False
+2313708,Umari,230010,Icó,2303,Iguatu,,,263.185,False
+2313757,Umirim,230002,Itapipoca,2301,Fortaleza,,,315.647,False
+2313807,Uruburetama,230002,Itapipoca,2301,Fortaleza,,,103.478,False
+2313906,Uruoca,230015,Sobral,2306,Sobral,,,697.683,False
+2313955,Varjota,230015,Sobral,2306,Sobral,,,179.239,False
+2314102,Viçosa do Ceará,230016,São Benedito - Ipu - Guaraciaba do Norte - Tianguá,2306,Sobral,,,1310.91,False
+2314003,Várzea Alegre,230011,Juazeiro do Norte,2304,Juazeiro do Norte,,,829.977,False

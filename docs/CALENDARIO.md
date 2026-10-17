@@ -69,37 +69,73 @@ Notas seguem o mesmo agendamento dos mapas. Sábado é um bom dia para elas: nã
 
 ---
 
-## Próximas semanas (a partir de 17/10/2026)
+## Série «Brasil, estado por estado» (17/10 a 23/12/2026)
 
-As datas são as de saída; os temas são **sugestões de pauta** a partir das fontes abertas, ligadas às suas
-linhas de pesquisa (energia, biomassa, biogás, território). Nenhum resultado está antecipado aqui: cada
-número sai dos dados quando o mapa for feito.
+A primeira série do atlas: uma base de cada unidade da federação — municípios, regiões imediatas e
+intermediárias, limite e rodovias —, toda gerada por `scripts/estados/` e já agendada (`data:` em cada
+`README.md`). São Paulo abre a série no dia do lançamento; as demais saem às segundas, quartas e sextas,
+do Sudeste ao Norte.
 
-| Data | Dia | Pauta sugerida | Categoria | Fontes |
+| Data | Dia | Nº | Unidade | Pasta |
 | --- | --- | --- | --- | --- |
-| 17/10 | sáb | **Nota:** “Essencial Geo entra no ar” (já agendada) | — | — |
-| 18–25/10 | | **Semana de preparação:** Zenodo, ORCID/DataCite, segredos; lote 1 | — | — |
-| 26/10 | seg | Usinas de biogás em operação no estado de São Paulo | energia | ANEEL — SIGA |
-| 28/10 | qua | Cana-de-açúcar por município: área colhida e produção | uso-do-solo | IBGE — PAM |
-| 30/10 | sex | Rebanhos bovino, suíno e de aves por município | energia | IBGE — PPM |
-| 31/10 | sáb | **Nota (agenda):** o que sai em novembro | — | — |
-| 02/11 | seg | Bacias hidrográficas do estado de São Paulo (Finados: saída automática, divulgue no dia 3) | hidrografia | ANA — BHO |
-| 04/11 | qua | Uso e cobertura da terra na Região Metropolitana de Campinas | uso-do-solo | MapBiomas (coleção mais recente) |
-| 06/11 | sex | Densidade de domicílios na RMC, grade estatística | censo-renda | IBGE — Censo 2022 |
-| 09/11 | seg | Relevo da Serra da Mantiqueira paulista | altimetria-relevo | Copernicus DEM GLO-30 |
-| 11/11 | qua | Malha viária do centro de Campinas em DXF | infraestrutura-dxf | OpenStreetMap |
-| 13/11 | sex | Biomas do Brasil e a transição Cerrado–Mata Atlântica em SP | biomas | IBGE — Biomas 1:250.000 |
-| 14/11 | sáb | **Nota (método):** como as pranchas são exportadas em duas línguas | — | — |
-| 16/11 | seg | Unidades de conservação no estado de São Paulo | biomas | MMA — CNUC |
-| 18/11 | qua | Linhas de transmissão e subestações em SP | energia | EPE — WebMap / ANEEL — SIGEL |
-| 20/11 | sex | Comunidades quilombolas no Censo 2022 (Dia da Consciência Negra) | censo-renda | IBGE — Censo 2022, INCRA |
-| 23/11 | seg | Renda domiciliar na RMC | censo-renda | IBGE — Censo 2022 |
-| 25/11 | qua | Rede hidrográfica e APPs de um município da RMC | hidrografia | ANA, FBDS |
-| 27/11 | sex | Usinas sucroenergéticas e área de cana: onde o resíduo está | energia | ANEEL — SIGA, IBGE — PAM |
-| 30/11 | seg | **Nota (agenda)** + mapa: a definir com o que surgir em outubro | — | — |
+| 17/10 | sáb | 001 | São Paulo (SP) | `001-estado-sao-paulo` |
+| 26/10 | seg | 002 | Rio de Janeiro (RJ) | `002-estado-rio-de-janeiro` |
+| 28/10 | qua | 003 | Minas Gerais (MG) | `003-estado-minas-gerais` |
+| 30/10 | sex | 004 | Espírito Santo (ES) | `004-estado-espirito-santo` |
+| 02/11 | seg | 005 | Paraná (PR) | `005-estado-parana` |
+| 04/11 | qua | 006 | Santa Catarina (SC) | `006-estado-santa-catarina` |
+| 06/11 | sex | 007 | Rio Grande do Sul (RS) | `007-estado-rio-grande-do-sul` |
+| 09/11 | seg | 008 | Mato Grosso do Sul (MS) | `008-estado-mato-grosso-do-sul` |
+| 11/11 | qua | 009 | Mato Grosso (MT) | `009-estado-mato-grosso` |
+| 13/11 | sex | 010 | Goiás (GO) | `010-estado-goias` |
+| 16/11 | seg | 011 | Distrito Federal (DF) | `011-distrito-federal` |
+| 18/11 | qua | 012 | Bahia (BA) | `012-estado-bahia` |
+| 20/11 | sex | 013 | Sergipe (SE) | `013-estado-sergipe` |
+| 23/11 | seg | 014 | Alagoas (AL) | `014-estado-alagoas` |
+| 25/11 | qua | 015 | Pernambuco (PE) | `015-estado-pernambuco` |
+| 27/11 | sex | 016 | Paraíba (PB) | `016-estado-paraiba` |
+| 30/11 | seg | 017 | Rio Grande do Norte (RN) | `017-estado-rio-grande-do-norte` |
+| 02/12 | qua | 018 | Ceará (CE) | `018-estado-ceara` |
+| 04/12 | sex | 019 | Piauí (PI) | `019-estado-piaui` |
+| 07/12 | seg | 020 | Maranhão (MA) | `020-estado-maranhao` |
+| 09/12 | qua | 021 | Tocantins (TO) | `021-estado-tocantins` |
+| 11/12 | sex | 022 | Pará (PA) | `022-estado-para` |
+| 14/12 | seg | 023 | Amapá (AP) | `023-estado-amapa` |
+| 16/12 | qua | 024 | Amazonas (AM) | `024-estado-amazonas` |
+| 18/12 | sex | 025 | Roraima (RR) | `025-estado-roraima` |
+| 21/12 | seg | 026 | Acre (AC) | `026-estado-acre` |
+| 23/12 | qua | 027 | Rondônia (RO) | `027-estado-rondonia` |
+
+**Antes de cada saída:** o GPKG e o DXF compactados daquele estado precisam estar nos anexos da release
+`estados-2025` (veja [`PUBLICAR.md`](PUBLICAR.md#série-brasil-estado-por-estado)). Como a release sobe de
+uma vez, isso vale para a série inteira no primeiro push.
+
+**Notas sugeridas no meio da série:** 31/10 (agenda de novembro), 14/11 (método: como a prancha escolhe
+cores, rótulos e cantos sozinha), 28/11 (agenda de dezembro), 26/12 (bastidores: a série inteira numa
+prancha só).
+
+## Pautas para depois da série
+
+Sugestões a partir das fontes abertas, ligadas às linhas de pesquisa (energia, biomassa, biogás,
+território). Nenhum resultado está antecipado aqui: cada número sai dos dados quando o mapa for feito.
+
+| Pauta sugerida | Categoria | Fontes |
+| --- | --- | --- |
+| Usinas de biogás em operação no estado de São Paulo | energia | ANEEL — SIGA |
+| Cana-de-açúcar por município: área colhida e produção | uso-do-solo | IBGE — PAM |
+| Rebanhos bovino, suíno e de aves por município | energia | IBGE — PPM |
+| Bacias hidrográficas do estado de São Paulo | hidrografia | ANA — BHO |
+| Uso e cobertura da terra na Região Metropolitana de Campinas | uso-do-solo | MapBiomas (coleção mais recente) |
+| Densidade de domicílios na RMC, grade estatística | censo-renda | IBGE — Censo 2022 |
+| Relevo da Serra da Mantiqueira paulista | altimetria-relevo | Copernicus DEM GLO-30 |
+| Malha viária do centro de Campinas em DXF | infraestrutura-dxf | OpenStreetMap |
+| Biomas do Brasil e a transição Cerrado–Mata Atlântica em SP | biomas | IBGE — Biomas 1:250.000 |
+| Unidades de conservação no estado de São Paulo | biomas | MMA — CNUC |
+| Linhas de transmissão e subestações em SP | energia | EPE — WebMap / ANEEL — SIGEL |
+| Comunidades quilombolas no Censo 2022 | censo-renda | IBGE — Censo 2022, INCRA |
+| Renda domiciliar na RMC | censo-renda | IBGE — Censo 2022 |
+| Rede hidrográfica e APPs de um município da RMC | hidrografia | ANA, FBDS |
+| Usinas sucroenergéticas e área de cana: onde o resíduo está | energia | ANEEL — SIGA, IBGE — PAM |
 
 **Séries.** As pautas de energia formam uma série (biogás → rebanhos → cana → usinas), e as da RMC outra.
 Vale numerar a série no subtítulo (“Bioenergia em SP, 1/4”) e anunciar a sequência numa nota.
-
-**As pranchas-modelo 001–004** (dados sintéticos) continuam no ar até a primeira prancha real. No commit do
-mapa de 26/10, marque as quatro com `rascunho: true` — ou mantenha-as, com o selo, como mostruário das séries.

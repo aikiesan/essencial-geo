@@ -78,6 +78,7 @@ export const LINKS = {
  * e a ordem aqui é a ordem da barra lateral. Rótulos nas duas línguas: src/i18n/ui.ts.
  */
 export const CATEGORIA_IDS = [
+  'divisao-territorial',
   'uso-do-solo',
   'censo-renda',
   'altimetria-relevo',
@@ -93,6 +94,7 @@ export const FORMATOS = {
   gpkg: { sigla: 'GPKG', ext: '.gpkg' },
   dxf: { sigla: 'DXF', ext: '.dxf' },
   pdf: { sigla: 'PDF', ext: '.pdf' },
+  svg: { sigla: 'SVG', ext: '.svg' },
   png: { sigla: 'PNG', ext: '.png' },
   csv: { sigla: 'CSV', ext: '.csv' },
   tif: { sigla: 'TIF', ext: '.tif' },

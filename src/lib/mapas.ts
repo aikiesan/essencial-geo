@@ -125,9 +125,12 @@ export function resolverDownloads(m: Mapa): DownloadResolvido[] {
     // Arquivo listado mas ainda não presente na pasta → botão "em breve", nunca link quebrado.
     const arquivo = m.lingua === 'en' && d.arquivo_en ? d.arquivo_en : d.arquivo;
     const local = arquivo && existsSync(join(process.cwd(), 'mapas', m.id, arquivo)) ? arquivoDoMapa(m, arquivo) : undefined;
-    const href = d.url ?? local;
+    const url = m.lingua === 'en' && d.url_en ? d.url_en : d.url;
+    const href = url ?? local;
     const rotulo = m.lingua === 'en' ? (d.rotulo_en ?? formatos[d.formato]) : (d.rotulo ?? formatos[d.formato]);
-    return { formato: d.formato, sigla: f.sigla, rotulo, ext: f.ext, href, tamanho: d.tamanho, externo: Boolean(d.url) };
+    // O README escreve '1,6 MB'; em inglês o separador decimal é o ponto.
+    const tamanho = m.lingua === 'en' ? d.tamanho?.replace(/(\d),(\d)/, '$1.$2') : d.tamanho;
+    return { formato: d.formato, sigla: f.sigla, rotulo, ext: f.ext, href, tamanho, externo: Boolean(d.url) };
   });
 }
 

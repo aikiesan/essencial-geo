@@ -139,6 +139,7 @@ const pt = {
     gpkg: 'GeoPackage',
     dxf: 'AutoCAD / Illustrator',
     pdf: 'Prancha vetorial',
+    svg: 'Prancha vetorial (SVG)',
     png: 'Prancha 300 dpi',
     csv: 'Tabela de atributos',
     tif: 'GeoTIFF',
@@ -146,6 +147,7 @@ const pt = {
     r: 'Script R',
   },
   categorias: {
+    'divisao-territorial': { rotulo: 'Divisão Territorial', curto: 'Divisão territorial' },
     'uso-do-solo': { rotulo: 'Uso do Solo', curto: 'Uso do solo' },
     'censo-renda': { rotulo: 'Censo / Renda', curto: 'Censo · renda' },
     'altimetria-relevo': { rotulo: 'Altimetria / Relevo', curto: 'Altimetria · relevo' },
@@ -296,6 +298,7 @@ const en: Forma<Textos> = {
     gpkg: 'GeoPackage',
     dxf: 'AutoCAD / Illustrator',
     pdf: 'Vector plate',
+    svg: 'Vector plate (SVG)',
     png: 'Plate, 300 dpi',
     csv: 'Attribute table',
     tif: 'GeoTIFF',
@@ -303,6 +306,7 @@ const en: Forma<Textos> = {
     r: 'R script',
   },
   categorias: {
+    'divisao-territorial': { rotulo: 'Territorial Divisions', curto: 'Territorial divisions' },
     'uso-do-solo': { rotulo: 'Land Use', curto: 'Land use' },
     'censo-renda': { rotulo: 'Census / Income', curto: 'Census · income' },
     'altimetria-relevo': { rotulo: 'Elevation / Relief', curto: 'Elevation · relief' },

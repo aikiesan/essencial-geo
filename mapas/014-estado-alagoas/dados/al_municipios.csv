@@ -1,0 +1,103 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2700201,Anadia,270004,São Miguel dos Campos,2701,Maceió,,,186.074,False
+2700300,Arapiraca,270007,Arapiraca,2702,Arapiraca,2700300,Arapiraca,346.188,False
+2700409,Atalaia,270006,Atalaia,2701,Maceió,,,533.259,False
+2700508,Barra de Santo Antônio,270001,Maceió,2701,Maceió,2704302,Maceió/AL,131.364,False
+2700607,Barra de São Miguel,270001,Maceió,2701,Maceió,,,74.332,False
+2700706,Batalha,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,331.752,False
+2700904,Belo Monte,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,322.887,False
+2700805,Belém,270008,Palmeira dos Índios,2702,Arapiraca,,,66.629,False
+2701001,Boca da Mata,270004,São Miguel dos Campos,2701,Maceió,,,192.952,False
+2701100,Branquinha,270005,União dos Palmares,2701,Maceió,,,168.343,False
+2701209,Cacimbinhas,270008,Palmeira dos Índios,2702,Arapiraca,,,282.011,False
+2701308,Cajueiro,270006,Atalaia,2701,Maceió,,,107.168,False
+2701357,Campestre,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,65.019,False
+2701407,Campo Alegre,270004,São Miguel dos Campos,2701,Maceió,,,312.726,False
+2701506,Campo Grande,270007,Arapiraca,2702,Arapiraca,,,170.145,False
+2701605,Canapi,270010,Santana do Ipanema,2702,Arapiraca,,,600.879,False
+2701704,Capela,270006,Atalaia,2701,Maceió,,,253.168,False
+2701803,Carneiros,270010,Santana do Ipanema,2702,Arapiraca,,,111.695,False
+2701902,Chã Preta,270006,Atalaia,2701,Maceió,,,157.831,False
+2702009,Coité do Nóia,270007,Arapiraca,2702,Arapiraca,,,88.334,False
+2702108,Colônia Leopoldina,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,201.461,False
+2702207,Coqueiro Seco,270001,Maceió,2701,Maceió,2704302,Maceió/AL,39.608,False
+2702306,Coruripe,270003,Penedo,2701,Maceió,,,897.431,False
+2702355,Craíbas,270007,Arapiraca,2702,Arapiraca,,,277.617,False
+2702405,Delmiro Gouveia,270009,Delmiro Gouveia,2702,Arapiraca,,,628.547,False
+2702504,Dois Riachos,270010,Santana do Ipanema,2702,Arapiraca,,,142.364,False
+2702553,Estrela de Alagoas,270008,Palmeira dos Índios,2702,Arapiraca,,,260.615,False
+2702603,Feira Grande,270007,Arapiraca,2702,Arapiraca,,,175.906,False
+2702702,Feliz Deserto,270003,Penedo,2701,Maceió,,,110.062,False
+2702801,Flexeiras,270001,Maceió,2701,Maceió,,,333.756,False
+2702900,Girau do Ponciano,270007,Arapiraca,2702,Arapiraca,,,517.85,False
+2703007,Ibateguara,270005,União dos Palmares,2701,Maceió,,,265.313,False
+2703106,Igaci,270008,Palmeira dos Índios,2702,Arapiraca,,,334.342,False
+2703205,Igreja Nova,270003,Penedo,2701,Maceió,,,428.023,False
+2703304,Inhapi,270009,Delmiro Gouveia,2702,Arapiraca,,,372.019,False
+2703403,Jacaré dos Homens,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,149.332,False
+2703502,Jacuípe,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,209.65,False
+2703601,Japaratinga,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,85.699,False
+2703700,Jaramataia,270007,Arapiraca,2702,Arapiraca,,,105.416,False
+2703759,Jequiá da Praia,270004,São Miguel dos Campos,2701,Maceió,,,334.619,False
+2703809,Joaquim Gomes,270001,Maceió,2701,Maceió,,,300.865,False
+2703908,Jundiá,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,88.772,False
+2704005,Junqueiro,270007,Arapiraca,2702,Arapiraca,,,246.961,False
+2704104,Lagoa da Canoa,270007,Arapiraca,2702,Arapiraca,,,83.621,False
+2704203,Limoeiro de Anadia,270007,Arapiraca,2702,Arapiraca,,,309.171,False
+2704302,Maceió,270001,Maceió,2701,Maceió,2704302,Maceió/AL,509.295,True
+2704401,Major Isidoro,270008,Palmeira dos Índios,2702,Arapiraca,,,437.602,False
+2704906,Mar Vermelho,270006,Atalaia,2701,Maceió,,,91.741,False
+2704500,Maragogi,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,333.952,False
+2704609,Maravilha,270010,Santana do Ipanema,2702,Arapiraca,,,334.052,False
+2704708,Marechal Deodoro,270001,Maceió,2701,Maceió,2704302,Maceió/AL,340.987,False
+2704807,Maribondo,270007,Arapiraca,2702,Arapiraca,,,180.107,False
+2705002,Mata Grande,270009,Delmiro Gouveia,2702,Arapiraca,,,909.535,False
+2705101,Matriz de Camaragibe,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,238.112,False
+2705200,Messias,270001,Maceió,2701,Maceió,2704302,Maceió/AL,114.156,False
+2705309,Minador do Negrão,270008,Palmeira dos Índios,2702,Arapiraca,,,167.461,False
+2705408,Monteirópolis,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,86.605,False
+2705507,Murici,270005,União dos Palmares,2701,Maceió,,,418.028,False
+2705606,Novo Lino,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,219.327,False
+2705903,Olho d'Água Grande,270007,Arapiraca,2702,Arapiraca,,,115.509,False
+2705705,Olho d'Água das Flores,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,188.398,False
+2705804,Olho d'Água do Casado,270009,Delmiro Gouveia,2702,Arapiraca,,,327.679,False
+2706000,Olivença,270010,Santana do Ipanema,2702,Arapiraca,,,174.188,False
+2706109,Ouro Branco,270010,Santana do Ipanema,2702,Arapiraca,,,196.349,False
+2706208,Palestina,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,38.189,False
+2706307,Palmeira dos Índios,270008,Palmeira dos Índios,2702,Arapiraca,,,450.99,False
+2706422,Pariconha,270009,Delmiro Gouveia,2702,Arapiraca,,,254.718,False
+2706448,Paripueira,270001,Maceió,2701,Maceió,2704302,Maceió/AL,92.813,False
+2706505,Passo de Camaragibe,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,251.169,False
+2706604,Paulo Jacinto,270008,Palmeira dos Índios,2702,Arapiraca,,,118.457,False
+2706703,Penedo,270003,Penedo,2701,Maceió,,,688.713,False
+2706802,Piaçabuçu,270003,Penedo,2701,Maceió,,,243.686,False
+2706901,Pilar,270001,Maceió,2701,Maceió,,,259.646,False
+2707008,Pindoba,270006,Atalaia,2701,Maceió,,,117.576,False
+2707107,Piranhas,270009,Delmiro Gouveia,2702,Arapiraca,,,403.994,False
+2707305,Porto Calvo,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,313.68,False
+2707503,Porto Real do Colégio,270003,Penedo,2701,Maceió,,,237.017,False
+2707404,Porto de Pedras,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,256.526,False
+2707206,Poço das Trincheiras,270010,Santana do Ipanema,2702,Arapiraca,,,284.526,False
+2706406,Pão de Açúcar,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,688.87,False
+2707602,Quebrangulo,270008,Palmeira dos Índios,2702,Arapiraca,,,319.829,False
+2707701,Rio Largo,270001,Maceió,2701,Maceió,2704302,Maceió/AL,293.832,False
+2707800,Roteiro,270004,São Miguel dos Campos,2701,Maceió,,,128.869,False
+2707909,Santa Luzia do Norte,270001,Maceió,2701,Maceió,2704302,Maceió/AL,28.857,False
+2708006,Santana do Ipanema,270010,Santana do Ipanema,2702,Arapiraca,,,436.087,False
+2708105,Santana do Mundaú,270005,União dos Palmares,2701,Maceió,,,232.17,False
+2708907,Satuba,270001,Maceió,2701,Maceió,2704302,Maceió/AL,41.268,False
+2708956,Senador Rui Palmeira,270010,Santana do Ipanema,2702,Arapiraca,,,338.569,False
+2708204,São Brás,270003,Penedo,2701,Maceió,,,138.969,False
+2708303,São José da Laje,270005,União dos Palmares,2701,Maceió,,,256.603,False
+2708402,São José da Tapera,270011,Pão de Açúcar - Olho d'Água das Flores - Batalha,2702,Arapiraca,,,490.88,False
+2708501,São Luís do Quitunde,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,397.257,False
+2708600,São Miguel dos Campos,270004,São Miguel dos Campos,2701,Maceió,,,335.679,False
+2708709,São Miguel dos Milagres,270002,Porto Calvo - São Luís do Quitunde,2701,Maceió,,,76.852,False
+2708808,São Sebastião,270007,Arapiraca,2702,Arapiraca,,,312.746,False
+2709004,Tanque d'Arca,270007,Arapiraca,2702,Arapiraca,,,124.616,False
+2709103,Taquarana,270007,Arapiraca,2702,Arapiraca,,,153.833,False
+2709152,Teotônio Vilela,270007,Arapiraca,2702,Arapiraca,,,299.237,False
+2709202,Traipu,270007,Arapiraca,2702,Arapiraca,,,680.0,False
+2709301,União dos Palmares,270005,União dos Palmares,2701,Maceió,,,420.081,False
+2709400,Viçosa,270006,Atalaia,2701,Maceió,,,365.154,False
+2700102,Água Branca,270009,Delmiro Gouveia,2702,Arapiraca,,,473.845,False

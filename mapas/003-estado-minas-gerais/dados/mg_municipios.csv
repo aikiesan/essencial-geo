@@ -1,0 +1,854 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+3100104,Abadia dos Dourados,310061,Monte Carmelo,3111,Uberlândia,,,880.461,False
+3100203,Abaeté,310070,Abaeté,3113,Divinópolis,,,1817.067,False
+3100302,Abre Campo,310028,Manhuaçu,3106,Juíz de Fora,,,470.551,False
+3100401,Acaiaca,310030,Ponte Nova,3106,Juíz de Fora,,,101.886,False
+3100807,Aguanil,310048,Campo Belo,3108,Varginha,,,232.091,False
+3101102,Aimorés,310023,Aimorés - Resplendor,3104,Governador Valadares,,,1348.913,False
+3101201,Aiuruoca,310054,Caxambu - Baependi,3109,Pouso Alegre,,,649.68,False
+3101300,Alagoa,310053,São Lourenço,3109,Pouso Alegre,,,161.356,False
+3101409,Albertina,310050,Pouso Alegre,3109,Pouso Alegre,,,58.01,False
+3101607,Alfenas,310042,Alfenas,3108,Varginha,,,850.446,False
+3101631,Alfredo Vasconcelos,310037,Barbacena,3107,Barbacena,3105608,Barbacena/MG,130.815,False
+3101706,Almenara,310015,Almenara,3103,Teófilo Otoni,,,2294.426,False
+3101805,Alpercata,310020,Governador Valadares,3104,Governador Valadares,,,166.972,False
+3101904,Alpinópolis,310041,Passos,3108,Varginha,,,460.685,False
+3102001,Alterosa,310042,Alfenas,3108,Varginha,,,362.01,False
+3102050,Alto Caparaó,310028,Manhuaçu,3106,Juíz de Fora,,,103.69,False
+3153509,Alto Jequitibá,310028,Manhuaçu,3106,Juíz de Fora,,,152.272,False
+3102100,Alto Rio Doce,310037,Barbacena,3107,Barbacena,,,518.053,False
+3102209,Alvarenga,310025,Caratinga,3105,Ipatinga,,,295.691,False
+3102308,Alvinópolis,310030,Ponte Nova,3106,Juíz de Fora,,,599.443,False
+3102407,Alvorada de Minas,310016,Diamantina,3103,Teófilo Otoni,,,374.008,False
+3101508,Além Paraíba,310036,Além Paraíba,3106,Juíz de Fora,,,510.25,False
+3102506,Amparo do Serra,310030,Ponte Nova,3106,Juíz de Fora,,,136.186,False
+3102605,Andradas,310051,Poços de Caldas,3109,Pouso Alegre,,,469.396,False
+3102803,Andrelândia,310027,Juiz de Fora,3106,Juíz de Fora,,,1005.285,False
+3102852,Angelândia,310014,Capelinha,3103,Teófilo Otoni,,,185.211,False
+3102902,Antônio Carlos,310037,Barbacena,3107,Barbacena,3105608,Barbacena/MG,529.915,False
+3103009,Antônio Dias,310024,Ipatinga,3105,Ipatinga,,,787.061,False
+3103108,Antônio Prado de Minas,310031,Muriaé,3106,Juíz de Fora,,,83.802,False
+3103306,Aracitaba,310027,Juiz de Fora,3106,Juíz de Fora,,,106.608,False
+3103504,Araguari,310059,Uberlândia,3111,Uberlândia,3103504,Araguari,2729.777,False
+3103603,Arantina,310027,Juiz de Fora,3106,Juíz de Fora,,,89.42,False
+3103702,Araponga,310033,Viçosa,3106,Juíz de Fora,,,303.793,False
+3103751,Araporã,310059,Uberlândia,3111,Uberlândia,,,294.354,False
+3103801,Arapuá,310062,Patos de Minas,3112,Patos de Minas,,,173.894,False
+3104007,Araxá,310056,Araxá,3110,Uberaba,,,1164.062,False
+3103207,Araçaí,310002,Sete Lagoas,3101,Belo Horizonte,,,187.53,False
+3103405,Araçuaí,310017,Araçuaí,3103,Teófilo Otoni,,,2236.279,False
+3103900,Araújos,310065,Divinópolis,3113,Divinópolis,,,245.522,False
+3104106,Arceburgo,310044,Guaxupé,3108,Varginha,,,162.875,False
+3104205,Arcos,310066,Formiga,3113,Divinópolis,,,509.873,False
+3104304,Areado,310042,Alfenas,3108,Varginha,,,283.124,False
+3104403,Argirita,310032,Cataguases,3106,Juíz de Fora,,,159.378,False
+3104452,Aricanduva,310014,Capelinha,3103,Teófilo Otoni,,,243.329,False
+3104502,Arinos,310063,Unaí,3112,Patos de Minas,,,5279.419,False
+3104601,Astolfo Dutra,310032,Cataguases,3106,Juíz de Fora,,,158.891,False
+3104700,Ataléia,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1836.933,False
+3104809,Augusto de Lima,310004,Curvelo,3101,Belo Horizonte,,,1254.832,False
+3100500,Açucena,310024,Ipatinga,3105,Ipatinga,,,815.422,False
+3104908,Baependi,310054,Caxambu - Baependi,3109,Pouso Alegre,,,750.554,False
+3105004,Baldim,310002,Sete Lagoas,3101,Belo Horizonte,,,556.266,False
+3105103,Bambuí,310066,Formiga,3113,Divinópolis,,,1455.819,False
+3105202,Bandeira,310015,Almenara,3103,Teófilo Otoni,,,483.789,False
+3105301,Bandeira do Sul,310051,Poços de Caldas,3109,Pouso Alegre,,,47.266,False
+3105608,Barbacena,310037,Barbacena,3107,Barbacena,3105608,Barbacena/MG,759.186,False
+3105707,Barra Longa,310030,Ponte Nova,3106,Juíz de Fora,,,383.628,False
+3105905,Barroso,310037,Barbacena,3107,Barbacena,,,82.07,False
+3105400,Barão de Cocais,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,340.14,False
+3105509,Barão do Monte Alto,310031,Muriaé,3106,Juíz de Fora,,,198.313,False
+3106002,Bela Vista de Minas,310026,João Monlevade,3105,Ipatinga,,,109.25,False
+3106101,Belmiro Braga,310027,Juiz de Fora,3106,Juíz de Fora,,,393.086,False
+3106200,Belo Horizonte,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,331.337,True
+3106309,Belo Oriente,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,334.909,False
+3106408,Belo Vale,310038,Conselheiro Lafaiete,3107,Barbacena,,,364.94,False
+3106507,Berilo,310017,Araçuaí,3103,Teófilo Otoni,,,587.106,False
+3106655,Berizal,310008,Salinas,3102,Montes Claros,,,488.756,False
+3106606,Bertópolis,310019,Águas Formosas,3103,Teófilo Otoni,,,427.803,False
+3106705,Betim,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,344.076,False
+3106804,Bias Fortes,310027,Juiz de Fora,3106,Juíz de Fora,,,283.535,False
+3106903,Bicas,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,140.082,False
+3107000,Biquinhas,310070,Abaeté,3113,Divinópolis,,,458.948,False
+3107109,Boa Esperança,310046,Três Pontas - Boa Esperança,3108,Varginha,,,860.669,False
+3107208,Bocaina de Minas,310027,Juiz de Fora,3106,Juíz de Fora,,,503.77,False
+3107307,Bocaiúva,310006,Montes Claros,3102,Montes Claros,,,3206.757,False
+3107406,Bom Despacho,310067,Dores do Indaiá,3113,Divinópolis,,,1213.546,False
+3107505,Bom Jardim de Minas,310027,Juiz de Fora,3106,Juíz de Fora,,,412.021,False
+3107604,Bom Jesus da Penha,310041,Passos,3108,Varginha,,,208.349,False
+3107703,Bom Jesus do Amparo,310005,Itabira,3101,Belo Horizonte,,,195.611,False
+3107802,Bom Jesus do Galho,310025,Caratinga,3105,Ipatinga,,,592.289,False
+3107901,Bom Repouso,310050,Pouso Alegre,3109,Pouso Alegre,,,229.845,False
+3108008,Bom Sucesso,310043,Lavras,3108,Varginha,,,705.046,False
+3108107,Bonfim,310069,Oliveira,3113,Divinópolis,,,300.471,False
+3108206,Bonfinópolis de Minas,310063,Unaí,3112,Patos de Minas,,,1850.487,False
+3108255,Bonito de Minas,310009,Januária,3102,Montes Claros,,,3936.455,False
+3108305,Borda da Mata,310050,Pouso Alegre,3109,Pouso Alegre,,,301.108,False
+3108404,Botelhos,310051,Poços de Caldas,3109,Pouso Alegre,,,334.089,False
+3108503,Botumirim,310006,Montes Claros,3102,Montes Claros,,,1568.884,False
+3108552,Brasilândia de Minas,310062,Patos de Minas,3112,Patos de Minas,,,2509.694,False
+3108602,Brasília de Minas,310006,Montes Claros,3102,Montes Claros,,,1399.484,False
+3108909,Brazópolis,310052,Itajubá,3109,Pouso Alegre,,,367.688,False
+3108800,Braúnas,310024,Ipatinga,3105,Ipatinga,,,378.318,False
+3109006,Brumadinho,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,640.63,False
+3108701,Brás Pires,310029,Ubá,3106,Juíz de Fora,,,223.351,False
+3109105,Bueno Brandão,310050,Pouso Alegre,3109,Pouso Alegre,,,356.15,False
+3109204,Buenópolis,310004,Curvelo,3101,Belo Horizonte,,,1599.881,False
+3109253,Bugre,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,161.491,False
+3109303,Buritis,310063,Unaí,3112,Patos de Minas,,,5225.186,False
+3109402,Buritizeiro,310010,Pirapora,3102,Montes Claros,,,7218.401,False
+3109451,Cabeceira Grande,310063,Unaí,3112,Patos de Minas,,,1033.055,False
+3109501,Cabo Verde,310044,Guaxupé,3108,Varginha,,,368.206,False
+3109808,Cachoeira Dourada,310060,Ituiutaba,3111,Uberlândia,,,203.07,False
+3109600,Cachoeira da Prata,310002,Sete Lagoas,3101,Belo Horizonte,,,61.425,False
+3109709,Cachoeira de Minas,310050,Pouso Alegre,3109,Pouso Alegre,,,304.243,False
+3102704,Cachoeira de Pajeú,310018,Pedra Azul,3103,Teófilo Otoni,,,695.672,False
+3109907,Caetanópolis,310002,Sete Lagoas,3101,Belo Horizonte,,,156.039,False
+3110004,Caeté,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,542.531,False
+3110103,Caiana,310034,Carangola,3106,Juíz de Fora,,,106.465,False
+3110202,Cajuri,310033,Viçosa,3106,Juíz de Fora,,,83.038,False
+3110301,Caldas,310051,Poços de Caldas,3109,Pouso Alegre,,,711.414,False
+3110400,Camacho,310065,Divinópolis,3113,Divinópolis,,,223.001,False
+3110509,Camanducaia,310050,Pouso Alegre,3109,Pouso Alegre,,,528.688,False
+3110707,Cambuquira,310045,Três Corações,3108,Varginha,,,246.38,False
+3110608,Cambuí,310050,Pouso Alegre,3109,Pouso Alegre,,,244.567,False
+3110905,Campanha,310045,Três Corações,3108,Varginha,,,335.587,False
+3110806,Campanário,310013,Teófilo Otoni,3103,Teófilo Otoni,,,442.398,False
+3111002,Campestre,310051,Poços de Caldas,3109,Pouso Alegre,,,577.843,False
+3111101,Campina Verde,310059,Uberlândia,3111,Uberlândia,,,3650.749,False
+3111150,Campo Azul,310006,Montes Claros,3102,Montes Claros,,,505.914,False
+3111200,Campo Belo,310048,Campo Belo,3108,Varginha,,,528.225,False
+3111408,Campo Florido,310055,Uberaba,3110,Uberaba,,,1264.245,False
+3111309,Campo do Meio,310042,Alfenas,3108,Varginha,,,275.426,False
+3111507,Campos Altos,310056,Araxá,3110,Uberaba,,,710.645,False
+3111606,Campos Gerais,310042,Alfenas,3108,Varginha,,,769.504,False
+3111903,Cana Verde,310043,Lavras,3108,Varginha,,,212.721,False
+3111705,Canaã,310033,Viçosa,3106,Juíz de Fora,,,174.9,False
+3112000,Candeias,310048,Campo Belo,3108,Varginha,,,720.512,False
+3112059,Cantagalo,310021,Guanhães,3104,Governador Valadares,,,141.855,False
+3111804,Canápolis,310059,Uberlândia,3111,Uberlândia,,,843.599,False
+3112109,Caparaó,310028,Manhuaçu,3106,Juíz de Fora,,,130.694,False
+3112208,Capela Nova,310038,Conselheiro Lafaiete,3107,Barbacena,,,111.073,False
+3112307,Capelinha,310014,Capelinha,3103,Teófilo Otoni,,,965.292,False
+3112406,Capetinga,310041,Passos,3108,Varginha,,,297.937,False
+3112505,Capim Branco,310002,Sete Lagoas,3101,Belo Horizonte,,,95.333,False
+3112604,Capinópolis,310060,Ituiutaba,3111,Uberlândia,,,620.716,False
+3112653,Capitão Andrade,310020,Governador Valadares,3104,Governador Valadares,,,279.088,False
+3112703,Capitão Enéas,310006,Montes Claros,3102,Montes Claros,,,971.576,False
+3112802,Capitólio,310049,Piumhi,3108,Varginha,,,521.802,False
+3112901,Caputira,310028,Manhuaçu,3106,Juíz de Fora,,,187.704,False
+3113107,Caranaíba,310038,Conselheiro Lafaiete,3107,Barbacena,,,159.95,False
+3113206,Carandaí,310038,Conselheiro Lafaiete,3107,Barbacena,,,487.28,False
+3113305,Carangola,310034,Carangola,3106,Juíz de Fora,,,353.404,False
+3113404,Caratinga,310025,Caratinga,3105,Ipatinga,,,1258.748,False
+3113008,Caraí,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1242.345,False
+3113503,Carbonita,310016,Diamantina,3103,Teófilo Otoni,,,1456.095,False
+3113602,Careaçu,310050,Pouso Alegre,3109,Pouso Alegre,,,181.009,False
+3113701,Carlos Chagas,310013,Teófilo Otoni,3103,Teófilo Otoni,,,3202.984,False
+3113909,Carmo da Cachoeira,310045,Três Corações,3108,Varginha,,,506.333,False
+3114006,Carmo da Mata,310065,Divinópolis,3113,Divinópolis,,,357.178,False
+3114105,Carmo de Minas,310053,São Lourenço,3109,Pouso Alegre,,,322.285,False
+3114204,Carmo do Cajuru,310065,Divinópolis,3113,Divinópolis,,,455.807,False
+3114303,Carmo do Paranaíba,310062,Patos de Minas,3112,Patos de Minas,,,1307.862,False
+3114402,Carmo do Rio Claro,310041,Passos,3108,Varginha,,,1065.685,False
+3113800,Carmésia,310005,Itabira,3101,Belo Horizonte,,,259.103,False
+3114501,Carmópolis de Minas,310069,Oliveira,3113,Divinópolis,,,400.01,False
+3114550,Carneirinho,310058,Iturama,3110,Uberaba,,,2063.462,False
+3114600,Carrancas,310043,Lavras,3108,Varginha,,,727.894,False
+3114808,Carvalhos,310054,Caxambu - Baependi,3109,Pouso Alegre,,,282.254,False
+3114709,Carvalhópolis,310042,Alfenas,3108,Varginha,,,81.101,False
+3114907,Casa Grande,310038,Conselheiro Lafaiete,3107,Barbacena,,,157.727,False
+3115003,Cascalho Rico,310059,Uberlândia,3111,Uberlândia,,,367.308,False
+3115300,Cataguases,310032,Cataguases,3106,Juíz de Fora,,,491.767,False
+3115359,Catas Altas,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,240.042,False
+3115409,Catas Altas da Noruega,310038,Conselheiro Lafaiete,3107,Barbacena,,,141.622,False
+3115458,Catuji,310013,Teófilo Otoni,3103,Teófilo Otoni,,,419.38,False
+3115474,Catuti,310012,Espinosa,3102,Montes Claros,,,287.812,False
+3115508,Caxambu,310054,Caxambu - Baependi,3109,Pouso Alegre,,,100.483,False
+3115607,Cedro do Abaeté,310070,Abaeté,3113,Divinópolis,,,283.211,False
+3115706,Central de Minas,310022,Mantena,3104,Governador Valadares,,,204.328,False
+3115805,Centralina,310059,Uberlândia,3111,Uberlândia,,,322.385,False
+3116001,Chalé,310028,Manhuaçu,3106,Juíz de Fora,,,212.674,False
+3116159,Chapada Gaúcha,310011,São Francisco,3102,Montes Claros,,,3255.189,False
+3116100,Chapada do Norte,310014,Capelinha,3103,Teófilo Otoni,,,830.833,False
+3116209,Chiador,310027,Juiz de Fora,3106,Juíz de Fora,3306008,Três Rios - Paraíba do Sul/RJ,252.852,False
+3115904,Chácara,310027,Juiz de Fora,3106,Juíz de Fora,3136702,Juiz de Fora/MG,152.807,False
+3116308,Cipotânea,310037,Barbacena,3107,Barbacena,,,153.479,False
+3116407,Claraval,310041,Passos,3108,Varginha,3516200,Franca/SP,227.627,False
+3116506,Claro dos Poções,310006,Montes Claros,3102,Montes Claros,,,720.424,False
+3116605,Cláudio,310065,Divinópolis,3113,Divinópolis,,,630.706,False
+3116704,Coimbra,310033,Viçosa,3106,Juíz de Fora,,,106.875,False
+3116803,Coluna,310021,Guanhães,3104,Governador Valadares,,,347.716,False
+3116902,Comendador Gomes,310057,Frutal,3110,Uberaba,,,1041.047,False
+3117009,Comercinho,310018,Pedra Azul,3103,Teófilo Otoni,,,654.961,False
+3117108,Conceição da Aparecida,310042,Alfenas,3108,Varginha,,,352.521,False
+3115201,Conceição da Barra de Minas,310039,São João del Rei,3107,Barbacena,,,273.014,False
+3117306,Conceição das Alagoas,310055,Uberaba,3110,Uberaba,,,1340.25,False
+3117207,Conceição das Pedras,310052,Itajubá,3109,Pouso Alegre,,,102.206,False
+3117405,Conceição de Ipanema,310028,Manhuaçu,3106,Juíz de Fora,,,253.935,False
+3117504,Conceição do Mato Dentro,310002,Sete Lagoas,3101,Belo Horizonte,,,1720.04,False
+3117603,Conceição do Pará,310065,Divinópolis,3113,Divinópolis,,,250.306,False
+3117702,Conceição do Rio Verde,310053,São Lourenço,3109,Pouso Alegre,,,369.681,False
+3117801,Conceição dos Ouros,310050,Pouso Alegre,3109,Pouso Alegre,,,180.236,False
+3117876,Confins,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,42.462,False
+3117900,Congonhal,310050,Pouso Alegre,3109,Pouso Alegre,,,205.125,False
+3118007,Congonhas,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,304.067,False
+3118106,Congonhas do Norte,310002,Sete Lagoas,3101,Belo Horizonte,,,405.671,False
+3118205,Conquista,310055,Uberaba,3110,Uberaba,,,618.363,False
+3118304,Conselheiro Lafaiete,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,370.246,False
+3118403,Conselheiro Pena,310020,Governador Valadares,3104,Governador Valadares,,,1466.367,False
+3118502,Consolação,310050,Pouso Alegre,3109,Pouso Alegre,,,89.122,False
+3118601,Contagem,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,194.732,False
+3118700,Coqueiral,310046,Três Pontas - Boa Esperança,3108,Varginha,,,296.163,False
+3118809,Coração de Jesus,310006,Montes Claros,3102,Montes Claros,,,2225.216,False
+3118908,Cordisburgo,310002,Sete Lagoas,3101,Belo Horizonte,,,823.654,False
+3119005,Cordislândia,310040,Varginha,3108,Varginha,,,179.543,False
+3119104,Corinto,310004,Curvelo,3101,Belo Horizonte,,,2525.397,False
+3119203,Coroaci,310020,Governador Valadares,3104,Governador Valadares,,,576.274,False
+3119302,Coromandel,310064,Patrocínio,3112,Patos de Minas,,,3313.313,False
+3119401,Coronel Fabriciano,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,221.881,False
+3119500,Coronel Murta,310017,Araçuaí,3103,Teófilo Otoni,,,815.413,False
+3119609,Coronel Pacheco,310027,Juiz de Fora,3106,Juíz de Fora,,,131.511,False
+3119708,Coronel Xavier Chaves,310039,São João del Rei,3107,Barbacena,3162500,São João del Rei/MG,140.954,False
+3120102,Couto de Magalhães de Minas,310016,Diamantina,3103,Teófilo Otoni,,,485.654,False
+3120201,Cristais,310048,Campo Belo,3108,Varginha,,,628.434,False
+3120409,Cristiano Otoni,310038,Conselheiro Lafaiete,3107,Barbacena,,,132.872,False
+3120508,Cristina,310053,São Lourenço,3109,Pouso Alegre,,,311.33,False
+3120300,Cristália,310006,Montes Claros,3102,Montes Claros,,,840.702,False
+3120151,Crisólita,310019,Águas Formosas,3103,Teófilo Otoni,,,966.202,False
+3120607,Crucilândia,310069,Oliveira,3113,Divinópolis,,,167.164,False
+3120706,Cruzeiro da Fortaleza,310064,Patrocínio,3112,Patos de Minas,,,187.446,False
+3120805,Cruzília,310054,Caxambu - Baependi,3109,Pouso Alegre,,,522.419,False
+3120839,Cuparaque,310023,Aimorés - Resplendor,3104,Governador Valadares,,,226.75,False
+3120870,Curral de Dentro,310008,Salinas,3102,Montes Claros,,,570.95,False
+3120904,Curvelo,310004,Curvelo,3101,Belo Horizonte,,,3296.2,False
+3115102,Cássia,310041,Passos,3108,Varginha,,,665.802,False
+3119807,Córrego Danta,310066,Formiga,3113,Divinópolis,,,657.425,False
+3119955,Córrego Fundo,310066,Formiga,3113,Divinópolis,,,101.112,False
+3120003,Córrego Novo,310025,Caratinga,3105,Ipatinga,,,205.385,False
+3119906,Córrego do Bom Jesus,310050,Pouso Alegre,3109,Pouso Alegre,,,123.651,False
+3117836,Cônego Marinho,310009,Januária,3102,Montes Claros,,,1610.469,False
+3121001,Datas,310016,Diamantina,3103,Teófilo Otoni,,,310.099,False
+3121100,Delfim Moreira,310052,Itajubá,3109,Pouso Alegre,,,408.473,False
+3121209,Delfinópolis,310041,Passos,3108,Varginha,,,1378.423,False
+3121258,Delta,310055,Uberaba,3110,Uberaba,,,102.784,False
+3121308,Descoberto,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,213.168,False
+3121407,Desterro de Entre Rios,310038,Conselheiro Lafaiete,3107,Barbacena,,,377.165,False
+3121506,Desterro do Melo,310037,Barbacena,3107,Barbacena,,,142.279,False
+3121605,Diamantina,310016,Diamantina,3103,Teófilo Otoni,,,3891.659,False
+3121704,Diogo de Vasconcelos,310030,Ponte Nova,3106,Juíz de Fora,,,165.091,False
+3121803,Dionísio,310024,Ipatinga,3105,Ipatinga,,,339.375,False
+3122009,Divino,310034,Carangola,3106,Juíz de Fora,,,337.776,False
+3122108,Divino das Laranjeiras,310020,Governador Valadares,3104,Governador Valadares,,,342.249,False
+3122207,Divinolândia de Minas,310021,Guanhães,3104,Governador Valadares,,,133.12,False
+3121902,Divinésia,310029,Ubá,3106,Juíz de Fora,,,116.97,False
+3122306,Divinópolis,310065,Divinópolis,3113,Divinópolis,3122306,Divinópolis,708.115,False
+3122355,Divisa Alegre,310018,Pedra Azul,3103,Teófilo Otoni,,,117.802,False
+3122405,Divisa Nova,310042,Alfenas,3108,Varginha,,,216.955,False
+3122454,Divisópolis,310018,Pedra Azul,3103,Teófilo Otoni,,,572.926,False
+3122470,Dom Bosco,310063,Unaí,3112,Patos de Minas,,,817.383,False
+3122504,Dom Cavati,310024,Ipatinga,3105,Ipatinga,,,59.52,False
+3122603,Dom Joaquim,310021,Guanhães,3104,Governador Valadares,,,398.793,False
+3122702,Dom Silvério,310030,Ponte Nova,3106,Juíz de Fora,,,194.972,False
+3122801,Dom Viçoso,310053,São Lourenço,3109,Pouso Alegre,,,113.921,False
+3122900,Dona Euzébia,310032,Cataguases,3106,Juíz de Fora,,,70.231,False
+3123007,Dores de Campos,310037,Barbacena,3107,Barbacena,,,124.842,False
+3123106,Dores de Guanhães,310021,Guanhães,3104,Governador Valadares,,,382.124,False
+3123205,Dores do Indaiá,310067,Dores do Indaiá,3113,Divinópolis,,,1111.202,False
+3123304,Dores do Turvo,310029,Ubá,3106,Juíz de Fora,,,231.169,False
+3123403,Doresópolis,310049,Piumhi,3108,Varginha,,,152.912,False
+3123502,Douradoquara,310061,Monte Carmelo,3111,Uberlândia,,,312.878,False
+3123528,Durandé,310028,Manhuaçu,3106,Juíz de Fora,,,217.461,False
+3123601,Elói Mendes,310040,Varginha,3108,Varginha,,,499.537,False
+3123700,Engenheiro Caldas,310020,Governador Valadares,3104,Governador Valadares,,,187.058,False
+3123809,Engenheiro Navarro,310006,Montes Claros,3102,Montes Claros,,,608.306,False
+3123858,Entre Folhas,310025,Caratinga,3105,Ipatinga,,,85.39,False
+3123908,Entre Rios de Minas,310038,Conselheiro Lafaiete,3107,Barbacena,,,456.796,False
+3124005,Ervália,310033,Viçosa,3106,Juíz de Fora,,,357.489,False
+3124104,Esmeraldas,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,909.727,False
+3124203,Espera Feliz,310034,Carangola,3106,Juíz de Fora,,,317.638,False
+3124302,Espinosa,310012,Espinosa,3102,Montes Claros,,,1868.97,False
+3124401,Espírito Santo do Dourado,310050,Pouso Alegre,3109,Pouso Alegre,,,263.879,False
+3124500,Estiva,310050,Pouso Alegre,3109,Pouso Alegre,,,243.872,False
+3124609,Estrela Dalva,310036,Além Paraíba,3106,Juíz de Fora,,,131.365,False
+3124708,Estrela do Indaiá,310067,Dores do Indaiá,3113,Divinópolis,,,635.981,False
+3124807,Estrela do Sul,310061,Monte Carmelo,3111,Uberlândia,,,822.454,False
+3124906,Eugenópolis,310031,Muriaé,3106,Juíz de Fora,,,309.395,False
+3125002,Ewbank da Câmara,310027,Juiz de Fora,3106,Juíz de Fora,3136702,Juiz de Fora/MG,103.834,False
+3125101,Extrema,310050,Pouso Alegre,3109,Pouso Alegre,,,244.575,False
+3125200,Fama,310042,Alfenas,3108,Varginha,,,86.024,False
+3125309,Faria Lemos,310034,Carangola,3106,Juíz de Fora,,,165.224,False
+3125606,Felisburgo,310015,Almenara,3103,Teófilo Otoni,,,596.215,False
+3125705,Felixlândia,310004,Curvelo,3101,Belo Horizonte,,,1554.627,False
+3125408,Felício dos Santos,310016,Diamantina,3103,Teófilo Otoni,,,357.622,False
+3125804,Fernandes Tourinho,310020,Governador Valadares,3104,Governador Valadares,,,151.875,False
+3125903,Ferros,310005,Itabira,3101,Belo Horizonte,,,1088.791,False
+3125952,Fervedouro,310031,Muriaé,3106,Juíz de Fora,,,357.683,False
+3126000,Florestal,310001,Belo Horizonte,3101,Belo Horizonte,,,194.965,False
+3126109,Formiga,310066,Formiga,3113,Divinópolis,,,1501.915,False
+3126208,Formoso,310063,Unaí,3112,Patos de Minas,,,3686.004,False
+3126307,Fortaleza de Minas,310041,Passos,3108,Varginha,3147907,Passos/MG,218.792,False
+3126406,Fortuna de Minas,310002,Sete Lagoas,3101,Belo Horizonte,,,198.665,False
+3126505,Francisco Badaró,310017,Araçuaí,3103,Teófilo Otoni,,,461.481,False
+3126604,Francisco Dumont,310006,Montes Claros,3102,Montes Claros,,,1576.128,False
+3126703,Francisco Sá,310006,Montes Claros,3102,Montes Claros,,,2747.295,False
+3126752,Franciscópolis,310013,Teófilo Otoni,3103,Teófilo Otoni,,,717.087,False
+3126802,Frei Gaspar,310013,Teófilo Otoni,3103,Teófilo Otoni,,,626.672,False
+3126901,Frei Inocêncio,310020,Governador Valadares,3104,Governador Valadares,,,469.557,False
+3126950,Frei Lagonegro,310021,Guanhães,3104,Governador Valadares,,,167.474,False
+3127008,Fronteira,310057,Frutal,3110,Uberaba,,,199.987,False
+3127057,Fronteira dos Vales,310019,Águas Formosas,3103,Teófilo Otoni,,,320.757,False
+3127073,Fruta de Leite,310008,Salinas,3102,Montes Claros,,,762.837,False
+3127107,Frutal,310057,Frutal,3110,Uberaba,,,2426.965,False
+3127206,Funilândia,310002,Sete Lagoas,3101,Belo Horizonte,,,199.797,False
+3127305,Galiléia,310020,Governador Valadares,3104,Governador Valadares,,,720.303,False
+3127339,Gameleiras,310012,Espinosa,3102,Montes Claros,,,1733.203,False
+3127354,Glaucilândia,310006,Montes Claros,3102,Montes Claros,,,145.861,False
+3127370,Goiabeira,310020,Governador Valadares,3104,Governador Valadares,,,112.443,False
+3127388,Goianá,310027,Juiz de Fora,3106,Juíz de Fora,,,152.039,False
+3127503,Gonzaga,310020,Governador Valadares,3104,Governador Valadares,,,209.348,False
+3127404,Gonçalves,310052,Itajubá,3109,Pouso Alegre,,,187.353,False
+3127602,Gouveia,310016,Diamantina,3103,Teófilo Otoni,,,866.601,False
+3127701,Governador Valadares,310020,Governador Valadares,3104,Governador Valadares,3127701,Governador Valadares,2342.376,False
+3127909,Grupiara,310061,Monte Carmelo,3111,Uberlândia,,,193.141,False
+3127800,Grão Mogol,310006,Montes Claros,3102,Montes Claros,,,3885.294,False
+3128006,Guanhães,310021,Guanhães,3104,Governador Valadares,,,1075.124,False
+3128105,Guapé,310041,Passos,3108,Varginha,,,934.345,False
+3128204,Guaraciaba,310030,Ponte Nova,3106,Juíz de Fora,,,348.596,False
+3128253,Guaraciama,310006,Montes Claros,3102,Montes Claros,,,390.263,False
+3128402,Guarani,310029,Ubá,3106,Juíz de Fora,,,264.194,False
+3128303,Guaranésia,310044,Guaxupé,3108,Varginha,,,294.828,False
+3128501,Guarará,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,88.655,False
+3128600,Guarda-Mor,310062,Patos de Minas,3112,Patos de Minas,,,2068.808,False
+3128709,Guaxupé,310044,Guaxupé,3108,Varginha,,,286.398,False
+3128808,Guidoval,310029,Ubá,3106,Juíz de Fora,,,158.375,False
+3128907,Guimarânia,310064,Patrocínio,3112,Patos de Minas,,,366.833,False
+3129004,Guiricema,310029,Ubá,3106,Juíz de Fora,,,293.578,False
+3129103,Gurinhatã,310060,Ituiutaba,3111,Uberlândia,,,1849.137,False
+3129202,Heliodora,310050,Pouso Alegre,3109,Pouso Alegre,,,153.95,False
+3129301,Iapu,310024,Ipatinga,3105,Ipatinga,,,340.994,False
+3129400,Ibertioga,310037,Barbacena,3107,Barbacena,,,346.24,False
+3129608,Ibiaí,310010,Pirapora,3102,Montes Claros,,,874.76,False
+3129657,Ibiracatu,310006,Montes Claros,3102,Montes Claros,,,353.257,False
+3129707,Ibiraci,310041,Passos,3108,Varginha,,,562.095,False
+3129806,Ibirité,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,72.389,False
+3129905,Ibitiúra de Minas,310051,Poços de Caldas,3109,Pouso Alegre,,,68.316,False
+3130002,Ibituruna,310043,Lavras,3108,Varginha,,,153.106,False
+3129509,Ibiá,310056,Araxá,3110,Uberaba,,,2704.132,False
+3130051,Icaraí de Minas,310011,São Francisco,3102,Montes Claros,,,625.664,False
+3130101,Igarapé,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,110.894,False
+3130200,Igaratinga,310068,Pará de Minas,3113,Divinópolis,,,218.343,False
+3130309,Iguatama,310066,Formiga,3113,Divinópolis,,,628.2,False
+3130408,Ijaci,310043,Lavras,3108,Varginha,3138203,Lavras/MG,105.246,False
+3130507,Ilicínea,310046,Três Pontas - Boa Esperança,3108,Varginha,,,376.341,False
+3130556,Imbé de Minas,310025,Caratinga,3105,Ipatinga,,,196.735,False
+3130606,Inconfidentes,310050,Pouso Alegre,3109,Pouso Alegre,,,149.611,False
+3130655,Indaiabira,310008,Salinas,3102,Montes Claros,,,1004.149,False
+3130705,Indianópolis,310059,Uberlândia,3111,Uberlândia,,,830.03,False
+3130804,Ingaí,310043,Lavras,3108,Varginha,,,305.591,False
+3130903,Inhapim,310025,Caratinga,3105,Ipatinga,,,858.024,False
+3131000,Inhaúma,310002,Sete Lagoas,3101,Belo Horizonte,3167202,Sete Lagoas/MG,244.996,False
+3131109,Inimutaba,310004,Curvelo,3101,Belo Horizonte,,,527.06,False
+3131158,Ipaba,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,113.246,False
+3131208,Ipanema,310028,Manhuaçu,3106,Juíz de Fora,,,456.641,False
+3131307,Ipatinga,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,164.482,False
+3131406,Ipiaçu,310060,Ituiutaba,3111,Uberlândia,,,466.02,False
+3131505,Ipuiúna,310050,Pouso Alegre,3109,Pouso Alegre,,,298.195,False
+3131604,Iraí de Minas,310061,Monte Carmelo,3111,Uberlândia,,,356.264,False
+3131703,Itabira,310005,Itabira,3101,Belo Horizonte,3131703,Itabira,1254.607,False
+3131802,Itabirinha,310022,Mantena,3104,Governador Valadares,,,209.034,False
+3131901,Itabirito,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,544.535,False
+3132008,Itacambira,310006,Montes Claros,3102,Montes Claros,,,1788.445,False
+3132107,Itacarambi,310009,Januária,3102,Montes Claros,,,1225.273,False
+3132206,Itaguara,310069,Oliveira,3113,Divinópolis,,,410.468,False
+3132305,Itaipé,310013,Teófilo Otoni,3103,Teófilo Otoni,,,480.829,False
+3132404,Itajubá,310052,Itajubá,3109,Pouso Alegre,3132404,Itajubá/MG,294.835,False
+3132503,Itamarandiba,310014,Capelinha,3103,Teófilo Otoni,,,2735.665,False
+3132602,Itamarati de Minas,310032,Cataguases,3106,Juíz de Fora,,,94.568,False
+3132701,Itambacuri,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1419.209,False
+3132800,Itambé do Mato Dentro,310005,Itabira,3101,Belo Horizonte,,,380.34,False
+3132909,Itamogi,310047,São Sebastião do Paraíso,3108,Varginha,,,243.714,False
+3133006,Itamonte,310053,São Lourenço,3109,Pouso Alegre,,,431.792,False
+3133105,Itanhandu,310053,São Lourenço,3109,Pouso Alegre,,,143.363,False
+3133204,Itanhomi,310020,Governador Valadares,3104,Governador Valadares,,,488.843,False
+3133303,Itaobim,310013,Teófilo Otoni,3103,Teófilo Otoni,,,679.024,False
+3133402,Itapagipe,310057,Frutal,3110,Uberaba,,,1802.438,False
+3133501,Itapecerica,310065,Divinópolis,3113,Divinópolis,,,1040.519,False
+3133600,Itapeva,310050,Pouso Alegre,3109,Pouso Alegre,,,177.312,False
+3133709,Itatiaiuçu,310065,Divinópolis,3113,Divinópolis,,,294.181,False
+3133907,Itaverava,310038,Conselheiro Lafaiete,3107,Barbacena,,,284.22,False
+3133758,Itaú de Minas,310041,Passos,3108,Varginha,,,153.421,False
+3133808,Itaúna,310065,Divinópolis,3113,Divinópolis,,,494.559,False
+3134004,Itinga,310017,Araçuaí,3103,Teófilo Otoni,,,1649.622,False
+3134103,Itueta,310023,Aimorés - Resplendor,3104,Governador Valadares,,,452.676,False
+3134202,Ituiutaba,310060,Ituiutaba,3111,Uberlândia,,,2598.046,False
+3134301,Itumirim,310043,Lavras,3108,Varginha,3138203,Lavras/MG,234.802,False
+3134400,Iturama,310058,Iturama,3110,Uberaba,,,1404.663,False
+3134509,Itutinga,310043,Lavras,3108,Varginha,,,372.018,False
+3134608,Jaboticatubas,310001,Belo Horizonte,3101,Belo Horizonte,,,1114.972,False
+3134707,Jacinto,310015,Almenara,3103,Teófilo Otoni,,,1393.609,False
+3134905,Jacutinga,310050,Pouso Alegre,3109,Pouso Alegre,,,347.667,False
+3134806,Jacuí,310047,São Sebastião do Paraíso,3108,Varginha,,,409.229,False
+3135001,Jaguaraçu,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,163.76,False
+3135076,Jampruca,310020,Governador Valadares,3104,Governador Valadares,,,517.095,False
+3135100,Janaúba,310007,Janaúba,3102,Montes Claros,,,2181.319,False
+3135209,Januária,310009,Januária,3102,Montes Claros,,,6661.588,False
+3135308,Japaraíba,310065,Divinópolis,3113,Divinópolis,,,172.141,False
+3135357,Japonvar,310006,Montes Claros,3102,Montes Claros,,,375.181,False
+3135050,Jaíba,310007,Janaúba,3102,Montes Claros,,,2635.467,False
+3135407,Jeceaba,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,236.25,False
+3135456,Jenipapo de Minas,310017,Araçuaí,3103,Teófilo Otoni,,,284.453,False
+3135506,Jequeri,310030,Ponte Nova,3106,Juíz de Fora,,,547.897,False
+3135605,Jequitaí,310006,Montes Claros,3102,Montes Claros,,,1268.443,False
+3135704,Jequitibá,310002,Sete Lagoas,3101,Belo Horizonte,,,445.03,False
+3135803,Jequitinhonha,310015,Almenara,3103,Teófilo Otoni,,,3514.216,False
+3135902,Jesuânia,310053,São Lourenço,3109,Pouso Alegre,,,153.852,False
+3136108,Joanésia,310024,Ipatinga,3105,Ipatinga,,,233.292,False
+3136405,Joaquim Felício,310006,Montes Claros,3102,Montes Claros,,,790.935,False
+3136009,Joaíma,310015,Almenara,3103,Teófilo Otoni,,,1664.19,False
+3136504,Jordânia,310015,Almenara,3103,Teófilo Otoni,,,546.705,False
+3136579,Josenópolis,310006,Montes Claros,3102,Montes Claros,,,541.393,False
+3136520,José Gonçalves de Minas,310017,Araçuaí,3103,Teófilo Otoni,,,381.332,False
+3136553,José Raydan,310021,Guanhães,3104,Governador Valadares,,,180.822,False
+3136207,João Monlevade,310026,João Monlevade,3105,Ipatinga,,,98.231,False
+3136306,João Pinheiro,310062,Patos de Minas,3112,Patos de Minas,,,10727.097,False
+3136652,Juatuba,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,97.66,False
+3136702,Juiz de Fora,310027,Juiz de Fora,3106,Juíz de Fora,3136702,Juiz de Fora/MG,1435.749,False
+3136801,Juramento,310006,Montes Claros,3102,Montes Claros,,,431.63,False
+3136900,Juruaia,310044,Guaxupé,3108,Varginha,,,220.353,False
+3136959,Juvenília,310009,Januária,3102,Montes Claros,,,1064.692,False
+3137007,Ladainha,310013,Teófilo Otoni,3103,Teófilo Otoni,,,866.29,False
+3137106,Lagamar,310062,Patos de Minas,3112,Patos de Minas,,,1474.562,False
+3137403,Lagoa Dourada,310039,São João del Rei,3107,Barbacena,,,476.693,False
+3137502,Lagoa Formosa,310062,Patos de Minas,3112,Patos de Minas,,,840.92,False
+3137536,Lagoa Grande,310062,Patos de Minas,3112,Patos de Minas,,,1236.301,False
+3137601,Lagoa Santa,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,229.741,False
+3137205,Lagoa da Prata,310065,Divinópolis,3113,Divinópolis,,,439.984,False
+3137304,Lagoa dos Patos,310006,Montes Claros,3102,Montes Claros,,,600.547,False
+3137700,Lajinha,310028,Manhuaçu,3106,Juíz de Fora,,,431.92,False
+3137809,Lambari,310053,São Lourenço,3109,Pouso Alegre,,,213.11,False
+3137908,Lamim,310038,Conselheiro Lafaiete,3107,Barbacena,,,118.602,False
+3138005,Laranjal,310032,Cataguases,3106,Juíz de Fora,,,204.882,False
+3138104,Lassance,310010,Pirapora,3102,Montes Claros,,,3204.217,False
+3138203,Lavras,310043,Lavras,3108,Varginha,3138203,Lavras/MG,564.744,False
+3138302,Leandro Ferreira,310065,Divinópolis,3113,Divinópolis,,,352.005,False
+3138351,Leme do Prado,310014,Capelinha,3103,Teófilo Otoni,,,280.036,False
+3138401,Leopoldina,310032,Cataguases,3106,Juíz de Fora,,,943.077,False
+3138500,Liberdade,310027,Juiz de Fora,3106,Juíz de Fora,,,401.337,False
+3138609,Lima Duarte,310027,Juiz de Fora,3106,Juíz de Fora,,,848.564,False
+3138625,Limeira do Oeste,310058,Iturama,3110,Uberaba,,,1317.153,False
+3138658,Lontra,310006,Montes Claros,3102,Montes Claros,,,258.925,False
+3138674,Luisburgo,310028,Manhuaçu,3106,Juíz de Fora,,,145.418,False
+3138682,Luislândia,310006,Montes Claros,3102,Montes Claros,,,411.714,False
+3138708,Luminárias,310043,Lavras,3108,Varginha,,,500.143,False
+3138807,Luz,310067,Dores do Indaiá,3113,Divinópolis,,,1171.659,False
+3138906,Machacalis,310019,Águas Formosas,3103,Teófilo Otoni,,,332.378,False
+3139003,Machado,310042,Alfenas,3108,Varginha,,,585.958,False
+3139102,Madre de Deus de Minas,310039,São João del Rei,3107,Barbacena,,,492.909,False
+3139201,Malacacheta,310013,Teófilo Otoni,3103,Teófilo Otoni,,,727.886,False
+3139250,Mamonas,310012,Espinosa,3102,Montes Claros,,,284.365,False
+3139300,Manga,310007,Janaúba,3102,Montes Claros,,,1950.184,False
+3139409,Manhuaçu,310028,Manhuaçu,3106,Juíz de Fora,,,628.318,False
+3139508,Manhumirim,310028,Manhuaçu,3106,Juíz de Fora,,,182.9,False
+3139607,Mantena,310022,Mantena,3104,Governador Valadares,,,685.208,False
+3139805,Mar de Espanha,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,371.6,False
+3139706,Maravilhas,310068,Pará de Minas,3113,Divinópolis,,,261.604,False
+3139904,Maria da Fé,310052,Itajubá,3109,Pouso Alegre,,,202.898,False
+3140001,Mariana,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,1194.208,False
+3140100,Marilac,310020,Governador Valadares,3104,Governador Valadares,,,158.809,False
+3140209,Maripá de Minas,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,77.338,False
+3140308,Marliéria,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,545.813,False
+3140407,Marmelópolis,310052,Itajubá,3109,Pouso Alegre,,,107.902,False
+3140506,Martinho Campos,310067,Dores do Indaiá,3113,Divinópolis,,,1058.418,False
+3140530,Martins Soares,310028,Manhuaçu,3106,Juíz de Fora,,,113.268,False
+3140555,Mata Verde,310015,Almenara,3103,Teófilo Otoni,,,227.539,False
+3140605,Materlândia,310021,Guanhães,3104,Governador Valadares,,,280.53,False
+3140704,Mateus Leme,310001,Belo Horizonte,3101,Belo Horizonte,,,302.312,False
+3171501,Mathias Lobato,310020,Governador Valadares,3104,Governador Valadares,,,172.297,False
+3140803,Matias Barbosa,310027,Juiz de Fora,3106,Juíz de Fora,3136702,Juiz de Fora/MG,157.066,False
+3140852,Matias Cardoso,310007,Janaúba,3102,Montes Claros,,,1940.597,False
+3140902,Matipó,310028,Manhuaçu,3106,Juíz de Fora,,,266.99,False
+3141009,Mato Verde,310012,Espinosa,3102,Montes Claros,,,472.245,False
+3141108,Matozinhos,310002,Sete Lagoas,3101,Belo Horizonte,,,252.453,False
+3141207,Matutina,310062,Patos de Minas,3112,Patos de Minas,,,260.957,False
+3141306,Medeiros,310066,Formiga,3113,Divinópolis,,,946.437,False
+3141405,Medina,310018,Pedra Azul,3103,Teófilo Otoni,,,1435.903,False
+3141504,Mendes Pimentel,310022,Mantena,3104,Governador Valadares,,,305.507,False
+3141603,Mercês,310029,Ubá,3106,Juíz de Fora,,,348.271,False
+3141702,Mesquita,310024,Ipatinga,3105,Ipatinga,,,274.938,False
+3141801,Minas Novas,310014,Capelinha,3103,Teófilo Otoni,,,1812.398,False
+3141900,Minduri,310054,Caxambu - Baependi,3109,Pouso Alegre,,,219.774,False
+3142007,Mirabela,310006,Montes Claros,3102,Montes Claros,,,723.278,False
+3142106,Miradouro,310031,Muriaé,3106,Juíz de Fora,,,301.672,False
+3142254,Miravânia,310007,Janaúba,3102,Montes Claros,,,602.128,False
+3142205,Miraí,310031,Muriaé,3106,Juíz de Fora,,,320.695,False
+3142304,Moeda,310001,Belo Horizonte,3101,Belo Horizonte,,,154.129,False
+3142403,Moema,310067,Dores do Indaiá,3113,Divinópolis,,,202.705,False
+3142502,Monjolos,310004,Curvelo,3101,Belo Horizonte,,,650.911,False
+3142601,Monsenhor Paulo,310040,Varginha,3108,Varginha,,,216.54,False
+3142700,Montalvânia,310009,Januária,3102,Montes Claros,,,1503.755,False
+3142809,Monte Alegre de Minas,310059,Uberlândia,3111,Uberlândia,,,2595.957,False
+3142908,Monte Azul,310012,Espinosa,3102,Montes Claros,,,1001.296,False
+3143005,Monte Belo,310044,Guaxupé,3108,Varginha,,,421.283,False
+3143104,Monte Carmelo,310061,Monte Carmelo,3111,Uberlândia,,,1343.035,False
+3143153,Monte Formoso,310013,Teófilo Otoni,3103,Teófilo Otoni,,,385.553,False
+3143203,Monte Santo de Minas,310047,São Sebastião do Paraíso,3108,Varginha,,,594.632,False
+3143401,Monte Sião,310050,Pouso Alegre,3109,Pouso Alegre,,,291.594,False
+3143302,Montes Claros,310006,Montes Claros,3102,Montes Claros,3143302,Montes Claros,3589.811,False
+3143450,Montezuma,310012,Espinosa,3102,Montes Claros,,,1130.419,False
+3143500,Morada Nova de Minas,310070,Abaeté,3113,Divinópolis,,,2084.275,False
+3143609,Morro da Garça,310004,Curvelo,3101,Belo Horizonte,,,414.772,False
+3143708,Morro do Pilar,310002,Sete Lagoas,3101,Belo Horizonte,,,477.548,False
+3143807,Munhoz,310050,Pouso Alegre,3109,Pouso Alegre,,,191.599,False
+3143906,Muriaé,310031,Muriaé,3106,Juíz de Fora,3143906,Muriaé,841.693,False
+3144003,Mutum,310028,Manhuaçu,3106,Juíz de Fora,,,1250.823,False
+3144102,Muzambinho,310044,Guaxupé,3108,Varginha,,,409.948,False
+3140159,Mário Campos,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,35.196,False
+3144201,Nacip Raydan,310020,Governador Valadares,3104,Governador Valadares,,,233.493,False
+3144300,Nanuque,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1518.166,False
+3144359,Naque,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,127.173,False
+3144375,Natalândia,310063,Unaí,3112,Patos de Minas,,,468.66,False
+3144409,Natércia,310050,Pouso Alegre,3109,Pouso Alegre,,,188.719,False
+3144508,Nazareno,310039,São João del Rei,3107,Barbacena,,,341.453,False
+3144607,Nepomuceno,310043,Lavras,3108,Varginha,,,582.553,False
+3144656,Ninheira,310008,Salinas,3102,Montes Claros,,,1108.27,False
+3144672,Nova Belém,310022,Mantena,3104,Governador Valadares,,,146.776,False
+3144706,Nova Era,310026,João Monlevade,3105,Ipatinga,,,361.852,False
+3144805,Nova Lima,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,430.115,False
+3144904,Nova Módica,310013,Teófilo Otoni,3103,Teófilo Otoni,,,375.973,False
+3145000,Nova Ponte,310055,Uberaba,3110,Uberaba,,,1111.011,False
+3145059,Nova Porteirinha,310007,Janaúba,3102,Montes Claros,,,120.944,False
+3145109,Nova Resende,310044,Guaxupé,3108,Varginha,,,390.152,False
+3145208,Nova Serrana,310065,Divinópolis,3113,Divinópolis,,,282.472,False
+3136603,Nova União,310001,Belo Horizonte,3101,Belo Horizonte,,,172.131,False
+3145307,Novo Cruzeiro,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1702.981,False
+3145356,Novo Oriente de Minas,310013,Teófilo Otoni,3103,Teófilo Otoni,,,755.151,False
+3145372,Novorizonte,310008,Salinas,3102,Montes Claros,,,271.61,False
+3145406,Olaria,310027,Juiz de Fora,3106,Juíz de Fora,,,178.242,False
+3145455,Olhos-d'Água,310006,Montes Claros,3102,Montes Claros,,,2092.078,False
+3145604,Oliveira,310069,Oliveira,3113,Divinópolis,,,897.294,False
+3145703,Oliveira Fortes,310027,Juiz de Fora,3106,Juíz de Fora,,,111.13,False
+3145505,Olímpio Noronha,310053,São Lourenço,3109,Pouso Alegre,,,54.633,False
+3145802,Onça de Pitangui,310068,Pará de Minas,3113,Divinópolis,,,246.976,False
+3145851,Oratórios,310030,Ponte Nova,3106,Juíz de Fora,,,89.068,False
+3145877,Orizânia,310034,Carangola,3106,Juíz de Fora,,,121.8,False
+3145901,Ouro Branco,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,258.726,False
+3146008,Ouro Fino,310050,Pouso Alegre,3109,Pouso Alegre,,,533.714,False
+3146107,Ouro Preto,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,1246.068,False
+3146206,Ouro Verde de Minas,310013,Teófilo Otoni,3103,Teófilo Otoni,,,175.482,False
+3146255,Padre Carvalho,310008,Salinas,3102,Montes Claros,,,446.275,False
+3146305,Padre Paraíso,310013,Teófilo Otoni,3103,Teófilo Otoni,,,544.375,False
+3146552,Pai Pedro,310007,Janaúba,3102,Montes Claros,,,839.805,False
+3146404,Paineiras,310070,Abaeté,3113,Divinópolis,,,637.309,False
+3146503,Pains,310066,Formiga,3113,Divinópolis,,,421.862,False
+3146602,Paiva,310027,Juiz de Fora,3106,Juíz de Fora,,,58.419,False
+3146701,Palma,310032,Cataguases,3106,Juíz de Fora,,,316.476,False
+3146750,Palmópolis,310015,Almenara,3103,Teófilo Otoni,,,433.154,False
+3146909,Papagaios,310068,Pará de Minas,3113,Divinópolis,,,553.577,False
+3147006,Paracatu,310062,Patos de Minas,3112,Patos de Minas,,,8231.029,False
+3147204,Paraguaçu,310042,Alfenas,3108,Varginha,,,424.296,False
+3147303,Paraisópolis,310052,Itajubá,3109,Pouso Alegre,,,331.238,False
+3147402,Paraopeba,310002,Sete Lagoas,3101,Belo Horizonte,,,625.631,False
+3147105,Pará de Minas,310068,Pará de Minas,3113,Divinópolis,,,551.105,False
+3147600,Passa Quatro,310053,São Lourenço,3109,Pouso Alegre,,,277.221,False
+3147709,Passa Tempo,310069,Oliveira,3113,Divinópolis,,,429.172,False
+3147808,Passa Vinte,310027,Juiz de Fora,3106,Juíz de Fora,,,246.565,False
+3147501,Passabém,310005,Itabira,3101,Belo Horizonte,,,94.183,False
+3147907,Passos,310041,Passos,3108,Varginha,3147907,Passos/MG,1338.07,False
+3147956,Patis,310006,Montes Claros,3102,Montes Claros,,,444.196,False
+3148004,Patos de Minas,310062,Patos de Minas,3112,Patos de Minas,3148004,Patos de Minas,3190.456,False
+3148103,Patrocínio,310064,Patrocínio,3112,Patos de Minas,,,2874.344,False
+3148202,Patrocínio do Muriaé,310031,Muriaé,3106,Juíz de Fora,,,108.246,False
+3148301,Paula Cândido,310033,Viçosa,3106,Juíz de Fora,,,268.321,False
+3148400,Paulistas,310021,Guanhães,3104,Governador Valadares,,,220.564,False
+3148509,Pavão,310013,Teófilo Otoni,3103,Teófilo Otoni,,,601.19,False
+3148707,Pedra Azul,310018,Pedra Azul,3103,Teófilo Otoni,,,1594.651,False
+3148756,Pedra Bonita,310034,Carangola,3106,Juíz de Fora,,,173.928,False
+3149002,Pedra Dourada,310034,Carangola,3106,Juíz de Fora,,,69.99,False
+3148806,Pedra do Anta,310033,Viçosa,3106,Juíz de Fora,,,173.168,False
+3148905,Pedra do Indaiá,310065,Divinópolis,3113,Divinópolis,,,347.92,False
+3149101,Pedralva,310052,Itajubá,3109,Pouso Alegre,,,217.99,False
+3149150,Pedras de Maria da Cruz,310009,Januária,3102,Montes Claros,,,1525.648,False
+3149200,Pedrinópolis,310056,Araxá,3110,Uberaba,,,357.891,False
+3149309,Pedro Leopoldo,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,292.81,False
+3149408,Pedro Teixeira,310027,Juiz de Fora,3106,Juíz de Fora,,,112.959,False
+3149507,Pequeri,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,90.833,False
+3149606,Pequi,310068,Pará de Minas,3113,Divinópolis,,,203.991,False
+3149705,Perdigão,310065,Divinópolis,3113,Divinópolis,,,249.322,False
+3149804,Perdizes,310056,Araxá,3110,Uberaba,,,2451.112,False
+3149903,Perdões,310043,Lavras,3108,Varginha,,,270.657,False
+3149952,Periquito,310024,Ipatinga,3105,Ipatinga,,,228.907,False
+3150000,Pescador,310013,Teófilo Otoni,3103,Teófilo Otoni,,,317.463,False
+3148608,Peçanha,310021,Guanhães,3104,Governador Valadares,,,996.646,False
+3150109,Piau,310027,Juiz de Fora,3106,Juíz de Fora,,,192.196,False
+3150158,Piedade de Caratinga,310025,Caratinga,3105,Ipatinga,,,109.345,False
+3150208,Piedade de Ponte Nova,310030,Ponte Nova,3106,Juíz de Fora,,,83.733,False
+3150307,Piedade do Rio Grande,310039,São João del Rei,3107,Barbacena,,,322.814,False
+3150406,Piedade dos Gerais,310069,Oliveira,3113,Divinópolis,,,259.638,False
+3150505,Pimenta,310066,Formiga,3113,Divinópolis,,,414.969,False
+3150539,Pingo-d'Água,310024,Ipatinga,3105,Ipatinga,,,66.57,False
+3150570,Pintópolis,310011,São Francisco,3102,Montes Claros,,,1228.736,False
+3150604,Piracema,310069,Oliveira,3113,Divinópolis,,,280.335,False
+3150703,Pirajuba,310057,Frutal,3110,Uberaba,,,337.98,False
+3150802,Piranga,310038,Conselheiro Lafaiete,3107,Barbacena,,,658.812,False
+3151008,Piranguinho,310052,Itajubá,3109,Pouso Alegre,3132404,Itajubá/MG,124.803,False
+3150901,Piranguçu,310052,Itajubá,3109,Pouso Alegre,3132404,Itajubá/MG,203.619,False
+3151107,Pirapetinga,310036,Além Paraíba,3106,Juíz de Fora,,,190.681,False
+3151206,Pirapora,310010,Pirapora,3102,Montes Claros,,,549.514,False
+3151305,Piraúba,310029,Ubá,3106,Juíz de Fora,,,144.289,False
+3151404,Pitangui,310065,Divinópolis,3113,Divinópolis,,,569.636,False
+3151503,Piumhi,310049,Piumhi,3108,Varginha,,,902.468,False
+3151602,Planura,310057,Frutal,3110,Uberaba,,,317.52,False
+3151909,Pocrane,310028,Manhuaçu,3106,Juíz de Fora,,,691.066,False
+3152006,Pompéu,310067,Dores do Indaiá,3113,Divinópolis,,,2551.074,False
+3152105,Ponte Nova,310030,Ponte Nova,3106,Juíz de Fora,,,470.643,False
+3152131,Ponto Chique,310010,Pirapora,3102,Montes Claros,,,602.799,False
+3152170,Ponto dos Volantes,310013,Teófilo Otoni,3103,Teófilo Otoni,,,1212.413,False
+3152204,Porteirinha,310007,Janaúba,3102,Montes Claros,,,1749.683,False
+3152303,Porto Firme,310033,Viçosa,3106,Juíz de Fora,,,284.777,False
+3152402,Poté,310013,Teófilo Otoni,3103,Teófilo Otoni,,,625.111,False
+3152501,Pouso Alegre,310050,Pouso Alegre,3109,Pouso Alegre,3152501,Pouso Alegre,542.797,False
+3152600,Pouso Alto,310053,São Lourenço,3109,Pouso Alegre,,,263.034,False
+3151701,Poço Fundo,310042,Alfenas,3108,Varginha,,,474.244,False
+3151800,Poços de Caldas,310051,Poços de Caldas,3109,Pouso Alegre,3151800,Poços de Caldas,546.958,False
+3152709,Prados,310039,São João del Rei,3107,Barbacena,,,264.115,False
+3152808,Prata,310059,Uberlândia,3111,Uberlândia,,,4847.544,False
+3153004,Pratinha,310056,Araxá,3110,Uberaba,,,622.478,False
+3152907,Pratápolis,310041,Passos,3108,Varginha,,,215.516,False
+3153103,Presidente Bernardes,310033,Viçosa,3106,Juíz de Fora,,,236.798,False
+3153202,Presidente Juscelino,310004,Curvelo,3101,Belo Horizonte,,,695.882,False
+3153301,Presidente Kubitschek,310016,Diamantina,3103,Teófilo Otoni,,,189.235,False
+3153400,Presidente Olegário,310062,Patos de Minas,3112,Patos de Minas,,,3503.848,False
+3153608,Prudente de Morais,310002,Sete Lagoas,3101,Belo Horizonte,3167202,Sete Lagoas/MG,124.189,False
+3153707,Quartel Geral,310067,Dores do Indaiá,3113,Divinópolis,,,556.436,False
+3153806,Queluzito,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,153.56,False
+3153905,Raposos,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,72.228,False
+3154002,Raul Soares,310025,Caratinga,3105,Ipatinga,,,763.364,False
+3154101,Recreio,310032,Cataguases,3106,Juíz de Fora,,,234.296,False
+3154150,Reduto,310028,Manhuaçu,3106,Juíz de Fora,,,151.859,False
+3154200,Resende Costa,310039,São João del Rei,3107,Barbacena,,,618.312,False
+3154309,Resplendor,310023,Aimorés - Resplendor,3104,Governador Valadares,,,1081.796,False
+3154408,Ressaquinha,310037,Barbacena,3107,Barbacena,,,183.062,False
+3154457,Riachinho,310063,Unaí,3112,Patos de Minas,,,1719.266,False
+3154507,Riacho dos Machados,310007,Janaúba,3102,Montes Claros,,,1315.54,False
+3154705,Ribeirão Vermelho,310043,Lavras,3108,Varginha,3138203,Lavras/MG,49.251,False
+3154606,Ribeirão das Neves,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,155.105,False
+3154804,Rio Acima,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,228.899,False
+3154903,Rio Casca,310030,Ponte Nova,3106,Juíz de Fora,,,384.381,False
+3155009,Rio Doce,310030,Ponte Nova,3106,Juíz de Fora,,,112.094,False
+3155207,Rio Espera,310038,Conselheiro Lafaiete,3107,Barbacena,,,238.602,False
+3155306,Rio Manso,310069,Oliveira,3113,Divinópolis,,,231.54,False
+3155405,Rio Novo,310027,Juiz de Fora,3106,Juíz de Fora,,,209.31,False
+3155504,Rio Paranaíba,310062,Patos de Minas,3112,Patos de Minas,,,1352.353,False
+3155603,Rio Pardo de Minas,310008,Salinas,3102,Montes Claros,,,3117.675,False
+3155702,Rio Piracicaba,310026,João Monlevade,3105,Ipatinga,,,373.037,False
+3155801,Rio Pomba,310029,Ubá,3106,Juíz de Fora,,,252.418,False
+3155900,Rio Preto,310027,Juiz de Fora,3106,Juíz de Fora,,,348.046,False
+3156007,Rio Vermelho,310021,Guanhães,3104,Governador Valadares,,,987.246,False
+3155108,Rio do Prado,310015,Almenara,3103,Teófilo Otoni,,,479.815,False
+3156106,Ritápolis,310039,São João del Rei,3107,Barbacena,,,404.805,False
+3156205,Rochedo de Minas,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,79.402,False
+3156304,Rodeiro,310029,Ubá,3106,Juíz de Fora,3169901,Ubá/MG,72.673,False
+3156403,Romaria,310061,Monte Carmelo,3111,Uberlândia,,,407.557,False
+3156452,Rosário da Limeira,310031,Muriaé,3106,Juíz de Fora,,,111.156,False
+3156502,Rubelita,310008,Salinas,3102,Montes Claros,,,1110.295,False
+3156601,Rubim,310015,Almenara,3103,Teófilo Otoni,,,965.174,False
+3156700,Sabará,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,302.453,False
+3156809,Sabinópolis,310021,Guanhães,3104,Governador Valadares,,,919.811,False
+3156908,Sacramento,310055,Uberaba,3110,Uberaba,,,3073.268,False
+3157005,Salinas,310008,Salinas,3102,Montes Claros,,,1862.117,False
+3157104,Salto da Divisa,310015,Almenara,3103,Teófilo Otoni,,,938.008,False
+3157203,Santa Bárbara,310003,Santa Bárbara - Ouro Preto,3101,Belo Horizonte,,,684.505,False
+3157252,Santa Bárbara do Leste,310025,Caratinga,3105,Ipatinga,,,107.402,False
+3157278,Santa Bárbara do Monte Verde,310027,Juiz de Fora,3106,Juíz de Fora,,,417.925,False
+3157302,Santa Bárbara do Tugúrio,310037,Barbacena,3107,Barbacena,,,194.564,False
+3157336,Santa Cruz de Minas,310039,São João del Rei,3107,Barbacena,3162500,São João del Rei/MG,3.565,False
+3157377,Santa Cruz de Salinas,310008,Salinas,3102,Montes Claros,,,589.607,False
+3157401,Santa Cruz do Escalvado,310030,Ponte Nova,3106,Juíz de Fora,,,258.726,False
+3157500,Santa Efigênia de Minas,310020,Governador Valadares,3104,Governador Valadares,,,131.965,False
+3157609,Santa Fé de Minas,310010,Pirapora,3102,Montes Claros,,,2917.448,False
+3157658,Santa Helena de Minas,310019,Águas Formosas,3103,Teófilo Otoni,,,276.433,False
+3157708,Santa Juliana,310055,Uberaba,3110,Uberaba,,,723.784,False
+3157807,Santa Luzia,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,235.166,False
+3157906,Santa Margarida,310028,Manhuaçu,3106,Juíz de Fora,,,255.73,False
+3158003,Santa Maria de Itabira,310005,Itabira,3101,Belo Horizonte,,,597.441,False
+3158102,Santa Maria do Salto,310015,Almenara,3103,Teófilo Otoni,,,440.605,False
+3158201,Santa Maria do Suaçuí,310021,Guanhães,3104,Governador Valadares,,,624.047,False
+3159209,Santa Rita de Caldas,310051,Poços de Caldas,3109,Pouso Alegre,,,503.011,False
+3159407,Santa Rita de Ibitipoca,310037,Barbacena,3107,Barbacena,,,324.234,False
+3159308,Santa Rita de Jacutinga,310027,Juiz de Fora,3106,Juíz de Fora,,,420.94,False
+3159357,Santa Rita de Minas,310025,Caratinga,3105,Ipatinga,,,68.153,False
+3159506,Santa Rita do Itueto,310023,Aimorés - Resplendor,3104,Governador Valadares,,,485.081,False
+3159605,Santa Rita do Sapucaí,310050,Pouso Alegre,3109,Pouso Alegre,,,352.969,False
+3159704,Santa Rosa da Serra,310056,Araxá,3110,Uberaba,,,284.334,False
+3159803,Santa Vitória,310060,Ituiutaba,3111,Uberlândia,,,2998.364,False
+3158300,Santana da Vargem,310046,Três Pontas - Boa Esperança,3108,Varginha,,,172.444,False
+3158409,Santana de Cataguases,310032,Cataguases,3106,Juíz de Fora,,,161.486,False
+3158508,Santana de Pirapama,310002,Sete Lagoas,3101,Belo Horizonte,,,1255.832,False
+3158607,Santana do Deserto,310027,Juiz de Fora,3106,Juíz de Fora,3306008,Três Rios - Paraíba do Sul/RJ,182.655,False
+3158706,Santana do Garambéu,310037,Barbacena,3107,Barbacena,,,203.074,False
+3158805,Santana do Jacaré,310048,Campo Belo,3108,Varginha,,,106.169,False
+3158904,Santana do Manhuaçu,310028,Manhuaçu,3106,Juíz de Fora,,,347.362,False
+3158953,Santana do Paraíso,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,275.575,False
+3159001,Santana do Riacho,310002,Sete Lagoas,3101,Belo Horizonte,,,677.207,False
+3159100,Santana dos Montes,310038,Conselheiro Lafaiete,3107,Barbacena,,,196.565,False
+3159902,Santo Antônio do Amparo,310043,Lavras,3108,Varginha,,,488.885,False
+3160009,Santo Antônio do Aventureiro,310036,Além Paraíba,3106,Juíz de Fora,,,202.032,False
+3160108,Santo Antônio do Grama,310030,Ponte Nova,3106,Juíz de Fora,,,130.213,False
+3160207,Santo Antônio do Itambé,310016,Diamantina,3103,Teófilo Otoni,,,305.737,False
+3160306,Santo Antônio do Jacinto,310015,Almenara,3103,Teófilo Otoni,,,503.706,False
+3160405,Santo Antônio do Monte,310065,Divinópolis,3113,Divinópolis,,,1125.78,False
+3160454,Santo Antônio do Retiro,310012,Espinosa,3102,Montes Claros,,,796.29,False
+3160504,Santo Antônio do Rio Abaixo,310005,Itabira,3101,Belo Horizonte,,,107.269,False
+3160603,Santo Hipólito,310004,Curvelo,3101,Belo Horizonte,,,430.656,False
+3160702,Santos Dumont,310027,Juiz de Fora,3106,Juíz de Fora,,,637.373,False
+3165404,Sapucaí-Mirim,310052,Itajubá,3109,Pouso Alegre,,,285.073,False
+3165503,Sardoá,310020,Governador Valadares,3104,Governador Valadares,,,141.904,False
+3165537,Sarzedo,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,62.134,False
+3165560,Sem-Peixe,310030,Ponte Nova,3106,Juíz de Fora,,,176.634,False
+3165578,Senador Amaral,310050,Pouso Alegre,3109,Pouso Alegre,,,151.097,False
+3165602,Senador Cortes,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,98.336,False
+3165701,Senador Firmino,310029,Ubá,3106,Juíz de Fora,,,166.495,False
+3165800,Senador José Bento,310050,Pouso Alegre,3109,Pouso Alegre,,,93.892,False
+3165909,Senador Modestino Gonçalves,310016,Diamantina,3103,Teófilo Otoni,,,952.055,False
+3166006,Senhora de Oliveira,310038,Conselheiro Lafaiete,3107,Barbacena,,,170.749,False
+3166105,Senhora do Porto,310021,Guanhães,3104,Governador Valadares,,,381.328,False
+3166204,Senhora dos Remédios,310037,Barbacena,3107,Barbacena,,,237.815,False
+3166303,Sericita,310030,Ponte Nova,3106,Juíz de Fora,,,166.012,False
+3166402,Seritinga,310054,Caxambu - Baependi,3109,Pouso Alegre,,,114.769,False
+3166501,Serra Azul de Minas,310016,Diamantina,3103,Teófilo Otoni,,,218.595,False
+3166600,Serra da Saudade,310067,Dores do Indaiá,3113,Divinópolis,,,335.659,False
+3166808,Serra do Salitre,310064,Patrocínio,3112,Patos de Minas,,,1295.272,False
+3166709,Serra dos Aimorés,310013,Teófilo Otoni,3103,Teófilo Otoni,,,213.574,False
+3166907,Serrania,310042,Alfenas,3108,Varginha,,,209.27,False
+3167004,Serranos,310054,Caxambu - Baependi,3109,Pouso Alegre,,,213.173,False
+3166956,Serranópolis de Minas,310007,Janaúba,3102,Montes Claros,,,551.954,False
+3167103,Serro,310016,Diamantina,3103,Teófilo Otoni,,,1217.813,False
+3167202,Sete Lagoas,310002,Sete Lagoas,3101,Belo Horizonte,3167202,Sete Lagoas/MG,536.928,False
+3165552,Setubinha,310013,Teófilo Otoni,3103,Teófilo Otoni,,,534.655,False
+3167301,Silveirânia,310029,Ubá,3106,Juíz de Fora,,,157.456,False
+3167400,Silvianópolis,310050,Pouso Alegre,3109,Pouso Alegre,,,312.166,False
+3167608,Simonésia,310028,Manhuaçu,3106,Juíz de Fora,,,486.543,False
+3167509,Simão Pereira,310027,Juiz de Fora,3106,Juíz de Fora,3136702,Juiz de Fora/MG,135.689,False
+3167707,Sobrália,310020,Governador Valadares,3104,Governador Valadares,,,206.787,False
+3167806,Soledade de Minas,310053,São Lourenço,3109,Pouso Alegre,,,196.866,False
+3160801,São Bento Abade,310045,Três Corações,3108,Varginha,,,80.403,False
+3160900,São Brás do Suaçuí,310038,Conselheiro Lafaiete,3107,Barbacena,3118304,Conselheiro Lafaiete/MG,110.019,False
+3160959,São Domingos das Dores,310025,Caratinga,3105,Ipatinga,,,60.865,False
+3161007,São Domingos do Prata,310026,João Monlevade,3105,Ipatinga,,,743.768,False
+3161106,São Francisco,310011,São Francisco,3102,Montes Claros,,,3308.1,False
+3161205,São Francisco de Paula,310069,Oliveira,3113,Divinópolis,,,316.822,False
+3161304,São Francisco de Sales,310058,Iturama,3110,Uberaba,,,1128.864,False
+3161403,São Francisco do Glória,310031,Muriaé,3106,Juíz de Fora,,,164.613,False
+3161056,São Félix de Minas,310022,Mantena,3104,Governador Valadares,,,162.56,False
+3161502,São Geraldo,310029,Ubá,3106,Juíz de Fora,,,185.578,False
+3161601,São Geraldo da Piedade,310020,Governador Valadares,3104,Governador Valadares,,,152.336,False
+3161650,São Geraldo do Baixio,310020,Governador Valadares,3104,Governador Valadares,,,280.954,False
+3161700,São Gonçalo do Abaeté,310062,Patos de Minas,3112,Patos de Minas,,,2692.545,False
+3161809,São Gonçalo do Pará,310065,Divinópolis,3113,Divinópolis,,,265.73,False
+3161908,São Gonçalo do Rio Abaixo,310026,João Monlevade,3105,Ipatinga,,,363.818,False
+3125507,São Gonçalo do Rio Preto,310016,Diamantina,3103,Teófilo Otoni,,,314.458,False
+3162005,São Gonçalo do Sapucaí,310040,Varginha,3108,Varginha,,,516.683,False
+3162104,São Gotardo,310062,Patos de Minas,3112,Patos de Minas,,,866.087,False
+3162922,São Joaquim de Bicas,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,71.995,False
+3162948,São José da Barra,310041,Passos,3108,Varginha,,,308.319,False
+3162955,São José da Lapa,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,48.135,False
+3163003,São José da Safira,310020,Governador Valadares,3104,Governador Valadares,,,213.881,False
+3163102,São José da Varginha,310068,Pará de Minas,3113,Divinópolis,,,205.501,False
+3163201,São José do Alegre,310052,Itajubá,3109,Pouso Alegre,3132404,Itajubá/MG,88.794,False
+3163300,São José do Divino,310013,Teófilo Otoni,3103,Teófilo Otoni,,,328.704,False
+3163409,São José do Goiabal,310024,Ipatinga,3105,Ipatinga,,,189.578,False
+3163508,São José do Jacuri,310021,Guanhães,3104,Governador Valadares,,,345.146,False
+3163607,São José do Mantimento,310028,Manhuaçu,3106,Juíz de Fora,,,54.701,False
+3162203,São João Batista do Glória,310041,Passos,3108,Varginha,,,547.908,False
+3162807,São João Evangelista,310021,Guanhães,3104,Governador Valadares,,,478.183,False
+3162906,São João Nepomuceno,310035,São João Nepomuceno - Bicas,3106,Juíz de Fora,,,407.427,False
+3162252,São João da Lagoa,310006,Montes Claros,3102,Montes Claros,,,998.015,False
+3162302,São João da Mata,310050,Pouso Alegre,3109,Pouso Alegre,,,120.536,False
+3162401,São João da Ponte,310006,Montes Claros,3102,Montes Claros,,,1851.102,False
+3162450,São João das Missões,310009,Januária,3102,Montes Claros,,,678.274,False
+3162500,São João del Rei,310039,São João del Rei,3107,Barbacena,3162500,São João del Rei/MG,1452.002,False
+3162559,São João do Manhuaçu,310028,Manhuaçu,3106,Juíz de Fora,,,143.096,False
+3162575,São João do Manteninha,310022,Mantena,3104,Governador Valadares,,,137.928,False
+3162609,São João do Oriente,310024,Ipatinga,3105,Ipatinga,,,120.122,False
+3162658,São João do Pacuí,310006,Montes Claros,3102,Montes Claros,,,415.922,False
+3162708,São João do Paraíso,310008,Salinas,3102,Montes Claros,,,1925.575,False
+3163706,São Lourenço,310053,São Lourenço,3109,Pouso Alegre,,,58.019,False
+3163805,São Miguel do Anta,310033,Viçosa,3106,Juíz de Fora,,,152.111,False
+3163904,São Pedro da União,310044,Guaxupé,3108,Varginha,,,260.827,False
+3164100,São Pedro do Suaçuí,310021,Guanhães,3104,Governador Valadares,,,308.106,False
+3164001,São Pedro dos Ferros,310030,Ponte Nova,3106,Juíz de Fora,,,402.739,False
+3164209,São Romão,310011,São Francisco,3102,Montes Claros,,,2434.004,False
+3164308,São Roque de Minas,310049,Piumhi,3108,Varginha,,,2098.867,False
+3164407,São Sebastião da Bela Vista,310050,Pouso Alegre,3109,Pouso Alegre,,,167.428,False
+3164431,São Sebastião da Vargem Alegre,310031,Muriaé,3106,Juíz de Fora,,,73.629,False
+3164472,São Sebastião do Anta,310025,Caratinga,3105,Ipatinga,,,80.618,False
+3164506,São Sebastião do Maranhão,310021,Guanhães,3104,Governador Valadares,,,517.83,False
+3164605,São Sebastião do Oeste,310065,Divinópolis,3113,Divinópolis,,,408.09,False
+3164704,São Sebastião do Paraíso,310047,São Sebastião do Paraíso,3108,Varginha,,,814.925,False
+3164803,São Sebastião do Rio Preto,310005,Itabira,3101,Belo Horizonte,,,128.002,False
+3164902,São Sebastião do Rio Verde,310053,São Lourenço,3109,Pouso Alegre,,,90.848,False
+3165008,São Tiago,310039,São João del Rei,3107,Barbacena,,,572.4,False
+3165107,São Tomás de Aquino,310047,São Sebastião do Paraíso,3108,Varginha,,,277.928,False
+3165206,São Tomé das Letras,310045,Três Corações,3108,Varginha,,,369.747,False
+3165305,São Vicente de Minas,310039,São João del Rei,3107,Barbacena,,,392.651,False
+3167905,Tabuleiro,310029,Ubá,3106,Juíz de Fora,,,211.084,False
+3168002,Taiobeiras,310008,Salinas,3102,Montes Claros,,,1220.045,False
+3168051,Taparuba,310028,Manhuaçu,3106,Juíz de Fora,,,193.082,False
+3168101,Tapira,310056,Araxá,3110,Uberaba,,,1179.248,False
+3168200,Tapiraí,310066,Formiga,3113,Divinópolis,,,407.92,False
+3168309,Taquaraçu de Minas,310001,Belo Horizonte,3101,Belo Horizonte,,,329.287,False
+3168408,Tarumirim,310020,Governador Valadares,3104,Governador Valadares,,,731.753,False
+3168507,Teixeiras,310033,Viçosa,3106,Juíz de Fora,,,166.735,False
+3168606,Teófilo Otoni,310013,Teófilo Otoni,3103,Teófilo Otoni,3168606,Teófilo Otoni,3242.27,False
+3168705,Timóteo,310024,Ipatinga,3105,Ipatinga,3131307,Ipatinga/MG,144.377,False
+3168804,Tiradentes,310039,São João del Rei,3107,Barbacena,3162500,São João del Rei/MG,83.047,False
+3168903,Tiros,310062,Patos de Minas,3112,Patos de Minas,,,2091.774,False
+3169000,Tocantins,310029,Ubá,3106,Juíz de Fora,,,173.866,False
+3169059,Tocos do Moji,310050,Pouso Alegre,3109,Pouso Alegre,,,114.705,False
+3169109,Toledo,310050,Pouso Alegre,3109,Pouso Alegre,,,136.776,False
+3169208,Tombos,310034,Carangola,3106,Juíz de Fora,,,285.124,False
+3169307,Três Corações,310045,Três Corações,3108,Varginha,,,828.038,False
+3169356,Três Marias,310004,Curvelo,3101,Belo Horizonte,,,2678.254,False
+3169406,Três Pontas,310046,Três Pontas - Boa Esperança,3108,Varginha,,,689.794,False
+3169505,Tumiritinga,310020,Governador Valadares,3104,Governador Valadares,,,500.073,False
+3169604,Tupaciguara,310059,Uberlândia,3111,Uberlândia,,,1822.53,False
+3169703,Turmalina,310014,Capelinha,3103,Teófilo Otoni,,,1153.111,False
+3169802,Turvolândia,310050,Pouso Alegre,3109,Pouso Alegre,,,221.0,False
+3170057,Ubaporanga,310025,Caratinga,3105,Ipatinga,,,189.045,False
+3170008,Ubaí,310011,São Francisco,3102,Montes Claros,,,820.524,False
+3170107,Uberaba,310055,Uberaba,3110,Uberaba,3170107,Uberaba,4523.957,False
+3170206,Uberlândia,310059,Uberlândia,3111,Uberlândia,3170206,Uberlândia,4115.206,False
+3169901,Ubá,310029,Ubá,3106,Juíz de Fora,3169901,Ubá/MG,407.452,False
+3170305,Umburatiba,310019,Águas Formosas,3103,Teófilo Otoni,,,405.834,False
+3170404,Unaí,310063,Unaí,3112,Patos de Minas,,,8445.432,False
+3170438,União de Minas,310058,Iturama,3110,Uberaba,,,1147.407,False
+3170479,Uruana de Minas,310063,Unaí,3112,Patos de Minas,,,598.221,False
+3170529,Urucuia,310063,Unaí,3112,Patos de Minas,,,2076.942,False
+3170503,Urucânia,310030,Ponte Nova,3106,Juíz de Fora,,,138.792,False
+3170578,Vargem Alegre,310025,Caratinga,3105,Ipatinga,,,116.664,False
+3170602,Vargem Bonita,310049,Piumhi,3108,Varginha,,,409.888,False
+3170651,Vargem Grande do Rio Pardo,310008,Salinas,3102,Montes Claros,,,491.512,False
+3170701,Varginha,310040,Varginha,3108,Varginha,3170701,Varginha,395.396,False
+3170750,Varjão de Minas,310062,Patos de Minas,3112,Patos de Minas,,,651.505,False
+3170909,Varzelândia,310006,Montes Claros,3102,Montes Claros,,,814.994,False
+3171006,Vazante,310062,Patos de Minas,3112,Patos de Minas,,,1913.396,False
+3171030,Verdelândia,310007,Janaúba,3102,Montes Claros,,,1570.582,False
+3171071,Veredinha,310014,Capelinha,3103,Teófilo Otoni,,,631.691,False
+3171154,Vermelho Novo,310025,Caratinga,3105,Ipatinga,,,115.242,False
+3171105,Veríssimo,310055,Uberaba,3110,Uberaba,,,1031.823,False
+3171204,Vespasiano,310001,Belo Horizonte,3101,Belo Horizonte,3106200,Belo Horizonte/MG,70.456,False
+3171402,Vieiras,310031,Muriaé,3106,Juíz de Fora,,,112.691,False
+3171600,Virgem da Lapa,310017,Araçuaí,3103,Teófilo Otoni,,,868.914,False
+3171808,Virginópolis,310021,Guanhães,3104,Governador Valadares,,,439.878,False
+3171907,Virgolândia,310020,Governador Valadares,3104,Governador Valadares,,,281.022,False
+3171709,Virgínia,310053,São Lourenço,3109,Pouso Alegre,,,326.515,False
+3172004,Visconde do Rio Branco,310029,Ubá,3106,Juíz de Fora,,,243.351,False
+3171303,Viçosa,310033,Viçosa,3106,Juíz de Fora,,,299.418,False
+3172103,Volta Grande,310036,Além Paraíba,3106,Juíz de Fora,,,205.552,False
+3170800,Várzea da Palma,310010,Pirapora,3102,Montes Claros,,,2220.279,False
+3172202,Wenceslau Braz,310052,Itajubá,3109,Pouso Alegre,3132404,Itajubá/MG,102.487,False
+3100609,Água Boa,310014,Capelinha,3103,Teófilo Otoni,,,1320.344,False
+3100708,Água Comprida,310055,Uberaba,3110,Uberaba,,,492.167,False
+3100906,Águas Formosas,310019,Águas Formosas,3103,Teófilo Otoni,,,820.079,False
+3101003,Águas Vermelhas,310018,Pedra Azul,3103,Teófilo Otoni,,,1256.607,False

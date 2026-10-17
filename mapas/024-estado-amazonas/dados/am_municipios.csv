@@ -1,0 +1,63 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+1300029,Alvarães,130005,Tefé,1302,Tefé,,,5964.611,False
+1300060,Amaturá,130006,Tabatinga,1302,Tefé,,,4658.391,False
+1300086,Anamã,130004,Manacapuru,1301,Manaus,,,2382.521,False
+1300102,Anori,130003,Coari,1301,Manaus,,,6084.881,False
+1300144,Apuí,130009,Manicoré,1303,Lábrea,,,53617.189,False
+1300201,Atalaia do Norte,130006,Tabatinga,1302,Tefé,,,76313.455,False
+1300300,Autazes,130001,Manaus,1301,Manaus,,,7564.727,False
+1300409,Barcelos,130002,São Gabriel da Cachoeira,1301,Manaus,,,122453.454,False
+1300508,Barreirinha,130010,Parintins,1304,Parintins,,,5658.561,False
+1300607,Benjamin Constant,130006,Tabatinga,1302,Tefé,,,9100.432,False
+1300631,Beruri,130003,Coari,1301,Manaus,,,17415.813,False
+1300680,Boa Vista do Ramos,130010,Parintins,1304,Parintins,,,2613.997,False
+1300706,Boca do Acre,130008,Lábrea,1303,Lábrea,,,21949.686,False
+1300805,Borba,130001,Manaus,1301,Manaus,,,44644.015,False
+1300839,Caapiranga,130004,Manacapuru,1301,Manaus,,,9743.918,False
+1300904,Canutama,130008,Lábrea,1303,Lábrea,,,33671.791,False
+1301001,Carauari,130005,Tefé,1302,Tefé,,,25771.943,False
+1301100,Careiro,130001,Manaus,1301,Manaus,,,6100.302,False
+1301159,Careiro da Várzea,130001,Manaus,1301,Manaus,,,2655.729,False
+1301209,Coari,130003,Coari,1301,Manaus,,,57894.132,False
+1301308,Codajás,130003,Coari,1301,Manaus,,,19038.052,False
+1301407,Eirunepé,130007,Eirunepé,1302,Tefé,,,15189.428,False
+1301506,Envira,130007,Eirunepé,1302,Tefé,,,7419.658,False
+1301605,Fonte Boa,130005,Tefé,1302,Tefé,,,12163.987,False
+1301654,Guajará,130007,Eirunepé,1302,Tefé,,,7427.071,False
+1301704,Humaitá,130009,Manicoré,1303,Lábrea,,,33113.788,False
+1301803,Ipixuna,130007,Eirunepé,1302,Tefé,,,12437.643,False
+1301852,Iranduba,130001,Manaus,1301,Manaus,,,2331.676,False
+1301902,Itacoatiara,130011,Itacoatiara,1304,Parintins,,,8882.186,False
+1301951,Itamarati,130007,Eirunepé,1302,Tefé,,,25509.236,False
+1302009,Itapiranga,130011,Itacoatiara,1304,Parintins,,,4287.62,False
+1302108,Japurá,130005,Tefé,1302,Tefé,,,55964.231,False
+1302207,Juruá,130005,Tefé,1302,Tefé,,,19300.464,False
+1302306,Jutaí,130005,Tefé,1302,Tefé,,,68971.126,False
+1302405,Lábrea,130008,Lábrea,1303,Lábrea,,,68349.909,False
+1302504,Manacapuru,130004,Manacapuru,1301,Manaus,,,7318.909,False
+1302553,Manaquiri,130001,Manaus,1301,Manaus,,,4016.877,False
+1302603,Manaus,130001,Manaus,1301,Manaus,1302603,Manaus,11278.893,True
+1302702,Manicoré,130009,Manicoré,1303,Lábrea,,,48429.767,False
+1302801,Maraã,130005,Tefé,1302,Tefé,,,16805.602,False
+1302900,Maués,130010,Parintins,1304,Parintins,,,39973.673,False
+1303007,Nhamundá,130010,Parintins,1304,Parintins,,,14077.252,False
+1303106,Nova Olinda do Norte,130001,Manaus,1301,Manaus,,,5573.414,False
+1303205,Novo Airão,130004,Manacapuru,1301,Manaus,,,37755.384,False
+1303304,Novo Aripuanã,130009,Manicoré,1303,Lábrea,,,41382.864,False
+1303403,Parintins,130010,Parintins,1304,Parintins,1303403,Parintins,6044.053,False
+1303502,Pauini,130008,Lábrea,1303,Lábrea,,,41637.294,False
+1303536,Presidente Figueiredo,130001,Manaus,1301,Manaus,,,25027.907,False
+1303569,Rio Preto da Eva,130001,Manaus,1301,Manaus,,,5812.425,False
+1303601,Santa Isabel do Rio Negro,130002,São Gabriel da Cachoeira,1301,Manaus,,,62470.219,False
+1303700,Santo Antônio do Içá,130006,Tabatinga,1302,Tefé,,,12482.067,False
+1304005,Silves,130011,Itacoatiara,1304,Parintins,,,3723.18,False
+1303809,São Gabriel da Cachoeira,130002,São Gabriel da Cachoeira,1301,Manaus,,,108700.19,False
+1303908,São Paulo de Olivença,130006,Tabatinga,1302,Tefé,,,19615.643,False
+1303957,São Sebastião do Uatumã,130011,Itacoatiara,1304,Parintins,,,10712.222,False
+1304062,Tabatinga,130006,Tabatinga,1302,Tefé,,,3279.046,False
+1304104,Tapauá,130008,Lábrea,1303,Lábrea,,,84697.765,False
+1304203,Tefé,130005,Tefé,1302,Tefé,,,23835.224,False
+1304237,Tonantins,130006,Tabatinga,1302,Tefé,,,6336.62,False
+1304260,Uarini,130005,Tefé,1302,Tefé,,,10323.306,False
+1304302,Urucará,130011,Itacoatiara,1304,Parintins,,,27851.365,False
+1304401,Urucurituba,130011,Itacoatiara,1304,Parintins,,,2897.547,False

@@ -1,0 +1,93 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+3300100,Angra dos Reis,330002,Angra dos Reis,3301,Rio de Janeiro,3300100,Angra dos Reis,813.419,False
+3300159,Aperibé,330012,Santo Antônio de Pádua,3304,Campos dos Goytacazes,,,94.542,False
+3300209,Araruama,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300209,Araruama/RJ,638.276,False
+3300225,Areal,330007,Petrópolis,3303,Petrópolis,3303906,Petrópolis/RJ,110.724,False
+3300233,Armação dos Búzios,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300704,Cabo Frio/RJ,70.977,False
+3300258,Arraial do Cabo,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300704,Cabo Frio/RJ,152.106,False
+3300407,Barra Mansa,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,3306305,Volta Redonda - Barra Mansa/RJ,547.133,False
+3300308,Barra do Piraí,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,,,584.61,False
+3300456,Belford Roxo,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,78.985,False
+3300506,Bom Jardim,330008,Nova Friburgo,3303,Petrópolis,,,382.43,False
+3300605,Bom Jesus do Itabapoana,330011,Itaperuna,3304,Campos dos Goytacazes,,,596.659,False
+3300704,Cabo Frio,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300704,Cabo Frio/RJ,413.449,False
+3300803,Cachoeiras de Macacu,330003,Rio Bonito,3301,Rio de Janeiro,,,954.749,False
+3300902,Cambuci,330012,Santo Antônio de Pádua,3304,Campos dos Goytacazes,,,558.281,False
+3301009,Campos dos Goytacazes,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,3301009,Campos dos Goytacazes/RJ,4032.487,False
+3301108,Cantagalo,330008,Nova Friburgo,3303,Petrópolis,,,747.21,False
+3300936,Carapebus,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,3302403,Macaé - Rio das Ostras/RJ,304.884,False
+3301157,Cardoso Moreira,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,,,522.596,False
+3301207,Carmo,330008,Nova Friburgo,3303,Petrópolis,,,305.749,False
+3301306,Casimiro de Abreu,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,3302403,Macaé - Rio das Ostras/RJ,462.918,False
+3300951,Comendador Levy Gasparian,330009,Três Rios - Paraíba do Sul,3303,Petrópolis,3306008,Três Rios - Paraíba do Sul/RJ,108.639,False
+3301405,Conceição de Macabu,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,3302403,Macaé - Rio das Ostras/RJ,338.26,False
+3301504,Cordeiro,330008,Nova Friburgo,3303,Petrópolis,,,113.048,False
+3301603,Duas Barras,330008,Nova Friburgo,3303,Petrópolis,,,379.619,False
+3301702,Duque de Caxias,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,467.319,False
+3301801,Engenheiro Paulo de Frontin,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,,,139.381,False
+3301850,Guapimirim,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,358.443,False
+3301876,Iguaba Grande,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300209,Araruama/RJ,50.977,False
+3301900,Itaboraí,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,429.961,False
+3302007,Itaguaí,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,282.607,False
+3302056,Italva,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,,,291.193,False
+3302106,Itaocara,330012,Santo Antônio de Pádua,3304,Campos dos Goytacazes,,,433.182,False
+3302205,Itaperuna,330011,Itaperuna,3304,Campos dos Goytacazes,,,1106.694,False
+3302254,Itatiaia,330005,Resende,3302,Volta Redonda - Barra Mansa,3304201,Resende/RJ,241.035,False
+3302270,Japeri,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,81.697,False
+3302304,Laje do Muriaé,330011,Itaperuna,3304,Campos dos Goytacazes,,,253.53,False
+3302403,Macaé,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,3302403,Macaé - Rio das Ostras/RJ,1216.989,False
+3302452,Macuco,330008,Nova Friburgo,3303,Petrópolis,,,78.364,False
+3302502,Magé,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,390.775,False
+3302601,Mangaratiba,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,367.606,False
+3302700,Maricá,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,361.572,False
+3302809,Mendes,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,,,95.324,False
+3302858,Mesquita,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,41.169,False
+3302908,Miguel Pereira,330006,Valença,3302,Volta Redonda - Barra Mansa,,,287.933,False
+3303005,Miracema,330012,Santo Antônio de Pádua,3304,Campos dos Goytacazes,,,303.27,False
+3303104,Natividade,330011,Itaperuna,3304,Campos dos Goytacazes,,,387.073,False
+3303203,Nilópolis,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,19.393,False
+3303302,Niterói,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,133.757,False
+3303401,Nova Friburgo,330008,Nova Friburgo,3303,Petrópolis,3303401,Nova Friburgo,935.429,False
+3303500,Nova Iguaçu,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,520.581,False
+3303609,Paracambi,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,190.949,False
+3303807,Paraty,330002,Angra dos Reis,3301,Rio de Janeiro,,,924.295,False
+3303708,Paraíba do Sul,330009,Três Rios - Paraíba do Sul,3303,Petrópolis,3306008,Três Rios - Paraíba do Sul/RJ,571.118,False
+3303856,Paty do Alferes,330006,Valença,3302,Volta Redonda - Barra Mansa,,,314.341,False
+3303906,Petrópolis,330007,Petrópolis,3303,Petrópolis,3303906,Petrópolis/RJ,791.144,False
+3303955,Pinheiral,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,3306305,Volta Redonda - Barra Mansa/RJ,82.254,False
+3304003,Piraí,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,,,490.255,False
+3304102,Porciúncula,330011,Itaperuna,3304,Campos dos Goytacazes,,,291.847,False
+3304110,Porto Real,330005,Resende,3302,Volta Redonda - Barra Mansa,3304201,Resende/RJ,50.892,False
+3304128,Quatis,330005,Resende,3302,Volta Redonda - Barra Mansa,3304201,Resende/RJ,284.826,False
+3304144,Queimados,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,75.927,False
+3304151,Quissamã,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,,,719.643,False
+3304201,Resende,330005,Resende,3302,Volta Redonda - Barra Mansa,3304201,Resende/RJ,1099.336,False
+3304300,Rio Bonito,330003,Rio Bonito,3301,Rio de Janeiro,,,459.458,False
+3304409,Rio Claro,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,,,846.797,False
+3304508,Rio das Flores,330006,Valença,3302,Volta Redonda - Barra Mansa,,,478.783,False
+3304524,Rio das Ostras,330014,Macaé - Rio das Ostras,3305,Macaé - Rio das Ostras - Cabo Frio,3302403,Macaé - Rio das Ostras/RJ,228.044,False
+3304557,Rio de Janeiro,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,1200.329,True
+3304607,Santa Maria Madalena,330008,Nova Friburgo,3303,Petrópolis,,,810.962,False
+3304706,Santo Antônio de Pádua,330012,Santo Antônio de Pádua,3304,Campos dos Goytacazes,,,603.633,False
+3305406,Sapucaia,330009,Três Rios - Paraíba do Sul,3303,Petrópolis,,,540.673,False
+3305505,Saquarema,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,352.129,False
+3305554,Seropédica,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,265.189,False
+3305604,Silva Jardim,330003,Rio Bonito,3301,Rio de Janeiro,,,937.755,False
+3305703,Sumidouro,330008,Nova Friburgo,3303,Petrópolis,,,413.407,False
+3304805,São Fidélis,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,,,1034.833,False
+3304755,São Francisco de Itabapoana,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,,,1118.037,False
+3304904,São Gonçalo,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,248.159,False
+3305133,São José de Ubá,330011,Itaperuna,3304,Campos dos Goytacazes,,,249.688,False
+3305158,São José do Vale do Rio Preto,330007,Petrópolis,3303,Petrópolis,,,220.178,False
+3305000,São João da Barra,330010,Campos dos Goytacazes,3304,Campos dos Goytacazes,3301009,Campos dos Goytacazes/RJ,452.396,False
+3305109,São João de Meriti,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,35.216,False
+3305208,São Pedro da Aldeia,330013,Cabo Frio,3305,Macaé - Rio das Ostras - Cabo Frio,3300704,Cabo Frio/RJ,332.488,False
+3305307,São Sebastião do Alto,330008,Nova Friburgo,3303,Petrópolis,,,397.214,False
+3305752,Tanguá,330001,Rio de Janeiro,3301,Rio de Janeiro,3304557,Rio de Janeiro/RJ,143.007,False
+3305802,Teresópolis,330007,Petrópolis,3303,Petrópolis,3305802,Teresópolis,773.338,False
+3305901,Trajano de Moraes,330008,Nova Friburgo,3303,Petrópolis,,,591.152,False
+3306008,Três Rios,330009,Três Rios - Paraíba do Sul,3303,Petrópolis,3306008,Três Rios - Paraíba do Sul/RJ,322.843,False
+3306107,Valença,330006,Valença,3302,Volta Redonda - Barra Mansa,,,1300.767,False
+3306156,Varre-Sai,330011,Itaperuna,3304,Campos dos Goytacazes,,,201.938,False
+3306206,Vassouras,330006,Valença,3302,Volta Redonda - Barra Mansa,,,536.073,False
+3306305,Volta Redonda,330004,Volta Redonda - Barra Mansa,3302,Volta Redonda - Barra Mansa,3306305,Volta Redonda - Barra Mansa/RJ,182.105,False

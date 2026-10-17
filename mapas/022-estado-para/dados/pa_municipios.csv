@@ -1,0 +1,145 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+1500107,Abaetetuba,150003,Abaetetuba,1501,Belém,1500107,Abaetetuba,1610.645,False
+1500131,Abel Figueiredo,150009,Marabá,1503,Marabá,,,614.127,False
+1500206,Acará,150001,Belém,1501,Belém,,,4344.387,False
+1500305,Afuá,150020,Breves,1507,Breves,,,8338.438,False
+1500404,Alenquer,150015,Santarém,1505,Santarém,,,23644.384,False
+1500503,Almeirim,150019,Almeirim - Porto de Moz,1506,Altamira,,,72968.578,False
+1500602,Altamira,150018,Altamira,1506,Altamira,,,159533.318,False
+1500701,Anajás,150020,Breves,1507,Breves,,,6913.86,False
+1500800,Ananindeua,150001,Belém,1501,Belém,1501402,Belém/PA,190.59,False
+1500859,Anapu,150018,Altamira,1506,Altamira,,,11895.27,False
+1500909,Augusto Corrêa,150005,Bragança,1502,Castanhal,,,1099.58,False
+1500958,Aurora do Pará,150007,Paragominas,1502,Castanhal,,,1811.933,False
+1501006,Aveiro,150016,Itaituba,1505,Santarém,,,17072.657,False
+1501105,Bagre,150020,Breves,1507,Breves,,,4397.321,False
+1501204,Baião,150011,Tucuruí,1503,Marabá,,,3760.001,False
+1501253,Bannach,150012,Redenção,1504,Redenção,,,2956.649,False
+1501303,Barcarena,150001,Belém,1501,Belém,,,1310.338,False
+1501451,Belterra,150015,Santarém,1505,Santarém,,,4398.419,False
+1501402,Belém,150001,Belém,1501,Belém,1501402,Belém/PA,1059.458,True
+1501501,Benevides,150001,Belém,1501,Belém,1501402,Belém/PA,187.826,False
+1501576,Bom Jesus do Tocantins,150009,Marabá,1503,Marabá,,,2816.608,False
+1501600,Bonito,150006,Capanema,1502,Castanhal,,,586.977,False
+1501709,Bragança,150005,Bragança,1502,Castanhal,1501709,Bragança,2124.736,False
+1501725,Brasil Novo,150018,Altamira,1506,Altamira,,,6362.562,False
+1501758,Brejo Grande do Araguaia,150009,Marabá,1503,Marabá,,,1288.473,False
+1501782,Breu Branco,150011,Tucuruí,1503,Marabá,,,3941.746,False
+1501808,Breves,150020,Breves,1507,Breves,,,9566.495,False
+1501907,Bujaru,150001,Belém,1501,Belém,,,994.662,False
+1502004,Cachoeira do Arari,150021,Soure-Salvaterra,1507,Breves,,,3100.261,False
+1501956,Cachoeira do Piriá,150005,Bragança,1502,Castanhal,,,2419.6,False
+1502103,Cametá,150002,Cametá,1501,Belém,1502103,Cametá,3082.19,False
+1502152,Canaã dos Carajás,150010,Parauapebas,1503,Marabá,,,3146.748,False
+1502202,Capanema,150006,Capanema,1502,Castanhal,,,621.476,False
+1502301,Capitão Poço,150008,Capitão Poço,1502,Castanhal,,,2901.026,False
+1502400,Castanhal,150004,Castanhal,1502,Castanhal,1502400,Castanhal,1029.3,False
+1502509,Chaves,150020,Breves,1507,Breves,,,12534.995,False
+1502608,Colares,150001,Belém,1501,Belém,,,384.068,False
+1502707,Conceição do Araguaia,150012,Redenção,1504,Redenção,,,5829.482,False
+1502756,Concórdia do Pará,150001,Belém,1501,Belém,,,700.614,False
+1502764,Cumaru do Norte,150012,Redenção,1504,Redenção,,,17085.001,False
+1502772,Curionópolis,150010,Parauapebas,1503,Marabá,,,2369.091,False
+1502806,Curralinho,150020,Breves,1507,Breves,,,3617.355,False
+1502855,Curuá,150017,Oriximiná,1505,Santarém,,,1431.346,False
+1502905,Curuçá,150004,Castanhal,1502,Castanhal,,,676.321,False
+1502939,Dom Eliseu,150007,Paragominas,1502,Castanhal,,,5268.809,False
+1502954,Eldorado do Carajás,150010,Parauapebas,1503,Marabá,,,2956.69,False
+1503002,Faro,150017,Oriximiná,1505,Santarém,,,11771.669,False
+1503044,Floresta do Araguaia,150012,Redenção,1504,Redenção,,,3444.285,False
+1503077,Garrafão do Norte,150008,Capitão Poço,1502,Castanhal,,,1608.014,False
+1503093,Goianésia do Pará,150011,Tucuruí,1503,Marabá,,,7023.933,False
+1503101,Gurupá,150020,Breves,1507,Breves,,,8569.663,False
+1503200,Igarapé-Açu,150004,Castanhal,1502,Castanhal,,,785.983,False
+1503309,Igarapé-Miri,150003,Abaetetuba,1501,Belém,,,1996.798,False
+1503408,Inhangapi,150004,Castanhal,1502,Castanhal,,,472.599,False
+1503457,Ipixuna do Pará,150007,Paragominas,1502,Castanhal,,,5215.555,False
+1503507,Irituia,150004,Castanhal,1502,Castanhal,,,1385.209,False
+1503606,Itaituba,150016,Itaituba,1505,Santarém,,,62042.375,False
+1503705,Itupiranga,150009,Marabá,1503,Marabá,,,7880.303,False
+1503754,Jacareacanga,150016,Itaituba,1505,Santarém,,,53308.337,False
+1503804,Jacundá,150009,Marabá,1503,Marabá,,,2008.333,False
+1503903,Juruti,150017,Oriximiná,1505,Santarém,,,8305.907,False
+1504000,Limoeiro do Ajuru,150002,Cametá,1501,Belém,,,1489.356,False
+1504109,Magalhães Barata,150004,Castanhal,1502,Castanhal,,,323.984,False
+1504208,Marabá,150009,Marabá,1503,Marabá,1504208,Marabá,15127.872,False
+1504307,Maracanã,150004,Castanhal,1502,Castanhal,,,807.628,False
+1504406,Marapanim,150004,Castanhal,1502,Castanhal,,,804.625,False
+1504422,Marituba,150001,Belém,1501,Belém,1501402,Belém/PA,103.214,False
+1504455,Medicilândia,150018,Altamira,1506,Altamira,,,8272.629,False
+1504505,Melgaço,150020,Breves,1507,Breves,,,6772.778,False
+1504604,Mocajuba,150002,Cametá,1501,Belém,,,871.168,False
+1504703,Moju,150003,Abaetetuba,1501,Belém,,,9094.14,False
+1504752,Mojuí dos Campos,150015,Santarém,1505,Santarém,,,4988.239,False
+1504802,Monte Alegre,150015,Santarém,1505,Santarém,,,18151.323,False
+1504901,Muaná,150021,Soure-Salvaterra,1507,Breves,,,3763.13,False
+1504059,Mãe do Rio,150007,Paragominas,1502,Castanhal,,,469.341,False
+1504950,Nova Esperança do Piriá,150008,Capitão Poço,1502,Castanhal,,,2808.195,False
+1504976,Nova Ipixuna,150009,Marabá,1503,Marabá,,,1564.182,False
+1505007,Nova Timboteua,150006,Capanema,1502,Castanhal,,,489.852,False
+1505031,Novo Progresso,150016,Itaituba,1505,Santarém,,,38162.004,False
+1505064,Novo Repartimento,150011,Tucuruí,1503,Marabá,,,15398.735,False
+1505205,Oeiras do Pará,150002,Cametá,1501,Belém,,,3852.291,False
+1505304,Oriximiná,150017,Oriximiná,1505,Santarém,,,107560.161,False
+1505437,Ourilândia do Norte,150013,Tucumã - São Félix do Xingu,1504,Redenção,,,14410.567,False
+1505403,Ourém,150008,Capitão Poço,1502,Castanhal,,,561.71,False
+1505486,Pacajá,150011,Tucuruí,1503,Marabá,,,11832.318,False
+1505494,Palestina do Pará,150009,Marabá,1503,Marabá,,,984.362,False
+1505502,Paragominas,150007,Paragominas,1502,Castanhal,,,19342.565,False
+1505536,Parauapebas,150010,Parauapebas,1503,Marabá,1505536,Parauapebas,6885.865,False
+1505551,Pau D'Arco,150012,Redenção,1504,Redenção,,,1671.418,False
+1505601,Peixe-Boi,150006,Capanema,1502,Castanhal,,,450.224,False
+1505635,Piçarra,150009,Marabá,1503,Marabá,,,3312.709,False
+1505650,Placas,150016,Itaituba,1505,Santarém,,,7173.2,False
+1505700,Ponta de Pedras,150021,Soure-Salvaterra,1507,Breves,,,3363.743,False
+1505809,Portel,150020,Breves,1507,Breves,,,25386.158,False
+1505908,Porto de Moz,150019,Almeirim - Porto de Moz,1506,Altamira,,,17422.329,False
+1506005,Prainha,150015,Santarém,1505,Santarém,,,14788.187,False
+1506104,Primavera,150006,Capanema,1502,Castanhal,,,259.331,False
+1506112,Quatipuru,150006,Capanema,1502,Castanhal,,,302.586,False
+1506138,Redenção,150012,Redenção,1504,Redenção,,,3823.809,False
+1506161,Rio Maria,150014,Xinguara,1504,Redenção,,,4114.652,False
+1506187,Rondon do Pará,150009,Marabá,1503,Marabá,,,8246.394,False
+1506195,Rurópolis,150016,Itaituba,1505,Santarém,,,7021.322,False
+1506203,Salinópolis,150006,Capanema,1502,Castanhal,,,226.12,False
+1506302,Salvaterra,150021,Soure-Salvaterra,1507,Breves,,,918.563,False
+1506351,Santa Bárbara do Pará,150001,Belém,1501,Belém,,,278.154,False
+1506401,Santa Cruz do Arari,150021,Soure-Salvaterra,1507,Breves,,,1076.652,False
+1506500,Santa Izabel do Pará,150001,Belém,1501,Belém,,,717.662,False
+1506559,Santa Luzia do Pará,150005,Bragança,1502,Castanhal,,,1346.502,False
+1506583,Santa Maria das Barreiras,150012,Redenção,1504,Redenção,,,10330.214,False
+1506609,Santa Maria do Pará,150004,Castanhal,1502,Castanhal,,,457.724,False
+1506708,Santana do Araguaia,150012,Redenção,1504,Redenção,,,11591.427,False
+1506807,Santarém,150015,Santarém,1505,Santarém,1506807,Santarém,17900.01,False
+1506906,Santarém Novo,150006,Capanema,1502,Castanhal,,,229.51,False
+1507003,Santo Antônio do Tauá,150001,Belém,1501,Belém,,,537.619,False
+1507755,Sapucaia,150014,Xinguara,1504,Redenção,,,1298.195,False
+1507805,Senador José Porfírio,150018,Altamira,1506,Altamira,,,14419.917,False
+1507904,Soure,150021,Soure-Salvaterra,1507,Breves,,,2857.349,False
+1507102,São Caetano de Odivelas,150001,Belém,1501,Belém,,,463.883,False
+1507151,São Domingos do Araguaia,150009,Marabá,1503,Marabá,,,1392.464,False
+1507201,São Domingos do Capim,150004,Castanhal,1502,Castanhal,,,1686.672,False
+1507409,São Francisco do Pará,150004,Castanhal,1502,Castanhal,,,479.441,False
+1507300,São Félix do Xingu,150013,Tucumã - São Félix do Xingu,1504,Redenção,,,84212.873,False
+1507458,São Geraldo do Araguaia,150009,Marabá,1503,Marabá,,,3168.387,False
+1507466,São João da Ponta,150004,Castanhal,1502,Castanhal,,,195.918,False
+1507474,São João de Pirabas,150006,Capanema,1502,Castanhal,,,668.058,False
+1507508,São João do Araguaia,150009,Marabá,1503,Marabá,,,1279.889,False
+1507607,São Miguel do Guamá,150004,Castanhal,1502,Castanhal,,,1094.57,False
+1507706,São Sebastião da Boa Vista,150020,Breves,1507,Breves,,,1632.243,False
+1507953,Tailândia,150003,Abaetetuba,1501,Belém,,,4430.477,False
+1507961,Terra Alta,150004,Castanhal,1502,Castanhal,,,204.971,False
+1507979,Terra Santa,150017,Oriximiná,1505,Santarém,,,1895.883,False
+1508001,Tomé-Açu,150001,Belém,1501,Belém,,,5145.361,False
+1508035,Tracuateua,150005,Bragança,1502,Castanhal,,,868.03,False
+1508050,Trairão,150016,Itaituba,1505,Santarém,,,11991.085,False
+1508084,Tucumã,150013,Tucumã - São Félix do Xingu,1504,Redenção,,,2512.594,False
+1508100,Tucuruí,150011,Tucuruí,1503,Marabá,,,2084.276,False
+1508126,Ulianópolis,150007,Paragominas,1502,Castanhal,,,5088.468,False
+1508159,Uruará,150018,Altamira,1506,Altamira,,,10791.402,False
+1508209,Vigia,150001,Belém,1501,Belém,,,401.87,False
+1508308,Viseu,150005,Bragança,1502,Castanhal,,,4972.936,False
+1508357,Vitória do Xingu,150018,Altamira,1506,Altamira,,,3089.537,False
+1508407,Xinguara,150014,Xinguara,1504,Redenção,,,3779.323,False
+1500347,Água Azul do Norte,150014,Xinguara,1504,Redenção,,,7113.956,False
+1505106,Óbidos,150017,Oriximiná,1505,Santarém,,,28009.656,False

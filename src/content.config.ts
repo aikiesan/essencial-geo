@@ -33,7 +33,7 @@ const indicador = z.discriminatedUnion('tipo', [
 /**
  * Cada mapa é uma pasta em /mapas/NNN-slug/ e o README.md dessa pasta é a
  * fonte única de verdade: o GitHub o exibe como ficha técnica e o site o lê
- * como conteúdo. O id da entrada é o nome da pasta (ex.: 001-densidade-urbana-campinas).
+ * como conteúdo. O id da entrada é o nome da pasta (ex.: 001-estado-sao-paulo).
  * A versão em inglês fica ao lado, em README.en.md (coleção `traducoes`).
  */
 const mapas = defineCollection({
@@ -103,6 +103,8 @@ const mapas = defineCollection({
             arquivo_en: z.string().optional(),
             /** Ou um endereço externo (release do GitHub, Zenodo…) */
             url: z.string().url().optional(),
+            /** Endereço externo da versão em inglês, usado nas páginas em inglês. */
+            url_en: z.string().url().optional(),
             tamanho: z.string().optional(),
             rotulo: z.string().optional(),
             rotulo_en: z.string().optional(),

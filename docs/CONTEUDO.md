@@ -81,7 +81,7 @@ gráfico repete a legenda do mapa, use as **mesmas cores da prancha**.
 
 ```yaml
 downloads:
-  - formato: gpkg                       # gpkg | dxf | pdf | png | csv | tif | qgz | r
+  - formato: gpkg                       # gpkg | dxf | pdf | png | svg | csv | tif | qgz | r
     arquivo: dados/renda_rmc.gpkg.zip   # relativo à pasta do mapa…
     tamanho: "4,2 MB"
   - formato: pdf
@@ -91,6 +91,9 @@ downloads:
   - formato: png
     arquivo: mapa_preview.png
     arquivo_en: mapa_preview.en.png     # nas páginas em inglês, baixa a prancha em inglês
+  - formato: svg
+    url: https://github.com/…/releases/download/estados-2025/sp_prancha.svg
+    url_en: https://github.com/…/releases/download/estados-2025/sp_prancha.en.svg   # idem, para url
 ```
 
 Um item sem `arquivo` nem `url`, ou com `arquivo` que ainda não existe na pasta, aparece como botão

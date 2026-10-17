@@ -1,0 +1,646 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+3500105,Adamantina,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,411.987,False
+3500204,Adolfo,350025,São José do Rio Preto,3507,São José do Rio Preto,,,211.055,False
+3500303,Aguaí,350044,São João da Boa Vista,3510,Campinas,,,474.554,False
+3500709,Agudos,350009,Bauru,3503,Bauru,,,966.708,False
+3500758,Alambari,350006,Itapetininga,3502,Sorocaba,3522307,Itapetininga/SP,159.6,False
+3500808,Alfredo Marcondes,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,118.915,False
+3500907,Altair,350025,São José do Rio Preto,3507,São José do Rio Preto,,,313.007,False
+3501004,Altinópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,,,928.956,False
+3501103,Alto Alegre,350023,Birigui - Penápolis,3506,Araçatuba,,,318.574,False
+3501152,Alumínio,350003,Sorocaba,3502,Sorocaba,3552205,Sorocaba/SP,83.619,False
+3501509,Alvinlândia,350013,Marília,3504,Marília,,,84.879,False
+3501608,Americana,350038,Campinas,3510,Campinas,3501608,Americana - Santa Bárbara d´Oeste/SP,133.912,False
+3501905,Amparo,350048,Amparo,3510,Campinas,,,445.323,False
+3501707,Américo Brasiliense,350036,Araraquara,3509,Araraquara,3503208,Araraquara/SP,122.958,False
+3501806,Américo de Campos,350027,Votuporanga,3507,São José do Rio Preto,,,252.876,False
+3502002,Analândia,350046,Rio Claro,3510,Campinas,,,325.953,False
+3502101,Andradina,350024,Andradina,3506,Araçatuba,,,964.226,False
+3502200,Angatuba,350006,Itapetininga,3502,Sorocaba,,,1028.104,False
+3502309,Anhembi,350011,Botucatu,3503,Bauru,,,736.09,False
+3502408,Anhumas,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,320.84,False
+3502507,Aparecida,350052,Guaratinguetá,3511,São José dos Campos,3518404,Guaratinguetá/SP,120.89,False
+3502606,Aparecida d'Oeste,350028,Jales,3507,São José do Rio Preto,,,179.004,False
+3502705,Apiaí,350004,Itapeva,3502,Sorocaba,,,974.322,False
+3503000,Aramina,350035,Ituverava,3508,Ribeirão Preto,,,202.829,False
+3503109,Arandu,350007,Avaré,3502,Sorocaba,,,285.908,False
+3503158,Arapeí,350053,Cruzeiro,3511,São José dos Campos,,,156.479,False
+3503208,Araraquara,350036,Araraquara,3509,Araraquara,3503208,Araraquara/SP,1003.626,False
+3503307,Araras,350045,Araras,3510,Campinas,3503307,Araras,644.805,False
+3502754,Araçariguama,350003,Sorocaba,3502,Sorocaba,,,145.247,False
+3502804,Araçatuba,350022,Araçatuba,3506,Araçatuba,3502804,Araçatuba,1167.126,False
+3502903,Araçoiaba da Serra,350003,Sorocaba,3502,Sorocaba,3552205,Sorocaba/SP,255.305,False
+3503356,Arco-Íris,350016,Tupã,3504,Marília,,,264.904,False
+3503406,Arealva,350009,Bauru,3503,Bauru,,,506.226,False
+3503505,Areias,350053,Cruzeiro,3511,São José dos Campos,,,303.98,False
+3503604,Areiópolis,350011,Botucatu,3503,Bauru,,,85.907,False
+3503703,Ariranha,350026,Catanduva,3507,São José do Rio Preto,,,132.624,False
+3503802,Artur Nogueira,350038,Campinas,3510,Campinas,,,181.786,False
+3503901,Arujá,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,96.369,False
+3503950,Aspásia,350028,Jales,3507,São José do Rio Preto,,,69.373,False
+3504008,Assis,350014,Assis,3504,Marília,,,460.609,False
+3504107,Atibaia,350041,Bragança Paulista,3510,Campinas,3504107,Atibaia/SP,478.52,False
+3504206,Auriflama,350022,Araçatuba,3506,Araçatuba,,,434.117,False
+3504404,Avanhandava,350023,Birigui - Penápolis,3506,Araçatuba,,,338.37,False
+3504503,Avaré,350007,Avaré,3502,Sorocaba,,,1213.055,False
+3504305,Avaí,350009,Bauru,3503,Bauru,,,540.689,False
+3504602,Bady Bassitt,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,110.372,False
+3504701,Balbinos,350009,Bauru,3503,Bauru,,,91.635,False
+3504909,Bananal,350053,Cruzeiro,3511,São José dos Campos,,,616.934,False
+3505104,Barbosa,350023,Birigui - Penápolis,3506,Araçatuba,,,205.212,False
+3505203,Bariri,350010,Jaú,3503,Bauru,,,444.405,False
+3505302,Barra Bonita,350010,Jaú,3503,Bauru,,,150.121,False
+3505351,Barra do Chapéu,350004,Itapeva,3502,Sorocaba,,,405.681,False
+3505401,Barra do Turvo,350005,Registro,3502,Sorocaba,,,1007.684,False
+3505500,Barretos,350032,Barretos,3508,Ribeirão Preto,3505500,Barretos,1566.161,False
+3505609,Barrinha,350031,Ribeirão Preto,3508,Ribeirão Preto,,,148.756,False
+3505708,Barueri,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,66.364,False
+3505005,Barão de Antonina,350004,Itapeva,3502,Sorocaba,,,153.142,False
+3505807,Bastos,350016,Tupã,3504,Marília,,,170.912,False
+3505906,Batatais,350031,Ribeirão Preto,3508,Ribeirão Preto,,,849.526,False
+3506003,Bauru,350009,Bauru,3503,Bauru,3506003,Bauru/SP,667.684,False
+3506102,Bebedouro,350032,Barretos,3508,Ribeirão Preto,,,683.192,False
+3506201,Bento de Abreu,350022,Araçatuba,3506,Araçatuba,,,301.687,False
+3506300,Bernardino de Campos,350015,Ourinhos,3504,Marília,,,244.158,False
+3506359,Bertioga,350002,Santos,3501,São Paulo,,,491.546,False
+3506409,Bilac,350023,Birigui - Penápolis,3506,Araçatuba,,,158.025,False
+3506508,Birigui,350023,Birigui - Penápolis,3506,Araçatuba,3506508,Birigui/SP,530.031,False
+3506607,Biritiba Mirim,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,317.406,False
+3506706,Boa Esperança do Sul,350036,Araraquara,3509,Araraquara,,,690.748,False
+3506805,Bocaina,350010,Jaú,3503,Bauru,,,363.926,False
+3506904,Bofete,350011,Botucatu,3503,Bauru,,,654.546,False
+3507001,Boituva,350003,Sorocaba,3502,Sorocaba,,,248.954,False
+3507100,Bom Jesus dos Perdões,350041,Bragança Paulista,3510,Campinas,3504107,Atibaia/SP,108.366,False
+3507159,Bom Sucesso de Itararé,350004,Itapeva,3502,Sorocaba,,,133.578,False
+3507308,Boracéia,350010,Jaú,3503,Bauru,,,122.11,False
+3507407,Borborema,350036,Araraquara,3509,Araraquara,,,552.256,False
+3507456,Borebi,350009,Bauru,3503,Bauru,,,347.989,False
+3507209,Borá,350014,Assis,3504,Marília,,,118.951,False
+3507506,Botucatu,350011,Botucatu,3503,Bauru,3507506,Botucatu,1481.772,False
+3507605,Bragança Paulista,350041,Bragança Paulista,3510,Campinas,3507605,Bragança Paulista,512.584,False
+3507704,Braúna,350023,Birigui - Penápolis,3506,Araçatuba,3506508,Birigui/SP,195.176,False
+3507753,Brejo Alegre,350023,Birigui - Penápolis,3506,Araçatuba,3506508,Birigui/SP,105.689,False
+3507803,Brodowski,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,278.458,False
+3507902,Brotas,350010,Jaú,3503,Bauru,,,1101.373,False
+3508009,Buri,350004,Itapeva,3502,Sorocaba,,,1196.463,False
+3508108,Buritama,350023,Birigui - Penápolis,3506,Araçatuba,,,327.344,False
+3508207,Buritizal,350035,Ituverava,3508,Ribeirão Preto,,,266.42,False
+3504800,Bálsamo,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,149.881,False
+3508405,Cabreúva,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,260.234,False
+3508306,Cabrália Paulista,350009,Bauru,3503,Bauru,,,239.974,False
+3508603,Cachoeira Paulista,350053,Cruzeiro,3511,São José dos Campos,,,288.747,False
+3508702,Caconde,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,468.998,False
+3508801,Cafelândia,350012,Lins,3503,Bauru,,,920.28,False
+3508900,Caiabu,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,252.704,False
+3509007,Caieiras,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,97.745,False
+3509106,Caiuá,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,,,551.159,False
+3509205,Cajamar,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,131.521,False
+3509254,Cajati,350005,Registro,3502,Sorocaba,,,454.489,False
+3509304,Cajobi,350032,Barretos,3508,Ribeirão Preto,,,176.929,False
+3509403,Cajuru,350031,Ribeirão Preto,3508,Ribeirão Preto,,,660.088,False
+3509452,Campina do Monte Alegre,350006,Itapetininga,3502,Sorocaba,,,184.479,False
+3509502,Campinas,350038,Campinas,3510,Campinas,3509502,Campinas/SP,794.57,False
+3509601,Campo Limpo Paulista,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,79.504,False
+3509809,Campos Novos Paulista,350013,Marília,3504,Marília,,,484.199,False
+3509700,Campos do Jordão,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,289.981,False
+3509908,Cananéia,350005,Registro,3502,Sorocaba,,,1237.354,False
+3509957,Canas,350052,Guaratinguetá,3511,São José dos Campos,,,53.261,False
+3510153,Canitar,350015,Ourinhos,3504,Marília,3534708,Ourinhos/SP,57.459,False
+3510302,Capela do Alto,350003,Sorocaba,3502,Sorocaba,,,169.89,False
+3510401,Capivari,350040,Piracicaba,3510,Campinas,,,322.878,False
+3510203,Capão Bonito,350004,Itapeva,3502,Sorocaba,,,1640.229,False
+3510500,Caraguatatuba,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,484.947,False
+3510609,Carapicuíba,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,34.234,False
+3510708,Cardoso,350027,Votuporanga,3507,São José do Rio Preto,,,639.248,False
+3510807,Casa Branca,350044,São João da Boa Vista,3510,Campinas,,,864.225,False
+3511003,Castilho,350024,Andradina,3506,Araçatuba,,,1065.318,False
+3511102,Catanduva,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,291.926,False
+3511201,Catiguá,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,146.568,False
+3508504,Caçapava,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,369.558,False
+3511300,Cedral,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,197.099,False
+3511409,Cerqueira César,350007,Avaré,3502,Sorocaba,,,511.621,False
+3511508,Cerquilho,350003,Sorocaba,3502,Sorocaba,,,127.803,False
+3511607,Cesário Lange,350008,Tatuí,3502,Sorocaba,,,190.392,False
+3511706,Charqueada,350040,Piracicaba,3510,Campinas,3538709,Piracicaba/SP,175.846,False
+3557204,Chavantes,350015,Ourinhos,3504,Marília,,,188.727,False
+3511904,Clementina,350023,Birigui - Penápolis,3506,Araçatuba,,,168.59,False
+3512001,Colina,350032,Barretos,3508,Ribeirão Preto,,,422.303,False
+3512100,Colômbia,350032,Barretos,3508,Ribeirão Preto,,,728.648,False
+3512209,Conchal,350045,Araras,3510,Campinas,,,182.793,False
+3512308,Conchas,350011,Botucatu,3503,Bauru,,,467.327,False
+3512407,Cordeirópolis,350042,Limeira,3510,Campinas,,,137.678,False
+3512506,Coroados,350023,Birigui - Penápolis,3506,Araçatuba,3506508,Birigui/SP,246.826,False
+3512605,Coronel Macedo,350007,Avaré,3502,Sorocaba,,,303.83,False
+3512704,Corumbataí,350046,Rio Claro,3510,Campinas,,,278.622,False
+3512902,Cosmorama,350027,Votuporanga,3507,São José do Rio Preto,,,441.68,False
+3512803,Cosmópolis,350038,Campinas,3510,Campinas,3509502,Campinas/SP,151.645,False
+3513009,Cotia,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,324.0,False
+3513108,Cravinhos,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,311.423,False
+3513207,Cristais Paulista,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,385.23,False
+3513405,Cruzeiro,350053,Cruzeiro,3511,São José dos Campos,,,305.669,False
+3513306,Cruzália,350014,Assis,3504,Marília,,,149.33,False
+3513504,Cubatão,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,143.649,False
+3513603,Cunha,350052,Guaratinguetá,3511,São José dos Campos,,,1407.098,False
+3510906,Cássia dos Coqueiros,350031,Ribeirão Preto,3508,Ribeirão Preto,,,191.683,False
+3510005,Cândido Mota,350014,Assis,3504,Marília,,,595.811,False
+3510104,Cândido Rodrigues,350036,Araraquara,3509,Araraquara,,,70.892,False
+3513702,Descalvado,350037,São Carlos,3509,Araraquara,,,753.926,False
+3513801,Diadema,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,30.806,False
+3513850,Dirce Reis,350028,Jales,3507,São José do Rio Preto,,,88.152,False
+3513900,Divinolândia,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,223.749,False
+3514007,Dobrada,350036,Araraquara,3509,Araraquara,,,149.729,False
+3514106,Dois Córregos,350010,Jaú,3503,Bauru,,,632.972,False
+3514205,Dolcinópolis,350028,Jales,3507,São José do Rio Preto,,,77.939,False
+3514304,Dourado,350037,São Carlos,3509,Araraquara,,,205.874,False
+3514403,Dracena,350020,Dracena,3505,Presidente Prudente,,,487.271,False
+3514502,Duartina,350009,Bauru,3503,Bauru,,,264.557,False
+3514601,Dumont,350031,Ribeirão Preto,3508,Ribeirão Preto,,,111.361,False
+3514700,Echaporã,350013,Marília,3504,Marília,,,515.258,False
+3514809,Eldorado,350005,Registro,3502,Sorocaba,,,1654.256,False
+3514908,Elias Fausto,350038,Campinas,3510,Campinas,,,202.36,False
+3514924,Elisiário,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,93.314,False
+3514957,Embaúba,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,83.129,False
+3515004,Embu das Artes,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,70.264,False
+3515103,Embu-Guaçu,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,155.285,False
+3515129,Emilianópolis,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,225.177,False
+3515152,Engenheiro Coelho,350042,Limeira,3510,Campinas,,,109.574,False
+3515186,Espírito Santo do Pinhal,350044,São João da Boa Vista,3510,Campinas,,,389.235,False
+3515194,Espírito Santo do Turvo,350015,Ourinhos,3504,Marília,,,193.666,False
+3557303,Estiva Gerbi,350043,Mogi Guaçu,3510,Campinas,3530706,Mogi Guaçu - Mogi Mirim/SP,74.144,False
+3515202,Estrela d'Oeste,350029,Fernandópolis,3507,São José do Rio Preto,,,296.281,False
+3515301,Estrela do Norte,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,264.987,False
+3515350,Euclides da Cunha Paulista,350018,Presidente Prudente,3505,Presidente Prudente,,,571.169,False
+3515400,Fartura,350017,Piraju,3504,Marília,,,429.171,False
+3515608,Fernando Prestes,350026,Catanduva,3507,São José do Rio Preto,,,169.99,False
+3515509,Fernandópolis,350029,Fernandópolis,3507,São José do Rio Preto,,,549.797,False
+3515657,Fernão,350013,Marília,3504,Marília,,,100.504,False
+3515707,Ferraz de Vasconcelos,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,29.58,False
+3515806,Flora Rica,350020,Dracena,3505,Presidente Prudente,,,224.619,False
+3515905,Floreal,350027,Votuporanga,3507,São José do Rio Preto,,,204.236,False
+3516101,Florínea,350014,Assis,3504,Marília,,,225.886,False
+3516002,Flórida Paulista,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,524.138,False
+3516200,Franca,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,605.679,False
+3516309,Francisco Morato,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,49.001,False
+3516408,Franco da Rocha,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,132.775,False
+3516507,Gabriel Monteiro,350023,Birigui - Penápolis,3506,Araçatuba,,,138.681,False
+3516705,Garça,350013,Marília,3504,Marília,,,555.807,False
+3516804,Gastão Vidigal,350022,Araçatuba,3506,Araçatuba,,,180.569,False
+3516853,Gavião Peixoto,350036,Araraquara,3509,Araraquara,3503208,Araraquara/SP,243.766,False
+3516903,General Salgado,350022,Araçatuba,3506,Araçatuba,,,493.88,False
+3517000,Getulina,350013,Marília,3504,Marília,,,676.755,False
+3517109,Glicério,350023,Birigui - Penápolis,3506,Araçatuba,,,272.8,False
+3517307,Guaimbê,350013,Marília,3504,Marília,,,217.811,False
+3517208,Guaiçara,350012,Lins,3503,Bauru,,,277.154,False
+3517604,Guapiara,350004,Itapeva,3502,Sorocaba,,,408.292,False
+3517505,Guapiaçu,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,324.752,False
+3517901,Guaraci,350032,Barretos,3508,Ribeirão Preto,,,641.501,False
+3518008,Guarani d'Oeste,350029,Fernandópolis,3507,São José do Rio Preto,,,85.7,False
+3518107,Guarantã,350012,Lins,3503,Bauru,,,461.746,False
+3518206,Guararapes,350022,Araçatuba,3506,Araçatuba,,,955.637,False
+3518305,Guararema,350001,São Paulo,3501,São Paulo,,,270.816,False
+3518404,Guaratinguetá,350052,Guaratinguetá,3511,São José dos Campos,3518404,Guaratinguetá/SP,752.636,False
+3517802,Guaraçaí,350024,Andradina,3506,Araçatuba,,,569.222,False
+3518503,Guareí,350006,Itapetininga,3502,Sorocaba,,,567.719,False
+3518602,Guariba,350031,Ribeirão Preto,3508,Ribeirão Preto,,,270.408,False
+3518701,Guarujá,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,144.794,False
+3518800,Guarulhos,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,318.838,False
+3517703,Guará,350035,Ituverava,3508,Ribeirão Preto,,,362.183,False
+3518859,Guatapará,350031,Ribeirão Preto,3508,Ribeirão Preto,,,413.653,False
+3517406,Guaíra,350032,Barretos,3508,Ribeirão Preto,,,1258.465,False
+3518909,Guzolândia,350022,Araçatuba,3506,Araçatuba,,,252.722,False
+3516606,Gália,350013,Marília,3504,Marília,,,355.914,False
+3519006,Herculândia,350016,Tupã,3504,Marília,,,364.252,False
+3519055,Holambra,350038,Campinas,3510,Campinas,,,65.337,False
+3519071,Hortolândia,350038,Campinas,3510,Campinas,3509502,Campinas/SP,62.416,False
+3519105,Iacanga,350009,Bauru,3503,Bauru,,,547.393,False
+3519204,Iacri,350016,Tupã,3504,Marília,,,321.948,False
+3519253,Iaras,350007,Avaré,3502,Sorocaba,,,401.381,False
+3519303,Ibaté,350037,São Carlos,3509,Araraquara,3548906,São Carlos/SP,290.977,False
+3519501,Ibirarema,350015,Ourinhos,3504,Marília,,,228.23,False
+3519402,Ibirá,350025,São José do Rio Preto,3507,São José do Rio Preto,,,268.9,False
+3519600,Ibitinga,350036,Araraquara,3509,Araraquara,,,689.391,False
+3519709,Ibiúna,350003,Sorocaba,3502,Sorocaba,,,1058.01,False
+3519808,Icém,350025,São José do Rio Preto,3507,São José do Rio Preto,,,362.355,False
+3519907,Iepê,350018,Presidente Prudente,3505,Presidente Prudente,,,594.985,False
+3520103,Igarapava,350035,Ituverava,3508,Ribeirão Preto,,,468.355,False
+3520202,Igaratá,350049,São José dos Campos,3511,São José dos Campos,,,293.002,False
+3520004,Igaraçu do Tietê,350010,Jaú,3503,Bauru,,,97.747,False
+3520301,Iguape,350005,Registro,3502,Sorocaba,,,1978.329,False
+3520426,Ilha Comprida,350005,Registro,3502,Sorocaba,,,196.567,False
+3520442,Ilha Solteira,350024,Andradina,3506,Araçatuba,,,652.641,False
+3520400,Ilhabela,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,346.389,False
+3520509,Indaiatuba,350038,Campinas,3510,Campinas,3520509,Indaiatuba,311.545,False
+3520608,Indiana,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,129.019,False
+3520707,Indiaporã,350029,Fernandópolis,3507,São José do Rio Preto,,,279.606,False
+3520806,Inúbia Paulista,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,87.119,False
+3520905,Ipaussu,350015,Ourinhos,3504,Marília,,,209.554,False
+3521002,Iperó,350003,Sorocaba,3502,Sorocaba,,,170.289,False
+3521101,Ipeúna,350046,Rio Claro,3510,Campinas,3543907,Rio Claro/SP,190.01,False
+3521150,Ipiguá,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,136.028,False
+3521200,Iporanga,350005,Registro,3502,Sorocaba,,,1152.059,False
+3521309,Ipuã,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,466.461,False
+3521408,Iracemápolis,350042,Limeira,3510,Campinas,3526902,Limeira/SP,115.31,False
+3521606,Irapuru,350020,Dracena,3505,Presidente Prudente,,,214.078,False
+3521507,Irapuã,350025,São José do Rio Preto,3507,São José do Rio Preto,,,257.611,False
+3521705,Itaberá,350004,Itapeva,3502,Sorocaba,,,1100.247,False
+3521903,Itajobi,350026,Catanduva,3507,São José do Rio Preto,,,502.066,False
+3522000,Itaju,350010,Jaú,3503,Bauru,,,230.355,False
+3522109,Itanhaém,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,601.018,False
+3522158,Itaoca,350004,Itapeva,3502,Sorocaba,,,183.015,False
+3522208,Itapecerica da Serra,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,151.012,False
+3522307,Itapetininga,350006,Itapetininga,3502,Sorocaba,3522307,Itapetininga/SP,1789.35,False
+3522406,Itapeva,350004,Itapeva,3502,Sorocaba,,,1826.258,False
+3522505,Itapevi,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,82.583,False
+3522604,Itapira,350043,Mogi Guaçu,3510,Campinas,,,518.431,False
+3522653,Itapirapuã Paulista,350004,Itapeva,3502,Sorocaba,,,406.478,False
+3522802,Itaporanga,350004,Itapeva,3502,Sorocaba,,,507.997,False
+3523008,Itapura,350024,Andradina,3506,Araçatuba,,,301.653,False
+3522901,Itapuí,350010,Jaú,3503,Bauru,,,140.023,False
+3523107,Itaquaquecetuba,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,82.575,False
+3523206,Itararé,350004,Itapeva,3502,Sorocaba,,,1003.86,False
+3523305,Itariri,350002,Santos,3501,São Paulo,,,273.956,False
+3523404,Itatiba,350039,Jundiaí,3510,Campinas,3523404,Itatiba,322.253,False
+3523503,Itatinga,350011,Botucatu,3503,Bauru,,,979.526,False
+3521804,Itaí,350007,Avaré,3502,Sorocaba,,,1092.884,False
+3523602,Itirapina,350037,São Carlos,3509,Araraquara,,,564.603,False
+3523701,Itirapuã,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,161.118,False
+3523800,Itobi,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,138.986,False
+3523909,Itu,350003,Sorocaba,3502,Sorocaba,3523909,Itu - Salto/SP,640.719,False
+3524006,Itupeva,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,201.214,False
+3524105,Ituverava,350035,Ituverava,3508,Ribeirão Preto,,,704.659,False
+3522703,Itápolis,350036,Araraquara,3509,Araraquara,,,996.747,False
+3524204,Jaborandi,350032,Barretos,3508,Ribeirão Preto,,,273.438,False
+3524303,Jaboticabal,350031,Ribeirão Preto,3508,Ribeirão Preto,,,706.722,False
+3524402,Jacareí,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,464.252,False
+3524501,Jaci,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,145.133,False
+3524600,Jacupiranga,350005,Registro,3502,Sorocaba,,,704.136,False
+3524709,Jaguariúna,350038,Campinas,3510,Campinas,,,141.391,False
+3524808,Jales,350028,Jales,3507,São José do Rio Preto,,,368.574,False
+3524907,Jambeiro,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,184.413,False
+3525003,Jandira,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,17.122,False
+3525102,Jardinópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,501.87,False
+3525201,Jarinu,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,207.549,False
+3525300,Jaú,350010,Jaú,3503,Bauru,3525300,Jaú,687.103,False
+3525409,Jeriquara,350033,Franca,3508,Ribeirão Preto,,,141.971,False
+3525508,Joanópolis,350041,Bragança Paulista,3510,Campinas,,,374.346,False
+3525706,José Bonifácio,350025,São José do Rio Preto,3507,São José do Rio Preto,,,860.2,False
+3525607,João Ramalho,350018,Presidente Prudente,3505,Presidente Prudente,,,415.452,False
+3525854,Jumirim,350003,Sorocaba,3502,Sorocaba,,,56.685,False
+3525904,Jundiaí,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,431.162,False
+3526001,Junqueirópolis,350020,Dracena,3505,Presidente Prudente,,,583.273,False
+3526209,Juquitiba,350001,São Paulo,3501,São Paulo,,,523.074,False
+3526100,Juquiá,350005,Registro,3502,Sorocaba,,,812.799,False
+3525805,Júlio Mesquita,350013,Marília,3504,Marília,,,128.183,False
+3526308,Lagoinha,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,254.454,False
+3526407,Laranjal Paulista,350040,Piracicaba,3510,Campinas,,,384.274,False
+3526605,Lavrinhas,350053,Cruzeiro,3511,São José dos Campos,,,166.948,False
+3526506,Lavínia,350024,Andradina,3506,Araçatuba,,,537.675,False
+3526704,Leme,350045,Araras,3510,Campinas,,,402.871,False
+3526803,Lençóis Paulista,350009,Bauru,3503,Bauru,,,809.541,False
+3526902,Limeira,350042,Limeira,3510,Campinas,3526902,Limeira/SP,580.577,False
+3527009,Lindóia,350048,Amparo,3510,Campinas,,,48.321,False
+3527108,Lins,350012,Lins,3503,Bauru,,,570.058,False
+3527207,Lorena,350052,Guaratinguetá,3511,São José dos Campos,,,414.16,False
+3527256,Lourdes,350023,Birigui - Penápolis,3506,Araçatuba,,,113.808,False
+3527306,Louveira,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,55.989,False
+3527504,Lucianópolis,350009,Bauru,3503,Bauru,,,189.536,False
+3527405,Lucélia,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,314.81,False
+3527702,Luiziânia,350023,Birigui - Penápolis,3506,Araçatuba,,,166.576,False
+3527801,Lupércio,350013,Marília,3504,Marília,,,155.171,False
+3527900,Lutécia,350014,Assis,3504,Marília,,,475.226,False
+3527603,Luís Antônio,350031,Ribeirão Preto,3508,Ribeirão Preto,,,598.257,False
+3528007,Macatuba,350009,Bauru,3503,Bauru,,,224.514,False
+3528106,Macaubal,350025,São José do Rio Preto,3507,São José do Rio Preto,,,248.087,False
+3528205,Macedônia,350029,Fernandópolis,3507,São José do Rio Preto,,,327.567,False
+3528304,Magda,350022,Araçatuba,3506,Araçatuba,,,312.282,False
+3528403,Mairinque,350003,Sorocaba,3502,Sorocaba,3550605,São Roque - Mairinque/SP,210.149,False
+3528502,Mairiporã,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,320.492,False
+3528601,Manduri,350007,Avaré,3502,Sorocaba,,,229.046,False
+3528700,Marabá Paulista,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,,,919.519,False
+3528809,Maracaí,350014,Assis,3504,Marília,,,533.498,False
+3528858,Marapoama,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,111.267,False
+3529104,Marinópolis,350028,Jales,3507,São José do Rio Preto,,,77.827,False
+3528908,Mariápolis,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,186.432,False
+3529203,Martinópolis,350018,Presidente Prudente,3505,Presidente Prudente,,,1251.492,False
+3529005,Marília,350013,Marília,3504,Marília,3529005,Marília/SP,1170.515,False
+3529302,Matão,350036,Araraquara,3509,Araraquara,,,524.899,False
+3529401,Mauá,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,62.034,False
+3529500,Mendonça,350025,São José do Rio Preto,3507,São José do Rio Preto,,,195.151,False
+3529609,Meridiano,350029,Fernandópolis,3507,São José do Rio Preto,,,228.199,False
+3529658,Mesópolis,350028,Jales,3507,São José do Rio Preto,,,148.636,False
+3529708,Miguelópolis,350035,Ituverava,3508,Ribeirão Preto,,,820.849,False
+3529807,Mineiros do Tietê,350010,Jaú,3503,Bauru,,,213.242,False
+3530003,Mira Estrela,350029,Fernandópolis,3507,São José do Rio Preto,,,216.825,False
+3529906,Miracatu,350005,Registro,3502,Sorocaba,,,1002.2,False
+3530102,Mirandópolis,350024,Andradina,3506,Araçatuba,,,917.692,False
+3530201,Mirante do Paranapanema,350018,Presidente Prudente,3505,Presidente Prudente,,,1238.931,False
+3530300,Mirassol,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,243.228,False
+3530409,Mirassolândia,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,166.125,False
+3530508,Mococa,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,855.701,False
+3530706,Mogi Guaçu,350043,Mogi Guaçu,3510,Campinas,3530706,Mogi Guaçu - Mogi Mirim/SP,812.753,False
+3530805,Mogi Mirim,350043,Mogi Guaçu,3510,Campinas,3530706,Mogi Guaçu - Mogi Mirim/SP,497.709,False
+3530607,Mogi das Cruzes,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,712.532,False
+3530904,Mombuca,350040,Piracicaba,3510,Campinas,,,133.698,False
+3531100,Mongaguá,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,142.521,False
+3531209,Monte Alegre do Sul,350048,Amparo,3510,Campinas,,,110.308,False
+3531308,Monte Alto,350031,Ribeirão Preto,3508,Ribeirão Preto,,,346.95,False
+3531407,Monte Aprazível,350025,São José do Rio Preto,3507,São José do Rio Preto,,,495.559,False
+3531506,Monte Azul Paulista,350032,Barretos,3508,Ribeirão Preto,,,263.463,False
+3531605,Monte Castelo,350020,Dracena,3505,Presidente Prudente,,,233.289,False
+3531803,Monte Mor,350038,Campinas,3510,Campinas,3509502,Campinas/SP,240.566,False
+3531704,Monteiro Lobato,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,332.408,False
+3531001,Monções,350022,Araçatuba,3506,Araçatuba,,,104.352,False
+3531902,Morro Agudo,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,1388.127,False
+3532009,Morungaba,350039,Jundiaí,3510,Campinas,,,146.752,False
+3532058,Motuca,350036,Araraquara,3509,Araraquara,,,228.651,False
+3532108,Murutinga do Sul,350024,Andradina,3506,Araçatuba,,,250.873,False
+3532157,Nantes,350018,Presidente Prudente,3505,Presidente Prudente,,,286.444,False
+3532207,Narandiba,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,357.325,False
+3532306,Natividade da Serra,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,834.281,False
+3532405,Nazaré Paulista,350041,Bragança Paulista,3510,Campinas,,,326.392,False
+3532504,Neves Paulista,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,219.05,False
+3532603,Nhandeara,350027,Votuporanga,3507,São José do Rio Preto,,,436.159,False
+3532702,Nipoã,350025,São José do Rio Preto,3507,São José do Rio Preto,,,137.609,False
+3532801,Nova Aliança,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,217.515,False
+3532827,Nova Campina,350004,Itapeva,3502,Sorocaba,,,385.375,False
+3532843,Nova Canaã Paulista,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,124.473,False
+3532868,Nova Castilho,350022,Araçatuba,3506,Araçatuba,,,183.396,False
+3532900,Nova Europa,350036,Araraquara,3509,Araraquara,,,160.25,False
+3533007,Nova Granada,350025,São José do Rio Preto,3507,São José do Rio Preto,,,531.796,False
+3533106,Nova Guataporanga,350020,Dracena,3505,Presidente Prudente,,,34.675,False
+3533205,Nova Independência,350024,Andradina,3506,Araçatuba,,,265.028,False
+3533304,Nova Luzitânia,350022,Araçatuba,3506,Araçatuba,,,73.69,False
+3533403,Nova Odessa,350038,Campinas,3510,Campinas,3501608,Americana - Santa Bárbara d´Oeste/SP,73.788,False
+3533254,Novais,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,117.772,False
+3533502,Novo Horizonte,350025,São José do Rio Preto,3507,São José do Rio Preto,,,931.743,False
+3533601,Nuporanga,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,348.265,False
+3533700,Ocauçu,350013,Marília,3504,Marília,,,301.036,False
+3533908,Olímpia,350032,Barretos,3508,Ribeirão Preto,,,802.393,False
+3534005,Onda Verde,350025,São José do Rio Preto,3507,São José do Rio Preto,,,242.946,False
+3534104,Oriente,350013,Marília,3504,Marília,3529005,Marília/SP,218.668,False
+3534203,Orindiúva,350025,São José do Rio Preto,3507,São José do Rio Preto,,,247.378,False
+3534302,Orlândia,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,291.765,False
+3534401,Osasco,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,64.999,False
+3534500,Oscar Bressane,350013,Marília,3504,Marília,,,222.13,False
+3534609,Osvaldo Cruz,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,248.038,False
+3534708,Ourinhos,350015,Ourinhos,3504,Marília,3534708,Ourinhos/SP,295.818,False
+3534807,Ouro Verde,350020,Dracena,3505,Presidente Prudente,,,266.778,False
+3534757,Ouroeste,350029,Fernandópolis,3507,São José do Rio Preto,,,288.648,False
+3534906,Pacaembu,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,339.375,False
+3535002,Palestina,350025,São José do Rio Preto,3507,São José do Rio Preto,,,697.701,False
+3535101,Palmares Paulista,350026,Catanduva,3507,São José do Rio Preto,,,82.125,False
+3535200,Palmeira d'Oeste,350028,Jales,3507,São José do Rio Preto,,,318.696,False
+3535309,Palmital,350014,Assis,3504,Marília,,,548.407,False
+3535408,Panorama,350020,Dracena,3505,Presidente Prudente,,,356.05,False
+3535507,Paraguaçu Paulista,350014,Assis,3504,Marília,,,1001.492,False
+3535606,Paraibuna,350049,São José dos Campos,3511,São José dos Campos,,,809.576,False
+3535804,Paranapanema,350007,Avaré,3502,Sorocaba,,,1018.724,False
+3535903,Paranapuã,350028,Jales,3507,São José do Rio Preto,,,140.354,False
+3536000,Parapuã,350016,Tupã,3504,Marília,,,366.676,False
+3535705,Paraíso,350026,Catanduva,3507,São José do Rio Preto,,,155.186,False
+3536109,Pardinho,350011,Botucatu,3503,Bauru,,,208.223,False
+3536208,Pariquera-Açu,350005,Registro,3502,Sorocaba,,,359.414,False
+3536257,Parisi,350027,Votuporanga,3507,São José do Rio Preto,,,84.737,False
+3536307,Patrocínio Paulista,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,602.848,False
+3536406,Paulicéia,350020,Dracena,3505,Presidente Prudente,,,374.091,False
+3536570,Paulistânia,350009,Bauru,3503,Bauru,,,256.178,False
+3536604,Paulo de Faria,350025,São José do Rio Preto,3507,São José do Rio Preto,,,737.986,False
+3536505,Paulínia,350038,Campinas,3510,Campinas,3509502,Campinas/SP,138.777,False
+3536703,Pederneiras,350009,Bauru,3503,Bauru,,,727.482,False
+3536802,Pedra Bela,350041,Bragança Paulista,3510,Campinas,,,158.588,False
+3536901,Pedranópolis,350029,Fernandópolis,3507,São José do Rio Preto,,,260.101,False
+3537008,Pedregulho,350033,Franca,3508,Ribeirão Preto,,,712.604,False
+3537107,Pedreira,350038,Campinas,3510,Campinas,,,108.817,False
+3537156,Pedrinhas Paulista,350014,Assis,3504,Marília,,,152.309,False
+3537206,Pedro de Toledo,350002,Santos,3501,São Paulo,,,672.83,False
+3537305,Penápolis,350023,Birigui - Penápolis,3506,Araçatuba,,,711.315,False
+3537404,Pereira Barreto,350024,Andradina,3506,Araçatuba,,,974.248,False
+3537503,Pereiras,350008,Tatuí,3502,Sorocaba,,,223.136,False
+3537602,Peruíbe,350002,Santos,3501,São Paulo,,,323.331,False
+3537701,Piacatu,350023,Birigui - Penápolis,3506,Araçatuba,,,232.488,False
+3537800,Piedade,350003,Sorocaba,3502,Sorocaba,,,746.903,False
+3537909,Pilar do Sul,350003,Sorocaba,3502,Sorocaba,,,681.248,False
+3538006,Pindamonhangaba,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,3549904,São José dos Campos/SP,731.356,False
+3538105,Pindorama,350026,Catanduva,3507,São José do Rio Preto,3511102,Catanduva/SP,184.825,False
+3538204,Pinhalzinho,350041,Bragança Paulista,3510,Campinas,,,154.529,False
+3538303,Piquerobi,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,,,482.769,False
+3538501,Piquete,350052,Guaratinguetá,3511,São José dos Campos,,,175.996,False
+3538600,Piracaia,350041,Bragança Paulista,3510,Campinas,,,385.64,False
+3538709,Piracicaba,350040,Piracicaba,3510,Campinas,3538709,Piracicaba/SP,1377.173,False
+3538808,Piraju,350017,Piraju,3504,Marília,,,504.591,False
+3538907,Pirajuí,350009,Bauru,3503,Bauru,,,823.758,False
+3539004,Pirangi,350026,Catanduva,3507,São José do Rio Preto,,,215.809,False
+3539103,Pirapora do Bom Jesus,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,108.304,False
+3539202,Pirapozinho,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,477.673,False
+3539301,Pirassununga,350037,São Carlos,3509,Araraquara,,,727.714,False
+3539400,Piratininga,350009,Bauru,3503,Bauru,3506003,Bauru/SP,402.409,False
+3539509,Pitangueiras,350031,Ribeirão Preto,3508,Ribeirão Preto,,,430.638,False
+3539608,Planalto,350025,São José do Rio Preto,3507,São José do Rio Preto,,,289.825,False
+3539707,Platina,350014,Assis,3504,Marília,,,327.48,False
+3539905,Poloni,350025,São José do Rio Preto,3507,São José do Rio Preto,,,135.119,False
+3540002,Pompéia,350013,Marília,3504,Marília,,,784.674,False
+3540101,Pongaí,350012,Lins,3503,Bauru,,,183.399,False
+3540200,Pontal,350031,Ribeirão Preto,3508,Ribeirão Preto,,,356.371,False
+3540259,Pontalinda,350028,Jales,3507,São José do Rio Preto,,,209.504,False
+3540309,Pontes Gestal,350027,Votuporanga,3507,São José do Rio Preto,,,217.505,False
+3540408,Populina,350028,Jales,3507,São José do Rio Preto,,,315.938,False
+3540507,Porangaba,350008,Tatuí,3502,Sorocaba,,,265.968,False
+3540606,Porto Feliz,350003,Sorocaba,3502,Sorocaba,,,556.706,False
+3540705,Porto Ferreira,350037,São Carlos,3509,Araraquara,,,245.327,False
+3540754,Potim,350052,Guaratinguetá,3511,São José dos Campos,3518404,Guaratinguetá/SP,44.644,False
+3540804,Potirendaba,350025,São José do Rio Preto,3507,São José do Rio Preto,,,342.492,False
+3539806,Poá,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,17.264,False
+3540853,Pracinha,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,63.141,False
+3540903,Pradópolis,350031,Ribeirão Preto,3508,Ribeirão Preto,,,164.386,False
+3541000,Praia Grande,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,149.652,False
+3541059,Pratânia,350011,Botucatu,3503,Bauru,,,175.1,False
+3541109,Presidente Alves,350009,Bauru,3503,Bauru,,,286.642,False
+3541208,Presidente Bernardes,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,749.234,False
+3541307,Presidente Epitácio,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,,,1260.281,False
+3541406,Presidente Prudente,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,560.637,False
+3541505,Presidente Venceslau,350021,Presidente Epitácio-Presidente Venceslau,3505,Presidente Prudente,,,755.203,False
+3541604,Promissão,350012,Lins,3503,Bauru,,,779.2,False
+3541653,Quadra,350008,Tatuí,3502,Sorocaba,,,205.672,False
+3541703,Quatá,350018,Presidente Prudente,3505,Presidente Prudente,,,651.341,False
+3541802,Queiroz,350016,Tupã,3504,Marília,,,234.914,False
+3541901,Queluz,350053,Cruzeiro,3511,São José dos Campos,,,249.356,False
+3542008,Quintana,350013,Marília,3504,Marília,,,318.937,False
+3542107,Rafard,350040,Piracicaba,3510,Campinas,,,121.645,False
+3542206,Rancharia,350018,Presidente Prudente,3505,Presidente Prudente,,,1591.148,False
+3542305,Redenção da Serra,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,3549904,São José dos Campos/SP,309.322,False
+3542404,Regente Feijó,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,263.426,False
+3542503,Reginópolis,350009,Bauru,3503,Bauru,,,410.406,False
+3542602,Registro,350005,Registro,3502,Sorocaba,,,722.201,False
+3542701,Restinga,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,245.746,False
+3542800,Ribeira,350004,Itapeva,3502,Sorocaba,,,335.759,False
+3542909,Ribeirão Bonito,350037,São Carlos,3509,Araraquara,,,471.553,False
+3543006,Ribeirão Branco,350004,Itapeva,3502,Sorocaba,,,697.5,False
+3543105,Ribeirão Corrente,350033,Franca,3508,Ribeirão Preto,3516200,Franca/SP,148.332,False
+3543253,Ribeirão Grande,350004,Itapeva,3502,Sorocaba,,,333.363,False
+3543303,Ribeirão Pires,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,98.972,False
+3543402,Ribeirão Preto,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,650.916,False
+3543204,Ribeirão do Sul,350015,Ourinhos,3504,Marília,,,203.208,False
+3543238,Ribeirão dos Índios,350018,Presidente Prudente,3505,Presidente Prudente,,,196.467,False
+3543600,Rifaina,350033,Franca,3508,Ribeirão Preto,,,162.508,False
+3543709,Rincão,350036,Araraquara,3509,Araraquara,3503208,Araraquara/SP,316.639,False
+3543808,Rinópolis,350016,Tupã,3504,Marília,,,358.481,False
+3543907,Rio Claro,350046,Rio Claro,3510,Campinas,3543907,Rio Claro/SP,498.403,False
+3544103,Rio Grande da Serra,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,36.341,False
+3544004,Rio das Pedras,350040,Piracicaba,3510,Campinas,3538709,Piracicaba/SP,226.729,False
+3544202,Riolândia,350027,Votuporanga,3507,São José do Rio Preto,,,631.897,False
+3543501,Riversul,350004,Itapeva,3502,Sorocaba,,,385.878,False
+3544251,Rosana,350018,Presidente Prudente,3505,Presidente Prudente,,,742.762,False
+3544301,Roseira,350052,Guaratinguetá,3511,São José dos Campos,3518404,Guaratinguetá/SP,129.847,False
+3544509,Rubinéia,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,242.877,False
+3544400,Rubiácea,350022,Araçatuba,3506,Araçatuba,,,236.484,False
+3544608,Sabino,350012,Lins,3503,Bauru,,,305.285,False
+3544707,Sagres,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,147.923,False
+3544806,Sales,350025,São José do Rio Preto,3507,São José do Rio Preto,,,308.555,False
+3544905,Sales Oliveira,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,305.776,False
+3545001,Salesópolis,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,424.997,False
+3545100,Salmourão,350019,Adamantina - Lucélia,3505,Presidente Prudente,,,172.934,False
+3545159,Saltinho,350040,Piracicaba,3510,Campinas,3538709,Piracicaba/SP,99.924,False
+3545209,Salto,350003,Sorocaba,3502,Sorocaba,3523909,Itu - Salto/SP,133.057,False
+3545407,Salto Grande,350015,Ourinhos,3504,Marília,,,188.441,False
+3545308,Salto de Pirapora,350003,Sorocaba,3502,Sorocaba,3552205,Sorocaba/SP,280.412,False
+3545506,Sandovalina,350018,Presidente Prudente,3505,Presidente Prudente,,,455.856,False
+3545605,Santa Adélia,350026,Catanduva,3507,São José do Rio Preto,,,330.269,False
+3545704,Santa Albertina,350028,Jales,3507,São José do Rio Preto,,,272.692,False
+3546009,Santa Branca,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,272.238,False
+3545803,Santa Bárbara d'Oeste,350038,Campinas,3510,Campinas,3501608,Americana - Santa Bárbara d´Oeste/SP,271.03,False
+3546108,Santa Clara d'Oeste,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,183.458,False
+3546207,Santa Cruz da Conceição,350045,Araras,3510,Campinas,,,150.13,False
+3546256,Santa Cruz da Esperança,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,148.062,False
+3546306,Santa Cruz das Palmeiras,350044,São João da Boa Vista,3510,Campinas,,,295.33,False
+3546405,Santa Cruz do Rio Pardo,350015,Ourinhos,3504,Marília,,,1114.747,False
+3546504,Santa Ernestina,350031,Ribeirão Preto,3508,Ribeirão Preto,,,134.421,False
+3546603,Santa Fé do Sul,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,206.537,False
+3546702,Santa Gertrudes,350046,Rio Claro,3510,Campinas,3543907,Rio Claro/SP,98.045,False
+3546801,Santa Isabel,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,362.875,False
+3546900,Santa Lúcia,350036,Araraquara,3509,Araraquara,3503208,Araraquara/SP,153.86,False
+3547007,Santa Maria da Serra,350040,Piracicaba,3510,Campinas,,,252.621,False
+3547106,Santa Mercedes,350020,Dracena,3505,Presidente Prudente,,,166.884,False
+3547403,Santa Rita d'Oeste,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,209.8,False
+3547502,Santa Rita do Passa Quatro,350037,São Carlos,3509,Araraquara,,,752.911,False
+3547601,Santa Rosa de Viterbo,350031,Ribeirão Preto,3508,Ribeirão Preto,,,288.576,False
+3547650,Santa Salete,350028,Jales,3507,São José do Rio Preto,,,79.192,False
+3547205,Santana da Ponte Pensa,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,129.888,False
+3547304,Santana de Parnaíba,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,179.89,False
+3547700,Santo Anastácio,350018,Presidente Prudente,3505,Presidente Prudente,,,552.876,False
+3547809,Santo André,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,175.801,False
+3547908,Santo Antônio da Alegria,350031,Ribeirão Preto,3508,Ribeirão Preto,,,310.311,False
+3548005,Santo Antônio de Posse,350038,Campinas,3510,Campinas,,,154.133,False
+3548054,Santo Antônio do Aracanguá,350022,Araçatuba,3506,Araçatuba,,,1308.889,False
+3548104,Santo Antônio do Jardim,350044,São João da Boa Vista,3510,Campinas,,,109.956,False
+3548203,Santo Antônio do Pinhal,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,132.966,False
+3548302,Santo Expedito,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,94.465,False
+3548500,Santos,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,281.033,False
+3548401,Santópolis do Aguapeí,350023,Birigui - Penápolis,3506,Araçatuba,,,128.026,False
+3551108,Sarapuí,350003,Sorocaba,3502,Sorocaba,,,352.592,False
+3551207,Sarutaiá,350017,Piraju,3504,Marília,,,141.608,False
+3551306,Sebastianópolis do Sul,350027,Votuporanga,3507,São José do Rio Preto,,,167.848,False
+3551405,Serra Azul,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,283.144,False
+3551603,Serra Negra,350048,Amparo,3510,Campinas,,,204.542,False
+3551504,Serrana,350031,Ribeirão Preto,3508,Ribeirão Preto,3543402,Ribeirão Preto/SP,126.046,False
+3551702,Sertãozinho,350031,Ribeirão Preto,3508,Ribeirão Preto,3551702,Sertãozinho,403.089,False
+3551801,Sete Barras,350005,Registro,3502,Sorocaba,,,1062.699,False
+3551900,Severínia,350032,Barretos,3508,Ribeirão Preto,,,140.46,False
+3552007,Silveiras,350053,Cruzeiro,3511,São José dos Campos,,,415.038,False
+3552106,Socorro,350041,Bragança Paulista,3510,Campinas,,,448.894,False
+3552205,Sorocaba,350003,Sorocaba,3502,Sorocaba,3552205,Sorocaba/SP,449.872,False
+3552304,Sud Mennucci,350024,Andradina,3506,Araçatuba,,,594.543,False
+3552403,Sumaré,350038,Campinas,3510,Campinas,3509502,Campinas/SP,153.465,False
+3552502,Suzano,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,206.236,False
+3552551,Suzanápolis,350028,Jales,3507,São José do Rio Preto,,,330.587,False
+3548609,São Bento do Sapucaí,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,252.579,False
+3548708,São Bernardo do Campo,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,408.234,False
+3548807,São Caetano do Sul,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,15.421,False
+3548906,São Carlos,350037,São Carlos,3509,Araraquara,3548906,São Carlos/SP,1136.907,False
+3549003,São Francisco,350028,Jales,3507,São José do Rio Preto,,,75.579,False
+3549409,São Joaquim da Barra,350034,São Joaquim da Barra - Orlândia,3508,Ribeirão Preto,,,410.863,False
+3549508,São José da Bela Vista,350033,Franca,3508,Ribeirão Preto,,,276.952,False
+3549607,São José do Barreiro,350053,Cruzeiro,3511,São José dos Campos,,,570.604,False
+3549706,São José do Rio Pardo,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,419.729,False
+3549805,São José do Rio Preto,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,431.944,False
+3549904,São José dos Campos,350049,São José dos Campos,3511,São José dos Campos,3549904,São José dos Campos/SP,1099.494,False
+3549102,São João da Boa Vista,350044,São João da Boa Vista,3510,Campinas,,,516.399,False
+3549201,São João das Duas Pontes,350029,Fernandópolis,3507,São José do Rio Preto,,,129.462,False
+3549250,São João de Iracema,350029,Fernandópolis,3507,São José do Rio Preto,,,178.396,False
+3549300,São João do Pau d'Alho,350020,Dracena,3505,Presidente Prudente,,,117.514,False
+3549953,São Lourenço da Serra,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,186.353,False
+3550001,São Luiz do Paraitinga,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,,,618.126,False
+3550100,São Manuel,350011,Botucatu,3503,Bauru,,,650.734,False
+3550209,São Miguel Arcanjo,350006,Itapetininga,3502,Sorocaba,,,930.339,False
+3550308,São Paulo,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,1522.683,True
+3550407,São Pedro,350040,Piracicaba,3510,Campinas,,,611.51,False
+3550506,São Pedro do Turvo,350015,Ourinhos,3504,Marília,,,731.221,False
+3550605,São Roque,350003,Sorocaba,3502,Sorocaba,3550605,São Roque - Mairinque/SP,306.899,False
+3550704,São Sebastião,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,402.395,False
+3550803,São Sebastião da Grama,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,252.41,False
+3550902,São Simão,350031,Ribeirão Preto,3508,Ribeirão Preto,,,617.252,False
+3551009,São Vicente,350002,Santos,3501,São Paulo,3548500,Baixada Santista/SP,147.774,False
+3552601,Tabapuã,350026,Catanduva,3507,São José do Rio Preto,,,346.692,False
+3552700,Tabatinga,350036,Araraquara,3509,Araraquara,,,368.604,False
+3552809,Taboão da Serra,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,20.371,False
+3552908,Taciba,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,606.755,False
+3553005,Taguaí,350007,Avaré,3502,Sorocaba,,,145.332,False
+3553104,Taiaçu,350032,Barretos,3508,Ribeirão Preto,,,107.059,False
+3553203,Taiúva,350032,Barretos,3508,Ribeirão Preto,,,132.459,False
+3553302,Tambaú,350044,São João da Boa Vista,3510,Campinas,,,561.788,False
+3553401,Tanabi,350025,São José do Rio Preto,3507,São José do Rio Preto,,,747.218,False
+3553609,Tapiratiba,350047,São José do Rio Pardo - Mococa,3510,Campinas,,,220.518,False
+3553500,Tapiraí,350003,Sorocaba,3502,Sorocaba,,,754.421,False
+3553658,Taquaral,350032,Barretos,3508,Ribeirão Preto,,,53.892,False
+3553708,Taquaritinga,350036,Araraquara,3509,Araraquara,,,594.335,False
+3553807,Taquarituba,350007,Avaré,3502,Sorocaba,,,448.515,False
+3553856,Taquarivaí,350004,Itapeva,3502,Sorocaba,,,231.792,False
+3553906,Tarabai,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,201.385,False
+3553955,Tarumã,350014,Assis,3504,Marília,,,302.913,False
+3554003,Tatuí,350008,Tatuí,3502,Sorocaba,3554003,Tatuí,523.749,False
+3554102,Taubaté,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,3549904,São José dos Campos/SP,624.924,False
+3554201,Tejupá,350017,Piraju,3504,Marília,,,296.189,False
+3554300,Teodoro Sampaio,350018,Presidente Prudente,3505,Presidente Prudente,,,1559.776,False
+3554409,Terra Roxa,350032,Barretos,3508,Ribeirão Preto,,,221.54,False
+3554508,Tietê,350003,Sorocaba,3502,Sorocaba,,,405.034,False
+3554607,Timburi,350017,Piraju,3504,Marília,,,196.79,False
+3554656,Torre de Pedra,350008,Tatuí,3502,Sorocaba,,,71.506,False
+3554706,Torrinha,350010,Jaú,3503,Bauru,,,315.267,False
+3554755,Trabiju,350036,Araraquara,3509,Araraquara,,,63.421,False
+3554805,Tremembé,350050,Taubaté - Pindamonhangaba,3511,São José dos Campos,3549904,São José dos Campos/SP,190.93,False
+3554904,Três Fronteiras,350030,Santa Fé do Sul,3507,São José do Rio Preto,,,151.594,False
+3554953,Tuiuti,350041,Bragança Paulista,3510,Campinas,,,126.731,False
+3555109,Tupi Paulista,350020,Dracena,3505,Presidente Prudente,,,244.663,False
+3555000,Tupã,350016,Tupã,3504,Marília,,,627.986,False
+3555208,Turiúba,350023,Birigui - Penápolis,3506,Araçatuba,,,153.492,False
+3555307,Turmalina,350028,Jales,3507,São José do Rio Preto,,,147.797,False
+3555356,Ubarana,350025,São José do Rio Preto,3507,São José do Rio Preto,,,209.861,False
+3555406,Ubatuba,350051,Caraguatatuba - Ubatuba - São Sebastião,3511,São José dos Campos,3510500,Caraguatatuba - Ubatuba - São Sebastião/SP,708.246,False
+3555505,Ubirajara,350009,Bauru,3503,Bauru,,,282.179,False
+3555604,Uchoa,350025,São José do Rio Preto,3507,São José do Rio Preto,3549805,São José do Rio Preto/SP,256.982,False
+3555703,União Paulista,350025,São José do Rio Preto,3507,São José do Rio Preto,,,79.056,False
+3555901,Uru,350012,Lins,3503,Bauru,,,146.901,False
+3556008,Urupês,350025,São José do Rio Preto,3507,São José do Rio Preto,,,323.916,False
+3555802,Urânia,350028,Jales,3507,São José do Rio Preto,,,209.262,False
+3556107,Valentim Gentil,350027,Votuporanga,3507,São José do Rio Preto,,,149.741,False
+3556206,Valinhos,350038,Campinas,3510,Campinas,3509502,Campinas/SP,148.72,False
+3556305,Valparaíso,350022,Araçatuba,3506,Araçatuba,,,857.661,False
+3556354,Vargem,350041,Bragança Paulista,3510,Campinas,,,142.595,False
+3556453,Vargem Grande Paulista,350001,São Paulo,3501,São Paulo,3550308,São Paulo/SP,42.489,False
+3556404,Vargem Grande do Sul,350044,São João da Boa Vista,3510,Campinas,,,267.178,False
+3556602,Vera Cruz,350013,Marília,3504,Marília,3529005,Marília/SP,247.716,False
+3556701,Vinhedo,350038,Campinas,3510,Campinas,3509502,Campinas/SP,80.208,False
+3556800,Viradouro,350032,Barretos,3508,Ribeirão Preto,,,217.726,False
+3556909,Vista Alegre do Alto,350026,Catanduva,3507,São José do Rio Preto,,,95.429,False
+3556958,Vitória Brasil,350028,Jales,3507,São José do Rio Preto,,,49.832,False
+3557006,Votorantim,350003,Sorocaba,3502,Sorocaba,3552205,Sorocaba/SP,184.186,False
+3557105,Votuporanga,350027,Votuporanga,3507,São José do Rio Preto,,,420.703,False
+3556503,Várzea Paulista,350039,Jundiaí,3510,Campinas,3525904,Jundiaí/SP,35.048,False
+3557154,Zacarias,350023,Birigui - Penápolis,3506,Araçatuba,,,319.056,False
+3500402,Águas da Prata,350044,São João da Boa Vista,3510,Campinas,,,142.673,False
+3500501,Águas de Lindóia,350048,Amparo,3510,Campinas,,,59.872,False
+3500550,Águas de Santa Bárbara,350007,Avaré,3502,Sorocaba,,,404.463,False
+3500600,Águas de São Pedro,350040,Piracicaba,3510,Campinas,,,3.38,False
+3501202,Álvares Florence,350027,Votuporanga,3507,São José do Rio Preto,,,362.411,False
+3501301,Álvares Machado,350018,Presidente Prudente,3505,Presidente Prudente,3541406,Presidente Prudente/SP,347.647,False
+3501400,Álvaro de Carvalho,350013,Marília,3504,Marília,,,153.662,False
+3533809,Óleo,350007,Avaré,3502,Sorocaba,,,198.938,False

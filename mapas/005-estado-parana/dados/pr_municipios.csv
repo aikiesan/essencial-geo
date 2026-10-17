@@ -1,0 +1,400 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+4100103,Abatiá,410022,Santo Antônio da Platina,4105,Londrina,,,227.923,False
+4100202,Adrianópolis,410001,Curitiba,4101,Curitiba,,,1343.898,False
+4100301,Agudos do Sul,410001,Curitiba,4101,Curitiba,,,191.336,False
+4100400,Almirante Tamandaré,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,193.736,False
+4100459,Altamira do Paraná,410015,Campo Mourão,4104,Maringá,,,386.952,False
+4100608,Alto Paraná,410017,Paranavaí,4104,Maringá,,,409.014,False
+4128625,Alto Paraíso,410016,Umuarama,4104,Maringá,,,967.763,False
+4100707,Alto Piquiri,410016,Umuarama,4104,Maringá,,,448.373,False
+4100509,Altônia,410016,Umuarama,4104,Maringá,,,663.955,False
+4100806,Alvorada do Sul,410021,Londrina,4105,Londrina,,,424.25,False
+4100905,Amaporã,410017,Paranavaí,4104,Maringá,,,384.91,False
+4101002,Ampére,410009,Francisco Beltrão,4103,Cascavel,,,297.174,False
+4101051,Anahy,410006,Cascavel,4103,Cascavel,,,104.09,False
+4101101,Andirá,410022,Santo Antônio da Platina,4105,Londrina,,,234.635,False
+4101200,Antonina,410002,Paranaguá,4101,Curitiba,,,890.065,False
+4101309,Antônio Olinto,410003,União da Vitória,4101,Curitiba,,,463.694,False
+4101408,Apucarana,410023,Apucarana,4105,Londrina,4101408,Apucarana,556.771,False
+4101507,Arapongas,410021,Londrina,4105,Londrina,4101507,Arapongas,383.37,False
+4101606,Arapoti,410027,Ponta Grossa,4106,Ponta Grossa,,,1363.843,False
+4101655,Arapuã,410025,Ivaiporã,4105,Londrina,,,217.599,False
+4101705,Araruna,410015,Campo Mourão,4104,Maringá,,,492.521,False
+4101804,Araucária,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,469.549,False
+4101853,Ariranha do Ivaí,410025,Ivaiporã,4105,Londrina,,,236.039,False
+4101903,Assaí,410021,Londrina,4105,Londrina,,,440.347,False
+4102000,Assis Chateaubriand,410008,Toledo,4103,Cascavel,,,980.816,False
+4102109,Astorga,410014,Maringá,4104,Maringá,,,435.21,False
+4102208,Atalaia,410014,Maringá,4104,Maringá,,,137.075,False
+4102307,Balsa Nova,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,347.588,False
+4102406,Bandeirantes,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,445.192,False
+4102505,Barbosa Ferraz,410015,Campo Mourão,4104,Maringá,,,536.101,False
+4102703,Barra do Jacaré,410022,Santo Antônio da Platina,4105,Londrina,,,115.855,False
+4102604,Barracão,410009,Francisco Beltrão,4103,Cascavel,,,161.806,False
+4102752,Bela Vista da Caroba,410009,Francisco Beltrão,4103,Cascavel,,,148.859,False
+4102802,Bela Vista do Paraíso,410021,Londrina,4105,Londrina,,,246.225,False
+4102901,Bituruna,410003,União da Vitória,4101,Curitiba,,,1280.76,False
+4103008,Boa Esperança,410015,Campo Mourão,4104,Maringá,,,301.131,False
+4103024,Boa Esperança do Iguaçu,410012,Dois Vizinhos,4103,Cascavel,,,152.252,False
+4103040,Boa Ventura de São Roque,410005,Pitanga,4102,Guarapuava,,,606.94,False
+4103057,Boa Vista da Aparecida,410006,Cascavel,4103,Cascavel,,,265.636,False
+4103107,Bocaiúva do Sul,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,809.682,False
+4103156,Bom Jesus do Sul,410009,Francisco Beltrão,4103,Cascavel,,,175.536,False
+4103206,Bom Sucesso,410023,Apucarana,4105,Londrina,,,321.56,False
+4103222,Bom Sucesso do Sul,410010,Pato Branco,4103,Cascavel,,,198.58,False
+4103305,Borrazópolis,410023,Apucarana,4105,Londrina,,,338.354,False
+4103354,Braganey,410006,Cascavel,4103,Cascavel,,,343.26,False
+4103370,Brasilândia do Sul,410016,Umuarama,4104,Maringá,,,291.036,False
+4103404,Cafeara,410021,Londrina,4105,Londrina,,,184.255,False
+4103453,Cafelândia,410006,Cascavel,4103,Cascavel,,,275.17,False
+4103479,Cafezal do Sul,410016,Umuarama,4104,Maringá,,,335.728,False
+4103503,Califórnia,410023,Apucarana,4105,Londrina,,,141.817,False
+4103602,Cambará,410022,Santo Antônio da Platina,4105,Londrina,,,367.462,False
+4103800,Cambira,410023,Apucarana,4105,Londrina,,,166.274,False
+4103701,Cambé,410021,Londrina,4105,Londrina,4113700,Londrina/PR,499.583,False
+4104006,Campina Grande do Sul,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,542.239,False
+4103909,Campina da Lagoa,410015,Campo Mourão,4104,Maringá,,,798.991,False
+4103958,Campina do Simão,410004,Guarapuava,4102,Guarapuava,,,448.033,False
+4104055,Campo Bonito,410006,Cascavel,4103,Cascavel,,,434.124,False
+4104204,Campo Largo,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,1239.801,False
+4104253,Campo Magro,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,275.423,False
+4104303,Campo Mourão,410015,Campo Mourão,4104,Maringá,,,748.054,False
+4104105,Campo do Tenente,410001,Curitiba,4101,Curitiba,,,303.956,False
+4104428,Candói,410004,Guarapuava,4102,Guarapuava,,,1509.719,False
+4104451,Cantagalo,410004,Guarapuava,4102,Guarapuava,,,568.929,False
+4104501,Capanema,410009,Francisco Beltrão,4103,Cascavel,,,415.961,False
+4104600,Capitão Leônidas Marques,410006,Cascavel,4103,Cascavel,,,280.109,False
+4104659,Carambeí,410027,Ponta Grossa,4106,Ponta Grossa,4119905,Ponta Grossa/PR,647.021,False
+4104709,Carlópolis,410022,Santo Antônio da Platina,4105,Londrina,,,454.169,False
+4104808,Cascavel,410006,Cascavel,4103,Cascavel,4104808,Cascavel/PR,2094.263,False
+4104907,Castro,410027,Ponta Grossa,4106,Ponta Grossa,,,2526.498,False
+4105003,Catanduvas,410006,Cascavel,4103,Cascavel,,,578.494,False
+4105102,Centenário do Sul,410021,Londrina,4105,Londrina,,,370.629,False
+4105201,Cerro Azul,410001,Curitiba,4101,Curitiba,,,1353.255,False
+4105409,Chopinzinho,410010,Pato Branco,4103,Cascavel,,,961.682,False
+4105508,Cianorte,410018,Cianorte,4104,Maringá,,,807.796,False
+4105607,Cidade Gaúcha,410016,Umuarama,4104,Maringá,,,402.241,False
+4105706,Clevelândia,410010,Pato Branco,4103,Cascavel,,,703.973,False
+4105805,Colombo,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,197.369,False
+4105904,Colorado,410019,Paranacity - Colorado,4104,Maringá,,,408.533,False
+4106001,Congonhinhas,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,535.963,False
+4106100,Conselheiro Mairinck,410026,Ibaiti,4105,Londrina,,,204.443,False
+4106209,Contenda,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,296.488,False
+4106308,Corbélia,410006,Cascavel,4103,Cascavel,,,527.607,False
+4106407,Cornélio Procópio,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,636.59,False
+4106456,Coronel Domingos Soares,410010,Pato Branco,4103,Cascavel,,,1511.972,False
+4106506,Coronel Vivida,410010,Pato Branco,4103,Cascavel,,,683.799,False
+4106555,Corumbataí do Sul,410015,Campo Mourão,4104,Maringá,,,167.921,False
+4106803,Cruz Machado,410003,União da Vitória,4101,Curitiba,,,1474.202,False
+4106571,Cruzeiro do Iguaçu,410012,Dois Vizinhos,4103,Cascavel,,,161.293,False
+4106605,Cruzeiro do Oeste,410016,Umuarama,4104,Maringá,,,776.101,False
+4106704,Cruzeiro do Sul,410019,Paranacity - Colorado,4104,Maringá,,,259.115,False
+4106852,Cruzmaltina,410025,Ivaiporã,4105,Londrina,,,306.237,False
+4106902,Curitiba,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,435.406,True
+4107009,Curiúva,410028,Telêmaco Borba,4106,Ponta Grossa,,,576.263,False
+4104402,Cândido de Abreu,410025,Ivaiporã,4105,Londrina,,,1506.15,False
+4105300,Céu Azul,410006,Cascavel,4103,Cascavel,,,1176.523,False
+4107157,Diamante D'Oeste,410006,Cascavel,4103,Cascavel,,,310.624,False
+4107108,Diamante do Norte,410017,Paranavaí,4104,Maringá,,,242.887,False
+4107124,Diamante do Sul,410006,Cascavel,4103,Cascavel,,,347.233,False
+4107207,Dois Vizinhos,410012,Dois Vizinhos,4103,Cascavel,,,418.162,False
+4107256,Douradina,410016,Umuarama,4104,Maringá,,,420.525,False
+4107306,Doutor Camargo,410014,Maringá,4104,Maringá,,,118.286,False
+4128633,Doutor Ulysses,410001,Curitiba,4101,Curitiba,,,779.628,False
+4107504,Engenheiro Beltrão,410015,Campo Mourão,4104,Maringá,,,470.825,False
+4107538,Entre Rios do Oeste,410013,Marechal Cândido Rondon,4103,Cascavel,,,120.294,False
+4107405,Enéas Marques,410009,Francisco Beltrão,4103,Cascavel,,,196.238,False
+4107520,Esperança Nova,410016,Umuarama,4104,Maringá,,,141.317,False
+4107546,Espigão Alto do Iguaçu,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,325.584,False
+4107553,Farol,410015,Campo Mourão,4104,Maringá,,,289.232,False
+4107603,Faxinal,410025,Ivaiporã,4105,Londrina,,,716.804,False
+4107652,Fazenda Rio Grande,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,116.41,False
+4107736,Fernandes Pinheiro,410029,Irati,4106,Ponta Grossa,,,405.489,False
+4107751,Figueira,410026,Ibaiti,4105,Londrina,,,129.769,False
+4107850,Flor da Serra do Sul,410009,Francisco Beltrão,4103,Cascavel,,,256.157,False
+4107801,Floraí,410014,Maringá,4104,Maringá,,,190.812,False
+4107900,Floresta,410014,Maringá,4104,Maringá,4115200,Maringá/PR,158.334,False
+4108007,Florestópolis,410021,Londrina,4105,Londrina,,,246.853,False
+4108106,Flórida,410014,Maringá,4104,Maringá,,,83.046,False
+4108205,Formosa do Oeste,410008,Toledo,4103,Cascavel,,,275.651,False
+4108304,Foz do Iguaçu,410007,Foz do Iguaçu,4103,Cascavel,4108304,Internacional de Foz do Iguaçu/Brasil - Ciudad del Este/Paraguai,606.501,False
+4108452,Foz do Jordão,410004,Guarapuava,4102,Guarapuava,,,230.716,False
+4108320,Francisco Alves,410016,Umuarama,4104,Maringá,,,320.119,False
+4108403,Francisco Beltrão,410009,Francisco Beltrão,4103,Cascavel,,,731.379,False
+4107702,Fênix,410015,Campo Mourão,4104,Maringá,,,232.209,False
+4108502,General Carneiro,410003,União da Vitória,4101,Curitiba,,,1068.369,False
+4108551,Godoy Moreira,410025,Ivaiporã,4105,Londrina,,,126.956,False
+4108601,Goioerê,410015,Campo Mourão,4104,Maringá,,,563.954,False
+4108650,Goioxim,410004,Guarapuava,4102,Guarapuava,,,702.284,False
+4108700,Grandes Rios,410025,Ivaiporã,4105,Londrina,,,311.512,False
+4108908,Guairaçá,410017,Paranavaí,4104,Maringá,,,496.289,False
+4108957,Guamiranga,410004,Guarapuava,4102,Guarapuava,,,244.592,False
+4109005,Guapirama,410022,Santo Antônio da Platina,4105,Londrina,,,189.372,False
+4109104,Guaporema,410018,Cianorte,4104,Maringá,,,200.407,False
+4109203,Guaraci,410021,Londrina,4105,Londrina,,,213.067,False
+4109302,Guaraniaçu,410006,Cascavel,4103,Cascavel,,,1237.77,False
+4109401,Guarapuava,410004,Guarapuava,4102,Guarapuava,4109401,Guarapuava,3163.893,False
+4109500,Guaraqueçaba,410002,Paranaguá,4101,Curitiba,,,2011.256,False
+4109609,Guaratuba,410002,Paranaguá,4101,Curitiba,,,1320.951,False
+4108809,Guaíra,410008,Toledo,4103,Cascavel,,,563.414,False
+4109658,Honório Serpa,410010,Pato Branco,4103,Cascavel,,,503.896,False
+4109708,Ibaiti,410026,Ibaiti,4105,Londrina,,,902.797,False
+4109757,Ibema,410006,Cascavel,4103,Cascavel,,,146.547,False
+4109807,Ibiporã,410021,Londrina,4105,Londrina,4113700,Londrina/PR,298.998,False
+4109906,Icaraíma,410016,Umuarama,4104,Maringá,,,675.24,False
+4110003,Iguaraçu,410014,Maringá,4104,Maringá,4115200,Maringá/PR,164.54,False
+4110052,Iguatu,410006,Cascavel,4103,Cascavel,,,106.937,False
+4110078,Imbaú,410028,Telêmaco Borba,4106,Ponta Grossa,,,331.94,False
+4110102,Imbituva,410029,Irati,4106,Ponta Grossa,,,758.099,False
+4110300,Inajá,410019,Paranacity - Colorado,4104,Maringá,,,194.704,False
+4110409,Indianópolis,410018,Cianorte,4104,Maringá,,,122.392,False
+4110201,Inácio Martins,410004,Guarapuava,4102,Guarapuava,,,938.126,False
+4110508,Ipiranga,410027,Ponta Grossa,4106,Ponta Grossa,,,902.385,False
+4110607,Iporã,410016,Umuarama,4104,Maringá,,,648.624,False
+4110656,Iracema do Oeste,410008,Toledo,4103,Cascavel,,,81.538,False
+4110706,Irati,410029,Irati,4106,Ponta Grossa,,,1000.188,False
+4110805,Iretama,410015,Campo Mourão,4104,Maringá,,,570.716,False
+4110904,Itaguajé,410019,Paranacity - Colorado,4104,Maringá,,,195.493,False
+4110953,Itaipulândia,410007,Foz do Iguaçu,4103,Cascavel,,,328.207,False
+4111001,Itambaracá,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,207.342,False
+4111100,Itambé,410014,Maringá,4104,Maringá,4115200,Maringá/PR,244.495,False
+4111209,Itapejara d'Oeste,410010,Pato Branco,4103,Cascavel,,,251.364,False
+4111258,Itaperuçu,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,322.553,False
+4111308,Itaúna do Sul,410017,Paranavaí,4104,Maringá,,,127.002,False
+4111506,Ivaiporã,410025,Ivaiporã,4105,Londrina,,,436.378,False
+4111605,Ivatuba,410014,Maringá,4104,Maringá,,,96.427,False
+4111555,Ivaté,410016,Umuarama,4104,Maringá,,,410.221,False
+4111407,Ivaí,410027,Ponta Grossa,4106,Ponta Grossa,,,600.209,False
+4111704,Jaboti,410026,Ibaiti,4105,Londrina,,,139.217,False
+4111803,Jacarezinho,410022,Santo Antônio da Platina,4105,Londrina,,,603.383,False
+4111902,Jaguapitã,410021,Londrina,4105,Londrina,,,475.004,False
+4112009,Jaguariaíva,410027,Ponta Grossa,4106,Ponta Grossa,,,1443.264,False
+4112108,Jandaia do Sul,410023,Apucarana,4105,Londrina,,,188.103,False
+4112207,Janiópolis,410015,Campo Mourão,4104,Maringá,,,337.91,False
+4112306,Japira,410026,Ibaiti,4105,Londrina,,,189.291,False
+4112405,Japurá,410018,Cianorte,4104,Maringá,,,165.185,False
+4112504,Jardim Alegre,410025,Ivaiporã,4105,Londrina,,,425.371,False
+4112603,Jardim Olinda,410019,Paranacity - Colorado,4104,Maringá,,,128.515,False
+4112702,Jataizinho,410021,Londrina,4105,Londrina,4113700,Londrina/PR,161.132,False
+4112751,Jesuítas,410008,Toledo,4103,Cascavel,,,246.606,False
+4112801,Joaquim Távora,410022,Santo Antônio da Platina,4105,Londrina,,,288.922,False
+4112900,Jundiaí do Sul,410022,Santo Antônio da Platina,4105,Londrina,,,316.748,False
+4112959,Juranda,410015,Campo Mourão,4104,Maringá,,,354.522,False
+4113007,Jussara,410018,Cianorte,4104,Maringá,,,207.013,False
+4113106,Kaloré,410023,Apucarana,4105,Londrina,,,194.081,False
+4113205,Lapa,410001,Curitiba,4101,Curitiba,,,2100.392,False
+4113254,Laranjal,410005,Pitanga,4102,Guarapuava,,,559.439,False
+4113304,Laranjeiras do Sul,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,677.933,False
+4113403,Leópolis,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,344.918,False
+4113429,Lidianópolis,410025,Ivaiporã,4105,Londrina,,,151.779,False
+4113452,Lindoeste,410006,Cascavel,4103,Cascavel,,,344.691,False
+4113502,Loanda,410020,Loanda,4104,Maringá,,,722.091,False
+4113601,Lobato,410019,Paranacity - Colorado,4104,Maringá,,,240.904,False
+4113700,Londrina,410021,Londrina,4105,Londrina,4113700,Londrina/PR,1647.796,False
+4113734,Luiziana,410015,Campo Mourão,4104,Maringá,,,915.604,False
+4113759,Lunardelli,410025,Ivaiporã,4105,Londrina,,,191.062,False
+4113809,Lupionópolis,410021,Londrina,4105,Londrina,,,121.661,False
+4113908,Mallet,410029,Irati,4106,Ponta Grossa,,,758.509,False
+4114005,Mamborê,410015,Campo Mourão,4104,Maringá,,,787.33,False
+4114203,Mandaguari,410014,Maringá,4104,Maringá,,,335.912,False
+4114104,Mandaguaçu,410014,Maringá,4104,Maringá,4115200,Maringá/PR,293.792,False
+4114302,Mandirituba,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,378.818,False
+4114351,Manfrinópolis,410009,Francisco Beltrão,4103,Cascavel,,,214.758,False
+4114401,Mangueirinha,410010,Pato Branco,4103,Cascavel,,,1058.357,False
+4114500,Manoel Ribas,410025,Ivaiporã,4105,Londrina,,,571.451,False
+4114609,Marechal Cândido Rondon,410013,Marechal Cândido Rondon,4103,Cascavel,,,743.593,False
+4114708,Maria Helena,410016,Umuarama,4104,Maringá,4128104,Umuarama/PR,486.539,False
+4114807,Marialva,410014,Maringá,4104,Maringá,4115200,Maringá/PR,474.954,False
+4115002,Marilena,410017,Paranavaí,4104,Maringá,,,231.349,False
+4115101,Mariluz,410016,Umuarama,4104,Maringá,,,430.432,False
+4114906,Marilândia do Sul,410023,Apucarana,4105,Londrina,,,384.42,False
+4115200,Maringá,410014,Maringá,4104,Maringá,4115200,Maringá/PR,487.912,False
+4115358,Maripá,410008,Toledo,4103,Cascavel,,,283.794,False
+4115309,Mariópolis,410010,Pato Branco,4103,Cascavel,,,229.894,False
+4115408,Marmeleiro,410009,Francisco Beltrão,4103,Cascavel,,,388.538,False
+4115457,Marquinho,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,518.147,False
+4115507,Marumbi,410023,Apucarana,4105,Londrina,,,207.687,False
+4115606,Matelândia,410006,Cascavel,4103,Cascavel,,,642.123,False
+4115705,Matinhos,410002,Paranaguá,4101,Curitiba,,,117.479,False
+4115739,Mato Rico,410005,Pitanga,4102,Guarapuava,,,402.533,False
+4115754,Mauá da Serra,410023,Apucarana,4105,Londrina,,,107.535,False
+4115804,Medianeira,410007,Foz do Iguaçu,4103,Cascavel,,,326.67,False
+4115853,Mercedes,410013,Marechal Cândido Rondon,4103,Cascavel,,,197.136,False
+4115903,Mirador,410017,Paranavaí,4104,Maringá,,,222.016,False
+4116000,Miraselva,410021,Londrina,4105,Londrina,,,90.572,False
+4116059,Missal,410007,Foz do Iguaçu,4103,Cascavel,,,326.214,False
+4116109,Moreira Sales,410015,Campo Mourão,4104,Maringá,,,356.711,False
+4116208,Morretes,410002,Paranaguá,4101,Curitiba,,,686.489,False
+4116307,Munhoz de Melo,410014,Maringá,4104,Maringá,,,137.03,False
+4116406,Nossa Senhora das Graças,410019,Paranacity - Colorado,4104,Maringá,,,186.259,False
+4116505,Nova Aliança do Ivaí,410017,Paranavaí,4104,Maringá,,,130.614,False
+4116604,Nova América da Colina,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,129.476,False
+4116703,Nova Aurora,410006,Cascavel,4103,Cascavel,,,471.176,False
+4116802,Nova Cantu,410015,Campo Mourão,4104,Maringá,,,552.873,False
+4116901,Nova Esperança,410014,Maringá,4104,Maringá,,,402.051,False
+4116950,Nova Esperança do Sudoeste,410009,Francisco Beltrão,4103,Cascavel,,,207.849,False
+4117008,Nova Fátima,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,283.423,False
+4117057,Nova Laranjeiras,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,1201.246,False
+4117107,Nova Londrina,410017,Paranavaí,4104,Maringá,,,272.27,False
+4117206,Nova Olímpia,410016,Umuarama,4104,Maringá,,,136.347,False
+4117255,Nova Prata do Iguaçu,410012,Dois Vizinhos,4103,Cascavel,,,352.055,False
+4117214,Nova Santa Bárbara,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,80.783,False
+4117222,Nova Santa Rosa,410013,Marechal Cândido Rondon,4103,Cascavel,,,204.665,False
+4117271,Nova Tebas,410005,Pitanga,4102,Guarapuava,,,545.662,False
+4117297,Novo Itacolomi,410023,Apucarana,4105,Londrina,,,159.639,False
+4117305,Ortigueira,410028,Telêmaco Borba,4106,Ponta Grossa,,,2431.67,False
+4117404,Ourizona,410014,Maringá,4104,Maringá,4115200,Maringá/PR,176.457,False
+4117453,Ouro Verde do Oeste,410008,Toledo,4103,Cascavel,4127700,Toledo/PR,293.042,False
+4117503,Paiçandu,410014,Maringá,4104,Maringá,4115200,Maringá/PR,170.824,False
+4117602,Palmas,410010,Pato Branco,4103,Cascavel,,,1561.474,False
+4117701,Palmeira,410027,Ponta Grossa,4106,Ponta Grossa,,,1473.233,False
+4117800,Palmital,410005,Pitanga,4102,Guarapuava,,,821.733,False
+4117909,Palotina,410008,Toledo,4103,Cascavel,,,651.237,False
+4118105,Paranacity,410019,Paranacity - Colorado,4104,Maringá,,,348.152,False
+4118204,Paranaguá,410002,Paranaguá,4101,Curitiba,4118204,Paranaguá,821.427,False
+4118303,Paranapoema,410019,Paranacity - Colorado,4104,Maringá,,,175.875,False
+4118402,Paranavaí,410017,Paranavaí,4104,Maringá,,,1197.394,False
+4118006,Paraíso do Norte,410017,Paranavaí,4104,Maringá,,,205.222,False
+4118451,Pato Bragado,410013,Marechal Cândido Rondon,4103,Cascavel,,,136.483,False
+4118501,Pato Branco,410010,Pato Branco,4103,Cascavel,,,539.154,False
+4118600,Paula Freitas,410003,União da Vitória,4101,Curitiba,,,417.829,False
+4118709,Paulo Frontin,410003,União da Vitória,4101,Curitiba,,,363.169,False
+4118808,Peabiru,410015,Campo Mourão,4104,Maringá,,,467.542,False
+4118857,Perobal,410016,Umuarama,4104,Maringá,,,409.062,False
+4119152,Pinhais,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,61.008,False
+4119251,Pinhal de São Bento,410009,Francisco Beltrão,4103,Cascavel,,,98.062,False
+4119202,Pinhalão,410026,Ibaiti,4105,Londrina,,,220.049,False
+4119301,Pinhão,410004,Guarapuava,4102,Guarapuava,,,2003.799,False
+4119509,Piraquara,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,225.065,False
+4119400,Piraí do Sul,410027,Ponta Grossa,4106,Ponta Grossa,,,1349.154,False
+4119608,Pitanga,410005,Pitanga,4102,Guarapuava,,,1687.454,False
+4119657,Pitangueiras,410021,Londrina,4105,Londrina,,,123.081,False
+4119103,Piên,410001,Curitiba,4101,Curitiba,,,256.501,False
+4119707,Planaltina do Paraná,410017,Paranavaí,4104,Maringá,,,356.276,False
+4119806,Planalto,410009,Francisco Beltrão,4103,Cascavel,,,347.974,False
+4119905,Ponta Grossa,410027,Ponta Grossa,4106,Ponta Grossa,4119905,Ponta Grossa/PR,2044.902,False
+4119954,Pontal do Paraná,410002,Paranaguá,4101,Curitiba,,,202.242,False
+4120002,Porecatu,410021,Londrina,4105,Londrina,,,291.663,False
+4120101,Porto Amazonas,410027,Ponta Grossa,4106,Ponta Grossa,,,186.581,False
+4120150,Porto Barreiro,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,363.547,False
+4120200,Porto Rico,410020,Loanda,4104,Maringá,,,219.242,False
+4120309,Porto Vitória,410003,União da Vitória,4101,Curitiba,,,210.236,False
+4120333,Prado Ferreira,410021,Londrina,4105,Londrina,,,152.876,False
+4120358,Pranchita,410009,Francisco Beltrão,4103,Cascavel,,,226.089,False
+4120408,Presidente Castelo Branco,410014,Maringá,4104,Maringá,4115200,Maringá/PR,155.631,False
+4120507,Primeiro de Maio,410021,Londrina,4105,Londrina,,,410.378,False
+4120606,Prudentópolis,410004,Guarapuava,4102,Guarapuava,,,2257.861,False
+4118907,Pérola,410016,Umuarama,4104,Maringá,,,236.07,False
+4119004,Pérola d'Oeste,410009,Francisco Beltrão,4103,Cascavel,,,204.331,False
+4120655,Quarto Centenário,410015,Campo Mourão,4104,Maringá,,,320.779,False
+4120705,Quatiguá,410022,Santo Antônio da Platina,4105,Londrina,,,112.567,False
+4120804,Quatro Barras,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,181.565,False
+4120853,Quatro Pontes,410013,Marechal Cândido Rondon,4103,Cascavel,,,115.665,False
+4120903,Quedas do Iguaçu,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,822.345,False
+4121000,Querência do Norte,410020,Loanda,4104,Maringá,,,911.72,False
+4121109,Quinta do Sol,410015,Campo Mourão,4104,Maringá,,,326.137,False
+4121208,Quitandinha,410001,Curitiba,4101,Curitiba,,,446.597,False
+4121257,Ramilândia,410006,Cascavel,4103,Cascavel,,,235.418,False
+4121307,Rancho Alegre,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,167.646,False
+4121356,Rancho Alegre D'Oeste,410015,Campo Mourão,4104,Maringá,,,241.185,False
+4121406,Realeza,410009,Francisco Beltrão,4103,Cascavel,,,353.922,False
+4121505,Rebouças,410029,Irati,4106,Ponta Grossa,,,485.184,False
+4121604,Renascença,410009,Francisco Beltrão,4103,Cascavel,,,425.947,False
+4121703,Reserva,410028,Telêmaco Borba,4106,Ponta Grossa,,,1646.103,False
+4121752,Reserva do Iguaçu,410004,Guarapuava,4102,Guarapuava,,,833.085,False
+4121802,Ribeirão Claro,410022,Santo Antônio da Platina,4105,Londrina,,,625.874,False
+4121901,Ribeirão do Pinhal,410022,Santo Antônio da Platina,4105,Londrina,,,374.754,False
+4122008,Rio Azul,410029,Irati,4106,Ponta Grossa,,,596.17,False
+4122107,Rio Bom,410023,Apucarana,4105,Londrina,,,177.836,False
+4122156,Rio Bonito do Iguaçu,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,684.695,False
+4122172,Rio Branco do Ivaí,410025,Ivaiporã,4105,Londrina,,,378.04,False
+4122206,Rio Branco do Sul,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,820.071,False
+4122305,Rio Negro,410001,Curitiba,4101,Curitiba,,,604.477,False
+4122404,Rolândia,410021,Londrina,4105,Londrina,,,456.228,False
+4122503,Roncador,410015,Campo Mourão,4104,Maringá,,,741.709,False
+4122602,Rondon,410018,Cianorte,4104,Maringá,,,557.257,False
+4122651,Rosário do Ivaí,410025,Ivaiporã,4105,Londrina,,,377.625,False
+4122701,Sabáudia,410021,Londrina,4105,Londrina,,,191.252,False
+4122800,Salgado Filho,410009,Francisco Beltrão,4103,Cascavel,,,182.616,False
+4122909,Salto do Itararé,410022,Santo Antônio da Platina,4105,Londrina,,,200.897,False
+4123006,Salto do Lontra,410012,Dois Vizinhos,4103,Cascavel,,,311.974,False
+4123105,Santa Amélia,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,77.849,False
+4123204,Santa Cecília do Pavão,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,105.076,False
+4123303,Santa Cruz de Monte Castelo,410020,Loanda,4104,Maringá,,,444.966,False
+4123402,Santa Fé,410014,Maringá,4104,Maringá,,,276.262,False
+4123501,Santa Helena,410008,Toledo,4103,Cascavel,,,753.997,False
+4123600,Santa Inês,410019,Paranacity - Colorado,4104,Maringá,,,156.422,False
+4123709,Santa Isabel do Ivaí,410020,Loanda,4104,Maringá,,,349.425,False
+4123808,Santa Izabel do Oeste,410009,Francisco Beltrão,4103,Cascavel,,,321.003,False
+4123824,Santa Lúcia,410006,Cascavel,4103,Cascavel,,,126.813,False
+4123857,Santa Maria do Oeste,410005,Pitanga,4102,Guarapuava,,,815.151,False
+4123907,Santa Mariana,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,425.703,False
+4123956,Santa Mônica,410020,Loanda,4104,Maringá,,,260.488,False
+4124020,Santa Tereza do Oeste,410006,Cascavel,4103,Cascavel,4104808,Cascavel/PR,327.737,False
+4124053,Santa Terezinha de Itaipu,410007,Foz do Iguaçu,4103,Cascavel,4108304,Internacional de Foz do Iguaçu/Brasil - Ciudad del Este/Paraguai,270.949,False
+4124004,Santana do Itararé,410022,Santo Antônio da Platina,4105,Londrina,,,251.831,False
+4124103,Santo Antônio da Platina,410022,Santo Antônio da Platina,4105,Londrina,,,720.385,False
+4124202,Santo Antônio do Caiuá,410017,Paranavaí,4104,Maringá,,,221.391,False
+4124301,Santo Antônio do Paraíso,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,162.647,False
+4124400,Santo Antônio do Sudoeste,410009,Francisco Beltrão,4103,Cascavel,,,327.008,False
+4124509,Santo Inácio,410019,Paranacity - Colorado,4104,Maringá,,,278.541,False
+4126207,Sapopema,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,677.588,False
+4126256,Sarandi,410014,Maringá,4104,Maringá,4115200,Maringá/PR,103.942,False
+4126272,Saudade do Iguaçu,410010,Pato Branco,4103,Cascavel,,,152.084,False
+4126306,Sengés,410027,Ponta Grossa,4106,Ponta Grossa,,,1438.17,False
+4126355,Serranópolis do Iguaçu,410007,Foz do Iguaçu,4103,Cascavel,,,482.987,False
+4126405,Sertaneja,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,444.492,False
+4126504,Sertanópolis,410021,Londrina,4105,Londrina,,,505.489,False
+4126603,Siqueira Campos,410022,Santo Antônio da Platina,4105,Londrina,,,277.112,False
+4126652,Sulina,410010,Pato Branco,4103,Cascavel,,,170.759,False
+4124608,São Carlos do Ivaí,410017,Paranavaí,4104,Maringá,,,225.079,False
+4124707,São Jerônimo da Serra,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,824.268,False
+4125209,São Jorge d'Oeste,410012,Dois Vizinhos,4103,Cascavel,,,379.442,False
+4125308,São Jorge do Ivaí,410014,Maringá,4104,Maringá,,,315.088,False
+4125357,São Jorge do Patrocínio,410016,Umuarama,4104,Maringá,,,404.018,False
+4125407,São José da Boa Vista,410022,Santo Antônio da Platina,4105,Londrina,,,399.886,False
+4125456,São José das Palmeiras,410008,Toledo,4103,Cascavel,,,182.627,False
+4125506,São José dos Pinhais,410001,Curitiba,4101,Curitiba,4106902,Curitiba/PR,945.509,False
+4124806,São João,410010,Pato Branco,4103,Cascavel,,,387.15,False
+4124905,São João do Caiuá,410017,Paranavaí,4104,Maringá,,,305.388,False
+4125001,São João do Ivaí,410025,Ivaiporã,4105,Londrina,,,351.885,False
+4125100,São João do Triunfo,410027,Ponta Grossa,4106,Ponta Grossa,,,718.68,False
+4125555,São Manoel do Paraná,410018,Cianorte,4104,Maringá,,,95.381,False
+4125605,São Mateus do Sul,410003,União da Vitória,4101,Curitiba,,,1344.742,False
+4125704,São Miguel do Iguaçu,410007,Foz do Iguaçu,4103,Cascavel,,,852.133,False
+4125753,São Pedro do Iguaçu,410008,Toledo,4103,Cascavel,,,309.1,False
+4125803,São Pedro do Ivaí,410023,Apucarana,4105,Londrina,,,323.213,False
+4125902,São Pedro do Paraná,410020,Loanda,4104,Maringá,,,248.865,False
+4126009,São Sebastião da Amoreira,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,226.872,False
+4126108,São Tomé,410018,Cianorte,4104,Maringá,,,218.623,False
+4126678,Tamarana,410021,Londrina,4105,Londrina,,,473.283,False
+4126702,Tamboara,410017,Paranavaí,4104,Maringá,,,193.316,False
+4126801,Tapejara,410018,Cianorte,4104,Maringá,,,590.927,False
+4126900,Tapira,410016,Umuarama,4104,Maringá,,,434.371,False
+4127007,Teixeira Soares,410029,Irati,4106,Ponta Grossa,,,902.334,False
+4127106,Telêmaco Borba,410028,Telêmaco Borba,4106,Ponta Grossa,,,1379.02,False
+4127205,Terra Boa,410018,Cianorte,4104,Maringá,,,323.63,False
+4127304,Terra Rica,410017,Paranavaí,4104,Maringá,,,698.25,False
+4127403,Terra Roxa,410008,Toledo,4103,Cascavel,,,801.135,False
+4127502,Tibagi,410028,Telêmaco Borba,4106,Ponta Grossa,,,2996.47,False
+4127601,Tijucas do Sul,410001,Curitiba,4101,Curitiba,,,672.599,False
+4127700,Toledo,410008,Toledo,4103,Cascavel,4127700,Toledo/PR,1197.223,False
+4127809,Tomazina,410022,Santo Antônio da Platina,4105,Londrina,,,591.939,False
+4127858,Três Barras do Paraná,410006,Cascavel,4103,Cascavel,,,506.963,False
+4127882,Tunas do Paraná,410001,Curitiba,4101,Curitiba,,,670.899,False
+4127908,Tuneiras do Oeste,410018,Cianorte,4104,Maringá,,,705.229,False
+4127957,Tupãssi,410008,Toledo,4103,Cascavel,,,299.093,False
+4127965,Turvo,410004,Guarapuava,4102,Guarapuava,,,936.038,False
+4128005,Ubiratã,410015,Campo Mourão,4104,Maringá,,,653.097,False
+4128104,Umuarama,410016,Umuarama,4104,Maringá,4128104,Umuarama/PR,1233.997,False
+4128302,Uniflor,410014,Maringá,4104,Maringá,,,95.731,False
+4128203,União da Vitória,410003,União da Vitória,4101,Curitiba,,,727.443,False
+4128401,Uraí,410024,Cornélio Procópio - Bandeirantes,4105,Londrina,,,235.855,False
+4128534,Ventania,410028,Telêmaco Borba,4106,Ponta Grossa,,,819.334,False
+4128559,Vera Cruz do Oeste,410006,Cascavel,4103,Cascavel,,,330.602,False
+4128609,Verê,410009,Francisco Beltrão,4103,Cascavel,,,312.744,False
+4128658,Virmond,410011,Laranjeiras do Sul - Quedas do Iguaçu,4103,Cascavel,,,248.583,False
+4128708,Vitorino,410010,Pato Branco,4103,Cascavel,,,308.08,False
+4128500,Wenceslau Braz,410022,Santo Antônio da Platina,4105,Londrina,,,397.685,False
+4128807,Xambrê,410016,Umuarama,4104,Maringá,,,360.044,False
+4101150,Ângulo,410014,Maringá,4104,Maringá,,,106.021,False

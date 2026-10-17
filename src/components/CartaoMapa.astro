@@ -34,7 +34,7 @@ const alta = await getImage({
   format: 'webp',
   quality: 86,
 });
-const fontes = d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]).join(', ');
+const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]))].join(', ');
 ---
 
 <article class:list={['cartao', { 'cartao--destaque': destaque }]} id={mapa.id} data-mapa={mapa.id}>

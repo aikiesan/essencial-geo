@@ -1,0 +1,418 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2900207,Abaré,290024,Paulo Afonso,2909,Paulo Afonso,,,1604.923,False
+2900108,Abaíra,290013,Brumado,2904,Vitória da Conquista,,,538.679,False
+2900306,Acajutiba,290002,Alagoinhas,2901,Salvador,,,181.475,False
+2900355,Adustina,290027,Cícero Dantas,2909,Paulo Afonso,,,629.1,False
+2900603,Aiquara,290012,Jequié,2904,Vitória da Conquista,,,167.877,False
+2900702,Alagoinhas,290002,Alagoinhas,2901,Salvador,2900702,Alagoinhas,707.836,False
+2900801,Alcobaça,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1477.929,False
+2900900,Almadina,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,245.236,False
+2901007,Amargosa,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,431.654,False
+2901106,Amélia Rodrigues,290029,Feira de Santana,2910,Feira de Santana,,,166.872,False
+2901155,América Dourada,290020,Irecê,2907,Irecê,,,822.373,False
+2901205,Anagé,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1899.685,False
+2901304,Andaraí,290031,Itaberaba,2910,Feira de Santana,,,1589.786,False
+2901353,Andorinha,290023,Senhor do Bonfim,2908,Juazeiro,,,1362.386,False
+2901403,Angical,290018,Barreiras,2906,Barreiras,,,1530.643,False
+2901502,Anguera,290029,Feira de Santana,2910,Feira de Santana,,,187.84,False
+2901601,Antas,290027,Cícero Dantas,2909,Paulo Afonso,,,326.36,False
+2901700,Antônio Cardoso,290029,Feira de Santana,2910,Feira de Santana,,,293.53,False
+2901809,Antônio Gonçalves,290023,Senhor do Bonfim,2908,Juazeiro,,,345.282,False
+2901908,Aporá,290002,Alagoinhas,2901,Salvador,,,479.262,False
+2901957,Apuarema,290012,Jequié,2904,Vitória da Conquista,,,150.83,False
+2902005,Aracatu,290013,Brumado,2904,Vitória da Conquista,,,1489.804,False
+2902104,Araci,290033,Serrinha,2910,Feira de Santana,,,1496.246,False
+2902203,Aramari,290002,Alagoinhas,2901,Salvador,,,368.947,False
+2902252,Arataca,290010,Camacan,2903,Ilhéus - Itabuna,,,435.962,False
+2902302,Aratuípe,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,174.012,False
+2902054,Araçás,290002,Alagoinhas,2901,Salvador,,,474.577,False
+2902401,Aurelino Leal,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,445.394,False
+2902500,Baianópolis,290018,Barreiras,2906,Barreiras,,,3321.752,False
+2902609,Baixa Grande,290029,Feira de Santana,2910,Feira de Santana,,,967.515,False
+2902658,Banzaê,290025,Ribeira do Pombal,2909,Paulo Afonso,,,409.508,False
+2902708,Barra,290021,Xique-Xique - Barra,2907,Irecê,,,11428.112,False
+2902807,Barra da Estiva,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1657.414,False
+2902906,Barra do Choça,290011,Vitória da Conquista,2904,Vitória da Conquista,,,765.931,False
+2903003,Barra do Mendes,290020,Irecê,2907,Irecê,,,1436.299,False
+2903102,Barra do Rocha,290014,Ipiaú,2904,Vitória da Conquista,,,214.411,False
+2903201,Barreiras,290018,Barreiras,2906,Barreiras,2903201,Barreiras,8059.305,False
+2903235,Barro Alto,290020,Irecê,2907,Irecê,,,414.506,False
+2903300,Barro Preto,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,201.585,False
+2903276,Barrocas,290033,Serrinha,2910,Feira de Santana,,,207.297,False
+2903409,Belmonte,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,1920.631,False
+2903508,Belo Campo,290011,Vitória da Conquista,2904,Vitória da Conquista,,,772.757,False
+2903607,Biritinga,290033,Serrinha,2910,Feira de Santana,,,553.762,False
+2903706,Boa Nova,290011,Vitória da Conquista,2904,Vitória da Conquista,,,848.857,False
+2903805,Boa Vista do Tupim,290031,Itaberaba,2910,Feira de Santana,,,2972.112,False
+2903904,Bom Jesus da Lapa,290017,Bom Jesus da Lapa,2905,Guanambi,,,4114.493,False
+2903953,Bom Jesus da Serra,290011,Vitória da Conquista,2904,Vitória da Conquista,,,467.907,False
+2904001,Boninal,290034,Seabra,2910,Feira de Santana,,,896.857,False
+2904050,Bonito,290020,Irecê,2907,Irecê,,,791.276,False
+2904100,Boquira,290017,Bom Jesus da Lapa,2905,Guanambi,,,1426.233,False
+2904209,Botuporã,290016,Guanambi,2905,Guanambi,,,627.613,False
+2904407,Brejolândia,290018,Barreiras,2906,Barreiras,,,2247.207,False
+2904308,Brejões,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,518.566,False
+2904506,Brotas de Macaúbas,290021,Xique-Xique - Barra,2907,Irecê,,,2520.811,False
+2904605,Brumado,290013,Brumado,2904,Vitória da Conquista,,,2207.613,False
+2904704,Buerarema,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,219.487,False
+2904753,Buritirama,290021,Xique-Xique - Barra,2907,Irecê,,,4046.741,False
+2904803,Caatiba,290011,Vitória da Conquista,2904,Vitória da Conquista,,,512.436,False
+2904852,Cabaceiras do Paraguaçu,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,222.027,False
+2904902,Cachoeira,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,394.893,False
+2905008,Caculé,290016,Guanambi,2905,Guanambi,,,610.47,False
+2905156,Caetanos,290011,Vitória da Conquista,2904,Vitória da Conquista,,,767.144,False
+2905206,Caetité,290016,Guanambi,2905,Guanambi,,,2651.537,False
+2905305,Cafarnaum,290020,Irecê,2907,Irecê,,,643.666,False
+2905404,Cairu,290005,Valença,2902,Santo Antônio de Jesus,,,448.846,False
+2905503,Caldeirão Grande,290030,Jacobina,2910,Feira de Santana,,,458.311,False
+2905602,Camacan,290010,Camacan,2903,Ilhéus - Itabuna,,,584.848,False
+2905800,Camamu,290005,Valença,2902,Santo Antônio de Jesus,,,839.702,False
+2905701,Camaçari,290001,Salvador,2901,Salvador,2927408,Salvador/BA,785.421,False
+2905909,Campo Alegre de Lourdes,290022,Juazeiro,2908,Juazeiro,,,2914.573,False
+2906006,Campo Formoso,290023,Senhor do Bonfim,2908,Juazeiro,,,7161.83,False
+2906204,Canarana,290020,Irecê,2907,Irecê,,,579.726,False
+2906303,Canavieiras,290010,Camacan,2903,Ilhéus - Itabuna,,,1334.279,False
+2906402,Candeal,290029,Feira de Santana,2910,Feira de Santana,,,447.577,False
+2906501,Candeias,290001,Salvador,2901,Salvador,2927408,Salvador/BA,251.808,False
+2906600,Candiba,290016,Guanambi,2905,Guanambi,,,433.642,False
+2906808,Cansanção,290026,Euclides da Cunha,2909,Paulo Afonso,,,1351.891,False
+2906824,Canudos,290026,Euclides da Cunha,2909,Paulo Afonso,,,3564.627,False
+2906105,Canápolis,290019,Santa Maria da Vitoria,2906,Barreiras,,,460.388,False
+2906857,Capela do Alto Alegre,290029,Feira de Santana,2910,Feira de Santana,,,629.585,False
+2906873,Capim Grosso,290030,Jacobina,2910,Feira de Santana,,,464.776,False
+2906907,Caravelas,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,2375.525,False
+2906899,Caraíbas,290011,Vitória da Conquista,2904,Vitória da Conquista,,,805.629,False
+2907004,Cardeal da Silva,290002,Alagoinhas,2901,Salvador,,,293.456,False
+2907103,Carinhanha,290016,Guanambi,2905,Guanambi,,,2525.512,False
+2907202,Casa Nova,290022,Juazeiro,2908,Juazeiro,,,9648.942,False
+2907301,Castro Alves,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,713.789,False
+2907400,Catolândia,290018,Barreiras,2906,Barreiras,,,702.504,False
+2907509,Catu,290001,Salvador,2901,Salvador,,,426.956,False
+2907558,Caturama,290013,Brumado,2904,Vitória da Conquista,,,716.254,False
+2905107,Caém,290030,Jacobina,2910,Feira de Santana,,,540.909,False
+2907608,Central,290020,Irecê,2907,Irecê,,,566.975,False
+2907707,Chorrochó,290024,Paulo Afonso,2909,Paulo Afonso,,,3005.319,False
+2907905,Cipó,290025,Ribeira do Pombal,2909,Paulo Afonso,,,168.33,False
+2908002,Coaraci,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,274.501,False
+2908101,Cocos,290019,Santa Maria da Vitoria,2906,Barreiras,,,10138.25,False
+2908200,Conceição da Feira,290029,Feira de Santana,2910,Feira de Santana,,,164.799,False
+2908309,Conceição do Almeida,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,284.837,False
+2908408,Conceição do Coité,290032,Conceição do Coité,2910,Feira de Santana,,,1015.249,False
+2908507,Conceição do Jacuípe,290029,Feira de Santana,2910,Feira de Santana,,,114.869,False
+2908606,Conde,290002,Alagoinhas,2901,Salvador,,,931.106,False
+2908705,Condeúba,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1348.039,False
+2908804,Contendas do Sincorá,290011,Vitória da Conquista,2904,Vitória da Conquista,,,977.455,False
+2908903,Coração de Maria,290029,Feira de Santana,2910,Feira de Santana,,,378.421,False
+2909000,Cordeiros,290011,Vitória da Conquista,2904,Vitória da Conquista,,,523.64,False
+2909109,Coribe,290019,Santa Maria da Vitoria,2906,Barreiras,,,2665.141,False
+2909208,Coronel João Sá,290028,Jeremoabo,2909,Paulo Afonso,,,797.434,False
+2909307,Correntina,290019,Santa Maria da Vitoria,2906,Barreiras,,,11504.316,False
+2909406,Cotegipe,290018,Barreiras,2906,Barreiras,,,4282.775,False
+2909505,Cravolândia,290012,Jequié,2904,Vitória da Conquista,,,182.518,False
+2909703,Cristópolis,290018,Barreiras,2906,Barreiras,,,1052.839,False
+2909604,Crisópolis,290002,Alagoinhas,2901,Salvador,,,636.609,False
+2909802,Cruz das Almas,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,139.118,False
+2909901,Curaçá,290022,Juazeiro,2908,Juazeiro,,,5950.614,False
+2906709,Cândido Sales,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1169.814,False
+2907806,Cícero Dantas,290027,Cícero Dantas,2909,Paulo Afonso,,,817.023,False
+2910057,Dias d'Ávila,290001,Salvador,2901,Salvador,2927408,Salvador/BA,183.759,False
+2910107,Dom Basílio,290013,Brumado,2904,Vitória da Conquista,,,689.513,False
+2910206,Dom Macedo Costa,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,94.778,False
+2910008,Dário Meira,290014,Ipiaú,2904,Vitória da Conquista,,,413.637,False
+2910305,Elísio Medrado,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,179.329,False
+2910404,Encruzilhada,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1890.133,False
+2910503,Entre Rios,290002,Alagoinhas,2901,Salvador,,,1187.767,False
+2910602,Esplanada,290002,Alagoinhas,2901,Salvador,,,1299.356,False
+2910701,Euclides da Cunha,290026,Euclides da Cunha,2909,Paulo Afonso,,,2025.368,False
+2910727,Eunápolis,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,2910727,Eunápolis,1425.979,False
+2910776,Feira da Mata,290016,Guanambi,2905,Guanambi,,,1176.504,False
+2910800,Feira de Santana,290029,Feira de Santana,2910,Feira de Santana,2910800,Feira de Santana,1304.427,False
+2910859,Filadélfia,290023,Senhor do Bonfim,2908,Juazeiro,,,579.687,False
+2910909,Firmino Alves,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,172.353,False
+2911006,Floresta Azul,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,321.013,False
+2911105,Formosa do Rio Preto,290018,Barreiras,2906,Barreiras,,,15634.328,False
+2910750,Fátima,290027,Cícero Dantas,2909,Paulo Afonso,,,368.342,False
+2911204,Gandu,290014,Ipiaú,2904,Vitória da Conquista,,,229.66,False
+2911253,Gavião,290029,Feira de Santana,2910,Feira de Santana,,,384.592,False
+2911303,Gentio do Ouro,290021,Xique-Xique - Barra,2907,Irecê,,,3817.946,False
+2911402,Glória,290024,Paulo Afonso,2909,Paulo Afonso,,,1566.609,False
+2911501,Gongogi,290014,Ipiaú,2904,Vitória da Conquista,,,202.194,False
+2911600,Governador Mangabeira,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,106.848,False
+2911659,Guajeru,290016,Guanambi,2905,Guanambi,,,871.975,False
+2911709,Guanambi,290016,Guanambi,2905,Guanambi,,,1272.367,False
+2911808,Guaratinga,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,2189.404,False
+2911857,Heliópolis,290027,Cícero Dantas,2909,Paulo Afonso,,,314.669,False
+2911907,Iaçu,290031,Itaberaba,2910,Feira de Santana,,,2342.497,False
+2912004,Ibiassucê,290016,Guanambi,2905,Guanambi,,,483.27,False
+2912103,Ibicaraí,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,230.953,False
+2912202,Ibicoara,290011,Vitória da Conquista,2904,Vitória da Conquista,,,817.355,False
+2912301,Ibicuí,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,1139.378,False
+2912400,Ibipeba,290020,Irecê,2907,Irecê,,,1382.009,False
+2912509,Ibipitanga,290017,Bom Jesus da Lapa,2905,Guanambi,,,954.373,False
+2912608,Ibiquera,290031,Itaberaba,2910,Feira de Santana,,,698.245,False
+2912707,Ibirapitanga,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,472.664,False
+2912806,Ibirapuã,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,770.866,False
+2912905,Ibirataia,290014,Ipiaú,2904,Vitória da Conquista,,,318.129,False
+2913002,Ibitiara,290034,Seabra,2910,Feira de Santana,,,1834.003,False
+2913101,Ibititá,290020,Irecê,2907,Irecê,,,573.033,False
+2913200,Ibotirama,290021,Xique-Xique - Barra,2907,Irecê,,,1740.113,False
+2913309,Ichu,290029,Feira de Santana,2910,Feira de Santana,,,138.016,False
+2913408,Igaporã,290016,Guanambi,2905,Guanambi,,,836.561,False
+2913457,Igrapiúna,290005,Valença,2902,Santo Antônio de Jesus,,,591.312,False
+2913507,Iguaí,290011,Vitória da Conquista,2904,Vitória da Conquista,,,860.223,False
+2913606,Ilhéus,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,2913606,Ilhéus,1588.556,False
+2913705,Inhambupe,290002,Alagoinhas,2901,Salvador,,,1082.283,False
+2913804,Ipecaetá,290029,Feira de Santana,2910,Feira de Santana,,,372.565,False
+2913903,Ipiaú,290014,Ipiaú,2904,Vitória da Conquista,,,280.454,False
+2914000,Ipirá,290029,Feira de Santana,2910,Feira de Santana,,,3105.285,False
+2914109,Ipupiara,290021,Xique-Xique - Barra,2907,Irecê,,,1055.76,False
+2914208,Irajuba,290012,Jequié,2904,Vitória da Conquista,,,459.047,False
+2914307,Iramaia,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1708.114,False
+2914406,Iraquara,290034,Seabra,2910,Feira de Santana,,,991.821,False
+2914505,Irará,290029,Feira de Santana,2910,Feira de Santana,,,267.88,False
+2914604,Irecê,290020,Irecê,2907,Irecê,,,319.175,False
+2914653,Itabela,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,924.914,False
+2914703,Itaberaba,290031,Itaberaba,2910,Feira de Santana,,,2386.387,False
+2914802,Itabuna,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,2914802,Itabuna,401.028,False
+2914901,Itacaré,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,726.265,False
+2915007,Itaeté,290031,Itaberaba,2910,Feira de Santana,,,1331.822,False
+2915106,Itagi,290012,Jequié,2904,Vitória da Conquista,,,310.621,False
+2915205,Itagibá,290014,Ipiaú,2904,Vitória da Conquista,,,810.994,False
+2915304,Itagimirim,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,876.791,False
+2915353,Itaguaçu da Bahia,290020,Irecê,2907,Irecê,,,4310.255,False
+2915403,Itaju do Colônia,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,1226.908,False
+2915502,Itajuípe,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,270.752,False
+2915601,Itamaraju,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,2360.584,False
+2915700,Itamari,290014,Ipiaú,2904,Vitória da Conquista,,,143.479,False
+2915809,Itambé,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1534.58,False
+2915908,Itanagra,290001,Salvador,2901,Salvador,,,533.632,False
+2916005,Itanhém,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1394.174,False
+2916104,Itaparica,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,121.373,False
+2916302,Itapebi,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,1031.879,False
+2916401,Itapetinga,290015,Itapetinga,2904,Vitória da Conquista,,,1651.158,False
+2916500,Itapicuru,290002,Alagoinhas,2901,Salvador,,,1557.688,False
+2916609,Itapitanga,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,420.664,False
+2916203,Itapé,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,452.716,False
+2916708,Itaquara,290012,Jequié,2904,Vitória da Conquista,,,344.093,False
+2916807,Itarantim,290015,Itapetinga,2904,Vitória da Conquista,,,1674.03,False
+2916856,Itatim,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,547.509,False
+2916906,Itiruçu,290012,Jequié,2904,Vitória da Conquista,,,322.243,False
+2917003,Itiúba,290023,Senhor do Bonfim,2908,Juazeiro,,,1650.592,False
+2917102,Itororó,290015,Itapetinga,2904,Vitória da Conquista,,,313.839,False
+2917201,Ituaçu,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1199.374,False
+2917300,Ituberá,290005,Valença,2902,Santo Antônio de Jesus,,,415.428,False
+2917334,Iuiu,290016,Guanambi,2905,Guanambi,,,1535.229,False
+2917359,Jaborandi,290019,Santa Maria da Vitoria,2906,Barreiras,,,9955.111,False
+2917409,Jacaraci,290016,Guanambi,2905,Guanambi,,,1332.42,False
+2917508,Jacobina,290030,Jacobina,2910,Feira de Santana,,,2192.906,False
+2917607,Jaguaquara,290012,Jequié,2904,Vitória da Conquista,,,924.512,False
+2917706,Jaguarari,290023,Senhor do Bonfim,2908,Juazeiro,,,2466.009,False
+2917805,Jaguaripe,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,863.424,False
+2917904,Jandaíra,290002,Alagoinhas,2901,Salvador,,,640.772,False
+2918001,Jequié,290012,Jequié,2904,Vitória da Conquista,2918001,Jequié,2969.039,False
+2918100,Jeremoabo,290028,Jeremoabo,2909,Paulo Afonso,,,4267.489,False
+2918209,Jiquiriçá,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,238.66,False
+2918308,Jitaúna,290012,Jequié,2904,Vitória da Conquista,,,262.05,False
+2918357,João Dourado,290020,Irecê,2907,Irecê,,,913.258,False
+2918407,Juazeiro,290022,Juazeiro,2908,Juazeiro,2611101,Petrolina/PE - Juazeiro/BA,6721.592,False
+2918456,Jucuruçu,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1457.656,False
+2918506,Jussara,290020,Irecê,2907,Irecê,,,1355.173,False
+2918555,Jussari,290010,Camacan,2903,Ilhéus - Itabuna,,,327.998,False
+2918605,Jussiape,290013,Brumado,2904,Vitória da Conquista,,,589.763,False
+2918704,Lafaiete Coutinho,290012,Jequié,2904,Vitória da Conquista,,,498.11,False
+2918753,Lagoa Real,290016,Guanambi,2905,Guanambi,,,912.22,False
+2918803,Laje,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,449.835,False
+2919009,Lajedinho,290031,Itaberaba,2910,Feira de Santana,,,846.728,False
+2919058,Lajedo do Tabocal,290012,Jequié,2904,Vitória da Conquista,,,382.937,False
+2918902,Lajedão,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,624.77,False
+2919108,Lamarão,290029,Feira de Santana,2910,Feira de Santana,,,189.26,False
+2919157,Lapão,290020,Irecê,2907,Irecê,,,642.882,False
+2919207,Lauro de Freitas,290001,Salvador,2901,Salvador,2927408,Salvador/BA,57.942,False
+2919306,Lençóis,290034,Seabra,2910,Feira de Santana,,,1282.981,False
+2919405,Licínio de Almeida,290016,Guanambi,2905,Guanambi,,,856.626,False
+2919504,Livramento de Nossa Senhora,290013,Brumado,2904,Vitória da Conquista,,,1952.51,False
+2919553,Luís Eduardo Magalhães,290018,Barreiras,2906,Barreiras,,,4033.04,False
+2919603,Macajuba,290029,Feira de Santana,2910,Feira de Santana,,,701.17,False
+2919702,Macarani,290015,Itapetinga,2904,Vitória da Conquista,,,1210.106,False
+2919801,Macaúbas,290017,Bom Jesus da Lapa,2905,Guanambi,,,2459.102,False
+2919900,Macururé,290024,Paulo Afonso,2909,Paulo Afonso,,,2545.857,False
+2919926,Madre de Deus,290001,Salvador,2901,Salvador,2927408,Salvador/BA,33.032,False
+2919959,Maetinga,290011,Vitória da Conquista,2904,Vitória da Conquista,,,614.834,False
+2920007,Maiquinique,290015,Itapetinga,2904,Vitória da Conquista,,,588.296,False
+2920106,Mairi,290029,Feira de Santana,2910,Feira de Santana,,,906.679,False
+2920205,Malhada,290016,Guanambi,2905,Guanambi,,,1971.632,False
+2920304,Malhada de Pedras,290013,Brumado,2904,Vitória da Conquista,,,550.82,False
+2920403,Manoel Vitorino,290012,Jequié,2904,Vitória da Conquista,,,2201.763,False
+2920452,Mansidão,290018,Barreiras,2906,Barreiras,,,3129.588,False
+2920502,Maracás,290012,Jequié,2904,Vitória da Conquista,,,2413.27,False
+2920601,Maragogipe,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,437.61,False
+2920700,Maraú,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,848.885,False
+2920809,Marcionílio Souza,290031,Itaberaba,2910,Feira de Santana,,,1099.284,False
+2920908,Mascote,290010,Camacan,2903,Ilhéus - Itabuna,,,742.689,False
+2921005,Mata de São João,290001,Salvador,2901,Salvador,2927408,Salvador/BA,605.169,False
+2921054,Matina,290016,Guanambi,2905,Guanambi,,,773.852,False
+2921104,Medeiros Neto,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1314.108,False
+2921203,Miguel Calmon,290030,Jacobina,2910,Feira de Santana,,,1599.673,False
+2921302,Milagres,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,420.357,False
+2921401,Mirangaba,290030,Jacobina,2910,Feira de Santana,,,1751.777,False
+2921450,Mirante,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1172.861,False
+2921500,Monte Santo,290026,Euclides da Cunha,2909,Paulo Afonso,,,3034.196,False
+2921609,Morpará,290021,Xique-Xique - Barra,2907,Irecê,,,2093.86,False
+2921708,Morro do Chapéu,290020,Irecê,2907,Irecê,,,5745.765,False
+2921807,Mortugaba,290016,Guanambi,2905,Guanambi,,,528.214,False
+2921906,Mucugê,290034,Seabra,2910,Feira de Santana,,,2462.689,False
+2922003,Mucuri,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1787.422,False
+2922052,Mulungu do Morro,290020,Irecê,2907,Irecê,,,646.621,False
+2922102,Mundo Novo,290029,Feira de Santana,2910,Feira de Santana,,,1491.989,False
+2922201,Muniz Ferreira,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,104.54,False
+2922250,Muquém do São Francisco,290021,Xique-Xique - Barra,2907,Irecê,,,3852.11,False
+2922300,Muritiba,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,86.311,False
+2922409,Mutuípe,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,275.854,False
+2922508,Nazaré,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,278.63,False
+2922607,Nilo Peçanha,290005,Valença,2902,Santo Antônio de Jesus,,,388.936,False
+2922656,Nordestina,290032,Conceição do Coité,2910,Feira de Santana,,,465.407,False
+2922706,Nova Canaã,290011,Vitória da Conquista,2904,Vitória da Conquista,,,804.617,False
+2922730,Nova Fátima,290029,Feira de Santana,2910,Feira de Santana,,,346.785,False
+2922755,Nova Ibiá,290014,Ipiaú,2904,Vitória da Conquista,,,203.2,False
+2922805,Nova Itarana,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,475.381,False
+2922854,Nova Redenção,290031,Itaberaba,2910,Feira de Santana,,,565.356,False
+2922904,Nova Soure,290025,Ribeira do Pombal,2909,Paulo Afonso,,,966.993,False
+2923001,Nova Viçosa,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1316.398,False
+2923035,Novo Horizonte,290034,Seabra,2910,Feira de Santana,,,627.5,False
+2923050,Novo Triunfo,290028,Jeremoabo,2909,Paulo Afonso,,,299.125,False
+2923100,Olindina,290025,Ribeira do Pombal,2909,Paulo Afonso,,,637.316,False
+2923209,Oliveira dos Brejinhos,290021,Xique-Xique - Barra,2907,Irecê,,,3313.435,False
+2923308,Ouriçangas,290029,Feira de Santana,2910,Feira de Santana,,,156.982,False
+2923357,Ourolândia,290030,Jacobina,2910,Feira de Santana,,,1544.985,False
+2923407,Palmas de Monte Alto,290016,Guanambi,2905,Guanambi,,,2559.973,False
+2923506,Palmeiras,290034,Seabra,2910,Feira de Santana,,,737.797,False
+2923605,Paramirim,290013,Brumado,2904,Vitória da Conquista,,,1087.067,False
+2923704,Paratinga,290017,Bom Jesus da Lapa,2905,Guanambi,,,2624.998,False
+2923803,Paripiranga,290027,Cícero Dantas,2909,Paulo Afonso,,,442.186,False
+2923902,Pau Brasil,290010,Camacan,2903,Ilhéus - Itabuna,,,626.306,False
+2924009,Paulo Afonso,290024,Paulo Afonso,2909,Paulo Afonso,2924009,Paulo Afonso,1544.388,False
+2924207,Pedro Alexandre,290028,Jeremoabo,2909,Paulo Afonso,,,889.572,False
+2924108,Pedrão,290002,Alagoinhas,2901,Salvador,,,158.487,False
+2924306,Piatã,290034,Seabra,2910,Feira de Santana,,,1825.855,False
+2924405,Pilão Arcado,290022,Juazeiro,2908,Juazeiro,,,11597.932,False
+2924504,Pindaí,290016,Guanambi,2905,Guanambi,,,628.469,False
+2924603,Pindobaçu,290023,Senhor do Bonfim,2908,Juazeiro,,,495.845,False
+2924652,Pintadas,290029,Feira de Santana,2910,Feira de Santana,,,647.144,False
+2924678,Piraí do Norte,290014,Ipiaú,2904,Vitória da Conquista,,,193.427,False
+2924702,Piripá,290011,Vitória da Conquista,2904,Vitória da Conquista,,,504.396,False
+2924801,Piritiba,290030,Jacobina,2910,Feira de Santana,,,980.331,False
+2924900,Planaltino,290012,Jequié,2904,Vitória da Conquista,,,955.454,False
+2925006,Planalto,290011,Vitória da Conquista,2904,Vitória da Conquista,,,769.001,False
+2925204,Pojuca,290001,Salvador,2901,Salvador,,,314.931,False
+2925253,Ponto Novo,290023,Senhor do Bonfim,2908,Juazeiro,,,530.143,False
+2925303,Porto Seguro,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,2925303,Porto Seguro,2285.734,False
+2925402,Potiraguá,290015,Itapetinga,2904,Vitória da Conquista,,,1111.567,False
+2925105,Poções,290011,Vitória da Conquista,2904,Vitória da Conquista,,,937.856,False
+2925501,Prado,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,1692.1,False
+2925600,Presidente Dutra,290020,Irecê,2907,Irecê,,,232.064,False
+2925709,Presidente Jânio Quadros,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1208.566,False
+2925758,Presidente Tancredo Neves,290005,Valença,2902,Santo Antônio de Jesus,,,441.82,False
+2924058,Pé de Serra,290029,Feira de Santana,2910,Feira de Santana,,,596.772,False
+2925808,Queimadas,290032,Conceição do Coité,2910,Feira de Santana,,,2011.06,False
+2925907,Quijingue,290026,Euclides da Cunha,2909,Paulo Afonso,,,1380.798,False
+2925931,Quixabeira,290030,Jacobina,2910,Feira de Santana,,,366.387,False
+2925956,Rafael Jambeiro,290029,Feira de Santana,2910,Feira de Santana,,,1090.552,False
+2926004,Remanso,290022,Juazeiro,2908,Juazeiro,,,4571.634,False
+2926103,Retirolândia,290032,Conceição do Coité,2910,Feira de Santana,,,242.331,False
+2926400,Riacho de Santana,290016,Guanambi,2905,Guanambi,,,3183.361,False
+2926202,Riachão das Neves,290018,Barreiras,2906,Barreiras,,,5969.305,False
+2926301,Riachão do Jacuípe,290029,Feira de Santana,2910,Feira de Santana,,,1155.417,False
+2926509,Ribeira do Amparo,290025,Ribeira do Pombal,2909,Paulo Afonso,,,666.036,False
+2926608,Ribeira do Pombal,290025,Ribeira do Pombal,2909,Paulo Afonso,,,1228.125,False
+2926657,Ribeirão do Largo,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1363.7,False
+2927002,Rio Real,290002,Alagoinhas,2901,Salvador,,,739.776,False
+2926707,Rio de Contas,290013,Brumado,2904,Vitória da Conquista,,,1115.252,False
+2926806,Rio do Antônio,290016,Guanambi,2905,Guanambi,,,779.046,False
+2926905,Rio do Pires,290013,Brumado,2904,Vitória da Conquista,,,656.223,False
+2927101,Rodelas,290024,Paulo Afonso,2909,Paulo Afonso,,,2207.159,False
+2927200,Ruy Barbosa,290031,Itaberaba,2910,Feira de Santana,,,1991.772,False
+2927309,Salinas da Margarida,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,150.569,False
+2927408,Salvador,290001,Salvador,2901,Salvador,2927408,Salvador/BA,692.589,True
+2927606,Santa Brígida,290024,Paulo Afonso,2909,Paulo Afonso,,,934.46,False
+2927507,Santa Bárbara,290029,Feira de Santana,2910,Feira de Santana,,,347.021,False
+2927705,Santa Cruz Cabrália,290009,Eunápolis - Porto Seguro,2903,Ilhéus - Itabuna,,,1462.958,False
+2927804,Santa Cruz da Vitória,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,284.083,False
+2927903,Santa Inês,290012,Jequié,2904,Vitória da Conquista,,,374.526,False
+2928059,Santa Luzia,290010,Camacan,2903,Ilhéus - Itabuna,,,824.473,False
+2928109,Santa Maria da Vitória,290019,Santa Maria da Vitoria,2906,Barreiras,,,1984.91,False
+2928406,Santa Rita de Cássia,290018,Barreiras,2906,Barreiras,,,6030.491,False
+2928505,Santa Terezinha,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,719.258,False
+2928000,Santaluz,290032,Conceição do Coité,2910,Feira de Santana,,,1623.445,False
+2928208,Santana,290018,Barreiras,2906,Barreiras,,,1909.353,False
+2928307,Santanópolis,290029,Feira de Santana,2910,Feira de Santana,,,222.686,False
+2928604,Santo Amaro,290001,Salvador,2901,Salvador,,,494.502,False
+2928703,Santo Antônio de Jesus,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,261.74,False
+2928802,Santo Estêvão,290029,Feira de Santana,2910,Feira de Santana,,,360.334,False
+2929602,Sapeaçu,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,131.218,False
+2929750,Saubara,290001,Salvador,2901,Salvador,,,166.428,False
+2929800,Saúde,290030,Jacobina,2910,Feira de Santana,,,509.098,False
+2929909,Seabra,290034,Seabra,2910,Feira de Santana,,,2402.17,False
+2930006,Sebastião Laranjeiras,290016,Guanambi,2905,Guanambi,,,1982.037,False
+2930105,Senhor do Bonfim,290023,Senhor do Bonfim,2908,Juazeiro,,,789.36,False
+2930204,Sento Sé,290022,Juazeiro,2908,Juazeiro,,,11980.158,False
+2930303,Serra Dourada,290018,Barreiras,2906,Barreiras,,,1592.249,False
+2930402,Serra Preta,290029,Feira de Santana,2910,Feira de Santana,,,595.294,False
+2930154,Serra do Ramalho,290017,Bom Jesus da Lapa,2905,Guanambi,,,2341.701,False
+2930501,Serrinha,290033,Serrinha,2910,Feira de Santana,,,583.311,False
+2930600,Serrolândia,290030,Jacobina,2910,Feira de Santana,,,322.021,False
+2930709,Simões Filho,290001,Salvador,2901,Salvador,2927408,Salvador/BA,201.529,False
+2930774,Sobradinho,290022,Juazeiro,2908,Juazeiro,,,1359.08,False
+2930808,Souto Soares,290034,Seabra,2910,Feira de Santana,,,1026.638,False
+2929701,Sátiro Dias,290002,Alagoinhas,2901,Salvador,,,949.223,False
+2928901,São Desidério,290018,Barreiras,2906,Barreiras,,,15158.737,False
+2928950,São Domingos,290032,Conceição do Coité,2910,Feira de Santana,,,289.963,False
+2929107,São Felipe,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,222.407,False
+2929206,São Francisco do Conde,290001,Salvador,2901,Salvador,2927408,Salvador/BA,269.737,False
+2929008,São Félix,290004,Cruz das Almas,2902,Santo Antônio de Jesus,,,103.226,False
+2929057,São Félix do Coribe,290019,Santa Maria da Vitoria,2906,Barreiras,,,1751.671,False
+2929255,São Gabriel,290020,Irecê,2907,Irecê,,,1146.054,False
+2929305,São Gonçalo dos Campos,290029,Feira de Santana,2910,Feira de Santana,,,294.768,False
+2929354,São José da Vitória,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,127.925,False
+2929370,São José do Jacuípe,290030,Jacobina,2910,Feira de Santana,,,362.365,False
+2929404,São Miguel das Matas,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,230.906,False
+2929503,São Sebastião do Passé,290001,Salvador,2901,Salvador,2927408,Salvador/BA,536.678,False
+2930758,Sítio do Mato,290017,Bom Jesus da Lapa,2905,Guanambi,,,1627.804,False
+2930766,Sítio do Quinto,290028,Jeremoabo,2909,Paulo Afonso,,,656.837,False
+2930907,Tabocas do Brejo Velho,290018,Barreiras,2906,Barreiras,,,1437.188,False
+2931004,Tanhaçu,290011,Vitória da Conquista,2904,Vitória da Conquista,,,1277.514,False
+2931053,Tanque Novo,290016,Guanambi,2905,Guanambi,,,729.516,False
+2931103,Tanquinho,290029,Feira de Santana,2910,Feira de Santana,,,243.838,False
+2931202,Taperoá,290005,Valença,2902,Santo Antônio de Jesus,,,454.081,False
+2931301,Tapiramutá,290030,Jacobina,2910,Feira de Santana,,,714.691,False
+2931350,Teixeira de Freitas,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,2931350,Teixeira de Freitas,1165.618,False
+2931400,Teodoro Sampaio,290002,Alagoinhas,2901,Salvador,,,244.613,False
+2931509,Teofilândia,290033,Serrinha,2910,Feira de Santana,,,351.892,False
+2931608,Teolândia,290014,Ipiaú,2904,Vitória da Conquista,,,289.782,False
+2931707,Terra Nova,290001,Salvador,2901,Salvador,,,193.241,False
+2931806,Tremedal,290011,Vitória da Conquista,2904,Vitória da Conquista,,,2017.644,False
+2931905,Tucano,290025,Ribeira do Pombal,2909,Paulo Afonso,,,2198.237,False
+2932002,Uauá,290022,Juazeiro,2908,Juazeiro,,,3060.865,False
+2932200,Ubaitaba,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,181.102,False
+2932309,Ubatã,290014,Ipiaú,2904,Vitória da Conquista,,,177.643,False
+2932101,Ubaíra,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,663.892,False
+2932408,Uibaí,290020,Irecê,2907,Irecê,,,545.297,False
+2932457,Umburanas,290030,Jacobina,2910,Feira de Santana,,,1775.633,False
+2932507,Una,290010,Camacan,2903,Ilhéus - Itabuna,,,1126.733,False
+2932606,Urandi,290016,Guanambi,2905,Guanambi,,,902.402,False
+2932705,Uruçuca,290007,Ilhéus - Itabuna,2903,Ilhéus - Itabuna,,,510.097,False
+2932804,Utinga,290031,Itaberaba,2910,Feira de Santana,,,633.761,False
+2933000,Valente,290032,Conceição do Coité,2910,Feira de Santana,,,394.877,False
+2932903,Valença,290005,Valença,2902,Santo Antônio de Jesus,,,1123.975,False
+2933174,Varzedo,290003,Santo Antônio de Jesus,2902,Santo Antônio de Jesus,,,221.399,False
+2933208,Vera Cruz,290006,Nazaré - Maragogipe,2902,Santo Antônio de Jesus,,,297.537,False
+2933257,Vereda,290008,Teixeira de Freitas,2903,Ilhéus - Itabuna,,,782.159,False
+2933307,Vitória da Conquista,290011,Vitória da Conquista,2904,Vitória da Conquista,2933307,Vitória da Conquista,3254.186,False
+2933158,Várzea Nova,290030,Jacobina,2910,Feira de Santana,,,1225.088,False
+2933059,Várzea da Roça,290029,Feira de Santana,2910,Feira de Santana,,,468.407,False
+2933109,Várzea do Poço,290030,Jacobina,2910,Feira de Santana,,,206.478,False
+2933406,Wagner,290031,Itaberaba,2910,Feira de Santana,,,522.37,False
+2933455,Wanderley,290018,Barreiras,2906,Barreiras,,,2920.579,False
+2933505,Wenceslau Guimarães,290014,Ipiaú,2904,Vitória da Conquista,,,655.056,False
+2933604,Xique-Xique,290021,Xique-Xique - Barra,2907,Irecê,,,5079.659,False
+2900405,Água Fria,290029,Feira de Santana,2910,Feira de Santana,,,742.775,False
+2900504,Érico Cardoso,290013,Brumado,2904,Vitória da Conquista,,,735.249,False

@@ -110,8 +110,8 @@ As fontes são servidas pelo próprio site (pacotes `@fontsource`), sem chamadas
 
 ## Convenções das pranchas
 
-As pranchas-modelo 001–004 (`scripts/gerar-exemplos.mjs`) fixam a linguagem que os mapas reais devem
-seguir no layout do QGIS.
+A série «Brasil, estado por estado» (`scripts/estados/prancha.mjs`, a partir da prancha 001, São Paulo)
+fixa a linguagem que os demais mapas devem seguir, também no layout do QGIS.
 
 **Formato.** Paisagem 4:3 (ex.: A3 ou 2400 × 1800 px na prévia). Área do mapa à esquerda; à direita, uma
 faixa vertical com: “ESSENCIAL GEO” em versal espaçada, número da prancha grande, título, subtítulo em
@@ -143,3 +143,25 @@ camadas nos dados.
 **A paleta da interface não entra na prancha.** Os tons do palácio servem à moldura do site; as cores do
 mapa obedecem ao dado (tabela acima). Quando um indicador da leitura rápida repete a legenda, ele usa as
 cores da prancha, não as da interface.
+
+---
+
+## Assinatura
+
+Toda prancha leva cinco pequenos segredos. Nenhum se confunde com geografia: a folha é a rosa dos ventos e
+o resto mora no painel e na moldura. O código está em [`scripts/lib/identidade.mjs`](../scripts/lib/identidade.mjs),
+com os desenhos do CP2b (`cp2b-avatar-gradient.svg`).
+
+| # | Segredo | Onde | Como |
+| --- | --- | --- | --- |
+| 1 | **Norte em folha** | Num canto livre do mapa (de preferência o superior direito) | A folha grande do CP2b como sombra verde (opacidade ≈ 0,13, desfocada), a ponta no norte; a nervura é a agulha e a metade esquerda é um tom mais escura. Um “N” serifado acima. Nunca como curvas de nível, nunca sobre o mar. |
+| 2 | **Molécula** | Carimbo, na linha da licença | A molécula do CP2b (biogás), 20 px, em laranja `#d37402`. É a marca do autor. |
+| 3 | **Lema** | Moldura de baixo | «O essencial é invisível aos olhos» (EN: *What is essential is invisible to the eye*), em mono de 3 px, repetido. Na tela é um fio pontilhado; só se lê ampliando. |
+| 4 | **Estrela** | Sob a estrela dourada do cabeçalho | A estrela que representa a UF na Bandeira Nacional (Lei 5.700/1971): designação de Bayer e nome próprio, em mono de 3,5 px — “α CRUCIS · ACRUX” para São Paulo. |
+| 5 | **Assinatura** | Moldura de cima | Autor, ORCID, NIPE/UNICAMP, CP2b e Essencial Geo, em mono de 3 px, como os cartógrafos suíços escondiam seus nomes nas cartas. |
+
+**Regras.** Os segredos são discretos por definição: não aumente tamanho nem opacidade para “aparecerem”.
+A folha vai para o canto com menos território (excluído o do localizador); como é sombra, não esconde o dado
+que por acaso fique debaixo dela.
+Os microtextos usam o cinza da moldura. Na prancha em inglês só o lema é traduzido; a assinatura e os
+nomes das estrelas não mudam.

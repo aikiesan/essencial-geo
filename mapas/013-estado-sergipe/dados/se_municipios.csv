@@ -1,0 +1,76 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2800100,Amparo do São Francisco,280003,Propriá,2801,Aracaju,,,35.683,False
+2800209,Aquidabã,280003,Propriá,2801,Aracaju,,,359.543,False
+2800308,Aracaju,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,182.163,True
+2800407,Arauá,280002,Estância,2801,Aracaju,,,198.967,False
+2800506,Areia Branca,280004,Itabaiana,2802,Itabaiana,,,148.135,False
+2800605,Barra dos Coqueiros,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,92.268,False
+2800670,Boquim,280002,Estância,2801,Aracaju,,,205.443,False
+2800704,Brejo Grande,280003,Propriá,2801,Aracaju,,,141.464,False
+2801009,Campo do Brito,280004,Itabaiana,2802,Itabaiana,,,201.518,False
+2801108,Canhoba,280003,Propriá,2801,Aracaju,,,171.581,False
+2801207,Canindé de São Francisco,280006,Nossa Senhora da Glória,2802,Itabaiana,,,1080.009,False
+2801306,Capela,280001,Aracaju,2801,Aracaju,,,442.21,False
+2801405,Carira,280004,Itabaiana,2802,Itabaiana,,,638.875,False
+2801504,Carmópolis,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,46.395,False
+2801603,Cedro de São João,280003,Propriá,2801,Aracaju,,,83.71,False
+2801702,Cristinápolis,280002,Estância,2801,Aracaju,,,228.556,False
+2801900,Cumbe,280001,Aracaju,2801,Aracaju,,,121.959,False
+2802007,Divina Pastora,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,90.508,False
+2802106,Estância,280002,Estância,2801,Aracaju,,,647.344,False
+2802205,Feira Nova,280006,Nossa Senhora da Glória,2802,Itabaiana,,,194.187,False
+2802304,Frei Paulo,280004,Itabaiana,2802,Itabaiana,,,399.178,False
+2802403,Gararu,280006,Nossa Senhora da Glória,2802,Itabaiana,,,661.622,False
+2802502,General Maynard,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,19.793,False
+2802601,Graccho Cardoso,280006,Nossa Senhora da Glória,2802,Itabaiana,,,240.756,False
+2802700,Ilha das Flores,280003,Propriá,2801,Aracaju,,,52.693,False
+2802809,Indiaroba,280002,Estância,2801,Aracaju,,,316.316,False
+2802908,Itabaiana,280004,Itabaiana,2802,Itabaiana,,,337.348,False
+2803005,Itabaianinha,280002,Estância,2801,Aracaju,,,501.794,False
+2803104,Itabi,280006,Nossa Senhora da Glória,2802,Itabaiana,,,183.422,False
+2803203,Itaporanga d'Ajuda,280001,Aracaju,2801,Aracaju,,,739.702,False
+2803302,Japaratuba,280001,Aracaju,2801,Aracaju,,,365.677,False
+2803401,Japoatã,280003,Propriá,2801,Aracaju,,,402.353,False
+2803500,Lagarto,280005,Lagarto,2802,Itabaiana,,,968.921,False
+2803609,Laranjeiras,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,162.274,False
+2803708,Macambira,280004,Itabaiana,2802,Itabaiana,,,137.496,False
+2803807,Malhada dos Bois,280003,Propriá,2801,Aracaju,,,63.199,False
+2803906,Malhador,280004,Itabaiana,2802,Itabaiana,,,101.888,False
+2804003,Maruim,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,95.554,False
+2804102,Moita Bonita,280004,Itabaiana,2802,Itabaiana,,,95.397,False
+2804201,Monte Alegre de Sergipe,280006,Nossa Senhora da Glória,2802,Itabaiana,,,387.352,False
+2804300,Muribeca,280003,Propriá,2801,Aracaju,,,74.31,False
+2804409,Neópolis,280003,Propriá,2801,Aracaju,,,271.323,False
+2804458,Nossa Senhora Aparecida,280004,Itabaiana,2802,Itabaiana,,,340.855,False
+2804508,Nossa Senhora da Glória,280006,Nossa Senhora da Glória,2802,Itabaiana,,,754.959,False
+2804607,Nossa Senhora das Dores,280001,Aracaju,2801,Aracaju,,,482.785,False
+2804706,Nossa Senhora de Lourdes,280003,Propriá,2801,Aracaju,,,83.767,False
+2804805,Nossa Senhora do Socorro,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,155.018,False
+2804904,Pacatuba,280003,Propriá,2801,Aracaju,,,381.428,False
+2805000,Pedra Mole,280004,Itabaiana,2802,Itabaiana,,,82.184,False
+2805109,Pedrinhas,280002,Estância,2801,Aracaju,,,33.344,False
+2805208,Pinhão,280004,Itabaiana,2802,Itabaiana,,,156.4,False
+2805307,Pirambu,280001,Aracaju,2801,Aracaju,,,208.681,False
+2805604,Porto da Folha,280006,Nossa Senhora da Glória,2802,Itabaiana,,,878.044,False
+2805406,Poço Redondo,280006,Nossa Senhora da Glória,2802,Itabaiana,,,1074.584,False
+2805505,Poço Verde,280005,Lagarto,2802,Itabaiana,,,441.326,False
+2805703,Propriá,280003,Propriá,2801,Aracaju,,,96.32,False
+2805901,Riachuelo,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,78.308,False
+2805802,Riachão do Dantas,280005,Lagarto,2802,Itabaiana,,,530.606,False
+2806008,Ribeirópolis,280004,Itabaiana,2802,Itabaiana,,,259.057,False
+2806107,Rosário do Catete,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,102.683,False
+2806206,Salgado,280005,Lagarto,2802,Itabaiana,,,247.579,False
+2806305,Santa Luzia do Itanhy,280002,Estância,2801,Aracaju,,,325.259,False
+2806503,Santa Rosa de Lima,280001,Aracaju,2801,Aracaju,,,67.672,False
+2806404,Santana do São Francisco,280003,Propriá,2801,Aracaju,,,44.017,False
+2806602,Santo Amaro das Brotas,280001,Aracaju,2801,Aracaju,,,236.965,False
+2807105,Simão Dias,280005,Lagarto,2802,Itabaiana,,,560.199,False
+2807204,Siriri,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,168.343,False
+2806701,São Cristóvão,280001,Aracaju,2801,Aracaju,2800308,Aracaju/SE,438.037,False
+2806800,São Domingos,280004,Itabaiana,2802,Itabaiana,,,101.999,False
+2806909,São Francisco,280003,Propriá,2801,Aracaju,,,83.985,False
+2807006,São Miguel do Aleixo,280004,Itabaiana,2802,Itabaiana,,,140.041,False
+2807303,Telha,280003,Propriá,2801,Aracaju,,,47.86,False
+2807402,Tobias Barreto,280005,Lagarto,2802,Itabaiana,,,1024.645,False
+2807501,Tomar do Geru,280002,Estância,2801,Aracaju,,,304.837,False
+2807600,Umbaúba,280002,Estância,2801,Aracaju,,,117.514,False
