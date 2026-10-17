@@ -60,7 +60,7 @@
   --f-texto: 'Lora Variable', Lora, Georgia, serif;
   --f-mono: 'JetBrains Mono Variable', 'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace;
 
-  --t-xs: 0.6875rem;   /* 11px — rótulos técnicos */
+  --t-xs: 0.75rem;     /* 12px — rótulos técnicos (o mínimo confortável em mono versal) */
   --t-sm: 0.8125rem;   /* 13px */
   --t-md: 1rem;
   --t-lg: 1.1875rem;
@@ -159,7 +159,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 1px solid var(--foco);
+  outline: 2px solid var(--foco); /* a única linha de 2px do site: foco tem que se ver */
   outline-offset: 3px;
 }
 
@@ -183,6 +183,30 @@ h4 {
 p {
   margin: 0 0 var(--e-4);
   text-wrap: pretty;
+}
+
+/* Em colunas estreitas, hifenização pela língua da página (lang=pt-BR / en-GB). */
+@media (max-width: 859px) {
+  p {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+/* Alto contraste do Windows: os estados que dependem só de fundo ganham contorno,
+   e as amostras de cor dos gráficos mantêm a cor do dado. */
+@media (forced-colors: active) {
+  [aria-pressed='true'],
+  [aria-current] {
+    outline: 2px solid CanvasText;
+    outline-offset: -2px;
+  }
+  .barra__cheio,
+  .rosca__cor,
+  .camada__cor,
+  .rosca__svg {
+    forced-color-adjust: none;
+  }
 }
 
 button {
@@ -244,6 +268,7 @@ hr {
   letter-spacing: var(--rastreio);
   color: var(--tinta-3);
   font-variant-numeric: tabular-nums;
+  hyphens: manual;
 }
 
 .mono {
@@ -469,6 +494,8 @@ hr {
   padding: var(--e-2) var(--e-3) var(--e-2) 0;
   border-bottom: 1px solid var(--linha-fina);
   vertical-align: top;
+  /* nomes de arquivo longos quebram dentro da célula: a página nunca rola de lado (WCAG 1.4.10) */
+  overflow-wrap: anywhere;
 }
 .prosa th {
   font-family: var(--f-mono);

@@ -58,6 +58,22 @@ O tema escuro segue o sistema operacional e pode ser trocado no botão de tema d
 Uma faixa de meandro (`.meandro`, 10 px, em Basket Beige) separa os blocos da coluna esquerda — o eco do
 friso de madeira do palácio. É o único ornamento repetido do site: não use em cartões, fichas ou pranchas.
 
+## Acessibilidade (meta: WCAG 2.2 AA)
+
+| Regra | Como |
+| --- | --- |
+| Contraste | Texto ≥ 4,5:1 nos dois temas (os tokens acima já passam). Cor nova só depois de medir. |
+| Foco | `:focus-visible` com contorno de **2 px** em `--foco` — a única exceção à regra do 1 px. |
+| Texto pequeno | Nada abaixo de 11 px; rótulos técnicos (`--t-xs`) em 12 px. |
+| Reflow | Nenhuma página rola de lado em 320 px. Tabelas quebram o texto nas células; código rola dentro do bloco. |
+| Espaçamento | Nada de `text-overflow: ellipsis` em texto que é dado: rótulos quebram linha. |
+| Alvos | Links e botões fora de frases com pelo menos 24 px de altura. |
+| Alto contraste | Em `forced-colors`, estados ativos ganham contorno e as amostras de cor dos gráficos mantêm a cor do dado. |
+| Língua | Trechos na outra língua levam `lang` (citação ABNT nas páginas em inglês, seletor PT · EN). |
+
+Para conferir: axe DevTools (extensão do navegador) nas páginas de feed, mapa, nota e sobre, nos dois temas;
+navegação só por teclado; zoom de 400% (equivale a 320 px); e, de vez em quando, uma leitura com o NVDA.
+
 ## Tipografia
 
 | Papel | Fonte | Onde |

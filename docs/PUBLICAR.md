@@ -145,6 +145,31 @@ discussoes:
 
 ---
 
+## Buscadores (uma vez)
+
+O site gera sozinho o que os indexadores leem:
+
+| O quê | Para quem |
+| --- | --- |
+| `sitemap.xml` com os pares PT/EN de cada página | Google, Bing |
+| schema.org/Dataset em cada mapa (DOI, licença, autor com ORCID, arquivos, recorte) | **Google Dataset Search** |
+| Etiquetas `citation_*` (título, autor, data, DOI, PDF) | Google Scholar, Zotero, Mendeley |
+| schema.org/BlogPosting nas notas; WebSite + Person na página inicial | Google |
+
+Pranchas-modelo (`exemplo: true`) ficam de fora do Dataset e das etiquetas de citação.
+
+**O que é seu:** cadastrar o site no [Google Search Console](https://search.google.com/search-console)
+(propriedade do tipo *prefixo do URL*: `https://aikiesan.github.io/essencial-geo/`, verificação pela
+etiqueta HTML: copie só o valor de `content="…"` para `SITE.verificacao.google` em `src/site.config.ts`, faça commit e push, e clique em *Verificar*) e enviar
+`https://aikiesan.github.io/essencial-geo/sitemap.xml` em *Sitemaps*. Depois, o mesmo no
+[Bing Webmaster Tools](https://www.bing.com/webmasters), que importa do Search Console.
+
+> **robots.txt:** num site de projeto do GitHub Pages, buscadores só leem `aikiesan.github.io/robots.txt`.
+> O `robots.txt` gerado aqui passa a valer com um domínio próprio; até lá, o sitemap vai pelo Search Console.
+
+Para testar um mapa: [Rich Results Test](https://search.google.com/test/rich-results) ou
+[validator.schema.org](https://validator.schema.org) com o endereço da página.
+
 ## Correções
 
 Um mapa publicado não é apagado nem reescrito em silêncio, como numa redação:

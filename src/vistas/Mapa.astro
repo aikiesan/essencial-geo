@@ -7,8 +7,9 @@ import Ficha from '../components/Ficha.astro';
 import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
 import { SITE } from '../site.config';
-import { linkMapa, numeroFormatado, type Mapa } from '../lib/mapas';
+import { linkMapa, momentoPublicacao, numeroFormatado, type Mapa } from '../lib/mapas';
 import { t } from '../i18n';
+import { datasetDoMapa, etiquetasCitacao, jsonLd } from '../lib/metadados';
 
 interface Props { mapa: Mapa; maisNovo?: Mapa; maisAntigo?: Mapa }
 const { mapa, maisNovo, maisAntigo } = Astro.props;
@@ -16,6 +17,10 @@ const tx = t(mapa.lingua);
 // Em inglês, as notas de método vêm do corpo do README.en.md.
 const { Content } = await render(mapa.lingua === 'en' && mapa.traducao ? mapa.traducao : mapa);
 const arquivoReadme = mapa.lingua === 'en' && mapa.traducao ? 'README.en.md' : 'README.md';
+// Pranchas-modelo (dados sintéticos) não se anunciam como conjunto de dados.
+const real = !mapa.data.exemplo;
+const dataset = real ? datasetDoMapa(mapa, Astro.site) : undefined;
+const citacaoMeta = real ? etiquetasCitacao(mapa, Astro.site) : [];
 const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoReadme}`;
 ---
 
@@ -25,7 +30,13 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
   imagem={mapa.data.imagem.src}
   categoriaAtiva={mapa.data.categoria}
   tipo="article"
+  publicado={momentoPublicacao(mapa.original.data)}
+  atualizado={mapa.original.atualizado}
 >
+  <Fragment slot="head">
+    {citacaoMeta.map((m) => <meta name={m.name} content={m.content} />)}
+    {dataset && <script type="application/ld+json" set:html={jsonLd(dataset)} />}
+  </Fragment>
   <div class="feed">
     <CartaoMapa mapa={mapa} prioridade destaque />
 
@@ -86,6 +97,7 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
   }
   .notas__fonte a {
     display: inline-flex;
+    min-height: 24px;
     gap: var(--e-1);
     align-items: center;
     color: var(--tinta);
