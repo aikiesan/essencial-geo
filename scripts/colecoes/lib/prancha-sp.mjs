@@ -61,6 +61,8 @@ const EN = {
   'OCEANO ATLÂNTICO': 'ATLANTIC OCEAN',
   'O ESSENCIAL É INVISÍVEL AOS OLHOS': 'WHAT IS ESSENTIAL IS INVISIBLE TO THE EYE',
   'Transversa de Mercator': 'Transverse Mercator',
+  'Cônica equivalente de Albers': 'Albers equal-area conic',
+  'verdadeira nos paralelos-padrão': 'true on the standard parallels',
   'sem informação': 'no data',
   zero: 'zero',
   LIMITES: 'BOUNDARIES',
@@ -140,17 +142,84 @@ const ROTULOS_UF = [
 ];
 const PONTO_OCEANO = [-45.6, -25.25];
 
+/* Recorte da prancha: São Paulo (padrão) ou o Brasil inteiro (usarBrasil()). */
+const gr = (v, h) => `${nf(Math.abs(v), 1)}° ${h}`;
+const BASE_SP = {
+  sigla: 'SP',
+  estrela: ESTRELAS.SP,
+  unidades: municipios,
+  codigo: (f) => f.properties.CD_MUN,
+  limite,
+  internas: cache.rgint.features,
+  vizinhos: cache.vizinhos.features.filter((v) => v.properties.SIGLA_UF !== 'SP'),
+  paises,
+  terra: [...paises, ...cache.vizinhos.features],
+  rotulos: ROTULOS_UF.map(([n, c]) => [n, n, c]),
+  oceano: PONTO_OCEANO,
+  capital: cache.capital,
+  grat: { passo: 1, extensao: [[-60, -32], [-38, -14]] },
+  bordas: { lon: [-56, -40, 1], lat: [-30, -15, 1] },
+  projecao: () => geoTransverseMercator().rotate([-LON0, -LAT0]),
+  // Escala medida no meridiano central, onde a transversa de Mercator é verdadeira.
+  medir: (proj) => {
+    const [cx, cy] = proj([LON0, LAT0]);
+    return 400 / (geoDistance(proj.invert([cx, cy - 200]), proj.invert([cx, cy + 200])) * 6371.0088);
+  },
+  notaEscala: 'verdadeira no meridiano central',
+  carimbo: () => [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`],
+};
+let B = BASE_SP;
+
+const SULAMERICA = ['Argentina', 'Bolivia', 'Chile', 'Colombia', 'Ecuador', 'Guyana', 'Paraguay', 'Peru', 'Suriname',
+  'Uruguay', 'Venezuela', 'France', 'Falkland Is.', 'Panama', 'Costa Rica', 'Nicaragua', 'Trinidad and Tobago'];
+const PAISES_BR = [
+  ['ARGENTINA', 'ARGENTINA', [-63.5, -30.5]], ['BOLÍVIA', 'BOLIVIA', [-64.6, -17.2]], ['PERU', 'PERU', [-75.2, -10.5]],
+  ['PARAGUAI', 'PARAGUAY', [-58.4, -23.3]], ['COLÔMBIA', 'COLOMBIA', [-72.6, 2.6]], ['VENEZUELA', 'VENEZUELA', [-65.6, 6.6]],
+  ['URUGUAI', 'URUGUAY', [-56, -32.9]], ['GUIANA', 'GUYANA', [-58.9, 5.2]], ['SURINAME', 'SURINAME', [-55.9, 4.1]],
+  ['CHILE', 'CHILE', [-70.6, -24]],
+];
+
+/** Passa a prancha para o recorte nacional (UFs e regiões de scripts/colecoes/cache/brasil-base.json). */
+export async function usarBrasil() {
+  const br = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'cache', 'brasil-base.json'), 'utf8'));
+  const sa = feature(mundo, mundo.objects.countries).features.filter((f) => SULAMERICA.includes(f.properties.name));
+  const lim = br.limite.features[0];
+  const proj = () => geoConicEqualArea().parallels([-2, -22]).rotate([54, 0]);
+  B = {
+    sigla: 'BR',
+    estrela: ['CRUX', 'CRUZEIRO DO SUL'],
+    unidades: br.ufs.features,
+    codigo: (f) => f.properties.SIGLA_UF,
+    limite: lim,
+    internas: br.regioes.features,
+    vizinhos: [],
+    paises: sa,
+    terra: [...sa, lim],
+    rotulos: PAISES_BR,
+    oceano: [-31.5, -21],
+    capital: br.capital,
+    rotulosUnidades: br.ufs.features.map((f) => [f.properties.SIGLA_UF, f.properties.rotulo]),
+    grat: { passo: 5, extensao: [[-85, -45], [-25, 15]] },
+    bordas: { lon: [-75, -35, 5], lat: [-35, 5, 5] },
+    projecao: proj,
+    // Albers: escala verdadeira nos paralelos-padrão; medida ao longo de 22° S.
+    medir: (p) => {
+      const a = p([-56, -22]);
+      const b = p([-52, -22]);
+      return Math.hypot(b[0] - a[0], b[1] - a[1]) / (geoDistance([-56, -22], [-52, -22]) * 6371.0088);
+    },
+    notaEscala: 'verdadeira nos paralelos-padrão',
+    carimbo: () => [`SIRGAS 2000 · ${tr('Cônica equivalente de Albers')}`,
+      `φ₁ 2° S · φ₂ 22° S · λ₀ ${gr(54, LINGUA === 'en' ? 'W' : 'O')}`],
+  };
+}
+
 /** Projeção do estado ajustada a um quadro (w × h) com folga. */
 function projetar(w, h, pad) {
-  const proj = geoTransverseMercator().rotate([-LON0, -LAT0]).fitExtent([[pad, pad], [w - pad, h - pad]], limite);
-  const recorte = geoTransverseMercator().rotate([-LON0, -LAT0]).scale(proj.scale()).translate(proj.translate())
+  const proj = B.projecao().fitExtent([[pad, pad], [w - pad, h - pad]], B.limite);
+  const recorte = B.projecao().scale(proj.scale()).translate(proj.translate())
     .clipExtent([[-20, -20], [w + 20, h + 20]]);
-  const pxKm = (() => {
-    const [cx, cy] = proj([LON0, LAT0]);
-    const a = proj.invert([cx, cy - 200]);
-    const b = proj.invert([cx, cy + 200]);
-    return 400 / (geoDistance(a, b) * 6371.0088);
-  })();
+  const pxKm = B.medir(proj);
   return { proj, path: geoPath(proj).digits(1), pathR: geoPath(recorte).digits(1), pxKm };
 }
 
@@ -186,29 +255,29 @@ function quadroMapa(w, h, mapa) {
 <pattern id="${id}h" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="${PAPEL}"/><path d="M0 0V7" stroke="#aeb4ba" stroke-width="1.1"/></pattern></defs>`);
   s.push(`<g clip-path="url(#${id})">`);
   s.push(`<rect width="${w}" height="${h}" fill="${OCEANO}"/>`);
-  const terra = [...paises, ...cache.vizinhos.features].map((f) => pathR(f)).filter(Boolean).join('');
+  const terra = B.terra.map((f) => pathR(f)).filter(Boolean).join('');
   for (const [dd, op] of [[26, 0.35], [18, 0.5], [11, 0.7], [5, 0.9]]) {
     s.push(`<path d="${terra}" fill="none" stroke="${LINHA_AGUA}" stroke-opacity="${op}" stroke-width="${2 * dd + 1.4}" stroke-linejoin="round"/>`);
     s.push(`<path d="${terra}" fill="none" stroke="${OCEANO}" stroke-width="${2 * dd}" stroke-linejoin="round"/>`);
   }
-  s.push(`<g fill="${ESTRANGEIRO}" stroke="${ESTRANGEIRO}" stroke-width="3">${paises.map((p) => pathR(p)).filter(Boolean).map((d) => `<path d="${d}"/>`).join('')}</g>`);
-  s.push(`<g fill="${VIZINHO}" stroke="${BORDA_VIZINHO}" stroke-width="1.1" stroke-linejoin="round">${cache.vizinhos.features.filter((v) => v.properties.SIGLA_UF !== 'SP').map((v) => `<path d="${pathR(v)}"/>`).join('')}</g>`);
+  s.push(`<g fill="${ESTRANGEIRO}" stroke="${ESTRANGEIRO}" stroke-width="3">${B.paises.map((p) => pathR(p)).filter(Boolean).map((d) => `<path d="${d}"/>`).join('')}</g>`);
+  s.push(`<g fill="${VIZINHO}" stroke="${BORDA_VIZINHO}" stroke-width="1.1" stroke-linejoin="round">${B.vizinhos.map((v) => `<path d="${pathR(v)}"/>`).join('')}</g>`);
   if (mapa.graticulado !== false) {
-    const grat = geoGraticule().step([1, 1]).extent([[-60, -32], [-38, -14]]);
+    const grat = geoGraticule().step([B.grat.passo, B.grat.passo]).extent(B.grat.extensao);
     s.push(`<path d="${pathR(grat())}" fill="none" stroke="#8b949c" stroke-width=".7" stroke-opacity=".5"/>`);
   }
   // Municípios.
   const fino = mapa.bordaMunicipio ?? 0.5;
-  s.push(`<g stroke="${PAPEL}" stroke-width="${fino}" stroke-linejoin="round">${municipios
+  s.push(`<g stroke="${mapa.bordaUnidadeCor ?? PAPEL}" stroke-width="${fino}" stroke-linejoin="round">${B.unidades
     .map((m) => {
-      const cor = mapa.preencher(m.properties.CD_MUN);
+      const cor = mapa.preencher(B.codigo(m));
       return `<path d="${path(m)}" fill="${cor ?? `url(#${id}h)`}"/>`;
     })
     .join('')}</g>`);
   if (mapa.hachura) {
     const { cds, cor = '#1a211a', passo = 5, largura: lh = 0.8, angulo = -55 } = mapa.hachura;
     s.push(`<defs><pattern id="${id}x" width="${passo}" height="${passo}" patternUnits="userSpaceOnUse" patternTransform="rotate(${angulo})"><path d="M0 0V${passo}" stroke="${cor}" stroke-width="${lh}" stroke-opacity=".75"/></pattern></defs>`);
-    s.push(`<g fill="url(#${id}x)">${municipios.filter((m) => cds.has(m.properties.CD_MUN)).map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
+    s.push(`<g fill="url(#${id}x)">${B.unidades.filter((m) => cds.has(B.codigo(m))).map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
   }
   // Camadas extras (bacias, áreas protegidas…): [{ feats, cor(f) | cor, borda, largura, opacidade, hachura }].
   for (const [k, c] of (mapa.camadas ?? []).entries()) {
@@ -225,20 +294,28 @@ function quadroMapa(w, h, mapa) {
     s.push(`<g stroke="${c.borda ?? 'none'}" stroke-width="${c.largura ?? 0}" stroke-linejoin="round" fill-opacity="${c.opacidade ?? 1}"${c.tracejado ? ` stroke-dasharray="${c.tracejado}"` : ''}>${feats
       .map((f) => [f, path(f)]).filter(([, d]) => d).map(([f, d]) => `<path d="${d}" fill="${corDe(f)}"/>`).join('')}</g>`);
   }
-  if (!mapa.semRgint) s.push(`<path d="${cache.rgint.features.map((r) => path(r)).join('')}" fill="none" stroke="${LIM_RGINT}" stroke-width="${mapa.bordaRgint ?? 1.4}" stroke-linejoin="round" stroke-opacity=".85"/>`);
-  s.push(`<path d="${path(limite)}" fill="none" stroke="${TINTA}" stroke-width="${mapa.bordaEstado ?? 2.6}" stroke-linejoin="round"/>`);
+  if (!mapa.semRgint) s.push(`<path d="${B.internas.map((r) => path(r)).join('')}" fill="none" stroke="${LIM_RGINT}" stroke-width="${mapa.bordaRgint ?? 1.4}" stroke-linejoin="round" stroke-opacity=".85"/>`);
+  s.push(`<path d="${path(B.limite)}" fill="none" stroke="${TINTA}" stroke-width="${mapa.bordaEstado ?? 2.6}" stroke-linejoin="round"/>`);
+  // Camadas de linhas por cima do limite (rede de transmissão…): [{ feats, cor(f) | cor, largura(f) | largura, halo }].
+  for (const c of mapa.linhas ?? []) {
+    const cor = (f) => (typeof c.cor === 'function' ? c.cor(f) : c.cor);
+    const lw = (f) => (typeof c.largura === 'function' ? c.largura(f) : (c.largura ?? 1));
+    const ds = c.feats.map((f) => [f, path(f)]).filter(([, d]) => d);
+    if (c.halo) s.push(`<g fill="none" stroke="${PAPEL}" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".85">${ds.map(([f, d]) => `<path d="${d}" stroke-width="${f1(lw(f) + c.halo)}"/>`).join('')}</g>`);
+    s.push(`<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="${c.opacidade ?? 1}">${ds.map(([f, d]) => `<path d="${d}" stroke="${cor(f)}" stroke-width="${lw(f)}"/>`).join('')}</g>`);
+  }
   // Pontos: maiores por baixo.
   for (const p of [...(mapa.pontos ?? [])].sort((a, b) => b.r - a.r)) {
     const [x, y] = proj(p.coord);
     if (p.anel) { s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(p.r)}" fill="none" stroke="${p.cor}" stroke-width="${p.largura ?? 2}" stroke-opacity=".95"/>`); continue; }
-    s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(p.r)}" fill="${p.vazado ? PAPEL : p.cor}" fill-opacity="${p.vazado ? 1 : (p.opacidade ?? 0.9)}" stroke="${p.vazado ? p.cor : (p.borda ?? PAPEL)}" stroke-width="${p.vazado ? 2 : 1.2}"/>`);
+    s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(p.r)}" fill="${p.vazado ? PAPEL : p.cor}" fill-opacity="${p.vazado ? 1 : (p.opacidade ?? 0.9)}" stroke="${p.vazado ? p.cor : (p.borda ?? PAPEL)}" stroke-width="${p.vazado ? 2 : (p.bordaLargura ?? 1.2)}"/>`);
   }
   // Rótulos: UFs vizinhas, oceano, destaques, capital.
   const ocupado = [];
   const cabe = ([a0, b0, a1, b1]) => a0 > 14 && b0 > 14 && a1 < w - 14 && b1 < h - 14 &&
     !ocupado.some(([c0, d0, c1, d1]) => a0 < c1 + 4 && a1 > c0 - 4 && b0 < d1 + 4 && b1 > d0 - 4);
   for (const r of mapa.reservas ?? []) ocupado.push(r);
-  const porCd = new Map(municipios.map((m) => [m.properties.CD_MUN, m]));
+  const porCd = new Map(B.unidades.map((m) => [B.codigo(m), m]));
   for (const c of mapa.chamadas ?? []) {
     const [x, y] = c.coord ? proj(c.coord) : path.centroid(porCd.get(c.cd));
     const ch = chamada(x, y, c);
@@ -247,7 +324,8 @@ function quadroMapa(w, h, mapa) {
   }
   const tUf = mapa.tamanhoUf ?? 15;
   if (mapa.rotulosUf !== false)
-    for (const [nome, c] of ROTULOS_UF) {
+    for (const [pt, en, c] of B.rotulos) {
+      const nome = LINGUA === 'en' ? en : pt;
       const [x, y] = proj(c);
       const lw = largura(nome, tUf, { mono: true, espaco: 3 });
       const caixa = [x - lw / 2, y - tUf, x + lw / 2, y + 4];
@@ -256,7 +334,7 @@ function quadroMapa(w, h, mapa) {
       s.push(`<text x="${f1(x)}" y="${f1(y)}" text-anchor="middle" font-family="${MONO}" font-size="${tUf}" letter-spacing="3" fill="#8a9198">${esc(nome)}</text>`);
     }
   if (mapa.oceano !== false) {
-    const [x, y] = proj(PONTO_OCEANO);
+    const [x, y] = proj(B.oceano);
     const t = mapa.tamanhoOceano ?? 19;
     const lw = largura(tr('OCEANO ATLÂNTICO'), t, { espaco: 5 });
     const caixa = [x - lw / 2, y - t, x + lw / 2, y + 6];
@@ -265,14 +343,25 @@ function quadroMapa(w, h, mapa) {
       s.push(`<text x="${f1(x)}" y="${f1(y)}" text-anchor="middle" font-family="${SERIF}" font-style="italic" font-size="${t}" letter-spacing="5" fill="#6f8796">${tr('OCEANO ATLÂNTICO')}</text>`);
     }
   }
-  const [cx, cy] = proj(cache.capital.coord);
+  // Siglas das unidades (só no recorte nacional).
+  if (mapa.rotulosUnidades !== false && B.rotulosUnidades) {
+    const tU = mapa.tamanhoUnidade ?? 13;
+    for (const [sig, c] of B.rotulosUnidades) {
+      if (mapa.semRotulo?.includes(sig)) continue;
+      const [x, y] = proj(c);
+      const caixa = [x - 12, y - tU, x + 12, y + 3];
+      ocupado.push(caixa);
+      s.push(`<text x="${f1(x)}" y="${f1(y)}" text-anchor="middle" font-family="${MONO}" font-size="${tU}" letter-spacing="1" fill="#5d646b" ${halo(3)}>${sig}</text>`);
+    }
+  }
+  const [cx, cy] = proj(B.capital.coord);
   const est = mapa.tamanhoEstrela ?? 1;
   s.push(`<g transform="translate(${f1(cx)} ${f1(cy)}) scale(${est})"><path d="M0-11l3.1 7.1 7.7.6-5.9 5 1.8 7.6L0 5.3l-6.7 4 1.8-7.6-5.9-5 7.7-.6z" fill="${TINTA}" stroke="${PAPEL}" stroke-width="2.2" paint-order="stroke" stroke-linejoin="round"/></g>`);
   ocupado.push([cx - 12 * est, cy - 12 * est, cx + 12 * est, cy + 12 * est]);
   if (mapa.capitalNome !== false) {
     const t = mapa.tamanhoCapital ?? 20;
-    s.push(`<text x="${f1(cx + 14 * est)}" y="${f1(cy + t * 0.32)}" font-family="${SERIF}" font-size="${t}" font-style="italic" fill="${TINTA}" ${halo(5)}>${esc(cache.capital.nome)}</text>`);
-    ocupado.push([cx, cy - t, cx + 14 * est + largura(cache.capital.nome, t), cy + 6]);
+    s.push(`<text x="${f1(cx + 14 * est)}" y="${f1(cy + t * 0.32)}" font-family="${SERIF}" font-size="${t}" font-style="italic" fill="${TINTA}" ${halo(5)}>${esc(B.capital.nome)}</text>`);
+    ocupado.push([cx, cy - t, cx + 14 * est + largura(B.capital.nome, t), cy + 6]);
   }
   const tD = mapa.tamanhoDestaque ?? 13;
   for (const d of mapa.destaques ?? []) {
@@ -298,14 +387,15 @@ function quadroMapa(w, h, mapa) {
 /* ------------------------------------------------------------------ peças fixas */
 function localizador(x, y, lado) {
   const pl = geoConicEqualArea().parallels([-2, -22]).rotate([54, 0]);
-  const ufs = cache.ufs.features;
-  pl.fitExtent([[20, 34], [lado - 20, lado - 20]], { type: 'FeatureCollection', features: ufs });
+  // No recorte nacional, o localizador é a América do Sul com o Brasil em destaque.
+  const ufs = B.sigla === 'BR' ? [...B.paises.filter((f) => f.properties.name !== 'France'), B.limite] : cache.ufs.features;
+  pl.fitExtent([[20, 34], [lado - 20, lado - 20]], { type: 'FeatureCollection', features: B.sigla === 'BR' ? [B.limite, ...B.paises.filter((f) => !['France', 'Falkland Is.', 'Panama', 'Costa Rica', 'Nicaragua', 'Trinidad and Tobago'].includes(f.properties.name))] : ufs });
   const p = geoPath(pl).digits(1);
-  const alvo = ufs.find((f) => f.properties.SIGLA_UF === 'SP');
+  const alvo = B.sigla === 'BR' ? B.limite : ufs.find((f) => f.properties.SIGLA_UF === 'SP');
   return `<g transform="translate(${x} ${y})">
   <rect width="${lado}" height="${lado}" fill="${PAPEL}" stroke="${TINTA}" stroke-width="1.2"/>
   <text x="14" y="26" font-family="${MONO}" font-size="13" letter-spacing="2.4" fill="${CINZA}">${tr('LOCALIZAÇÃO')}</text>
-  <g fill="#e7eaec" stroke="${PAPEL}" stroke-width=".8">${ufs.map((f) => `<path d="${p(f)}"/>`).join('')}</g>
+  <clipPath id="loc${x}"><rect width="${lado}" height="${lado}"/></clipPath><g clip-path="url(#loc${x})"><g fill="#e7eaec" stroke="${PAPEL}" stroke-width=".8">${ufs.map((f) => p(f)).filter(Boolean).map((d) => `<path d="${d}"/>`).join('')}</g></g>
   <path d="${p(alvo)}" fill="${TINTA}"/>
 </g>`;
 }
@@ -313,7 +403,7 @@ function localizador(x, y, lado) {
 /** Coordenadas na borda de um quadro (só no layout de um mapa). */
 function bordas(proj, w, h, evitar) {
   const s = [];
-  const grau = (v, eixo) => `${Math.abs(v)}° ${eixo === 'lon' ? (LINGUA === 'en' ? 'W' : 'O') : 'S'}`;
+  const grau = (v, eixo) => (v === 0 ? '0°' : `${Math.abs(v)}° ${eixo === 'lon' ? (LINGUA === 'en' ? 'W' : 'O') : v > 0 ? 'N' : 'S'}`);
   const raiz = (fn, a, b) => {
     let fa = fn(a);
     for (let i = 0; i < 60; i++) {
@@ -325,7 +415,7 @@ function bordas(proj, w, h, evitar) {
   };
   const sobre = (a0, b0, a1, b1) => evitar.some(([x0, y0, x1, y1]) => a1 > x0 - 8 && a0 < x1 + 8 && b1 > y0 - 8 && b0 < y1 + 8);
   const estilo = `font-family="${MONO}" font-size="13" fill="${TINTA}" ${halo(4)}`;
-  for (let lon = -56; lon <= -40; lon++)
+  for (let lon = B.bordas.lon[0]; lon <= B.bordas.lon[1]; lon += B.bordas.lon[2])
     for (const [yy, dy] of [[0, 20], [h, -8]]) {
       const lat = raiz((la) => proj([lon, la])[1] - yy, -40, 10);
       const [x] = proj([lon, lat]);
@@ -333,7 +423,7 @@ function bordas(proj, w, h, evitar) {
       s.push(`<path d="M${f1(x)} ${yy}v${yy ? -12 : 12}" stroke="${TINTA}" stroke-width="1.2"/>`);
       s.push(`<text x="${f1(x + 5)}" y="${yy + dy}" ${estilo}>${grau(lon, 'lon')}</text>`);
     }
-  for (let lat = -30; lat <= -15; lat++)
+  for (let lat = B.bordas.lat[0]; lat <= B.bordas.lat[1]; lat += B.bordas.lat[2])
     for (const [xx, dx, anc] of [[0, 8, 'start'], [w, -8, 'end']]) {
       const lon = raiz((lo) => proj([lo, lat])[0] - xx, -90, -20);
       const [, y] = proj([lon, lat]);
@@ -372,7 +462,7 @@ export function legendaFaixa(cores, limites, { x = 0, y = 0, larg = 56, titulo =
 }
 
 function escala(pxKm, alvoPx = 300) {
-  const bons = [10, 20, 25, 50, 75, 100, 150, 200, 250, 300];
+  const bons = [10, 20, 25, 50, 75, 100, 150, 200, 250, 300, 400, 500, 750, 1000];
   const km = bons.reduce((a, b) => (Math.abs(b - alvoPx / pxKm) < Math.abs(a - alvoPx / pxKm) ? b : a));
   return { km, px: km * pxKm };
 }
@@ -384,10 +474,10 @@ function cabecalho(tema, numero) {
   s.push(`<path d="M0 86H${LP}" stroke="${TINTA}" stroke-width="1.6"/>`);
   s.push(`<text x="0" y="176" font-family="${SERIF}" font-size="76">${tr('Nº')} ${String(numero).padStart(3, '0')}</text>`);
   s.push(`<path d="M${LP - 34} 132l5.2 12.3 13.3 1.1-10.1 8.8 3 13-11.4-6.9-11.4 6.9 3-13-10.1-8.8 13.3-1.1z" fill="${OURO}"/>`);
-  const [bayer, nome] = ESTRELAS.SP;
+  const [bayer, nome] = B.estrela;
   s.push(`<text x="${LP - 34}" y="178" text-anchor="middle" font-family="${MONO}" font-size="3.5" letter-spacing=".3" fill="${CINZA}">${esc(`${bayer} · ${nome}`)}</text>`);
   s.push(`<text x="0" y="226" font-family="${MONO}" font-size="15" letter-spacing="3" fill="${CINZA}">${esc(tema.serie())}</text>`);
-  s.push(`<text x="${LP}" y="226" text-anchor="end" font-family="${MONO}" font-size="15" letter-spacing="3" fill="${CINZA}">SP</text>`);
+  s.push(`<text x="${LP}" y="226" text-anchor="end" font-family="${MONO}" font-size="15" letter-spacing="3" fill="${CINZA}">${B.sigla}</text>`);
   let tt = 62;
   let linhas = [tema.titulo()];
   while (largura(linhas[0], tt) > LP && tt > 48) tt -= 2;
@@ -431,12 +521,11 @@ const carimboAltura = (fontes) => 5 * 22 + (4 + fontes.length) * 22;
 
 function carimbo(tema, numero, data, yFim) {
   const dataTxt = data.toLocaleDateString(LINGUA === 'en' ? 'en-GB' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
-  const gr = (v, h) => `${nf(Math.abs(v), 1)}° ${h}`;
   const fontes = tema.fontes();
   const linhas = [
     ['PRANCHA', [`Essencial Geo · ${tr('Nº')} ${String(numero).padStart(3, '0')}`]],
     ['DATA', [dataTxt]],
-    ['PROJEÇÃO', [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`]],
+    ['PROJEÇÃO', B.carimbo()],
     ['FONTES', fontes],
     ['LICENÇA', ['CC BY 4.0']],
   ];
@@ -462,7 +551,7 @@ function blocoEscala(pxKm, y, nota) {
     ${[0, 1, 2, 3].map((i) => `<rect x="${f1(i * seg)}" y="0" width="${f1(seg)}" height="9" fill="${i % 2 ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1.1"/>`).join('')}
     ${[0, 2, 4].map((i) => `<text x="${f1(i * seg)}" y="32" text-anchor="middle" font-family="${MONO}" font-size="14">${nf((km / 4) * i)}</text>`).join('')}
     <text x="${f1(px + 16)}" y="9" font-family="${MONO}" font-size="14" fill="${CINZA}">km</text>
-    <text x="0" y="54" font-family="${MONO}" font-size="12" fill="${CINZA}">${tr('verdadeira no meridiano central')}${nota ? ` · ${tr(nota)}` : ''}</text>
+    <text x="0" y="54" font-family="${MONO}" font-size="12" fill="${CINZA}">${tr(B.notaEscala)}${nota ? ` · ${tr(nota)}` : ''}</text>
   </g>`;
 }
 

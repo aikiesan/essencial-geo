@@ -18,3 +18,5 @@ scripts/colecoes/cache/
 # anexos das releases das coleções (bioenergia-sp-2026, …)
 mapas/*/dados/*.gpkg.zip
 __pycache__/
+# CSV grande vai para a release energia-eletrica-2026
+mapas/043-usinas-por-fonte-brasil/dados/br_usinas_por_fonte.csv

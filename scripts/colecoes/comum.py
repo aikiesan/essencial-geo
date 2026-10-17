@@ -351,6 +351,14 @@ def _arredonda_coords(o, casas):
     return o
 
 
+def _valor_json(v):
+    if isinstance(v, (list, tuple)):
+        return list(v)
+    if v is None or (not isinstance(v, str) and pd.isna(v)):
+        return None
+    return v.item() if hasattr(v, "item") else v
+
+
 def para_d3(gdf: gpd.GeoDataFrame, campos: list[str], tol: float | None = None, casas: int = 4,
             cobertura: bool = True) -> dict:
     """FeatureCollection para a prancha (só desenho): simplificada em graus, anéis no sentido do d3.
@@ -370,8 +378,7 @@ def para_d3(gdf: gpd.GeoDataFrame, campos: list[str], tol: float | None = None, 
     for (_, linha_), geom in zip(g.iterrows(), geoms):
         if geom is None or geom.is_empty:
             continue
-        p = {c: (None if not isinstance(linha_[c], str) and pd.isna(linha_[c]) else
-                 (linha_[c].item() if hasattr(linha_[c], "item") else linha_[c])) for c in campos}
+        p = {c: _valor_json(linha_[c]) for c in campos}
         m = mapping(_horario(geom))
         feats.append({"type": "Feature", "properties": p,
                       "geometry": {"type": m["type"], "coordinates": _arredonda_coords(m["coordinates"], casas)}})
