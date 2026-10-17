@@ -1,6 +1,7 @@
 /* ==========================================================================
    ESSENCIAL GEO — sistema visual
-   Ateliê cartográfico: papel técnico, nanquim, linhas de 1px, cantos vivos.
+   Ateliê cartográfico: papel branco-gelo, nanquim, linhas de 1px, cantos vivos.
+   Fundos sempre neutros — a cor pertence aos mapas.
    Regra de ouro: nenhum border-radius, nenhum gradiente decorativo, nenhum brilho.
    ========================================================================== */
 
@@ -13,14 +14,14 @@
 /* ---------- Tokens ------------------------------------------------------ */
 :root {
   /* Papel & tinta */
-  --papel: #f3eee3;          /* pergaminho técnico */
-  --papel-2: #ebe4d4;        /* papel manteiga, áreas recuadas */
-  --folha: #faf7f0;          /* a folha da prancha */
-  --tinta: #1d1b18;          /* nanquim */
-  --tinta-2: #4f4a41;        /* grafite */
-  --tinta-3: #857d70;        /* cinza-fóssil, metadados */
-  --linha: #1d1b18;          /* traço de 1px */
-  --linha-fina: #c9c0ad;     /* guias e separadores secundários */
+  --papel: #f6f7f8;          /* branco-gelo neutro: não tinge as cores do mapa */
+  --papel-2: #edeff1;        /* gelo mais fundo, áreas recuadas */
+  --folha: #ffffff;          /* a folha da prancha: branco puro */
+  --tinta: #1a1c1e;          /* nanquim neutro */
+  --tinta-2: #4a4f55;        /* grafite */
+  --tinta-3: #7a8189;        /* cinza neutro, metadados */
+  --linha: #1a1c1e;          /* traço de 1px */
+  --linha-fina: #d3d8dd;     /* guias e separadores secundários */
 
   /* Minerais do território */
   --ocre: #b07d26;
@@ -61,8 +62,8 @@
   --col-dir: 344px;
   --feed-max: 760px;
 
-  /* Grão de papel: ruído sutil, sem textura figurativa */
-  --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  /* Grão de papel: ruído neutro quase imperceptível, sem tingir o fundo */
+  --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
   color-scheme: light;
 }
@@ -72,10 +73,10 @@
   --papel: #16181a;
   --papel-2: #1c1f22;
   --folha: #1f2326;
-  --tinta: #e7e1d3;
-  --tinta-2: #bdb5a5;
-  --tinta-3: #8a8377;
-  --linha: #cfc7b6;
+  --tinta: #e6e8ea;
+  --tinta-2: #b4b9bf;
+  --tinta-3: #868c93;
+  --linha: #c9cdd2;
   --linha-fina: #3a3e42;
   --ocre: #d3a24a;
   --argila: #d47a5c;

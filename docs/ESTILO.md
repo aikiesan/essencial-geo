@@ -11,20 +11,23 @@ Nolli, as ilustrações de Saint-Exupéry — estas só como eco distante (uma e
    (`--linha` para estrutura, `--linha-fina` para guias), nunca da espessura exagerada.
 3. **Sem efeitos.** Nada de gradiente decorativo, brilho, sombra flutuante, vidro fosco ou neon.
    As únicas transições são de cor, em 120 ms, lineares.
-4. **Cor é dado.** No site, a interface é papel e nanquim; cor aparece nos mapas e em um único acento
+4. **Fundos neutros.** Branco-gelo no tema claro, grafite neutro no escuro — nunca papel envelhecido,
+   sépia ou bege. Um fundo tingido altera a percepção das cores do mapa (contraste simultâneo) e
+   compromete as paletas perceptualmente uniformes. A prancha em si é sempre exportada sobre branco puro.
+5. **Cor é dado.** A interface é branco e nanquim; cor aparece nos mapas e em um único acento
    (argila para foco/hover, ocre para as estrelas).
 
 ## Tokens (`src/styles/global.css`)
 
 | Token | Papel (claro) | Nanquim (escuro) | Uso |
 | --- | --- | --- | --- |
-| `--papel` | `#f3eee3` | `#16181a` | Fundo geral (com grão sutil) |
-| `--papel-2` | `#ebe4d4` | `#1c1f22` | Áreas recuadas: citação, código |
-| `--folha` | `#faf7f0` | `#1f2326` | A folha dentro da moldura da prancha |
-| `--tinta` | `#1d1b18` | `#e7e1d3` | Texto e linhas estruturais |
-| `--tinta-2` | `#4f4a41` | `#bdb5a5` | Texto secundário, subtítulos |
-| `--tinta-3` | `#857d70` | `#8a8377` | Rótulos técnicos, metadados |
-| `--linha-fina` | `#c9c0ad` | `#3a3e42` | Guias, separadores de lista |
+| `--papel` | `#f6f7f8` | `#16181a` | Fundo geral, branco-gelo (grão neutro quase imperceptível) |
+| `--papel-2` | `#edeff1` | `#1c1f22` | Áreas recuadas: citação, código |
+| `--folha` | `#ffffff` | `#1f2326` | A moldura em volta da prancha |
+| `--tinta` | `#1a1c1e` | `#e6e8ea` | Texto e linhas estruturais |
+| `--tinta-2` | `#4a4f55` | `#b4b9bf` | Texto secundário, subtítulos |
+| `--tinta-3` | `#7a8189` | `#868c93` | Rótulos técnicos, metadados |
+| `--linha-fina` | `#d3d8dd` | `#3a3e42` | Guias, separadores de lista |
 | `--argila` | `#9c4a32` | `#d47a5c` | Acento de interação |
 | `--ocre` / `--estrela` | `#b07d26` / `#c99a2e` | `#d3a24a` / `#e2bb5a` | Seleção; as pequenas estrelas |
 | `--azul-profundo` | `#1f3a5f` | `#8fb0d9` | Foco de teclado |

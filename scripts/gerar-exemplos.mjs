@@ -180,9 +180,9 @@ const PX_M = 10; // 1 px = 10 m (escala sintética)
 
 const FONTE_SERIF = "Georgia, 'Times New Roman', serif";
 const FONTE_MONO = "Consolas, 'DejaVu Sans Mono', monospace";
-const TINTA = '#1d1b18';
-const PAPEL = '#fbf9f4';
-const FINA = '#c9c0ad';
+const TINTA = '#1a1c1e';
+const PAPEL = '#ffffff';
+const FINA = '#c8cdd2';
 
 /** Converte px do mapa em metros sintéticos (origem no canto inferior esquerdo). */
 const metros = ([x, y]) => [x * PX_M, (MH - y) * PX_M];
@@ -215,7 +215,7 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
     .map(
       ([k, v], i) =>
         `<g transform="translate(0 ${i * 44})"><path d="M0 0H${PW - 64}" stroke="${TINTA}" stroke-width="${i ? 0.8 : 1.6}"/>` +
-        `<text x="0" y="29" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.2" fill="#857d70">${k}</text>` +
+        `<text x="0" y="29" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.2" fill="#7a8189">${k}</text>` +
         `<text x="128" y="29" font-family="${FONTE_MONO}" font-size="17" fill="${TINTA}">${esc(v)}</text></g>`,
     )
     .join('');
@@ -248,8 +248,8 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
       <g transform="translate(120 72)">
         ${[0, 1, 2, 3, 4].map((i) => `<rect x="${i * 50}" y="0" width="50" height="10" fill="${i % 2 ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1.2"/>`).join('')}
         ${[0, 1, 2, 3, 4, 5].map((i) => `<text x="${i * 50}" y="38" text-anchor="middle" font-family="${FONTE_MONO}" font-size="14">${i}</text>`).join('')}
-        <text x="270" y="38" font-family="${FONTE_MONO}" font-size="14" fill="#857d70">km</text>
-        <text x="0" y="-16" font-family="${FONTE_MONO}" font-size="13" letter-spacing="1.5" fill="#857d70">ESCALA GRÁFICA · 1:50.000</text>
+        <text x="270" y="38" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">km</text>
+        <text x="0" y="-16" font-family="${FONTE_MONO}" font-size="13" letter-spacing="1.5" fill="#7a8189">ESCALA GRÁFICA · 1:50.000</text>
       </g>
     </g>
     <g transform="translate(0 ${yCar})">${carimboSvg}</g>
@@ -262,7 +262,7 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
 }
 
 const legTitulo = (t) =>
-  `<text x="0" y="0" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.4" fill="#857d70">${esc(t)}</text>`;
+  `<text x="0" y="0" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.4" fill="#7a8189">${esc(t)}</text>`;
 
 /* =================================================================== 001 */
 function densidade() {
@@ -331,7 +331,7 @@ function densidade() {
       .join('') +
     `<g transform="translate(0 ${30 + 5 * 40 + 6})"><path d="M0 14h28" stroke="${TINTA}" stroke-width="2.4" stroke-dasharray="10 4 2 4"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">limite do recorte</text></g>
      <g transform="translate(0 ${30 + 6 * 40 + 6})"><path d="M13 14h2" stroke="${FINA}" stroke-width="2"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">célula sem população</text></g>
-     <text x="0" y="${30 + 7 * 40 + 24}" font-family="${FONTE_MONO}" font-size="14" fill="#857d70">grade regular de ${C * PX_M} m · viridis</text>`;
+     <text x="0" y="${30 + 7 * 40 + 24}" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">grade regular de ${C * PX_M} m · viridis</text>`;
 
   const dxfArq = dxf([
     { nome: 'LIMITE', cor: 7, polilinhas: [{ pts: limite.map(metros), fechada: true }] },
@@ -509,14 +509,14 @@ function usoDoSolo() {
   }
 
   const svg =
-    celulas.map((c) => `<path d="${caminho(c.poli)}" fill="${CLASSES_USO[c.k].cor}" stroke="#fbf9f4" stroke-width=".7" stroke-opacity=".55"/>`).join('') +
+    celulas.map((c) => `<path d="${caminho(c.poli)}" fill="${CLASSES_USO[c.k].cor}" stroke="${PAPEL}" stroke-width=".7" stroke-opacity=".55"/>`).join('') +
     pivos
       .map(
         ([x, y, rr]) =>
-          `<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(rr)}" fill="#d99a5c" stroke="#fbf9f4" stroke-width="1.6"/><path d="M${f1(x)} ${f1(y)}L${f1(x + rr * 0.92)} ${f1(y - rr * 0.38)}" stroke="#fbf9f4" stroke-width="1"/>`,
+          `<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(rr)}" fill="#d99a5c" stroke="${PAPEL}" stroke-width="1.6"/><path d="M${f1(x)} ${f1(y)}L${f1(x + rr * 0.92)} ${f1(y - rr * 0.38)}" stroke="${PAPEL}" stroke-width="1"/>`,
       )
       .join('') +
-    `<path d="${caminho(rio, false)}" fill="none" stroke="#fbf9f4" stroke-width="12"/>` +
+    `<path d="${caminho(rio, false)}" fill="none" stroke="${PAPEL}" stroke-width="12"/>` +
     `<path d="${caminho(rio, false)}" fill="none" stroke="${CLASSES_USO.agua.cor}" stroke-width="7"/>`;
 
   const ordem = ['florestal', 'savanica', 'campestre', 'pastagem', 'agricultura', 'silvicultura', 'urbano', 'agua'];
@@ -633,7 +633,7 @@ function figuraFundo() {
      <g transform="translate(0 96)"><rect width="34" height="24" fill="url(#hachura)" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Parque / área verde</text></g>
      <g transform="translate(0 132)"><rect x="1" y="1" width="32" height="22" fill="none" stroke="${TINTA}" stroke-width="1.2" stroke-dasharray="3 4"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Praça</text></g>
      <g transform="translate(0 168)"><rect width="34" height="24" fill="#dfe4e3" stroke="${TINTA}" stroke-width="1.6"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Curso d’água</text></g>
-     <text x="0" y="234" font-family="${FONTE_MONO}" font-size="14" fill="#857d70">à maneira de G. Nolli (Roma, 1748)</text>`;
+     <text x="0" y="234" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">à maneira de G. Nolli (Roma, 1748)</text>`;
 
   const dxfArq = dxf([
     { nome: 'QUADRAS', cor: 7, polilinhas: quadras.map((q) => ({ pts: q.map(metros), fechada: true })) },
@@ -651,7 +651,7 @@ function modeloVazio() {
   const svg = `<rect width="${MW}" height="${MH}" fill="url(#vazio)"/>
     <rect x="${MW / 2 - 330}" y="${MH / 2 - 70}" width="660" height="140" fill="${PAPEL}" stroke="${TINTA}" stroke-width="1.2"/>
     <text x="${MW / 2}" y="${MH / 2 - 6}" text-anchor="middle" font-family="${FONTE_SERIF}" font-size="44">Prancha em preparo</text>
-    <text x="${MW / 2}" y="${MH / 2 + 38}" text-anchor="middle" font-family="${FONTE_MONO}" font-size="17" letter-spacing="3" fill="#857d70">SUBSTITUA mapa_preview.png</text>`;
+    <text x="${MW / 2}" y="${MH / 2 + 38}" text-anchor="middle" font-family="${FONTE_MONO}" font-size="17" letter-spacing="3" fill="#7a8189">SUBSTITUA mapa_preview.png</text>`;
   return { svg: { svg, defs }, legenda: legTitulo('LEGENDA') };
 }
 
