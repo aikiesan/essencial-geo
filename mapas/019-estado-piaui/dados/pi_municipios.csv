@@ -1,0 +1,225 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2200053,Acauã,220010,Paulistana,2203,Picos,,,1196.75,False
+2200103,Agricolândia,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,112.392,False
+2200251,Alagoinha do Piauí,220009,Picos,2203,Picos,,,535.89,False
+2200277,Alegrete do Piauí,220009,Picos,2203,Picos,,,243.732,False
+2200301,Alto Longá,220001,Teresina,2201,Teresina,,,1743.331,False
+2200400,Altos,220001,Teresina,2201,Teresina,,,957.226,False
+2200459,Alvorada do Gurguéia,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,2131.517,False
+2200509,Amarante,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,1180.193,False
+2200608,Angical do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,222.023,False
+2200806,Antônio Almeida,220018,Uruçuí,2206,Floriano,,,644.801,False
+2200707,Anísio de Abreu,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,337.876,False
+2200905,Aroazes,220004,Valença do Piauí,2201,Teresina,,,821.211,False
+2200954,Aroeiras do Itaim,220009,Picos,2203,Picos,,,316.235,False
+2201002,Arraial,220017,Floriano,2206,Floriano,,,619.21,False
+2201051,Assunção do Piauí,220003,Campo Maior,2201,Teresina,,,1690.698,False
+2201101,Avelino Lopes,220015,Corrente,2205,Corrente - Bom Jesus,,,1220.369,False
+2201150,Baixa Grande do Ribeiro,220018,Uruçuí,2206,Floriano,,,7808.913,False
+2201176,Barra D'Alcântara,220004,Valença do Piauí,2201,Teresina,,,263.943,False
+2201200,Barras,220005,Barras,2201,Teresina,,,1722.506,False
+2201309,Barreiras do Piauí,220015,Corrente,2205,Corrente - Bom Jesus,,,2168.713,False
+2201408,Barro Duro,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,159.436,False
+2201507,Batalha,220008,Esperantina,2202,Parnaíba,,,1584.255,False
+2201556,Bela Vista do Piauí,220012,Simplício Mendes,2203,Picos,,,499.092,False
+2201572,Belém do Piauí,220009,Picos,2203,Picos,,,243.234,False
+2201606,Beneditinos,220001,Teresina,2201,Teresina,,,937.443,False
+2201705,Bertolínia,220018,Uruçuí,2206,Floriano,,,1216.116,False
+2201739,Betânia do Piauí,220010,Paulistana,2203,Picos,,,667.433,False
+2201770,Boa Hora,220005,Barras,2201,Teresina,,,339.902,False
+2201804,Bocaina,220009,Picos,2203,Picos,,,261.49,False
+2201903,Bom Jesus,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,5470.984,False
+2201919,Bom Princípio do Piauí,220006,Parnaíba,2202,Parnaíba,,,523.143,False
+2201929,Bonfim do Piauí,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,289.149,False
+2201945,Boqueirão do Piauí,220003,Campo Maior,2201,Teresina,,,271.024,False
+2201960,Brasileira,220007,Piripiri,2202,Parnaíba,,,880.836,False
+2201988,Brejo do Piauí,220019,Canto do Buriti,2206,Floriano,,,2267.326,False
+2202000,Buriti dos Lopes,220006,Parnaíba,2202,Parnaíba,,,690.539,False
+2202026,Buriti dos Montes,220003,Campo Maior,2201,Teresina,,,2437.329,False
+2202059,Cabeceiras do Piauí,220005,Barras,2201,Teresina,,,608.744,False
+2202075,Cajazeiras do Piauí,220011,Oeiras,2203,Picos,,,515.427,False
+2202083,Cajueiro da Praia,220006,Parnaíba,2202,Parnaíba,,,271.165,False
+2202091,Caldeirão Grande do Piauí,220009,Picos,2203,Picos,,,467.082,False
+2202109,Campinas do Piauí,220012,Simplício Mendes,2203,Picos,,,783.843,False
+2202117,Campo Alegre do Fidalgo,220014,São João do Piauí,2204,São Raimundo Nonato,,,657.797,False
+2202133,Campo Grande do Piauí,220009,Picos,2203,Picos,,,311.682,False
+2202174,Campo Largo do Piauí,220005,Barras,2201,Teresina,,,478.079,False
+2202208,Campo Maior,220003,Campo Maior,2201,Teresina,,,1680.863,False
+2202251,Canavieira,220017,Floriano,2206,Floriano,,,2165.2,False
+2202307,Canto do Buriti,220019,Canto do Buriti,2206,Floriano,,,4325.643,False
+2202455,Capitão Gervásio Oliveira,220014,São João do Piauí,2204,São Raimundo Nonato,,,1132.996,False
+2202406,Capitão de Campos,220007,Piripiri,2202,Parnaíba,,,564.858,False
+2202505,Caracol,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,1610.959,False
+2202539,Caraúbas do Piauí,220006,Parnaíba,2202,Parnaíba,,,463.184,False
+2202554,Caridade do Piauí,220010,Paulistana,2203,Picos,,,498.793,False
+2202604,Castelo do Piauí,220003,Campo Maior,2201,Teresina,,,2378.846,False
+2202653,Caxingó,220006,Parnaíba,2202,Parnaíba,,,491.093,False
+2202703,Cocal,220006,Parnaíba,2202,Parnaíba,,,1294.131,False
+2202711,Cocal de Telha,220003,Campo Maior,2201,Teresina,,,310.254,False
+2202729,Cocal dos Alves,220006,Parnaíba,2202,Parnaíba,,,324.856,False
+2202737,Coivaras,220001,Teresina,2201,Teresina,,,484.465,False
+2202752,Colônia do Gurguéia,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,429.582,False
+2202778,Colônia do Piauí,220011,Oeiras,2203,Picos,,,938.303,False
+2202802,Conceição do Canindé,220012,Simplício Mendes,2203,Picos,,,824.729,False
+2202851,Coronel José Dias,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,1926.095,False
+2202901,Corrente,220015,Corrente,2205,Corrente - Bom Jesus,,,3048.746,False
+2203008,Cristalândia do Piauí,220015,Corrente,2205,Corrente - Bom Jesus,,,1202.898,False
+2203107,Cristino Castro,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,1845.69,False
+2203206,Curimatá,220015,Corrente,2205,Corrente - Bom Jesus,,,2344.949,False
+2203230,Currais,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,3156.695,False
+2203271,Curral Novo do Piauí,220010,Paulistana,2203,Picos,,,755.252,False
+2203255,Curralinhos,220001,Teresina,2201,Teresina,,,344.123,False
+2203305,Demerval Lobão,220001,Teresina,2201,Teresina,,,220.047,False
+2203354,Dirceu Arcoverde,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,1005.572,False
+2203404,Dom Expedito Lopes,220009,Picos,2203,Picos,,,218.808,False
+2203453,Dom Inocêncio,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,3871.83,False
+2203420,Domingos Mourão,220007,Piripiri,2202,Parnaíba,,,848.705,False
+2203503,Elesbão Veloso,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,1383.976,False
+2203602,Eliseu Martins,220019,Canto do Buriti,2206,Floriano,,,1097.866,False
+2203701,Esperantina,220008,Esperantina,2202,Parnaíba,,,911.736,False
+2203750,Fartura do Piauí,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,713.047,False
+2203800,Flores do Piauí,220019,Canto do Buriti,2206,Floriano,,,946.72,False
+2203859,Floresta do Piauí,220011,Oeiras,2203,Picos,,,221.519,False
+2203909,Floriano,220017,Floriano,2206,Floriano,,,3407.978,False
+2204006,Francinópolis,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,268.704,False
+2204105,Francisco Ayres,220017,Floriano,2206,Floriano,,,682.514,False
+2204154,Francisco Macedo,220009,Picos,2203,Picos,,,179.245,False
+2204204,Francisco Santos,220009,Picos,2203,Picos,,,492.191,False
+2204303,Fronteiras,220009,Picos,2203,Picos,,,777.179,False
+2204352,Geminiano,220009,Picos,2203,Picos,,,440.606,False
+2204402,Gilbués,220015,Corrente,2205,Corrente - Bom Jesus,,,3495.692,False
+2204501,Guadalupe,220017,Floriano,2206,Floriano,,,1026.538,False
+2204550,Guaribas,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,3118.231,False
+2204600,Hugo Napoleão,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,224.573,False
+2204659,Ilha Grande,220006,Parnaíba,2202,Parnaíba,,,129.696,False
+2204709,Inhuma,220004,Valença do Piauí,2201,Teresina,,,978.222,False
+2204808,Ipiranga do Piauí,220004,Valença do Piauí,2201,Teresina,,,529.417,False
+2204907,Isaías Coelho,220009,Picos,2203,Picos,,,800.687,False
+2205003,Itainópolis,220009,Picos,2203,Picos,,,827.62,False
+2205102,Itaueira,220017,Floriano,2206,Floriano,,,2554.178,False
+2205151,Jacobina do Piauí,220010,Paulistana,2203,Picos,,,1333.796,False
+2205201,Jaicós,220009,Picos,2203,Picos,,,866.788,False
+2205250,Jardim do Mulato,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,511.42,False
+2205276,Jatobá do Piauí,220003,Campo Maior,2201,Teresina,,,651.747,False
+2205300,Jerumenha,220017,Floriano,2206,Floriano,,,1865.94,False
+2205409,Joaquim Pires,220008,Esperantina,2202,Parnaíba,,,756.188,False
+2205458,Joca Marques,220008,Esperantina,2202,Parnaíba,,,169.005,False
+2205508,José de Freitas,220001,Teresina,2201,Teresina,,,1538.175,False
+2205359,João Costa,220014,São João do Piauí,2204,São Raimundo Nonato,,,1800.237,False
+2205516,Juazeiro do Piauí,220003,Campo Maior,2201,Teresina,,,935.404,False
+2205532,Jurema,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,1271.881,False
+2205524,Júlio Borges,220015,Corrente,2205,Corrente - Bom Jesus,,,1283.918,False
+2205557,Lagoa Alegre,220001,Teresina,2201,Teresina,,,394.207,False
+2205573,Lagoa de São Francisco,220007,Piripiri,2202,Parnaíba,,,155.86,False
+2205565,Lagoa do Barro do Piauí,220014,São João do Piauí,2204,São Raimundo Nonato,,,1331.025,False
+2205581,Lagoa do Piauí,220001,Teresina,2201,Teresina,,,435.871,False
+2205599,Lagoa do Sítio,220004,Valença do Piauí,2201,Teresina,,,805.018,False
+2205540,Lagoinha do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,67.649,False
+2205607,Landri Sales,220017,Floriano,2206,Floriano,,,1088.583,False
+2205805,Luzilândia,220008,Esperantina,2202,Parnaíba,,,699.182,False
+2205706,Luís Correia,220006,Parnaíba,2202,Parnaíba,,,1074.133,False
+2205854,Madeiro,220008,Esperantina,2202,Parnaíba,,,178.843,False
+2205904,Manoel Emídio,220018,Uruçuí,2206,Floriano,,,1620.412,False
+2205953,Marcolândia,220009,Picos,2203,Picos,,,136.786,False
+2206001,Marcos Parente,220017,Floriano,2206,Floriano,,,677.416,False
+2206050,Massapê do Piauí,220009,Picos,2203,Picos,,,530.169,False
+2206100,Matias Olímpio,220008,Esperantina,2202,Parnaíba,,,226.785,False
+2206209,Miguel Alves,220001,Teresina,2201,Teresina,,,1392.122,False
+2206308,Miguel Leão,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,102.761,False
+2206357,Milton Brandão,220007,Piripiri,2202,Parnaíba,,,1310.728,False
+2206407,Monsenhor Gil,220001,Teresina,2201,Teresina,,,552.427,False
+2206506,Monsenhor Hipólito,220009,Picos,2203,Picos,,,401.568,False
+2206605,Monte Alegre do Piauí,220015,Corrente,2205,Corrente - Bom Jesus,,,2417.394,False
+2206654,Morro Cabeça no Tempo,220015,Corrente,2205,Corrente - Bom Jesus,,,2207.658,False
+2206670,Morro do Chapéu do Piauí,220008,Esperantina,2202,Parnaíba,,,314.436,False
+2206696,Murici dos Portelas,220006,Parnaíba,2202,Parnaíba,,,475.72,False
+2206704,Nazaré do Piauí,220017,Floriano,2206,Floriano,,,1316.762,False
+2206720,Nazária,220001,Teresina,2201,Teresina,,,362.376,False
+2206753,Nossa Senhora de Nazaré,220003,Campo Maior,2201,Teresina,,,356.872,False
+2206803,Nossa Senhora dos Remédios,220005,Barras,2201,Teresina,,,357.896,False
+2207959,Nova Santa Rita,220014,São João do Piauí,2204,São Raimundo Nonato,,,909.734,False
+2206902,Novo Oriente do Piauí,220004,Valença do Piauí,2201,Teresina,,,525.906,False
+2206951,Novo Santo Antônio,220001,Teresina,2201,Teresina,,,443.873,False
+2207009,Oeiras,220011,Oeiras,2203,Picos,,,2696.724,False
+2207108,Olho D'Água do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,183.605,False
+2207207,Padre Marcos,220009,Picos,2203,Picos,,,278.696,False
+2207306,Paes Landim,220012,Simplício Mendes,2203,Picos,,,401.379,False
+2207355,Pajeú do Piauí,220019,Canto do Buriti,2206,Floriano,,,986.961,False
+2207405,Palmeira do Piauí,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,2023.971,False
+2207504,Palmeirais,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,1493.766,False
+2207553,Paquetá,220009,Picos,2203,Picos,,,432.572,False
+2207603,Parnaguá,220015,Corrente,2205,Corrente - Bom Jesus,,,3428.811,False
+2207702,Parnaíba,220006,Parnaíba,2202,Parnaíba,2207702,Parnaíba,436.907,False
+2207751,Passagem Franca do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,643.209,False
+2207777,Patos do Piauí,220010,Paulistana,2203,Picos,,,801.403,False
+2207793,Pau D'Arco do Piauí,220001,Teresina,2201,Teresina,,,430.024,False
+2207801,Paulistana,220010,Paulistana,2203,Picos,,,1937.343,False
+2207850,Pavussu,220019,Canto do Buriti,2206,Floriano,,,1090.697,False
+2207900,Pedro II,220007,Piripiri,2202,Parnaíba,,,1544.373,False
+2207934,Pedro Laurentino,220014,São João do Piauí,2204,São Raimundo Nonato,,,870.613,False
+2208007,Picos,220009,Picos,2203,Picos,,,577.284,False
+2208106,Pimenteiras,220004,Valença do Piauí,2201,Teresina,,,4555.95,False
+2208205,Pio IX,220009,Picos,2203,Picos,,,1948.141,False
+2208304,Piracuruca,220007,Piripiri,2202,Parnaíba,,,2309.93,False
+2208403,Piripiri,220007,Piripiri,2202,Parnaíba,,,1406.925,False
+2208502,Porto,220005,Barras,2201,Teresina,,,253.114,False
+2208551,Porto Alegre do Piauí,220017,Floriano,2206,Floriano,,,1168.044,False
+2208601,Prata do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,196.786,False
+2208650,Queimada Nova,220010,Paulistana,2203,Picos,,,1283.369,False
+2208700,Redenção do Gurguéia,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,2470.575,False
+2208809,Regeneração,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,1247.509,False
+2208858,Riacho Frio,220015,Corrente,2205,Corrente - Bom Jesus,,,2220.597,False
+2208874,Ribeira do Piauí,220014,São João do Piauí,2204,São Raimundo Nonato,,,1012.479,False
+2208908,Ribeiro Gonçalves,220018,Uruçuí,2206,Floriano,,,3987.142,False
+2209005,Rio Grande do Piauí,220019,Canto do Buriti,2206,Floriano,,,635.953,False
+2209104,Santa Cruz do Piauí,220009,Picos,2203,Picos,,,562.402,False
+2209153,Santa Cruz dos Milagres,220004,Valença do Piauí,2201,Teresina,,,978.546,False
+2209203,Santa Filomena,220015,Corrente,2205,Corrente - Bom Jesus,,,5293.693,False
+2209302,Santa Luz,220016,Bom Jesus,2205,Corrente - Bom Jesus,,,1185.404,False
+2209377,Santa Rosa do Piauí,220011,Oeiras,2203,Picos,,,338.339,False
+2209351,Santana do Piauí,220009,Picos,2203,Picos,,,112.189,False
+2209401,Santo Antônio de Lisboa,220009,Picos,2203,Picos,,,376.353,False
+2209450,Santo Antônio dos Milagres,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,34.444,False
+2209500,Santo Inácio do Piauí,220011,Oeiras,2203,Picos,,,845.492,False
+2210623,Sebastião Barros,220015,Corrente,2205,Corrente - Bom Jesus,,,893.489,False
+2210631,Sebastião Leal,220018,Uruçuí,2206,Floriano,,,3148.866,False
+2210656,Sigefredo Pacheco,220003,Campo Maior,2201,Teresina,,,1031.102,False
+2210805,Simplício Mendes,220012,Simplício Mendes,2203,Picos,,,1360.04,False
+2210706,Simões,220010,Paulistana,2203,Picos,,,1076.055,False
+2210904,Socorro do Piauí,220012,Simplício Mendes,2203,Picos,,,761.854,False
+2210938,Sussuapara,220009,Picos,2203,Picos,,,205.194,False
+2209559,São Braz do Piauí,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,656.042,False
+2209658,São Francisco de Assis do Piauí,220012,Simplício Mendes,2203,Picos,,,1072.311,False
+2209708,São Francisco do Piauí,220017,Floriano,2206,Floriano,,,1341.44,False
+2209609,São Félix do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,627.034,False
+2209757,São Gonçalo do Gurguéia,220015,Corrente,2205,Corrente - Bom Jesus,,,1385.259,False
+2209807,São Gonçalo do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,148.484,False
+2210052,São José do Divino,220007,Piripiri,2202,Parnaíba,,,391.157,False
+2210102,São José do Peixe,220017,Floriano,2206,Floriano,,,1287.174,False
+2210201,São José do Piauí,220009,Picos,2203,Picos,,,373.347,False
+2209856,São João da Canabrava,220009,Picos,2203,Picos,,,476.094,False
+2209872,São João da Fronteira,220007,Piripiri,2202,Parnaíba,,,817.115,False
+2209906,São João da Serra,220003,Campo Maior,2201,Teresina,,,994.224,False
+2209955,São João da Varjota,220011,Oeiras,2203,Picos,,,394.457,False
+2209971,São João do Arraial,220008,Esperantina,2202,Parnaíba,,,215.149,False
+2210003,São João do Piauí,220014,São João do Piauí,2204,São Raimundo Nonato,,,1527.488,False
+2210300,São Julião,220009,Picos,2203,Picos,,,291.089,False
+2210359,São Lourenço do Piauí,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,673.821,False
+2210375,São Luis do Piauí,220009,Picos,2203,Picos,,,238.099,False
+2210383,São Miguel da Baixa Grande,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,444.528,False
+2210391,São Miguel do Fidalgo,220011,Oeiras,2203,Picos,,,813.444,False
+2210409,São Miguel do Tapuio,220003,Campo Maior,2201,Teresina,,,4988.973,False
+2210508,São Pedro do Piauí,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,518.285,False
+2210607,São Raimundo Nonato,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,2415.29,False
+2210953,Tamboril do Piauí,220019,Canto do Buriti,2206,Floriano,,,1587.296,False
+2210979,Tanque do Piauí,220011,Oeiras,2203,Picos,,,408.985,False
+2211001,Teresina,220001,Teresina,2201,Teresina,2211001,Teresina/PI,1387.466,True
+2211100,União,220001,Teresina,2201,Teresina,,,1170.754,False
+2211209,Uruçuí,220018,Uruçuí,2206,Floriano,,,8413.009,False
+2211308,Valença do Piauí,220004,Valença do Piauí,2201,Teresina,,,1333.722,False
+2211506,Vera Mendes,220009,Picos,2203,Picos,,,341.975,False
+2211605,Vila Nova do Piauí,220009,Picos,2203,Picos,,,221.627,False
+2211357,Várzea Branca,220013,São Raimundo Nonato,2204,São Raimundo Nonato,,,450.429,False
+2211407,Várzea Grande,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,236.453,False
+2211704,Wall Ferraz,220009,Picos,2203,Picos,,,317.278,False
+2200202,Água Branca,220002,Amarante - Água Branca - Regeneração,2201,Teresina,,,96.843,False

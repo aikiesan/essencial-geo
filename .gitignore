@@ -7,3 +7,10 @@ dist/
 public/mapas/
 .DS_Store
 Thumbs.db
+
+# ambiente Python dos scripts de dados (scripts/estados)
+.venv-geo/
+scripts/estados/cache/
+# anexos da release estados-2025 (docs/PUBLICAR.md)
+mapas/*/dados/*_divisao_territorial.*.zip
+mapas/*/dados/*_prancha*.svg

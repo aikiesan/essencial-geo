@@ -1,0 +1,143 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+5100102,Acorizal,510001,Cuiabá,5101,Cuiabá,,,850.763,False
+5100250,Alta Floresta,510010,Alta Floresta,5103,Sinop,,,8955.409,False
+5100300,Alto Araguaia,510016,Rondonópolis,5105,Rondonópolis,,,5094.148,False
+5100359,Alto Boa Vista,510014,Confresa - Vila Rica,5104,Barra do Garças,,,2248.414,False
+5100409,Alto Garças,510016,Rondonópolis,5105,Rondonópolis,,,3857.559,False
+5100508,Alto Paraguai,510003,Diamantino,5101,Cuiabá,,,1847.354,False
+5100607,Alto Taquari,510016,Rondonópolis,5105,Rondonópolis,,,1744.743,False
+5100805,Apiacás,510010,Alta Floresta,5103,Sinop,,,20488.646,False
+5101001,Araguaiana,510013,Barra do Garças,5104,Barra do Garças,,,6380.7,False
+5101209,Araguainha,510016,Rondonópolis,5105,Rondonópolis,,,675.231,False
+5101258,Araputanga,510006,Mirassol D'oeste,5102,Cáceres,,,1639.731,False
+5101308,Arenápolis,510003,Diamantino,5101,Cuiabá,,,417.337,False
+5101407,Aripuanã,510009,Juína,5103,Sinop,,,24678.135,False
+5101704,Barra do Bugres,510002,Tangará da Serra,5101,Cuiabá,,,5976.863,False
+5101803,Barra do Garças,510013,Barra do Garças,5104,Barra do Garças,,,8362.912,False
+5101605,Barão de Melgaço,510001,Cuiabá,5101,Cuiabá,,,11374.872,False
+5101837,Boa Esperança do Norte,510008,Sorriso,5103,Sinop,,,4704.488,False
+5101852,Bom Jesus do Araguaia,510014,Confresa - Vila Rica,5104,Barra do Garças,,,4266.636,False
+5101902,Brasnorte,510002,Tangará da Serra,5101,Cuiabá,,,15968.355,False
+5102603,Campinápolis,510015,Água Boa,5104,Barra do Garças,,,5978.984,False
+5102637,Campo Novo do Parecis,510002,Tangará da Serra,5101,Cuiabá,,,9428.585,False
+5102678,Campo Verde,510001,Cuiabá,5101,Cuiabá,,,4771.091,False
+5102686,Campos de Júlio,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,6792.808,False
+5102694,Canabrava do Norte,510014,Confresa - Vila Rica,5104,Barra do Garças,,,3449.037,False
+5102702,Canarana,510015,Água Boa,5104,Barra do Garças,,,10855.181,False
+5102793,Carlinda,510010,Alta Floresta,5103,Sinop,,,2421.788,False
+5102850,Castanheira,510009,Juína,5103,Sinop,,,3713.465,False
+5103007,Chapada dos Guimarães,510001,Cuiabá,5101,Cuiabá,,,6603.253,False
+5103056,Cláudia,510007,Sinop,5103,Sinop,,,3843.562,False
+5103106,Cocalinho,510015,Água Boa,5104,Barra do Garças,,,16563.136,False
+5103254,Colniza,510009,Juína,5103,Sinop,,,27960.244,False
+5103205,Colíder,510007,Sinop,5103,Sinop,,,3112.091,False
+5103304,Comodoro,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,21485.018,False
+5103353,Confresa,510014,Confresa - Vila Rica,5104,Barra do Garças,,,5802.302,False
+5103361,Conquista D'Oeste,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,2684.676,False
+5103379,Cotriguaçu,510009,Juína,5103,Sinop,,,9469.956,False
+5103403,Cuiabá,510001,Cuiabá,5101,Cuiabá,5103403,Cuiabá/MT,4327.22,True
+5103437,Curvelândia,510004,Cáceres,5102,Cáceres,,,357.212,False
+5102504,Cáceres,510004,Cáceres,5102,Cáceres,,,24499.922,False
+5103452,Denise,510002,Tangará da Serra,5101,Cuiabá,,,1273.178,False
+5103502,Diamantino,510003,Diamantino,5101,Cuiabá,,,8263.397,False
+5103601,Dom Aquino,510018,Jaciara,5105,Rondonópolis,,,2183.603,False
+5103700,Feliz Natal,510007,Sinop,5103,Sinop,,,11661.514,False
+5103809,Figueirópolis D'Oeste,510006,Mirassol D'oeste,5102,Cáceres,,,891.448,False
+5103858,Gaúcha do Norte,510015,Água Boa,5104,Barra do Garças,,,16908.375,False
+5103908,General Carneiro,510013,Barra do Garças,5104,Barra do Garças,,,4514.917,False
+5103957,Glória D'Oeste,510006,Mirassol D'oeste,5102,Cáceres,,,833.131,False
+5104104,Guarantã do Norte,510011,Peixoto de Azevedo - Guarantã do Norte,5103,Sinop,,,4725.273,False
+5104203,Guiratinga,510016,Rondonópolis,5105,Rondonópolis,,,5044.493,False
+5104500,Indiavaí,510006,Mirassol D'oeste,5102,Cáceres,,,592.495,False
+5104526,Ipiranga do Norte,510008,Sorriso,5103,Sinop,,,3422.016,False
+5104542,Itanhangá,510008,Sorriso,5103,Sinop,,,2909.745,False
+5104559,Itaúba,510007,Sinop,5103,Sinop,,,4521.79,False
+5104609,Itiquira,510016,Rondonópolis,5105,Rondonópolis,,,8698.814,False
+5104807,Jaciara,510018,Jaciara,5105,Rondonópolis,,,2429.678,False
+5104906,Jangada,510001,Cuiabá,5101,Cuiabá,,,1114.302,False
+5105002,Jauru,510006,Mirassol D'oeste,5102,Cáceres,,,1345.411,False
+5105101,Juara,510012,Juara,5103,Sinop,,,22632.713,False
+5105176,Juruena,510009,Juína,5103,Sinop,,,3207.837,False
+5105200,Juscimeira,510018,Jaciara,5105,Rondonópolis,,,2291.301,False
+5105150,Juína,510009,Juína,5103,Sinop,,,26397.173,False
+5105234,Lambari D'Oeste,510004,Cáceres,5102,Cáceres,,,1810.463,False
+5105259,Lucas do Rio Verde,510008,Sorriso,5103,Sinop,,,3674.596,False
+5105309,Luciara,510014,Confresa - Vila Rica,5104,Barra do Garças,,,4282.733,False
+5105580,Marcelândia,510007,Sinop,5103,Sinop,,,12285.486,False
+5105606,Matupá,510011,Peixoto de Azevedo - Guarantã do Norte,5103,Sinop,,,5228.28,False
+5105622,Mirassol d'Oeste,510006,Mirassol D'oeste,5102,Cáceres,,,1085.488,False
+5105903,Nobres,510001,Cuiabá,5101,Cuiabá,,,3908.739,False
+5106000,Nortelândia,510003,Diamantino,5101,Cuiabá,,,1336.754,False
+5106109,Nossa Senhora do Livramento,510001,Cuiabá,5101,Cuiabá,,,5410.138,False
+5106158,Nova Bandeirantes,510010,Alta Floresta,5103,Sinop,,,9556.661,False
+5106208,Nova Brasilândia,510001,Cuiabá,5101,Cuiabá,,,3289.572,False
+5106216,Nova Canaã do Norte,510007,Sinop,5103,Sinop,,,5953.099,False
+5108808,Nova Guarita,510007,Sinop,5103,Sinop,,,1121.928,False
+5106182,Nova Lacerda,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,4780.426,False
+5108857,Nova Marilândia,510003,Diamantino,5101,Cuiabá,,,1905.744,False
+5108907,Nova Maringá,510003,Diamantino,5101,Cuiabá,,,11553.479,False
+5108956,Nova Monte Verde,510010,Alta Floresta,5103,Sinop,,,5139.307,False
+5106224,Nova Mutum,510008,Sorriso,5103,Sinop,,,9536.814,False
+5106174,Nova Nazaré,510015,Água Boa,5104,Barra do Garças,,,4034.539,False
+5106232,Nova Olímpia,510002,Tangará da Serra,5101,Cuiabá,,,1327.266,False
+5106190,Nova Santa Helena,510007,Sinop,5103,Sinop,,,2385.611,False
+5106240,Nova Ubiratã,510008,Sorriso,5103,Sinop,,,8720.777,False
+5106257,Nova Xavantina,510013,Barra do Garças,5104,Barra do Garças,,,5492.21,False
+5106273,Novo Horizonte do Norte,510012,Juara,5103,Sinop,,,920.048,False
+5106265,Novo Mundo,510011,Peixoto de Azevedo - Guarantã do Norte,5103,Sinop,,,5800.758,False
+5106315,Novo Santo Antônio,510014,Confresa - Vila Rica,5104,Barra do Garças,,,4394.78,False
+5106281,Novo São Joaquim,510013,Barra do Garças,5104,Barra do Garças,,,5225.595,False
+5106307,Paranatinga,510017,Primavera do Leste,5105,Rondonópolis,,,24127.429,False
+5106299,Paranaíta,510010,Alta Floresta,5103,Sinop,,,4814.149,False
+5106372,Pedra Preta,510016,Rondonópolis,5105,Rondonópolis,,,3841.672,False
+5106422,Peixoto de Azevedo,510011,Peixoto de Azevedo - Guarantã do Norte,5103,Sinop,,,14433.774,False
+5106455,Planalto da Serra,510001,Cuiabá,5101,Cuiabá,,,2437.59,False
+5106505,Poconé,510001,Cuiabá,5101,Cuiabá,,,17013.707,False
+5106653,Pontal do Araguaia,510013,Barra do Garças,5104,Barra do Garças,,,2742.482,False
+5106703,Ponte Branca,510013,Barra do Garças,5104,Barra do Garças,,,701.138,False
+5106752,Pontes e Lacerda,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,8545.292,False
+5106778,Porto Alegre do Norte,510014,Confresa - Vila Rica,5104,Barra do Garças,,,3971.733,False
+5106828,Porto Esperidião,510006,Mirassol D'oeste,5102,Cáceres,,,5835.276,False
+5106851,Porto Estrela,510002,Tangará da Serra,5101,Cuiabá,,,2045.467,False
+5106802,Porto dos Gaúchos,510012,Juara,5103,Sinop,,,6846.668,False
+5107008,Poxoréu,510017,Primavera do Leste,5105,Rondonópolis,,,6915.298,False
+5107040,Primavera do Leste,510017,Primavera do Leste,5105,Rondonópolis,,,5470.383,False
+5107065,Querência,510015,Água Boa,5104,Barra do Garças,,,17799.989,False
+5107156,Reserva do Cabaçal,510006,Mirassol D'oeste,5102,Cáceres,,,1331.677,False
+5107180,Ribeirão Cascalheira,510015,Água Boa,5104,Barra do Garças,,,11354.555,False
+5107198,Ribeirãozinho,510013,Barra do Garças,5104,Barra do Garças,,,624.997,False
+5107206,Rio Branco,510004,Cáceres,5102,Cáceres,,,539.287,False
+5107578,Rondolândia,510009,Juína,5103,Sinop,,,12658.341,False
+5107602,Rondonópolis,510016,Rondonópolis,5105,Rondonópolis,5107602,Rondonópolis,4824.505,False
+5107701,Rosário Oeste,510001,Cuiabá,5101,Cuiabá,,,7339.442,False
+5107750,Salto do Céu,510004,Cáceres,5102,Cáceres,,,1753.38,False
+5107248,Santa Carmem,510007,Sinop,5103,Sinop,,,3812.09,False
+5107743,Santa Cruz do Xingu,510014,Confresa - Vila Rica,5104,Barra do Garças,,,5623.39,False
+5107768,Santa Rita do Trivelato,510008,Sorriso,5103,Sinop,,,4740.204,False
+5107776,Santa Terezinha,510014,Confresa - Vila Rica,5104,Barra do Garças,,,6466.228,False
+5107263,Santo Afonso,510003,Diamantino,5101,Cuiabá,,,1166.382,False
+5107800,Santo Antônio de Leverger,510001,Cuiabá,5101,Cuiabá,,,9519.194,False
+5107792,Santo Antônio do Leste,510017,Primavera do Leste,5105,Rondonópolis,,,3403.593,False
+5107875,Sapezal,510002,Tangará da Serra,5101,Cuiabá,,,13614.552,False
+5107883,Serra Nova Dourada,510014,Confresa - Vila Rica,5104,Barra do Garças,,,1490.793,False
+5107909,Sinop,510007,Sinop,5103,Sinop,5107909,Sinop,3990.87,False
+5107925,Sorriso,510008,Sorriso,5103,Sinop,,,8454.83,False
+5107859,São Félix do Araguaia,510014,Confresa - Vila Rica,5104,Barra do Garças,,,16682.473,False
+5107297,São José do Povo,510016,Rondonópolis,5105,Rondonópolis,,,489.737,False
+5107305,São José do Rio Claro,510003,Diamantino,5101,Cuiabá,,,4525.304,False
+5107354,São José do Xingu,510014,Confresa - Vila Rica,5104,Barra do Garças,,,7465.563,False
+5107107,São José dos Quatro Marcos,510006,Mirassol D'oeste,5102,Cáceres,,,1282.762,False
+5107404,São Pedro da Cipa,510018,Jaciara,5105,Rondonópolis,,,344.33,False
+5107941,Tabaporã,510012,Juara,5103,Sinop,,,8439.05,False
+5107958,Tangará da Serra,510002,Tangará da Serra,5101,Cuiabá,,,11636.262,False
+5108006,Tapurah,510008,Sorriso,5103,Sinop,,,4492.539,False
+5108055,Terra Nova do Norte,510007,Sinop,5103,Sinop,,,2399.737,False
+5108105,Tesouro,510016,Rondonópolis,5105,Rondonópolis,,,4244.073,False
+5108204,Torixoréu,510013,Barra do Garças,5104,Barra do Garças,,,2398.383,False
+5108303,União do Sul,510007,Sinop,5103,Sinop,,,4590.628,False
+5108352,Vale de São Domingos,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,1902.108,False
+5108501,Vera,510008,Sorriso,5103,Sinop,,,2978.675,False
+5105507,Vila Bela da Santíssima Trindade,510005,Pontes e Lacerda - Comodoro,5102,Cáceres,,,13484.71,False
+5108600,Vila Rica,510014,Confresa - Vila Rica,5104,Barra do Garças,,,7436.42,False
+5108402,Várzea Grande,510001,Cuiabá,5101,Cuiabá,5103403,Cuiabá/MT,939.887,False
+5100201,Água Boa,510015,Água Boa,5104,Barra do Garças,,,7549.308,False

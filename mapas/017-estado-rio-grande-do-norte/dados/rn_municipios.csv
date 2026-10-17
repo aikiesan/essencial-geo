@@ -1,0 +1,168 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2400109,Acari,240008,Currais Novos,2402,Caicó,,,608.466,False
+2400307,Afonso Bezerra,240011,Assú,2403,Mossoró,,,576.179,False
+2400505,Alexandria,240010,Pau dos Ferros,2403,Mossoró,,,381.205,False
+2400604,Almino Afonso,240010,Pau dos Ferros,2403,Mossoró,,,128.038,False
+2400703,Alto do Rodrigues,240011,Assú,2403,Mossoró,,,191.334,False
+2400802,Angicos,240011,Assú,2403,Mossoró,,,741.582,False
+2400901,Antônio Martins,240010,Pau dos Ferros,2403,Mossoró,,,244.897,False
+2401008,Apodi,240009,Mossoró,2403,Mossoró,,,1569.146,False
+2401107,Areia Branca,240009,Mossoró,2403,Mossoró,,,342.749,False
+2401206,Arez,240003,Canguaretama,2401,Natal,,,115.407,False
+2400208,Assú,240011,Assú,2403,Mossoró,,,1303.442,False
+2401453,Baraúna,240009,Mossoró,2403,Mossoró,,,825.681,False
+2401503,Barcelona,240006,São Paulo do Potengi,2401,Natal,,,152.626,False
+2401404,Baía Formosa,240003,Canguaretama,2401,Natal,,,247.484,False
+2401602,Bento Fernandes,240001,Natal,2401,Natal,,,301.069,False
+2401651,Bodó,240008,Currais Novos,2402,Caicó,,,253.519,False
+2401701,Bom Jesus,240001,Natal,2401,Natal,,,122.035,False
+2401800,Brejinho,240001,Natal,2401,Natal,,,61.559,False
+2402006,Caicó,240007,Caicó,2402,Caicó,,,1228.583,False
+2401859,Caiçara do Norte,240005,João Câmara,2401,Natal,,,225.633,False
+2401909,Caiçara do Rio do Vento,240006,São Paulo do Potengi,2401,Natal,,,261.194,False
+2401305,Campo Grande,240009,Mossoró,2403,Mossoró,,,890.89,False
+2402105,Campo Redondo,240004,Santa Cruz,2401,Natal,,,213.727,False
+2402204,Canguaretama,240003,Canguaretama,2401,Natal,,,245.485,False
+2402303,Caraúbas,240009,Mossoró,2403,Mossoró,,,1094.488,False
+2402501,Carnaubais,240011,Assú,2403,Mossoró,,,517.737,False
+2402402,Carnaúba dos Dantas,240008,Currais Novos,2402,Caicó,,,246.308,False
+2402600,Ceará-Mirim,240001,Natal,2401,Natal,,,724.838,False
+2402709,Cerro Corá,240008,Currais Novos,2402,Caicó,,,393.573,False
+2402808,Coronel Ezequiel,240004,Santa Cruz,2401,Natal,,,185.748,False
+2402907,Coronel João Pessoa,240010,Pau dos Ferros,2403,Mossoró,,,117.139,False
+2403004,Cruzeta,240007,Caicó,2402,Caicó,,,295.83,False
+2403103,Currais Novos,240008,Currais Novos,2402,Caicó,,,864.349,False
+2403202,Doutor Severiano,240010,Pau dos Ferros,2403,Mossoró,,,113.737,False
+2403301,Encanto,240010,Pau dos Ferros,2403,Mossoró,,,125.749,False
+2403400,Equador,240007,Caicó,2402,Caicó,,,264.985,False
+2403509,Espírito Santo,240003,Canguaretama,2401,Natal,,,135.837,False
+2403608,Extremoz,240001,Natal,2401,Natal,2408102,Natal/RN,140.639,False
+2403707,Felipe Guerra,240009,Mossoró,2403,Mossoró,,,292.177,False
+2403756,Fernando Pedroza,240011,Assú,2403,Mossoró,,,322.628,False
+2403806,Florânia,240008,Currais Novos,2402,Caicó,,,507.892,False
+2403905,Francisco Dantas,240010,Pau dos Ferros,2403,Mossoró,,,181.558,False
+2404002,Frutuoso Gomes,240010,Pau dos Ferros,2403,Mossoró,,,63.279,False
+2404101,Galinhos,240005,João Câmara,2401,Natal,,,340.769,False
+2404200,Goianinha,240003,Canguaretama,2401,Natal,,,192.279,False
+2404309,Governador Dix-Sept Rosado,240009,Mossoró,2403,Mossoró,,,1109.36,False
+2404408,Grossos,240009,Mossoró,2403,Mossoró,,,124.538,False
+2404507,Guamaré,240011,Assú,2403,Mossoró,,,258.307,False
+2404606,Ielmo Marinho,240001,Natal,2401,Natal,,,312.028,False
+2404705,Ipanguaçu,240011,Assú,2403,Mossoró,,,374.245,False
+2404804,Ipueira,240007,Caicó,2402,Caicó,,,127.348,False
+2404853,Itajá,240011,Assú,2403,Mossoró,,,203.624,False
+2404903,Itaú,240009,Mossoró,2403,Mossoró,,,133.031,False
+2405108,Jandaíra,240005,João Câmara,2401,Natal,,,442.754,False
+2405207,Janduís,240009,Mossoró,2403,Mossoró,,,303.448,False
+2405306,Januário Cicco,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,167.042,False
+2405405,Japi,240004,Santa Cruz,2401,Natal,,,188.99,False
+2405504,Jardim de Angicos,240005,João Câmara,2401,Natal,,,254.012,False
+2405603,Jardim de Piranhas,240007,Caicó,2402,Caicó,,,330.53,False
+2405702,Jardim do Seridó,240007,Caicó,2402,Caicó,,,367.645,False
+2405009,Jaçanã,240004,Santa Cruz,2401,Natal,,,54.56,False
+2406007,José da Penha,240010,Pau dos Ferros,2403,Mossoró,,,117.635,False
+2405801,João Câmara,240005,João Câmara,2401,Natal,,,714.971,False
+2405900,João Dias,240010,Pau dos Ferros,2403,Mossoró,,,88.173,False
+2406106,Jucurutu,240007,Caicó,2402,Caicó,,,933.73,False
+2406155,Jundiá,240001,Natal,2401,Natal,,,44.641,False
+2406502,Lagoa Nova,240008,Currais Novos,2402,Caicó,,,176.302,False
+2406601,Lagoa Salgada,240001,Natal,2401,Natal,,,79.128,False
+2406205,Lagoa d'Anta,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,104.065,False
+2406304,Lagoa de Pedras,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,117.971,False
+2406403,Lagoa de Velhos,240006,São Paulo do Potengi,2401,Natal,,,111.607,False
+2406700,Lajes,240011,Assú,2403,Mossoró,,,676.627,False
+2406809,Lajes Pintadas,240004,Santa Cruz,2401,Natal,,,130.211,False
+2406908,Lucrécia,240010,Pau dos Ferros,2403,Mossoró,,,30.931,False
+2407005,Luís Gomes,240010,Pau dos Ferros,2403,Mossoró,,,166.638,False
+2407203,Macau,240011,Assú,2403,Mossoró,,,775.302,False
+2407104,Macaíba,240001,Natal,2401,Natal,2408102,Natal/RN,510.092,False
+2407252,Major Sales,240010,Pau dos Ferros,2403,Mossoró,,,31.971,False
+2407302,Marcelino Vieira,240010,Pau dos Ferros,2403,Mossoró,,,345.711,False
+2407401,Martins,240010,Pau dos Ferros,2403,Mossoró,,,169.464,False
+2407500,Maxaranguape,240001,Natal,2401,Natal,,,132.129,False
+2407609,Messias Targino,240009,Mossoró,2403,Mossoró,,,142.607,False
+2407708,Montanhas,240003,Canguaretama,2401,Natal,,,82.214,False
+2407807,Monte Alegre,240001,Natal,2401,Natal,,,211.259,False
+2407906,Monte das Gameleiras,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,71.946,False
+2408003,Mossoró,240009,Mossoró,2403,Mossoró,2408003,Mossoró,2099.334,False
+2408102,Natal,240001,Natal,2401,Natal,2408102,Natal/RN,167.401,True
+2408300,Nova Cruz,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,277.319,False
+2408201,Nísia Floresta,240001,Natal,2401,Natal,,,307.719,False
+2408409,Olho d'Água do Borges,240010,Pau dos Ferros,2403,Mossoró,,,136.393,False
+2408508,Ouro Branco,240007,Caicó,2402,Caicó,,,253.21,False
+2408607,Paraná,240010,Pau dos Ferros,2403,Mossoró,,,81.39,False
+2408805,Parazinho,240005,João Câmara,2401,Natal,,,231.007,False
+2408706,Paraú,240011,Assú,2403,Mossoró,,,383.214,False
+2408904,Parelhas,240007,Caicó,2402,Caicó,,,513.507,False
+2403251,Parnamirim,240001,Natal,2401,Natal,2408102,Natal/RN,124.006,False
+2409100,Passa e Fica,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,44.105,False
+2409209,Passagem,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,41.215,False
+2409308,Patu,240010,Pau dos Ferros,2403,Mossoró,,,319.136,False
+2409407,Pau dos Ferros,240010,Pau dos Ferros,2403,Mossoró,,,259.959,False
+2409506,Pedra Grande,240005,João Câmara,2401,Natal,,,221.167,False
+2409605,Pedra Preta,240005,João Câmara,2401,Natal,,,294.985,False
+2409704,Pedro Avelino,240005,João Câmara,2401,Natal,,,952.754,False
+2409803,Pedro Velho,240003,Canguaretama,2401,Natal,,,192.708,False
+2409902,Pendências,240011,Assú,2403,Mossoró,,,419.137,False
+2410009,Pilões,240010,Pau dos Ferros,2403,Mossoró,,,82.69,False
+2410207,Portalegre,240010,Pau dos Ferros,2403,Mossoró,,,110.054,False
+2410256,Porto do Mangue,240011,Assú,2403,Mossoró,,,361.237,False
+2410108,Poço Branco,240001,Natal,2401,Natal,,,230.401,False
+2410405,Pureza,240001,Natal,2401,Natal,,,504.294,False
+2410504,Rafael Fernandes,240010,Pau dos Ferros,2403,Mossoró,,,78.231,False
+2410603,Rafael Godeiro,240010,Pau dos Ferros,2403,Mossoró,,,100.073,False
+2410702,Riacho da Cruz,240010,Pau dos Ferros,2403,Mossoró,,,127.223,False
+2410801,Riacho de Santana,240010,Pau dos Ferros,2403,Mossoró,,,128.106,False
+2410900,Riachuelo,240006,São Paulo do Potengi,2401,Natal,,,262.88,False
+2408953,Rio do Fogo,240001,Natal,2401,Natal,,,151.097,False
+2411007,Rodolfo Fernandes,240009,Mossoró,2403,Mossoró,,,154.84,False
+2411106,Ruy Barbosa,240006,São Paulo do Potengi,2401,Natal,,,125.816,False
+2411205,Santa Cruz,240004,Santa Cruz,2401,Natal,,,624.356,False
+2409332,Santa Maria,240006,São Paulo do Potengi,2401,Natal,,,219.57,False
+2411403,Santana do Matos,240011,Assú,2403,Mossoró,,,1422.268,False
+2411429,Santana do Seridó,240007,Caicó,2402,Caicó,,,188.403,False
+2411502,Santo Antônio,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,301.082,False
+2413102,Senador Elói de Souza,240006,São Paulo do Potengi,2401,Natal,,,143.574,False
+2413201,Senador Georgino Avelino,240001,Natal,2401,Natal,,,26.1,False
+2410306,Serra Caiada,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,230.036,False
+2413409,Serra Negra do Norte,240007,Caicó,2402,Caicó,,,562.396,False
+2413300,Serra de São Bento,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,96.585,False
+2413359,Serra do Mel,240009,Mossoró,2403,Mossoró,,,620.241,False
+2413508,Serrinha,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,193.351,False
+2413557,Serrinha dos Pintos,240010,Pau dos Ferros,2403,Mossoró,,,122.375,False
+2413607,Severiano Melo,240009,Mossoró,2403,Mossoró,,,157.85,False
+2411601,São Bento do Norte,240005,João Câmara,2401,Natal,,,288.761,False
+2411700,São Bento do Trairí,240004,Santa Cruz,2401,Natal,,,190.818,False
+2411809,São Fernando,240007,Caicó,2402,Caicó,,,404.427,False
+2411908,São Francisco do Oeste,240010,Pau dos Ferros,2403,Mossoró,,,75.588,False
+2412005,São Gonçalo do Amarante,240001,Natal,2401,Natal,2408102,Natal/RN,249.8,False
+2412203,São José de Mipibu,240001,Natal,2401,Natal,,,289.987,False
+2412302,São José do Campestre,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,341.115,False
+2412401,São José do Seridó,240007,Caicó,2402,Caicó,,,174.505,False
+2412104,São João do Sabugi,240007,Caicó,2402,Caicó,,,277.011,False
+2412500,São Miguel,240010,Pau dos Ferros,2403,Mossoró,,,166.233,False
+2412559,São Miguel do Gostoso,240001,Natal,2401,Natal,,,431.445,False
+2412609,São Paulo do Potengi,240006,São Paulo do Potengi,2401,Natal,,,240.425,False
+2412708,São Pedro,240006,São Paulo do Potengi,2401,Natal,,,195.237,False
+2412807,São Rafael,240011,Assú,2403,Mossoró,,,469.101,False
+2412906,São Tomé,240006,São Paulo do Potengi,2401,Natal,,,862.585,False
+2413003,São Vicente,240008,Currais Novos,2402,Caicó,,,197.817,False
+2413706,Sítio Novo,240004,Santa Cruz,2401,Natal,,,213.456,False
+2413805,Taboleiro Grande,240010,Pau dos Ferros,2403,Mossoró,,,124.093,False
+2413904,Taipu,240001,Natal,2401,Natal,,,352.818,False
+2414001,Tangará,240004,Santa Cruz,2401,Natal,,,339.484,False
+2414100,Tenente Ananias,240010,Pau dos Ferros,2403,Mossoró,,,223.671,False
+2414159,Tenente Laurentino Cruz,240008,Currais Novos,2402,Caicó,,,68.556,False
+2411056,Tibau,240009,Mossoró,2403,Mossoró,,,169.366,False
+2414209,Tibau do Sul,240003,Canguaretama,2401,Natal,,,102.68,False
+2414308,Timbaúba dos Batistas,240007,Caicó,2402,Caicó,,,135.456,False
+2414407,Touros,240001,Natal,2401,Natal,,,753.961,False
+2414456,Triunfo Potiguar,240011,Assú,2403,Mossoró,,,268.725,False
+2414506,Umarizal,240010,Pau dos Ferros,2403,Mossoró,,,249.61,False
+2414605,Upanema,240009,Mossoró,2403,Mossoró,,,873.14,False
+2414753,Venha-Ver,240010,Pau dos Ferros,2403,Mossoró,,,71.621,False
+2414803,Vera Cruz,240001,Natal,2401,Natal,,,84.127,False
+2415008,Vila Flor,240003,Canguaretama,2401,Natal,,,47.656,False
+2414902,Viçosa,240010,Pau dos Ferros,2403,Mossoró,,,37.905,False
+2414704,Várzea,240002,Santo Antônio - Passa e Fica - Nova Cruz,2401,Natal,,,72.684,False
+2400406,Água Nova,240010,Pau dos Ferros,2403,Mossoró,,,50.684,False

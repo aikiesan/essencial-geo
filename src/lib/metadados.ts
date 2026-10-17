@@ -26,6 +26,7 @@ const TIPOS_MIME: Record<string, string> = {
   gpkg: 'application/geopackage+sqlite3',
   dxf: 'image/vnd.dxf',
   pdf: 'application/pdf',
+  svg: 'image/svg+xml',
   png: 'image/png',
   csv: 'text/csv',
   tif: 'image/tiff',

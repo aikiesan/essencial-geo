@@ -2,12 +2,13 @@
 /**
  * Publica UM mapa no Zenodo como conjunto de dados próprio e grava o DOI no README.
  *
- *   ZENODO_TOKEN=... node scripts/zenodo-publicar.mjs 001-densidade-urbana-grade-estatistica
+ *   ZENODO_TOKEN=... node scripts/zenodo-publicar.mjs 001-estado-sao-paulo
  *   ... --sandbox        usa sandbox.zenodo.org (teste, DOI falso 10.5072)
  *   ... --simular        mostra o que seria enviado, sem tocar no Zenodo
  *   ... --nova-versao    o mapa já tem DOI: cria uma nova versão do mesmo registro
  *
- * Arquivos enviados: tudo na pasta do mapa (README.md, prancha, dados/*), exceto ocultos.
+ * Arquivos enviados: tudo na pasta do mapa (README.md, prancha, dados/*), exceto ocultos,
+ * mais os downloads que apontam para anexos de release deste repositório.
  * Autoria e comunidade vêm de /.zenodo.json; o resto, do frontmatter do README.
  *
  * Por que um registro por mapa (e não só a integração GitHub→Zenodo)? A integração
@@ -16,7 +17,7 @@
  * precisa do seu DOI. As duas coisas convivem: este script para os mapas, a
  * integração nativa (opcional) para o atlas como um todo.
  */
-import { readFile, readdir, stat, writeFile, appendFile } from 'node:fs/promises';
+import { readFile, readdir, stat, writeFile, appendFile, mkdir } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
@@ -134,6 +135,22 @@ async function listar(dir) {
     else saida.push(p);
   }
   return saida;
+}
+// Downloads hospedados nos anexos de uma release deste repositório (GPKG, DXF e SVG, fora do Git)
+// também vão para o Zenodo: se não estiverem na pasta (ex.: no GitHub Actions), são baixados para dados/.
+const RELEASES = 'https://github.com/aikiesan/essencial-geo/releases/download/';
+const anexos = (fm.downloads ?? []).flatMap((d) => [d.url, d.url_en]).filter((u) => u?.startsWith(RELEASES));
+for (const url of anexos) {
+  const destino = join(dirMapa, 'dados', url.split('/').pop());
+  try {
+    await stat(destino);
+  } catch {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`${url} → HTTP ${r.status}. O anexo já subiu para a release?`);
+    await mkdir(join(dirMapa, 'dados'), { recursive: true });
+    await writeFile(destino, Buffer.from(await r.arrayBuffer()));
+    console.log(`baixado da release: ${relative(dirMapa, destino)}`);
+  }
 }
 const arquivos = await listar(dirMapa);
 // O Zenodo não aceita subpastas: dados/x.gpkg vira dados__x.gpkg

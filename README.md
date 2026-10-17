@@ -40,16 +40,15 @@ essencial-geo/
 │   └── zenodo.yml           ← publica UM mapa no Zenodo e grava o DOI no README dele
 │
 ├── mapas/                   ← o atlas: uma pasta por prancha
-│   └── 001-densidade-urbana-grade-estatistica/
+│   └── 001-estado-sao-paulo/
 │       ├── README.md        ← ficha técnica (frontmatter) + notas de método — fonte única de verdade
 │       ├── README.en.md     ← o mesmo texto em inglês (título, contexto, notas de método)
 │       ├── mapa_preview.png ← imagem do feed (~2400 px), e mapa_preview.en.png em inglês
-│       ├── prancha_impressao.pdf
-│       └── dados/           ← .gpkg(.zip), .dxf, .csv
+│       └── dados/           ← .csv (GPKG, DXF e SVG vão como anexos de release)
 │
 ├── notas/                   ← novidades, bastidores, método: uma pasta por nota, pt.md + en.md
 ├── templates/mapa/          ← modelo copiado por `npm run novo-mapa`
-├── scripts/                 ← novo mapa, sincronização, exemplos, Zenodo
+├── scripts/                 ← novo mapa, sincronização, série dos estados, Zenodo
 ├── src/                     ← site (Astro): páginas, componentes, estilos, textos da interface (src/i18n)
 └── docs/                    ← guias de publicação, conteúdo e estilo
 ```
@@ -80,7 +79,6 @@ Outros comandos:
 | --- | --- |
 | `npm run build` | Valida todos os frontmatters, exige a versão em inglês de cada mapa e nota publicados, e gera o site estático em `dist/` |
 | `npm run preview` | Serve `dist/` localmente |
-| `npm run exemplos` | Regenera as quatro pranchas-modelo (dados sintéticos) |
 | `npm run zenodo -- <pasta> --simular` | Mostra o que seria enviado ao Zenodo, sem enviar |
 
 ## Fluxo de publicação
@@ -104,12 +102,14 @@ em [`docs/ZENODO.md`](docs/ZENODO.md).
 - [`docs/CONTEUDO.md`](docs/CONTEUDO.md) — referência de todos os campos do frontmatter, `README.en.md`, notas e tom de voz
 - [`docs/ESTILO.md`](docs/ESTILO.md) — paleta, sistema visual do site e convenções cartográficas das pranchas
 
-## As pranchas 001–004
+## Série «Brasil, estado por estado»
 
-As quatro primeiras pranchas são **pranchas-modelo com dados sintéticos** (ruído fractal semeado, gerado por
-`scripts/gerar-exemplos.mjs`). Elas fixam a linguagem visual de cada série e demonstram o feed e os
-downloads; nenhuma representa um lugar real, e todas levam o selo “dados sintéticos”. Substitua-as ou
-marque `rascunho: true` quando os primeiros mapas reais estiverem prontos.
+As pranchas 001 a 027 formam a primeira série: uma base cartográfica de cada unidade da federação —
+municípios, regiões geográficas imediatas e intermediárias, limite e rodovias —, com os mesmos arquivos e o
+mesmo desenho, publicada às segundas, quartas e sextas de 17/10 a 23/12/2026. Tudo sai de três scripts em
+[`scripts/estados/`](scripts/estados/): `preparar.py` (dados), `prancha.mjs` (prancha PT e EN) e `readme.mjs`
+(fichas). O GeoPackage e o DXF de cada estado, compactados, ficam nos anexos da release
+[`estados-2025`](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025).
 
 ## Licença
 

@@ -143,6 +143,37 @@ discussoes:
     url: https://www.reddit.com/r/MapPorn/comments/…
 ```
 
+## Série «Brasil, estado por estado»
+
+As 27 pranchas não passam pelo QGIS: saem de três scripts, na ordem, a partir dos dados do IBGE e do
+MapBiomas. A lista (número, pasta e data de saída) está em `scripts/estados/serie.json`.
+
+```bash
+.venv-geo/Scripts/python scripts/estados/preparar.py RJ --pasta 002-estado-rio-de-janeiro
+node scripts/estados/prancha.mjs RJ --pasta 002-estado-rio-de-janeiro --numero 2 --data 2026-10-26
+node scripts/estados/readme.mjs RJ
+```
+
+1. `preparar.py` grava em `dados/` o CSV e o GPKG e o DXF compactados, e o cache da prancha em
+   `scripts/estados/cache/` (fora do Git). `--so-prancha` refaz só o cache.
+2. `prancha.mjs` desenha a prancha em português e em inglês (PNG e SVG). Rotulagem, cores e cantos
+   (localizador, norte em folha, ilhas oceânicas) são escolhidos pelo script; confira a prancha ampliada.
+3. `readme.mjs` escreve `README.md` e `README.en.md` com os números do cache. O contexto de SP e do DF é
+   escrito à mão, dentro do script; os demais seguem um molde. Revise o texto antes do commit.
+
+**Arquivos grandes na release.** Os `*_divisao_territorial.{gpkg,dxf}.zip` e as pranchas em vetor
+(`*_prancha.svg`, `*_prancha.en.svg`) ficam fora do Git (`.gitignore`): as fichas apontam para os anexos da
+release `estados-2025`. No repositório ficam só a prévia em PNG e o CSV. Para criar a release com os 27
+estados (uma vez, depois do push):
+
+```bash
+gh release create estados-2025 mapas/*/dados/*_divisao_territorial.*.zip mapas/*/dados/*_prancha*.svg --title "Brasil, estado por estado — bases 2025" --notes "GeoPackage (EPSG:4674), DXF (EPSG:5880) e prancha em SVG (PT e EN) de cada unidade da federação. Fichas em https://aikiesan.github.io/essencial-geo/"
+```
+
+Para trocar o arquivo de um estado depois (correção): `gh release upload estados-2025 <arquivo> --clobber`.
+O `zenodo-publicar.mjs` baixa esses anexos sozinho quando eles não estão na pasta, de modo que o DOI de
+cada estado leva o GPKG, o DXF e o SVG.
+
 ---
 
 ## Buscadores (uma vez)

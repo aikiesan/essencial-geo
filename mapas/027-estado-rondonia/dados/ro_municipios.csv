@@ -1,0 +1,53 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+1100015,Alta Floresta D'Oeste,110005,Cacoal,1102,Ji-Paraná,,,7067.127,False
+1100379,Alto Alegre dos Parecis,110005,Cacoal,1102,Ji-Paraná,,,3958.273,False
+1100403,Alto Paraíso,110002,Ariquemes,1101,Porto Velho,,,2652.03,False
+1100346,Alvorada D'Oeste,110004,Ji-Paraná,1102,Ji-Paraná,,,3029.193,False
+1100023,Ariquemes,110002,Ariquemes,1101,Porto Velho,,,4426.127,False
+1100452,Buritis,110002,Ariquemes,1101,Porto Velho,,,3265.811,False
+1100031,Cabixi,110006,Vilhena,1102,Ji-Paraná,,,1314.352,False
+1100601,Cacaulândia,110002,Ariquemes,1101,Porto Velho,,,1962.032,False
+1100049,Cacoal,110005,Cacoal,1102,Ji-Paraná,,,3792.998,False
+1100700,Campo Novo de Rondônia,110002,Ariquemes,1101,Porto Velho,,,3442.005,False
+1100809,Candeias do Jamari,110001,Porto Velho,1101,Porto Velho,1100205,Porto Velho/RO,6843.666,False
+1100908,Castanheiras,110005,Cacoal,1102,Ji-Paraná,,,892.841,False
+1100056,Cerejeiras,110006,Vilhena,1102,Ji-Paraná,,,2783.297,False
+1100924,Chupinguaia,110006,Vilhena,1102,Ji-Paraná,,,5117.301,False
+1100064,Colorado do Oeste,110006,Vilhena,1102,Ji-Paraná,,,1451.062,False
+1100072,Corumbiara,110006,Vilhena,1102,Ji-Paraná,,,3060.321,False
+1100080,Costa Marques,110004,Ji-Paraná,1102,Ji-Paraná,,,4987.159,False
+1100940,Cujubim,110002,Ariquemes,1101,Porto Velho,,,3863.948,False
+1100098,Espigão D'Oeste,110005,Cacoal,1102,Ji-Paraná,,,4518.039,False
+1101005,Governador Jorge Teixeira,110003,Jaru,1101,Porto Velho,,,5067.386,False
+1100106,Guajará-Mirim,110001,Porto Velho,1101,Porto Velho,,,24856.877,False
+1101104,Itapuã do Oeste,110001,Porto Velho,1101,Porto Velho,,,4081.555,False
+1100114,Jaru,110003,Jaru,1101,Porto Velho,,,2944.126,False
+1100122,Ji-Paraná,110004,Ji-Paraná,1102,Ji-Paraná,1100122,Ji-Paraná,6896.649,False
+1100130,Machadinho D'Oeste,110003,Jaru,1101,Porto Velho,,,8509.166,False
+1101203,Ministro Andreazza,110005,Cacoal,1102,Ji-Paraná,,,798.083,False
+1101302,Mirante da Serra,110004,Ji-Paraná,1102,Ji-Paraná,,,1191.875,False
+1101401,Monte Negro,110002,Ariquemes,1101,Porto Velho,,,1931.404,False
+1100148,Nova Brasilândia D'Oeste,110005,Cacoal,1102,Ji-Paraná,,,1703.008,False
+1100338,Nova Mamoré,110001,Porto Velho,1101,Porto Velho,,,10070.515,False
+1101435,Nova União,110004,Ji-Paraná,1102,Ji-Paraná,,,807.17,False
+1100502,Novo Horizonte do Oeste,110005,Cacoal,1102,Ji-Paraná,,,843.446,False
+1100155,Ouro Preto do Oeste,110004,Ji-Paraná,1102,Ji-Paraná,,,1969.878,False
+1101450,Parecis,110005,Cacoal,1102,Ji-Paraná,,,2548.683,False
+1100189,Pimenta Bueno,110005,Cacoal,1102,Ji-Paraná,,,6241.017,False
+1101468,Pimenteiras do Oeste,110006,Vilhena,1102,Ji-Paraná,,,6014.733,False
+1100205,Porto Velho,110001,Porto Velho,1101,Porto Velho,1100205,Porto Velho/RO,34090.463,True
+1100254,Presidente Médici,110004,Ji-Paraná,1102,Ji-Paraná,,,1758.464,False
+1101476,Primavera de Rondônia,110005,Cacoal,1102,Ji-Paraná,,,605.692,False
+1100262,Rio Crespo,110002,Ariquemes,1101,Porto Velho,,,1717.64,False
+1100288,Rolim de Moura,110005,Cacoal,1102,Ji-Paraná,,,1457.811,False
+1100296,Santa Luzia D'Oeste,110005,Cacoal,1102,Ji-Paraná,,,1197.796,False
+1101500,Seringueiras,110004,Ji-Paraná,1102,Ji-Paraná,,,4443.991,False
+1101484,São Felipe D'Oeste,110005,Cacoal,1102,Ji-Paraná,,,541.648,False
+1101492,São Francisco do Guaporé,110004,Ji-Paraná,1102,Ji-Paraná,,,10948.637,False
+1100320,São Miguel do Guaporé,110004,Ji-Paraná,1102,Ji-Paraná,,,6789.605,False
+1101559,Teixeirópolis,110004,Ji-Paraná,1102,Ji-Paraná,,,459.933,False
+1101609,Theobroma,110003,Jaru,1101,Porto Velho,,,2197.412,False
+1101708,Urupá,110004,Ji-Paraná,1102,Ji-Paraná,,,831.855,False
+1101757,Vale do Anari,110003,Jaru,1101,Porto Velho,,,3135.107,False
+1101807,Vale do Paraíso,110004,Ji-Paraná,1102,Ji-Paraná,,,965.661,False
+1100304,Vilhena,110006,Vilhena,1102,Ji-Paraná,,,11708.569,False

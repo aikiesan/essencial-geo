@@ -26,6 +26,8 @@ let bytes = 0;
 async function copiar(dir) {
   for (const nome of await readdir(dir)) {
     if (IGNORAR.has(nome) || nome.startsWith('_')) continue;
+    // Anexos de release (fora do Git): o site aponta para a release, não serve cópia local.
+    if (/_divisao_territorial\.(gpkg|dxf)\.zip$|_prancha(\.en)?\.svg$/.test(nome)) continue;
     const de = join(dir, nome);
     const info = await stat(de);
     if (info.isDirectory()) {

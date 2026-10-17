@@ -1,0 +1,218 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+2100105,Afonso Cunha,210013,Caxias,2103,Caxias,,,371.767,False
+2100204,Alcântara,210001,São Luís,2101,São Luís,,,1167.964,False
+2100303,Aldeias Altas,210013,Caxias,2103,Caxias,,,1943.413,False
+2100402,Altamira do Maranhão,210010,Bacabal,2102,Santa Inês - Bacabal,,,524.374,False
+2100436,Alto Alegre do Maranhão,210010,Bacabal,2102,Santa Inês - Bacabal,,,392.751,False
+2100477,Alto Alegre do Pindaré,210009,Santa Inês,2102,Santa Inês - Bacabal,,,1875.58,False
+2100501,Alto Parnaíba,210022,Balsas,2105,Imperatriz,,,11127.384,False
+2100550,Amapá do Maranhão,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,493.738,False
+2100600,Amarante do Maranhão,210019,Imperatriz,2105,Imperatriz,,,7441.771,False
+2100709,Anajatuba,210004,Itapecuru Mirim,2101,São Luís,,,940.489,False
+2100808,Anapurus,210003,Chapadinha,2101,São Luís,,,608.903,False
+2100832,Apicum-Açu,210008,Cururupu,2101,São Luís,,,341.12,False
+2100873,Araguanã,210009,Santa Inês,2102,Santa Inês - Bacabal,,,805.194,False
+2100907,Araioses,210007,Tutóia - Araioses,2101,São Luís,,,1789.73,False
+2100956,Arame,210020,Barra do Corda,2105,Imperatriz,,,2976.039,False
+2101004,Arari,210005,Viana,2101,São Luís,,,1099.81,False
+2101103,Axixá,210001,São Luís,2101,São Luís,,,160.462,False
+2100055,Açailândia,210021,Açailândia,2105,Imperatriz,2100055,Açailândia,5805.158,False
+2101202,Bacabal,210010,Bacabal,2102,Santa Inês - Bacabal,2101202,Bacabal,1656.736,False
+2101251,Bacabeira,210001,São Luís,2101,São Luís,,,542.961,False
+2101301,Bacuri,210008,Cururupu,2101,São Luís,,,832.084,False
+2101350,Bacurituba,210002,Pinheiro,2101,São Luís,,,413.651,False
+2101400,Balsas,210022,Balsas,2105,Imperatriz,,,12601.976,False
+2101608,Barra do Corda,210020,Barra do Corda,2105,Imperatriz,,,5187.673,False
+2101707,Barreirinhas,210006,Barreirinhas,2101,São Luís,,,3046.308,False
+2101509,Barão de Grajaú,210017,São João dos Patos,2104,Presidente Dutra,,,2209.414,False
+2101772,Bela Vista do Maranhão,210009,Santa Inês,2102,Santa Inês - Bacabal,,,147.949,False
+2101731,Belágua,210003,Chapadinha,2101,São Luís,,,569.606,False
+2101806,Benedito Leite,210017,São João dos Patos,2104,Presidente Dutra,,,1784.64,False
+2101905,Bequimão,210002,Pinheiro,2101,São Luís,,,790.222,False
+2101939,Bernardo do Mearim,210012,Pedreiras,2102,Santa Inês - Bacabal,,,247.189,False
+2101970,Boa Vista do Gurupi,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,400.35,False
+2102002,Bom Jardim,210009,Santa Inês,2102,Santa Inês - Bacabal,,,6579.946,False
+2102036,Bom Jesus das Selvas,210021,Açailândia,2105,Imperatriz,,,2676.93,False
+2102077,Bom Lugar,210010,Bacabal,2102,Santa Inês - Bacabal,,,445.171,False
+2102101,Brejo,210003,Chapadinha,2101,São Luís,,,1073.257,False
+2102150,Brejo de Areia,210010,Bacabal,2102,Santa Inês - Bacabal,,,986.036,False
+2102200,Buriti,210003,Chapadinha,2101,São Luís,,,1475.78,False
+2102309,Buriti Bravo,210014,Timon,2103,Caxias,,,1581.721,False
+2102325,Buriticupu,210021,Açailândia,2105,Imperatriz,,,2553.663,False
+2102358,Buritirana,210019,Imperatriz,2105,Imperatriz,,,821.261,False
+2102374,Cachoeira Grande,210001,São Luís,2101,São Luís,,,707.236,False
+2102408,Cajapió,210005,Viana,2101,São Luís,,,545.244,False
+2102507,Cajari,210005,Viana,2101,São Luís,,,662.066,False
+2102556,Campestre do Maranhão,210019,Imperatriz,2105,Imperatriz,,,613.529,False
+2102705,Cantanhede,210004,Itapecuru Mirim,2101,São Luís,,,773.009,False
+2102754,Capinzal do Norte,210012,Pedreiras,2102,Santa Inês - Bacabal,,,590.271,False
+2102804,Carolina,210022,Balsas,2105,Imperatriz,,,6267.601,False
+2102903,Carutapera,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,1260.569,False
+2103000,Caxias,210013,Caxias,2103,Caxias,2103000,Caxias,5200.625,False
+2103109,Cedral,210008,Cururupu,2101,São Luís,,,285.211,False
+2103125,Central do Maranhão,210008,Cururupu,2101,São Luís,,,319.538,False
+2103174,Centro Novo do Maranhão,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,8401.002,False
+2103158,Centro do Guilherme,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,1134.646,False
+2103208,Chapadinha,210003,Chapadinha,2101,São Luís,,,3248.774,False
+2103257,Cidelândia,210019,Imperatriz,2105,Imperatriz,,,1462.81,False
+2103307,Codó,210015,Codó,2103,Caxias,2103307,Codó,4361.6,False
+2103406,Coelho Neto,210013,Caxias,2103,Caxias,,,976.653,False
+2103505,Colinas,210018,Colinas,2104,Presidente Dutra,,,1978.668,False
+2103554,Conceição do Lago-Açu,210010,Bacabal,2102,Santa Inês - Bacabal,,,727.133,False
+2103604,Coroatá,210015,Codó,2103,Caxias,,,2263.692,False
+2103703,Cururupu,210008,Cururupu,2101,São Luís,,,1255.667,False
+2102606,Cândido Mendes,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,1643.796,False
+2103752,Davinópolis,210019,Imperatriz,2105,Imperatriz,2105302,Imperatriz/MA,332.249,False
+2103802,Dom Pedro,210016,Presidente Dutra,2104,Presidente Dutra,,,358.493,False
+2103901,Duque Bacelar,210013,Caxias,2103,Caxias,,,317.494,False
+2104008,Esperantinópolis,210012,Pedreiras,2102,Santa Inês - Bacabal,,,452.402,False
+2104057,Estreito,210019,Imperatriz,2105,Imperatriz,,,2719.964,False
+2104073,Feira Nova do Maranhão,210022,Balsas,2105,Imperatriz,,,1626.052,False
+2104081,Fernando Falcão,210020,Barra do Corda,2105,Imperatriz,,,5086.59,False
+2104099,Formosa da Serra Negra,210020,Barra do Corda,2105,Imperatriz,,,3690.633,False
+2104107,Fortaleza dos Nogueiras,210022,Balsas,2105,Imperatriz,,,1853.382,False
+2104206,Fortuna,210016,Presidente Dutra,2104,Presidente Dutra,,,835.668,False
+2104305,Godofredo Viana,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,725.707,False
+2104404,Gonçalves Dias,210016,Presidente Dutra,2104,Presidente Dutra,,,883.588,False
+2104503,Governador Archer,210016,Presidente Dutra,2104,Presidente Dutra,,,445.857,False
+2104552,Governador Edison Lobão,210019,Imperatriz,2105,Imperatriz,,,615.957,False
+2104602,Governador Eugênio Barros,210016,Presidente Dutra,2104,Presidente Dutra,,,647.015,False
+2104628,Governador Luiz Rocha,210016,Presidente Dutra,2104,Presidente Dutra,,,401.587,False
+2104651,Governador Newton Bello,210009,Santa Inês,2102,Santa Inês - Bacabal,,,1144.146,False
+2104677,Governador Nunes Freire,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,1049.208,False
+2104800,Grajaú,210020,Barra do Corda,2105,Imperatriz,,,8861.696,False
+2104701,Graça Aranha,210016,Presidente Dutra,2104,Presidente Dutra,,,271.445,False
+2104909,Guimarães,210008,Cururupu,2101,São Luís,,,478.857,False
+2105005,Humberto de Campos,210006,Barreirinhas,2101,São Luís,,,1714.625,False
+2105104,Icatu,210001,São Luís,2101,São Luís,,,1124.446,False
+2105203,Igarapé Grande,210012,Pedreiras,2102,Santa Inês - Bacabal,,,346.218,False
+2105153,Igarapé do Meio,210009,Santa Inês,2102,Santa Inês - Bacabal,,,368.703,False
+2105302,Imperatriz,210019,Imperatriz,2105,Imperatriz,2105302,Imperatriz/MA,1369.039,False
+2105351,Itaipava do Grajaú,210020,Barra do Corda,2105,Imperatriz,,,1244.398,False
+2105401,Itapecuru Mirim,210004,Itapecuru Mirim,2101,São Luís,,,1480.641,False
+2105427,Itinga do Maranhão,210021,Açailândia,2105,Imperatriz,,,3583.423,False
+2105450,Jatobá,210018,Colinas,2104,Presidente Dutra,,,591.637,False
+2105476,Jenipapo dos Vieiras,210020,Barra do Corda,2105,Imperatriz,,,1962.362,False
+2105609,Joselândia,210012,Pedreiras,2102,Santa Inês - Bacabal,,,703.094,False
+2105500,João Lisboa,210019,Imperatriz,2105,Imperatriz,,,1135.08,False
+2105658,Junco do Maranhão,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,568.499,False
+2105906,Lago Verde,210010,Bacabal,2102,Santa Inês - Bacabal,,,631.455,False
+2105708,Lago da Pedra,210010,Bacabal,2102,Santa Inês - Bacabal,,,1240.446,False
+2105807,Lago do Junco,210012,Pedreiras,2102,Santa Inês - Bacabal,,,328.525,False
+2105948,Lago dos Rodrigues,210012,Pedreiras,2102,Santa Inês - Bacabal,,,220.776,False
+2105963,Lagoa Grande do Maranhão,210010,Bacabal,2102,Santa Inês - Bacabal,,,744.199,False
+2105922,Lagoa do Mato,210017,São João dos Patos,2104,Presidente Dutra,,,1512.985,False
+2105989,Lajeado Novo,210019,Imperatriz,2105,Imperatriz,,,1063.62,False
+2106003,Lima Campos,210012,Pedreiras,2102,Santa Inês - Bacabal,,,321.932,False
+2106102,Loreto,210022,Balsas,2105,Imperatriz,,,3596.74,False
+2106201,Luís Domingues,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,467.251,False
+2106300,Magalhães de Almeida,210007,Tutóia - Araioses,2101,São Luís,,,434.433,False
+2106326,Maracaçumé,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,635.758,False
+2106359,Marajá do Sena,210010,Bacabal,2102,Santa Inês - Bacabal,,,1402.593,False
+2106375,Maranhãozinho,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,781.676,False
+2106409,Mata Roma,210003,Chapadinha,2101,São Luís,,,548.581,False
+2106508,Matinha,210005,Viana,2101,São Luís,,,410.633,False
+2106607,Matões,210014,Timon,2103,Caxias,,,2108.672,False
+2106631,Matões do Norte,210004,Itapecuru Mirim,2101,São Luís,,,794.454,False
+2106672,Milagres do Maranhão,210003,Chapadinha,2101,São Luís,,,634.818,False
+2106706,Mirador,210018,Colinas,2104,Presidente Dutra,,,8522.882,False
+2106755,Miranda do Norte,210004,Itapecuru Mirim,2101,São Luís,,,341.107,False
+2106805,Mirinzal,210008,Cururupu,2101,São Luís,,,686.944,False
+2107001,Montes Altos,210019,Imperatriz,2105,Imperatriz,,,1489.198,False
+2106904,Monção,210009,Santa Inês,2102,Santa Inês - Bacabal,,,1245.548,False
+2107100,Morros,210001,São Luís,2101,São Luís,,,1712.121,False
+2107209,Nina Rodrigues,210004,Itapecuru Mirim,2101,São Luís,,,570.938,False
+2107258,Nova Colinas,210022,Balsas,2105,Imperatriz,,,743.11,False
+2107308,Nova Iorque,210017,São João dos Patos,2104,Presidente Dutra,,,978.342,False
+2107357,Nova Olinda do Maranhão,210009,Santa Inês,2102,Santa Inês - Bacabal,,,2452.615,False
+2107407,Olho d'Água das Cunhãs,210010,Bacabal,2102,Santa Inês - Bacabal,,,695.333,False
+2107456,Olinda Nova do Maranhão,210005,Viana,2101,São Luís,,,199.879,False
+2107605,Palmeirândia,210002,Pinheiro,2101,São Luís,,,532.161,False
+2107704,Paraibano,210017,São João dos Patos,2104,Presidente Dutra,,,530.517,False
+2107803,Parnarama,210014,Timon,2103,Caxias,,,3246.503,False
+2107902,Passagem Franca,210017,São João dos Patos,2104,Presidente Dutra,,,1358.327,False
+2108009,Pastos Bons,210017,São João dos Patos,2104,Presidente Dutra,,,1635.178,False
+2108058,Paulino Neves,210007,Tutóia - Araioses,2101,São Luís,,,979.482,False
+2108108,Paulo Ramos,210010,Bacabal,2102,Santa Inês - Bacabal,,,1168.608,False
+2107506,Paço do Lumiar,210001,São Luís,2101,São Luís,2111300,São Luís/MA,127.275,False
+2108207,Pedreiras,210012,Pedreiras,2102,Santa Inês - Bacabal,,,261.814,False
+2108256,Pedro do Rosário,210002,Pinheiro,2101,São Luís,,,1753.867,False
+2108306,Penalva,210005,Viana,2101,São Luís,,,800.916,False
+2108405,Peri Mirim,210002,Pinheiro,2101,São Luís,,,397.993,False
+2108454,Peritoró,210015,Codó,2103,Caxias,,,824.72,False
+2108504,Pindaré-Mirim,210009,Santa Inês,2102,Santa Inês - Bacabal,,,268.285,False
+2108603,Pinheiro,210002,Pinheiro,2101,São Luís,,,1512.969,False
+2108702,Pio XII,210009,Santa Inês,2102,Santa Inês - Bacabal,,,545.221,False
+2108801,Pirapemas,210004,Itapecuru Mirim,2101,São Luís,,,688.761,False
+2109007,Porto Franco,210019,Imperatriz,2105,Imperatriz,,,1421.011,False
+2109056,Porto Rico do Maranhão,210008,Cururupu,2101,São Luís,,,244.979,False
+2108900,Poção de Pedras,210012,Pedreiras,2102,Santa Inês - Bacabal,,,990.66,False
+2109106,Presidente Dutra,210016,Presidente Dutra,2104,Presidente Dutra,,,771.574,False
+2109205,Presidente Juscelino,210001,São Luís,2101,São Luís,,,355.568,False
+2109239,Presidente Médici,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,437.687,False
+2109270,Presidente Sarney,210002,Pinheiro,2101,São Luís,,,726.176,False
+2109304,Presidente Vargas,210004,Itapecuru Mirim,2101,São Luís,,,460.004,False
+2109403,Primeira Cruz,210006,Barreirinhas,2101,São Luís,,,1337.161,False
+2109452,Raposa,210001,São Luís,2101,São Luís,2111300,São Luís/MA,79.213,False
+2109502,Riachão,210022,Balsas,2105,Imperatriz,,,6402.83,False
+2109551,Ribamar Fiquene,210019,Imperatriz,2105,Imperatriz,,,733.458,False
+2109601,Rosário,210001,São Luís,2101,São Luís,,,647.998,False
+2109700,Sambaíba,210022,Balsas,2105,Imperatriz,,,3015.086,False
+2109759,Santa Filomena do Maranhão,210016,Presidente Dutra,2104,Presidente Dutra,,,623.213,False
+2109809,Santa Helena,210002,Pinheiro,2101,São Luís,,,2191.164,False
+2109908,Santa Inês,210009,Santa Inês,2102,Santa Inês - Bacabal,,,786.689,False
+2110005,Santa Luzia,210009,Santa Inês,2102,Santa Inês - Bacabal,,,4837.168,False
+2110039,Santa Luzia do Paruá,210011,Governador Nunes Freire,2102,Santa Inês - Bacabal,,,1010.483,False
+2110104,Santa Quitéria do Maranhão,210003,Chapadinha,2101,São Luís,,,1430.329,False
+2110203,Santa Rita,210001,São Luís,2101,São Luís,,,756.797,False
+2110237,Santana do Maranhão,210007,Tutóia - Araioses,2101,São Luís,,,932.032,False
+2110278,Santo Amaro do Maranhão,210006,Barreirinhas,2101,São Luís,,,1582.806,False
+2110302,Santo Antônio dos Lopes,210012,Pedreiras,2102,Santa Inês - Bacabal,,,770.923,False
+2111722,Satubinha,210010,Bacabal,2102,Santa Inês - Bacabal,,,441.807,False
+2111748,Senador Alexandre Costa,210016,Presidente Dutra,2104,Presidente Dutra,,,426.431,False
+2111763,Senador La Rocque,210019,Imperatriz,2105,Imperatriz,,,737.078,False
+2111789,Serrano do Maranhão,210008,Cururupu,2101,São Luís,,,1185.31,False
+2111904,Sucupira do Norte,210018,Colinas,2104,Presidente Dutra,,,1074.435,False
+2111953,Sucupira do Riachão,210017,São João dos Patos,2104,Presidente Dutra,,,862.226,False
+2110401,São Benedito do Rio Preto,210003,Chapadinha,2101,São Luís,,,931.484,False
+2110500,São Bento,210002,Pinheiro,2101,São Luís,,,456.998,False
+2110609,São Bernardo,210007,Tutóia - Araioses,2101,São Luís,,,1005.823,False
+2110658,São Domingos do Azeitão,210017,São João dos Patos,2104,Presidente Dutra,,,961.153,False
+2110708,São Domingos do Maranhão,210016,Presidente Dutra,2104,Presidente Dutra,,,1151.978,False
+2110856,São Francisco do Brejão,210021,Açailândia,2105,Imperatriz,,,745.357,False
+2110906,São Francisco do Maranhão,210017,São João dos Patos,2104,Presidente Dutra,,,2284.217,False
+2110807,São Félix de Balsas,210022,Balsas,2105,Imperatriz,,,2033.29,False
+2111201,São José de Ribamar,210001,São Luís,2101,São Luís,2111300,São Luís/MA,180.266,False
+2111250,São José dos Basílios,210016,Presidente Dutra,2104,Presidente Dutra,,,353.72,False
+2111003,São João Batista,210005,Viana,2101,São Luís,,,649.957,False
+2111029,São João do Carú,210009,Santa Inês,2102,Santa Inês - Bacabal,,,910.065,False
+2111052,São João do Paraíso,210019,Imperatriz,2105,Imperatriz,,,2052.328,False
+2111078,São João do Soter,210013,Caxias,2103,Caxias,,,1438.066,False
+2111102,São João dos Patos,210017,São João dos Patos,2104,Presidente Dutra,,,1483.255,False
+2111300,São Luís,210001,São Luís,2101,São Luís,2111300,São Luís/MA,583.063,True
+2111409,São Luís Gonzaga do Maranhão,210010,Bacabal,2102,Santa Inês - Bacabal,,,909.164,False
+2111508,São Mateus do Maranhão,210010,Bacabal,2102,Santa Inês - Bacabal,,,800.045,False
+2111532,São Pedro da Água Branca,210019,Imperatriz,2105,Imperatriz,,,720.461,False
+2111573,São Pedro dos Crentes,210020,Barra do Corda,2105,Imperatriz,,,979.559,False
+2111607,São Raimundo das Mangabeiras,210022,Balsas,2105,Imperatriz,,,3523.94,False
+2111631,São Raimundo do Doca Bezerra,210012,Pedreiras,2102,Santa Inês - Bacabal,,,419.55,False
+2111672,São Roberto,210012,Pedreiras,2102,Santa Inês - Bacabal,,,226.811,False
+2111706,São Vicente Ferrer,210005,Viana,2101,São Luís,,,393.927,False
+2111805,Sítio Novo,210020,Barra do Corda,2105,Imperatriz,,,3114.682,False
+2112001,Tasso Fragoso,210022,Balsas,2105,Imperatriz,,,4369.318,False
+2112100,Timbiras,210015,Codó,2103,Caxias,,,1486.582,False
+2112209,Timon,210014,Timon,2103,Caxias,2211001,Teresina/PI,1763.219,False
+2112233,Trizidela do Vale,210012,Pedreiras,2102,Santa Inês - Bacabal,,,291.61,False
+2112274,Tufilândia,210009,Santa Inês,2102,Santa Inês - Bacabal,,,270.934,False
+2112308,Tuntum,210016,Presidente Dutra,2104,Presidente Dutra,,,3369.119,False
+2112407,Turiaçu,210002,Pinheiro,2101,São Luís,,,2622.281,False
+2112456,Turilândia,210002,Pinheiro,2101,São Luís,,,1507.976,False
+2112506,Tutóia,210007,Tutóia - Araioses,2101,São Luís,,,1566.081,False
+2112605,Urbano Santos,210003,Chapadinha,2101,São Luís,,,1706.196,False
+2112704,Vargem Grande,210004,Itapecuru Mirim,2101,São Luís,,,1958.702,False
+2112803,Viana,210005,Viana,2101,São Luís,,,1166.745,False
+2112852,Vila Nova dos Martírios,210019,Imperatriz,2105,Imperatriz,,,1190.008,False
+2113009,Vitorino Freire,210010,Bacabal,2102,Santa Inês - Bacabal,,,1193.386,False
+2112902,Vitória do Mearim,210005,Viana,2101,São Luís,,,715.625,False
+2114007,Zé Doca,210009,Santa Inês,2102,Santa Inês - Bacabal,,,2140.109,False
+2100154,Água Doce do Maranhão,210007,Tutóia - Araioses,2101,São Luís,,,442.292,False

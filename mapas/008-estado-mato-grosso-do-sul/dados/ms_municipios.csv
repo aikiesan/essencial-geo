@@ -1,0 +1,80 @@
+CD_MUN,NM_MUN,CD_RGI,NM_RGI,CD_RGINT,NM_RGINT,CD_CONCURB,NM_CONCURB,area_km2,capital
+5000252,Alcinópolis,500004,Coxim,5001,Campo Grande,,,4397.518,False
+5000609,Amambai,500009,Amambai,5002,Dourados,,,4193.742,False
+5000708,Anastácio,500012,Aquidauana - Anastácio,5003,Corumbá,,,2913.108,False
+5000807,Anaurilândia,500007,Nova Andradina,5002,Dourados,,,3415.657,False
+5000856,Angélica,500007,Nova Andradina,5002,Dourados,,,1283.629,False
+5000906,Antônio João,500008,Ponta Porã,5002,Dourados,,,1095.9,False
+5001003,Aparecida do Taboado,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,2751.485,False
+5001102,Aquidauana,500012,Aquidauana - Anastácio,5003,Corumbá,,,17087.976,False
+5001243,Aral Moreira,500008,Ponta Porã,5002,Dourados,,,1653.86,False
+5001508,Bandeirantes,500001,Campo Grande,5001,Campo Grande,,,3363.487,False
+5001904,Bataguassu,500002,Três Lagoas,5001,Campo Grande,,,2392.476,False
+5002001,Batayporã,500007,Nova Andradina,5002,Dourados,,,1826.578,False
+5002100,Bela Vista,500011,Jardim,5003,Corumbá,,,4956.473,False
+5002159,Bodoquena,500012,Aquidauana - Anastácio,5003,Corumbá,,,2589.14,False
+5002209,Bonito,500011,Jardim,5003,Corumbá,,,5378.723,False
+5002308,Brasilândia,500002,Três Lagoas,5001,Campo Grande,,,5803.542,False
+5002407,Caarapó,500005,Dourados,5002,Dourados,,,2115.73,False
+5002605,Camapuã,500001,Campo Grande,5001,Campo Grande,,,6238.127,False
+5002704,Campo Grande,500001,Campo Grande,5001,Campo Grande,5002704,Campo Grande,8082.327,True
+5002803,Caracol,500011,Jardim,5003,Corumbá,,,2928.706,False
+5002902,Cassilândia,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,3711.715,False
+5002951,Chapadão do Sul,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,3252.327,False
+5003108,Corguinho,500001,Campo Grande,5001,Campo Grande,,,2638.923,False
+5003157,Coronel Sapucaia,500009,Amambai,5002,Dourados,,,1023.727,False
+5003207,Corumbá,500010,Corumbá,5003,Corumbá,5003207,Internacional de Corumbá/Brasil,64431.145,False
+5003256,Costa Rica,500004,Coxim,5001,Campo Grande,,,4159.384,False
+5003306,Coxim,500004,Coxim,5001,Campo Grande,,,6390.663,False
+5003454,Deodápolis,500005,Dourados,5002,Dourados,,,828.45,False
+5003488,Dois Irmãos do Buriti,500001,Campo Grande,5001,Campo Grande,,,2430.3,False
+5003504,Douradina,500005,Dourados,5002,Dourados,,,280.235,False
+5003702,Dourados,500005,Dourados,5002,Dourados,5003702,Dourados,4062.889,False
+5003751,Eldorado,500006,Naviraí - Mundo Novo,5002,Dourados,,,1012.796,False
+5003900,Figueirão,500004,Coxim,5001,Campo Grande,,,4880.736,False
+5003801,Fátima do Sul,500005,Dourados,5002,Dourados,,,325.631,False
+5004007,Glória de Dourados,500005,Dourados,5002,Dourados,,,493.105,False
+5004106,Guia Lopes da Laguna,500011,Jardim,5003,Corumbá,,,1225.426,False
+5004304,Iguatemi,500006,Naviraí - Mundo Novo,5002,Dourados,,,2957.41,False
+5004403,Inocência,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,5761.186,False
+5004502,Itaporã,500005,Dourados,5002,Dourados,,,1342.389,False
+5004601,Itaquiraí,500006,Naviraí - Mundo Novo,5002,Dourados,,,2063.717,False
+5004700,Ivinhema,500007,Nova Andradina,5002,Dourados,,,2003.43,False
+5004809,Japorã,500006,Naviraí - Mundo Novo,5002,Dourados,,,416.605,False
+5004908,Jaraguari,500001,Campo Grande,5001,Campo Grande,,,2913.558,False
+5005004,Jardim,500011,Jardim,5003,Corumbá,,,2130.068,False
+5005103,Jateí,500005,Dourados,5002,Dourados,,,1933.316,False
+5005152,Juti,500005,Dourados,5002,Dourados,,,1569.176,False
+5005202,Ladário,500010,Corumbá,5003,Corumbá,5003207,Internacional de Corumbá/Brasil,354.255,False
+5005251,Laguna Carapã,500005,Dourados,5002,Dourados,,,1725.78,False
+5005400,Maracaju,500005,Dourados,5002,Dourados,,,5396.905,False
+5005608,Miranda,500012,Aquidauana - Anastácio,5003,Corumbá,,,5470.975,False
+5005681,Mundo Novo,500006,Naviraí - Mundo Novo,5002,Dourados,,,478.38,False
+5005707,Naviraí,500006,Naviraí - Mundo Novo,5002,Dourados,,,3189.667,False
+5005806,Nioaque,500011,Jardim,5003,Corumbá,,,3909.738,False
+5006002,Nova Alvorada do Sul,500001,Campo Grande,5001,Campo Grande,,,4027.647,False
+5006200,Nova Andradina,500007,Nova Andradina,5002,Dourados,,,4768.118,False
+5006259,Novo Horizonte do Sul,500007,Nova Andradina,5002,Dourados,,,849.19,False
+5006309,Paranaíba,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,5352.02,False
+5006358,Paranhos,500009,Amambai,5002,Dourados,,,1307.092,False
+5006275,Paraíso das Águas,500003,Paranaíba - Chapadão do Sul - Cassilândia,5001,Campo Grande,,,5061.433,False
+5006408,Pedro Gomes,500004,Coxim,5001,Campo Grande,,,3553.782,False
+5006606,Ponta Porã,500008,Ponta Porã,5002,Dourados,5006606,Internacional de Pedro Juan Caballero/Paraguai - Ponta Porã/Brasil,5359.274,False
+5006903,Porto Murtinho,500011,Jardim,5003,Corumbá,,,17502.994,False
+5007109,Ribas do Rio Pardo,500001,Campo Grande,5001,Campo Grande,,,17315.212,False
+5007208,Rio Brilhante,500005,Dourados,5002,Dourados,,,3983.507,False
+5007307,Rio Negro,500001,Campo Grande,5001,Campo Grande,,,1828.8,False
+5007406,Rio Verde de Mato Grosso,500004,Coxim,5001,Campo Grande,,,8174.784,False
+5007505,Rochedo,500001,Campo Grande,5001,Campo Grande,,,1304.755,False
+5007554,Santa Rita do Pardo,500002,Três Lagoas,5001,Campo Grande,,,6142.001,False
+5007802,Selvíria,500002,Três Lagoas,5001,Campo Grande,,,3254.917,False
+5007703,Sete Quedas,500009,Amambai,5002,Dourados,,,839.117,False
+5007901,Sidrolândia,500001,Campo Grande,5001,Campo Grande,,,5265.695,False
+5007935,Sonora,500004,Coxim,5001,Campo Grande,,,4185.542,False
+5007695,São Gabriel do Oeste,500001,Campo Grande,5001,Campo Grande,,,3850.674,False
+5007950,Tacuru,500009,Amambai,5002,Dourados,,,1784.207,False
+5007976,Taquarussu,500007,Nova Andradina,5002,Dourados,,,1052.232,False
+5008008,Terenos,500001,Campo Grande,5001,Campo Grande,,,2845.653,False
+5008305,Três Lagoas,500002,Três Lagoas,5001,Campo Grande,5008305,Três Lagoas,10217.071,False
+5008404,Vicentina,500005,Dourados,5002,Dourados,,,302.542,False
+5000203,Água Clara,500002,Três Lagoas,5001,Campo Grande,,,7781.558,False

@@ -1,6 +1,6 @@
 ---
 titulo: "Essencial Geo entra no ar"
-resumo: "Um atlas de mapas temáticos do Brasil, com dados abertos, DOI por prancha e publicação em português e inglês. As quatro primeiras pranchas são modelos com dados sintéticos; os mapas reais começam a seguir."
+resumo: "Um atlas de mapas temáticos do Brasil, com dados abertos, DOI por prancha e publicação em português e inglês. A primeira série, «Brasil, estado por estado», começa hoje com São Paulo."
 data: 2026-10-17
 tipo: novidade
 tags: [lancamento, atlas, dados-abertos]
@@ -14,9 +14,10 @@ Zenodo — para que possa ser citada num artigo, numa prancha de projeto ou no L
 
 ## O que já está aqui
 
-As pranchas 001 a 004 são **pranchas-modelo**: usam dados sintéticos, gerados por script, e
-existem para fixar a linguagem visual das séries — densidade em grade, relevo, uso do solo e
-figura-fundo. Elas trazem o selo “dados sintéticos” e não recebem DOI.
+A prancha 001 abre a primeira série, **Brasil, estado por estado**: uma base cartográfica de cada
+unidade da federação, com municípios, regiões geográficas imediatas e intermediárias, limite e
+rodovias, em GeoPackage, DXF e CSV. Começa por São Paulo, hoje, e segue às segundas, quartas e
+sextas até 23 de dezembro, quando chega a Rondônia — 27 pranchas, todas com o mesmo desenho.
 
 ## Duas línguas, sempre
 
