@@ -111,7 +111,13 @@ tracejado “em breve”.
 ### Corpo do README
 
 Depois do frontmatter, o corpo em Markdown vira as **Notas de método** na página do mapa (o `# Título`
-inicial é para o GitHub e não se repete no site). Seções sugeridas: *Método*, *Arquivos*, *Como reproduzir*.
+inicial é para o GitHub e não se repete no site). Seções sugeridas: *O que vem nos arquivos*, *Método*,
+*Limitações*.
+
+A publicação leva **as camadas e a descrição do método**, nunca o código: a ficha não cita nem linka os
+scripts que geraram o mapa (eles ficam em `scripts/`, para uso interno), e o Zenodo recebe só os arquivos da
+pasta do mapa. O método se escreve em passos que qualquer pessoa repete num SIG — fonte, recorte,
+operação, classificação.
 
 ---
 

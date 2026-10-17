@@ -277,11 +277,6 @@ Censo ou de qualquer base que use o código IBGE de sete dígitos.
 5. Na prancha, as geometrias são simplificadas como cobertura (≈ 400 m), para que
    a unidade, as vizinhas e o litoral compartilhem as mesmas bordas.
 
-Scripts: [\`scripts/estados/preparar.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (dados),
-[\`scripts/estados/estilos.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/estilos.py) (estilos do QGIS),
-[\`scripts/estados/prancha.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (prancha) e
-[\`scripts/estados/readme.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (esta ficha).
-
 ## Limitações
 
 - A camada \`rodovias\` tem o campo \`n_pistas\` incompleto; não use a base para medir
@@ -350,11 +345,6 @@ dataset keyed on the seven-digit IBGE code.
    (${fen(N.area_km2_calculada, 1)} km²).
 5. On the plate, geometries are simplified as a coverage (≈ 400 m), so the unit, its
    neighbours and the coastline share the same edges.
-
-Scripts: [\`scripts/estados/preparar.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (data),
-[\`scripts/estados/estilos.py\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/estilos.py) (QGIS styles),
-[\`scripts/estados/prancha.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (plate) and
-[\`scripts/estados/readme.mjs\`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (this sheet).
 
 ## Limitations
 

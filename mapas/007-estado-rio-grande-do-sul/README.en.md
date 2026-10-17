@@ -63,11 +63,6 @@ dataset keyed on the seven-digit IBGE code.
 5. On the plate, geometries are simplified as a coverage (≈ 400 m), so the unit, its
    neighbours and the coastline share the same edges.
 
-Scripts: [`scripts/estados/preparar.py`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (data),
-[`scripts/estados/estilos.py`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/estilos.py) (QGIS styles),
-[`scripts/estados/prancha.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (plate) and
-[`scripts/estados/readme.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (this sheet).
-
 ## Limitations
 
 - The `rodovias` layer has an incomplete `n_pistas` field; do not use it to measure
