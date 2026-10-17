@@ -114,6 +114,38 @@ uma vez, isso vale para a série inteira no primeiro push.
 cores, rótulos e cantos sozinha), 28/11 (agenda de dezembro), 26/12 (bastidores: a série inteira numa
 prancha só).
 
+## Coleções temáticas (27/10 a 22/12/2026)
+
+Às terças e quintas, nos dias livres da série dos estados, saem as **coleções**: grupos de pranchas
+sobre um mesmo tema, numerados no subtítulo («Bioenergia em SP, 1/4») e reunidos numa página própria
+pelo campo `colecao:` do README (`/colecoes/<id>/`). Uma coleção sai inteira antes da seguinte, sempre às
+9h de Brasília (12h UTC).
+
+| Data | Dia | Nº | Coleção (`colecao:`) | Prancha | Fontes |
+| --- | --- | --- | --- | --- | --- |
+| 27/10 | ter | 028 | Bioenergia em SP (`bioenergia-sp`) 1/4 | Usinas de biogás em operação | ANEEL — SIGA |
+| 29/10 | qui | 029 | Bioenergia em SP 2/4 | Rebanhos bovino, suíno e de galináceos | IBGE — PPM 2024 |
+| 03/11 | ter | 030 | Bioenergia em SP 3/4 | Cana-de-açúcar: área colhida e produção | IBGE — PAM 2024 |
+| 05/11 | qui | 031 | Bioenergia em SP 4/4 | Usinas sucroenergéticas e onde o resíduo está | ANEEL — SIGA, IBGE — PAM |
+| 10/11 | ter | 032 | RMC (`rmc`) 1/4 | Uso e cobertura da terra | MapBiomas |
+| 12/11 | qui | 033 | RMC 2/4 | Densidade de domicílios, grade estatística | IBGE — Censo 2022 |
+| 17/11 | ter | 034 | RMC 3/4 | Renda domiciliar | IBGE — Censo 2022 |
+| 19/11 | qui | 035 | RMC 4/4 | Hidrografia e APPs de um município | ANA, FBDS |
+| 24/11 | ter | 036 | Água em SP (`agua-sp`) 1/3 | Bacias hidrográficas | ANA — BHO |
+| 26/11 | qui | 037 | Água em SP 2/3 | Drenagem ordenada | ANA — BHO |
+| 01/12 | ter | 038 | Água em SP 3/3 | Unidades de conservação sobre as bacias | MMA — CNUC, ANA |
+| 03/12 | qui | 039 | Relevo (`relevo`) 1/3 | Serra da Mantiqueira | Copernicus DEM GLO-30 |
+| 08/12 | ter | 040 | Relevo 2/3 | Serra do Mar | Copernicus DEM GLO-30 |
+| 10/12 | qui | 041 | Relevo 3/3 | Cuestas paulistas | Copernicus DEM GLO-30 |
+| 15/12 | ter | 042 | Energia elétrica no Brasil (`energia-eletrica`) 1/3 | Linhas de transmissão e subestações | EPE, ANEEL — SIGEL |
+| 17/12 | qui | 043 | Energia elétrica no Brasil 2/3 | Usinas por fonte | ANEEL — SIGA |
+| 22/12 | ter | 044 | Energia elétrica no Brasil 3/3 | Geração distribuída solar por município | ANEEL |
+
+**Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
+uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
+`energia-eletrica-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
+do push da primeira prancha dela.
+
 ## Pautas para depois da série
 
 Sugestões a partir das fontes abertas, ligadas às linhas de pesquisa (energia, biomassa, biogás,
