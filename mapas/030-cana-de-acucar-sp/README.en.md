@@ -1,7 +1,7 @@
 ---
 # English version (EN-UK). Numbers, files, DOI and layers come from README.md.
 titulo: "Sugarcane"
-subtitulo: "Bioenergy in São Paulo, 3/4"
+subtitulo: "A green sea over a fifth of the state"
 
 contexto: >-
   In 2024, São Paulo’s cane fields were harvested over 5.40 million hectares, 21.7% of the state, and yielded 418.6 million tonnes of cane. In 88 municipalities the harvested area exceeds half the territory; in Areiópolis it reaches 82%, and in Jaboticabal 81%. The map shows the dark patch that covers the north and centre of the state and has Morro Agudo as its largest producer (7.0 million tonnes), and it shows where the patch ends: in the Paraíba valley, the Ribeira valley and Greater São Paulo, cane all but disappears. Every tonne harvested leaves bagasse and straw, and every litre of ethanol leaves vinasse; this is the map São Paulo’s bioenergy rests on. Third plate of the collection “Bioenergy in São Paulo”.

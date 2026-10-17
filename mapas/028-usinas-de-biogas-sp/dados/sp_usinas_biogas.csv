@@ -1,0 +1,65 @@
+categoria,uso_principal,energia_eletrica,energia_termica,energia_mecanica,biometano,situacao,porte,inicio_operacao,CD_MUN,NM_MUN,camada,lon,lat,nome,ceg,combustivel,fase,potencia_kw,potencia_fiscalizada_kw,proprietario
+industria,Energia térmica,False,True,False,False,Em operação,pequeno,2014-01-01,3533700,Ocauçu,usinas_biogas,-49.930532,-22.450077,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-01,3513207,Cristais Paulista,usinas_biogas,-47.4225,-20.406389,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-09-24,3510302,Capela do Alto,usinas_biogas,-47.739167,-23.46889,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-01-25,3538709,Piracicaba,usinas_biogas,-47.647778,-22.73556,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-03-15,3554706,Torrinha,usinas_biogas,-48.173333,-22.424167,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-01,3523206,Itararé,usinas_biogas,-49.335556,-24.10889,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em implantação,grande,2017-07-18,3536505,Paulínia,usinas_biogas,-47.202909,-22.775514,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2016-01-01,3506003,Bauru,usinas_biogas,-49.058611,-22.31444,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,medio,2011-01-01,3523909,Itu,usinas_biogas,-47.299444,-23.26389,,,,,,,
+rsu_esgoto,GNR/Biometano,False,False,False,True,Em operação,pequeno,2018-12-01,3516200,Franca,usinas_biogas,-47.419676,-20.560737,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-03-01,3512605,Coronel Macedo,usinas_biogas,-49.2528,-23.6633,,,,,,,
+industria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-01-05,3518800,Guarulhos,usinas_biogas,-46.533611,-23.45417,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,medio,2011-01-01,3507902,Brotas,usinas_biogas,-48.123056,-22.2775,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2017-06-22,3514908,Elias Fausto,usinas_biogas,-47.368611,-23.043056,,,,,,,
+rsu_esgoto,Energia elétrica,True,True,False,False,Em operação,grande,2015-03-04,3529401,Mauá,usinas_biogas,-46.475,-23.708686,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-03-01,3512605,Coronel Macedo,usinas_biogas,-49.310278,-23.62639,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-01,3523206,Itararé,usinas_biogas,-49.335556,-24.10889,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,pequeno,2013-01-01,3535309,Palmital,usinas_biogas,-50.206076,-22.774106,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em operação,grande,2014-08-29,3518859,Guatapará,usinas_biogas,-47.954038,-21.393423,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,medio,2014-01-01,3510005,Cândido Mota,usinas_biogas,-50.366301,-22.737744,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em operação,grande,2016-02-20,3508405,Cabreúva,usinas_biogas,-47.15755,-23.310828,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,medio,2012-01-01,3535309,Palmital,usinas_biogas,-50.10291,-22.788958,,,,,,,
+industria,Energia elétrica,True,False,False,False,Em implantação,grande,,3518602,Guariba,usinas_biogas,-48.288821,-21.419022,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-09-12,3549706,São José do Rio Pardo,usinas_biogas,-46.901944,-21.60222,,,,,,,
+industria,GNR/Biometano,True,False,False,True,Em implantação,grande,,3532207,Narandiba,usinas_biogas,-51.502778,-22.531389,,,,,,,
+industria,Energia térmica,False,True,False,False,Em implantação,medio,,3541406,Presidente Prudente,usinas_biogas,-51.388889,-22.13722,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em operação,grande,2014-03-11,3550308,São Paulo,usinas_biogas,-46.758413,-23.420841,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2013-11-01,3519709,Ibiúna,usinas_biogas,-47.211111,-23.65806,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em implantação,grande,,3505708,Barueri,usinas_biogas,-46.872778,-23.51111,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-01,3520509,Indaiatuba,usinas_biogas,-47.207778,-23.08806,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,medio,2008-01-01,3540903,Pradópolis,usinas_biogas,-48.1274,-21.31824,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-08,3512001,Colina,usinas_biogas,-48.4831,-20.7044,,,,,,,
+rsu_esgoto,Energia elétrica,True,True,False,False,Em operação,medio,2011-03-14,3543402,Ribeirão Preto,usinas_biogas,-47.811316,-21.105573,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,medio,2018-01-01,3524907,Jambeiro,usinas_biogas,-45.693333,-23.25528,,,,,,,
+industria,Energia elétrica,True,True,False,False,Em operação,grande,2005-07-01,3556206,Valinhos,usinas_biogas,-47.036117,-23.026323,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-12-19,3550100,São Manuel,usinas_biogas,-48.574167,-22.74111,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-08,3512001,Colina,usinas_biogas,-48.498354,-20.669305,,,,,,,
+rsu_esgoto,Energia elétrica,False,False,False,False,Em operação,grande,2015-04-16,3509007,Caieiras,usinas_biogas,-46.773412,-23.349683,,,,,,,
+rsu_esgoto,Energia térmica,False,True,False,False,Em reformulação/reforma,grande,,3505708,Barueri,usinas_biogas,-46.844802,-23.513564,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em operação,grande,2016-11-06,3547304,Santana de Parnaíba,usinas_biogas,-46.963336,-23.41471,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,grande,2019-01-05,3535309,Palmital,usinas_biogas,-50.219722,-22.78778,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,medio,2016-01-01,3550506,São Pedro do Turvo,usinas_biogas,-49.696577,-22.743619,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em reformulação/reforma,pequeno,,3539301,Pirassununga,usinas_biogas,-47.351569,-21.92714,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,medio,2013-01-01,3530508,Mococa,usinas_biogas,-47.004189,-21.450556,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2018-01-01,3523206,Itararé,usinas_biogas,-49.335556,-24.10889,,,,,,,
+rsu_esgoto,Energia elétrica,True,False,False,False,Em operação,grande,2018-05-15,3554805,Tremembé,usinas_biogas,-45.613168,-22.924445,,,,,,,
+rsu_esgoto,Energia elétrica,True,True,False,False,Em operação,grande,2008-03-27,3550308,São Paulo,usinas_biogas,-46.42598,-23.634578,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2019-10-04,3523404,Itatiba,usinas_biogas,-46.818333,-23.00722,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2017-10-26,3531506,Monte Azul Paulista,usinas_biogas,-48.639167,-20.90694,,,,,,,
+agropecuaria,Energia elétrica,True,False,False,False,Em operação,pequeno,2017-01-01,3555000,Tupã,usinas_biogas,-50.519444,-21.93389,,,,,,,
+industria,Energia térmica,False,True,False,False,Em operação,pequeno,2014-01-01,3510005,Cândido Mota,usinas_biogas,-50.365568,-22.736724,,,,,,,
+,,,,,,,,2016-07-15,3509007,Caieiras,ute_biogas,-46.772103,-23.338441,Termoverde Caieiras,UTE.RU.SP.031436-6,Biogás - RU,Operação,29547.0,29547.0,100% para Termoverde Caieiras Ltda (PIE)
+,,,,,,,,2008-03-27,3550308,São Paulo,ute_biogas,-46.415257,-23.634899,São João Biogás,UTE.RU.SP.028648-6,Biogás - RU,Operação,24640.0,21560.0,100% para SÃO JOÃO ENERGIA AMBIENTAL S/A (PIE)
+,,,,,,,,2020-08-12,3518602,Guariba,ute_biogas,-48.292497,-21.418967,Biogás Bonfim,UTE.AI.SP.035109-1,Biogás-AGR,Operação,20893.0,20893.0,100% para RAÍZEN BIOGÁS LTDA (PIE)
+,,,,,,,,2014-08-29,3518859,Guatapará,ute_biogas,-47.952792,-21.392156,Guatapará,UTE.RU.SP.031440-4,Biogás - RU,Operação,5704.0,5704.0,100% para GUATAPARÁ ENERGIA S.A. (PIE)
+,,,,,,,,2016-06-11,3547304,Santana de Parnaíba,ute_biogas,-46.959444,-23.416667,Tecipar,UTE.RU.SP.035080-0,Biogás - RU,Operação,5704.0,4278.0,100% para Biopar Soluções Ambientas Ltda. (PIE)
+,,,,,,,,2019-12-20,3529302,Matão,ute_biogas,-48.525267,-21.550756,Predilecta,UTE.FL.SP.035103-2,Biogás - Floresta,Operação,5000.0,5000.0,100% para PREDILECTA ALIMENTOS LTDA (PIE)
+,,,,,,,,2014-11-03,3550308,São Paulo,ute_biogas,-46.755824,-23.41978,Bandeirantes,UTE.RU.SP.031732-2,Biogás - RU,Operação,4624.0,4624.0,100% para Biogas Energia Ambiental S.A (REG)
+,,,,,,,,2018-05-15,3554805,Tremembé,ute_biogas,-45.613581,-22.915417,Tremembé,UTE.RU.SP.040200-1,Biogás - RU,Operação,4278.0,4278.0,100% para SPE TREMEMBÉ ENERGIA LTDA (REG)
+,,,,,,,,2021-09-01,3511102,Catanduva,ute_biogas,-48.933611,-21.1265,Valorgas Catanduva,UTE.RU.SP.054854-5,Biogás - RU,Operação,2852.0,2852.0,100% para Valorgas Energia Catanduva SPE LTDA (REG)
+,,,,,,,,2002-01-31,3510609,Carapicuíba,ute_biogas,-46.835556,-23.522501,PCT Barueri Biogás,UTE.RU.SP.028223-5,Biogás - RU,Operação,2601.0,2601.0,100% para Companhia de Saneamento Básico do Estado de São Paulo (REG)
+,,,,,,,,2011-03-14,3543402,Ribeirão Preto,ute_biogas,-47.81309,-21.104766,Ambient,UTE.RU.SP.030472-7,Biogás - RU,Operação,1500.0,1500.0,100% para Ambient Serviços Ambientais de Ribeirão Preto S.A (REG)
+,,,,,,,,2011-06-10,3556206,Valinhos,ute_biogas,-47.026342,-23.020955,Cogeração Bio Springer,UTE.AI.SP.031197-9,Biogás-AGR,Operação,848.0,848.0,100% para Bio Springer do Brasil Indústria de Alimentos S.A. (REG)
+,,,,,,,,2002-12-18,3505708,Barueri,ute_biogas,-46.876,-23.511,Energ-Biog,UTE.RU.SP.028686-9,Biogás - RU,Operação,30.0,30.0,100% para Biomass Users Network do Brasil (REG)

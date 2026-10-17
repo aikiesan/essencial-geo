@@ -16,4 +16,4 @@ mapas/*/dados/*_divisao_territorial.*.zip
 mapas/*/dados/*_prancha*.svg
 scripts/colecoes/cache/
 # anexos das releases das coleções (bioenergia-sp-2026, …)
-mapas/*/dados/sp_*_20[0-9][0-9].gpkg.zip
+mapas/*/dados/*.gpkg.zip

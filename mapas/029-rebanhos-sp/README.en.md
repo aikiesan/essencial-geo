@@ -1,7 +1,7 @@
 ---
 # English version (EN-UK). Numbers, files, DOI and layers come from README.md.
 titulo: "Livestock"
-subtitulo: "Bioenergy in São Paulo, 2/4"
+subtitulo: "Three herds, three geographies"
 
 contexto: >-
   In 2024, São Paulo state held 10.8 million cattle, 1.5 million pigs and 205 million poultry. Side by side, the three herds occupy the state in different ways: cattle spread across the west, led by Presidente Bernardes (151,407 head) and Mirante do Paranapanema (138,268); pigs gather in a few hubs, such as Itu and Cerqueira César, each with over 100,000 head; and poultry cluster in farms, with Bastos alone holding 13.7 million birds. For anyone thinking about biogas, density matters more than the total: many animals on little land also concentrate the manure. Second plate of the collection “Bioenergy in São Paulo”.

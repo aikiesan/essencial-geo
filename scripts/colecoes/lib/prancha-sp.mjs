@@ -16,6 +16,7 @@ import sharp from 'sharp';
 import { geoTransverseMercator, geoConicEqualArea, geoPath, geoGraticule, geoDistance, geoBounds } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { norteFolha, molecula, microtexto, ASSINATURA, ESTRELAS } from '../../lib/identidade.mjs';
+import { motivo, chamada } from './arte.mjs';
 
 export const RAIZ = fileURLToPath(new URL('../../..', import.meta.url));
 
@@ -189,11 +190,17 @@ function quadroMapa(w, h, mapa) {
       return `<path d="${path(m)}" fill="${cor ?? `url(#${id}h)`}"/>`;
     })
     .join('')}</g>`);
+  if (mapa.hachura) {
+    const { cds, cor = '#1a211a', passo = 5, largura: lh = 0.8, angulo = -55 } = mapa.hachura;
+    s.push(`<defs><pattern id="${id}x" width="${passo}" height="${passo}" patternUnits="userSpaceOnUse" patternTransform="rotate(${angulo})"><path d="M0 0V${passo}" stroke="${cor}" stroke-width="${lh}" stroke-opacity=".75"/></pattern></defs>`);
+    s.push(`<g fill="url(#${id}x)">${municipios.filter((m) => cds.has(m.properties.CD_MUN)).map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
+  }
   s.push(`<path d="${cache.rgint.features.map((r) => path(r)).join('')}" fill="none" stroke="${LIM_RGINT}" stroke-width="${mapa.bordaRgint ?? 1.4}" stroke-linejoin="round" stroke-opacity=".85"/>`);
   s.push(`<path d="${path(limite)}" fill="none" stroke="${TINTA}" stroke-width="${mapa.bordaEstado ?? 2.6}" stroke-linejoin="round"/>`);
   // Pontos: maiores por baixo.
   for (const p of [...(mapa.pontos ?? [])].sort((a, b) => b.r - a.r)) {
     const [x, y] = proj(p.coord);
+    if (p.anel) { s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(p.r)}" fill="none" stroke="${p.cor}" stroke-width="${p.largura ?? 2}" stroke-opacity=".95"/>`); continue; }
     s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="${f1(p.r)}" fill="${p.vazado ? PAPEL : p.cor}" fill-opacity="${p.vazado ? 1 : (p.opacidade ?? 0.9)}" stroke="${p.vazado ? p.cor : (p.borda ?? PAPEL)}" stroke-width="${p.vazado ? 2 : 1.2}"/>`);
   }
   // Rótulos: UFs vizinhas, oceano, destaques, capital.
@@ -201,6 +208,13 @@ function quadroMapa(w, h, mapa) {
   const cabe = ([a0, b0, a1, b1]) => a0 > 14 && b0 > 14 && a1 < w - 14 && b1 < h - 14 &&
     !ocupado.some(([c0, d0, c1, d1]) => a0 < c1 + 4 && a1 > c0 - 4 && b0 < d1 + 4 && b1 > d0 - 4);
   for (const r of mapa.reservas ?? []) ocupado.push(r);
+  const porCd = new Map(municipios.map((m) => [m.properties.CD_MUN, m]));
+  for (const c of mapa.chamadas ?? []) {
+    const [x, y] = c.coord ? proj(c.coord) : path.centroid(porCd.get(c.cd));
+    const ch = chamada(x, y, c);
+    ocupado.push(ch.caixa, [x - 9, y - 9, x + 9, y + 9]);
+    s.push(ch.svg);
+  }
   const tUf = mapa.tamanhoUf ?? 15;
   if (mapa.rotulosUf !== false)
     for (const [nome, c] of ROTULOS_UF) {
@@ -230,7 +244,6 @@ function quadroMapa(w, h, mapa) {
     s.push(`<text x="${f1(cx + 14 * est)}" y="${f1(cy + t * 0.32)}" font-family="${SERIF}" font-size="${t}" font-style="italic" fill="${TINTA}" ${halo(5)}>${esc(cache.capital.nome)}</text>`);
     ocupado.push([cx, cy - t, cx + 14 * est + largura(cache.capital.nome, t), cy + 6]);
   }
-  const porCd = new Map(municipios.map((m) => [m.properties.CD_MUN, m]));
   const tD = mapa.tamanhoDestaque ?? 13;
   for (const d of mapa.destaques ?? []) {
     const m = porCd.get(d.cd);
@@ -356,6 +369,13 @@ function cabecalho(tema, numero) {
     s.push(`<text x="0" y="${y}" font-family="${SERIF}" font-style="italic" font-size="24" fill="#4f4a41">${esc(l)}</text>`);
     y += 32;
   }
+  if (tema.descricao) {
+    y += 2;
+    for (const l of linhasDe(tema.descricao(), 14, LP, { mono: true, espaco: 0.4 })) {
+      s.push(`<text x="0" y="${y}" font-family="${MONO}" font-size="14" letter-spacing=".4" fill="${CINZA}">${esc(l)}</text>`);
+      y += 20;
+    }
+  }
   return { svg: s.join('\n'), y: y + 14 };
 }
 
@@ -471,6 +491,12 @@ ${norteFolha({ cx: qw - 110, cy: 60 + 30 + 55, altura: 110 })}
   y = extra.y;
   const fim = MH - 24;
   const c = carimbo(tema, numero, data, fim);
+  // Friso da coleção: só quando sobra respiro entre o conteúdo e a escala.
+  if (tema.motivo && c.y0 - y > 300) {
+    const yM = y + Math.min(60, (c.y0 - y - 300) / 2 + 24);
+    p.push(`<g transform="translate(0 ${f1(yM)})">${motivo(tema.motivo, LP, 84)}</g>`);
+    y = yM + 84;
+  }
   const yEsc = y + Math.max(10, (c.y0 - y - 110) / 2) + 46;
   p.push(blocoEscala(pxKm, yEsc, tema.layout === 'um' ? '' : 'a mesma nos três mapas'));
   p.push(c.svg);

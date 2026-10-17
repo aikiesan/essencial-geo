@@ -36,6 +36,58 @@ ZERO = "#eef0f1"        # zero absoluto na tabela (símbolo "-")
 SEM_INFO = "#ffffff"    # sem informação ("..." ou município fora da tabela), com hachura na prancha
 
 
+INFRA = Path(os.environ.get(
+    "ESSENCIAL_INFRA",
+    "A:/Pilar-2b/00_Fontes_Primarias-20260802T093400Z-1-001/shapefiles_infraestrutura_mapbiomas",
+))
+# Tons minerais para dados categóricos (docs/ESTILO.md).
+MINERAIS = {
+    "verde_mata": "#2f5d3a", "oliva": "#7d8a3c", "palha": "#d9c27a", "ocre": "#c08a2e",
+    "argila": "#9c4a32", "ameixa": "#6b3d5c", "grafite": "#4a4e52", "azul_profundo": "#234e70",
+}
+
+
+def infra(nome: str) -> gpd.GeoDataFrame:
+    """Uma camada da base de infraestrutura do MapBiomas (ZIP original, texto em Latin-1), em SIRGAS 2000."""
+    import pyogrio
+
+    arq = f"zip://{INFRA / f'{nome}.zip'}"
+    camada = [c for c in pyogrio.list_layers(arq)[:, 0] if not c.startswith("._")][0]
+    g = gpd.read_file(arq, layer=camada, engine="pyogrio", encoding="latin1")
+    return g.to_crs(GEO) if g.crs and g.crs.to_epsg() != 4674 else g.set_crs(GEO, allow_override=True)
+
+
+def _num_br(v) -> float | None:
+    """'5,500.00' → 5500.0 (as planilhas do SIGA usam vírgula de milhar); '-' → None."""
+    s = str(v).strip()
+    if s in ("", "-", "nan", "None"):
+        return None
+    return float(s.replace(",", ""))
+
+
+def siga(nome: str) -> gpd.GeoDataFrame:
+    """Usinas do SIGA/ANEEL na versão da base de infraestrutura do MapBiomas, com nomes de campo limpos."""
+    g = infra(nome)
+    c = list(g.columns)
+    pega = lambda prefixo: next(x for x in c if x.startswith(prefixo))  # noqa: E731
+    df = gpd.GeoDataFrame({
+        "nome": g[pega("Empreendim")].str.strip(),
+        "ceg": g[pega("CEG")],
+        "uf": g[pega("UF")],
+        "fonte": g[pega("Fonte")],
+        "fase": g[pega("Fase")],
+        "origem": g[pega("Origem")],
+        "tipo": g[pega("Tipo")],
+        "combustivel": g[pega("Combust")],
+        "inicio_operacao": pd.to_datetime(g[pega("Inicio ope")], dayfirst=True, errors="coerce"),
+        "potencia_kw": g[pega("Potência O")].map(_num_br),
+        "potencia_fiscalizada_kw": g[pega("Potência F")].map(_num_br),
+        "municipio_siga": g[pega("Munic")],
+        "proprietario": g[pega("Propriet")],
+    }, geometry=g.geometry.values, crs=g.crs)
+    return df
+
+
 def malha_uf(uf: str) -> gpd.GeoDataFrame:
     """Municípios da UF na geometria original do IBGE (Malha Municipal 2025)."""
     m = gpd.read_file(MALHA, engine="pyogrio").set_crs(GEO, allow_override=True)
@@ -144,6 +196,68 @@ def estilo_contorno(cor: str, largura: float, rotulo_campo: str | None = None, a
     return qml(unico(simbolo("fill", "0", preenchimento(None, cor, largura, alfa))), "poligono", rot)
 
 
+def _tamanho_por_expressao(expr: str) -> str:
+    """Tamanho definido por expressão (círculos proporcionais), nos dois formatos do QGIS."""
+    return (
+        '<data_defined_properties><Option type="Map"><Option name="name" value="" type="QString"/>'
+        '<Option name="properties" type="Map"><Option name="size" type="Map">'
+        '<Option name="active" value="true" type="bool"/>'
+        f'<Option name="expression" value={quoteattr(expr)} type="QString"/>'
+        '<Option name="type" value="3" type="int"/></Option></Option>'
+        '<Option name="type" value="collection" type="QString"/></Option></data_defined_properties>'
+    )
+
+
+def marcador(cor: str, tamanho: float, *, borda: str = PAPEL, largura_borda: float = 0.25, forma: str = "circle",
+             vazado: bool = False, alfa: float = 0.9, tamanho_expr: str | None = None) -> str:
+    """Camada SimpleMarker (mm). `tamanho_expr`: expressão do QGIS para o diâmetro (círculos proporcionais)."""
+    d = {
+        "name": forma, "color": "0,0,0,0" if vazado else rgba(cor, alfa),
+        "outline_color": rgba(cor if vazado else borda), "outline_width": 0.5 if vazado else largura_borda,
+        "outline_width_unit": "MM", "outline_style": "solid", "size": tamanho, "size_unit": "MM",
+        "joinstyle": "round", "angle": 0, "vertical_anchor_point": 1, "horizontal_anchor_point": 1,
+        "scale_method": "diameter",
+    }
+    dd = _tamanho_por_expressao(tamanho_expr) if tamanho_expr else ""
+    return f'<layer class="SimpleMarker" enabled="1" locked="0" pass="0">{props(d)}{dd}</layer>'
+
+
+def linha(cor: str, largura: float, tracejado: str | None = None) -> str:
+    d = {"line_color": rgba(cor), "line_width": largura, "line_width_unit": "MM", "line_style": "solid",
+         "capstyle": "round", "joinstyle": "round", "use_custom_dash": 0}
+    if tracejado:
+        d.update({"use_custom_dash": 1, "customdash": tracejado, "customdash_unit": "MM", "capstyle": "flat"})
+    return f'<layer class="SimpleLine" enabled="1" locked="0" pass="0">{props(d)}</layer>'
+
+
+def estilo_regras(geometria: str, itens: list[tuple[str, str, str]], *, rotulo_campo: str | None = None,
+                  rotulo_tamanho: float = 7, ordem: str | None = None) -> str:
+    """Renderizador por regras: itens = [(filtro QGIS já escapado para XML, rótulo, camadas de símbolo)].
+
+    `ordem`: expressão de ordenação (ex.: '"potencia_kw" DESC', para os círculos grandes ficarem por baixo).
+    """
+    tipo = {"ponto": "marker", "linha": "line", "poligono": "fill"}[geometria]
+    regras = "".join(f'<rule key="r{i}" filter="{f}" label={quoteattr(r)} symbol="{i}"/>' for i, (f, r, _) in enumerate(itens))
+    simbolos = "".join(simbolo(tipo, str(i), s) for i, (_, _, s) in enumerate(itens))
+    ob = ""
+    if ordem:
+        campo, _, sentido = ordem.partition(" ")
+        ob = (f'<orderby><orderByClause asc="{0 if sentido.upper() == "DESC" else 1}" nullsFirst="0">'
+              f'{campo.replace(chr(34), "&quot;")}</orderByClause></orderby>')
+    renderer = (
+        f'<renderer-v2 type="RuleRenderer" symbollevels="0" forceraster="0" enableorderby="{int(bool(ordem))}">'
+        f'<rules key="root">{regras}</rules><symbols>{simbolos}</symbols>{ob}</renderer-v2>'
+    )
+    rot = rotulo(rotulo_campo, tamanho=rotulo_tamanho, cor="#33373a", prioridade=4) if rotulo_campo else ""
+    return qml(renderer, geometria, rot)
+
+
+def igual(campo: str, valor) -> str:
+    """Filtro `"campo" = 'valor'` escapado para XML."""
+    v = f"'{valor}'" if isinstance(valor, str) else repr(valor)
+    return f"&quot;{campo}&quot; = {v}"
+
+
 def gravar_estilos(gpkg: Path, estilos: dict[str, list[tuple[str, str, str, bool]]]) -> None:
     """estilos = {camada: [(nome_do_estilo, descrição, QML, padrão?)]}. Mesmo esquema que o QGIS cria."""
     con = sqlite3.connect(gpkg)
@@ -211,7 +325,8 @@ def gravar_cache(nome: str, obj: dict) -> None:
 
 
 __all__ = [
-    "RAIZ", "DADOS", "GEO", "PLASMA", "VIRIDIS", "ZERO", "SEM_INFO", "TINTA", "PAPEL",
+    "RAIZ", "DADOS", "GEO", "PLASMA", "VIRIDIS", "ZERO", "SEM_INFO", "TINTA", "PAPEL", "MINERAIS", "infra", "siga",
     "malha_uf", "sidra", "valor_sidra", "quebras", "classe", "nf", "rotulos_classes",
-    "estilo_graduado", "estilo_contorno", "gravar_estilos", "zipar", "gravar_cache",
+    "estilo_graduado", "estilo_contorno", "estilo_regras", "marcador", "linha", "igual", "preenchimento",
+    "gravar_estilos", "zipar", "gravar_cache",
 ]

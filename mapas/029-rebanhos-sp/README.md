@@ -1,7 +1,7 @@
 ---
 numero: 29
 titulo: "Rebanhos"
-subtitulo: "Bioenergia em SP, 2/4"
+subtitulo: "Três rebanhos, três geografias"
 data: 2026-10-29
 categoria: energia
 colecao: bioenergia-sp
