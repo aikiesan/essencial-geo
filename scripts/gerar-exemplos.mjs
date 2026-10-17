@@ -6,8 +6,8 @@
  *
  *   npm run exemplos
  *
- * Saídas (por pasta em /mapas):  mapa_preview.png · dados/*.dxf · dados/*.csv
- * e o modelo vazio em /templates/mapa/mapa_preview.png.
+ * Saídas (por pasta em /mapas):  mapa_preview.png (PT-BR) · mapa_preview.en.png (EN-UK)
+ * · dados/*.dxf · dados/*.csv — e o modelo vazio em /templates/mapa/.
  * Nada aqui representa um lugar real: as pranchas trazem o selo "dados sintéticos".
  */
 import { mkdir, writeFile, stat } from 'node:fs/promises';
@@ -19,6 +19,30 @@ import { Delaunay } from 'd3-delaunay';
 import { interpolateViridis } from 'd3-scale-chromatic';
 
 const RAIZ = fileURLToPath(new URL('..', import.meta.url));
+
+/* ---------------------------------------------------------------- idioma */
+// Cada prancha sai em duas línguas. Os textos da prancha passam por tr();
+// os dados (DXF, CSV) são gerados uma vez só, na passada em português.
+let LINGUA = 'pt';
+const EN = {
+  PROJETO: 'PROJECT', PRANCHA: 'PLATE', DATA: 'DATE', FONTE: 'SOURCE', 'LICENÇA': 'LICENCE',
+  'Nº': 'No.',
+  'ESCALA GRÁFICA · 1:50.000': 'SCALE BAR · 1:50,000',
+  'PRANCHA-MODELO · DADOS SINTÉTICOS': 'SAMPLE PLATE · SYNTHETIC DATA',
+  'DENSIDADE (ÍNDICE 0–1)': 'DENSITY (INDEX 0–1)',
+  'muito baixa': 'very low', baixa: 'low', 'média': 'medium', alta: 'high', 'muito alta': 'very high',
+  'limite do recorte': 'study-area boundary', 'célula sem população': 'unpopulated cell',
+  'ALTITUDE (m)': 'ELEVATION (m)', 'curva mestra · 250 m': 'index contour · 250 m', 'intermediária · 50 m': 'intermediate · 50 m',
+  'COBERTURA E USO': 'LAND COVER AND USE',
+  'Formação florestal': 'Forest formation', 'Formação savânica': 'Savanna formation', 'Formação campestre': 'Grassland formation',
+  Pastagem: 'Pasture', 'Agricultura temporária': 'Temporary crops', Silvicultura: 'Forestry plantation',
+  'Área urbanizada': 'Urban area', 'Corpo d’água': 'Water body', 'Pivô central de irrigação': 'Centre-pivot irrigation',
+  'FIGURA-FUNDO': 'FIGURE–GROUND', 'Quadra edificável (figura)': 'Built block (figure)',
+  'Espaço livre público (fundo)': 'Public open space (ground)', 'Parque / área verde': 'Park / green space',
+  'Praça': 'Square', 'Curso d’água': 'Watercourse', 'à maneira de G. Nolli (Roma, 1748)': 'after G. Nolli (Rome, 1748)',
+  'Prancha em preparo': 'Plate in preparation', 'SUBSTITUA mapa_preview.png': 'REPLACE mapa_preview.en.png', LEGENDA: 'LEGEND',
+};
+const tr = (s) => (LINGUA === 'en' ? (EN[s] ?? s) : s);
 
 /* ------------------------------------------------------------------ util */
 function semente(s) {
@@ -204,7 +228,7 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
 
   const carimbo = [
     ['PROJETO', 'Essencial Geo'],
-    ['PRANCHA', `Nº ${String(numero).padStart(3, '0')}`],
+    ['PRANCHA', `${tr('Nº')} ${String(numero).padStart(3, '0')}`],
     ['DATA', data],
     ['CRS', crs],
     ['FONTE', rodapeFonte],
@@ -215,7 +239,7 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
     .map(
       ([k, v], i) =>
         `<g transform="translate(0 ${i * 44})"><path d="M0 0H${PW - 64}" stroke="${TINTA}" stroke-width="${i ? 0.8 : 1.6}"/>` +
-        `<text x="0" y="29" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.2" fill="#7a8189">${k}</text>` +
+        `<text x="0" y="29" font-family="${FONTE_MONO}" font-size="15" letter-spacing="2.2" fill="#7a8189">${tr(k)}</text>` +
         `<text x="128" y="29" font-family="${FONTE_MONO}" font-size="17" fill="${TINTA}">${esc(v)}</text></g>`,
     )
     .join('');
@@ -235,7 +259,7 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
   <g transform="translate(${PX + 32} ${Y0})" fill="${TINTA}">
     <text x="0" y="62" font-family="${FONTE_MONO}" font-size="17" letter-spacing="5">ESSENCIAL GEO</text>
     <path d="M0 86H${PW - 64}" stroke="${TINTA}" stroke-width="1.6"/>
-    <text x="0" y="176" font-family="${FONTE_SERIF}" font-size="76">Nº ${String(numero).padStart(3, '0')}</text>
+    <text x="0" y="176" font-family="${FONTE_SERIF}" font-size="76">${tr('Nº')} ${String(numero).padStart(3, '0')}</text>
     <path d="M${PW - 98} 132l5.2 12.3 13.3 1.1-10.1 8.8 3 13-11.4-6.9-11.4 6.9 3-13-10.1-8.8 13.3-1.1z" fill="#c99a2e"/>
     <g transform="translate(0 ${yTitulo})">${linhasTitulo}</g>
     <g transform="translate(0 ${ySub})">${linhasSub}</g>
@@ -249,13 +273,13 @@ function prancha({ numero, titulo, subtitulo, data, crs, legenda, mapa, fundoMap
         ${[0, 1, 2, 3, 4].map((i) => `<rect x="${i * 50}" y="0" width="50" height="10" fill="${i % 2 ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1.2"/>`).join('')}
         ${[0, 1, 2, 3, 4, 5].map((i) => `<text x="${i * 50}" y="38" text-anchor="middle" font-family="${FONTE_MONO}" font-size="14">${i}</text>`).join('')}
         <text x="270" y="38" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">km</text>
-        <text x="0" y="-16" font-family="${FONTE_MONO}" font-size="13" letter-spacing="1.5" fill="#7a8189">ESCALA GRÁFICA · 1:50.000</text>
+        <text x="0" y="-16" font-family="${FONTE_MONO}" font-size="13" letter-spacing="1.5" fill="#7a8189">${tr('ESCALA GRÁFICA · 1:50.000')}</text>
       </g>
     </g>
     <g transform="translate(0 ${yCar})">${carimboSvg}</g>
     <g transform="translate(0 ${MH - 46})">
       <rect width="${PW - 64}" height="34" fill="none" stroke="#9c4a32" stroke-width="1.4" stroke-dasharray="7 5"/>
-      <text x="${(PW - 64) / 2}" y="23" text-anchor="middle" font-family="${FONTE_MONO}" font-size="14" letter-spacing="3" fill="#9c4a32">PRANCHA-MODELO · DADOS SINTÉTICOS</text>
+      <text x="${(PW - 64) / 2}" y="23" text-anchor="middle" font-family="${FONTE_MONO}" font-size="14" letter-spacing="3" fill="#9c4a32">${tr('PRANCHA-MODELO · DADOS SINTÉTICOS')}</text>
     </g>
   </g>
 </svg>`;
@@ -321,17 +345,17 @@ function densidade() {
   const classes = [0.1, 0.3, 0.5, 0.7, 0.92];
   const rotulos = ['muito baixa', 'baixa', 'média', 'alta', 'muito alta'];
   const legenda =
-    legTitulo('DENSIDADE (ÍNDICE 0–1)') +
+    legTitulo(tr('DENSIDADE (ÍNDICE 0–1)')) +
     classes
       .map((v, i) => {
         const lado = (C - 3) * Math.sqrt(v) * 1.4;
         return `<g transform="translate(0 ${30 + i * 40})"><rect x="${f1(14 - lado / 2)}" y="${f1(14 - lado / 2)}" width="${f1(lado)}" height="${f1(lado)}" fill="${interpolateViridis(1 - v * 0.92)}"/>
-        <text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">${rotulos[i]}</text></g>`;
+        <text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">${tr(rotulos[i])}</text></g>`;
       })
       .join('') +
-    `<g transform="translate(0 ${30 + 5 * 40 + 6})"><path d="M0 14h28" stroke="${TINTA}" stroke-width="2.4" stroke-dasharray="10 4 2 4"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">limite do recorte</text></g>
-     <g transform="translate(0 ${30 + 6 * 40 + 6})"><path d="M13 14h2" stroke="${FINA}" stroke-width="2"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">célula sem população</text></g>
-     <text x="0" y="${30 + 7 * 40 + 24}" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">grade regular de ${C * PX_M} m · viridis</text>`;
+    `<g transform="translate(0 ${30 + 5 * 40 + 6})"><path d="M0 14h28" stroke="${TINTA}" stroke-width="2.4" stroke-dasharray="10 4 2 4"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">${tr('limite do recorte')}</text></g>
+     <g transform="translate(0 ${30 + 6 * 40 + 6})"><path d="M13 14h2" stroke="${FINA}" stroke-width="2"/><text x="48" y="20" font-family="${FONTE_SERIF}" font-size="21">${tr('célula sem população')}</text></g>
+     <text x="0" y="${30 + 7 * 40 + 24}" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">${LINGUA === 'en' ? `regular ${C * PX_M} m grid · viridis` : `grade regular de ${C * PX_M} m · viridis`}</text>`;
 
   const dxfArq = dxf([
     { nome: 'LIMITE', cor: 7, polilinhas: [{ pts: limite.map(metros), fechada: true }] },
@@ -417,16 +441,16 @@ function relevo() {
 
   const passos = 9;
   const legenda =
-    legTitulo('ALTITUDE (m)') +
+    legTitulo(tr('ALTITUDE (m)')) +
     Array.from({ length: passos }, (_, i) => {
       const t = 1 - i / (passos - 1);
       const z = Math.round((Z0 + t * (Z1 - Z0)) / 50) * 50;
       return `<g transform="translate(0 ${24 + i * 30})"><rect width="44" height="30" fill="${corHipso(t)}" stroke="${TINTA}" stroke-width=".8"/>
-      <text x="60" y="21" font-family="${FONTE_MONO}" font-size="17">${z.toLocaleString('pt-BR')}</text></g>`;
+      <text x="60" y="21" font-family="${FONTE_MONO}" font-size="17">${z.toLocaleString(LINGUA === 'en' ? 'en-GB' : 'pt-BR')}</text></g>`;
     }).join('') +
     `<g transform="translate(0 ${24 + passos * 30 + 22})">
-      <path d="M0 8h44" stroke="#2b2420" stroke-width="1.5"/><text x="60" y="13" font-family="${FONTE_SERIF}" font-size="20">curva mestra · 250 m</text>
-      <path d="M0 38h44" stroke="#2b2420" stroke-opacity=".5" stroke-width=".8"/><text x="60" y="43" font-family="${FONTE_SERIF}" font-size="20">intermediária · 50 m</text>
+      <path d="M0 8h44" stroke="#2b2420" stroke-width="1.5"/><text x="60" y="13" font-family="${FONTE_SERIF}" font-size="20">${tr('curva mestra · 250 m')}</text>
+      <path d="M0 38h44" stroke="#2b2420" stroke-opacity=".5" stroke-width=".8"/><text x="60" y="43" font-family="${FONTE_SERIF}" font-size="20">${tr('intermediária · 50 m')}</text>
     </g>`;
 
   // DXF: todas as curvas (50 m) com cota (Z) — prontas para maquete e corte
@@ -521,14 +545,14 @@ function usoDoSolo() {
 
   const ordem = ['florestal', 'savanica', 'campestre', 'pastagem', 'agricultura', 'silvicultura', 'urbano', 'agua'];
   const legenda =
-    legTitulo('COBERTURA E USO') +
+    legTitulo(tr('COBERTURA E USO')) +
     ordem
       .map(
         (k, i) =>
-          `<g transform="translate(0 ${24 + i * 36})"><rect width="34" height="24" fill="${CLASSES_USO[k].cor}" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${CLASSES_USO[k].nome}</text></g>`,
+          `<g transform="translate(0 ${24 + i * 36})"><rect width="34" height="24" fill="${CLASSES_USO[k].cor}" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr(CLASSES_USO[k].nome)}</text></g>`,
       )
       .join('') +
-    `<g transform="translate(0 ${24 + ordem.length * 36})"><circle cx="17" cy="12" r="12" fill="#d99a5c" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Pivô central de irrigação</text></g>`;
+    `<g transform="translate(0 ${24 + ordem.length * 36})"><circle cx="17" cy="12" r="12" fill="#d99a5c" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Pivô central de irrigação')}</text></g>`;
 
   const areas = {};
   for (const c of celulas) areas[c.k] = (areas[c.k] ?? 0) + (areaPoli(c.poli) * PX_M * PX_M) / 10000;
@@ -627,13 +651,13 @@ function figuraFundo() {
     `<path d="${caminho(rio, false)}" fill="none" stroke="#1f3a5f" stroke-width=".8" stroke-dasharray="12 10" opacity=".7"/>`;
 
   const legenda =
-    legTitulo('FIGURA-FUNDO') +
-    `<g transform="translate(0 24)"><rect width="34" height="24" fill="${TINTA}"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Quadra edificável (figura)</text></g>
-     <g transform="translate(0 60)"><rect width="34" height="24" fill="${PAPEL}" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Espaço livre público (fundo)</text></g>
-     <g transform="translate(0 96)"><rect width="34" height="24" fill="url(#hachura)" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Parque / área verde</text></g>
-     <g transform="translate(0 132)"><rect x="1" y="1" width="32" height="22" fill="none" stroke="${TINTA}" stroke-width="1.2" stroke-dasharray="3 4"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Praça</text></g>
-     <g transform="translate(0 168)"><rect width="34" height="24" fill="#dfe4e3" stroke="${TINTA}" stroke-width="1.6"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">Curso d’água</text></g>
-     <text x="0" y="234" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">à maneira de G. Nolli (Roma, 1748)</text>`;
+    legTitulo(tr('FIGURA-FUNDO')) +
+    `<g transform="translate(0 24)"><rect width="34" height="24" fill="${TINTA}"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Quadra edificável (figura)')}</text></g>
+     <g transform="translate(0 60)"><rect width="34" height="24" fill="${PAPEL}" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Espaço livre público (fundo)')}</text></g>
+     <g transform="translate(0 96)"><rect width="34" height="24" fill="url(#hachura)" stroke="${TINTA}" stroke-width=".8"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Parque / área verde')}</text></g>
+     <g transform="translate(0 132)"><rect x="1" y="1" width="32" height="22" fill="none" stroke="${TINTA}" stroke-width="1.2" stroke-dasharray="3 4"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Praça')}</text></g>
+     <g transform="translate(0 168)"><rect width="34" height="24" fill="#dfe4e3" stroke="${TINTA}" stroke-width="1.6"/><text x="50" y="19" font-family="${FONTE_SERIF}" font-size="20">${tr('Curso d’água')}</text></g>
+     <text x="0" y="234" font-family="${FONTE_MONO}" font-size="14" fill="#7a8189">${tr('à maneira de G. Nolli (Roma, 1748)')}</text>`;
 
   const dxfArq = dxf([
     { nome: 'QUADRAS', cor: 7, polilinhas: quadras.map((q) => ({ pts: q.map(metros), fechada: true })) },
@@ -650,15 +674,16 @@ function modeloVazio() {
   const defs = `<pattern id="vazio" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v14" stroke="${FINA}" stroke-width="1"/></pattern>`;
   const svg = `<rect width="${MW}" height="${MH}" fill="url(#vazio)"/>
     <rect x="${MW / 2 - 330}" y="${MH / 2 - 70}" width="660" height="140" fill="${PAPEL}" stroke="${TINTA}" stroke-width="1.2"/>
-    <text x="${MW / 2}" y="${MH / 2 - 6}" text-anchor="middle" font-family="${FONTE_SERIF}" font-size="44">Prancha em preparo</text>
-    <text x="${MW / 2}" y="${MH / 2 + 38}" text-anchor="middle" font-family="${FONTE_MONO}" font-size="17" letter-spacing="3" fill="#7a8189">SUBSTITUA mapa_preview.png</text>`;
-  return { svg: { svg, defs }, legenda: legTitulo('LEGENDA') };
+    <text x="${MW / 2}" y="${MH / 2 - 6}" text-anchor="middle" font-family="${FONTE_SERIF}" font-size="44">${tr('Prancha em preparo')}</text>
+    <text x="${MW / 2}" y="${MH / 2 + 38}" text-anchor="middle" font-family="${FONTE_MONO}" font-size="17" letter-spacing="3" fill="#7a8189">${tr('SUBSTITUA mapa_preview.png')}</text>`;
+  return { svg: { svg, defs }, legenda: legTitulo(tr('LEGENDA')) };
 }
 
 /* =================================================================== execução */
 const PRANCHAS = [
   {
     pasta: 'mapas/001-densidade-urbana-grade-estatistica',
+    en: { titulo: ['Urban density', 'on a regular grid'], subtitulo: ['The municipality without the', 'arbitrary edges of tracts'], data: '10 Oct 2026', fonte: 'Synthetic · IBGE model' },
     numero: 1,
     titulo: ['Densidade urbana', 'em grade regular'],
     subtitulo: ['O município sem os contornos', 'arbitrários dos setores'],
@@ -669,6 +694,7 @@ const PRANCHAS = [
   },
   {
     pasta: 'mapas/002-hipsometria-curvas-de-nivel',
+    en: { titulo: ['Hypsometry and', 'contour lines'], subtitulo: ['Elevation bands of an', 'imaginary range'], data: '12 Oct 2026', fonte: 'Synthetic · DEM model' },
     numero: 2,
     titulo: ['Hipsometria e', 'curvas de nível'],
     subtitulo: ['Patamares de altitude de uma', 'serra imaginária'],
@@ -679,6 +705,7 @@ const PRANCHAS = [
   },
   {
     pasta: 'mapas/003-mosaico-uso-cobertura-cerrado',
+    en: { titulo: ['Land use and', 'land cover mosaic'], subtitulo: ['A Cerrado type-landscape:', 'veredas, pastures and pivots'], data: '14 Oct 2026', fonte: 'Synthetic · MapBiomas model' },
     numero: 3,
     titulo: ['Mosaico de uso e', 'cobertura do solo'],
     subtitulo: ['Uma paisagem-tipo do Cerrado:', 'veredas, pastos e pivôs'],
@@ -689,6 +716,7 @@ const PRANCHAS = [
   },
   {
     pasta: 'mapas/004-figura-fundo-malha-urbana',
+    en: { titulo: ['Figure–ground of', 'the urban fabric'], subtitulo: ['Solids and voids of a city', 'that grew in two eras'], data: '16 Oct 2026', fonte: 'Synthetic · OSM model' },
     numero: 4,
     titulo: ['Figura-fundo da', 'malha urbana'],
     subtitulo: ['Cheios e vazios de uma cidade', 'que cresceu em dois tempos'],
@@ -699,6 +727,7 @@ const PRANCHAS = [
   },
   {
     pasta: 'templates/mapa',
+    en: { titulo: ['Map title'], subtitulo: ['Plate subtitle'], data: 'yyyy-mm-dd', fonte: '…' },
     numero: 0,
     titulo: ['Título do mapa'],
     subtitulo: ['Subtítulo da prancha'],
@@ -711,28 +740,35 @@ const PRANCHAS = [
 
 for (const p of PRANCHAS) {
   const t0 = Date.now();
-  const { svg, legenda, arquivos = {} } = p.gerar();
   const destino = join(RAIZ, p.pasta);
   await mkdir(join(destino, 'dados'), { recursive: true });
-  const prancha_svg = prancha({
-    numero: p.numero,
-    titulo: p.titulo,
-    subtitulo: p.subtitulo,
-    data: p.data,
-    crs: p.crs,
-    legenda,
-    mapa: svg,
-    rodapeFonte: p.fonte,
-  });
-  const png = join(destino, 'mapa_preview.png');
-  await sharp(Buffer.from(prancha_svg), { density: 72, limitInputPixels: false })
-    .png({ compressionLevel: 9, palette: p.numero === 2 ? false : true, quality: 92 })
-    .toFile(png);
-  const linhas = [`  mapa_preview.png  ${((await stat(png)).size / 1e6).toFixed(2)} MB`];
-  for (const [nome, conteudo] of Object.entries(arquivos)) {
-    const arq = join(destino, nome);
-    await writeFile(arq, conteudo);
-    linhas.push(`  ${nome}  ${((await stat(arq)).size / 1e6).toFixed(2)} MB`);
+  const linhas = [];
+  for (const lingua of ['pt', 'en']) {
+    LINGUA = lingua;
+    const textos = lingua === 'en' ? { ...p, ...p.en } : p;
+    const { svg, legenda, arquivos = {} } = p.gerar();
+    const prancha_svg = prancha({
+      numero: p.numero,
+      titulo: textos.titulo,
+      subtitulo: textos.subtitulo,
+      data: textos.data,
+      crs: p.crs,
+      legenda,
+      mapa: svg,
+      rodapeFonte: textos.fonte,
+    });
+    const nome = lingua === 'en' ? 'mapa_preview.en.png' : 'mapa_preview.png';
+    const png = join(destino, nome);
+    await sharp(Buffer.from(prancha_svg), { density: 72, limitInputPixels: false })
+      .png({ compressionLevel: 9, palette: p.numero === 2 ? false : true, quality: 92 })
+      .toFile(png);
+    linhas.push(`  ${nome}  ${((await stat(png)).size / 1e6).toFixed(2)} MB`);
+    if (lingua !== 'pt') continue;
+    for (const [arqNome, conteudo] of Object.entries(arquivos)) {
+      const arq = join(destino, arqNome);
+      await writeFile(arq, conteudo);
+      linhas.push(`  ${arqNome}  ${((await stat(arq)).size / 1e6).toFixed(2)} MB`);
+    }
   }
   console.log(`✓ ${p.pasta}  (${Date.now() - t0} ms)\n${linhas.join('\n')}`);
 }

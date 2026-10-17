@@ -1,151 +1,141 @@
 # Publicar no Essencial Geo
 
-Este guia tem duas partes: a **configuração inicial** (uma vez só) e a **rotina** de cada mapa
-(a cada dois dias).
+Três guias trabalham juntos:
+
+- **este** — a rotina de cada mapa, do QGIS ao Lattes;
+- [`ZENODO.md`](ZENODO.md) — configuração do Zenodo, tokens, ORCID e DOI;
+- [`CALENDARIO.md`](CALENDARIO.md) — cadência, agendamento e pautas das próximas semanas.
+
+Princípios que valem para tudo:
+
+1. **Duas línguas.** Todo mapa e toda nota saem em português do Brasil e em inglês britânico. O build de
+   produção falha se faltar a versão em inglês.
+2. **Data de notícia.** Todo item tem `data:`. Data futura = agendado (entra no ar às 9h de Brasília).
+3. **Commit é publicação.** Não há CMS: uma pasta em `mapas/` com `rascunho: false` é um mapa publicado.
 
 ---
 
-## Parte 1 — Configuração inicial
+## Configuração (já feita)
 
-### 1.1 Identidade e autoria
-
-Edite três arquivos com seus dados reais:
-
-| Arquivo | Campos |
+| | Estado |
 | --- | --- |
-| `src/site.config.ts` | `AUTORIA` (sobrenome, nome, ORCID) e `LINKS` (Lattes, ORCID, Zenodo, GitHub) |
-| `.zenodo.json` | `creators[0].name` no formato `Sobrenome, Nome`; acrescente `"orcid": "0000-…"` |
-| `CITATION.cff` | `family-names`, `given-names`, `orcid` |
-
-O sobrenome vai em caixa normal (`Silva`); a citação ABNT converte para `SILVA` sozinha.
-
-### 1.2 Primeiro push
-
-```bash
-git init
-git add .
-git commit -m "Essencial Geo: estrutura inicial"
-git branch -M main
-git remote add origin https://github.com/aikiesan/essencial-geo.git
-git push -u origin main
-```
-
-### 1.3 GitHub Pages
-
-1. No repositório: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. O próximo push na `main` dispara `deploy.yml`. Em ~1 minuto o site está em
-   `https://aikiesan.github.io/essencial-geo/`.
+| Autoria e ORCID (`src/site.config.ts`, `.zenodo.json`, `CITATION.cff`) | Preenchidos |
+| Repositório e GitHub Pages (fonte: GitHub Actions) | No ar em https://aikiesan.github.io/essencial-geo/ |
+| Recompilação diária às 9h05 (agenda) | `.github/workflows/deploy.yml` |
+| Zenodo, comunidade, tokens, ORCID ↔ DataCite | **A fazer** — siga [`ZENODO.md`](ZENODO.md) |
 
 **Domínio próprio (opcional):** em `astro.config.mjs`, troque `site` pelo domínio e `base` por `'/'`;
 crie `public/CNAME` com o domínio e configure o DNS conforme a documentação do GitHub Pages.
 
-### 1.4 Zenodo
-
-1. Entre em [zenodo.org](https://zenodo.org) com a conta do GitHub ou do ORCID.
-2. **Comunidade:** *Communities → New community*, identificador `essencial-geo`. Se escolher outro
-   identificador, ajuste `.zenodo.json` e `LINKS.zenodo`.
-3. **Token:** *Account → Applications → Personal access tokens → New token*, com os escopos
-   `deposit:write` e `deposit:actions`.
-4. No GitHub: **Settings → Secrets and variables → Actions → New repository secret**, nome
-   `ZENODO_TOKEN`.
-5. **Sandbox para testes:** crie também uma conta em [sandbox.zenodo.org](https://sandbox.zenodo.org),
-   gere um token lá e salve como `ZENODO_SANDBOX_TOKEN`. Os DOIs do sandbox não são reais — servem para
-   ensaiar sem sujar o acervo.
-
-> **DOI por mapa vs. DOI do atlas.** A integração nativa GitHub→Zenodo (*Account → GitHub*, ligar o
-> repositório) arquiva o repositório inteiro a cada *release* — um DOI para o atlas como um todo. Ela é
-> opcional e convive com a Action `zenodo.yml`, que dá a **cada mapa** o seu próprio registro e DOI. Para o
-> Lattes, o que importa é o DOI de cada mapa.
-
-### 1.5 ORCID
-
-No ORCID: **Works → Add → Search & link → DataCite**, e autorize o DataCite a atualizar seu registro
-automaticamente. A partir daí, todo DOI do Zenodo que tenha o seu ORCID entre os autores aparece no seu
-ORCID sozinho. Por isso o ORCID precisa estar no `.zenodo.json`.
-
 ---
 
-## Parte 2 — A rotina de cada mapa
+## A rotina de cada mapa
 
-### 2.1 Criar a pasta
+### 1. Criar a pasta
 
 ```bash
-npm run novo-mapa -- "Título do mapa" categoria
+npm run novo-mapa -- "Usinas de biogás em São Paulo" energia --en "Biogas plants in São Paulo" --data 2026-10-26
 ```
 
-Categorias: `uso-do-solo`, `censo-renda`, `altimetria-relevo`, `infraestrutura-dxf`, `hidrografia`,
-`biomas` (para criar outras, edite `CATEGORIAS` em `src/site.config.ts` e a lista em
-`scripts/novo-mapa.mjs`).
+| Opção | |
+| --- | --- |
+| 1º argumento | Título em português (gera o nome da pasta: `005-usinas-biogas-sao-paulo`) |
+| 2º argumento | Categoria: `uso-do-solo`, `censo-renda`, `altimetria-relevo`, `infraestrutura-dxf`, `hidrografia`, `biomas`, `energia` |
+| `--en` | Título em inglês (pode ficar para depois, no `README.en.md`) |
+| `--data` | Dia de saída. Sem ela, hoje. |
 
-A pasta nasce com `rascunho: true` — aparece em `npm run dev`, mas não no site publicado.
+A pasta nasce com `README.md`, `README.en.md` e `rascunho: true`. Para criar categorias, edite
+`CATEGORIA_IDS` em `src/site.config.ts`, os nomes em `src/i18n/ui.ts` (`categorias`, nas duas línguas) e a
+lista em `scripts/novo-mapa.mjs`.
 
-### 2.2 Exportar do QGIS
+### 2. Exportar do QGIS
+
+Monte **um layout por língua** (duplique o layout e troque os textos: título, legenda, carimbo, fonte). As
+camadas e a simbologia são as mesmas.
 
 | Saída | Como | Onde |
 | --- | --- | --- |
-| Prévia do feed | Layout → *Export as Image*, PNG, **~2400 px** de largura (≈ 200 dpi numa A4 paisagem) | `mapa_preview.png` |
-| Prancha impressa | Layout → *Export as PDF*, “Always export as vectors”, texto como texto | `prancha_impressao.pdf` |
-| Prancha 300 dpi | Layout → *Export as Image*, 300 dpi (opcional; arquivo grande) | anexo de release ou Zenodo |
-| GeoPackage | Camadas → *Export → Save Features As…*, GeoPackage, CRS SIRGAS 2000 (EPSG:4674 ou UTM 31978–31985) | `dados/<pasta>.gpkg`, compactado em `.zip` |
-| DXF | *Project → Import/Export → Export Project to DXF*, modo de simbologia “Feature symbology”, uma camada por tema | `dados/<pasta>.dxf` |
+| Prévia PT | Layout PT → *Export as Image*, PNG, **~2400 px** de largura | `mapa_preview.png` |
+| Prévia EN | Layout EN → idem | `mapa_preview.en.png` |
+| Prancha impressa | *Export as PDF*, “Always export as vectors”, texto como texto | `prancha_impressao.pdf` e `prancha_impressao.en.pdf` |
+| GeoPackage | *Export → Save Features As…*, GeoPackage, SIRGAS 2000 (EPSG:4674 ou UTM 31978–31985) | `dados/<pasta>.gpkg`, compactado em `.zip` |
+| DXF | *Project → Import/Export → Export Project to DXF*, “Feature symbology”, uma camada por tema | `dados/<pasta>.dxf` |
 
-Ou na linha de comando, com GDAL:
+Os **dados não se traduzem**: um GPKG, um DXF, com nomes de camadas e colunas em português. Assim scripts,
+estilos e modelos de CAD servem às duas versões.
+
+Pela linha de comando, com GDAL:
 
 ```bash
 ogr2ogr -f DXF dados/mapa.dxf dados/mapa.gpkg -t_srs EPSG:31983
 ```
 
-**Projeção.** Use SIRGAS 2000. Para o país inteiro, uma cônica equivalente (Albers com parâmetros do IBGE);
-para municípios e regiões metropolitanas, UTM da zona correspondente (no estado de SP, 22S = EPSG:31982 ou
-23S = EPSG:31983). O DXF deve sempre estar em coordenadas projetadas (metros), nunca em graus.
+**Projeção.** SIRGAS 2000. País inteiro: cônica equivalente (Albers, parâmetros do IBGE). Municípios e
+regiões metropolitanas: UTM da zona (em SP, 22S = EPSG:31982 ou 23S = EPSG:31983). DXF sempre em metros.
 
-**Tamanho.** O GitHub avisa acima de 50 MB e recusa acima de 100 MB por arquivo. Para arquivos grandes,
-não faça commit: anexe-os a uma release do GitHub ou deixe-os só no Zenodo e use `url:` em vez de
-`arquivo:` no frontmatter.
+**Tamanho.** O GitHub avisa acima de 50 MB e recusa acima de 100 MB por arquivo. Arquivos grandes vão para
+uma release do GitHub ou só para o Zenodo, com `url:` em vez de `arquivo:`.
 
-### 2.3 Preencher a ficha
+### 3. Escrever a ficha, nas duas línguas
 
-Abra `mapas/<pasta>/README.md` e preencha o frontmatter (referência completa em
-[`CONTEUDO.md`](CONTEUDO.md)). O mais importante:
+Referência completa dos campos em [`CONTEUDO.md`](CONTEUDO.md).
 
-- `contexto` — **um** parágrafo, até 900 caracteres. É o texto do feed.
-- `imagem_alt` — descrição do mapa para leitores de tela.
-- `fontes`, `crs`, `epsg`, `escala`, `software`.
-- `downloads` — um item por arquivo. Arquivo listado e ainda não presente na pasta aparece como
-  “em breve”, nunca como link quebrado.
+**`README.md`** — ficha completa:
 
-Confira com `npm run dev`. Se algum campo estiver errado, o terminal diz qual.
+- `contexto` — **um** parágrafo, até 900 caracteres;
+- `imagem_alt`, `fontes` (com `nome_en`), `crs`, `epsg`, `escala`, `software`;
+- `camadas` — o painel de camadas (nome, tipo de geometria, descrição PT/EN);
+- `indicadores` — a leitura rápida (número, barras, rosca), **só com números calculados dos dados**;
+- `downloads` — com `arquivo_en` para a prancha e o PDF em inglês.
 
-### 2.4 Publicar
+**`README.en.md`** — só o texto: `titulo`, `subtitulo`, `contexto`, `imagem: ./mapa_preview.en.png`,
+`imagem_alt`, e o corpo (*Method*, *Files*, *How to reproduce*). Inglês britânico: *colour, centre, licence*.
+
+Escreva primeiro em português; traduza com o mapa aberto ao lado, não só o texto. Se usar tradução
+automática como rascunho, revise cada frase — principalmente nomes de fontes e termos técnicos.
+
+### 4. Conferir
+
+```bash
+npm run dev
+```
+
+- `http://localhost:4321/essencial-geo/` e `…/essencial-geo/en/` — o cartão nas duas línguas.
+- Data futura mostra o selo **Agendado**; falta de `README.en.md` mostra **Tradução pendente**.
+- Se um campo estiver errado, o terminal diz qual.
+
+```bash
+npm run build
+```
+
+O build de produção é o juiz final: ele falha se um mapa publicado não tiver versão em inglês.
+
+### 5. Publicar (ou agendar)
 
 1. Mude `rascunho: true` para `false`.
-2. `git add mapas/<pasta> && git commit -m "Nº 005: título" && git push`
-3. Em ~1 minuto o mapa está no topo do feed.
+2. Commit e push:
+   ```bash
+   git add mapas/005-usinas-biogas-sao-paulo
+   git commit -m "Nº 005: Usinas de biogás em São Paulo"
+   git push
+   ```
+3. `data` de hoje (antes das 9h, sai às 9h; depois, sai em ~1 minuto) ou futura (sai às 9h do dia).
 
-### 2.5 DOI
+### 6. DOI
 
-1. **Actions → Publicar no Zenodo → Run workflow.**
-2. Informe a pasta (ex.: `005-renda-domiciliar-rmc`).
-3. Primeira vez com um mapa: deixe **sandbox** marcado, confira o registro em sandbox.zenodo.org.
-4. Rode de novo com **sandbox desmarcado**. A Action publica, recebe o DOI e faz um commit gravando
-   `doi:` no README do mapa. O site se recompila e a citação passa a mostrar o DOI.
+Depois que o mapa estiver no ar: *Actions → Publicar no Zenodo*, primeiro no sandbox, depois de verdade.
+Detalhes em [`ZENODO.md`](ZENODO.md).
 
-Para corrigir um mapa já publicado: aumente `versao` no frontmatter (ex.: `1.0.0` → `1.1.0`), faça commit,
-e rode a Action com **nova versão** marcado. O Zenodo mantém as duas versões ligadas por um DOI-conceito.
+### 7. Lattes
 
-Mapas com `exemplo: true` (dados sintéticos) são recusados pelo script de propósito.
+**Produção técnica → Demais tipos de produção técnica → Cartas, mapas ou similares** (os nomes podem variar
+entre versões da Plataforma). Título, ano, meio de divulgação “Meio digital” e
+`https://doi.org/<doi>`. Uma vez por mês, todos os DOIs do mês de uma vez.
 
-### 2.6 Lattes
+### 8. Divulgar
 
-No Currículo Lattes: **Atualizar currículo → Produção técnica → Demais tipos de produção técnica →
-Cartas, mapas ou similares** (os nomes das seções podem variar entre versões da Plataforma). Preencha título,
-ano, e no campo de DOI/endereço eletrônico informe `https://doi.org/<doi>`. Em “meio de divulgação”, use
-“Meio digital”.
-
-### 2.7 Redes
-
-Publique a prévia em r/MapPorn ou r/dataisbeautiful (este exige o marcador `[OC]` e um comentário com fonte
-e ferramenta — a ficha técnica já tem os dois). Depois, acrescente o link da discussão ao frontmatter:
+No dia de saída, depois das 9h: r/MapPorn, r/dataisbeautiful (exige `[OC]` e um comentário com fonte e
+ferramenta — a ficha já tem os dois), LinkedIn. Use a página em inglês nos espaços internacionais. Depois:
 
 ```yaml
 discussoes:
@@ -153,18 +143,39 @@ discussoes:
     url: https://www.reddit.com/r/MapPorn/comments/…
 ```
 
-O botão aparece no cartão do feed no próximo deploy.
+---
+
+## Correções
+
+Um mapa publicado não é apagado nem reescrito em silêncio, como numa redação:
+
+1. Corrija; aumente `versao` e preencha `atualizado:` (aparece como “Atualizado em …” ao lado da data).
+2. Acrescente uma seção `## Histórico` nos dois READMEs dizendo o que mudou e por quê.
+3. Nova versão no Zenodo (*nova versão* marcado na Action).
+
+## Notas
+
+```text
+notas/2026-10-31-agenda-novembro/
+├── pt.md
+└── en.md
+```
+
+Mesmo frontmatter nas duas (`titulo`, `resumo`, `data`, `tipo`, `tags`), texto em cada língua. Tipos e
+frequência em [`CALENDARIO.md`](CALENDARIO.md).
 
 ---
 
 ## Checklist do mapa
 
 - [ ] SIRGAS 2000 declarado (`crs` e `epsg`)
-- [ ] Fonte com ano e link
+- [ ] Fonte com ano, link e `nome_en`
 - [ ] Paleta perceptualmente uniforme para dados contínuos
-- [ ] `contexto` com um único parágrafo, sem jargão desnecessário
-- [ ] `imagem_alt` descreve o padrão principal, não só o título
-- [ ] Prévia PNG ~2400 px; PDF vetorial
+- [ ] `contexto` com um único parágrafo, sem jargão desnecessário — nas duas línguas
+- [ ] `imagem_alt` descreve o padrão principal — nas duas línguas
+- [ ] `mapa_preview.png` e `mapa_preview.en.png` (~2400 px); PDFs vetoriais
 - [ ] GeoPackage e DXF em coordenadas projetadas, uma camada por tema
-- [ ] `rascunho: false`
-- [ ] DOI gerado e registrado no Lattes
+- [ ] `camadas` e `indicadores` conferidos contra os dados
+- [ ] `data` certa (hoje ou o dia agendado) e `rascunho: false`
+- [ ] `npm run build` sem erro
+- [ ] DOI gerado (depois de no ar) e registrado no Lattes

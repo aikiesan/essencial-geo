@@ -1,0 +1,232 @@
+---
+/**
+ * Leitura rápida: os indicadores do mapa, à maneira dos widgets de um SIG web
+ * (número de destaque, barras, proporção em rosca). SVG e CSS puros, sem JS.
+ * Os valores vêm do campo `indicadores` do README.md; os rótulos em inglês, de `rotulo_en`.
+ */
+import { emLingua, type Mapa } from '../lib/mapas';
+import { IDIOMA } from '../i18n';
+
+interface Props { mapa: Mapa }
+const { mapa } = Astro.props;
+const lingua = mapa.lingua;
+const fmt = (v: number, casas = 0) =>
+  new Intl.NumberFormat(IDIOMA[lingua].codigo, { maximumFractionDigits: casas, minimumFractionDigits: 0 }).format(v);
+const casasDe = (v: number) => (Number.isInteger(v) ? 0 : Math.abs(v) < 10 ? 1 : 0);
+
+// Sem cor declarada, os itens percorrem a paleta da interface.
+const PALETA = ['var(--nilo)', 'var(--cesto)', 'var(--vale)', 'var(--floresta)', 'var(--trigo)', 'var(--tinta)'];
+const corDe = (cor: string | undefined, i: number) => cor ?? PALETA[i % PALETA.length];
+---
+
+<div class="leitura">
+  {
+    mapa.data.indicadores.map((ind) => {
+      const titulo = emLingua(ind, 'rotulo', lingua);
+      if (ind.tipo === 'numero') {
+        const nota = emLingua(ind, 'nota', lingua);
+        return (
+          <figure class="widget widget--numero">
+            <figcaption class="widget__titulo">{titulo}</figcaption>
+            <p class="numero">
+              <span class="numero__valor">{fmt(ind.valor, casasDe(ind.valor))}</span>
+              {ind.unidade && <span class="numero__unidade">{emLingua(ind, 'unidade', lingua)}</span>}
+            </p>
+            {nota && <p class="widget__nota">{nota}</p>}
+          </figure>
+        );
+      }
+      if (ind.tipo === 'barras') {
+        const max = Math.max(...ind.itens.map((i) => i.valor));
+        return (
+          <figure class="widget">
+            <figcaption class="widget__titulo">
+              {titulo}
+              {ind.unidade && <span class="widget__unidade"> ({emLingua(ind, 'unidade', lingua)})</span>}
+            </figcaption>
+            <ul class="barras" role="list">
+              {ind.itens.map((it, i) => (
+                <li class="barra">
+                  <span class="barra__rotulo">{emLingua(it, 'rotulo', lingua)}</span>
+                  <span class="barra__valor mono">{fmt(it.valor, casasDe(it.valor))}</span>
+                  <span class="barra__trilho" aria-hidden="true">
+                    <span class="barra__cheio" style={`width:${((it.valor / max) * 100).toFixed(1)}%;--cor:${corDe(it.cor, i)}`} />
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </figure>
+        );
+      }
+      // proporção: rosca
+      const total = ind.itens.reduce((s, it) => s + it.valor, 0);
+      let acumulado = 0;
+      const fatias = ind.itens.map((it, i) => {
+        const pct = (it.valor / total) * 100;
+        const fatia = { ...it, pct, inicio: acumulado, cor: corDe(it.cor, i) };
+        acumulado += pct;
+        return fatia;
+      });
+      return (
+        <figure class="widget">
+          <figcaption class="widget__titulo">
+            {titulo}
+            {ind.unidade && <span class="widget__unidade"> ({emLingua(ind, 'unidade', lingua)})</span>}
+          </figcaption>
+          <div class="rosca">
+            <svg viewBox="0 0 42 42" class="rosca__svg" aria-hidden="true">
+              <circle cx="21" cy="21" r="15.9155" fill="none" stroke="var(--linha-fina)" stroke-width="6" />
+              {fatias.map((f) => (
+                <circle
+                  cx="21"
+                  cy="21"
+                  r="15.9155"
+                  fill="none"
+                  stroke={f.cor}
+                  stroke-width="6"
+                  stroke-dasharray={`${f.pct.toFixed(3)} ${(100 - f.pct).toFixed(3)}`}
+                  stroke-dashoffset={(25 - f.inicio).toFixed(3)}
+                />
+              ))}
+            </svg>
+            <ul class="rosca__legenda" role="list">
+              {fatias.map((f) => (
+                <li>
+                  <span class="rosca__cor" style={`--cor:${f.cor}`} aria-hidden="true" />
+                  <span class="rosca__rotulo">{emLingua(f, 'rotulo', lingua)}</span>
+                  <span class="mono">{fmt(f.pct, 1)}%</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </figure>
+      );
+    })
+  }
+</div>
+
+<style>
+  .leitura {
+    display: grid;
+    gap: var(--e-3);
+  }
+  .widget {
+    margin: 0;
+    padding: var(--e-3);
+    border: 1px solid var(--linha-fina);
+    background: var(--folha);
+  }
+  .widget__titulo {
+    margin-bottom: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tinta-3);
+  }
+  .widget__unidade {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .widget__nota {
+    margin: var(--e-1) 0 0;
+    font-size: var(--t-xs);
+    color: var(--tinta-2);
+    line-height: 1.45;
+  }
+
+  /* Número de destaque */
+  .widget--numero {
+    border-left: 3px solid var(--nilo);
+  }
+  .numero {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-2);
+    margin: 0;
+  }
+  .numero__valor {
+    font-family: var(--f-titulo);
+    font-size: 2rem;
+    line-height: 1;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+  .numero__unidade {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+
+  /* Barras horizontais */
+  .barras {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--e-2);
+  }
+  .barra {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2px var(--e-2);
+    font-size: var(--t-xs);
+  }
+  .barra__rotulo {
+    color: var(--tinta-2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .barra__valor {
+    color: var(--tinta);
+  }
+  .barra__trilho {
+    grid-column: 1 / -1;
+    display: block;
+    height: 6px;
+    background: var(--papel-2);
+  }
+  .barra__cheio {
+    display: block;
+    height: 100%;
+    background: var(--cor);
+  }
+
+  /* Rosca */
+  .rosca {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    align-items: center;
+    gap: var(--e-3);
+  }
+  .rosca__svg {
+    width: 92px;
+    height: 92px;
+  }
+  .rosca__legenda {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 3px;
+    font-size: var(--t-xs);
+  }
+  .rosca__legenda li {
+    display: grid;
+    grid-template-columns: 10px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--e-2);
+  }
+  .rosca__cor {
+    width: 10px;
+    height: 10px;
+    background: var(--cor);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.2);
+  }
+  .rosca__rotulo {
+    color: var(--tinta-2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>

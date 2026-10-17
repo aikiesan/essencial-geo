@@ -6,15 +6,19 @@
 import Ficha from './Ficha.astro';
 import { SITE } from '../site.config';
 import type { Mapa } from '../lib/mapas';
+import { linguaDe, t } from '../i18n';
 
 interface Props { mapas: Mapa[] }
 const { mapas } = Astro.props;
 const total = String(mapas.length).padStart(2, '0');
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const [antes, depois] = tx.feed.licencaPainel.split('{licenca}');
 ---
 
 <div class="painel">
   <div class="painel__cab">
-    <p class="rotulo">Em foco</p>
+    <p class="rotulo">{tx.feed.emFoco}</p>
     <p class="rotulo mono" data-painel-indice>01 / {total}</p>
   </div>
   {
@@ -25,8 +29,7 @@ const total = String(mapas.length).padStart(2, '0');
     ))
   }
   <p class="painel__licenca rotulo">
-    Dados e pranchas sob <a href={SITE.licenca.url} rel="license noopener">{SITE.licenca.nome}</a>: use em pranchas comerciais e
-    artigos, citando a fonte.
+    {antes}<a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a>{depois}
   </p>
 </div>
 

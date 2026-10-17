@@ -1,29 +1,6 @@
 ---
-import type { GetStaticPaths } from 'astro';
-import Base from '../../layouts/Base.astro';
-import ListaFeed from '../../components/ListaFeed.astro';
-import PainelFichas from '../../components/PainelFichas.astro';
-import CabecalhoPagina from '../../components/CabecalhoPagina.astro';
-import { CATEGORIAS, type CategoriaId } from '../../site.config';
-import { mapasPublicados, numeroFormatado } from '../../lib/mapas';
-
-export const getStaticPaths = (async () => {
-  const mapas = await mapasPublicados();
-  return (Object.keys(CATEGORIAS) as CategoriaId[]).map((categoria) => ({
-    params: { categoria },
-    props: { mapas: mapas.filter((m) => m.data.categoria === categoria) },
-  }));
-}) satisfies GetStaticPaths;
-
-const { categoria } = Astro.params as { categoria: CategoriaId };
-const { mapas } = Astro.props;
-const c = CATEGORIAS[categoria];
+import Categoria from '../../vistas/Categoria.astro';
+import { caminhosCategoria } from '../../lib/rotas';
+export const getStaticPaths = caminhosCategoria('pt');
 ---
-
-<Base titulo={c.rotulo} categoriaAtiva={categoria}>
-  <div class="feed">
-    <CabecalhoPagina sobre={`Atlas · categoria · ${numeroFormatado(mapas.length)} mapas`} titulo={c.rotulo} />
-  </div>
-  <ListaFeed mapas={mapas} />
-  {mapas.length > 0 && <PainelFichas slot="direita" mapas={mapas} />}
-</Base>
+<Categoria {...(Astro.props as any)} />

@@ -1,0 +1,6 @@
+---
+import Mapa from '../../../vistas/Mapa.astro';
+import { caminhosMapa } from '../../../lib/rotas';
+export const getStaticPaths = caminhosMapa('en');
+---
+<Mapa {...(Astro.props as any)} />

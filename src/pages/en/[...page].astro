@@ -1,0 +1,6 @@
+---
+import Feed from '../../vistas/Feed.astro';
+import { caminhosFeed } from '../../lib/rotas';
+export const getStaticPaths = caminhosFeed('en');
+---
+<Feed {...(Astro.props as any)} />

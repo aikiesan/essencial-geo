@@ -1,0 +1,55 @@
+---
+/** Feed principal, paginado em folhas de 8 pranchas. */
+import type { Page } from 'astro';
+import Base from '../layouts/Base.astro';
+import ListaFeed from '../components/ListaFeed.astro';
+import PainelFichas from '../components/PainelFichas.astro';
+import type { Mapa } from '../lib/mapas';
+import { linguaDe, t } from '../i18n';
+
+interface Props { page: Page<Mapa> }
+const { page } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
+const primeira = page.currentPage === 1;
+---
+
+<Base
+  titulo={primeira ? undefined : `${tx.feed.folha} ${page.currentPage}`}
+  categoriaAtiva="todas"
+  imagem={page.data[0]?.data.imagem.src}
+>
+  <header class="mancha feed">
+    <p class="rotulo">{tx.feed.sobre} · {tx.feed.folha} {page.currentPage} {tx.feed.de} {page.lastPage}</p>
+    <p class="mancha__frase">{tx.feed.frase}</p>
+  </header>
+
+  <ListaFeed
+    mapas={page.data}
+    anterior={page.url.prev}
+    proxima={page.url.next}
+    pagina={page.currentPage}
+    totalPaginas={page.lastPage}
+  />
+
+  <PainelFichas slot="direita" mapas={page.data} />
+</Base>
+
+<style>
+  .mancha {
+    margin-bottom: var(--e-7);
+    padding-bottom: var(--e-4);
+    border-bottom: 1px solid var(--linha);
+  }
+  .mancha .rotulo {
+    margin: 0 0 var(--e-2);
+  }
+  .mancha__frase {
+    margin: 0;
+    font-family: var(--f-titulo);
+    font-style: italic;
+    font-size: var(--t-lg);
+    line-height: 1.45;
+    color: var(--tinta-2);
+    max-width: 52ch;
+  }
+</style>

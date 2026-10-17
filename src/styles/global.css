@@ -12,26 +12,48 @@
 @import '@fontsource-variable/jetbrains-mono/wght.css';
 
 /* ---------- Tokens ------------------------------------------------------ */
+/*
+ * Paleta "Portão do palácio" (Traditional Korean Palace Entrance):
+ *   Wheat Sheaf #dfd5c4 · Basket Beige #bfa88a · Blue Nile #749fb7
+ *   Queen Valley #6d7165 · Forest Night #444235 · Underworld #1a211a
+ * Regra: a paleta veste a INTERFACE (tinta, acentos, ornamentos, gráficos).
+ * Superfícies onde o mapa aparece continuam neutras (gelo/branco) para não
+ * alterar a leitura das cores dos dados.
+ */
 :root {
-  /* Papel & tinta */
-  --papel: #f6f7f8;          /* branco-gelo neutro: não tinge as cores do mapa */
-  --papel-2: #edeff1;        /* gelo mais fundo, áreas recuadas */
-  --folha: #ffffff;          /* a folha da prancha: branco puro */
-  --tinta: #1a1c1e;          /* nanquim neutro */
-  --tinta-2: #4a4f55;        /* grafite */
-  --tinta-3: #7a8189;        /* cinza neutro, metadados */
-  --linha: #1a1c1e;          /* traço de 1px */
-  --linha-fina: #d3d8dd;     /* guias e separadores secundários */
+  /* Superfícies — neutras */
+  --papel: #f6f7f8;          /* fundo do feed: branco-gelo */
+  --papel-2: #edeff1;        /* áreas recuadas */
+  --painel: #ffffff;         /* colunas laterais, como os painéis de um SIG */
+  --folha: #ffffff;          /* moldura em volta da prancha: branco puro */
 
-  /* Minerais do território */
-  --ocre: #b07d26;
-  --argila: #9c4a32;
-  --azul-profundo: #1f3a5f;
-  --verde-mata: #2e5a3c;
-  --estrela: #c99a2e;        /* o único acento "poético": pequenas estrelas */
+  /* Tinta — da paleta */
+  --tinta: #1a211a;          /* Underworld */
+  --tinta-2: #444235;        /* Forest Night */
+  --tinta-3: #6d7165;        /* Queen Valley — rótulos, metadados (4,7:1) */
+  --linha: #1a211a;          /* traço estrutural de 1px */
+  --linha-fina: #d6d9d4;     /* guias e separadores secundários */
 
-  --acento: var(--argila);
-  --foco: var(--azul-profundo);
+  /* Acentos — da paleta */
+  --trigo: #dfd5c4;          /* Wheat Sheaf — seleção, aba ativa, selos */
+  --cesto: #bfa88a;          /* Basket Beige — estrelas, ornamento, barras secundárias */
+  --nilo: #749fb7;           /* Blue Nile — barras e indicadores (só preenchimento) */
+  --nilo-tinta: #3d6a82;     /* Blue Nile aprofundado — links, hover, foco (5,5:1) */
+  --vale: #6d7165;           /* Queen Valley */
+  --floresta: #444235;       /* Forest Night */
+
+  /* Apelidos usados pelos componentes */
+  --ocre: var(--cesto);
+  --argila: #9c4a32;         /* tijolo do muro — reservado à página 404 */
+  --azul-profundo: var(--nilo-tinta);
+  --verde-mata: var(--floresta);
+  --estrela: var(--cesto);   /* o eco de Saint-Exupéry: pequenas estrelas */
+
+  --acento: var(--nilo-tinta);
+  --foco: var(--nilo-tinta);
+
+  /* Ornamento: meandro (회문) dos muros de tijolo do palácio */
+  --meandro: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10'%3E%3Cpath d='M0 9.5h12M8.5 9.5V.5h-8v6h4v-3' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E");
 
   /* Tipografia */
   --f-titulo: 'Playfair Display Variable', 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -68,21 +90,21 @@
   color-scheme: light;
 }
 
-/* Modo nanquim/ardósia — grafite profundo, papel vira tinta */
+/* Modo nanquim: feed em grafite neutro, painéis em Underworld, tinta em Wheat Sheaf */
 :root[data-tema='escuro'] {
   --papel: #16181a;
-  --papel-2: #1c1f22;
+  --papel-2: #1e2120;
+  --painel: #1a211a;         /* Underworld */
   --folha: #1f2326;
-  --tinta: #e6e8ea;
-  --tinta-2: #b4b9bf;
-  --tinta-3: #868c93;
-  --linha: #c9cdd2;
-  --linha-fina: #3a3e42;
-  --ocre: #d3a24a;
+  --tinta: #dfd5c4;          /* Wheat Sheaf (12:1) */
+  --tinta-2: #bfa88a;        /* Basket Beige (7,8:1) */
+  --tinta-3: #9a9d92;        /* Queen Valley clareado (6,5:1) */
+  --linha: #bfa88a;
+  --linha-fina: #343a33;
+  --trigo: #2f3529;
+  --nilo-tinta: #749fb7;     /* Blue Nile puro já tem contraste no escuro (6,3:1) */
+  --floresta: #5a5a47;
   --argila: #d47a5c;
-  --azul-profundo: #8fb0d9;
-  --verde-mata: #86b892;
-  --estrela: #e2bb5a;
   --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.025 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   color-scheme: dark;
 }
@@ -142,8 +164,8 @@ a:hover {
 }
 
 ::selection {
-  background: var(--ocre);
-  color: var(--folha);
+  background: var(--trigo);
+  color: var(--tinta);
 }
 
 h1,
@@ -328,6 +350,7 @@ hr {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+    background: var(--painel);
     border-right: 1px solid var(--linha);
     scrollbar-width: thin;
   }
@@ -346,6 +369,7 @@ hr {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+    background: var(--painel);
     border-left: 1px solid var(--linha);
     scrollbar-width: thin;
   }
@@ -358,6 +382,15 @@ hr {
 .feed {
   max-width: var(--feed-max);
   margin: 0 auto;
+}
+
+/* ---------- Ornamento: faixa de meandro (회문) -------------------------- */
+.meandro {
+  display: block;
+  height: 10px;
+  background-color: var(--cesto);
+  -webkit-mask: var(--meandro) repeat-x left center / 12px 10px;
+  mask: var(--meandro) repeat-x left center / 12px 10px;
 }
 
 /* ---------- Divisor de cartões: filete com estrela ---------------------- */

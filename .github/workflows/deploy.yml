@@ -1,5 +1,9 @@
 # Compila o site e publica no GitHub Pages a cada push na main.
-# Em pull requests só compila — o que já valida o frontmatter de todos os mapas.
+# Em pull requests só compila — o que já valida o frontmatter de todos os mapas
+# e a presença da versão em inglês (README.en.md) de cada mapa publicado.
+#
+# Agenda: mapas e notas com data futura ficam fora do site até as 12h UTC (9h em
+# Brasília) do seu dia. A recompilação diária abaixo é o que os faz entrar no ar.
 name: Site (GitHub Pages)
 
 on:
@@ -7,6 +11,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '5 12 * * *' # todo dia às 12h05 UTC = 9h05 em Brasília
 
 permissions:
   contents: read

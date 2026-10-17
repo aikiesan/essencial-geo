@@ -1,0 +1,6 @@
+---
+import Categoria from '../../../vistas/Categoria.astro';
+import { caminhosCategoria } from '../../../lib/rotas';
+export const getStaticPaths = caminhosCategoria('en');
+---
+<Categoria {...(Astro.props as any)} />

@@ -1,0 +1,100 @@
+---
+/** Notas e novidades: uma lista datada, como a seção de um jornal. */
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import Icone from '../components/Icone.astro';
+import { notasPublicadas } from '../lib/notas';
+import { dataExtensa, dataIso, linguaDe, rota, t } from '../i18n';
+
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const notas = await notasPublicadas(lingua);
+---
+
+<Base titulo={tx.notas.titulo} descricao={tx.notas.descricao}>
+  <div class="feed">
+    <CabecalhoPagina sobre={tx.notas.sobre} titulo={tx.notas.h1} linhaFina={tx.notas.fina} />
+
+    {notas.length === 0 && <p class="vazio">{tx.notas.vazio}</p>}
+
+    <ol class="notas" role="list">
+      {
+        notas.map((n) => (
+          <li class="nota">
+            <p class="nota__linha rotulo">
+              <span class="nota__tipo">{tx.notas.tipos[n.data.tipo]}</span>
+              <time datetime={dataIso(n.data.data)}>{dataExtensa(n.data.data, lingua)}</time>
+              {n.agendada && <span class="nota__agenda">{tx.cartao.agendado}</span>}
+            </p>
+            <h2 class="nota__titulo">
+              <a href={rota(lingua, 'notas', n.pasta)}>{n.data.titulo}</a>
+            </h2>
+            <p class="nota__resumo">{n.data.resumo}</p>
+            <a class="nota__ler rotulo" href={rota(lingua, 'notas', n.pasta)}>
+              {tx.notas.ler} <Icone nome="seta" tamanho={11} />
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</Base>
+
+<style>
+  .notas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nota {
+    padding: var(--e-5) 0;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .nota:first-child {
+    padding-top: 0;
+  }
+  .nota__linha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1) var(--e-3);
+    align-items: center;
+    margin: 0 0 var(--e-2);
+  }
+  .nota__tipo {
+    padding: 1px var(--e-2);
+    background: var(--trigo);
+    color: var(--tinta);
+  }
+  .nota__agenda {
+    color: var(--nilo-tinta);
+  }
+  .nota__titulo {
+    font-size: var(--t-xl);
+  }
+  .nota__titulo a {
+    text-decoration: none;
+  }
+  .nota__titulo a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--acento);
+  }
+  .nota__resumo {
+    margin: var(--e-2) 0 var(--e-3);
+    color: var(--tinta-2);
+    max-width: 62ch;
+  }
+  .nota__ler {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .nota__ler:hover {
+    color: var(--acento);
+  }
+  .vazio {
+    font-style: italic;
+    color: var(--tinta-2);
+  }
+</style>

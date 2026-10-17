@@ -46,6 +46,16 @@ const readme = await readFile(caminhoReadme, 'utf8');
 const bloco = readme.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 if (!bloco) throw new Error(`Frontmatter não encontrado em ${caminhoReadme}`);
 const fm = parse(bloco[1]);
+
+// Versão em inglês: obrigatória, como no site.
+let en;
+try {
+  const readmeEn = await readFile(join(dirMapa, 'README.en.md'), 'utf8');
+  en = parse(readmeEn.match(/^---\r?\n([\s\S]*?)\r?\n---/)[1]);
+} catch {
+  console.error(`Falta mapas/${pasta}/README.en.md. Todo mapa publicado sai em PT-BR e EN-UK.`);
+  process.exit(1);
+}
 const zenodoJson = JSON.parse(await readFile(join(RAIZ, '.zenodo.json'), 'utf8'));
 
 if (fm.exemplo) {
@@ -60,25 +70,47 @@ if (fm.doi && !novaVersao) {
 /* ---------- metadados ---------------------------------------------------- */
 const site = 'https://aikiesan.github.io/essencial-geo';
 const paginaMapa = `${site}/mapas/${pasta}/`;
+const paginaMapaEn = `${site}/en/maps/${pasta}/`;
 const escapar = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
 const criadores = fm.autores?.length
   ? fm.autores.map((a) => ({ name: `${a.sobrenome}, ${a.nome}`, ...(a.orcid ? { orcid: a.orcid } : {}) }))
   : zenodoJson.creators;
 
-const fontes = (fm.fontes ?? []).map((f) => `<li>${escapar(f.nome)}${f.ano ? ` (${f.ano})` : ''}</li>`).join('');
+// Descrição bilíngue: o registro tem um título (em português), e o resumo traz as duas línguas.
+const tituloPt = `${fm.titulo}${fm.subtitulo ? `: ${fm.subtitulo}` : ''}`;
+const tituloEn = `${en.titulo}${en.subtitulo ? `: ${en.subtitulo}` : ''}`;
+const lista = (campo) =>
+  (fm.fontes ?? []).map((f) => `<li>${escapar(f[campo] ?? f.nome)}${f.ano ? ` (${f.ano})` : ''}</li>`).join('');
+const ref = (crs) => `${escapar(crs)}${fm.epsg ? ` (EPSG:${fm.epsg})` : ''}`;
 const metadata = {
   upload_type: 'dataset',
-  title: `${fm.titulo}${fm.subtitulo ? `: ${fm.subtitulo}` : ''}`,
+  title: tituloPt,
   description: [
+    `<p><strong>[PT-BR]</strong></p>`,
     `<p>${escapar(fm.contexto)}</p>`,
-    `<p><strong>Recorte:</strong> ${escapar(fm.recorte)}<br><strong>Sistema de referência:</strong> ${escapar(fm.crs)}${fm.epsg ? ` (EPSG:${fm.epsg})` : ''}${fm.escala ? `<br><strong>Escala:</strong> ${escapar(fm.escala)}` : ''}</p>`,
-    fontes ? `<p><strong>Fontes:</strong></p><ul>${fontes}</ul>` : '',
+    `<p><strong>Recorte:</strong> ${escapar(fm.recorte)}<br><strong>Sistema de referência:</strong> ${ref(fm.crs)}${fm.escala ? `<br><strong>Escala:</strong> ${escapar(fm.escala)}` : ''}</p>`,
+    `<p><strong>Fontes:</strong></p><ul>${lista('nome')}</ul>`,
     fm.metodo ? `<p><strong>Método:</strong> ${escapar(fm.metodo)}</p>` : '',
     `<p>Prancha nº ${fm.numero} do atlas Essencial Geo — <a href="${paginaMapa}">${paginaMapa}</a></p>`,
+    `<hr>`,
+    `<p><strong>[EN-GB] ${escapar(tituloEn)}</strong></p>`,
+    `<p>${escapar(en.contexto)}</p>`,
+    `<p><strong>Extent:</strong> ${escapar(en.recorte ?? fm.recorte)}<br><strong>Reference system:</strong> ${ref(fm.crs)}${(en.escala ?? fm.escala) ? `<br><strong>Scale:</strong> ${escapar(en.escala ?? fm.escala)}` : ''}</p>`,
+    `<p><strong>Sources:</strong></p><ul>${lista('nome_en')}</ul>`,
+    (en.metodo ?? fm.metodo) ? `<p><strong>Method:</strong> ${escapar(en.metodo ?? fm.metodo)}</p>` : '',
+    `<p>Plate no. ${fm.numero} of the Essencial Geo atlas — <a href="${paginaMapaEn}">${paginaMapaEn}</a></p>`,
   ].join(''),
+  notes: `English title: ${tituloEn}`,
   creators: criadores,
-  keywords: [...new Set(['Brasil', 'cartografia', 'mapa temático', 'SIRGAS 2000', ...(fm.tags ?? [])])],
+  keywords: [
+    ...new Set([
+      'Brasil', 'cartografia', 'mapa temático',
+      'Brazil', 'cartography', 'thematic map',
+      'SIRGAS 2000',
+      ...(fm.tags ?? []),
+    ]),
+  ],
   license: 'cc-by-4.0',
   access_right: 'open',
   version: String(fm.versao ?? '1.0.0'),
@@ -86,6 +118,7 @@ const metadata = {
   publication_date: new Date(fm.data).toISOString().slice(0, 10),
   related_identifiers: [
     { identifier: paginaMapa, relation: 'isDocumentedBy', resource_type: 'other' },
+    { identifier: paginaMapaEn, relation: 'isDocumentedBy', resource_type: 'other' },
     { identifier: `https://github.com/aikiesan/essencial-geo/tree/main/mapas/${pasta}`, relation: 'isSupplementTo' },
   ],
   ...(zenodoJson.communities?.length && !sandbox ? { communities: zenodoJson.communities } : {}),

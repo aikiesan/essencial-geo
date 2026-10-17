@@ -22,9 +22,11 @@ imagem_alt: "Mapa figura-fundo em preto e branco: quadras pretas irregulares num
 recorte: "Cidade fictícia (dados sintéticos)"
 fontes:
   - nome: "Dados sintéticos — Essencial Geo (scripts/gerar-exemplos.mjs)"
+    nome_en: "Synthetic data — Essencial Geo (scripts/gerar-exemplos.mjs)"
     url: https://github.com/aikiesan/essencial-geo/blob/main/scripts/gerar-exemplos.mjs
     ano: 2026
   - nome: "Modelo de referência: OpenStreetMap (ODbL)"
+    nome_en: "Reference model: OpenStreetMap (ODbL)"
     url: https://www.openstreetmap.org/
 crs: "SIRGAS 2000 / UTM zona 23S"
 epsg: 31983
@@ -32,14 +34,40 @@ escala: "1:50.000"
 software: ["Node.js", "d3-delaunay"]
 metodo: "Voronoi de duas malhas (orgânica e ortogonal rotacionada) com recuo de 70 m para o leito viário."
 
+camadas:
+  - { nome: QUADRAS, tipo: poligono, cor: "#1a1c1e", descricao: "Quadras edificáveis (figura)", descricao_en: "Built blocks (figure)" }
+  - { nome: PRACAS, tipo: poligono, cor: "#ffffff", descricao: "Praças", descricao_en: "Squares" }
+  - { nome: AREAS_VERDES, tipo: poligono, cor: "#7f9a52", descricao: "Parques e margens do rio", descricao_en: "Parks and riverbanks" }
+  - { nome: EIXOS_VIARIOS, tipo: linha, cor: "#6d7165", descricao: "Eixos das avenidas", descricao_en: "Avenue centrelines" }
+  - { nome: HIDROGRAFIA, tipo: linha, cor: "#1f3a5f", descricao: "Eixo do rio", descricao_en: "River centreline" }
+
+indicadores:
+  - tipo: numero
+    rotulo: "Quadras edificáveis"
+    rotulo_en: "Built blocks"
+    valor: 751
+    nota: "em dois tecidos: núcleo orgânico e grelha a 18°"
+    nota_en: "in two fabrics: an organic core and a grid at 18°"
+  - tipo: barras
+    rotulo: "Feições por camada"
+    rotulo_en: "Features per layer"
+    itens:
+      - { rotulo: "Quadras", rotulo_en: "Blocks", valor: 751, cor: "#1a211a" }
+      - { rotulo: "Áreas verdes", rotulo_en: "Green spaces", valor: 116, cor: "#6d7165" }
+      - { rotulo: "Praças", rotulo_en: "Squares", valor: 35, cor: "#bfa88a" }
+      - { rotulo: "Avenidas", rotulo_en: "Avenues", valor: 3, cor: "#749fb7" }
+
 downloads:
   - formato: dxf
     arquivo: dados/figura_fundo_sintetica.dxf
     rotulo: "Quadras, eixos e verdes"
+    rotulo_en: "Blocks, axes and green spaces"
     tamanho: "0,4 MB"
   - formato: png
     arquivo: mapa_preview.png
+    arquivo_en: mapa_preview.en.png
     rotulo: "Prancha (PNG 2400 px)"
+    rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
 versao: "0.1.0"
@@ -47,6 +75,8 @@ discussoes: []
 ---
 
 # Figura-fundo da malha urbana
+
+<p class="so-github"><strong>Português</strong> · <a href="README.en.md">English</a></p>
 
 > **Prancha-modelo.** A cidade é sintética e não representa nenhum lugar real.
 
