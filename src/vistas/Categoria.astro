@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import ListaFeed from '../components/ListaFeed.astro';
+import PainelFichas from '../components/PainelFichas.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import type { CategoriaId } from '../site.config';
+import { numeroFormatado, type Mapa } from '../lib/mapas';
+import { linguaDe, t } from '../i18n';
+
+interface Props { categoria: CategoriaId; mapas: Mapa[] }
+const { categoria, mapas } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
+const c = tx.categorias[categoria];
+---
+
+<Base titulo={c.rotulo} categoriaAtiva={categoria}>
+  <div class="feed">
+    <CabecalhoPagina
+      sobre={`${tx.categoria.sobre} · ${numeroFormatado(mapas.length)} ${mapas.length === 1 ? tx.categoria.mapa : tx.categoria.mapas}`}
+      titulo={c.rotulo}
+    />
+  </div>
+  <ListaFeed mapas={mapas} />
+  {mapas.length > 0 && <PainelFichas slot="direita" mapas={mapas} />}
+</Base>

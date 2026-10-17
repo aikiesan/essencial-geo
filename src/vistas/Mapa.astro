@@ -1,0 +1,128 @@
+---
+/** Página permanente de um mapa: prancha, contexto, notas de método e ficha completa. */
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import CartaoMapa from '../components/CartaoMapa.astro';
+import Ficha from '../components/Ficha.astro';
+import Icone from '../components/Icone.astro';
+import Estrela from '../components/Estrela.astro';
+import { SITE } from '../site.config';
+import { linkMapa, numeroFormatado, type Mapa } from '../lib/mapas';
+import { t } from '../i18n';
+
+interface Props { mapa: Mapa; maisNovo?: Mapa; maisAntigo?: Mapa }
+const { mapa, maisNovo, maisAntigo } = Astro.props;
+const tx = t(mapa.lingua);
+// Em inglês, as notas de método vêm do corpo do README.en.md.
+const { Content } = await render(mapa.lingua === 'en' && mapa.traducao ? mapa.traducao : mapa);
+const arquivoReadme = mapa.lingua === 'en' && mapa.traducao ? 'README.en.md' : 'README.md';
+const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoReadme}`;
+---
+
+<Base
+  titulo={mapa.data.titulo}
+  descricao={mapa.data.contexto.slice(0, 200)}
+  imagem={mapa.data.imagem.src}
+  categoriaAtiva={mapa.data.categoria}
+  tipo="article"
+>
+  <div class="feed">
+    <CartaoMapa mapa={mapa} prioridade destaque />
+
+    <div class="divisor" aria-hidden="true"><Estrela /></div>
+
+    <section class="notas" aria-labelledby="t-notas">
+      <h2 class="secao" id="t-notas">{tx.mapa.notas} · {tx.geral.no} {numeroFormatado(mapa.data.numero)}</h2>
+      <div class="prosa">
+        <Content />
+      </div>
+      <p class="notas__fonte rotulo">
+        <a href={pastaGithub} rel="noopener">{tx.mapa.github} <Icone nome="externo" tamanho={11} /></a>
+      </p>
+    </section>
+
+    <nav class="vizinhos" aria-label={tx.mapa.outros}>
+      {
+        maisAntigo ? (
+          <a href={linkMapa(maisAntigo)} rel="prev">
+            <span class="rotulo">
+              <Icone nome="voltar" tamanho={11} /> {tx.geral.no} {numeroFormatado(maisAntigo.data.numero)}
+            </span>
+            <span class="vizinhos__titulo">{maisAntigo.data.titulo}</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      {
+        maisNovo ? (
+          <a href={linkMapa(maisNovo)} rel="next" class="vizinhos__dir">
+            <span class="rotulo">
+              {tx.geral.no} {numeroFormatado(maisNovo.data.numero)} <Icone nome="seta" tamanho={11} />
+            </span>
+            <span class="vizinhos__titulo">{maisNovo.data.titulo}</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+    </nav>
+  </div>
+
+  <div slot="direita" class="direita-mapa">
+    <Ficha mapa={mapa} cabecalho />
+  </div>
+</Base>
+
+<style>
+  .notas .prosa :global(h2) {
+    font-size: var(--t-lg);
+    margin-top: var(--e-6);
+  }
+  /* O h1 e a linha "Português · English" do README são para o GitHub; aqui o título já está no cartão. */
+  .notas .prosa :global(> h1:first-child),
+  .notas .prosa :global(.so-github) {
+    display: none;
+  }
+  .notas__fonte a {
+    display: inline-flex;
+    gap: var(--e-1);
+    align-items: center;
+    color: var(--tinta);
+  }
+  .vizinhos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--e-4);
+    margin-top: var(--e-7);
+    padding-top: var(--e-4);
+    border-top: 1px solid var(--linha);
+  }
+  .vizinhos a {
+    display: grid;
+    gap: var(--e-1);
+    padding: var(--e-3);
+    border: 1px solid var(--linha-fina);
+    text-decoration: none;
+  }
+  .vizinhos a:hover {
+    border-color: var(--linha);
+  }
+  .vizinhos .rotulo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+  }
+  .vizinhos__dir {
+    text-align: right;
+    justify-items: end;
+  }
+  .vizinhos__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    line-height: 1.25;
+  }
+  .direita-mapa {
+    padding: var(--e-6) var(--e-5);
+  }
+</style>

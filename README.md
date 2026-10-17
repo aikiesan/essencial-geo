@@ -2,11 +2,13 @@
 
 *O essencial é invisível aos olhos — até ser traduzido em um mapa.*
 
-Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil.
-Um mapa novo a cada dois dias, cada um com a prancha final, as bases vetoriais (GeoPackage e DXF),
-o sistema de referência declarado e uma citação com DOI.
+**Português** · [English](#in-english)
 
-**Site:** https://aikiesan.github.io/essencial-geo/ · **Acervo:** [Comunidade Zenodo](https://zenodo.org/communities/essencial-geo) · **Licença:** [CC BY 4.0](LICENSE)
+Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil.
+Um mapa novo a cada dois dias, em **português e inglês**, cada um com a prancha final, as bases vetoriais
+(GeoPackage e DXF), o sistema de referência declarado e uma citação com DOI.
+
+**Site:** https://aikiesan.github.io/essencial-geo/ ([em inglês](https://aikiesan.github.io/essencial-geo/en/)) · **Acervo:** [Comunidade Zenodo](https://zenodo.org/communities/essencial-geo) · **Licença:** [CC BY 4.0](LICENSE)
 
 ---
 
@@ -40,13 +42,15 @@ essencial-geo/
 ├── mapas/                   ← o atlas: uma pasta por prancha
 │   └── 001-densidade-urbana-grade-estatistica/
 │       ├── README.md        ← ficha técnica (frontmatter) + notas de método — fonte única de verdade
-│       ├── mapa_preview.png ← imagem do feed (~2400 px)
+│       ├── README.en.md     ← o mesmo texto em inglês (título, contexto, notas de método)
+│       ├── mapa_preview.png ← imagem do feed (~2400 px), e mapa_preview.en.png em inglês
 │       ├── prancha_impressao.pdf
 │       └── dados/           ← .gpkg(.zip), .dxf, .csv
 │
+├── notas/                   ← novidades, bastidores, método: uma pasta por nota, pt.md + en.md
 ├── templates/mapa/          ← modelo copiado por `npm run novo-mapa`
 ├── scripts/                 ← novo mapa, sincronização, exemplos, Zenodo
-├── src/                     ← site (Astro): layout, componentes, estilos
+├── src/                     ← site (Astro): páginas, componentes, estilos, textos da interface (src/i18n)
 └── docs/                    ← guias de publicação, conteúdo e estilo
 ```
 
@@ -65,35 +69,40 @@ npm run dev          # http://localhost:4321/essencial-geo/
 Criar o próximo mapa:
 
 ```bash
-npm run novo-mapa -- "Renda domiciliar na RMC" censo-renda
+npm run novo-mapa -- "Renda domiciliar na RMC" censo-renda --en "Household income in the Campinas region" --data 2026-11-23
 ```
+
+Uma `--data` futura agenda o mapa: ele entra no ar às 9h de Brasília desse dia, na recompilação diária do site.
 
 Outros comandos:
 
 | Comando | O que faz |
 | --- | --- |
-| `npm run build` | Valida todos os frontmatters e gera o site estático em `dist/` |
+| `npm run build` | Valida todos os frontmatters, exige a versão em inglês de cada mapa e nota publicados, e gera o site estático em `dist/` |
 | `npm run preview` | Serve `dist/` localmente |
 | `npm run exemplos` | Regenera as quatro pranchas-modelo (dados sintéticos) |
 | `npm run zenodo -- <pasta> --simular` | Mostra o que seria enviado ao Zenodo, sem enviar |
 
 ## Fluxo de publicação
 
-1. **GitHub** — a pasta do mapa entra em `mapas/` (commit na `main`).
-2. **Pages** — a Action `deploy.yml` recompila o site; a prancha aparece no topo do feed.
+1. **GitHub** — a pasta do mapa, com `README.md` e `README.en.md`, entra em `mapas/` (commit na `main`).
+2. **Pages** — a Action `deploy.yml` recompila o site a cada push e todo dia às 9h05; a prancha aparece no
+   topo do feed nas duas línguas no dia da sua `data`.
 3. **Zenodo** — Actions → *Publicar no Zenodo* → informe a pasta. O mapa ganha um DOI próprio, gravado de
    volta no `README.md`; o site passa a exibir a citação com DOI.
 4. **ORCID / Lattes** — o DOI aparece no ORCID automaticamente (via DataCite) e é registrado no Lattes como
    produção técnica.
 
-O passo a passo completo, incluindo a configuração inicial do GitHub Pages, do Zenodo e do ORCID, está em
-[`docs/PUBLICAR.md`](docs/PUBLICAR.md).
+O passo a passo completo está em [`docs/PUBLICAR.md`](docs/PUBLICAR.md); a configuração do Zenodo e do ORCID,
+em [`docs/ZENODO.md`](docs/ZENODO.md).
 
 ## Documentação
 
-- [`docs/PUBLICAR.md`](docs/PUBLICAR.md) — configuração inicial e rotina de publicação (QGIS → GitHub → Zenodo → Lattes)
-- [`docs/CONTEUDO.md`](docs/CONTEUDO.md) — referência de todos os campos do frontmatter, tom de voz e checklist
-- [`docs/ESTILO.md`](docs/ESTILO.md) — sistema visual do site e convenções cartográficas das pranchas
+- [`docs/PUBLICAR.md`](docs/PUBLICAR.md) — a rotina de cada mapa, nas duas línguas (QGIS → GitHub → Zenodo → Lattes)
+- [`docs/ZENODO.md`](docs/ZENODO.md) — comunidade, tokens, DOI por mapa, ORCID via DataCite
+- [`docs/CALENDARIO.md`](docs/CALENDARIO.md) — cadência, agendamento por data e pautas das próximas semanas
+- [`docs/CONTEUDO.md`](docs/CONTEUDO.md) — referência de todos os campos do frontmatter, `README.en.md`, notas e tom de voz
+- [`docs/ESTILO.md`](docs/ESTILO.md) — paleta, sistema visual do site e convenções cartográficas das pranchas
 
 ## As pranchas 001–004
 
@@ -110,4 +119,27 @@ que cite a fonte. Os dados de origem (IBGE, INPE, MapBiomas, OpenStreetMap…) s
 produtores, indicadas em cada ficha.
 
 Como citar o atlas como um todo: use o botão *Cite this repository* do GitHub (gerado a partir de
-[`CITATION.cff`](CITATION.cff)). Para um mapa específico, use a citação ABNT/BibTeX da ficha técnica dele.
+[`CITATION.cff`](CITATION.cff)). Para um mapa específico, use a citação ABNT, APA ou BibTeX da ficha técnica dele.
+
+---
+
+## In English
+
+*What is essential is invisible to the eye — until it is drawn as a map.*
+
+A cartographic feed, open-data repository and ongoing portfolio of thematic maps of Brazil, published in
+**Brazilian Portuguese and British English**. A new map every two days, each with the final plate, vector
+data (GeoPackage and DXF), a declared reference system and a citation with a DOI.
+
+**Site:** https://aikiesan.github.io/essencial-geo/en/ · **Archive:** [Zenodo community](https://zenodo.org/communities/essencial-geo) · **Licence:** [CC BY 4.0](LICENSE)
+
+Each map lives in its own folder under `mapas/`: `README.md` holds the technical sheet and the Portuguese
+text, `README.en.md` the English text, and the data files are shared by both. Layer and file names stay in
+Portuguese so that scripts, QGIS styles and CAD templates work with either version. Every map and note is
+dated like a news item, and each map gets its own DOI on Zenodo.
+
+Plates 001–004 are **sample plates built from synthetic data** and do not depict real places.
+
+Plates, derived data and texts are released under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Source data (IBGE, INPE, MapBiomas,
+OpenStreetMap…) keep their producers’ licences, listed in each technical sheet.

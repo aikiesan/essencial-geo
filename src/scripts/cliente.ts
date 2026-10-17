@@ -10,8 +10,13 @@ const $$ = <T extends Element = HTMLElement>(sel: string, raiz: ParentNode = doc
 /* ---------- Tema: papel ⇄ nanquim ---------------------------------------- */
 function iniciarTema() {
   const raiz = document.documentElement;
-  const nomes: Record<string, string> = { claro: 'papel', escuro: 'nanquim' };
-  const atualizar = () => $$('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
+  // Os nomes do tema ("papel/nanquim", "paper/ink") vêm do botão, na língua da página.
+  const botao = document.querySelector<HTMLElement>('[data-tema-botao]');
+  const nomes: Record<string, string> = {
+    claro: botao?.dataset.nomeClaro ?? 'papel',
+    escuro: botao?.dataset.nomeEscuro ?? 'nanquim',
+  };
+  const atualizar = () => $('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
   atualizar();
   $$('[data-tema-botao]').forEach((b) =>
     b.addEventListener('click', () => {
@@ -38,6 +43,7 @@ function iniciarMenu() {
 }
 
 /* ---------- Citação: abas, data de acesso e cópia ------------------------ */
+// A data de acesso só aparece na ABNT, que é sempre em português.
 const MESES = ['jan.', 'fev.', 'mar.', 'abr.', 'maio', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'];
 
 function iniciarCitacoes() {
@@ -62,11 +68,12 @@ function iniciarCitacoes() {
       const texto = (visivel?.textContent ?? '').replace(/\s+\n/g, '\n').trim();
       const ok = await copiarTexto(texto);
       if (!rotulo) return;
-      rotulo.textContent = ok ? 'Citação copiada' : 'Selecione e copie (Ctrl+C)';
+      const r = copiar.dataset;
+      rotulo.textContent = ok ? (r.rotuloCopiado ?? 'Citação copiada') : (r.rotuloManual ?? 'Selecione e copie (Ctrl+C)');
       copiar.toggleAttribute('data-copiado', ok);
       if (!ok && visivel) selecionar(visivel);
       window.setTimeout(() => {
-        rotulo.textContent = 'Copiar citação';
+        rotulo.textContent = copiar.dataset.rotuloCopiar ?? 'Copiar citação';
         copiar.removeAttribute('data-copiado');
       }, 2200);
     });

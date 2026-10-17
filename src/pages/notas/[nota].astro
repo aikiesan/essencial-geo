@@ -1,0 +1,6 @@
+---
+import Nota from '../../vistas/Nota.astro';
+import { caminhosNota } from '../../lib/rotas';
+export const getStaticPaths = caminhosNota('pt');
+---
+<Nota {...(Astro.props as any)} />

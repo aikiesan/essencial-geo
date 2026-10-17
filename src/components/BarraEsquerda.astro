@@ -1,85 +1,121 @@
 ---
 /**
- * Coluna esquerda: identidade, manifesto, estado da plataforma,
- * índice do atlas por categoria e ligações acadêmicas.
+ * Coluna esquerda: identidade, seletor de língua, manifesto, estado da
+ * plataforma, índice do atlas por categoria e ligações acadêmicas.
  * Em telas estreitas vira um cabeçalho com menu recolhível.
  */
 import Logo from './Logo.astro';
 import Estrela from './Estrela.astro';
 import Icone from './Icone.astro';
-import { CATEGORIAS, LINKS, SITE, type CategoriaId } from '../site.config';
-import { contarPorCategoria, dataAbnt, mapasPublicados, numeroFormatado, url } from '../lib/mapas';
+import { CATEGORIA_IDS, LINKS, SITE, type CategoriaId } from '../site.config';
+import { contarPorCategoria, mapasPublicados, numeroFormatado, proximaPublicacao } from '../lib/mapas';
+import { notasPublicadas } from '../lib/notas';
+import { IDIOMA, LINGUAS, caminhoEquivalente, dataCurta, dataIso, linguaDe, rota, t, url } from '../i18n';
 
 interface Props {
   /** Categoria ativa no filtro (undefined = todas). */
   categoriaAtiva?: CategoriaId | 'todas';
 }
 const { categoriaAtiva } = Astro.props;
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
 
-const mapas = await mapasPublicados();
+const mapas = await mapasPublicados(lingua);
 const contagem = contarPorCategoria(mapas);
 const ultima = mapas[0]?.data.atualizado ?? mapas[0]?.data.data;
-const categorias = Object.entries(CATEGORIAS) as [CategoriaId, (typeof CATEGORIAS)[CategoriaId]][];
+const proxima = await proximaPublicacao();
+const ultimaNota = (await notasPublicadas(lingua))[0];
 
+const p = tx.barra.perfis;
 const ligacoes = [
-  { rotulo: 'Currículo Lattes', href: LINKS.lattes },
-  { rotulo: 'ORCID', href: LINKS.orcid },
-  { rotulo: 'Comunidade Zenodo', href: LINKS.zenodo },
-  { rotulo: 'GitHub', href: LINKS.github },
+  { rotulo: p.lattes, href: LINKS.lattes },
+  { rotulo: p.orcid, href: LINKS.orcid },
+  { rotulo: p.scholar, href: LINKS.scholar },
+  { rotulo: p.fapesp, href: LINKS.fapesp },
+  { rotulo: p.unicamp, href: LINKS.unicamp },
+  { rotulo: p.zenodo, href: LINKS.zenodo },
+  { rotulo: p.github, href: LINKS.github },
 ];
 ---
 
 <header class="esq" data-esq>
   <div class="esq__topo">
-    <a class="marca" href={url()} aria-label={`${SITE.nome} — início`}>
+    <a class="marca" href={rota(lingua)} aria-label={`${SITE.nome} — ${tx.geral.inicio}`}>
       <Logo tamanho={38} />
       <span class="marca__nome">Essencial<br />Geo</span>
     </a>
-    <button type="button" class="esq__menu" data-menu aria-expanded="false" aria-controls="esq-corpo">
-      <Icone nome="menu" tamanho={16} />
-      <span class="rotulo">Índice</span>
-    </button>
+    <div class="esq__acoes">
+      <nav class="linguas" aria-label={tx.geral.lingua}>
+        {
+          LINGUAS.map((l) => (
+            <a
+              href={caminhoEquivalente(Astro.url.pathname, l)}
+              hreflang={IDIOMA[l].codigo}
+              lang={IDIOMA[l].codigo}
+              aria-current={l === lingua ? 'true' : undefined}
+              title={IDIOMA[l].nome}
+            >
+              {IDIOMA[l].sigla}
+            </a>
+          ))
+        }
+      </nav>
+      <button type="button" class="esq__menu" data-menu aria-expanded="false" aria-controls="esq-corpo">
+        <Icone nome="menu" tamanho={16} />
+        <span class="rotulo">{tx.geral.menu}</span>
+      </button>
+    </div>
   </div>
 
   <div class="esq__corpo" id="esq-corpo">
+    <span class="meandro" aria-hidden="true"></span>
     <p class="lema">
-      <span class="lema__a">{SITE.slogan}</span>
-      <span class="lema__b">{SITE.complemento}</span>
+      <span class="lema__a">{tx.site.slogan}</span>
+      <span class="lema__b">{tx.site.complemento}</span>
     </p>
 
     <section aria-labelledby="t-manifesto">
-      <h2 class="secao" id="t-manifesto">Manifesto</h2>
-      <p class="manifesto">
-        Saint-Exupéry escreveu que o essencial não se vê. Waldo Tobler mediu o invisível: tudo se relaciona com tudo,
-        mas o que está perto se relaciona mais. Cada prancha deste atlas tenta tornar visível uma dessas proximidades
-        do território brasileiro — com dados abertos, método declarado e arquivos prontos para reuso.
-      </p>
-      <a class="esq__link-sobre rotulo" href={url('sobre/')}>Ler o manifesto inteiro <Icone nome="seta" tamanho={11} /></a>
+      <h2 class="secao" id="t-manifesto">{tx.barra.manifesto}</h2>
+      <p class="manifesto">{tx.barra.manifestoTexto}</p>
+      <a class="esq__link-sobre rotulo" href={rota(lingua, 'sobre')}>{tx.barra.lerManifesto} <Icone nome="seta" tamanho={11} /></a>
     </section>
 
     <section aria-labelledby="t-estado">
-      <h2 class="secao" id="t-estado">Estado</h2>
+      <h2 class="secao" id="t-estado">{tx.barra.estado}</h2>
       <dl class="estado">
-        <div><dt>Mapas</dt><dd class="mono">{numeroFormatado(mapas.length)}</dd></div>
-        {ultima && <div><dt>Atualizado</dt><dd class="mono">{dataAbnt(ultima)}</dd></div>}
-        <div><dt>Cadência</dt><dd class="mono">{SITE.cadencia}</dd></div>
-        <div><dt>Licença</dt><dd><a href={SITE.licenca.url} rel="license noopener">{SITE.licenca.nome}</a></dd></div>
+        <div><dt>{tx.barra.mapas}</dt><dd class="mono">{numeroFormatado(mapas.length)}</dd></div>
+        {ultima && <div><dt>{tx.barra.atualizado}</dt><dd class="mono">{dataCurta(ultima, lingua)}</dd></div>}
+        {proxima && <div><dt>{tx.barra.proxima}</dt><dd class="mono estado__proxima">{dataCurta(proxima, lingua)}</dd></div>}
+        <div><dt>{tx.barra.cadencia}</dt><dd class="mono">{tx.site.cadencia}</dd></div>
+        <div><dt>{tx.barra.licenca}</dt><dd><a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a></dd></div>
       </dl>
     </section>
 
+    {
+      ultimaNota && (
+        <section aria-labelledby="t-nota" class="nota-recente">
+          <h2 class="secao" id="t-nota">{tx.barra.notas}</h2>
+          <a href={rota(lingua, 'notas', ultimaNota.pasta)}>
+            <time class="rotulo" datetime={dataIso(ultimaNota.data.data)}>{dataCurta(ultimaNota.data.data, lingua)}</time>
+            <span class="nota-recente__titulo">{ultimaNota.data.titulo}</span>
+          </a>
+        </section>
+      )
+    }
+
     <nav aria-labelledby="t-atlas">
-      <h2 class="secao" id="t-atlas">Atlas</h2>
+      <h2 class="secao" id="t-atlas">{tx.barra.atlas}</h2>
       <ul class="indice" role="list">
         <li>
-          <a href={url()} aria-current={categoriaAtiva === 'todas' ? 'page' : undefined}>
-            <span>Todos os mapas</span><span class="indice__guia" /><span class="mono">{numeroFormatado(mapas.length)}</span>
+          <a href={rota(lingua)} aria-current={categoriaAtiva === 'todas' ? 'page' : undefined}>
+            <span>{tx.barra.todos}</span><span class="indice__guia" /><span class="mono">{numeroFormatado(mapas.length)}</span>
           </a>
         </li>
         {
-          categorias.map(([id, c]) => (
+          CATEGORIA_IDS.map((id) => (
             <li class:list={{ vazio: contagem[id] === 0 }}>
-              <a href={url(`categoria/${id}/`)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
-                <span>{c.rotulo}</span>
+              <a href={rota(lingua, 'categoria', id)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
+                <span>{tx.categorias[id].rotulo}</span>
                 <span class="indice__guia" />
                 <span class="mono">{numeroFormatado(contagem[id])}</span>
               </a>
@@ -87,15 +123,20 @@ const ligacoes = [
           ))
         }
         <li>
-          <a href={url('indice/')}>
-            <span class="italico">Índice cronológico</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
+          <a href={rota(lingua, 'indice')}>
+            <span class="italico">{tx.barra.indice}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
+          </a>
+        </li>
+        <li>
+          <a href={rota(lingua, 'notas')}>
+            <span class="italico">{tx.barra.notas}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
           </a>
         </li>
       </ul>
     </nav>
 
     <section aria-labelledby="t-ligacoes">
-      <h2 class="secao" id="t-ligacoes">Ligações</h2>
+      <h2 class="secao" id="t-ligacoes">{tx.barra.ligacoes}</h2>
       <ul class="ligacoes" role="list">
         {
           ligacoes.map((l) => (
@@ -107,18 +148,25 @@ const ligacoes = [
           ))
         }
         <li>
-          <a href={url('rss.xml')}>Assinar (RSS) <Icone nome="rss" tamanho={11} /></a>
+          <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>{tx.barra.rss} <Icone nome="rss" tamanho={11} /></a>
         </li>
       </ul>
     </section>
 
     <footer class="esq__pe">
-      <button type="button" class="botao botao--fantasma tema" data-tema-botao>
+      <span class="meandro esq__meandro" aria-hidden="true"></span>
+      <button
+        type="button"
+        class="botao botao--fantasma tema"
+        data-tema-botao
+        data-nome-claro={tx.geral.temaNomes.claro}
+        data-nome-escuro={tx.geral.temaNomes.escuro}
+      >
         <Icone nome="tema" />
-        <span>Tema: <span data-tema-nome>papel</span></span>
+        <span>{tx.geral.tema}: <span data-tema-nome>{tx.geral.temaNomes.claro}</span></span>
       </button>
       <p class="colofao rotulo">
-        <Estrela tamanho={9} /> Composto em Campinas, SP<br />
+        <Estrela tamanho={9} /> {tx.site.colofao}<br />
         22°49′S · 47°04′W · SIRGAS 2000
       </p>
     </footer>
@@ -129,7 +177,7 @@ const ligacoes = [
   .esq {
     padding: var(--e-4);
     border-bottom: 1px solid var(--linha);
-    background: var(--papel);
+    background: var(--painel);
     position: sticky;
     top: 0;
     z-index: 20;
@@ -138,6 +186,7 @@ const ligacoes = [
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--e-3);
   }
   .marca {
     display: inline-flex;
@@ -153,6 +202,41 @@ const ligacoes = [
     letter-spacing: 0.16em;
     line-height: 1.05;
   }
+  .esq__acoes {
+    display: flex;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  /* Seletor de língua: duas casas, a ativa em Wheat Sheaf */
+  .linguas {
+    display: flex;
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.12em;
+  }
+  .linguas a {
+    display: grid;
+    place-items: center;
+    min-width: 36px;
+    min-height: 32px;
+    padding: 0 var(--e-2);
+    border: 1px solid var(--linha);
+    color: var(--tinta-3);
+    text-decoration: none;
+  }
+  .linguas a + a {
+    border-left: 0;
+  }
+  .linguas a:hover {
+    color: var(--acento);
+  }
+  .linguas a[aria-current] {
+    background: var(--trigo);
+    color: var(--tinta);
+    font-weight: 600;
+  }
+
   .esq__menu {
     display: inline-flex;
     align-items: center;
@@ -189,6 +273,9 @@ const ligacoes = [
       padding: var(--e-6) var(--e-5) var(--e-5);
       border-bottom: 0;
     }
+    .esq__topo {
+      align-items: flex-start;
+    }
     .esq__menu {
       display: none;
     }
@@ -206,7 +293,6 @@ const ligacoes = [
   .lema {
     margin: 0 0 var(--e-6);
     padding: var(--e-4) 0;
-    border-top: 1px solid var(--linha);
     border-bottom: 1px solid var(--linha);
     font-family: var(--f-titulo);
     font-style: italic;
@@ -261,6 +347,31 @@ const ligacoes = [
   .estado dd {
     margin: 0;
     text-align: right;
+  }
+  .estado__proxima {
+    color: var(--acento);
+  }
+
+  /* Última nota: uma manchete curta, como o "último minuto" de um jornal */
+  .nota-recente a {
+    display: grid;
+    gap: var(--e-1);
+    padding: var(--e-3);
+    border: 1px solid var(--linha-fina);
+    border-left: 3px solid var(--nilo);
+    text-decoration: none;
+  }
+  .nota-recente a:hover {
+    border-color: var(--linha);
+    border-left-color: var(--nilo);
+  }
+  .nota-recente time {
+    margin: 0;
+  }
+  .nota-recente__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    line-height: 1.25;
   }
 
   /* Índice de atlas: rótulo, guia pontilhada, número */
@@ -317,6 +428,9 @@ const ligacoes = [
   .esq__pe {
     margin-top: auto;
     padding-top: var(--e-5);
+  }
+  .esq__meandro {
+    margin-bottom: var(--e-4);
   }
   .tema {
     width: 100%;

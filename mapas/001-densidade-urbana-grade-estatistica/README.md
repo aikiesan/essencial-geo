@@ -23,14 +23,45 @@ imagem_alt: "Prancha com um recorte municipal irregular coberto por uma grade de
 recorte: "Município fictício (dados sintéticos)"
 fontes:
   - nome: "Dados sintéticos — Essencial Geo (scripts/gerar-exemplos.mjs)"
+    nome_en: "Synthetic data — Essencial Geo (scripts/gerar-exemplos.mjs)"
     url: https://github.com/aikiesan/essencial-geo/blob/main/scripts/gerar-exemplos.mjs
     ano: 2026
   - nome: "Modelo de referência: IBGE — Grade Estatística"
+    nome_en: "Reference model: IBGE — Statistical Grid"
 crs: "SIRGAS 2000 / UTM zona 23S"
 epsg: 31983
 escala: "1:50.000"
 software: ["Node.js", "d3-scale-chromatic"]
 metodo: "Soma de núcleos gaussianos + ruído fractal, agregada em células de 220 m."
+
+camadas:
+  - nome: GRADE_DENSIDADE
+    tipo: grade
+    cor: "#2e6e8e"
+    descricao: "Células de 220 m; a elevação de cada quadrado guarda o índice de densidade."
+    descricao_en: "220 m cells; each square's elevation stores the density index."
+  - nome: LIMITE
+    tipo: poligono
+    cor: "#1a1c1e"
+    descricao: "Limite do recorte municipal."
+    descricao_en: "Boundary of the municipal extent."
+
+indicadores:
+  - tipo: numero
+    rotulo: "Células povoadas"
+    rotulo_en: "Populated cells"
+    valor: 2433
+    nota: "de 2.961 células de 220 m"
+    nota_en: "out of 2,961 cells of 220 m"
+  - tipo: barras
+    rotulo: "Células por classe de densidade"
+    rotulo_en: "Cells by density class"
+    itens:
+      - { rotulo: "muito baixa", rotulo_en: "very low", valor: 1293, cor: "#c2df23" }
+      - { rotulo: "baixa", rotulo_en: "low", valor: 502, cor: "#50c46a" }
+      - { rotulo: "média", rotulo_en: "medium", valor: 285, cor: "#1f9a8a" }
+      - { rotulo: "alta", rotulo_en: "high", valor: 210, cor: "#2e6e8e" }
+      - { rotulo: "muito alta", rotulo_en: "very high", valor: 143, cor: "#453581" }
 
 downloads:
   - formato: gpkg
@@ -42,7 +73,9 @@ downloads:
     tamanho: "62 kB"
   - formato: png
     arquivo: mapa_preview.png
+    arquivo_en: mapa_preview.en.png
     rotulo: "Prancha (PNG 2400 px)"
+    rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,1 MB"
 
 versao: "0.1.0"
@@ -50,6 +83,8 @@ discussoes: []
 ---
 
 # Densidade urbana em grade regular
+
+<p class="so-github"><strong>Português</strong> · <a href="README.en.md">English</a></p>
 
 > **Prancha-modelo.** Os valores são sintéticos e não representam nenhum lugar real.
 > A prancha existe para fixar a linguagem visual da série de densidade.

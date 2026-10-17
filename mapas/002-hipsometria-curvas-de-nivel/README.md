@@ -22,23 +22,55 @@ imagem_alt: "Mapa hipsométrico de uma serra que atravessa a prancha na diagonal
 recorte: "Serra fictícia (dados sintéticos)"
 fontes:
   - nome: "Dados sintéticos — Essencial Geo (scripts/gerar-exemplos.mjs)"
+    nome_en: "Synthetic data — Essencial Geo (scripts/gerar-exemplos.mjs)"
     url: https://github.com/aikiesan/essencial-geo/blob/main/scripts/gerar-exemplos.mjs
     ano: 2026
   - nome: "Modelo de referência: MDE Copernicus GLO-30 / INPE Topodata"
+    nome_en: "Reference model: Copernicus GLO-30 DEM / INPE Topodata"
 crs: "SIRGAS 2000 / UTM zona 23S"
 epsg: 31983
 escala: "1:50.000"
 software: ["Node.js", "d3-contour"]
 metodo: "Ruído fractal + crista ao longo de um eixo sinuoso; isolinhas por marching squares a cada 50 m."
 
+camadas:
+  - nome: CURVAS_MESTRAS_250M
+    tipo: linha
+    cor: "#2b2420"
+    descricao: "Curvas mestras a cada 250 m, com a cota gravada como elevação (Z)."
+    descricao_en: "Index contours every 250 m, with the height stored as elevation (Z)."
+  - nome: CURVAS_INTERMEDIARIAS_50M
+    tipo: linha
+    cor: "#a9a866"
+    descricao: "Curvas intermediárias a cada 50 m, também com cota."
+    descricao_en: "Intermediate contours every 50 m, also with height."
+
+indicadores:
+  - tipo: numero
+    rotulo: "Amplitude altimétrica"
+    rotulo_en: "Elevation range"
+    valor: 1760
+    unidade: "m"
+    nota: "de 620 m nos vales a 2.380 m nos cumes"
+    nota_en: "from 620 m in the valleys to 2,380 m on the summits"
+  - tipo: barras
+    rotulo: "Polilinhas por camada"
+    rotulo_en: "Polylines per layer"
+    itens:
+      - { rotulo: "Mestras · 250 m", rotulo_en: "Index · 250 m", valor: 96, cor: "#444235" }
+      - { rotulo: "Intermediárias · 50 m", rotulo_en: "Intermediate · 50 m", valor: 366, cor: "#bfa88a" }
+
 downloads:
   - formato: dxf
     arquivo: dados/curvas_nivel_sinteticas.dxf
     rotulo: "Curvas com cota (Z)"
+    rotulo_en: "Contours with height (Z)"
     tamanho: "1,8 MB"
   - formato: png
     arquivo: mapa_preview.png
+    arquivo_en: mapa_preview.en.png
     rotulo: "Prancha (PNG 2400 px)"
+    rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "1,6 MB"
 
 versao: "0.1.0"
@@ -46,6 +78,8 @@ discussoes: []
 ---
 
 # Hipsometria e curvas de nível
+
+<p class="so-github"><strong>Português</strong> · <a href="README.en.md">English</a></p>
 
 > **Prancha-modelo.** O relevo é sintético e não representa nenhum lugar real.
 

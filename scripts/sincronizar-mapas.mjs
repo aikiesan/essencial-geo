@@ -14,7 +14,7 @@ import { join, relative } from 'node:path';
 const RAIZ = fileURLToPath(new URL('..', import.meta.url));
 const ORIGEM = join(RAIZ, 'mapas');
 const DESTINO = join(RAIZ, 'public', 'mapas');
-const IGNORAR = new Set(['README.md', '.DS_Store', 'Thumbs.db']);
+const IGNORAR = new Set(['README.md', 'README.en.md', '.DS_Store', 'Thumbs.db']);
 const LIMITE_AVISO = 50 * 1024 * 1024; // GitHub recusa > 100 MB e avisa > 50 MB
 
 await rm(DESTINO, { recursive: true, force: true });

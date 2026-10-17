@@ -6,8 +6,8 @@
 import { Image, getImage } from 'astro:assets';
 import Ficha from './Ficha.astro';
 import Icone from './Icone.astro';
-import { CATEGORIAS } from '../site.config';
-import { dataAbnt, dataIso, linkMapa, numeroFormatado, url, type Mapa } from '../lib/mapas';
+import { linkMapa, nomeFonte, numeroFormatado, type Mapa } from '../lib/mapas';
+import { dataExtensa, dataIso, rota, t } from '../i18n';
 
 interface Props {
   mapa: Mapa;
@@ -21,8 +21,10 @@ interface Props {
 
 const { mapa, prioridade = false, destaque = false, fichaEmbutida = true } = Astro.props;
 const d = mapa.data;
+const lingua = mapa.lingua;
+const tx = t(lingua);
 const num = numeroFormatado(d.numero);
-const cat = CATEGORIAS[d.categoria];
+const cat = tx.categorias[d.categoria];
 const Titulo = destaque ? 'h1' : 'h2';
 
 // Versão de alta resolução para o visualizador (até 3200 px, sem ampliar o original).
@@ -32,23 +34,38 @@ const alta = await getImage({
   format: 'webp',
   quality: 86,
 });
-const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
+const fontes = d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]).join(', ');
 ---
 
 <article class:list={['cartao', { 'cartao--destaque': destaque }]} id={mapa.id} data-mapa={mapa.id}>
   <header class="cartao__cab">
     <p class="cartao__meta rotulo">
-      <span>Nº {num}</span>
+      <span>{tx.geral.no} {num}</span>
       <span aria-hidden="true">/</span>
-      <time datetime={dataIso(d.data)}>{dataAbnt(d.data)}</time>
-      <span aria-hidden="true">/</span>
-      <a href={url(`categoria/${d.categoria}/`)}>{cat.curto}</a>
-      {d.exemplo && <span class="selo">Prancha-modelo · dados sintéticos</span>}
+      <a href={rota(lingua, 'categoria', d.categoria)}>{cat.curto}</a>
+      <span class="cartao__selos">
+        {mapa.agendado && <span class="selo selo--agenda">{tx.cartao.agendado}</span>}
+        {mapa.traducaoPendente && <span class="selo selo--alerta">{tx.cartao.traducaoPendente}</span>}
+        {d.exemplo && <span class="selo">{tx.cartao.selo}</span>}
+      </span>
     </p>
     <Titulo class="cartao__titulo">
       {destaque ? d.titulo : <a href={linkMapa(mapa)}>{d.titulo}</a>}
     </Titulo>
     {d.subtitulo && <p class="cartao__sub">{d.subtitulo}</p>}
+    <p class="linha-data">
+      <span class="linha-data__rotulo">{tx.cartao.publicado}</span>
+      <time datetime={dataIso(d.data)}>{dataExtensa(d.data, lingua)}</time>
+      {
+        d.atualizado && (
+          <>
+            <span aria-hidden="true">·</span>
+            <span class="linha-data__rotulo">{tx.cartao.atualizadoEm}</span>
+            <time datetime={dataIso(d.atualizado)}>{dataExtensa(d.atualizado, lingua)}</time>
+          </>
+        )
+      }
+    </p>
   </header>
 
   <figure class="prancha">
@@ -59,8 +76,8 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
       data-src={alta.src}
       data-largura={alta.attributes.width ?? d.imagem.width}
       data-altura={alta.attributes.height ?? d.imagem.height}
-      data-legenda={`Nº ${num} — ${d.titulo}`}
-      aria-label={`Ampliar o mapa: ${d.titulo}`}
+      data-legenda={`${tx.geral.no} ${num} — ${d.titulo}`}
+      aria-label={`${tx.cartao.ampliarMapa}: ${d.titulo}`}
     >
       <span class="prancha__folha">
         <Image
@@ -75,14 +92,14 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
           quality={82}
         />
       </span>
-      <span class="prancha__lupa rotulo" aria-hidden="true"><Icone nome="ampliar" tamanho={12} /> Ampliar</span>
+      <span class="prancha__lupa rotulo" aria-hidden="true"><Icone nome="ampliar" tamanho={12} /> {tx.cartao.ampliar}</span>
     </button>
     <figcaption class="prancha__legenda">
       <span>Fig. {num}</span>
       <span>{d.recorte}</span>
       <span>{d.epsg ? `EPSG:${d.epsg}` : d.crs}</span>
       {d.escala && <span>{d.escala}</span>}
-      <span>Fonte: {fontes}</span>
+      <span>{tx.cartao.fonte}: {fontes}</span>
     </figcaption>
   </figure>
 
@@ -91,7 +108,7 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
   <footer class="cartao__rodape">
     {
       d.discussoes.length > 0 && (
-        <ul class="cartao__discussoes" role="list" aria-label="Discussões">
+        <ul class="cartao__discussoes" role="list" aria-label={tx.cartao.discussoes}>
           {d.discussoes.map((x) => (
             <li>
               <a class="botao botao--fantasma" href={x.url} rel="noopener" target="_blank">
@@ -106,7 +123,7 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
     {
       !destaque && (
         <a class="cartao__mais rotulo" href={linkMapa(mapa)}>
-          Ficha completa <Icone nome="seta" tamanho={12} />
+          {tx.cartao.fichaCompleta} <Icone nome="seta" tamanho={12} />
         </a>
       )
     }
@@ -116,7 +133,7 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
     fichaEmbutida && (
       <details class="ficha-embutida so-estreito">
         <summary class="rotulo">
-          <span>Ficha técnica · downloads · citação</span>
+          <span>{tx.cartao.fichaEmbutida}</span>
           <span class="ficha-embutida__sinal" aria-hidden="true" />
         </summary>
         <Ficha mapa={mapa} />
@@ -139,12 +156,58 @@ const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
   .cartao__meta a {
     color: var(--tinta-2);
   }
-  .selo {
+  .cartao__selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1);
     margin-left: auto;
+  }
+  .selo {
     padding: 1px var(--e-2);
     border: 1px dashed var(--tinta-3);
+    background: var(--trigo);
     color: var(--tinta-2);
     letter-spacing: 0.08em;
+  }
+  .selo--agenda {
+    border-style: solid;
+    border-color: var(--nilo-tinta);
+    background: transparent;
+    color: var(--nilo-tinta);
+  }
+  .selo--alerta {
+    border-style: solid;
+    border-color: var(--argila);
+    background: transparent;
+    color: var(--argila);
+  }
+
+  /* Linha de data, como num jornal: dia da semana e data por extenso */
+  .linha-data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--e-2);
+    margin: var(--e-3) 0 0;
+    padding-top: var(--e-2);
+    border-top: 1px solid var(--linha-fina);
+    font-size: var(--t-sm);
+    font-style: italic;
+    color: var(--tinta-2);
+  }
+  .linha-data__rotulo {
+    font-family: var(--f-mono);
+    font-style: normal;
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tinta-3);
+  }
+  .linha-data time {
+    display: inline-block;
+  }
+  .linha-data time::first-letter {
+    text-transform: uppercase;
   }
   .cartao__titulo {
     font-size: var(--t-xl);

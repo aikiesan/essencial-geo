@@ -3,6 +3,7 @@ import CartaoMapa from './CartaoMapa.astro';
 import Estrela from './Estrela.astro';
 import Icone from './Icone.astro';
 import type { Mapa } from '../lib/mapas';
+import { linguaDe, t } from '../i18n';
 
 interface Props {
   mapas: Mapa[];
@@ -12,13 +13,14 @@ interface Props {
   totalPaginas?: number;
 }
 const { mapas, anterior, proxima, pagina, totalPaginas } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
 ---
 
 <div class="feed">
   {
     mapas.length === 0 && (
       <p class="feed__vazio">
-        <Estrela tamanho={14} /> Nenhum mapa nesta categoria ainda — o território segue em levantamento.
+        <Estrela tamanho={14} /> {tx.feed.vazio}
       </p>
     )
   }
@@ -37,22 +39,22 @@ const { mapas, anterior, proxima, pagina, totalPaginas } = Astro.props;
 
   {
     (anterior || proxima) && (
-      <nav class="paginacao" aria-label="Paginação">
+      <nav class="paginacao" aria-label={tx.feed.paginacao}>
         {anterior ? (
           <a class="botao" href={anterior} rel="prev">
-            <Icone nome="voltar" /> Mais recentes
+            <Icone nome="voltar" /> {tx.feed.recentes}
           </a>
         ) : (
           <span />
         )}
         {pagina && totalPaginas && (
           <span class="rotulo mono">
-            Folha {pagina} de {totalPaginas}
+            {tx.feed.folha} {pagina} {tx.feed.de} {totalPaginas}
           </span>
         )}
         {proxima ? (
           <a class="botao" href={proxima} rel="next">
-            Anteriores <Icone nome="seta" />
+            {tx.feed.anteriores} <Icone nome="seta" />
           </a>
         ) : (
           <span />

@@ -22,7 +22,15 @@ import { url } from '../lib/mapas';
     <p class="rotulo">Erro 404 · coordenada sem dado</p>
     <h1>Este planeta ainda não foi mapeado.</h1>
     <p class="italico">A página que você procurava não está neste atlas — talvez nunca tenha estado.</p>
-    <a class="botao" href={url()}>Voltar ao feed</a>
+    <div lang="en-GB" class="ingles">
+      <p class="rotulo">Error 404 · coordinate without data</p>
+      <p class="ingles__titulo">This planet has not been mapped yet.</p>
+      <p class="italico">The page you were looking for is not in this atlas — perhaps it never was.</p>
+    </div>
+    <p class="acoes">
+      <a class="botao" href={url()}>Voltar ao feed</a>
+      <a class="botao" href={url('en/')} lang="en-GB">Back to the feed</a>
+    </p>
   </div>
 </Base>
 
@@ -42,6 +50,23 @@ import { url } from '../lib/mapas';
   }
   .italico {
     color: var(--tinta-2);
-    margin-bottom: var(--e-6);
+    margin-bottom: var(--e-5);
+  }
+  .ingles {
+    max-width: 44ch;
+    margin: 0 auto var(--e-6);
+    padding-top: var(--e-4);
+    border-top: 1px solid var(--linha-fina);
+  }
+  .ingles__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-xl);
+    margin: var(--e-2) 0;
+  }
+  .acoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--e-3);
   }
 </style>
