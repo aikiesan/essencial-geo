@@ -1,0 +1,6 @@
+[
+ { "tema": "uso", "numero": 32, "pasta": "032-uso-da-terra-rmc", "base": "rmc_uso_cobertura_2024", "data": "2026-11-10", "categoria": "uso-do-solo" },
+ { "tema": "domicilios", "numero": 33, "pasta": "033-domicilios-rmc", "base": "rmc_domicilios_2022", "data": "2026-11-12", "categoria": "censo-renda" },
+ { "tema": "renda", "numero": 34, "pasta": "034-renda-rmc", "base": "rmc_renda_2022", "data": "2026-11-17", "categoria": "censo-renda" },
+ { "tema": "app", "numero": 35, "pasta": "035-apps-campinas", "base": "campinas_apps_fbds", "data": "2026-11-19", "categoria": "hidrografia" }
+]

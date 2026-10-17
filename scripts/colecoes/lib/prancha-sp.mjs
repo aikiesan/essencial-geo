@@ -17,6 +17,7 @@ import { geoTransverseMercator, geoConicEqualArea, geoPath, geoGraticule, geoDis
 import { feature } from 'topojson-client';
 import { norteFolha, molecula, microtexto, ASSINATURA, ESTRELAS } from '../../lib/identidade.mjs';
 import { motivo, chamada } from './arte.mjs';
+import { imagemRaster } from './raster.mjs';
 
 export const RAIZ = fileURLToPath(new URL('../../..', import.meta.url));
 
@@ -214,9 +215,46 @@ export async function usarBrasil() {
   };
 }
 
+/**
+ * Passa a prancha para um recorte regional dentro de SP (RMC, serras…), de scripts/colecoes/cache/<nome>-base.json:
+ * { sigla, unidades, limite, internas?, vizinhos, rotulos, oceano?, capital, centro, grat, bordas }.
+ * As geometrias vêm da malha em resolução cheia, levemente simplificada, para aguentar a escala regional.
+ */
+export async function usarRegiao(nome) {
+  const r = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'cache', `${nome}-base.json`), 'utf8'));
+  const [lon0, lat0] = r.centro;
+  const lim = r.limite.features[0];
+  B = {
+    sigla: r.sigla,
+    estrela: ESTRELAS.SP,
+    unidades: r.unidades.features,
+    codigo: (f) => f.properties.CD_MUN,
+    limite: lim,
+    internas: r.internas?.features ?? [],
+    vizinhos: r.vizinhos.features,
+    paises: [],
+    terra: [...r.vizinhos.features, lim],
+    rotulos: r.rotulos,
+    oceano: r.oceano ?? [-45.6, -25.25],
+    rotulosUnidades: r.rotulosUnidades?.length ? r.rotulosUnidades : null,
+    capital: r.capital,
+    grat: r.grat,
+    bordas: r.bordas,
+    enquadrar: r.enquadrar ? r.enquadrar.features[0] : lim,
+    projecao: () => geoTransverseMercator().rotate([-lon0, -lat0]),
+    medir: (proj) => {
+      const [cx, cy] = proj([lon0, lat0]);
+      return 400 / (geoDistance(proj.invert([cx, cy - 200]), proj.invert([cx, cy + 200])) * 6371.0088);
+    },
+    notaEscala: 'verdadeira no meridiano central',
+    carimbo: () => [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(lon0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(lat0, 'S')}`],
+    loc: { fundo: cache.ufs.features, ajuste: cache.ufs.features.find((f) => f.properties.SIGLA_UF === 'SP'), alvo: lim },
+  };
+}
+
 /** Projeção do estado ajustada a um quadro (w × h) com folga. */
 function projetar(w, h, pad) {
-  const proj = B.projecao().fitExtent([[pad, pad], [w - pad, h - pad]], B.limite);
+  const proj = B.projecao().fitExtent([[pad, pad], [w - pad, h - pad]], B.enquadrar ?? B.limite);
   const recorte = B.projecao().scale(proj.scale()).translate(proj.translate())
     .clipExtent([[-20, -20], [w + 20, h + 20]]);
   const pxKm = B.medir(proj);
@@ -278,6 +316,13 @@ function quadroMapa(w, h, mapa) {
     const { cds, cor = '#1a211a', passo = 5, largura: lh = 0.8, angulo = -55 } = mapa.hachura;
     s.push(`<defs><pattern id="${id}x" width="${passo}" height="${passo}" patternUnits="userSpaceOnUse" patternTransform="rotate(${angulo})"><path d="M0 0V${passo}" stroke="${cor}" stroke-width="${lh}" stroke-opacity=".75"/></pattern></defs>`);
     s.push(`<g fill="url(#${id}x)">${B.unidades.filter((m) => cds.has(B.codigo(m))).map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
+  }
+  // Grade raster (uso da terra, relevo…), já amostrada na projeção do quadro (gerarPrancha).
+  if (mapa.rasterSvg) {
+    if (mapa.rasterRecorte === 'limite') {
+      s.push(`<defs><clipPath id="${id}r"><path d="${path(B.limite)}"/></clipPath></defs><g clip-path="url(#${id}r)">${mapa.rasterSvg}</g>`);
+    } else s.push(mapa.rasterSvg);
+    if (mapa.bordaSobreRaster) s.push(`<g fill="none" stroke="${mapa.bordaSobreRaster}" stroke-width="${mapa.larguraSobreRaster ?? 0.8}" stroke-linejoin="round" stroke-opacity="${mapa.opacidadeSobreRaster ?? 0.9}">${B.unidades.map((m) => `<path d="${path(m)}"/>`).join('')}</g>`);
   }
   // Camadas extras (bacias, áreas protegidas…): [{ feats, cor(f) | cor, borda, largura, opacidade, hachura }].
   for (const [k, c] of (mapa.camadas ?? []).entries()) {
@@ -388,10 +433,10 @@ function quadroMapa(w, h, mapa) {
 function localizador(x, y, lado) {
   const pl = geoConicEqualArea().parallels([-2, -22]).rotate([54, 0]);
   // No recorte nacional, o localizador é a América do Sul com o Brasil em destaque.
-  const ufs = B.sigla === 'BR' ? [...B.paises.filter((f) => f.properties.name !== 'France'), B.limite] : cache.ufs.features;
-  pl.fitExtent([[20, 34], [lado - 20, lado - 20]], { type: 'FeatureCollection', features: B.sigla === 'BR' ? [B.limite, ...B.paises.filter((f) => !['France', 'Falkland Is.', 'Panama', 'Costa Rica', 'Nicaragua', 'Trinidad and Tobago'].includes(f.properties.name))] : ufs });
+  const ufs = B.loc ? B.loc.fundo : B.sigla === 'BR' ? [...B.paises.filter((f) => f.properties.name !== 'France'), B.limite] : cache.ufs.features;
+  pl.fitExtent([[20, 34], [lado - 20, lado - 20]], B.loc ? B.loc.ajuste : { type: 'FeatureCollection', features: B.sigla === 'BR' ? [B.limite, ...B.paises.filter((f) => !['France', 'Falkland Is.', 'Panama', 'Costa Rica', 'Nicaragua', 'Trinidad and Tobago'].includes(f.properties.name))] : ufs });
   const p = geoPath(pl).digits(1);
-  const alvo = B.sigla === 'BR' ? B.limite : ufs.find((f) => f.properties.SIGLA_UF === 'SP');
+  const alvo = B.loc ? B.loc.alvo : B.sigla === 'BR' ? B.limite : ufs.find((f) => f.properties.SIGLA_UF === 'SP');
   return `<g transform="translate(${x} ${y})">
   <rect width="${lado}" height="${lado}" fill="${PAPEL}" stroke="${TINTA}" stroke-width="1.2"/>
   <text x="14" y="26" font-family="${MONO}" font-size="13" letter-spacing="2.4" fill="${CINZA}">${tr('LOCALIZAÇÃO')}</text>
@@ -403,7 +448,8 @@ function localizador(x, y, lado) {
 /** Coordenadas na borda de um quadro (só no layout de um mapa). */
 function bordas(proj, w, h, evitar) {
   const s = [];
-  const grau = (v, eixo) => (v === 0 ? '0°' : `${Math.abs(v)}° ${eixo === 'lon' ? (LINGUA === 'en' ? 'W' : 'O') : v > 0 ? 'N' : 'S'}`);
+  const gm = (v) => { const a = Math.abs(v); const g = Math.floor(a + 1e-9); const m = Math.round((a - g) * 60); return m ? `${g}°${String(m).padStart(2, '0')}′` : `${g}°`; };
+  const grau = (v, eixo) => (v === 0 ? '0°' : `${gm(v)} ${eixo === 'lon' ? (LINGUA === 'en' ? 'W' : 'O') : v > 0 ? 'N' : 'S'}`);
   const raiz = (fn, a, b) => {
     let fa = fn(a);
     for (let i = 0; i < 60; i++) {
@@ -415,7 +461,7 @@ function bordas(proj, w, h, evitar) {
   };
   const sobre = (a0, b0, a1, b1) => evitar.some(([x0, y0, x1, y1]) => a1 > x0 - 8 && a0 < x1 + 8 && b1 > y0 - 8 && b0 < y1 + 8);
   const estilo = `font-family="${MONO}" font-size="13" fill="${TINTA}" ${halo(4)}`;
-  for (let lon = B.bordas.lon[0]; lon <= B.bordas.lon[1]; lon += B.bordas.lon[2])
+  for (let k = 0, lon = B.bordas.lon[0]; lon <= B.bordas.lon[1] + 1e-9; k++, lon = B.bordas.lon[0] + k * B.bordas.lon[2])
     for (const [yy, dy] of [[0, 20], [h, -8]]) {
       const lat = raiz((la) => proj([lon, la])[1] - yy, -40, 10);
       const [x] = proj([lon, lat]);
@@ -423,7 +469,7 @@ function bordas(proj, w, h, evitar) {
       s.push(`<path d="M${f1(x)} ${yy}v${yy ? -12 : 12}" stroke="${TINTA}" stroke-width="1.2"/>`);
       s.push(`<text x="${f1(x + 5)}" y="${yy + dy}" ${estilo}>${grau(lon, 'lon')}</text>`);
     }
-  for (let lat = B.bordas.lat[0]; lat <= B.bordas.lat[1]; lat += B.bordas.lat[2])
+  for (let k = 0, lat = B.bordas.lat[0]; lat <= B.bordas.lat[1] + 1e-9; k++, lat = B.bordas.lat[0] + k * B.bordas.lat[2])
     for (const [xx, dx, anc] of [[0, 8, 'start'], [w, -8, 'end']]) {
       const lon = raiz((lo) => proj([lo, lat])[0] - xx, -90, -20);
       const [, y] = proj([lon, lat]);
@@ -565,7 +611,7 @@ function montar(tema, numero, data) {
     const NB = { w: 90, h: 150 };
     const nor = [MW - 64 - NB.w, 64];
     const reservas = [[loc[0] - 12, loc[1] - 12, MW, MH], [nor[0] - 10, nor[1] - 10, nor[0] + NB.w + 10, nor[1] + NB.h + 10], ...(tema.reservas?.() ?? [])];
-    const q = quadroMapa(MW, MH, { ...tema.mapa(), pad: 96, reservas });
+    const q = quadroMapa(MW, MH, { ...tema.mapa(), pad: tema.pad ?? 96, reservas, rasterSvg: tema._rasterSvg, rasterRecorte: tema.raster?.recorte });
     pxKm = q.pxKm;
     s.push(`<g transform="translate(${X0} ${Y0})">${q.svg}
 ${tema.sobreMapa?.(q.proj) ?? ''}
@@ -645,10 +691,19 @@ export async function gerarPrancha({ pasta, base, numero, data, fazerTema }) {
   await mkdir(join(destino, 'dados'), { recursive: true });
   const dia = new Date(`${data}T12:00:00Z`);
   const tamanhos = {};
+  let imagem = null;
   for (const l of ['pt', 'en']) {
     LINGUA = l;
     uid = 0;
-    const svg = montar(fazerTema(l), numero, dia);
+    const tema = fazerTema(l);
+    // A grade raster não muda com a língua: amostrada uma vez, na projeção do quadro grande.
+    if (tema.raster && !imagem) {
+      const { proj, pxKm } = projetar(MW, MH, tema.pad ?? 96);
+      const fator = tema.raster.fator ?? 2;
+      imagem = await imagemRaster(tema.raster.r, proj, MW, MH, { ...tema.raster, fator, metros: 1000 / (pxKm * fator) });
+    }
+    if (imagem) tema._rasterSvg = imagem;
+    const svg = montar(tema, numero, dia);
     const suf = l === 'en' ? '.en' : '';
     const arqSvg = join(destino, 'dados', `${base}_prancha${suf}.svg`);
     await writeFile(arqSvg, svg);

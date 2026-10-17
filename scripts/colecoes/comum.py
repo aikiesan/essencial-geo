@@ -402,9 +402,109 @@ def gravar_cache(nome: str, obj: dict) -> None:
     (CACHE / f"{nome}.json").write_text(texto, encoding="utf-8")
 
 
+# ------------------------------------------------------------------ recortes regionais e grades raster
+ASPECTO_QUADRO = 1640 / 1664  # largura / altura do quadro do mapa na prancha
+
+
+def tmerc(lon0: float, lat0: float) -> str:
+    return f"+proj=tmerc +lat_0={lat0} +lon_0={lon0} +k=1 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs"
+
+
+def caixa_quadro(lon0: float, lat0: float, altura_km: float, folga: float = 0.0) -> gpd.GeoSeries:
+    """Retângulo com a proporção do quadro, centrado em (lon0, lat0), na transversa de Mercator da prancha."""
+    from shapely.geometry import box
+    h = altura_km * 1000 * (1 + folga) / 2
+    w = h * ASPECTO_QUADRO
+    g = gpd.GeoSeries([box(-w, -h, w, h).segmentize(2000)], crs=tmerc(lon0, lat0))
+    return g.to_crs(GEO)
+
+
+def _passos(a: float, b: float, passo: float) -> list[float]:
+    return [round(math.floor(a / passo) * passo, 4), round(math.ceil(b / passo) * passo, 4), passo]
+
+
+def base_regional(nome: str, sigla: str, *, cds: list[str] | None = None, centro: tuple[float, float] | None = None,
+                  altura_km: float | None = None, rotulos: list | None = None, capital: dict | None = None,
+                  oceano: list | None = None, passo: float = 0.25, rotular_unidades: bool = False,
+                  tol: float = 0.0004) -> dict:
+    """Base de um recorte regional para a prancha (usarRegiao no JS), da malha municipal em resolução cheia.
+
+    cds: municípios do recorte (o limite é a união deles, a prancha enquadra o limite com folga);
+    ou centro + altura_km: uma janela com a proporção do quadro (a prancha preenche o quadro com ela),
+    com os municípios paulistas recortados nela e o limite estadual como linha forte.
+    """
+    m = gpd.read_file(MALHA, engine="pyogrio").set_crs(GEO, allow_override=True)
+    m = m[m["CD_MUN"].str.match(r"^\d{7}$")]
+    if cds:
+        uni = m[m["CD_MUN"].isin(cds)].copy()
+        assert len(uni) == len(cds), "municípios do recorte"
+        lim = uni.dissolve()[["geometry"]]
+        c = lim.to_crs("EPSG:5880").centroid.to_crs(GEO).iloc[0]
+        lon0, lat0 = round(c.x, 2), round(c.y, 2)
+        x0, y0, x1, y1 = lim.to_crs(tmerc(lon0, lat0)).total_bounds
+        alt = max((y1 - y0), (x1 - x0) / ASPECTO_QUADRO) / 1000 * 1.25
+        janela = caixa_quadro(lon0, lat0, alt, folga=0.15)
+        enquadrar = None
+    else:
+        lon0, lat0 = centro
+        janela = caixa_quadro(lon0, lat0, altura_km, folga=0.06)
+        enquadrar = caixa_quadro(lon0, lat0, altura_km)
+        sp = m[m["SIGLA_UF"] == "SP"]
+        uni = sp[sp.intersects(janela.iloc[0])].copy()
+        uni["geometry"] = uni.intersection(janela.iloc[0])
+        lim = gpd.GeoDataFrame(geometry=[sp.union_all().intersection(janela.iloc[0])], crs=GEO)
+    jan = janela.iloc[0]
+    fora = m[~m["CD_MUN"].isin(uni["CD_MUN"]) & m.intersects(jan)].copy()
+    fora["geometry"] = fora.intersection(jan)
+    # Vizinhos: municípios paulistas em volta (recorte por municípios) e as outras UFs dissolvidas.
+    viz_sp = fora[fora["SIGLA_UF"] == "SP"][["CD_MUN", "NM_MUN", "SIGLA_UF", "geometry"]] if cds else fora.iloc[0:0]
+    viz_uf = fora[fora["SIGLA_UF"] != "SP"].dissolve(by="SIGLA_UF", as_index=False)[["SIGLA_UF", "geometry"]]
+    viz = pd.concat([viz_sp, viz_uf], ignore_index=True)
+    viz = gpd.GeoDataFrame(viz, geometry="geometry", crs=GEO)
+    for col in ["CD_MUN", "NM_MUN"]:
+        viz[col] = viz[col].fillna("") if col in viz else ""
+    rot_un = []
+    if rotular_unidades:
+        rp = uni.to_crs("EPSG:5880").representative_point().to_crs(GEO)
+        rot_un = [[n, [round(p.x, 4), round(p.y, 4)]] for n, p in zip(uni["NM_MUN"], rp)]
+    bx0, by0, bx1, by1 = (enquadrar.iloc[0] if enquadrar is not None else lim.union_all()).bounds
+    obj = {
+        "sigla": sigla,
+        "centro": [lon0, lat0],
+        "unidades": para_d3(uni, ["CD_MUN", "NM_MUN"], tol=tol, cobertura=False),
+        "limite": para_d3(lim.assign(sigla=sigla), ["sigla"], tol=tol, cobertura=False),
+        "vizinhos": para_d3(viz, ["CD_MUN", "NM_MUN", "SIGLA_UF"], tol=tol, cobertura=False),
+        "rotulos": rotulos or [],
+        "rotulosUnidades": rot_un,
+        "oceano": oceano,
+        "capital": capital,
+        "grat": {"passo": passo, "extensao": [[bx0 - 2, by0 - 2], [bx1 + 2, by1 + 2]]},
+        "bordas": {"lon": _passos(bx0 - 1, bx1 + 1, passo), "lat": _passos(by0 - 1, by1 + 1, passo)},
+    }
+    if enquadrar is not None:
+        obj["enquadrar"] = {"type": "FeatureCollection", "features": [
+            {"type": "Feature", "properties": {}, "geometry": json.loads(enquadrar.to_json())["features"][0]["geometry"]}]}
+    gravar_cache(f"{nome}-base", obj)
+    return {"unidades": uni, "limite": lim, "janela": janela, "centro": (lon0, lat0)}
+
+
+def gravar_grade(nome: str, arr, transform, nodata=None) -> None:
+    """Grade em graus (SIRGAS 2000) para a prancha: cache/<nome>.bin + <nome>.json (veja lib/raster.mjs)."""
+    import numpy as np
+    arr = np.ascontiguousarray(arr)
+    tipo = {np.dtype("uint8"): "uint8", np.dtype("int16"): "int16", np.dtype("uint16"): "uint16",
+            np.dtype("float32"): "float32"}[arr.dtype]
+    CACHE.mkdir(parents=True, exist_ok=True)
+    (CACHE / f"{nome}.bin").write_bytes(arr.astype(arr.dtype.newbyteorder("<")).tobytes())
+    meta = {"largura": int(arr.shape[1]), "altura": int(arr.shape[0]), "x0": transform.c, "y0": transform.f,
+            "dx": transform.a, "dy": -transform.e, "tipo": tipo, "nodata": None if nodata is None else float(nodata)}
+    (CACHE / f"{nome}.json").write_text(json.dumps(meta), encoding="utf-8")
+
+
 __all__ = [
     "RAIZ", "DADOS", "GEO", "PLASMA", "VIRIDIS", "ZERO", "SEM_INFO", "TINTA", "PAPEL", "MINERAIS", "infra", "siga",
     "malha_uf", "sidra", "valor_sidra", "quebras", "classe", "nf", "rotulos_classes",
     "estilo_graduado", "estilo_contorno", "estilo_regras", "marcador", "linha", "igual", "preenchimento",
     "gravar_estilos", "zipar", "gravar_cache", "AREA_BR", "km2", "km_geodesico", "para_d3",
+    "MALHA", "CACHE", "tmerc", "caixa_quadro", "base_regional", "gravar_grade",
 ]

@@ -20,3 +20,6 @@ mapas/*/dados/*.gpkg.zip
 __pycache__/
 # CSV grande vai para a release energia-eletrica-2026
 mapas/043-usinas-por-fonte-brasil/dados/br_usinas_por_fonte.csv
+
+# rasters das coleções vão para a release (rmc-2026, …)
+mapas/*/dados/*.tif.zip
