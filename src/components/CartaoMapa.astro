@@ -371,4 +371,9 @@ const fontes = d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]).join(
   .ficha-embutida[open] {
     padding-bottom: var(--e-5);
   }
+  /* alvo de toque de pelo menos 24 px (WCAG 2.5.8) */
+  .cartao__meta a {
+    display: inline-block;
+    padding-block: 4px;
+  }
 </style>

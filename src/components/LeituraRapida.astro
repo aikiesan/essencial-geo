@@ -173,9 +173,7 @@ const corDe = (cor: string | undefined, i: number) => cor ?? PALETA[i % PALETA.l
   }
   .barra__rotulo {
     color: var(--tinta-2);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
   }
   .barra__valor {
     color: var(--tinta);
@@ -214,7 +212,7 @@ const corDe = (cor: string | undefined, i: number) => cor ?? PALETA[i % PALETA.l
   .rosca__legenda li {
     display: grid;
     grid-template-columns: 10px minmax(0, 1fr) auto;
-    align-items: center;
+    align-items: baseline;
     gap: var(--e-2);
   }
   .rosca__cor {
@@ -225,8 +223,6 @@ const corDe = (cor: string | undefined, i: number) => cor ?? PALETA[i % PALETA.l
   }
   .rosca__rotulo {
     color: var(--tinta-2);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
   }
 </style>

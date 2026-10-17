@@ -13,6 +13,11 @@ export const SITE = {
   repositorio: 'https://github.com/aikiesan/essencial-geo',
   /** Hora (UTC) em que um mapa agendado entra no ar no dia da sua data: 12h UTC = 9h em Brasília. */
   horaPublicacaoUtc: 12,
+  /** Códigos de verificação de propriedade (só o valor de content="…"). Vazio = sem etiqueta. */
+  verificacao: {
+    google: '', // Google Search Console → etiqueta HTML
+    bing: '', // Bing Webmaster Tools → etiqueta HTML
+  },
 };
 // Slogan, descrição e demais textos da interface: src/i18n/ui.ts (PT-BR e EN-UK).
 

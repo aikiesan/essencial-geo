@@ -6,6 +6,8 @@ import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
 import type { Nota } from '../lib/notas';
 import { dataExtensa, dataIso, rota, t } from '../i18n';
+import { artigoDaNota, jsonLd } from '../lib/metadados';
+import { momentoPublicacao } from '../lib/mapas';
 
 interface Props { nota: Nota; maisNova?: Nota; maisAntiga?: Nota }
 const { nota, maisNova, maisAntiga } = Astro.props;
@@ -14,7 +16,8 @@ const tx = t(lingua);
 const { Content } = await render(nota);
 ---
 
-<Base titulo={nota.data.titulo} descricao={nota.data.resumo} tipo="article">
+<Base titulo={nota.data.titulo} descricao={nota.data.resumo} tipo="article" publicado={momentoPublicacao(nota.data.data)} atualizado={nota.data.atualizado}>
+  <script slot="head" type="application/ld+json" set:html={jsonLd(artigoDaNota(nota, Astro.site))} />
   <article class="feed">
     <header class="cab">
       <p class="rotulo cab__sobre">
