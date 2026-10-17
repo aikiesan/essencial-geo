@@ -1,0 +1,296 @@
+---
+/**
+ * Ficha técnica: metadados, downloads diretos e citação acadêmica.
+ * Pode aparecer mais de uma vez na mesma página (coluna direita e dentro do
+ * cartão em telas estreitas), por isso não usa ids — só atributos data-*.
+ */
+import Icone from './Icone.astro';
+import { SITE } from '../site.config';
+import { citar } from '../lib/citacao';
+import { linkMapa, numeroFormatado, resolverDownloads, urlAbsoluta, dataAbnt, type Mapa } from '../lib/mapas';
+
+interface Props {
+  mapa: Mapa;
+  /** Mostra o cabeçalho com número e título (útil na coluna direita do feed). */
+  cabecalho?: boolean;
+}
+
+const { mapa, cabecalho = false } = Astro.props;
+const d = mapa.data;
+const downloads = resolverDownloads(mapa);
+const permalink = urlAbsoluta(linkMapa(mapa), Astro.site);
+const citacao = citar(mapa, permalink);
+---
+
+<section class="ficha" aria-label={`Ficha técnica — ${d.titulo}`}>
+  {
+    cabecalho && (
+      <header class="ficha__cab">
+        <p class="rotulo">Ficha técnica · Nº {numeroFormatado(d.numero)}</p>
+        <p class="ficha__titulo">
+          <a href={linkMapa(mapa)}>{d.titulo}</a>
+        </p>
+      </header>
+    )
+  }
+
+  <h3 class="secao">Metadados</h3>
+  <dl class="ficha__dados">
+    <div>
+      <dt>Fonte{d.fontes.length > 1 ? 's' : ''}</dt>
+      <dd>
+        {
+          d.fontes.map((f, i) => (
+            <>
+              {f.url ? <a href={f.url} rel="noopener">{f.nome}</a> : f.nome}
+              {f.ano && <span class="mono"> ({f.ano})</span>}
+              {i < d.fontes.length - 1 && <br />}
+            </>
+          ))
+        }
+      </dd>
+    </div>
+    <div><dt>Recorte</dt><dd>{d.recorte}</dd></div>
+    <div>
+      <dt>CRS / Projeção</dt>
+      <dd class="mono">
+        {d.crs}
+        {d.epsg && (
+          <>
+            <br />
+            <a href={`https://epsg.io/${d.epsg}`} rel="noopener">EPSG:{d.epsg}</a>
+          </>
+        )}
+      </dd>
+    </div>
+    {d.escala && <div><dt>Escala</dt><dd class="mono">{d.escala}</dd></div>}
+    {d.software.length > 0 && <div><dt>Software</dt><dd class="mono">{d.software.join(' · ')}</dd></div>}
+    {d.metodo && <div><dt>Método</dt><dd>{d.metodo}</dd></div>}
+    <div>
+      <dt>Versão</dt>
+      <dd class="mono">
+        v{d.versao} · {dataAbnt(d.atualizado ?? d.data)}
+      </dd>
+    </div>
+    <div>
+      <dt>Licença</dt>
+      <dd><a href={SITE.licenca.url} rel="license noopener">{SITE.licenca.nome}</a></dd>
+    </div>
+    <div>
+      <dt>DOI</dt>
+      <dd class="mono">
+        {d.doi ? <a href={`https://doi.org/${d.doi}`} rel="noopener">{d.doi}</a> : <span class="ficha__pendente">em registro no Zenodo</span>}
+      </dd>
+    </div>
+  </dl>
+
+  <h3 class="secao">Downloads</h3>
+  {
+    downloads.length === 0 ? (
+      <p class="ficha__vazio rotulo">Arquivos em preparação.</p>
+    ) : (
+      <ul class="ficha__downloads" role="list">
+        {downloads.map((a) => (
+          <li>
+            {a.href ? (
+              <a
+                class="arquivo"
+                href={a.href}
+                download={a.externo ? undefined : ''}
+                rel={a.externo ? 'noopener' : undefined}
+              >
+                <span class="arquivo__sigla">{a.sigla}</span>
+                <span class="arquivo__rotulo">
+                  {a.rotulo} <span class="arquivo__ext">({a.ext})</span>
+                </span>
+                {a.tamanho && <span class="arquivo__tam">{a.tamanho}</span>}
+                <Icone nome={a.externo ? 'externo' : 'baixar'} class="arquivo__icone" />
+              </a>
+            ) : (
+              <span class="arquivo" aria-disabled="true" title="Arquivo ainda não publicado">
+                <span class="arquivo__sigla">{a.sigla}</span>
+                <span class="arquivo__rotulo">
+                  {a.rotulo} <span class="arquivo__ext">({a.ext})</span>
+                </span>
+                <span class="arquivo__tam">em breve</span>
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  <h3 class="secao">Como citar</h3>
+  <div class="citacao" data-citacao>
+    <div class="citacao__abas" role="group" aria-label="Formato da citação">
+      <button type="button" class="citacao__aba" data-formato="abnt" aria-pressed="true">ABNT</button>
+      <button type="button" class="citacao__aba" data-formato="bibtex" aria-pressed="false">BibTeX</button>
+    </div>
+    <p class="citacao__texto" data-bloco="abnt" set:html={citacao.html} />
+    <pre class="citacao__texto citacao__bib" data-bloco="bibtex" hidden>{citacao.bibtex}</pre>
+    <button type="button" class="botao citacao__copiar" data-copiar>
+      <Icone nome="copiar" />
+      <span data-copiar-rotulo>Copiar citação</span>
+    </button>
+  </div>
+</section>
+
+<style>
+  .ficha {
+    font-size: var(--t-sm);
+    line-height: 1.5;
+  }
+  .ficha .secao {
+    margin-top: var(--e-6);
+  }
+  .ficha .secao:first-of-type {
+    margin-top: var(--e-4);
+  }
+  .ficha__cab {
+    padding-bottom: var(--e-3);
+    border-bottom: 1px solid var(--linha);
+  }
+  .ficha__titulo {
+    margin: var(--e-1) 0 0;
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+    line-height: 1.2;
+  }
+  .ficha__titulo a {
+    text-decoration: none;
+  }
+  .ficha__dados {
+    margin: 0;
+    border-top: 1px solid var(--linha);
+  }
+  .ficha__dados > div {
+    display: grid;
+    grid-template-columns: 7.5em minmax(0, 1fr);
+    gap: var(--e-3);
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .ficha__dados dt {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tinta-3);
+    padding-top: 0.15em;
+  }
+  .ficha__dados dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .ficha__dados dd.mono {
+    font-size: 0.75rem;
+  }
+  .ficha__pendente {
+    color: var(--tinta-3);
+    font-style: italic;
+  }
+
+  .ficha__downloads {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--e-2);
+  }
+  .arquivo {
+    display: grid;
+    grid-template-columns: 3.4em minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--e-3);
+    min-height: 44px;
+    padding: var(--e-2) var(--e-3) var(--e-2) 0;
+    border: 1px solid var(--linha);
+    text-decoration: none;
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    transition: background-color 120ms linear, color 120ms linear;
+  }
+  .arquivo__sigla {
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid var(--linha);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .arquivo__ext,
+  .arquivo__tam {
+    color: var(--tinta-3);
+  }
+  .arquivo__tam {
+    font-size: var(--t-xs);
+  }
+  a.arquivo:hover {
+    background: var(--tinta);
+    color: var(--papel);
+  }
+  a.arquivo:hover .arquivo__ext,
+  a.arquivo:hover .arquivo__tam {
+    color: inherit;
+  }
+  .arquivo[aria-disabled='true'] {
+    border-style: dashed;
+    border-color: var(--tinta-3);
+    color: var(--tinta-3);
+  }
+  .arquivo[aria-disabled='true'] .arquivo__sigla {
+    border-right-style: dashed;
+    border-color: var(--tinta-3);
+  }
+  .ficha__vazio {
+    margin: 0;
+  }
+
+  .citacao__abas {
+    display: flex;
+    margin-bottom: -1px;
+  }
+  .citacao__aba {
+    padding: var(--e-1) var(--e-3);
+    border: 1px solid var(--linha-fina);
+    border-bottom-color: var(--linha);
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.1em;
+    color: var(--tinta-3);
+  }
+  .citacao__aba + .citacao__aba {
+    border-left: 0;
+  }
+  .citacao__aba[aria-pressed='true'] {
+    border-color: var(--linha);
+    border-bottom-color: var(--papel-2);
+    background: var(--papel-2);
+    color: var(--tinta);
+  }
+  .citacao__texto {
+    margin: 0;
+    padding: var(--e-3);
+    border: 1px solid var(--linha);
+    background: var(--papel-2);
+    font-family: var(--f-mono);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .citacao__bib {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .citacao__copiar {
+    margin-top: var(--e-2);
+    width: 100%;
+    justify-content: center;
+  }
+  .citacao__copiar[data-copiado] {
+    background: var(--verde-mata);
+    border-color: var(--verde-mata);
+    color: var(--folha);
+  }
+</style>

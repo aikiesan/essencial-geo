@@ -1,0 +1,471 @@
+/* ==========================================================================
+   ESSENCIAL GEO — sistema visual
+   Ateliê cartográfico: papel técnico, nanquim, linhas de 1px, cantos vivos.
+   Regra de ouro: nenhum border-radius, nenhum gradiente decorativo, nenhum brilho.
+   ========================================================================== */
+
+@import '@fontsource-variable/playfair-display/wght.css';
+@import '@fontsource-variable/playfair-display/wght-italic.css';
+@import '@fontsource-variable/lora/wght.css';
+@import '@fontsource-variable/lora/wght-italic.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+
+/* ---------- Tokens ------------------------------------------------------ */
+:root {
+  /* Papel & tinta */
+  --papel: #f3eee3;          /* pergaminho técnico */
+  --papel-2: #ebe4d4;        /* papel manteiga, áreas recuadas */
+  --folha: #faf7f0;          /* a folha da prancha */
+  --tinta: #1d1b18;          /* nanquim */
+  --tinta-2: #4f4a41;        /* grafite */
+  --tinta-3: #857d70;        /* cinza-fóssil, metadados */
+  --linha: #1d1b18;          /* traço de 1px */
+  --linha-fina: #c9c0ad;     /* guias e separadores secundários */
+
+  /* Minerais do território */
+  --ocre: #b07d26;
+  --argila: #9c4a32;
+  --azul-profundo: #1f3a5f;
+  --verde-mata: #2e5a3c;
+  --estrela: #c99a2e;        /* o único acento "poético": pequenas estrelas */
+
+  --acento: var(--argila);
+  --foco: var(--azul-profundo);
+
+  /* Tipografia */
+  --f-titulo: 'Playfair Display Variable', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --f-texto: 'Lora Variable', Lora, Georgia, serif;
+  --f-mono: 'JetBrains Mono Variable', 'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace;
+
+  --t-xs: 0.6875rem;   /* 11px — rótulos técnicos */
+  --t-sm: 0.8125rem;   /* 13px */
+  --t-md: 1rem;
+  --t-lg: 1.1875rem;
+  --t-xl: clamp(1.5rem, 1.1rem + 1.4vw, 2.125rem);
+  --t-xxl: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+
+  --entrelinha: 1.62;
+  --rastreio: 0.14em;  /* espaçamento de versaletes */
+
+  /* Espaço (módulo de 4px) */
+  --e-1: 4px;
+  --e-2: 8px;
+  --e-3: 12px;
+  --e-4: 16px;
+  --e-5: 24px;
+  --e-6: 32px;
+  --e-7: 48px;
+  --e-8: 64px;
+
+  --col-esq: 272px;
+  --col-dir: 344px;
+  --feed-max: 760px;
+
+  /* Grão de papel: ruído sutil, sem textura figurativa */
+  --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  color-scheme: light;
+}
+
+/* Modo nanquim/ardósia — grafite profundo, papel vira tinta */
+:root[data-tema='escuro'] {
+  --papel: #16181a;
+  --papel-2: #1c1f22;
+  --folha: #1f2326;
+  --tinta: #e7e1d3;
+  --tinta-2: #bdb5a5;
+  --tinta-3: #8a8377;
+  --linha: #cfc7b6;
+  --linha-fina: #3a3e42;
+  --ocre: #d3a24a;
+  --argila: #d47a5c;
+  --azul-profundo: #8fb0d9;
+  --verde-mata: #86b892;
+  --estrela: #e2bb5a;
+  --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.025 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+/* ---------- Base -------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0 !important; /* cantos vivos, sem exceção */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: var(--e-6);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--papel);
+  background-image: var(--grao);
+  color: var(--tinta);
+  font-family: var(--f-texto);
+  font-size: var(--t-md);
+  line-height: var(--entrelinha);
+  font-feature-settings: 'kern', 'liga', 'onum';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: var(--linha-fina);
+  transition: text-decoration-color 120ms linear;
+}
+a:hover {
+  text-decoration-color: var(--acento);
+}
+
+:focus-visible {
+  outline: 1px solid var(--foco);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--ocre);
+  color: var(--folha);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--f-titulo);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0 0 var(--e-4);
+  text-wrap: pretty;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--f-mono);
+  font-size: 0.875em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--linha-fina);
+  margin: var(--e-5) 0;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.pular {
+  position: absolute;
+  left: var(--e-4);
+  top: -100px;
+  z-index: 100;
+  background: var(--tinta);
+  color: var(--papel);
+  padding: var(--e-2) var(--e-3);
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--rastreio);
+}
+.pular:focus {
+  top: var(--e-4);
+}
+
+/* ---------- Primitivos tipográficos ------------------------------------- */
+/* Rótulo técnico: versaletes monoespaçados, como legenda de prancha */
+.rotulo {
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--rastreio);
+  color: var(--tinta-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.mono {
+  font-family: var(--f-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+}
+
+.italico {
+  font-style: italic;
+}
+
+/* Título de seção: versal espaçada com filete à direita */
+.secao {
+  display: flex;
+  align-items: center;
+  gap: var(--e-3);
+  margin: 0 0 var(--e-3);
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--rastreio);
+  color: var(--tinta);
+}
+.secao::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--linha-fina);
+}
+
+/* Estrela-acento: o pequeno eco de Saint-Exupéry */
+.estrela {
+  color: var(--estrela);
+  display: inline-block;
+}
+
+/* ---------- Botões técnicos --------------------------------------------- */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  min-height: 36px;
+  padding: var(--e-2) var(--e-3);
+  border: 1px solid var(--linha);
+  background: transparent;
+  color: var(--tinta);
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: background-color 120ms linear, color 120ms linear;
+}
+.botao:hover {
+  background: var(--tinta);
+  color: var(--papel);
+}
+.botao[aria-disabled='true'],
+.botao:disabled {
+  border-style: dashed;
+  color: var(--tinta-3);
+  border-color: var(--tinta-3);
+  cursor: not-allowed;
+  background: transparent;
+}
+.botao--fantasma {
+  border-color: var(--linha-fina);
+}
+.botao svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+/* ---------- Esqueleto em três colunas ----------------------------------- */
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.col-esq,
+.col-dir {
+  min-width: 0;
+}
+
+.col-centro {
+  min-width: 0;
+  padding: var(--e-5) var(--e-4) var(--e-8);
+}
+
+.col-dir {
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .estrutura {
+    grid-template-columns: var(--col-esq) minmax(0, 1fr);
+  }
+  .col-esq {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--linha);
+    scrollbar-width: thin;
+  }
+  .col-centro {
+    padding: var(--e-7) var(--e-6) var(--e-8);
+  }
+}
+
+@media (min-width: 1240px) {
+  .estrutura {
+    grid-template-columns: var(--col-esq) minmax(0, 1fr) var(--col-dir);
+  }
+  .col-dir {
+    display: block;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-left: 1px solid var(--linha);
+    scrollbar-width: thin;
+  }
+  /* Em telas largas, a ficha vive na coluna direita, não dentro do cartão */
+  .so-estreito {
+    display: none !important;
+  }
+}
+
+.feed {
+  max-width: var(--feed-max);
+  margin: 0 auto;
+}
+
+/* ---------- Divisor de cartões: filete com estrela ---------------------- */
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: var(--e-3);
+  margin: var(--e-7) 0;
+  color: var(--estrela);
+}
+.divisor::before,
+.divisor::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--linha-fina);
+}
+.divisor svg {
+  width: 11px;
+  height: 11px;
+}
+
+/* ---------- Conteúdo de texto longo (páginas de mapa, sobre) ------------ */
+.prosa {
+  font-size: var(--t-md);
+  max-width: 68ch;
+}
+.prosa h2 {
+  font-size: var(--t-xl);
+  margin: var(--e-7) 0 var(--e-4);
+}
+.prosa h3 {
+  font-size: var(--t-lg);
+  margin: var(--e-6) 0 var(--e-3);
+}
+.prosa ul,
+.prosa ol {
+  padding-left: 1.25em;
+  margin: 0 0 var(--e-4);
+}
+.prosa li {
+  margin-bottom: var(--e-1);
+}
+.prosa li::marker {
+  color: var(--tinta-3);
+  font-family: var(--f-mono);
+}
+.prosa blockquote {
+  margin: var(--e-5) 0;
+  padding: 0 0 0 var(--e-4);
+  border-left: 1px solid var(--linha);
+  font-style: italic;
+  color: var(--tinta-2);
+}
+.prosa pre {
+  overflow-x: auto;
+  padding: var(--e-4);
+  border: 1px solid var(--linha-fina);
+  background: var(--papel-2);
+  font-size: var(--t-sm);
+  line-height: 1.55;
+}
+.prosa :not(pre) > code {
+  padding: 0.05em 0.3em;
+  background: var(--papel-2);
+  border: 1px solid var(--linha-fina);
+}
+.prosa table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--e-5) 0;
+  font-size: var(--t-sm);
+}
+.prosa th,
+.prosa td {
+  text-align: left;
+  padding: var(--e-2) var(--e-3) var(--e-2) 0;
+  border-bottom: 1px solid var(--linha-fina);
+  vertical-align: top;
+}
+.prosa th {
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom-color: var(--linha);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .col-esq,
+  .col-dir,
+  .so-estreito,
+  .divisor {
+    display: none !important;
+  }
+  .estrutura {
+    display: block;
+  }
+}

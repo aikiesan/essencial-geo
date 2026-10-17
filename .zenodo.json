@@ -1,0 +1,15 @@
+{
+  "title": "Essencial Geo: atlas aberto de mapas temáticos do Brasil",
+  "description": "Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil. Cada prancha acompanha bases vetoriais (GeoPackage, DXF), sistema de referência declarado (SIRGAS 2000) e método reproduzível.",
+  "upload_type": "dataset",
+  "license": "cc-by-4.0",
+  "language": "por",
+  "keywords": ["Brasil", "cartografia", "mapas temáticos", "dados abertos", "SIRGAS 2000", "GeoPackage", "DXF"],
+  "creators": [
+    {
+      "name": "Sobrenome, Nome",
+      "affiliation": "Universidade Estadual de Campinas (UNICAMP)"
+    }
+  ],
+  "communities": [{ "identifier": "essencial-geo" }]
+}

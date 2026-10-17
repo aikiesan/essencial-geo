@@ -1,0 +1,90 @@
+---
+/** Índice cronológico do atlas — uma tabela, como o sumário de um atlas impresso. */
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import { CATEGORIAS } from '../site.config';
+import { dataAbnt, dataIso, linkMapa, mapasPublicados, numeroFormatado } from '../lib/mapas';
+
+const mapas = await mapasPublicados();
+---
+
+<Base titulo="Índice" descricao="Índice cronológico de todas as pranchas do Essencial Geo.">
+  <div class="feed">
+    <CabecalhoPagina sobre="Atlas · índice cronológico" titulo="Índice das pranchas" linhaFina="Todos os mapas publicados, do mais recente ao mais antigo." />
+
+    <div class="tabela-rolagem">
+      <table class="indice-tab">
+        <thead>
+          <tr>
+            <th scope="col">Nº</th>
+            <th scope="col">Título</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Data</th>
+            <th scope="col">DOI</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            mapas.map((m) => (
+              <tr>
+                <td class="mono">{numeroFormatado(m.data.numero)}</td>
+                <td>
+                  <a href={linkMapa(m)}>{m.data.titulo}</a>
+                  <span class="indice-tab__recorte">{m.data.recorte}</span>
+                </td>
+                <td class="rotulo">{CATEGORIAS[m.data.categoria].curto}</td>
+                <td class="mono"><time datetime={dataIso(m.data.data)}>{dataAbnt(m.data.data)}</time></td>
+                <td class="mono">{m.data.doi ? <a href={`https://doi.org/${m.data.doi}`}>{m.data.doi}</a> : '—'}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .tabela-rolagem {
+    overflow-x: auto;
+  }
+  .indice-tab {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: var(--t-sm);
+  }
+  .indice-tab th {
+    text-align: left;
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: var(--e-2) var(--e-3) var(--e-2) 0;
+    border-bottom: 1px solid var(--linha);
+  }
+  .indice-tab td {
+    padding: var(--e-3) var(--e-3) var(--e-3) 0;
+    border-bottom: 1px solid var(--linha-fina);
+    vertical-align: top;
+  }
+  .indice-tab td.mono {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .indice-tab a {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    text-decoration: none;
+  }
+  .indice-tab td.mono a {
+    font-family: var(--f-mono);
+    font-size: inherit;
+  }
+  .indice-tab__recorte {
+    display: block;
+    font-style: italic;
+    color: var(--tinta-3);
+  }
+</style>

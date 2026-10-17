@@ -1,0 +1,84 @@
+---
+import CartaoMapa from './CartaoMapa.astro';
+import Estrela from './Estrela.astro';
+import Icone from './Icone.astro';
+import type { Mapa } from '../lib/mapas';
+
+interface Props {
+  mapas: Mapa[];
+  anterior?: string;
+  proxima?: string;
+  pagina?: number;
+  totalPaginas?: number;
+}
+const { mapas, anterior, proxima, pagina, totalPaginas } = Astro.props;
+---
+
+<div class="feed">
+  {
+    mapas.length === 0 && (
+      <p class="feed__vazio">
+        <Estrela tamanho={14} /> Nenhum mapa nesta categoria ainda — o território segue em levantamento.
+      </p>
+    )
+  }
+  {
+    mapas.map((m, i) => (
+      <>
+        {i > 0 && (
+          <div class="divisor" aria-hidden="true">
+            <Estrela />
+          </div>
+        )}
+        <CartaoMapa mapa={m} prioridade={i === 0} />
+      </>
+    ))
+  }
+
+  {
+    (anterior || proxima) && (
+      <nav class="paginacao" aria-label="Paginação">
+        {anterior ? (
+          <a class="botao" href={anterior} rel="prev">
+            <Icone nome="voltar" /> Mais recentes
+          </a>
+        ) : (
+          <span />
+        )}
+        {pagina && totalPaginas && (
+          <span class="rotulo mono">
+            Folha {pagina} de {totalPaginas}
+          </span>
+        )}
+        {proxima ? (
+          <a class="botao" href={proxima} rel="next">
+            Anteriores <Icone nome="seta" />
+          </a>
+        ) : (
+          <span />
+        )}
+      </nav>
+    )
+  }
+</div>
+
+<style>
+  .feed__vazio {
+    padding: var(--e-6);
+    border: 1px dashed var(--linha-fina);
+    font-style: italic;
+    color: var(--tinta-2);
+    display: flex;
+    gap: var(--e-2);
+    align-items: center;
+  }
+  .paginacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--e-3);
+    margin-top: var(--e-7);
+    padding-top: var(--e-5);
+    border-top: 1px solid var(--linha);
+  }
+</style>

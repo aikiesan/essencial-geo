@@ -1,0 +1,32 @@
+---
+/** Cabeçalho editorial das páginas internas: sobretítulo técnico, título, linha fina. */
+interface Props { sobre?: string; titulo: string; linhaFina?: string }
+const { sobre, titulo, linhaFina } = Astro.props;
+---
+<header class="cab-pagina">
+  {sobre && <p class="rotulo">{sobre}</p>}
+  <h1>{titulo}</h1>
+  {linhaFina && <p class="cab-pagina__fina">{linhaFina}</p>}
+  <slot />
+</header>
+
+<style>
+  .cab-pagina {
+    padding-bottom: var(--e-5);
+    margin-bottom: var(--e-7);
+    border-bottom: 1px solid var(--linha);
+  }
+  .cab-pagina .rotulo {
+    margin: 0 0 var(--e-3);
+  }
+  h1 {
+    font-size: var(--t-xxl);
+  }
+  .cab-pagina__fina {
+    margin: var(--e-3) 0 0;
+    font-style: italic;
+    font-size: var(--t-lg);
+    color: var(--tinta-2);
+    max-width: 60ch;
+  }
+</style>

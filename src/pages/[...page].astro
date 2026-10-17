@@ -1,0 +1,62 @@
+---
+/** Feed principal, paginado em folhas de 8 pranchas. */
+import type { GetStaticPaths, Page } from 'astro';
+import Base from '../layouts/Base.astro';
+import ListaFeed from '../components/ListaFeed.astro';
+import PainelFichas from '../components/PainelFichas.astro';
+import { SITE } from '../site.config';
+import { mapasPublicados, type Mapa } from '../lib/mapas';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const mapas = await mapasPublicados();
+  return paginate(mapas, { pageSize: 8 });
+}) satisfies GetStaticPaths;
+
+interface Props { page: Page<Mapa> }
+const { page } = Astro.props;
+const primeira = page.currentPage === 1;
+---
+
+<Base
+  titulo={primeira ? undefined : `Folha ${page.currentPage}`}
+  categoriaAtiva="todas"
+  imagem={page.data[0]?.data.imagem.src}
+>
+  <header class="mancha feed">
+    <p class="rotulo">Feed cartográfico · Folha {page.currentPage} de {page.lastPage}</p>
+    <p class="mancha__frase">
+      Mapas temáticos do Brasil, um a cada dois dias. Cada prancha acompanha seus dados vetoriais, sua projeção declarada e
+      uma citação com DOI.
+    </p>
+  </header>
+
+  <ListaFeed
+    mapas={page.data}
+    anterior={page.url.prev}
+    proxima={page.url.next}
+    pagina={page.currentPage}
+    totalPaginas={page.lastPage}
+  />
+
+  <PainelFichas slot="direita" mapas={page.data} />
+</Base>
+
+<style>
+  .mancha {
+    margin-bottom: var(--e-7);
+    padding-bottom: var(--e-4);
+    border-bottom: 1px solid var(--linha);
+  }
+  .mancha .rotulo {
+    margin: 0 0 var(--e-2);
+  }
+  .mancha__frase {
+    margin: 0;
+    font-family: var(--f-titulo);
+    font-style: italic;
+    font-size: var(--t-lg);
+    line-height: 1.45;
+    color: var(--tinta-2);
+    max-width: 52ch;
+  }
+</style>

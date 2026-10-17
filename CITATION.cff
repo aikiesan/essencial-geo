@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Se usar estes mapas ou dados, cite-os como abaixo (e o DOI do mapa específico, presente em cada ficha)."
+title: "Essencial Geo: atlas aberto de mapas temáticos do Brasil"
+type: dataset
+authors:
+  - family-names: "Sobrenome"
+    given-names: "Nome"
+    affiliation: "Universidade Estadual de Campinas (UNICAMP)"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+license: CC-BY-4.0
+repository-code: "https://github.com/aikiesan/essencial-geo"
+url: "https://aikiesan.github.io/essencial-geo/"
+keywords:
+  - cartografia
+  - Brasil
+  - dados abertos
+  - SIRGAS 2000

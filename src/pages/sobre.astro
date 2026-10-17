@@ -1,0 +1,131 @@
+---
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import Estrela from '../components/Estrela.astro';
+import { LINKS, SITE } from '../site.config';
+
+const etapas = [
+  { n: '01', t: 'GitHub', d: 'A pasta do mapa entra em /mapas, com prancha, dados e ficha técnica.' },
+  { n: '02', t: 'Pages', d: 'O site é recompilado; a prancha entra no topo do feed.' },
+  { n: '03', t: 'Zenodo', d: 'Os arquivos são preservados e recebem um DOI permanente, gravado de volta na ficha.' },
+  { n: '04', t: 'ORCID · Lattes', d: 'O DOI chega ao ORCID e é registrado como produção técnica.' },
+];
+---
+
+<Base titulo="Manifesto" descricao="Por que o Essencial Geo existe, como funciona e como reutilizar seus dados.">
+  <div class="feed">
+    <CabecalhoPagina
+      sobre="Sobre · manifesto"
+      titulo="O essencial é invisível aos olhos"
+      linhaFina="— até ser traduzido em um mapa."
+    />
+
+    <div class="prosa">
+      <p class="abertura">
+        No livro de Saint-Exupéry, a raposa ensina que só se vê bem com o coração. Na geografia, Waldo Tobler formulou em
+        1970 a sua primeira lei: todas as coisas estão relacionadas, mas as coisas próximas estão mais relacionadas do que as
+        distantes. Entre as duas frases cabe o trabalho deste atlas — encontrar, nos dados abertos do Brasil, as proximidades
+        e as ausências que uma planilha não mostra, e desenhá-las com rigor suficiente para que outros possam reutilizar.
+      </p>
+
+      <h2>Três leitores, um mesmo arquivo</h2>
+      <p>
+        <strong>Arquitetos e urbanistas</strong> encontram bases vetoriais limpas, em GeoPackage e DXF, prontas para entrar
+        numa prancha. <strong>Pesquisadores</strong> encontram conjuntos de dados com método declarado, projeção explícita e
+        DOI permanente, citáveis no Lattes e no ORCID. <strong>Quem só quer olhar</strong> encontra um feed de mapas — um a
+        cada dois dias — com um parágrafo de contexto e nada de jargão desnecessário.
+      </p>
+
+      <h2>Princípios de prancha</h2>
+      <ul>
+        <li>Todo mapa declara fonte, recorte, sistema de referência (SIRGAS 2000 sempre que possível) e software.</li>
+        <li>Paletas perceptualmente uniformes e seguras para daltônicos (Viridis, Cividis) para dados contínuos.</li>
+        <li>Projeções adequadas ao recorte: cônicas equivalentes para o país, UTM para municípios.</li>
+        <li>O processo é reproduzível: quando há script em R ou projeto QGIS, ele está na pasta do mapa.</li>
+      </ul>
+    </div>
+
+    <h2 class="secao fluxo-titulo">Fluxo de publicação</h2>
+    <ol class="fluxo" role="list">
+      {
+        etapas.map((e) => (
+          <li>
+            <span class="rotulo mono">{e.n}</span>
+            <strong>{e.t}</strong>
+            <span>{e.d}</span>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="prosa">
+      <h2>Licença e reuso</h2>
+      <p>
+        Pranchas e dados derivados são publicados sob a licença
+        <a href={SITE.licenca.url} rel="license noopener">Creative Commons Atribuição 4.0 Internacional</a>. Você pode copiar,
+        adaptar e usar comercialmente — numa prancha de projeto, num relatório, num artigo — desde que cite a fonte. Cada
+        mapa traz uma citação ABNT e BibTeX pronta, com o DOI do Zenodo. Os dados de origem (IBGE, INPE, MapBiomas e outros)
+        seguem as licenças dos seus produtores, indicadas em cada ficha.
+      </p>
+
+      <h2>Contato e acervo</h2>
+      <p>
+        Código, dados e histórico de versões estão no <a href={LINKS.github}>repositório do GitHub</a>. O acervo permanente
+        fica na <a href={LINKS.zenodo}>comunidade Zenodo</a>. Correções, sugestões de recorte e pedidos de base são bem-vindos
+        como <em>issues</em> no repositório.
+      </p>
+    </div>
+
+    <p class="fecho rotulo"><Estrela /> Composto em Campinas, SP · 22°49′S 47°04′W</p>
+  </div>
+</Base>
+
+<style>
+  .abertura {
+    font-size: var(--t-lg);
+    line-height: 1.65;
+  }
+  .abertura::first-letter {
+    float: left;
+    font-family: var(--f-titulo);
+    font-size: 3.6em;
+    line-height: 0.85;
+    padding: 0.06em 0.08em 0 0;
+  }
+  .fluxo-titulo {
+    margin-top: var(--e-7);
+  }
+  .fluxo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 0 0 var(--e-7);
+    padding: 0;
+    list-style: none;
+    border: 1px solid var(--linha);
+  }
+  .fluxo li {
+    display: grid;
+    align-content: start;
+    gap: var(--e-1);
+    padding: var(--e-4);
+    font-size: var(--t-sm);
+    line-height: 1.5;
+    border-right: 1px solid var(--linha-fina);
+    border-bottom: 1px solid var(--linha-fina);
+    margin: 0 -1px -1px 0;
+  }
+  .fluxo strong {
+    font-family: var(--f-titulo);
+    font-weight: 500;
+    font-size: var(--t-lg);
+  }
+  .fluxo li span:last-child {
+    color: var(--tinta-2);
+  }
+  .fecho {
+    margin-top: var(--e-7);
+    display: flex;
+    gap: var(--e-2);
+    align-items: center;
+  }
+</style>

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/mapas';
+---
+
+<Base titulo="Planeta não mapeado">
+  <div class="feed vazio">
+    <svg class="asteroide" viewBox="0 0 160 120" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M30 96a50 50 0 0 1 100 0" />
+        <path d="M22 96h116" />
+        <path d="M58 60c4 3 8 4 12 3M96 56c3 2 6 2 9 0M80 50v-2" stroke-width=".75" />
+        <!-- uma única flor sob a redoma -->
+        <path d="M80 46V30" />
+        <path d="M80 38c-4-1-6-3-6-6M80 36c3-1 5-3 5-5" stroke-width=".75" />
+        <path d="M66 46V22a14 14 0 0 1 28 0v24z" stroke-width=".75" />
+      </g>
+      <circle cx="80" cy="27" r="3.2" fill="var(--argila)" />
+      <path fill="var(--estrela)" d="M128 14l1.8 4.2 4.5.4-3.4 3 1 4.4-3.9-2.4-3.9 2.4 1-4.4-3.4-3 4.5-.4z" />
+      <path fill="var(--estrela)" d="M26 30l1.2 2.8 3 .3-2.3 2 .7 2.9-2.6-1.6-2.6 1.6.7-2.9-2.3-2 3-.3z" />
+    </svg>
+    <p class="rotulo">Erro 404 · coordenada sem dado</p>
+    <h1>Este planeta ainda não foi mapeado.</h1>
+    <p class="italico">A página que você procurava não está neste atlas — talvez nunca tenha estado.</p>
+    <a class="botao" href={url()}>Voltar ao feed</a>
+  </div>
+</Base>
+
+<style>
+  .vazio {
+    text-align: center;
+    padding-top: var(--e-8);
+  }
+  .asteroide {
+    width: 220px;
+    margin: 0 auto var(--e-5);
+    color: var(--tinta);
+  }
+  h1 {
+    font-size: var(--t-xxl);
+    margin: var(--e-2) 0 var(--e-3);
+  }
+  .italico {
+    color: var(--tinta-2);
+    margin-bottom: var(--e-6);
+  }
+</style>

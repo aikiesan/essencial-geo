@@ -1,0 +1,213 @@
+---
+/**
+ * Esqueleto de todas as páginas: <head>, tema, três colunas e o visualizador.
+ * Slots: padrão (coluna central) e "direita" (ficha técnica / painel).
+ */
+import '../styles/global.css';
+import BarraEsquerda from '../components/BarraEsquerda.astro';
+import Icone from '../components/Icone.astro';
+import { SITE } from '../site.config';
+import { url } from '../lib/mapas';
+import type { CategoriaId } from '../site.config';
+
+interface Props {
+  titulo?: string;
+  descricao?: string;
+  imagem?: string;
+  categoriaAtiva?: CategoriaId | 'todas';
+  tipo?: 'website' | 'article';
+}
+
+const { titulo, descricao = SITE.descricao, imagem, categoriaAtiva, tipo = 'website' } = Astro.props;
+const tituloCompleto = titulo ? `${titulo} — ${SITE.nome}` : `${SITE.nome} — ${SITE.slogan}`;
+const canonico = new URL(Astro.url.pathname, Astro.site);
+const imagemAbs = imagem ? new URL(imagem, Astro.site).toString() : undefined;
+const temDireita = Astro.slots.has('direita');
+---
+
+<!doctype html>
+<html lang={SITE.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={descricao} />
+    <link rel="canonical" href={canonico} />
+    <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+    <link rel="alternate" type="application/rss+xml" title={SITE.nome} href={url('rss.xml')} />
+    <meta name="theme-color" content="#f3eee3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16181a" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:site_name" content={SITE.nome} />
+    <meta property="og:type" content={tipo} />
+    <meta property="og:title" content={titulo ?? SITE.nome} />
+    <meta property="og:description" content={descricao} />
+    <meta property="og:url" content={canonico} />
+    <meta property="og:locale" content="pt_BR" />
+    {imagemAbs && <meta property="og:image" content={imagemAbs} />}
+    <meta name="twitter:card" content={imagemAbs ? 'summary_large_image' : 'summary'} />
+
+    <script is:inline>
+      // Aplica o tema antes da pintura para não piscar.
+      (function () {
+        var d = document.documentElement;
+        d.classList.add('js');
+        var t = null;
+        try { t = localStorage.getItem('eg-tema'); } catch (e) {}
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+        d.dataset.tema = t;
+      })();
+    </script>
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="estrutura">
+      <div class="col-esq">
+        <BarraEsquerda categoriaAtiva={categoriaAtiva} />
+      </div>
+
+      <main class="col-centro" id="conteudo" tabindex="-1">
+        <slot />
+      </main>
+
+      {
+        temDireita && (
+          <aside class="col-dir" aria-label="Ficha técnica">
+            <slot name="direita" />
+          </aside>
+        )
+      }
+    </div>
+
+    <dialog class="visor" data-visor aria-label="Visualizador do mapa">
+      <div class="visor__barra">
+        <p class="visor__legenda rotulo" data-visor-legenda></p>
+        <div class="visor__controles">
+          <span class="visor__zoom mono" data-visor-zoom aria-live="polite">100%</span>
+          <button type="button" class="visor__btn" data-visor-acao="reduzir" aria-label="Reduzir">
+            <Icone nome="reduzir" tamanho={16} />
+          </button>
+          <button type="button" class="visor__btn" data-visor-acao="ampliar" aria-label="Ampliar">
+            <Icone nome="ampliar" tamanho={16} />
+          </button>
+          <button type="button" class="visor__btn" data-visor-acao="enquadrar" aria-label="Enquadrar">
+            <Icone nome="enquadrar" tamanho={16} />
+          </button>
+          <button type="button" class="visor__btn" data-visor-acao="fechar" aria-label="Fechar (Esc)">
+            <Icone nome="fechar" tamanho={16} />
+          </button>
+        </div>
+      </div>
+      <div class="visor__palco" data-visor-palco>
+        <img data-visor-img alt="" draggable="false" />
+      </div>
+      <p class="visor__dica rotulo" aria-hidden="true">Role ou faça pinça para ampliar · arraste para mover · duplo clique alterna</p>
+    </dialog>
+
+    <script>
+      import '../scripts/cliente';
+    </script>
+  </body>
+</html>
+
+<style>
+  .visor {
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: var(--papel);
+    color: var(--tinta);
+    overflow: hidden;
+  }
+  .visor[open] {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .visor::backdrop {
+    background: var(--papel);
+  }
+  .visor__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--e-3);
+    padding: var(--e-2) var(--e-2) var(--e-2) var(--e-4);
+    border-bottom: 1px solid var(--linha);
+    background: var(--papel);
+  }
+  .visor__legenda {
+    margin: 0;
+    color: var(--tinta);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .visor__controles {
+    display: flex;
+    align-items: center;
+    flex: none;
+  }
+  .visor__zoom {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+    min-width: 4.5em;
+    text-align: right;
+    padding-right: var(--e-3);
+  }
+  .visor__btn {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--linha);
+    margin-left: -1px;
+    background: var(--papel);
+  }
+  .visor__btn:hover {
+    background: var(--tinta);
+    color: var(--papel);
+  }
+  .visor__palco {
+    position: relative;
+    overflow: hidden;
+    touch-action: none;
+    cursor: grab;
+    background-color: var(--papel-2);
+    /* papel milimetrado muito leve */
+    background-image:
+      linear-gradient(var(--linha-fina) 1px, transparent 1px),
+      linear-gradient(90deg, var(--linha-fina) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: -1px -1px;
+  }
+  :global(:root[data-tema='claro']) .visor__palco {
+    background-color: #ece6d8;
+  }
+  .visor__palco.arrastando {
+    cursor: grabbing;
+  }
+  .visor__palco img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: none;
+    transform-origin: 0 0;
+    user-select: none;
+    -webkit-user-select: none;
+    box-shadow: 0 0 0 1px var(--linha);
+    background: #fff;
+    will-change: transform;
+  }
+  .visor__dica {
+    margin: 0;
+    padding: var(--e-2) var(--e-4);
+    border-top: 1px solid var(--linha);
+    text-align: center;
+  }
+</style>

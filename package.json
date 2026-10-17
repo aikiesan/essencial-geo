@@ -1,0 +1,33 @@
+{
+  "name": "essencial-geo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Essencial Geo — feed cartográfico, repositório de dados abertos e portfólio de mapas temáticos do Brasil.",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "sincronizar": "node scripts/sincronizar-mapas.mjs",
+    "dev": "npm run sincronizar && astro dev",
+    "build": "npm run sincronizar && astro build",
+    "preview": "astro preview",
+    "novo-mapa": "node scripts/novo-mapa.mjs",
+    "exemplos": "node scripts/gerar-exemplos.mjs",
+    "zenodo": "node scripts/zenodo-publicar.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
+    "@fontsource-variable/lora": "^5.2.0",
+    "@fontsource-variable/playfair-display": "^5.2.0",
+    "astro": "~5.18.2"
+  },
+  "devDependencies": {
+    "d3-contour": "^4.0.2",
+    "d3-delaunay": "^6.0.4",
+    "d3-scale-chromatic": "^3.1.0",
+    "yaml": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

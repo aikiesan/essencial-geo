@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+# gerado por scripts/sincronizar-mapas.mjs a partir de /mapas
+public/mapas/
+.DS_Store
+Thumbs.db

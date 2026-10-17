@@ -1,0 +1,329 @@
+---
+/**
+ * Coluna esquerda: identidade, manifesto, estado da plataforma,
+ * índice do atlas por categoria e ligações acadêmicas.
+ * Em telas estreitas vira um cabeçalho com menu recolhível.
+ */
+import Logo from './Logo.astro';
+import Estrela from './Estrela.astro';
+import Icone from './Icone.astro';
+import { CATEGORIAS, LINKS, SITE, type CategoriaId } from '../site.config';
+import { contarPorCategoria, dataAbnt, mapasPublicados, numeroFormatado, url } from '../lib/mapas';
+
+interface Props {
+  /** Categoria ativa no filtro (undefined = todas). */
+  categoriaAtiva?: CategoriaId | 'todas';
+}
+const { categoriaAtiva } = Astro.props;
+
+const mapas = await mapasPublicados();
+const contagem = contarPorCategoria(mapas);
+const ultima = mapas[0]?.data.atualizado ?? mapas[0]?.data.data;
+const categorias = Object.entries(CATEGORIAS) as [CategoriaId, (typeof CATEGORIAS)[CategoriaId]][];
+
+const ligacoes = [
+  { rotulo: 'Currículo Lattes', href: LINKS.lattes },
+  { rotulo: 'ORCID', href: LINKS.orcid },
+  { rotulo: 'Comunidade Zenodo', href: LINKS.zenodo },
+  { rotulo: 'GitHub', href: LINKS.github },
+];
+---
+
+<header class="esq" data-esq>
+  <div class="esq__topo">
+    <a class="marca" href={url()} aria-label={`${SITE.nome} — início`}>
+      <Logo tamanho={38} />
+      <span class="marca__nome">Essencial<br />Geo</span>
+    </a>
+    <button type="button" class="esq__menu" data-menu aria-expanded="false" aria-controls="esq-corpo">
+      <Icone nome="menu" tamanho={16} />
+      <span class="rotulo">Índice</span>
+    </button>
+  </div>
+
+  <div class="esq__corpo" id="esq-corpo">
+    <p class="lema">
+      <span class="lema__a">{SITE.slogan}</span>
+      <span class="lema__b">{SITE.complemento}</span>
+    </p>
+
+    <section aria-labelledby="t-manifesto">
+      <h2 class="secao" id="t-manifesto">Manifesto</h2>
+      <p class="manifesto">
+        Saint-Exupéry escreveu que o essencial não se vê. Waldo Tobler mediu o invisível: tudo se relaciona com tudo,
+        mas o que está perto se relaciona mais. Cada prancha deste atlas tenta tornar visível uma dessas proximidades
+        do território brasileiro — com dados abertos, método declarado e arquivos prontos para reuso.
+      </p>
+      <a class="esq__link-sobre rotulo" href={url('sobre/')}>Ler o manifesto inteiro <Icone nome="seta" tamanho={11} /></a>
+    </section>
+
+    <section aria-labelledby="t-estado">
+      <h2 class="secao" id="t-estado">Estado</h2>
+      <dl class="estado">
+        <div><dt>Mapas</dt><dd class="mono">{numeroFormatado(mapas.length)}</dd></div>
+        {ultima && <div><dt>Atualizado</dt><dd class="mono">{dataAbnt(ultima)}</dd></div>}
+        <div><dt>Cadência</dt><dd class="mono">{SITE.cadencia}</dd></div>
+        <div><dt>Licença</dt><dd><a href={SITE.licenca.url} rel="license noopener">{SITE.licenca.nome}</a></dd></div>
+      </dl>
+    </section>
+
+    <nav aria-labelledby="t-atlas">
+      <h2 class="secao" id="t-atlas">Atlas</h2>
+      <ul class="indice" role="list">
+        <li>
+          <a href={url()} aria-current={categoriaAtiva === 'todas' ? 'page' : undefined}>
+            <span>Todos os mapas</span><span class="indice__guia" /><span class="mono">{numeroFormatado(mapas.length)}</span>
+          </a>
+        </li>
+        {
+          categorias.map(([id, c]) => (
+            <li class:list={{ vazio: contagem[id] === 0 }}>
+              <a href={url(`categoria/${id}/`)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
+                <span>{c.rotulo}</span>
+                <span class="indice__guia" />
+                <span class="mono">{numeroFormatado(contagem[id])}</span>
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a href={url('indice/')}>
+            <span class="italico">Índice cronológico</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="t-ligacoes">
+      <h2 class="secao" id="t-ligacoes">Ligações</h2>
+      <ul class="ligacoes" role="list">
+        {
+          ligacoes.map((l) => (
+            <li>
+              <a href={l.href} rel="noopener me">
+                {l.rotulo} <Icone nome="externo" tamanho={11} />
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a href={url('rss.xml')}>Assinar (RSS) <Icone nome="rss" tamanho={11} /></a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="esq__pe">
+      <button type="button" class="botao botao--fantasma tema" data-tema-botao>
+        <Icone nome="tema" />
+        <span>Tema: <span data-tema-nome>papel</span></span>
+      </button>
+      <p class="colofao rotulo">
+        <Estrela tamanho={9} /> Composto em Campinas, SP<br />
+        22°49′S · 47°04′W · SIRGAS 2000
+      </p>
+    </footer>
+  </div>
+</header>
+
+<style>
+  .esq {
+    padding: var(--e-4);
+    border-bottom: 1px solid var(--linha);
+    background: var(--papel);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .esq__topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-3);
+    text-decoration: none;
+  }
+  .marca__nome {
+    font-family: var(--f-titulo);
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    line-height: 1.05;
+  }
+  .esq__menu {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: 40px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha);
+  }
+  .esq__menu .rotulo {
+    color: var(--tinta);
+  }
+
+  .esq__corpo {
+    display: none;
+    padding-top: var(--e-5);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  .esq[data-aberto] .esq__corpo,
+  :global(html:not(.js)) .esq__corpo {
+    display: block;
+  }
+  .esq__corpo > section,
+  .esq__corpo > nav {
+    margin-bottom: var(--e-6);
+  }
+
+  @media (min-width: 860px) {
+    .esq {
+      position: static;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: var(--e-6) var(--e-5) var(--e-5);
+      border-bottom: 0;
+    }
+    .esq__menu {
+      display: none;
+    }
+    .esq__corpo,
+    .esq[data-aberto] .esq__corpo,
+    :global(html:not(.js)) .esq__corpo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+  .lema {
+    margin: 0 0 var(--e-6);
+    padding: var(--e-4) 0;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+    font-family: var(--f-titulo);
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.35;
+  }
+  .lema__a,
+  .lema__b {
+    display: block;
+  }
+  .lema__b {
+    color: var(--tinta-2);
+    font-size: 0.95rem;
+    margin-top: var(--e-1);
+  }
+
+  .manifesto {
+    font-size: var(--t-sm);
+    line-height: 1.6;
+    color: var(--tinta-2);
+    margin-bottom: var(--e-2);
+  }
+  .esq__link-sobre {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .esq__link-sobre:hover {
+    color: var(--acento);
+  }
+
+  .estado {
+    margin: 0;
+    font-size: var(--t-sm);
+  }
+  .estado > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--e-3);
+    padding: var(--e-1) 0;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .estado dt {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--tinta-3);
+  }
+  .estado dd {
+    margin: 0;
+    text-align: right;
+  }
+
+  /* Índice de atlas: rótulo, guia pontilhada, número */
+  .indice,
+  .ligacoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--t-sm);
+  }
+  .indice a {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-2);
+    padding: 5px 0;
+    text-decoration: none;
+  }
+  .indice__guia {
+    flex: 1;
+    border-bottom: 1px dotted var(--tinta-3);
+    transform: translateY(-0.25em);
+  }
+  .indice .mono {
+    font-size: 0.75rem;
+  }
+  .indice a:hover {
+    color: var(--acento);
+  }
+  .indice a[aria-current='page'] {
+    font-weight: 600;
+  }
+  .indice a[aria-current='page'] span:first-child::before {
+    content: '▸ ';
+    color: var(--acento);
+  }
+  .indice .vazio a {
+    color: var(--tinta-3);
+  }
+
+  .ligacoes li + li {
+    border-top: 1px solid var(--linha-fina);
+  }
+  .ligacoes a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    text-decoration: none;
+  }
+  .ligacoes a:hover {
+    color: var(--acento);
+  }
+
+  .esq__pe {
+    margin-top: auto;
+    padding-top: var(--e-5);
+  }
+  .tema {
+    width: 100%;
+    justify-content: center;
+  }
+  .colofao {
+    margin: var(--e-4) 0 0;
+    line-height: 1.7;
+  }
+</style>

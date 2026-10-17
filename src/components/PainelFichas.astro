@@ -1,0 +1,53 @@
+---
+/**
+ * Coluna direita do feed: uma ficha por cartão, só a do cartão em foco visível.
+ * Sem JavaScript, mostra a ficha do primeiro mapa da página.
+ */
+import Ficha from './Ficha.astro';
+import { SITE } from '../site.config';
+import type { Mapa } from '../lib/mapas';
+
+interface Props { mapas: Mapa[] }
+const { mapas } = Astro.props;
+const total = String(mapas.length).padStart(2, '0');
+---
+
+<div class="painel">
+  <div class="painel__cab">
+    <p class="rotulo">Em foco</p>
+    <p class="rotulo mono" data-painel-indice>01 / {total}</p>
+  </div>
+  {
+    mapas.map((m, i) => (
+      <div data-ficha-de={m.id} hidden={i !== 0}>
+        <Ficha mapa={m} cabecalho />
+      </div>
+    ))
+  }
+  <p class="painel__licenca rotulo">
+    Dados e pranchas sob <a href={SITE.licenca.url} rel="license noopener">{SITE.licenca.nome}</a>: use em pranchas comerciais e
+    artigos, citando a fonte.
+  </p>
+</div>
+
+<style>
+  .painel {
+    padding: var(--e-6) var(--e-5) var(--e-6);
+  }
+  .painel__cab {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--e-3);
+  }
+  .painel__cab p {
+    margin: 0;
+  }
+  .painel__licenca {
+    margin: var(--e-6) 0 0;
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--linha-fina);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+  }
+</style>

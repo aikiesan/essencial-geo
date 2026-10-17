@@ -1,0 +1,311 @@
+---
+/**
+ * Cartão do feed: uma prancha por mapa.
+ * Cabeçalho técnico → título → prancha (lightbox) → legenda → um parágrafo → discussões.
+ */
+import { Image, getImage } from 'astro:assets';
+import Ficha from './Ficha.astro';
+import Icone from './Icone.astro';
+import { CATEGORIAS } from '../site.config';
+import { dataAbnt, dataIso, linkMapa, numeroFormatado, url, type Mapa } from '../lib/mapas';
+
+interface Props {
+  mapa: Mapa;
+  /** Carrega a imagem sem lazy-loading (primeiro cartão da página). */
+  prioridade?: boolean;
+  /** Título como h1 (página do mapa) em vez de h2 (feed). */
+  destaque?: boolean;
+  /** Exibe a ficha embutida em telas estreitas. */
+  fichaEmbutida?: boolean;
+}
+
+const { mapa, prioridade = false, destaque = false, fichaEmbutida = true } = Astro.props;
+const d = mapa.data;
+const num = numeroFormatado(d.numero);
+const cat = CATEGORIAS[d.categoria];
+const Titulo = destaque ? 'h1' : 'h2';
+
+// Versão de alta resolução para o visualizador (até 3200 px, sem ampliar o original).
+const alta = await getImage({
+  src: d.imagem,
+  width: Math.min(d.imagem.width, 3200),
+  format: 'webp',
+  quality: 86,
+});
+const fontes = d.fontes.map((f) => f.nome.split(' — ')[0]).join(', ');
+---
+
+<article class:list={['cartao', { 'cartao--destaque': destaque }]} id={mapa.id} data-mapa={mapa.id}>
+  <header class="cartao__cab">
+    <p class="cartao__meta rotulo">
+      <span>Nº {num}</span>
+      <span aria-hidden="true">/</span>
+      <time datetime={dataIso(d.data)}>{dataAbnt(d.data)}</time>
+      <span aria-hidden="true">/</span>
+      <a href={url(`categoria/${d.categoria}/`)}>{cat.curto}</a>
+      {d.exemplo && <span class="selo">Prancha-modelo · dados sintéticos</span>}
+    </p>
+    <Titulo class="cartao__titulo">
+      {destaque ? d.titulo : <a href={linkMapa(mapa)}>{d.titulo}</a>}
+    </Titulo>
+    {d.subtitulo && <p class="cartao__sub">{d.subtitulo}</p>}
+  </header>
+
+  <figure class="prancha">
+    <button
+      type="button"
+      class="prancha__moldura"
+      data-lightbox
+      data-src={alta.src}
+      data-largura={alta.attributes.width ?? d.imagem.width}
+      data-altura={alta.attributes.height ?? d.imagem.height}
+      data-legenda={`Nº ${num} — ${d.titulo}`}
+      aria-label={`Ampliar o mapa: ${d.titulo}`}
+    >
+      <span class="prancha__folha">
+        <Image
+          src={d.imagem}
+          alt={d.imagem_alt}
+          widths={[480, 760, 1140, 1520]}
+          sizes="(min-width: 1240px) 700px, (min-width: 860px) calc(100vw - 340px), calc(100vw - 48px)"
+          loading={prioridade ? 'eager' : 'lazy'}
+          fetchpriority={prioridade ? 'high' : 'auto'}
+          decoding="async"
+          format="webp"
+          quality={82}
+        />
+      </span>
+      <span class="prancha__lupa rotulo" aria-hidden="true"><Icone nome="ampliar" tamanho={12} /> Ampliar</span>
+    </button>
+    <figcaption class="prancha__legenda">
+      <span>Fig. {num}</span>
+      <span>{d.recorte}</span>
+      <span>{d.epsg ? `EPSG:${d.epsg}` : d.crs}</span>
+      {d.escala && <span>{d.escala}</span>}
+      <span>Fonte: {fontes}</span>
+    </figcaption>
+  </figure>
+
+  <p class="cartao__contexto">{d.contexto}</p>
+
+  <footer class="cartao__rodape">
+    {
+      d.discussoes.length > 0 && (
+        <ul class="cartao__discussoes" role="list" aria-label="Discussões">
+          {d.discussoes.map((x) => (
+            <li>
+              <a class="botao botao--fantasma" href={x.url} rel="noopener" target="_blank">
+                {x.onde}
+                <Icone nome="externo" tamanho={12} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    {
+      !destaque && (
+        <a class="cartao__mais rotulo" href={linkMapa(mapa)}>
+          Ficha completa <Icone nome="seta" tamanho={12} />
+        </a>
+      )
+    }
+  </footer>
+
+  {
+    fichaEmbutida && (
+      <details class="ficha-embutida so-estreito">
+        <summary class="rotulo">
+          <span>Ficha técnica · downloads · citação</span>
+          <span class="ficha-embutida__sinal" aria-hidden="true" />
+        </summary>
+        <Ficha mapa={mapa} />
+      </details>
+    )
+  }
+</article>
+
+<style>
+  .cartao {
+    scroll-margin-top: var(--e-6);
+  }
+  .cartao__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-1) var(--e-2);
+    margin: 0 0 var(--e-3);
+  }
+  .cartao__meta a {
+    color: var(--tinta-2);
+  }
+  .selo {
+    margin-left: auto;
+    padding: 1px var(--e-2);
+    border: 1px dashed var(--tinta-3);
+    color: var(--tinta-2);
+    letter-spacing: 0.08em;
+  }
+  .cartao__titulo {
+    font-size: var(--t-xl);
+    font-weight: 500;
+  }
+  .cartao--destaque .cartao__titulo {
+    font-size: var(--t-xxl);
+  }
+  .cartao__titulo a {
+    text-decoration: none;
+  }
+  .cartao__titulo a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--acento);
+  }
+  .cartao__sub {
+    margin: var(--e-2) 0 0;
+    font-style: italic;
+    color: var(--tinta-2);
+    font-size: var(--t-lg);
+    line-height: 1.4;
+  }
+
+  /* Prancha: moldura dupla, como a linha de esquadria de um mapa impresso */
+  .prancha {
+    margin: var(--e-5) 0 var(--e-4);
+  }
+  .prancha__moldura {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid var(--linha);
+    background: var(--folha);
+    cursor: zoom-in;
+  }
+  .prancha__folha {
+    display: block;
+    border: 1px solid var(--linha-fina);
+    background: #fff;
+  }
+  .prancha__folha :global(img) {
+    width: 100%;
+  }
+  .prancha__lupa {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    padding: var(--e-1) var(--e-2);
+    background: var(--tinta);
+    color: var(--papel);
+    opacity: 0;
+    transition: opacity 120ms linear;
+  }
+  .prancha__moldura:hover .prancha__lupa,
+  .prancha__moldura:focus-visible .prancha__lupa {
+    opacity: 1;
+  }
+  @media (hover: none) {
+    .prancha__lupa {
+      opacity: 1;
+    }
+  }
+  .prancha__legenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 var(--e-3);
+    margin-top: var(--e-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+    letter-spacing: 0.02em;
+  }
+  .prancha__legenda span + span::before {
+    content: '·';
+    margin-right: var(--e-3);
+    color: var(--linha-fina);
+  }
+
+  .cartao__contexto {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: var(--e-4);
+  }
+  .cartao__contexto::first-letter {
+    font-family: var(--f-titulo);
+    font-size: 1.35em;
+    font-weight: 600;
+  }
+
+  .cartao__rodape {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-3);
+  }
+  .cartao__discussoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cartao__mais {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    margin-left: auto;
+    color: var(--tinta);
+    text-decoration: none;
+    padding: var(--e-2) 0;
+    border-bottom: 1px solid var(--linha);
+  }
+  .cartao__mais:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+
+  .ficha-embutida {
+    margin-top: var(--e-5);
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+  }
+  .ficha-embutida > summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--e-3) 0;
+    list-style: none;
+    cursor: pointer;
+    color: var(--tinta);
+  }
+  .ficha-embutida > summary::-webkit-details-marker {
+    display: none;
+  }
+  .ficha-embutida__sinal {
+    position: relative;
+    width: 11px;
+    height: 11px;
+  }
+  .ficha-embutida__sinal::before,
+  .ficha-embutida__sinal::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 11px;
+    border-top: 1px solid currentColor;
+  }
+  .ficha-embutida__sinal::after {
+    transform: rotate(90deg);
+  }
+  .ficha-embutida[open] .ficha-embutida__sinal::after {
+    display: none;
+  }
+  .ficha-embutida[open] {
+    padding-bottom: var(--e-5);
+  }
+</style>

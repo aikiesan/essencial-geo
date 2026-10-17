@@ -1,0 +1,57 @@
+# Publica um mapa no Zenodo (DOI próprio) e grava o DOI de volta no README.
+# Rodar manualmente: Actions → "Publicar no Zenodo" → Run workflow.
+# Segredos necessários: ZENODO_TOKEN (e ZENODO_SANDBOX_TOKEN para testes).
+name: Publicar no Zenodo
+
+on:
+  workflow_dispatch:
+    inputs:
+      pasta:
+        description: 'Pasta do mapa em /mapas (ex.: 005-renda-domiciliar-rmc)'
+        required: true
+        type: string
+      sandbox:
+        description: 'Usar sandbox.zenodo.org (teste, DOI não é real)'
+        type: boolean
+        default: true
+      nova_versao:
+        description: 'O mapa já tem DOI — publicar nova versão'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - id: zenodo
+        name: Enviar ao Zenodo
+        env:
+          ZENODO_TOKEN: ${{ inputs.sandbox && secrets.ZENODO_SANDBOX_TOKEN || secrets.ZENODO_TOKEN }}
+          PASTA: ${{ inputs.pasta }}
+        run: |
+          FLAGS=""
+          if [ "${{ inputs.sandbox }}" = "true" ]; then FLAGS="$FLAGS --sandbox"; fi
+          if [ "${{ inputs.nova_versao }}" = "true" ]; then FLAGS="$FLAGS --nova-versao"; fi
+          node scripts/zenodo-publicar.mjs "$PASTA" $FLAGS
+
+      - name: Gravar DOI no repositório
+        if: ${{ !inputs.sandbox }}
+        env:
+          PASTA: ${{ inputs.pasta }}
+          DOI: ${{ steps.zenodo.outputs.doi }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "mapas/$PASTA/README.md"
+          git commit -m "Nº $PASTA: DOI $DOI"
+          git push
