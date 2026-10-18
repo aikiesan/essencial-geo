@@ -1,0 +1,6 @@
+[
+ { "tema": "alcance", "numero": 85, "pasta": "085-biometano-ao-alcance-sp", "base": "sp_biometano_alcance_30km", "data": "2026-12-15", "categoria": "energia" },
+ { "tema": "curva", "numero": 86, "pasta": "086-curva-de-oferta-do-biometano-sp", "base": "sp_biometano_curva_de_oferta", "data": "2026-12-16", "categoria": "energia" },
+ { "tema": "bacias", "numero": 87, "pasta": "087-bacias-da-rede-sp", "base": "sp_biometano_bacias_da_rede", "data": "2026-12-17", "categoria": "energia" },
+ { "tema": "disputa", "numero": 88, "pasta": "088-disputa-por-residuo-sp", "base": "sp_biometano_disputa_por_residuo", "data": "2026-12-18", "categoria": "energia" }
+]

@@ -1,0 +1,155 @@
+rede,nome,municipio,uf,operador,tensao,em_sp,lon,lat,area_km2,biometano_m3d,cana_m3d,lavouras_m3d,pecuaria_m3d,urbano_m3d,fora_da_cana_m3d,km_medio,pct_estado
+ponto_entrega,PE Boa Esperança do Sul,Boa Esperança do Sul,SP,TBG,,1,-48.3152,-21.9156,21253.1,3439469,3185479,111163,106526,36302,253990,103.5,20.4
+ponto_entrega,PE Guaiçara,Guaiçara,SP,TBG,,1,-49.7842,-21.6078,25543.5,2202896,1897437,150603,117952,36903,305458,92.3,13.1
+ponto_entrega,PE Ibitinga,Ibitinga,SP,TBG,,1,-48.8348,-21.8147,13463,1902103,1746224,80599,63527,11754,155879,99.9,11.3
+ponto_entrega,PE Bilac,Bilac,SP,TBG,,1,-50.4581,-21.3802,20670.9,1837059,1500945,98803,218778,18532,336114,92.4,10.9
+ponto_entrega,PE Valparaíso,Valparaíso,SP,TBG,,1,-50.8999,-21.283,24544.5,1631972,1527677,32116,56614,15565,104295,78.8,9.7
+ponto_entrega,PE Iacanga,Iacanga,SP,TBG,,1,-49.0233,-21.8167,14963.1,1031697,898172,77988,41315,14223,133525,83.8,6.1
+ponto_entrega,PE São Carlos,São Carlos,SP,TBG,,1,-47.8781,-22.1103,10772.6,956308,839443,32492,72200,12173,116865,80.2,5.7
+ponto_entrega,PE Itapetininga,Itapetininga,SP,TBG,,1,-48.0637,-23.7025,34277.4,702602,136884,412863,136368,16486,565718,81.9,4.2
+ponto_entrega,PE Três Lagoas / PE UTE Três Lagoas (Luiz Carlos Prestes) - GN,Três Lagoas,MS,TBG,,0,-51.8407,-20.9601,14152,662886,642355,9683,5814,5034,20531,70.5,3.9
+ponto_entrega,PE Itirapina,Itirapina,SP,TBG,,1,-47.7711,-22.2199,6612.7,466115,335521,46258,77101,7236,130594,64,2.8
+ponto_entrega,PE Rio Claro,Rio Claro,SP,TBG,,1,-47.5801,-22.475,4318.7,352006,287248,17389,34270,13099,64758,33.7,2.1
+ponto_entrega,PE Limeira,Limeira,SP,TBG,,1,-47.4754,-22.6049,2072.1,260076,213316,5449,22602,18708,46759,25.7,1.5
+ponto_entrega,PE Araçoiaba da Serra,Araçoiaba da Serra,SP,TBG,,1,-47.6447,-23.4947,5860.1,193648,70018,17602,91401,14627,123630,34.8,1.1
+ponto_entrega,PE REPLAN,Paulínia,SP,TBG,,1,-47.1335,-22.7199,3639.1,175609,107393,30768,26438,11011,68216,54.7,1
+ponto_entrega,PE Capuava / PE RECAP II,Mauá,SP,NTS,,1,-46.4752,-23.6397,2025.9,169304,0,0,1420,167883,169304,21.2,1
+ponto_entrega,PE Porto Feliz,Porto Feliz,SP,TBG,,1,-47.4811,-23.3416,2338.3,161196,75466,8790,55945,20995,85730,29.7,1
+ponto_entrega,PE Americana,Americana,SP,TBG,,1,-47.2956,-22.6795,1237.4,133960,98957,15741,5113,14151,35004,21,0.8
+ponto_entrega,PE Indaiatuba,Indaiatuba,SP,TBG,,1,-47.2828,-23.0969,1445.8,125114,84280,3474,25381,11980,40834,20.2,0.7
+ponto_entrega,PE Itu,Itu,SP,TBG,,1,-47.3788,-23.2389,1751.1,115679,80191,1356,25792,8340,35488,26,0.7
+ponto_entrega,PE Jaguariúna,Jaguariúna,SP,TBG,,1,-47.0686,-22.7654,1515.2,73194,39534,5958,19127,8575,33660,34,0.4
+ponto_entrega,PE Itatiba,Itatiba,SP,TBG,,1,-46.7744,-22.9765,2490.7,67794,70,8609,35258,23857,67724,22.6,0.4
+ponto_entrega,PE Campinas,Campinas,SP,TBG,,1,-47.1758,-22.9424,726.9,40867,12999,1370,6642,19855,27868,13.8,0.2
+ponto_entrega,PE Bragança Paulista,Bragança Paulista,SP,NTS,,1,-46.5267,-23.0191,2959,32678,50,8134,14088,10406,32628,24.5,0.2
+ponto_entrega,PE São Bernardo do Campo,São Bernardo do Campo,SP,NTS,,1,-46.5133,-23.7927,1756.3,31884,0,90,43,31752,31884,22.4,0.2
+ponto_entrega,PE Suzano,Suzano,SP,NTS,,1,-46.2609,-23.5271,1594.6,26386,0,2,6484,19900,26386,12,0.2
+ponto_entrega,PE Sumaré,Sumaré,SP,TBG,,1,-47.1308,-22.8486,305.7,21866,1235,196,2307,18128,20631,8.6,0.1
+ponto_entrega,PE UTE Euzébio Rocha (Cubatão) - GN,Cubatão,SP,NTS,,1,-46.4306,-23.8739,560.7,10108,0,0,8,10100,10108,16.1,0.1
+ponto_entrega,PE REVAP II,São José dos Campos,SP,NTS,,1,-45.813,-23.208,2352.9,7100,0,11,2034,5055,7100,22,0
+ponto_entrega,PE Pindamonhangaba II,Pindamonhangaba,SP,NTS,,1,-45.4198,-22.9993,2816.7,6835,0,2363,2989,1484,6835,14.7,0
+ponto_entrega,PE Lorena,Lorena,SP,NTS,,1,-45.0767,-22.7932,1115,6159,0,162,5618,378,6159,10.7,0
+ponto_entrega,PE Taubaté,Taubaté,SP,NTS,,1,-45.5747,-23.0952,1782.2,4614,0,828,330,3455,4614,16.6,0
+ponto_entrega,PE Guaratinguetá,Lorena,SP,NTS,,1,-45.1445,-22.8344,1980.9,4331,0,1890,1566,876,4331,13.1,0
+ponto_entrega,PE RPBC,Cubatão,SP,NTS,,1,-46.4226,-23.8644,697.9,4213,0,0,19,4194,4213,17.3,0
+ponto_entrega,PE Guararema,Guararema,SP,TBG,,1,-46.1102,-23.3897,2320,4173,0,3,2178,1991,4173,15.6,0
+ponto_entrega,PE Gemini,Paulínia,SP,TBG,,1,-47.1289,-22.7543,98.9,3548,1231,99,326,1893,2317,6.6,0
+ponto_entrega,PE São José dos Campos,São José dos Campos,SP,NTS,,1,-45.8124,-23.2065,1095.5,2492,0,6,694,1793,2492,9.9,0
+ponto_entrega,PE Caçapava,Caçapava,SP,NTS,,1,-45.623,-23.1012,1026.5,1884,0,398,520,965,1884,10.5,0
+ponto_entrega,PE São Bernardo do Campo II,São Bernardo do Campo,SP,NTS,,1,-46.5059,-23.813,3051.8,1605,0,2,103,1500,1605,48.5,0
+ponto_entrega,PE Campo Largo,Campo Largo,PR,TBG,,0,-49.4346,-25.4342,2681.5,489,0,239,68,182,489,119.8,0
+ponto_entrega,PE Cruzeiro,Cruzeiro,SP,NTS,,1,-44.9086,-22.6688,1912.4,192,0,16,61,115,192,12.6,0
+ponto_entrega,PE Araucária CIC,Araucária,PR,TBG,,0,-49.3713,-25.5586,630.8,0,0,0,0,0,0,0,0
+ponto_entrega,PE Resende II,Resende,RJ,NTS,,0,-44.4486,-22.6044,1084.1,0,0,0,0,0,0,37.2,0
+ponto_entrega,PE Barra Mansa II,Barra Mansa,RJ,NTS,,0,-44.1737,-22.5927,233.6,0,0,0,0,0,0,0,0
+subestacao,SE Morro Agudo,,,CPFL TRA MORRO AGUDO - CPFL TRANSMISSÃO MORRO AGUDO SA,500/138,1,-48.1556,-20.8651,8812.5,1991167,1890768,45650,49115,5634,100399,37.6,11.8
+subestacao,SE Mirassol II,,,IEP - INTERLIGAÇÃO ELÉTRICA PINHEIROS S.A,440/138,1,-49.5022,-20.867,10650.7,1374194,1221345,35474,94573,22803,152850,46.5,8.1
+subestacao,SE Ribeirão Preto,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,500/440/138,1,-47.688,-21.202,8942.4,1135613,1051391,25037,44572,14612,84221,35.8,6.7
+subestacao,SE Baguaçu,,,IE AGUAPEI - INTERLIGAÇÃO ELÉTRICA AGUAPEÍ S.A.,440,1,-50.2811,-21.1453,10313.4,826758,753230,20208,41506,11815,73528,37.7,4.9
+subestacao,SE Alta Paulista,,,IE AGUAPEI - INTERLIGAÇÃO ELÉTRICA AGUAPEÍ S.A.,440,1,-51.1605,-21.6413,12245.3,823277,725037,6625,82470,9144,98240,39.8,4.9
+subestacao,SE Getulina,,,IEP - INTERLIGAÇÃO ELÉTRICA PINHEIROS S.A,440/138,1,-49.8383,-21.8556,9799.5,638978,592568,7634,27925,10850,46409,40.2,3.8
+subestacao,SE Araraquara 2,,,ARARAQUARA - ARARAQUARA TRANSMISSORA DE ENERGIA S.A,500/440,1,-48.3497,-21.8336,6367.8,621879,541090,41624,35253,3912,80789,42.3,3.7
+subestacao,SE Paraguaçu Paulista 2,,,-,230/88,1,-50.5919,-22.4365,6123.2,616335,486129,53876,72788,3542,130206,27.8,3.7
+subestacao,SE Bracell,,,,440,1,-48.8085,-22.5388,4159.3,593104,566558,7375,11675,7496,26546,24.1,3.5
+subestacao,SE Araras,,,IEP - INTERLIGAÇÃO ELÉTRICA PINHEIROS S.A,440/138,1,-47.4619,-22.3957,4764.5,516304,439150,22133,39495,15526,77154,35.3,3.1
+subestacao,SE Araraquara FUR,,,FURNAS - Furnas Centrais Elétricas S.A.,500,1,-48.2534,-21.774,4483.7,512061,453308,17225,24999,16529,58753,33.4,3
+subestacao,SE Cerquilho III,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,230/138,1,-47.7744,-23.14,4204.3,484518,278322,26488,171830,7878,206196,23.8,2.9
+subestacao,SE Água Vermelha,,,AES TIETÊ - AES Tietê S.A.,500/440/138,0,-50.3489,-19.8609,6671.2,434486,387783,7309,35229,4164,46702,44.8,2.6
+subestacao,SE Três Irmãos,,,TIJOA - TIJOA PARTICIPAÇÕES E INVESTIMENTOS S.A.,440/138,1,-51.3026,-20.6741,5275,374101,357268,6223,8611,1998,16833,30.8,2.2
+subestacao,SE UHE Porto Colômbia,,,FURNAS - Furnas Centrais Elétricas S.A.,345/138,0,-48.5748,-20.1211,2492.3,349385,320386,16910,11092,998,29000,28.5,2.1
+subestacao,SE UHE Marimbondo,,,FURNAS - Furnas Centrais Elétricas S.A.,500/345,0,-49.2035,-20.3012,3138.7,344778,317069,3739,22236,1734,27709,36.7,2
+subestacao,SE Assis,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,500/440/230,1,-50.3507,-22.6687,3389.3,337012,248847,78929,5863,3373,88165,24,2
+subestacao,SE Marimbondo 2,,,GTE - Guaraciaba Transmissora de Energia S A,500,0,-49.2221,-20.2537,2766,313423,296314,6825,9476,809,17110,32.9,1.9
+subestacao,SE Volta Grande,,,CEMIG GT - CEMIG GERAÇÃO E TRANSMISSÃO S.A,"345/13,8",1,-48.2242,-20.0399,2086.4,278563,242519,28770,6548,726,36044,33.4,1.7
+subestacao,SE Marechal Rondon,,,MRTE - MARECHAL RONDON TRANSMISSORA DE ENERGIA SA,440/138,0,-51.6388,-20.7963,2414.3,270945,269089,241,863,753,1857,41.6,1.6
+subestacao,SE Piracicaba,,,CPFL PIRACICABA - CPFL TRANSMISSÃO PIRACICABA SA,440/138,1,-47.5712,-22.6344,2849.6,267331,216832,4113,30576,15810,50499,22.8,1.6
+subestacao,SE Taguaruçu,,,DUKE ENERGY - Duke Energy Internacional - Geração Paranapanema,440/138,1,-52.0009,-22.5386,6646.9,249693,238918,4719,5014,1043,10775,24,1.5
+subestacao,SE Poços de Caldas,,,FURNAS - Furnas Centrais Elétricas S.A.,500/345/138,0,-46.6135,-21.7991,4618.8,249462,138724,45324,58419,6995,110738,44.5,1.5
+subestacao,SE Bauru,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/138,1,-49.096,-22.2828,6995.7,226914,188419,6925,22659,8910,38494,42.8,1.3
+subestacao,SE Mogi Mirim 3,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/138,1,-47.0656,-22.4199,3640.6,206683,129347,43354,24433,9549,77336,26.2,1.2
+subestacao,SE UHE Jaguara,,,CEMIG GT - CEMIG GERAÇÃO E TRANSMISSÃO S.A,"345/138/13,8",1,-47.4381,-20.0191,1484.7,202941,186097,6633,9508,704,16844,34.7,1.2
+subestacao,SE Capivara,,,DUKE ENERGY - Duke Energy Internacional - Geração Paranapanema,"440/138/14,4",1,-51.3603,-22.6577,4088.5,198461,167942,19819,6316,4384,30519,26.8,1.2
+subestacao,SE Botucatu,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/138,1,-48.4376,-22.9505,5501.9,173523,87919,11488,69783,4333,85605,29.4,1
+subestacao,SE Capão Bonito,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"230/138/13,8",1,-48.3431,-23.9867,14480.8,171700,7206,135709,25030,3755,164494,34.8,1
+subestacao,SE Salto Grande,,,DUKE ENERGY - Duke Energy Internacional - Geração Paranapanema,230/88,1,-49.9988,-22.9053,2786.8,167352,104938,57503,2319,2592,62414,20,1
+subestacao,SE Chavantes,,,DUKE ENERGY - Duke Energy Internacional - Geração Paranapanema,230/88,1,-49.7287,-23.126,1344.5,156376,138789,14990,1137,1459,17586,17.8,0.9
+subestacao,SE Itaberá,,,FURNAS - Furnas Centrais Elétricas S.A.,750,1,-49.132,-23.9513,4799.6,156372,15229,133115,5481,2547,141143,31.7,0.9
+subestacao,SE Avaré Nova,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230,1,-48.9329,-23.0626,3601.4,140094,76600,41980,18447,3066,63494,22.7,0.8
+subestacao,SE Jurumirim,,,DUKE ENERGY - Duke Energy Internacional - Geração Paranapanema,230/138,1,-49.2303,-23.2086,2359.5,121362,63859,46802,8803,1899,57504,24.4,0.7
+subestacao,SE Santa Bárbara d´Oeste,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/138/13,8",1,-47.4182,-22.7259,885.1,111164,89150,2479,5974,13561,22014,14.6,0.7
+subestacao,SE Sumaré,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/138/13,8",1,-47.2867,-22.8669,969.5,95248,58724,1673,15309,19542,36524,15.2,0.6
+subestacao,SE Piraju,,,CBA - Companhia Brasileira de Aluminio,230,1,-49.3783,-23.1543,2575,88544,44181,34821,8167,1376,44364,23.3,0.5
+subestacao,SE Estreito,,,LTT - LT Triângulo S.A.,500/345,0,-47.1752,-20.2605,1433,75061,59151,8352,2747,4810,15909,49.7,0.4
+subestacao,SE Replan,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/138,1,-47.1125,-22.735,638.6,74151,58071,2721,5863,7496,16080,11.9,0.4
+subestacao,SE Salto,,,IESJ - Interligação Elétrica Serra do Japi S.A.,440/88,1,-47.2406,-23.1789,924.5,67219,41883,2797,9200,13338,25335,16.7,0.4
+subestacao,SE Toyota,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"230/13,8",1,-47.4572,-23.3799,1338.8,61585,23853,5147,27414,5171,37732,20.1,0.4
+subestacao,SE UHE Ilha Solteira,,,RPE - RIO PARANÁ ENERGIA,"440/138/14,4/13,8",0,-51.3704,-20.3813,1903.4,57591,54701,886,740,1265,2891,30.1,0.3
+subestacao,SE Araraquara CTP,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/138,1,-48.2639,-21.7827,688.4,56758,51718,2181,2763,95,5040,26.4,0.3
+subestacao,SE UHE Luiz Carlos Barreto de Carvalho (Estreito),,,FURNAS - Furnas Centrais Elétricas S.A.,"345/13,8",1,-47.2847,-20.155,1071,47506,28301,13638,5433,135,19206,43.4,0.3
+subestacao,SE Campinas,,,FURNAS - Furnas Centrais Elétricas S.A.,500/345/138,1,-47.0049,-22.7737,1308.9,45893,3358,4183,24760,13591,42534,21.9,0.3
+subestacao,SE Itatiba,,,TRANSENERGIA SP - Transenergia São Paulo S.A.,500/138,1,-46.905,-22.957,1011.6,35113,27,4537,16944,13605,35087,15.9,0.2
+subestacao,SE Oeste,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/88,1,-47.4122,-23.4472,1356.3,35075,354,9314,4181,21226,34720,21.9,0.2
+subestacao,SE Atibaia II,,,IEP - INTERLIGAÇÃO ELÉTRICA PINHEIROS S.A,345/138,1,-46.5573,-23.0471,1511.6,33689,50,7832,16808,8998,33639,26.2,0.2
+subestacao,SE Itararé II,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/138,1,-49.3128,-24.1025,3180.3,32829,0,27343,4566,919,32829,21.5,0.2
+subestacao,SE Jupiá,,,RPE - RIO PARANÁ ENERGIA,440/138,0,-51.6331,-20.7831,373.5,23623,22841,531,103,149,782,14.7,0.1
+subestacao,SE Bom Jardim,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/138/88/13,8",1,-46.9902,-23.1518,841.6,23436,9,1279,2090,20058,23427,11.9,0.1
+subestacao,SE Andirá Leste,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,230/138,0,-50.193,-23.0773,141.7,23155,17452,5391,298,14,5702,20.2,0.1
+subestacao,SE Leste,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.4685,-23.5955,203.2,20718,0,0,265,20453,20718,5.7,0.1
+subestacao,SE Xavantes,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345,1,-46.7234,-23.6581,186,19216,0,0,3,19213,19216,5.8,0.1
+subestacao,SE Cabreuva,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/230/138/13,8",1,-47.1162,-23.2775,427,17792,4,305,16334,1148,17788,5.8,0.1
+subestacao,SE Ramom Reberte Filho,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.5236,-23.5794,110.1,16301,0,0,0,16301,16301,4.3,0.1
+subestacao,SE Nordeste,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.3813,-23.4542,267.6,15957,0,0,238,15719,15957,6.7,0.1
+subestacao,SE Marechal Mascarenhas de Morais (Peixoto),,,FURNAS - Furnas Centrais Elétricas S.A.,345/138,0,-47.0694,-20.2862,287.4,14890,12739,1671,448,32,2151,51.9,0.1
+subestacao,SE Sul,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.521,-23.6994,260.6,13897,0,0,4,13894,13897,5.5,0.1
+subestacao,SE Norte,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.5583,-23.4831,124.6,12965,0,0,0,12965,12965,4.9,0.1
+subestacao,SE Bandeirantes,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"345/88/34,5",1,-46.6922,-23.5989,82.6,12735,0,0,1,12735,12735,3.7,0.1
+subestacao,SE Miguel Reale,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88/20,1,-46.6253,-23.5625,80,12576,0,0,0,12576,12576,4.2,0.1
+subestacao,SE Jaguara,,,CEMIG GT - CEMIG GERAÇÃO E TRANSMISSÃO S.A,500/345,1,-47.4383,-20.0128,129.5,12025,11783,187,31,24,242,30.4,0.1
+subestacao,SE Anhanguera,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/230/88,1,-46.7683,-23.4932,244.1,11842,0,0,15,11826,11842,7,0.1
+subestacao,SE Milton Fornasaro,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/88,1,-46.752,-23.5282,82.6,11059,0,0,1,11058,11059,4.7,0.1
+subestacao,SE Jandira,,,IESJ - Interligação Elétrica Serra do Japi S.A.,440/88,1,-46.9066,-23.563,390.5,10986,0,13,0,10972,10986,6.6,0.1
+subestacao,SE São José dos Campos,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-45.8896,-23.2018,3392.9,9851,0,16,2909,6926,9851,14.7,0.1
+subestacao,SE Pirituba,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-46.7094,-23.501,95.8,9642,0,0,3,9639,9642,4.3,0.1
+subestacao,SE Piratininga,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-46.6774,-23.6987,68.1,9305,0,0,1,9304,9305,5,0.1
+subestacao,SE Centro - CTR,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88/20,1,-46.6483,-23.5368,57.7,9039,0,0,0,9039,9039,3.3,0.1
+subestacao,SE Interlagos,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/230,1,-46.6814,-23.7101,196.4,8370,0,1,12,8358,8370,5.7,0
+subestacao,SE Taubaté,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,500/440/230/138,1,-45.5853,-23.0655,3565.9,8352,0,1551,1255,5547,8352,19,0
+subestacao,SE Rosana,,,-,230/138,0,-52.8756,-22.6006,1186.4,7958,4349,3307,241,61,3609,29.9,0
+subestacao,SE Guarulhos,,,FURNAS - Furnas Centrais Elétricas S.A.,345,1,-46.5854,-23.4424,464.8,7840,0,2,52,7786,7840,6.3,0
+subestacao,SE Carbocloro,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"230/138/13,8",1,-46.4143,-23.8671,330.2,7788,0,0,0,7788,7788,15.3,0
+subestacao,SE Fernão Dias,,,MSGT - MATA DE SANTA GENEBRA TRANSMISSAO S.A.,500/440,1,-46.5147,-23.0579,1431.5,7664,0,2499,2796,2369,7664,19.5,0
+subestacao,SE Santo Angelo,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/345/138,1,-46.2539,-23.5861,225.5,7118,0,1,3763,3355,7118,6.9,0
+subestacao,SE Lorena,,,IE ITAPURA - INTERLIGAÇÃO ELÉTRICA ITAPURA S.A.,500/230,1,-45.0876,-22.7654,1166.2,6901,0,756,5522,623,6901,10.5,0
+subestacao,SE Embu-Guaçu,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/345/138/16/13,8",1,-46.7998,-23.8447,3926.8,4883,0,3,120,4760,4883,21.1,0
+subestacao,SE GV do Brasil,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"230/34,5/13,8",1,-45.4108,-22.9223,1294.6,4510,0,1619,1875,1016,4510,10.2,0
+subestacao,SE Aparecida,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-45.255,-22.8691,1990.8,4263,0,1690,1951,623,4263,13.4,0
+subestacao,SE Ibiúna,,,FURNAS - Furnas Centrais Elétricas S.A.,600/500/345/20,1,-47.1047,-23.667,3164.8,3650,0,1036,86,2528,3650,9.1,0
+subestacao,SE Henry Borden,,,EMAE - Empresa Metropolitana de Águas e Energia S.A,"230/13,8",1,-46.4507,-23.8777,556.4,3539,0,0,3,3536,3539,15.8,0
+subestacao,SE Mogi das Cruzes,,,FURNAS - Furnas Centrais Elétricas S.A.,345/230,1,-46.1696,-23.5037,889.7,3302,0,1,1436,1865,3302,9.8,0
+subestacao,SE Centro - CTT,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230,1,-46.7214,-23.513,21,3292,0,0,0,3292,3292,2.5,0
+subestacao,SE Tijuco Preto,,,FURNAS - Furnas Centrais Elétricas S.A.,750/500/345,1,-46.2732,-23.7096,651,3175,0,1,2420,754,3175,6.7,0
+subestacao,SE CBA 2,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/230,1,-47.2964,-23.5408,1542.8,3147,16,1064,302,1765,3131,20.9,0
+subestacao,SE CBA 1,,,-,230,1,-47.2643,-23.5377,288.5,3112,1,520,1376,1216,3111,9,0
+subestacao,SE Gerdau SP,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"440/33/13,8",1,-47.085,-23.4382,422.6,2951,0,168,1600,1183,2951,9.3,0
+subestacao,SE Edgard de Souza,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-46.9078,-23.4532,435.8,2932,0,2,32,2898,2932,6.5,0
+subestacao,SE Itapeti,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,"345/230/88/13,8",1,-46.1766,-23.5473,1397.2,2137,0,1,1443,692,2137,18.2,0
+subestacao,SE Água Azul,,,AGUA AZUL SPE - SUBESTACAO AGUA AZUL SPE S.A.,440/138,1,-46.4014,-23.375,821.1,2127,0,6,16,2104,2127,6.4,0
+subestacao,SE Petrobras Cubatão / SE UTE Euzébio da Rocha,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista / PETROBRAS - Petroleo Brasileiro S.A,"230 / 230/13,8",1,-46.4314,-23.8746,62.4,1881,0,0,0,1881,1881,9,0
+subestacao,SE Nova Porto Primavera,,,PORTO PRIMAVERA - Porto Primavera Transmissora de Energia S/A.,440/230,1,-52.965,-22.4878,509.3,1395,137,687,257,314,1258,16.1,0
+subestacao,SE Solvay,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,440/88,1,-46.3746,-23.769,238.2,1366,0,0,10,1356,1366,6.3,0
+subestacao,SE Piratininga 2,,,IEP - INTERLIGAÇÃO ELÉTRICA PINHEIROS S.A,345/88,1,-46.6827,-23.7056,15.7,1337,0,0,1,1336,1337,2.9,0
+subestacao,SE Mogi,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-46.182,-23.5484,59,1154,0,0,92,1061,1154,3.1,0
+subestacao,SE Cachoeira Paulista,,,FURNAS - Furnas Centrais Elétricas S.A.,500/138,1,-45.0367,-22.6299,578.2,847,0,41,652,154,847,9.5,0
+subestacao,SE Ibiporã,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,"230/138/34,5",0,-51.077,-23.2918,15.1,780,283,490,2,5,497,50,0
+subestacao,SE UTE Fernando Gasparian / SE UTE Piratininga,,,PETROBRAS - Petroleo Brasileiro S.A / BSE - Baixada Santista Energia S.A.,"230/13,8 / 230",1,-46.6787,-23.6993,3.9,603,0,0,0,603,603,2.3,0
+subestacao,SE Baixada Santista,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,345/230/138/88,1,-46.4204,-23.8596,55,98,0,0,0,98,98,3,0
+subestacao,SE Santa Cabeça,,,CTEEP - Companhia de Transmissão de Energia Elétrica Paulista,230/88,1,-44.9293,-22.6557,1329.5,53,0,2,42,9,53,13.3,0
+subestacao,SE Angra dos Reis,,,FURNAS - Furnas Centrais Elétricas S.A.,500/138,0,-44.4559,-23.0069,955.8,6,0,1,5,0,6,39.6,0
+subestacao,SE Ilha Solteira 2,,,ITATIM - Linhas de Transmissão Itatim Ldta,440/230,0,-51.4172,-20.3198,14.3,2,0,0,1,0,2,58.4,0
+subestacao,SE Itajubá 3,,,CEMIG - Companhia Energética de Minas Gerais,500/138,0,-45.5158,-22.4682,413.2,0,0,0,0,0,0,25.7,0
+subestacao,SE Jaguariaíva,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,"230/138/69/34,5",0,-49.6946,-24.2338,0.8,0,0,0,0,0,0,0,0
+subestacao,SE Nilo Peçanha,,,LIGHT GT - LIGHT ENERGIA S.A,230/138,0,-43.8639,-22.6908,42.9,0,0,0,0,0,0,0,0
+subestacao,SE Parigot Souza,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,230/138,0,-48.762,-25.253,3060.6,0,0,0,0,0,0,0,0
+subestacao,SE Posto Fiscal,,,COPEL-GT - COPEL GERAÇÃO E TRANSMISSÃO S.A,"230/138/13,8",0,-48.5642,-25.553,511.4,0,0,0,0,0,0,0,0
+subestacao,SE Resende,,,FURNAS - Furnas Centrais Elétricas S.A.,500/138,0,-44.5151,-22.5008,872.3,0,0,0,0,0,0,0,0
+subestacao,SE Cimentos Portland,,,-,230,0,-49.3178,-25.2008,81.9,0,0,0,0,0,0,0,0

@@ -1,0 +1,6 @@
+[
+ { "tema": "nitrogenio", "numero": 81, "pasta": "081-nitrogenio-dos-dejetos-sp", "base": "sp_nitrogenio_dejetos_2024", "data": "2026-12-11", "categoria": "uso-do-solo" },
+ { "tema": "fosforo", "numero": 82, "pasta": "082-fosforo-dos-dejetos-sp", "base": "sp_fosforo_dejetos_2024", "data": "2026-12-12", "categoria": "uso-do-solo" },
+ { "tema": "balanco", "numero": 83, "pasta": "083-dejetos-e-colheitas-sp", "base": "sp_dejetos_e_colheitas_2024", "data": "2026-12-13", "categoria": "uso-do-solo" },
+ { "tema": "digestato", "numero": 84, "pasta": "084-digestato-do-biogas-sp", "base": "sp_digestato_biogas", "data": "2026-12-14", "categoria": "energia" }
+]
