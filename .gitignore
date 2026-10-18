@@ -25,3 +25,6 @@ mapas/043-usinas-por-fonte-brasil/dados/br_usinas_por_fonte.csv
 mapas/*/dados/*.tif.zip
 # CSV grande vai para a release agua-sp-2026
 mapas/037-drenagem-sp/dados/sp_drenagem.csv
+
+# Microdados brutos do IBGE (Censo, SP): 1,5 GB, só para uso local; nunca vão ao repositório
+35_SP/
