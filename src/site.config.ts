@@ -185,6 +185,16 @@ export const COLECOES = {
       resumo: 'São Paulo’s biomethane potential on the ground: per km² and per person, the leading source outside sugarcane, the distance to gas pipelines and the power grid, and what already operates.',
     },
   },
+  'animal-sp': {
+    pt: {
+      titulo: 'Leite, ovos, mel e peixe',
+      resumo: 'O que os animais produzem em São Paulo, município a município: os ovos de Bastos, o leite, o mel, a tilápia das represas e quanto vale cada um.',
+    },
+    en: {
+      titulo: 'Milk, eggs, honey and fish',
+      resumo: 'What animals produce in São Paulo, municipality by municipality: the eggs of Bastos, milk, honey, tilapia from the reservoirs and what each is worth.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
