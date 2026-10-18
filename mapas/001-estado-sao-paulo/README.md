@@ -100,6 +100,7 @@ downloads:
     tamanho: "0,4 MB"
 
 versao: "1.0.0"
+doi: 10.5281/zenodo.23450688
 discussoes: []
 ---
 
