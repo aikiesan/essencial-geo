@@ -4,6 +4,7 @@ Coleção «Energia elétrica no Brasil» — prepara os dados de uma prancha (u
     .venv-geo/Scripts/python scripts/colecoes/energia-eletrica/preparar.py base
     .venv-geo/Scripts/python scripts/colecoes/energia-eletrica/preparar.py transmissao
     .venv-geo/Scripts/python scripts/colecoes/energia-eletrica/preparar.py usinas
+    .venv-geo/Scripts/python -I scripts/colecoes/energia-eletrica/preparar.py solar
 
 Saídas: mapas/<pasta>/dados/<base>.gpkg.zip (com estilos do QGIS), <base>.csv
 e scripts/colecoes/cache/energia-eletrica-<tema>.json (para a prancha e a ficha).
@@ -25,14 +26,17 @@ from comum import (  # noqa: E402
     AREA_BR, DADOS, GEO, MINERAIS, RAIZ, TINTA, estilo_contorno, estilo_regras, gravar_cache, gravar_estilos, igual,
     km_geodesico, linha, marcador, para_d3, siga, zipar,
 )
-from estilos import qml, rotulo, simbolo, unico  # noqa: E402
+from estilos import preenchimento, qml, rotulo, simbolo, unico  # noqa: E402
 
 PASTAS = {
     "transmissao": "042-transmissao-brasil",
     "usinas": "043-usinas-por-fonte-brasil",
+    "solar": "044-geracao-solar-distribuida-brasil",
 }
 MALHA_BR = RAIZ / "scripts" / "estados" / "cache" / "brasil_0_004.gpkg"
 INFRA_REDE = DADOS / "shapefiles" / "mapbiomas_infra"
+GD_ZIP = RAIZ / "scripts" / "colecoes" / "cache" / "downloads" / "aneel_gd" / "empreendimento-geracao-distribuida.csv"  # é um ZIP
+CENSO = DADOS / "raw" / "ibge_censo2022" / "Agregados_por_municipios_basico_BR.csv"
 REGIOES = {"1": "Norte", "2": "Nordeste", "3": "Sudeste", "4": "Sul", "5": "Centro-Oeste"}
 PAPEL_ = "#ffffff"
 
@@ -218,8 +222,143 @@ def usinas() -> None:
     print(u.head(8)[["nome", "fonte_mapa", "potencia_kw", "uf", "fase"]].to_string())
     print(por_uf.head(6), "fora", u["uf_mapa"].isna().sum())
 
+# ------------------------------------------------------------------ 3/3 geração solar distribuída
+# Watts de GD solar por habitante: limites das classes e cores (do creme ao barro).
+CLASSES_W = [50, 100, 200, 400, 800, 1600]
+CORES_W = ["#f3eedf", "#ece0b8", "#e3c98a", "#d7ab5c", "#c58739", "#a8642a", "#7c4423"]
+CLASSES_CONSUMO = [  # (classe da ANEEL, rótulo, rótulo EN)
+    ("Residencial", "Residencial", "Residential"), ("Comercial", "Comercial", "Commercial"), ("Rural", "Rural", "Rural"),
+    ("Industrial", "Industrial", "Industrial"), ("Poder Público", "Poder público", "Public authorities"),
+]
+
+
+def rotulo_w(i: int, en: bool = False) -> str:
+    sep = "," if en else "."
+    f = lambda v: f"{v:,}".replace(",", sep)  # noqa: E731
+    if i == 0:
+        return f"less than {CLASSES_W[0]}" if en else f"menos de {CLASSES_W[0]}"
+    if i == len(CLASSES_W):
+        return f"{f(CLASSES_W[-1])} or more" if en else f"{f(CLASSES_W[-1])} ou mais"
+    return f"{f(CLASSES_W[i - 1])} to {f(CLASSES_W[i])}" if en else f"{f(CLASSES_W[i - 1])} a {f(CLASSES_W[i])}"
+
+
+def ler_gd() -> pd.DataFrame:
+    """Empreendimentos de GD da ANEEL (um por linha). Só os campos agregáveis: sem CPF/CNPJ, nomes nem CEP."""
+    import zipfile
+
+    cols = ["AnmPeriodoReferencia", "CodMunicipioIbge", "SigUF", "DscClasseConsumo", "SigTipoGeracao", "DscPorte",
+            "MdaPotenciaInstaladaKW", "QtdUCRecebeCredito", "DthAtualizaCadastralEmpreend", "DscModalidadeHabilitado"]
+    z = zipfile.ZipFile(GD_ZIP)
+    with z.open(z.infolist()[0]) as f:
+        d = pd.concat(pd.read_csv(f, sep=";", usecols=cols, dtype=str, chunksize=500_000, encoding="utf-8"), ignore_index=True)
+    d["kw"] = pd.to_numeric(d["MdaPotenciaInstaladaKW"].str.replace(",", ".", regex=False))
+    d["uc_credito"] = pd.to_numeric(d["QtdUCRecebeCredito"], errors="coerce").fillna(0)
+    d["ano"] = pd.to_datetime(d["DthAtualizaCadastralEmpreend"], errors="coerce").dt.year
+    return d.drop(columns=["MdaPotenciaInstaladaKW", "QtdUCRecebeCredito"])
+
+
+def solar() -> None:
+    import numpy as np
+
+    d = ler_gd()
+    periodo = d["AnmPeriodoReferencia"].iloc[0]
+    kw_gd_total = float(d["kw"].sum())
+    u = d[d["SigTipoGeracao"] == "UFV"].copy()
+    u["remoto"] = u["DscModalidadeHabilitado"] != "Geracao na propria UC"
+    g = u.groupby("CodMunicipioIbge")
+    mun_gd = pd.DataFrame({
+        "n_sistemas": g.size(), "kw_total": g["kw"].sum(),
+        "kw_micro": u[u["DscPorte"] == "Microgeracao"].groupby("CodMunicipioIbge")["kw"].sum(),
+        "kw_mini": u[u["DscPorte"] == "Minigeracao"].groupby("CodMunicipioIbge")["kw"].sum(),
+        "kw_residencial": u[u["DscClasseConsumo"] == "Residencial"].groupby("CodMunicipioIbge")["kw"].sum(),
+        "kw_remoto": u[u["remoto"]].groupby("CodMunicipioIbge")["kw"].sum(),
+        "uc_credito": g["uc_credito"].sum(),
+    }).fillna(0)
+
+    censo = pd.read_csv(CENSO, sep=";", encoding="latin1", dtype=str, usecols=["CD_MUN", "v0001"])
+    censo["pop_2022"] = pd.to_numeric(censo["v0001"])
+    m = gpd.read_file(MALHA_BR, engine="pyogrio").set_crs(GEO, allow_override=True)
+    m = m[m["CD_MUN"].str.match(r"^\d{7}$") & m["CD_RGINT"].notna()][["CD_MUN", "NM_MUN", "SIGLA_UF", "geometry"]]
+    m = m.merge(censo[["CD_MUN", "pop_2022"]], on="CD_MUN", how="left").merge(mun_gd, left_on="CD_MUN", right_index=True, how="left")
+    for c in mun_gd.columns:
+        m[c] = m[c].fillna(0)
+    m["n_sistemas"] = m["n_sistemas"].astype(int)
+    m["uc_credito"] = m["uc_credito"].astype(int)
+    for c in ["kw_total", "kw_micro", "kw_mini", "kw_residencial", "kw_remoto"]:
+        m[c] = m[c].round(2)
+    m["w_hab"] = (m["kw_total"] * 1000 / m["pop_2022"]).round(1)
+    m["classe"] = np.where(m["w_hab"].isna(), -1, np.digitize(m["w_hab"].fillna(0), CLASSES_W)).astype(int)
+    m["faixa_w_hab"] = [rotulo_w(c) if c >= 0 else "sem população no Censo 2022" for c in m["classe"]]
+    fora_malha = sorted(set(mun_gd.index) - set(m["CD_MUN"]))
+    sem_pop = m[m["pop_2022"].isna()]
+
+    ufs, _, lim = ufs_brasil()
+    regras = [(igual("classe", i), rotulo_w(i) + " W por habitante", preenchimento(c, "#ffffff", 0.05)) for i, c in enumerate(CORES_W)]
+    regras.append((igual("classe", -1), "sem população no Censo 2022", preenchimento("#d5d9dd", "#ffffff", 0.05)))
+    estilos = {
+        "municipios": [("w_hab", "Watts de GD solar por habitante", estilo_regras("poligono", regras), True)],
+        "ufs": [("ufs", "Limites estaduais", estilo_contorno("#5c6166", 0.3, "SIGLA_UF"), True)],
+        "limite_nacional": [("limite", "Limite do país", estilo_contorno(TINTA, 0.6), True)],
+    }
+    cols = ["CD_MUN", "NM_MUN", "SIGLA_UF", "pop_2022", "n_sistemas", "kw_total", "kw_micro", "kw_mini", "kw_residencial",
+            "kw_remoto", "uc_credito", "w_hab", "classe", "faixa_w_hab"]
+    m = m[cols + ["geometry"]].sort_values("CD_MUN").reset_index(drop=True)
+    tam = gravar("solar", "br_geracao_distribuida", {"municipios": m, "ufs": ufs, "limite_nacional": lim}, estilos,
+                 m.drop(columns="geometry"))
+
+    com_pop = m[m["pop_2022"].notna()]
+    grandes = com_pop[com_pop["pop_2022"] >= 100_000]
+    por_classe = [{"classe": i, "rotulo": rotulo_w(i), "rotulo_en": rotulo_w(i, True), "cor": c,
+                   "municipios": int((m["classe"] == i).sum()), "pop": int(com_pop.loc[com_pop["classe"] == i, "pop_2022"].sum())}
+                  for i, c in enumerate(CORES_W)]
+    consumo = []
+    for k, r, en in CLASSES_CONSUMO:
+        consumo.append({"classe": k, "rotulo": r, "rotulo_en": en, "kw": float(u.loc[u["DscClasseConsumo"] == k, "kw"].sum()),
+                        "n": int((u["DscClasseConsumo"] == k).sum())})
+    outras = u[~u["DscClasseConsumo"].isin([k for k, _, _ in CLASSES_CONSUMO])]
+    consumo.append({"classe": "outras", "rotulo": "Outras", "rotulo_en": "Other", "kw": float(outras["kw"].sum()), "n": len(outras)})
+    anos = u[u["ano"].between(2015, 2026)].groupby("ano")["kw"].sum()
+    pos = m.set_index("CD_MUN").geometry.to_crs(AREA_BR).representative_point().to_crs(GEO)
+    ponto = lambda cd: [round(pos[cd].x, 3), round(pos[cd].y, 3)]  # noqa: E731
+
+    def reg(r):
+        return {"cd": r.CD_MUN, "nome": r.NM_MUN, "uf": r.SIGLA_UF, "pop": int(r.pop_2022), "kw": float(r.kw_total),
+                "n": int(r.n_sistemas), "w_hab": float(r.w_hab), "coord": ponto(r.CD_MUN),
+                "remoto_pct": round(float(r.kw_remoto / r.kw_total * 100), 1) if r.kw_total else 0.0}
+
+    topo = com_pop.sort_values("w_hab", ascending=False)
+    uf_pop = com_pop.groupby("SIGLA_UF").agg(kw=("kw_total", "sum"), pop=("pop_2022", "sum"))
+    uf_pop["w_hab"] = uf_pop["kw"] * 1000 / uf_pop["pop"]
+    gravar_cache("energia-eletrica-solar", {
+        "municipios": para_d3(m, ["CD_MUN", "classe"], tol=0.012, casas=3),
+        "classes": por_classe,
+        "periodo": periodo,
+        "n": int(len(u)), "kw": float(u["kw"].sum()), "kw_gd_total": kw_gd_total, "n_gd_total": int(len(d)),
+        "uc_credito": int(u["uc_credito"].sum()),
+        "kw_micro": float(u.loc[u["DscPorte"] == "Microgeracao", "kw"].sum()),
+        "kw_mini": float(u.loc[u["DscPorte"] == "Minigeracao", "kw"].sum()),
+        "n_mini": int((u["DscPorte"] == "Minigeracao").sum()),
+        "kw_remoto": float(u.loc[u["remoto"], "kw"].sum()),
+        "w_hab_brasil": float(com_pop["kw_total"].sum() * 1000 / com_pop["pop_2022"].sum()),
+        "mediana_w_hab": float(com_pop["w_hab"].median()),
+        "municipios_com": int((m["n_sistemas"] > 0).sum()), "municipios_total": int(len(m)),
+        "consumo": consumo,
+        "anos": [{"ano": int(a), "kw": float(v)} for a, v in anos.items()],
+        "topo": [reg(r) for r in topo.head(10).itertuples()],
+        "topo_grandes": [reg(r) for r in grandes.sort_values("w_hab", ascending=False).head(6).itertuples()],
+        "base_grandes": [reg(r) for r in grandes.sort_values("w_hab").head(6).itertuples()],
+        "maiores_kw": [reg(r) for r in com_pop.sort_values("kw_total", ascending=False).head(6).itertuples()],
+        "ufs": [{"uf": k, "kw": float(v.kw), "w_hab": round(float(v.w_hab), 1)} for k, v in uf_pop.sort_values("w_hab", ascending=False).iterrows()],
+        "fora_malha": fora_malha, "kw_fora_malha": float(mun_gd.loc[fora_malha, "kw_total"].sum()) if fora_malha else 0.0,
+        "sem_pop": [{"cd": r.CD_MUN, "nome": r.NM_MUN, "uf": r.SIGLA_UF, "kw": float(r.kw_total)} for r in sem_pop.itertuples()],
+        "tamanhos": tam,
+    })
+    print(periodo, len(u), round(u["kw"].sum() / 1e6, 2), "GW;", "fora da malha", fora_malha, "sem pop", len(sem_pop), tam)
+    print(pd.DataFrame(por_classe)[["rotulo", "municipios", "pop"]].to_string())
+    print(topo.head(5)[["NM_MUN", "SIGLA_UF", "pop_2022", "kw_total", "w_hab", "kw_remoto"]].to_string())
+
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("tema", choices=["base", "transmissao", "usinas"])
-    {"base": base, "transmissao": transmissao, "usinas": usinas}[ap.parse_args().tema]()
+    ap.add_argument("tema", choices=["base", "transmissao", "usinas", "solar"])
+    {"base": base, "transmissao": transmissao, "usinas": usinas, "solar": solar}[ap.parse_args().tema]()

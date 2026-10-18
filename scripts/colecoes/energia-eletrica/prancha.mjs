@@ -2,7 +2,7 @@
 /**
  * Coleção «Energia elétrica no Brasil» — desenha uma prancha a partir do cache de preparar.py (uso interno).
  *
- *   node scripts/colecoes/energia-eletrica/prancha.mjs transmissao|usinas
+ *   node scripts/colecoes/energia-eletrica/prancha.mjs transmissao|usinas|solar
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -192,8 +192,93 @@ async function usinas() {
   });
 }
 
+/* ------------------------------------------------------------------ 3/3 geração solar distribuída */
+async function solar() {
+  const c = await ler('solar');
+  const br = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'cache', 'brasil-base.json'), 'utf8'));
+  const COR = Object.fromEntries(c.classes.map((k) => [k.classe, k.cor]));
+  const topo = c.topo[0];
+  const base = c.base_grandes[0];
+  const res = c.consumo.find((k) => k.classe === 'Residencial');
+  const gw = (kw, casas = 1) => nf(kw / 1e6, casas);
+  const mesMax = c.periodo;
+  return () => ({
+    layout: 'um',
+    motivo: 'energia',
+    serie: serie(3),
+    titulo: () => L('Geração solar distribuída', 'Distributed solar generation'),
+    subtitulo: () => L('O sol que mora nos telhados', 'The sun that lives on the rooftops'),
+    descricao: () => L(
+      `${nf(c.n)} sistemas fotovoltaicos de micro e minigeração distribuída registrados na ANEEL (${mesMax}), em watts por habitante do Censo 2022`,
+      `${nf(c.n)} photovoltaic micro- and mini-generation systems registered with ANEEL (${mesMax}), in watts per inhabitant of the 2022 Census`),
+    mapa: () => ({
+      preencher: () => NEUTRO,
+      bordaMunicipio: 0,
+      semRgint: true,
+      bordaEstado: 2,
+      tamanhoUnidade: 12,
+      camadas: [
+        { feats: c.municipios.features, cor: (f) => COR[f.properties.classe] ?? '#d5d9dd', borda: 'none', largura: 0 },
+        { feats: br.ufs.features, cor: 'none', borda: '#4a4e52', largura: 0.9, opacidade: 1 },
+      ],
+      chamadas: [{
+        coord: topo.coord, dx: -330, dy: 300,
+        titulo: L(`${nf(topo.w_hab, 0)} W POR HABITANTE`, `${nf(topo.w_hab, 0)} W PER INHABITANT`),
+        linhas: L([`${topo.nome} (${topo.uf}): ${nf(topo.kw / 1000, 1)} MW`, `para ${nf(topo.pop)} moradores, o maior do país`],
+          [`${topo.nome} (${topo.uf}): ${nf(topo.kw / 1000, 1)} MW`, `for ${nf(topo.pop)} residents, the highest in Brazil`]),
+      }, {
+        coord: base.coord, dx: 230, dy: 80,
+        titulo: L(`${nf(base.w_hab, 0)} W POR HABITANTE`, `${nf(base.w_hab, 0)} W PER INHABITANT`),
+        linhas: L([`${base.nome} (${base.uf}), o menor entre`, 'as cidades de mais de 100 mil habitantes'],
+          [`${base.nome} (${base.uf}), the lowest among`, 'towns of more than 100,000 people']),
+      }],
+    }),
+    numeros: () => [
+      [`${gw(c.kw)} GW`, [L('de potência instalada', 'of installed capacity'), L('em telhados e terrenos', 'on roofs and plots')]],
+      [`${nf(c.n / 1e6, 2)} mi`, [L('de sistemas solares', 'solar systems'), L(`em ${nf(c.municipios_com)} municípios`, `in ${nf(c.municipios_com)} municipalities`)]],
+      [`${nf(c.w_hab_brasil, 0)} W`, [L('por habitante,', 'per inhabitant,'), L('na média do país', 'national average')]],
+      [`${nf((res.kw / c.kw) * 100, 0)} %`, [L('da potência está', 'of capacity is'), L('em residências', 'in homes')]],
+    ],
+    painel: (y) => {
+      const s = [rotuloPainel(L('WATTS POR HABITANTE · MUNICÍPIOS', 'WATTS PER INHABITANT · MUNICIPALITIES'), y)];
+      y += 22;
+      const passo = 27;
+      const maxM = Math.max(...c.classes.map((k) => k.municipios));
+      for (const k of c.classes) {
+        s.push(`<rect x="0" y="${y}" width="34" height="${passo - 8}" fill="${k.cor}" stroke="#c9ced3" stroke-width=".8"/>`);
+        s.push(`<text x="48" y="${y + passo - 12}" font-family="${SERIF}" font-size="16">${esc(L(k.rotulo, k.rotulo_en))}</text>`);
+        const wb = (k.municipios / maxM) * (LP - 290);
+        s.push(`<rect x="200" y="${y + 5}" width="${f1(wb)}" height="${passo - 18}" fill="${k.cor}" stroke="#a8642a" stroke-width=".5"/>`);
+        s.push(`<text x="${f1(208 + wb)}" y="${y + passo - 12}" font-family="${MONO}" font-size="12.5">${nf(k.municipios)}</text>`);
+        y += passo;
+      }
+      y += 30;
+      s.push(rotuloPainel(L('GW REGISTRADOS POR ANO', 'GW REGISTERED PER YEAR'), y));
+      y += 20;
+      const hMax = 96;
+      const maxA = Math.max(...c.anos.map((a) => a.kw));
+      const bw = LP / c.anos.length;
+      c.anos.forEach((a, i) => {
+        const h = (a.kw / maxA) * hMax;
+        const x = i * bw;
+        const ultimo = i === c.anos.length - 1;
+        s.push(`<rect x="${f1(x + 3)}" y="${f1(y + hMax - h)}" width="${f1(bw - 6)}" height="${f1(h)}" fill="${ultimo ? PAPEL : '#c58739'}" stroke="#a8642a" stroke-width="${ultimo ? 1.2 : 0.5}"${ultimo ? ' stroke-dasharray="3 2"' : ''}/>`);
+        if (a.kw === maxA || ultimo || i === 7) s.push(`<text x="${f1(x + bw / 2)}" y="${f1(y + hMax - h - 6)}" text-anchor="middle" font-family="${MONO}" font-size="11.5">${gw(a.kw)}</text>`);
+        if (i % 2 === 1 || ultimo) s.push(`<text x="${f1(x + bw / 2)}" y="${y + hMax + 16}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${CINZA}">${a.ano}</text>`);
+      });
+      y += hMax + 34;
+      s.push(`<text x="0" y="${y}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L(`pela data do cadastro na ANEEL; ${c.anos.at(-1).ano} até ${mesMax}`, `by date of ANEEL registration; ${c.anos.at(-1).ano} up to ${mesMax}`))}</text>`);
+      return { svg: s.join('\n'), y: y + 6 };
+    },
+    fontes: () => [
+      L(`ANEEL, Geração distribuída (dados abertos, ${mesMax})`, `ANEEL, Distributed generation (open data, ${mesMax})`),
+      L('IBGE, Censo 2022 e Malha Municipal 2025', 'IBGE, 2022 Census and Municipal Mesh 2025'),
+    ],
+  });
+}
+
 /* ------------------------------------------------------------------ */
-const TEMAS = { transmissao, usinas };
+const TEMAS = { transmissao, usinas, solar };
 const nome = process.argv[2];
 if (!TEMAS[nome]) {
   console.error(`uso: node scripts/colecoes/energia-eletrica/prancha.mjs <${Object.keys(TEMAS).join('|')}>`);
