@@ -21,8 +21,12 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # O GitHub atrasa ou descarta execuções agendadas nos minutos de pico (início da hora).
+  # Dois horários fora do pico: se o primeiro não vier, o segundo publica. Rodar duas vezes
+  # não faz mal: a compilação é a mesma e o DOI só é pedido para quem ainda não tem.
   schedule:
-    - cron: '5 12 * * *' # todo dia às 12h05 UTC = 9h05 em Brasília
+    - cron: '17 12 * * *' # 9h17 em Brasília
+    - cron: '47 13 * * *' # 10h47 em Brasília (reserva)
 
 permissions:
   contents: read

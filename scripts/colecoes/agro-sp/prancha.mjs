@@ -2,7 +2,7 @@
 /**
  * Coleção «Do campo ao biometano» — desenha uma prancha a partir do cache de preparar.py (uso interno).
  *
- *   node scripts/colecoes/agro-sp/prancha.mjs cana|laranja|graos|urbano|sintese
+ *   node scripts/colecoes/agro-sp/prancha.mjs tabuleiro|cana|laranja|graos|urbano|sintese
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -11,6 +11,7 @@ import {
   gerarPrancha, legendaClasses, legendaFaixa, rotuloPainel,
 } from '../lib/prancha-sp.mjs';
 import { legendaCirculos } from '../lib/arte.mjs';
+import { lerRaster } from '../lib/raster.mjs';
 
 export const SERIE = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'agro-sp', 'serie.json'), 'utf8'));
 const CANA = ['#f3efd9', '#dfe0a8', '#b8c97f', '#86ad5f', '#558a45', '#2b6233'];
@@ -99,6 +100,71 @@ function legendaVar(limites, { larg = 58 } = {}) {
   limites.forEach((l, i) => s.push(`<text x="${(i + 1) * larg}" y="32" text-anchor="middle" font-family="${MONO}" font-size="12" fill="${TINTA}">${l > 0 ? '+' : ''}${nf(l)}</text>`));
   s.push(`<text x="${6 * larg + 16}" y="12" font-family="${MONO}" font-size="12" fill="${CINZA}">p.p.</text>`);
   return s.join('\n');
+}
+
+/* ------------------------------------------------------------------ 1/6 o tabuleiro agrícola */
+async function tabuleiro() {
+  const c = await ler('tabuleiro');
+  const r = await lerRaster('grade-agro-sp-tabuleiro');
+  const corDe = new Map(c.grupos.flatMap((g) => g.codigos.map((k) => [k, g.cor])));
+  const g = Object.fromEntries(c.grupos.map((x) => [x.chave, x]));
+  const pct = (v) => `${nf(v, v < 10 ? 1 : 0)} %`;
+  const soja = c.maiores_km2.temporarias[0];
+  const cana = c.maiores.cana[0];
+  return () => ({
+    layout: 'um',
+    motivo: 'agro',
+    serie: serie(1),
+    raster: { r, modo: 'classes', cor: (v) => corDe.get(v) ?? null, recorte: 'limite', fator: 2 },
+    titulo: () => L('O tabuleiro agrícola', 'The farming patchwork'),
+    subtitulo: () => L('Quase um quarto do estado é cana', 'Almost a quarter of the state is sugarcane'),
+    descricao: () => L(
+      'Uso e cobertura da terra em 2024 segundo o MapBiomas (Coleção 10), classificado em imagens de satélite com pixel de 30 m e desenhado aqui a 120 m',
+      'Land use and land cover in 2024 according to MapBiomas (Collection 10), classified from satellite images with 30 m pixels and drawn here at 120 m'),
+    mapa: () => ({
+      preencher: () => NEUTRO,
+      bordaMunicipio: 0,
+      bordaRgint: 1.1,
+      chamadas: [{
+        cd: cana.cd, dx: 170, dy: -330,
+        titulo: `${cana.nome.toUpperCase()} · ${pct(cana.valor)} ${L('EM CANA', 'IN CANE')}`,
+        linhas: L(['a maior parte em cana entre', 'os municípios do estado'], ['the largest share in cane', 'among the state’s municipalities']),
+      }, {
+        cd: soja.cd, dx: -230, dy: 240,
+        titulo: `${soja.nome.toUpperCase()} · ${nf(soja.valor, 0)} KM²`,
+        linhas: L(['a maior área de soja e outras', 'lavouras temporárias'], ['the largest area of soybean and', 'other annual crops']),
+      }],
+    }),
+    numeros: () => [
+      [pct(c.agro_pct), [L('do estado em lavoura,', 'of the state in crops,'), L('pasto e silvicultura', 'pasture and plantations')]],
+      [pct(g.cana.pct), [L('de cana,', 'sugarcane,'), L('a maior classe', 'the largest class')]],
+      [pct(g.pastagem.pct + g.mosaico.pct), [L('de pastagem e', 'pasture and'), L('mosaico de usos', 'mosaic of uses')]],
+      [pct(g.nativa.pct), [L('de vegetação nativa', 'native vegetation')]],
+    ],
+    painel: (y) => {
+      const s = [rotuloPainel(L('O ESTADO EM UMA FITA (ÁREA)', 'THE STATE IN ONE STRIP (AREA)'), y)];
+      y += 18;
+      let x = 0;
+      for (const k of c.grupos) {
+        const w = (k.pct / 100) * LP;
+        s.push(`<rect x="${f1(x)}" y="${y}" width="${f1(Math.max(w, 0.6))}" height="22" fill="${k.cor}"/>`);
+        x += w;
+      }
+      s.push(`<rect x="0" y="${y}" width="${LP}" height="22" fill="none" stroke="${TINTA}" stroke-width=".8"/>`);
+      y += 50;
+      for (const k of c.grupos) {
+        s.push(`<rect x="0" y="${y - 13}" width="26" height="15" fill="${k.cor}" stroke="#1a211a" stroke-width=".6"/>`);
+        s.push(`<text x="38" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(k.rotulo, k.rotulo_en))}</text>`);
+        s.push(`<text x="${LP - 80}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13" fill="${CINZA}">${nf(k.km2, 0)}</text>`);
+        s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13">${pct(k.pct)}</text>`);
+        y += 23;
+      }
+      s.push(`<text x="${LP - 80}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">km²</text>`);
+      s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('do estado', 'of the state')}</text>`);
+      return { svg: s.join('\n'), y: y + 10 };
+    },
+    fontes: () => [L('MapBiomas, Coleção 10 (2024)', 'MapBiomas, Collection 10 (2024)'), MALHA()],
+  });
 }
 
 /* ------------------------------------------------------------------ 2/6 cana 2008 × 2024 */
@@ -438,7 +504,7 @@ async function sintese() {
 }
 
 /* ------------------------------------------------------------------ */
-const TEMAS = { cana, laranja, graos, urbano, sintese };
+const TEMAS = { tabuleiro, cana, laranja, graos, urbano, sintese };
 const nome = process.argv[2];
 if (!TEMAS[nome]) {
   console.error(`uso: node scripts/colecoes/agro-sp/prancha.mjs <${Object.keys(TEMAS).join('|')}>`);

@@ -1,0 +1,6 @@
+[
+ { "tema": "densidade", "numero": 63, "pasta": "063-densidade-sp", "base": "sp_densidade_2022", "data": "2026-11-23", "categoria": "censo-renda" },
+ { "tema": "idade", "numero": 64, "pasta": "064-idade-e-sexo-sp", "base": "sp_idade_e_sexo_2022", "data": "2026-11-24", "categoria": "censo-renda" },
+ { "tema": "idosos", "numero": 65, "pasta": "065-idosos-sp", "base": "sp_60_mais_2022", "data": "2026-11-25", "categoria": "censo-renda" },
+ { "tema": "rural", "numero": 66, "pasta": "066-urbano-e-rural-sp", "base": "sp_urbano_rural_2022", "data": "2026-11-26", "categoria": "censo-renda" }
+]

@@ -1,0 +1,7 @@
+[
+ { "tema": "ovos", "numero": 71, "pasta": "071-ovos-sp", "base": "sp_ovos_2024", "data": "2026-12-01", "categoria": "uso-do-solo" },
+ { "tema": "leite", "numero": 72, "pasta": "072-leite-sp", "base": "sp_leite_2024", "data": "2026-12-02", "categoria": "uso-do-solo" },
+ { "tema": "mel", "numero": 73, "pasta": "073-mel-sp", "base": "sp_mel_2024", "data": "2026-12-03", "categoria": "uso-do-solo" },
+ { "tema": "tilapia", "numero": 74, "pasta": "074-tilapia-sp", "base": "sp_tilapia_2024", "data": "2026-12-04", "categoria": "uso-do-solo" },
+ { "tema": "valor", "numero": 75, "pasta": "075-producao-animal-sp", "base": "sp_producao_animal_2024", "data": "2026-12-05", "categoria": "uso-do-solo" }
+]

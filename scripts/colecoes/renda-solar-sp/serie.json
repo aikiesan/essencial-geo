@@ -1,0 +1,5 @@
+[
+ { "tema": "setores", "numero": 60, "pasta": "060-renda-mediana-sp", "base": "sp_renda_mediana_2022", "data": "2026-11-20", "categoria": "censo-renda" },
+ { "tema": "apond", "numero": 61, "pasta": "061-renda-na-metropole-sp", "base": "sp_renda_metropole_2022", "data": "2026-11-21", "categoria": "censo-renda" },
+ { "tema": "solar", "numero": 62, "pasta": "062-renda-e-solar-sp", "base": "sp_renda_solar", "data": "2026-11-22", "categoria": "energia" }
+]

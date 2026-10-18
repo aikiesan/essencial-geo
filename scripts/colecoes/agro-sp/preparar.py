@@ -1,7 +1,7 @@
 """
 Coleção «Do campo ao biometano» — prepara os dados de uma prancha (uso interno).
 
-    .venv-geo/Scripts/python scripts/colecoes/agro-sp/preparar.py cana|laranja|graos|urbano|sintese
+    .venv-geo/Scripts/python scripts/colecoes/agro-sp/preparar.py baixar|tabuleiro|cana|laranja|graos|urbano|sintese
 
 Saídas: mapas/<pasta>/dados/<base>.gpkg.zip (com estilos do QGIS), <base>.csv
 e scripts/colecoes/cache/agro-sp-<tema>.json (para a prancha e a ficha).
@@ -22,11 +22,12 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from comum import (  # noqa: E402
-    DADOS, MINERAIS, RAIZ, TINTA, classe, estilo_contorno, estilo_graduado, estilo_regras, gravar_cache, gravar_estilos,
-    igual, malha_uf, marcador, preenchimento, quebras, sidra, simbolo, valor_sidra, zipar,
+    CACHE, DADOS, MINERAIS, RAIZ, TINTA, classe, estilo_contorno, estilo_graduado, estilo_regras, gravar_cache,
+    gravar_estilos, igual, malha_uf, marcador, preenchimento, quebras, sidra, simbolo, valor_sidra, zipar,
 )
 
 PASTAS = {
+    "tabuleiro": "045-tabuleiro-agricola-sp",
     "cana": "046-cana-2008-2024-sp",
     "laranja": "047-laranja-sp",
     "graos": "048-milho-e-soja-sp",
@@ -172,6 +173,207 @@ def classe_var(v) -> int | None:
         if v <= l:
             return i
     return len(VAR)
+
+
+# ------------------------------------------------------------------ 045 MapBiomas: recorte de SP
+MB_COG = ("https://storage.googleapis.com/mapbiomas-public/initiatives/brasil/collection_10/lulc/coverage/"
+          "brazil_coverage_2024.tif")
+DL_MB = CACHE / "downloads" / "mapbiomas"
+MB_120 = DL_MB / "sp_coverage_2024_120m.tif"       # moda de 4 × 4 pixels de 30 m
+MB_KM2 = DL_MB / "sp_coverage_2024_mun_km2.csv"    # área por município e classe, contada nos pixels de 30 m
+
+
+def area_linhas(transform, altura: int):
+    """Área (km²) de um pixel em cada linha de uma grade em graus, no elipsoide GRS80."""
+    import numpy as np
+    from pyproj import Geod
+    g = Geod(ellps="GRS80")
+    dx, dy = transform.a, -transform.e
+    out = np.empty(altura)
+    for j in range(altura):
+        lat0 = transform.f - j * dy
+        a, _ = g.polygon_area_perimeter([0, dx, dx, 0], [lat0 - dy, lat0 - dy, lat0, lat0])
+        out[j] = abs(a) / 1e6
+    return out
+
+
+def baixar() -> None:
+    """Lê do COG público só os blocos de 256 px que cobrem o retângulo de SP (~37 MB, sem overviews no arquivo)."""
+    import os
+    import numpy as np
+    import rasterio
+    from rasterio.features import rasterize
+    from rasterio.transform import Affine
+    from rasterio.windows import Window
+
+    os.environ.setdefault("GDAL_DISABLE_READDIR_ON_OPEN", "EMPTY_DIR")
+    os.environ.setdefault("GDAL_HTTP_MERGE_CONSECUTIVE_RANGES", "YES")
+    os.environ.setdefault("CPL_VSIL_CURL_CHUNK_SIZE", "1048576")
+    mun = malha_uf("SP")
+    x0, y0, x1, y1 = mun.total_bounds
+    b, T, F = 0.05, 256, 4
+    DL_MB.mkdir(parents=True, exist_ok=True)
+    with rasterio.open("/vsicurl/" + MB_COG) as s:
+        tr, crs = s.transform, s.crs
+        c0, c1 = int((x0 - b - tr.c) / tr.a / T), int((x1 + b - tr.c) / tr.a / T)
+        r0, r1 = int((tr.f - (y1 + b)) / -tr.e / T), int((tr.f - (y0 - b)) / -tr.e / T)
+        col, lin, larg, alt = c0 * T, r0 * T, (c1 - c0 + 1) * T, (r1 - r0 + 1) * T
+        trw = Affine(tr.a, 0, tr.c + col * tr.a, 0, tr.e, tr.f + lin * tr.e)
+        saida = np.zeros((alt // F, larg // F), dtype="uint8")
+        contagem: dict[tuple[int, int], float] = {}
+        area = area_linhas(trw, alt)
+        faixa = T
+        for j in range(0, alt, faixa):
+            h = min(faixa, alt - j)
+            a = s.read(1, window=Window(col, lin + j, larg, h))
+            trf = Affine(tr.a, 0, trw.c, 0, tr.e, trw.f + j * tr.e)
+            idx = rasterize([(g, i + 1) for i, g in enumerate(mun.geometry)], out_shape=a.shape, transform=trf,
+                            fill=0, dtype="uint16")
+            # Área por município e classe, nos pixels de 30 m.
+            chave = idx.astype("int64") * 256 + a
+            peso = np.broadcast_to(area[j:j + h, None], a.shape)
+            soma = np.bincount(chave[idx > 0].ravel(), weights=peso[idx > 0].ravel())
+            for k in np.nonzero(soma)[0]:
+                contagem[(int(k // 256), int(k % 256))] = contagem.get((int(k // 256), int(k % 256)), 0) + float(soma[k])
+            # Moda em blocos de 4 × 4 (empate: o menor código).
+            blocos = a.reshape(h // F, F, larg // F, F).transpose(0, 2, 1, 3).reshape(h // F, larg // F, F * F)
+            melhor = np.zeros(blocos.shape[:2], dtype="uint8")
+            maxn = np.zeros(blocos.shape[:2], dtype="uint8")
+            for c in np.unique(a):
+                if c == 0:
+                    continue
+                n = (blocos == c).sum(axis=2, dtype="uint8")
+                m = n > maxn
+                melhor[m], maxn[m] = c, n[m]
+            saida[j // F:(j + h) // F] = melhor
+            print(f"  faixa {j // faixa + 1}/{-(-alt // faixa)}", flush=True)
+    prof = {"driver": "GTiff", "dtype": "uint8", "count": 1, "width": saida.shape[1], "height": saida.shape[0],
+            "crs": crs, "transform": trw * Affine.scale(F), "nodata": 0, "compress": "deflate", "tiled": True,
+            "blockxsize": 256, "blockysize": 256}
+    with rasterio.open(MB_120, "w", **prof) as o:
+        o.write(saida, 1)
+    cds = mun["CD_MUN"].tolist()
+    pd.DataFrame([{"CD_MUN": cds[i - 1], "codigo": c, "km2": round(v, 4)} for (i, c), v in sorted(contagem.items())]
+                 ).to_csv(MB_KM2, index=False, encoding="utf-8")
+    print(f"MapBiomas SP: {saida.shape[1]} × {saida.shape[0]} px a 120 m · {MB_120.stat().st_size / 1e6:.1f} MB")
+
+
+# Classes da 045 a partir da legenda da Coleção 10 (código → grupo); as lavouras em destaque, o resto apagado.
+TABULEIRO = [  # (chave, rótulo, rótulo EN, cor, códigos)
+    ("cana", "Cana", "Sugarcane", "#86ad5f", [20]),
+    ("temporarias", "Soja e outras lavouras temporárias", "Soybean and other annual crops", "#c39a4c", [39, 40, 41, 62]),
+    ("citros", "Laranja e outros citros", "Oranges and other citrus", "#fc8d59", [47]),
+    ("perenes", "Café e outras lavouras perenes", "Coffee and other perennial crops", "#7a4a2e", [46, 48, 35]),
+    ("silvicultura", "Silvicultura", "Tree plantation", MINERAIS["oliva"], [9]),
+    ("pastagem", "Pastagem", "Pasture", MINERAIS["palha"], [15]),
+    ("mosaico", "Mosaico de usos", "Mosaic of uses", "#ece3c2", [21]),
+    ("nativa", "Vegetação nativa", "Native vegetation", "#b3c0ad", [3, 4, 5, 6, 49, 11, 12, 13, 29, 32, 50]),
+    ("urbano", "Área urbanizada", "Urban area", "#8d9196", [24]),
+    ("agua", "Água", "Water", "#b9cfe0", [33, 31]),
+    ("outras", "Mineração e outras áreas sem vegetação", "Mining and other non-vegetated areas", "#c9b8c4", [22, 23, 25, 30, 75]),
+]
+AGRO = ["cana", "temporarias", "citros", "perenes", "silvicultura", "pastagem", "mosaico"]
+LAVOURAS = ["cana", "temporarias", "citros", "perenes"]
+NOMES_MB = {3: "Formação Florestal", 4: "Formação Savânica", 5: "Mangue", 6: "Floresta Alagável", 9: "Silvicultura",
+            11: "Campo Alagado e Área Pantanosa", 12: "Formação Campestre", 13: "Outras Formações não Florestais",
+            15: "Pastagem", 20: "Cana", 21: "Mosaico de Usos", 22: "Área não Vegetada", 23: "Praia, Duna e Areal",
+            24: "Área Urbanizada", 25: "Outras Áreas não Vegetadas", 29: "Afloramento Rochoso", 30: "Mineração",
+            31: "Aquicultura", 32: "Apicum", 33: "Rio, Lago e Oceano", 35: "Dendê", 39: "Soja", 40: "Arroz",
+            41: "Outras Lavouras Temporárias", 46: "Café", 47: "Citrus", 48: "Outras Lavouras Perenes",
+            49: "Restinga Arbórea", 50: "Restinga Herbácea", 62: "Algodão", 75: "Usina Fotovoltaica"}
+
+
+def qml_paletado(entradas: list[tuple[int, str, str]]) -> str:
+    linhas = "\n".join(f'        <paletteEntry value="{v}" color="{c}" alpha="255" label="{r}"/>' for v, c, r in entradas)
+    return ("<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>\n"
+            '<qgis version="3.34" styleCategories="AllStyleCategories">\n  <pipe>\n'
+            '    <rasterrenderer type="paletted" band="1" opacity="1" alphaBand="-1" nodataColor="">\n'
+            "      <rasterTransparency/>\n      <colorPalette>\n"
+            f"{linhas}\n      </colorPalette>\n    </rasterrenderer>\n  </pipe>\n</qgis>\n")
+
+
+def tabuleiro() -> None:
+    import zipfile
+    import numpy as np
+    import rasterio
+    from rasterio.features import geometry_mask
+    from comum import gravar_grade
+
+    mun = malha_uf("SP")
+    km = pd.read_csv(MB_KM2, dtype={"CD_MUN": str})
+    sem_classe = float(km.loc[km["codigo"] == 0, "km2"].sum())   # pixels sem classe no litoral, fora das contas
+    km = km[km["codigo"] != 0]
+    grupo_de = {c: k for k, *_, cods in TABULEIRO for c in cods}
+    sem = sorted(set(km["codigo"]) - set(grupo_de))
+    assert not sem, f"códigos sem grupo: {sem}"
+    km["grupo"] = km["codigo"].map(grupo_de)
+    pv = km.pivot_table(index="CD_MUN", columns="grupo", values="km2", aggfunc="sum", fill_value=0)
+    pv = pv.reindex(columns=[k for k, *_ in TABULEIRO], fill_value=0)
+    df = mun.drop(columns="geometry")[["CD_MUN", "NM_MUN", "CD_RGINT", "NM_RGINT"]].copy()
+    df["area_km2"] = df["CD_MUN"].map(pv.sum(axis=1)).round(2)
+    for k, *_ in TABULEIRO:
+        df[f"km2_{k}"] = df["CD_MUN"].map(pv[k]).round(2)
+    for k, *_ in TABULEIRO:
+        df[f"pct_{k}"] = (df[f"km2_{k}"] / df["area_km2"] * 100).round(2)
+    df["pct_agro"] = df[[f"pct_{k}" for k in AGRO]].sum(axis=1).round(2)
+    df["maior_classe"] = df[[f"pct_{k}" for k, *_ in TABULEIRO]].idxmax(axis=1).str.replace("pct_", "")
+    total = float(df["area_km2"].sum())
+    grupos = [{"chave": k, "rotulo": r, "rotulo_en": r_en, "cor": cor, "codigos": cods,
+               "km2": round(float(df[f"km2_{k}"].sum()), 1), "pct": round(float(df[f"km2_{k}"].sum()) / total * 100, 2)}
+              for k, r, r_en, cor, cods in TABULEIRO]
+
+    # Grade de 120 m para a prancha e GeoTIFF recortado no estado, com o estilo .qml ao lado, num ZIP.
+    with rasterio.open(MB_120) as s:
+        a = s.read(1)
+        tr = s.transform
+        prof = s.profile.copy()
+    fora = geometry_mask(mun.geometry, out_shape=a.shape, transform=tr)
+    a = np.where(fora, 0, a).astype("uint8")
+    gravar_grade("grade-agro-sp-tabuleiro", a, tr, nodata=0)
+    destino = RAIZ / "mapas" / PASTAS["tabuleiro"] / "dados"
+    destino.mkdir(parents=True, exist_ok=True)
+    tif = destino / "sp_uso_agropecuario_2024.tif"
+    with rasterio.open(tif, "w", **prof) as o:
+        o.write(a, 1)
+    cor_de = {c: cor for _, _, _, cor, cods in TABULEIRO for c in cods}
+    qml = tif.with_suffix(".qml")
+    qml.write_text(qml_paletado([(int(c), cor_de[int(c)], f"{int(c)} · {NOMES_MB.get(int(c), str(int(c)))}")
+                                 for c in np.unique(a) if c]), encoding="utf-8")
+    zp = destino / "sp_uso_agropecuario_2024.tif.zip"
+    zp.unlink(missing_ok=True)
+    with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
+        z.write(tif, tif.name)
+        z.write(qml, qml.name)
+    tif.unlink()
+    qml.unlink()
+
+    rgint, limite = base_territorial(mun)
+    camada = gpd.GeoDataFrame(df, geometry=mun.geometry.values, crs=mun.crs)
+    lim = [5, 15, 30, 45, 60]
+    estilos = {
+        "municipios": [
+            (k, f"{r}: parte do município (%)",
+             estilo_graduado(f"pct_{k}", lim, CANA if k == "cana" else SOJA, casas=0, rotulo_campo="NM_MUN"), k == "cana")
+            for k, r in [("cana", "Cana"), ("temporarias", "Soja e outras temporárias"), ("pastagem", "Pastagem")]
+        ],
+        **estilos_base(),
+    }
+    arquivos = gravar("tabuleiro", "sp_uso_agropecuario_2024", {"municipios": camada, "regioes_intermediarias": rgint,
+                                                               "limite_estadual": limite}, estilos, df.sort_values("NM_MUN"))
+    arquivos[zp.name] = zp.stat().st_size
+    reg = df.groupby("NM_RGINT")[[f"km2_{k}" for k, *_ in TABULEIRO] + ["area_km2"]].sum()
+    gravar_cache("agro-sp-tabuleiro", {
+        "municipios": len(df), "total_km2": total, "sem_classe_km2": sem_classe, "grupos": grupos,
+        "agro_pct": round(sum(g["pct"] for g in grupos if g["chave"] in AGRO), 2),
+        "lavouras_pct": round(sum(g["pct"] for g in grupos if g["chave"] in LAVOURAS), 2),
+        "maior_classe": df["maior_classe"].value_counts().to_dict(),
+        "maiores": {k: topo(df, f"pct_{k}", 5) for k in ("cana", "temporarias", "citros", "perenes", "pastagem", "nativa")},
+        "maiores_km2": {k: topo(df, f"km2_{k}", 5) for k in ("cana", "temporarias", "citros", "perenes", "pastagem")},
+        "regioes_pct": {r: {k: round(float(reg.loc[r, f"km2_{k}"] / reg.loc[r, "area_km2"] * 100), 2)
+                            for k, *_ in TABULEIRO} for r in reg.index},
+        "arquivos": arquivos,
+    })
+    print(f"tabuleiro: {total:,.0f} km² · agro {sum(g['pct'] for g in grupos if g['chave'] in AGRO):.1f}% · {arquivos}")
 
 
 # ------------------------------------------------------------------ 046 cana 2008 × 2024
@@ -482,6 +684,6 @@ def sintese() -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    temas = {"cana": cana, "laranja": laranja, "graos": graos, "urbano": urbano, "sintese": sintese}
+    temas = {"baixar": baixar, "tabuleiro": tabuleiro, "cana": cana, "laranja": laranja, "graos": graos, "urbano": urbano, "sintese": sintese}
     ap.add_argument("tema", choices=list(temas))
     temas[ap.parse_args().tema]()

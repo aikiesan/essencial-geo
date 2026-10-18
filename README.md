@@ -84,7 +84,7 @@ Outros comandos:
 ## Fluxo de publicação
 
 1. **GitHub** — a pasta do mapa, com `README.md` e `README.en.md`, entra em `mapas/` (commit na `main`).
-2. **Pages** — a Action `deploy.yml` recompila o site a cada push e todo dia às 9h05; a prancha aparece no
+2. **Pages** — a Action `deploy.yml` recompila o site a cada push e todo dia às 9h17 (reserva às 10h47); a prancha aparece no
    topo do feed nas duas línguas no dia da sua `data`.
 3. **Zenodo** — Actions → *Publicar no Zenodo* → informe a pasta. O mapa ganha um DOI próprio, gravado de
    volta no `README.md`; o site passa a exibir a citação com DOI.

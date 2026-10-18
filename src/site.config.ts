@@ -165,6 +165,106 @@ export const COLECOES = {
       resumo: 'São Paulo’s farming mosaic (sugarcane, oranges, maize and soy), urban waste and sewage, and the biomethane that could come from all of it.',
     },
   },
+  'saneamento-sp': {
+    pt: {
+      titulo: 'Saneamento e biometano',
+      resumo: 'O esgoto e o lixo de São Paulo setor por setor no Censo 2022: quem está na rede, para onde vai o resto, onde o lixo queima e quanto biometano o lodo daria.',
+    },
+    en: {
+      titulo: 'Sanitation and biomethane',
+      resumo: 'São Paulo’s sewage and rubbish tract by tract in the 2022 Census: who is on the mains, where the rest goes, where rubbish burns and how much biomethane sludge could yield.',
+    },
+  },
+  'biogas-territorio-sp': {
+    pt: {
+      titulo: 'Biogás no território',
+      resumo: 'O potencial de biometano de São Paulo no chão: por km² e por pessoa, a fonte que lidera fora da cana, a distância aos gasodutos e à rede elétrica e o que já opera.',
+    },
+    en: {
+      titulo: 'Biogas on the ground',
+      resumo: 'São Paulo’s biomethane potential on the ground: per km² and per person, the leading source outside sugarcane, the distance to gas pipelines and the power grid, and what already operates.',
+    },
+  },
+  'renda-solar-sp': {
+    pt: {
+      titulo: 'Renda e sol nos telhados',
+      resumo: 'Quanto ganha quem responde pela casa, setor por setor e na metrópole, e se os sistemas solares dos telhados seguem a renda: não seguem.',
+    },
+    en: {
+      titulo: 'Income and rooftop solar',
+      resumo: 'What the head of household earns, tract by tract and in the metropolis, and whether rooftop solar follows income: it does not.',
+    },
+  },
+  'gente-sp': {
+    pt: {
+      titulo: 'Gente no território',
+      resumo: 'Onde mora a gente de São Paulo, setor por setor: a densidade, a idade e o sexo de cada município, os de 60 anos ou mais e quem ainda vive no campo.',
+    },
+    en: {
+      titulo: 'People across the land',
+      resumo: 'Where São Paulo’s people live, tract by tract: density, the age and sex of each municipality, those aged 60 or over and who still lives in the countryside.',
+    },
+  },
+  'favelas-sp': {
+    pt: {
+      titulo: 'Favelas e comunidades urbanas',
+      resumo: 'Um em cada doze paulistas mora em favela: onde ficam, as maiores da metrópole, a rua sem luz e sem calçada e a distância de renda para o resto da mesma cidade.',
+    },
+    en: {
+      titulo: 'Favelas and urban communities',
+      resumo: 'One in twelve people in São Paulo lives in a favela: where they are, the largest in the metropolis, streets without light or pavements and the income gap with the rest of the same town.',
+    },
+  },
+  'animal-sp': {
+    pt: {
+      titulo: 'Leite, ovos, mel e peixe',
+      resumo: 'O que os animais produzem em São Paulo, município a município: os ovos de Bastos, o leite, o mel, a tilápia das represas e quanto vale cada um.',
+    },
+    en: {
+      titulo: 'Milk, eggs, honey and fish',
+      resumo: 'What animals produce in São Paulo, municipality by municipality: the eggs of Bastos, milk, honey, tilapia from the reservoirs and what each is worth.',
+    },
+  },
+  'bioeconomia-sp': {
+    pt: {
+      titulo: 'Bioeconomia no trabalho',
+      resumo: 'Quem trabalha com biomassa em São Paulo, pela RAIS: os empregos da bioeconomia em cada município, as indústrias que geram resíduo orgânico, a cadeia da cana e quem trata o lixo e o esgoto.',
+    },
+    en: {
+      titulo: 'The bioeconomy at work',
+      resumo: 'Who works with biomass in São Paulo, from RAIS: bioeconomy jobs in each municipality, the industries that generate organic waste, the sugarcane chain and who treats rubbish and sewage.',
+    },
+  },
+  'nutrientes-sp': {
+    pt: {
+      titulo: 'Dejetos que adubam',
+      resumo: 'O nitrogênio e o fósforo dos rebanhos paulistas, a carga por hectare de lavoura e o lugar do digestato do biogás no adubo do estado.',
+    },
+    en: {
+      titulo: 'Manure that feeds the soil',
+      resumo: 'The nitrogen and phosphorus from São Paulo’s herds, the load per hectare of cropland and the place of biogas digestate in the state’s fertiliser.',
+    },
+  },
+  'suprimento-sp': {
+    pt: {
+      titulo: 'Bacias de suprimento',
+      resumo: 'Quanto biometano cabe num raio de caminhão: a biomassa ao alcance da rede de gás e de energia, as curvas de oferta pela distância e onde as usinas disputariam o mesmo resíduo.',
+    },
+    en: {
+      titulo: 'Supply catchments',
+      resumo: 'How much biomethane fits within a lorry’s radius: the biomass within reach of the gas and power grids, supply curves by distance and where plants would compete for the same residue.',
+    },
+  },
+  'carbono-sp': {
+    pt: {
+      titulo: 'Carbono biogênico',
+      resumo: 'O CO₂ que sai das dornas de etanol e da purificação do biogás: onde está, quanto é e o que poderia virar.',
+    },
+    en: {
+      titulo: 'Biogenic carbon',
+      resumo: 'The CO₂ released by ethanol fermentation and biogas upgrading: where it is, how much there is and what it could become.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
