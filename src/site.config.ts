@@ -165,6 +165,16 @@ export const COLECOES = {
       resumo: 'São Paulo’s farming mosaic (sugarcane, oranges, maize and soy), urban waste and sewage, and the biomethane that could come from all of it.',
     },
   },
+  'saneamento-sp': {
+    pt: {
+      titulo: 'Saneamento e biometano',
+      resumo: 'O esgoto e o lixo de São Paulo setor por setor no Censo 2022: quem está na rede, para onde vai o resto, onde o lixo queima e quanto biometano o lodo daria.',
+    },
+    en: {
+      titulo: 'Sanitation and biomethane',
+      resumo: 'São Paulo’s sewage and rubbish tract by tract in the 2022 Census: who is on the mains, where the rest goes, where rubbish burns and how much biomethane sludge could yield.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

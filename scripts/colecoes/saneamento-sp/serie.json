@@ -1,0 +1,6 @@
+[
+ { "tema": "esgoto", "numero": 51, "pasta": "051-esgoto-na-rede-sp", "base": "sp_esgoto_rede_2022", "data": "2026-11-11", "categoria": "censo-renda" },
+ { "tema": "destino", "numero": 52, "pasta": "052-destino-do-esgoto-sp", "base": "sp_esgoto_destino_2022", "data": "2026-11-12", "categoria": "censo-renda" },
+ { "tema": "lixo", "numero": 53, "pasta": "053-lixo-fora-da-coleta-sp", "base": "sp_lixo_fora_coleta_2022", "data": "2026-11-13", "categoria": "censo-renda" },
+ { "tema": "municipios", "numero": 54, "pasta": "054-saneamento-e-biometano-sp", "base": "sp_saneamento_biometano", "data": "2026-11-14", "categoria": "energia" }
+]

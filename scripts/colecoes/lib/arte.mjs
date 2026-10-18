@@ -135,7 +135,26 @@ function agro(w, h) {
   return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
 }
 
-const FRISOS = { cana, agua, relevo, energia, rmc, agro };
+/** Saneamento e biometano: casas ligadas por ramais a um coletor enterrado, em corte. */
+function saneamento(w, h) {
+  const r = sorte(23);
+  const s = [];
+  const chao = h * 0.42;
+  const cano = h * 0.78;
+  s.push(`<path d="M0 ${f1(chao)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  for (let x = 4; x < w; x += 7 + r() * 5) s.push(`<path d="M${f1(x)} ${f1(chao + 3)}l-3 5" stroke="${CESTO}" stroke-width=".7"/>`);
+  s.push(`<path d="M0 ${f1(cano - 4)}H${w}M0 ${f1(cano + 4)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  for (let x = 30; x < w; x += 60) s.push(`<path d="M${x} ${f1(cano - 7)}v14" stroke="${VALE}" stroke-width="1.6"/>`);
+  for (let x = 24 + r() * 20; x < w - 20; x += 46 + r() * 30) {
+    const lado = 9 + r() * 4;
+    const alto = chao - 6 - r() * 8;
+    s.push(`<path d="M${f1(x - lado)} ${f1(chao)}V${f1(alto)}L${f1(x)} ${f1(alto - lado * 0.8)}L${f1(x + lado)} ${f1(alto)}V${f1(chao)}" fill="none" stroke="${VALE}" stroke-width="1"/>`);
+    if (r() > 0.25) s.push(`<path d="M${f1(x)} ${f1(chao)}V${f1(cano - 4)}" stroke="${CESTO}" stroke-width="1.1" stroke-dasharray="3 2"/>`);
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento };
 
 /** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
 export function motivo(chave, w, h = 84) {
