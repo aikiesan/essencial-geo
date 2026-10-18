@@ -258,9 +258,12 @@ function morro(w, h) {
 
 const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas, telhados, gente, morro };
 
-/** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
+/**
+ * Friso da coleção, `w` × `h` px. `chave` é o nome de um friso daqui ou uma função (w, h) → SVG,
+ * para coleções que trazem o friso no próprio script.
+ */
 export function motivo(chave, w, h = 84) {
-  const fn = FRISOS[chave];
+  const fn = typeof chave === 'function' ? chave : FRISOS[chave];
   if (!fn) return '';
   return `<g opacity=".9"><defs><clipPath id="motivo-recorte"><rect width="${w}" height="${h}"/></clipPath></defs>${fn(w, h)}</g>`;
 }

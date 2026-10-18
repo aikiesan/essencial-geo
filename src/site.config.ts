@@ -225,6 +225,46 @@ export const COLECOES = {
       resumo: 'What animals produce in São Paulo, municipality by municipality: the eggs of Bastos, milk, honey, tilapia from the reservoirs and what each is worth.',
     },
   },
+  'bioeconomia-sp': {
+    pt: {
+      titulo: 'Bioeconomia no trabalho',
+      resumo: 'Quem trabalha com biomassa em São Paulo, pela RAIS: os empregos da bioeconomia em cada município, as indústrias que geram resíduo orgânico, a cadeia da cana e quem trata o lixo e o esgoto.',
+    },
+    en: {
+      titulo: 'The bioeconomy at work',
+      resumo: 'Who works with biomass in São Paulo, from RAIS: bioeconomy jobs in each municipality, the industries that generate organic waste, the sugarcane chain and who treats rubbish and sewage.',
+    },
+  },
+  'nutrientes-sp': {
+    pt: {
+      titulo: 'Dejetos que adubam',
+      resumo: 'O nitrogênio e o fósforo dos rebanhos paulistas, a carga por hectare de lavoura e o lugar do digestato do biogás no adubo do estado.',
+    },
+    en: {
+      titulo: 'Manure that feeds the soil',
+      resumo: 'The nitrogen and phosphorus from São Paulo’s herds, the load per hectare of cropland and the place of biogas digestate in the state’s fertiliser.',
+    },
+  },
+  'suprimento-sp': {
+    pt: {
+      titulo: 'Bacias de suprimento',
+      resumo: 'Quanto biometano cabe num raio de caminhão: a biomassa ao alcance da rede de gás e de energia, as curvas de oferta pela distância e onde as usinas disputariam o mesmo resíduo.',
+    },
+    en: {
+      titulo: 'Supply catchments',
+      resumo: 'How much biomethane fits within a lorry’s radius: the biomass within reach of the gas and power grids, supply curves by distance and where plants would compete for the same residue.',
+    },
+  },
+  'carbono-sp': {
+    pt: {
+      titulo: 'Carbono biogênico',
+      resumo: 'O CO₂ que sai das dornas de etanol e da purificação do biogás: onde está, quanto é e o que poderia virar.',
+    },
+    en: {
+      titulo: 'Biogenic carbon',
+      resumo: 'The CO₂ released by ethanol fermentation and biogas upgrading: where it is, how much there is and what it could become.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
