@@ -2,7 +2,7 @@
 numero: 35
 titulo: "APPs de Campinas"
 subtitulo: "Onde a água nasce, a mata falta"
-data: 2026-11-19
+data: 2026-11-05
 categoria: hidrografia
 colecao: rmc
 tags: [rmc, campinas, app, area-de-preservacao-permanente, codigo-florestal, nascentes, mata-ciliar, fbds, hidrografia]

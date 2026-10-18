@@ -8,8 +8,9 @@
  *
  * Para cada mapa confere: a página em português e em inglês (HTTP 200), a presença das
  * duas no sitemap, a imagem da prancha e cada download (o link responde e não é "em breve").
- * Mapas no ar sem DOI cujas conferências passaram saem no relatório com o comando para
- * pedir o DOI ao Zenodo. O pedido é sempre feito à mão: o DOI é permanente.
+ * Mapas no ar sem DOI cujas conferências passaram saem no relatório. Os aprovados de antemão
+ * (`doi_automatico: true` no README) vão para o job "doi" do deploy.yml, que pede o DOI ao
+ * Zenodo; os demais saem com o comando para pedir à mão. O DOI é permanente: a aprovação é por mapa.
  *
  * Sai com erro se algo falhar: o GitHub avisa por e-mail quando uma execução falha.
  * Só usa Node e a rede; nenhum arquivo é alterado.
@@ -77,6 +78,7 @@ const sitemap = await texto(`${SITE}sitemap.xml`);
 const linhas = [];
 const falhas = [];
 const doiPendentes = [];
+const doiAutomatico = [];
 
 for (const { pasta, fm } of alvo) {
   const paginas = { pt: `${SITE}mapas/${pasta}/`, en: `${SITE}en/maps/${pasta}/` };
@@ -112,7 +114,7 @@ for (const { pasta, fm } of alvo) {
   const doi = fm.doi ? `10…${String(fm.doi).split('.').pop()}` : 'sem DOI';
   linhas.push(`| ${String(fm.numero).padStart(3, '0')} | ${fm.titulo} | ${dia(fm.data)} | ${problemas.length ? '✗ ' + problemas.join('; ') : '✓'} | ${doi} |`);
   if (problemas.length) falhas.push(pasta);
-  else if (!fm.doi) doiPendentes.push(pasta);
+  else if (!fm.doi) (fm.doi_automatico ? doiAutomatico : doiPendentes).push(pasta);
 }
 
 /* ---------- relatório ---------------------------------------------------- */
@@ -122,12 +124,18 @@ const resumo = [
   alvo.length ? '| Nº | Mapa | Data | Conferência | DOI |\n| --- | --- | --- | --- | --- |\n' + linhas.join('\n') : 'Nenhum mapa entrou no ar neste dia.',
   '',
   falhas.length ? `**${falhas.length} com problema:** ${falhas.join(', ')}` : '**Tudo certo.**',
+  doiAutomatico.length
+    ? `\n### DOI automático\n\nNo ar, conferidos e aprovados (\`doi_automatico: true\`): o job "doi" registra agora no Zenodo.\n\n` +
+      doiAutomatico.map((p) => `- ${p}`).join('\n')
+    : '',
   doiPendentes.length
-    ? `\n### Prontos para DOI\n\nNo ar, conferidos e ainda sem DOI. Para registrar no Zenodo (DOI permanente):\n\n` +
+    ? `\n### Prontos para DOI, à mão\n\nNo ar, conferidos, sem DOI e sem aprovação automática. Para registrar no Zenodo (DOI permanente):\n\n` +
       doiPendentes.map((p) => `    gh workflow run zenodo.yml -f pasta=${p} -f sandbox=false`).join('\n')
     : '',
 ].join('\n');
 
 console.log(resumo);
 if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, resumo + '\n');
+// Para o job "doi". Com qualquer falha a lista sai vazia (e o job nem roda, porque este falha).
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `doi_automatico=${falhas.length ? '' : doiAutomatico.join(' ')}\n`);
 process.exit(falhas.length ? 1 : 0);

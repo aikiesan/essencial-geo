@@ -2,7 +2,7 @@
 numero: 28
 titulo: "Usinas de biogás"
 subtitulo: "Onde o lixo e o esterco viram luz"
-data: 2026-10-27
+data: 2026-10-19
 categoria: energia
 colecao: bioenergia-sp
 tags: [bioenergia-sp, sao-paulo, biogas, aterro-sanitario, residuos, energia, aneel, mapbiomas]

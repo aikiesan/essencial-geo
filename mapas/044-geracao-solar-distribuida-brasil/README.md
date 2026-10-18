@@ -2,7 +2,7 @@
 numero: 44
 titulo: "Geração solar distribuída"
 subtitulo: "O sol que mora nos telhados"
-data: 2026-12-22
+data: 2026-11-28
 categoria: energia
 colecao: energia-eletrica
 tags: [energia-eletrica, brasil, solar, fotovoltaica, geracao-distribuida, micro-e-minigeracao, aneel, censo-2022, municipios]

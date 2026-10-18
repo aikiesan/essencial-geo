@@ -1,6 +1,6 @@
 [
- { "tema": "biogas", "numero": 28, "pasta": "028-usinas-de-biogas-sp", "base": "sp_usinas_biogas", "data": "2026-10-27", "categoria": "energia" },
- { "tema": "rebanhos", "numero": 29, "pasta": "029-rebanhos-sp", "base": "sp_rebanhos_2024", "data": "2026-10-29", "categoria": "energia" },
- { "tema": "cana", "numero": 30, "pasta": "030-cana-de-acucar-sp", "base": "sp_cana_2024", "data": "2026-11-03", "categoria": "uso-do-solo" },
- { "tema": "usinas", "numero": 31, "pasta": "031-usinas-e-cana-sp", "base": "sp_usinas_cana", "data": "2026-11-05", "categoria": "energia" }
+ { "tema": "biogas", "numero": 28, "pasta": "028-usinas-de-biogas-sp", "base": "sp_usinas_biogas", "data": "2026-10-19", "categoria": "energia" },
+ { "tema": "rebanhos", "numero": 29, "pasta": "029-rebanhos-sp", "base": "sp_rebanhos_2024", "data": "2026-10-21", "categoria": "energia" },
+ { "tema": "cana", "numero": 30, "pasta": "030-cana-de-acucar-sp", "base": "sp_cana_2024", "data": "2026-10-24", "categoria": "uso-do-solo" },
+ { "tema": "usinas", "numero": 31, "pasta": "031-usinas-e-cana-sp", "base": "sp_usinas_cana", "data": "2026-10-26", "categoria": "energia" }
 ]

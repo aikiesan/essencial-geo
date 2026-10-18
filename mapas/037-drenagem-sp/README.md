@@ -2,7 +2,7 @@
 numero: 37
 titulo: "Rede de drenagem"
 subtitulo: "Os rios que dão as costas ao mar"
-data: 2026-11-26
+data: 2026-11-10
 categoria: hidrografia
 colecao: agua-sp
 tags: [agua-sp, sao-paulo, rios, rede-de-drenagem, tiete, bacia-do-prata, hydrosheds, hydrorivers, strahler]

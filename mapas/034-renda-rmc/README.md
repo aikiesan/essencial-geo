@@ -2,7 +2,7 @@
 numero: 34
 titulo: "Renda do responsável"
 subtitulo: "A renda desenha outra fronteira"
-data: 2026-11-17
+data: 2026-11-03
 categoria: censo-renda
 colecao: rmc
 tags: [rmc, campinas, censo-2022, renda, desigualdade, setores-censitarios, salario-minimo]

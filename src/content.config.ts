@@ -118,6 +118,8 @@ const mapas = defineCollection({
         .string()
         .regex(/^10\.\d{4,9}\/\S+$/, 'DOI no formato 10.xxxx/yyyy, sem https://doi.org/')
         .optional(),
+      /** Aprovado para receber DOI sozinho no dia em que entra no ar (deploy.yml → job "doi"). */
+      doi_automatico: z.boolean().default(false),
       versao: z.string().default('1.0.0'),
       autores: z
         .array(z.object({ sobrenome: z.string(), nome: z.string(), orcid: z.string().optional() }))

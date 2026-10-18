@@ -227,6 +227,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "${mb(P.png_bytes)}"
 
+doi_automatico: true
 versao: "1.0.0"
 discussoes: []
 ---
@@ -354,7 +355,10 @@ dataset keyed on the seven-digit IBGE code.
 - The capital point is indicative (an interior point of the municipal polygon).
 `;
 
-  await writeFile(join(pasta, 'README.md'), pt);
+  // O DOI é gravado no README pelo workflow do Zenodo: regerar a ficha não pode apagá-lo.
+  const caminhoPt = join(pasta, 'README.md');
+  const doi = existsSync(caminhoPt) ? (await readFile(caminhoPt, 'utf8')).match(/^doi: .+$/m)?.[0] : undefined;
+  await writeFile(caminhoPt, doi ? pt.replace(/^versao: /m, `${doi}\nversao: `) : pt);
   await writeFile(join(pasta, 'README.en.md'), en);
   const ctx = contexto(e, N, 'pt').length;
   console.log(`✓ ${e.uf}  ${e.pasta}  contexto ${ctx} caracteres${ctx > 900 ? '  ⚠ ACIMA DE 900' : ''}`);
