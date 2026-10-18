@@ -112,7 +112,30 @@ function rmc(w, h) {
   return s.join('');
 }
 
-const FRISOS = { cana, agua, relevo, energia, rmc };
+/** Do campo ao biometano: sulcos de plantio em curva de nível, com brotos numa fileira sim, outra não. */
+function agro(w, h) {
+  const r = sorte(17);
+  const s = [];
+  const n = 9;
+  const fase = r() * Math.PI;
+  for (let k = 0; k < n; k++) {
+    const y0 = 6 + (k * (h - 12)) / (n - 1);
+    const amp = 7 + 5 * Math.sin((k / (n - 1)) * Math.PI);
+    const yy = (x) => y0 + amp * Math.sin((x / w) * Math.PI * 1.6 + fase + k * 0.18);
+    let d = '';
+    for (let x = 0; x <= w; x += 5) d += `${x ? 'L' : 'M'}${x} ${f1(yy(x))}`;
+    s.push(`<path d="${d}" fill="none" stroke="${k % 2 ? VALE : CESTO}" stroke-width="${k % 2 ? 1 : 1.2}"/>`);
+    if (k % 2) {
+      for (let x = 8 + r() * 10; x < w - 6; x += 15 + r() * 7) {
+        const y = yy(x);
+        s.push(`<path d="M${f1(x)} ${f1(y)}v-4.5M${f1(x)} ${f1(y - 2.5)}q-3 -2 -4.5 -1M${f1(x)} ${f1(y - 3.5)}q3 -2 4.5 -1" fill="none" stroke="${VALE}" stroke-width=".9"/>`);
+      }
+    }
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+const FRISOS = { cana, agua, relevo, energia, rmc, agro };
 
 /** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
 export function motivo(chave, w, h = 84) {

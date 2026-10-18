@@ -1,0 +1,8 @@
+[
+ { "tema": "tabuleiro", "numero": 45, "pasta": "045-tabuleiro-agricola-sp", "base": "sp_uso_agropecuario_2024", "data": "2026-11-05", "categoria": "uso-do-solo" },
+ { "tema": "cana", "numero": 46, "pasta": "046-cana-2008-2024-sp", "base": "sp_cana_2008_2024", "data": "2026-11-06", "categoria": "uso-do-solo" },
+ { "tema": "laranja", "numero": 47, "pasta": "047-laranja-sp", "base": "sp_laranja_2024", "data": "2026-11-07", "categoria": "uso-do-solo" },
+ { "tema": "graos", "numero": 48, "pasta": "048-milho-e-soja-sp", "base": "sp_milho_soja_2024", "data": "2026-11-08", "categoria": "uso-do-solo" },
+ { "tema": "urbano", "numero": 49, "pasta": "049-lixo-e-esgoto-sp", "base": "sp_lixo_esgoto", "data": "2026-11-09", "categoria": "energia" },
+ { "tema": "sintese", "numero": 50, "pasta": "050-biometano-sp", "base": "sp_biometano_cp2b", "data": "2026-11-10", "categoria": "energia" }
+]
