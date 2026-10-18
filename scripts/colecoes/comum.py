@@ -482,8 +482,11 @@ def base_regional(nome: str, sigla: str, *, cds: list[str] | None = None, centro
         "bordas": {"lon": _passos(bx0 - 1, bx1 + 1, passo), "lat": _passos(by0 - 1, by1 + 1, passo)},
     }
     if enquadrar is not None:
+        from shapely.geometry.polygon import orient
         obj["enquadrar"] = {"type": "FeatureCollection", "features": [
-            {"type": "Feature", "properties": {}, "geometry": json.loads(enquadrar.to_json())["features"][0]["geometry"]}]}
+            {"type": "Feature", "properties": {},
+             # Anel no sentido horário, como o d3 espera (senão o «quadro» vira o mundo menos a caixa).
+             "geometry": json.loads(gpd.GeoSeries([orient(enquadrar.iloc[0], sign=-1.0)], crs=GEO).to_json())["features"][0]["geometry"]}]}
     gravar_cache(f"{nome}-base", obj)
     return {"unidades": uni, "limite": lim, "janela": janela, "centro": (lon0, lat0)}
 

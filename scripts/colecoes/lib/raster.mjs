@@ -74,7 +74,7 @@ export function rampa(paradas) {
  *   com exagero vertical `exagero`, `metros` = tamanho do pixel de saída em metros.
  * Devolve o elemento <image> pronto para o SVG.
  */
-export async function imagemRaster(r, proj, w, h, { modo = 'classes', cor, fator = 2, opacidade = 1, exagero = 2, metros, luz = 0.55, sombra = 1 } = {}) {
+export async function imagemRaster(r, proj, w, h, { modo = 'classes', cor, fator = 2, opacidade = 1, exagero = 2, metros, luz = 0.55, sombra = 1, jpeg = null } = {}) {
   const W = Math.round(w * fator);
   const H = Math.round(h * fator);
   const rgba = Buffer.alloc(W * H * 4);
@@ -128,6 +128,13 @@ export async function imagemRaster(r, proj, w, h, { modo = 'classes', cor, fator
         rgba[o] = Math.min(255, cr * k); rgba[o + 1] = Math.min(255, cg * k); rgba[o + 2] = Math.min(255, cb * k);
         rgba[o + 3] = Math.round(255 * opacidade);
       }
+  }
+  // Relevo contínuo vira JPEG (o PNG de tons contínuos passa do limite do librsvg); `jpeg` é a cor dos vazios (o mar).
+  if (jpeg) {
+    const [fr, fg, fb] = hex(jpeg);
+    for (let o = 0; o < rgba.length; o += 4) if (!rgba[o + 3]) { rgba[o] = fr; rgba[o + 1] = fg; rgba[o + 2] = fb; rgba[o + 3] = 255; }
+    const jpg = await sharp(rgba, { raw: { width: W, height: H, channels: 4 } }).removeAlpha().jpeg({ quality: 86, mozjpeg: true }).toBuffer();
+    return `<image x="0" y="0" width="${w}" height="${h}" preserveAspectRatio="none" href="data:image/jpeg;base64,${jpg.toString('base64')}"/>`;
   }
   const png = await sharp(rgba, { raw: { width: W, height: H, channels: 4 } }).png({ compressionLevel: 9, palette: modo === 'classes' }).toBuffer();
   return `<image x="0" y="0" width="${w}" height="${h}" preserveAspectRatio="none" href="data:image/png;base64,${png.toString('base64')}"/>`;

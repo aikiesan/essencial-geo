@@ -526,8 +526,8 @@ function cabecalho(tema, numero) {
   s.push(`<text x="${LP}" y="226" text-anchor="end" font-family="${MONO}" font-size="15" letter-spacing="3" fill="${CINZA}">${B.sigla}</text>`);
   let tt = 62;
   let linhas = [tema.titulo()];
-  while (largura(linhas[0], tt) > LP && tt > 48) tt -= 2;
-  if (largura(linhas[0], tt) > LP) { tt = 54; linhas = quebrar(tema.titulo(), 2); }
+  while (largura(linhas[0], tt) > LP * 0.95 && tt > 48) tt -= 2;
+  if (largura(linhas[0], tt) > LP * 0.95) { tt = 54; linhas = quebrar(tema.titulo(), 2); }
   let y = 226 + 26 + tt;
   linhas.forEach((l, i) => s.push(`<text x="0" y="${y + i * tt * 1.05}" font-family="${SERIF}" font-size="${tt}">${esc(l)}</text>`));
   y += (linhas.length - 1) * tt * 1.05 + 38;
