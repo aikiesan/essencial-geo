@@ -51,7 +51,7 @@ Os tons quentes ficam **nas linhas, nos selos e nos ornamentos — nunca no fund
 | `--floresta` | `#444235` | `#5a5a47` | Confirmação |
 | `--argila` | `#9c4a32` | `#d47a5c` | A página 404 e o selo “Tradução pendente” |
 
-O tema escuro segue o sistema operacional e pode ser trocado no botão de tema da coluna esquerda.
+O tema escuro segue o sistema operacional e pode ser trocado no botão de tema da barra do topo.
 
 ## Ornamento: o meandro
 
@@ -92,9 +92,11 @@ As fontes são servidas pelo próprio site (pacotes `@fontsource`), sem chamadas
 | Ficha técnica | `src/components/Ficha.astro` | Leitura rápida, painel de camadas, lista de definições com filetes, downloads como linhas de tabela técnica (`[GPKG] GeoPackage … 4,2 MB ↓`), citação com abas ABNT/APA/BibTeX e botão de copiar |
 | Leitura rápida | `src/components/LeituraRapida.astro` | Indicadores à maneira dos *widgets* de um SIG web: número de destaque, barras horizontais, rosca. Sem eixos, sem grade; o número sempre escrito |
 | Painel de camadas | `Ficha.astro` (`.camada`) | Lista de camadas com selo do tipo de geometria (● ponto, ╱ linha, ▰ polígono, ▦ grade, ▩ raster) e a cor da camada |
-| Coluna esquerda | `src/components/BarraEsquerda.astro` | Marca, lema, seletor **PT · EN**, manifesto, estado (com a próxima publicação), última nota, índice do atlas, ligações; blocos separados pelo meandro |
+| Barra do topo | `src/components/Topo.astro` | Fixa, fundo sólido, filete fino embaixo. Marca (alinhada à coluna esquerda), as cinco seções (Mapas, Coleções, Índice, Notas, Sobre) com filete Blue Nile na ativa, seletor **PT · EN** e botão de tema. Em tela estreita, as seções vão para o menu |
+| Coluna esquerda | `src/components/BarraEsquerda.astro` | O projeto (lema e objetivo), próximo mapa, quem faz (monograma, função, perfis acadêmicos), coleções em linhas com andamento, temas, última nota; o meandro fecha a coluna com o colofão. Sem manifesto: ele mora na página Sobre |
+| Rodapé | `src/components/Rodape.astro` | Fim de toda página: lema, autoria, licença e onde acompanhar (RSS, Zenodo, GitHub) |
 | Selos | `.selo` (em `CartaoMapa.astro`) | Mono em versalete. *Prancha-modelo · dados sintéticos*: fundo trigo, contorno tracejado. *Agendado*: contorno Blue Nile. *Tradução pendente*: contorno argila (estes dois só aparecem no `npm run dev`) |
-| Painel direito | `src/components/PainelFichas.astro` | A ficha do cartão em foco; acompanha a rolagem |
+| Gaveta da ficha | `src/components/PainelFichas.astro` + `Base.astro` | A ficha abre pela direita ao clicar em “Ficha, downloads e citação”; Esc ou clique fora fecham. Sem JavaScript, a ficha fica embutida no cartão |
 | Visualizador | `src/layouts/Base.astro` + `src/scripts/visor.ts` | Tela cheia sobre papel milimetrado; roda, pinça, arrasto, duplo clique, teclado |
 | Divisor | `.divisor` | Filete com uma estrela no centro, entre cartões |
 
@@ -102,9 +104,8 @@ As fontes são servidas pelo próprio site (pacotes `@fontsource`), sem chamadas
 
 | Largura | Colunas |
 | --- | --- |
-| < 860 px | Uma coluna. A coluna esquerda vira cabeçalho com botão “Índice”; a ficha técnica fica recolhida dentro de cada cartão. |
-| 860–1239 px | Navegação + feed. A ficha continua dentro do cartão. |
-| ≥ 1240 px | Navegação (272 px) + feed (até 760 px) + ficha técnica (344 px), as laterais fixas. |
+| < 860 px | Barra do topo com menu; uma coluna. O menu abre a coluna esquerda por cima da página, com as seções no alto. |
+| ≥ 860 px | Barra do topo (56 px) + coluna esquerda (288 px, fixa) + feed (até 760 px). A ficha técnica abre na gaveta. |
 
 ---
 

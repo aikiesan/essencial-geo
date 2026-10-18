@@ -33,6 +33,12 @@ const pt = {
     fecharMenu: 'Fechar o menu',
     tema: 'Alternar entre papel e nanquim',
   },
+  rodape: {
+    autoria: 'Autoria',
+    licenca: 'Licença',
+    licencaFina: 'Copie, adapte e cite a fonte',
+    acompanhe: 'Acompanhe',
+  },
   barra: {
     projeto: 'O projeto',
     objetivo:
@@ -219,6 +225,12 @@ const en: Forma<Textos> = {
     menu: 'Menu',
     fecharMenu: 'Close the menu',
     tema: 'Switch between paper and ink',
+  },
+  rodape: {
+    autoria: 'Author',
+    licenca: 'Licence',
+    licencaFina: 'Copy, adapt and credit the source',
+    acompanhe: 'Follow',
   },
   barra: {
     projeto: 'The project',

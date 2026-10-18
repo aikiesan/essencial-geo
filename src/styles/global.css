@@ -366,21 +366,10 @@ hr {
     overflow-y: auto;
     overscroll-behavior: contain;
     background: var(--painel);
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-8px);
-    transition:
-      opacity 160ms ease,
-      transform 160ms ease,
-      visibility 0s linear 160ms;
+    display: none;
   }
   .js.menu-aberto .col-esq {
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-    transition:
-      opacity 160ms ease,
-      transform 160ms ease;
+    display: block;
   }
   .menu-aberto,
   .menu-aberto body {
@@ -514,6 +503,16 @@ hr {
   vertical-align: top;
   /* nomes de arquivo longos quebram dentro da célula: a página nunca rola de lado (WCAG 1.4.10) */
   overflow-wrap: anywhere;
+}
+/* Com espaço de sobra, as palavras ficam inteiras: nomes de camada e cabeçalhos não se partem ao meio. */
+@media (min-width: 860px) {
+  .prosa th,
+  .prosa td {
+    overflow-wrap: break-word;
+  }
+  .prosa th {
+    white-space: nowrap;
+  }
 }
 .prosa th {
   font-family: var(--f-mono);

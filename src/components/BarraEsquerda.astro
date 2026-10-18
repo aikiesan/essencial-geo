@@ -7,11 +7,11 @@
 import Estrela from './Estrela.astro';
 import Icone from './Icone.astro';
 import Progresso from './Progresso.astro';
-import { AUTOR, CATEGORIA_IDS, LINKS, SITE, type CategoriaId } from '../site.config';
+import { AUTOR, CATEGORIA_IDS, LINKS, type CategoriaId } from '../site.config';
 import { contarPorCategoria, mapasPublicados, proximaPublicacao } from '../lib/mapas';
 import { colecoesNoAr } from '../lib/colecoes';
 import { notasPublicadas } from '../lib/notas';
-import { dataCurta, dataExtensa, dataIso, linguaDe, rota, t, url } from '../i18n';
+import { dataCurta, dataExtensa, dataIso, linguaDe, rota, t } from '../i18n';
 
 interface Props {
   /** Categoria ativa (undefined = nenhuma; 'todas' = feed). */
@@ -164,10 +164,8 @@ const iniciais = AUTOR.nomeCompleto
   <footer class="esq__pe">
     <span class="meandro esq__meandro" aria-hidden="true"></span>
     <p class="colofao rotulo">
-      <a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a> · {tx.site.cadencia} ·
-      <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>RSS</a><br />
-      <Estrela tamanho={9} /> {tx.site.colofao}<br />
-      22°49′S · 47°04′W · SIRGAS 2000
+      <span><Estrela tamanho={9} /> {tx.site.colofao}</span>
+      <span>22°49′S · 47°04′W · SIRGAS 2000</span>
     </p>
   </footer>
 </aside>
@@ -315,8 +313,8 @@ const iniciais = AUTOR.nomeCompleto
     color: var(--tinta-2);
     text-decoration: none;
     transition:
-      border-color 120ms ease,
-      color 120ms ease;
+      border-color 120ms linear,
+      color 120ms linear;
   }
   .perfis a:hover {
     border-color: var(--acento);
@@ -334,35 +332,40 @@ const iniciais = AUTOR.nomeCompleto
     text-decoration: underline;
   }
 
-  /* Coleções em andamento */
+  /* Coleções em andamento: linhas leves, como um sumário */
   .series,
   .temas {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .series li + li {
-    margin-top: var(--e-2);
+  .series {
+    border-bottom: 1px solid var(--linha-fina);
   }
   .series a {
     display: grid;
-    gap: var(--e-2);
-    padding: var(--e-3);
-    border: 1px solid var(--linha-fina);
+    gap: 6px;
+    padding: var(--e-3) var(--e-2);
+    margin: 0 calc(-1 * var(--e-2));
+    border-top: 1px solid var(--linha-fina);
     text-decoration: none;
-    transition: border-color 120ms linear;
+    transition: background-color 120ms linear;
   }
   .series a:hover {
-    border-color: var(--tinta-3);
+    background: var(--papel);
+  }
+  .series a:hover .series__titulo {
+    color: var(--acento);
   }
   .series a[aria-current='page'] {
-    border-color: var(--linha);
     background: var(--papel);
+    box-shadow: inset 2px 0 0 var(--nilo);
   }
   .series__titulo {
     font-family: var(--f-titulo);
-    font-size: var(--t-md);
-    line-height: 1.25;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    transition: color 120ms linear;
   }
 
   /* Temas: etiquetas */
@@ -422,10 +425,10 @@ const iniciais = AUTOR.nomeCompleto
     margin-bottom: var(--e-4);
   }
   .colofao {
+    display: grid;
+    gap: 2px;
     margin: 0;
-    line-height: 1.7;
-  }
-  .colofao a {
-    color: inherit;
+    font-size: 0.6875rem;
+    line-height: 1.6;
   }
 </style>

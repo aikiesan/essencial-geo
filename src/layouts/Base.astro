@@ -6,6 +6,7 @@
 import '../styles/global.css';
 import BarraEsquerda from '../components/BarraEsquerda.astro';
 import Topo from '../components/Topo.astro';
+import Rodape from '../components/Rodape.astro';
 import Icone from '../components/Icone.astro';
 import { SITE } from '../site.config';
 import { IDIOMA, caminhoEquivalente, linguaDe, t, url } from '../i18n';
@@ -93,6 +94,7 @@ const temDireita = Astro.slots.has('direita');
 
       <main class="col-centro" id="conteudo" tabindex="-1">
         <slot />
+        <Rodape />
       </main>
 
     </div>
@@ -165,16 +167,9 @@ const temDireita = Astro.slots.has('direita');
   .gaveta[open] {
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
-    animation: gaveta-entra 180ms ease-out;
   }
   .gaveta::backdrop {
     background: rgb(26 33 26 / 0.32);
-  }
-  @keyframes gaveta-entra {
-    from {
-      transform: translateX(24px);
-      opacity: 0;
-    }
   }
   .gaveta__barra {
     display: flex;

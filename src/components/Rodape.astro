@@ -1,0 +1,91 @@
+---
+/**
+ * Rodapé discreto no fim da coluna central: quem faz, licença e onde seguir o atlas.
+ * Em telas estreitas é o único lugar à vista com autoria e licença (a coluna esquerda fica no menu).
+ */
+import Estrela from './Estrela.astro';
+import { AUTOR, LINKS, SITE } from '../site.config';
+import { linguaDe, rota, t, url } from '../i18n';
+
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const r = tx.rodape;
+const ano = new Date().getFullYear();
+---
+
+<footer class="rodape">
+  <p class="rodape__lema">
+    <Estrela tamanho={10} />
+    <span>{tx.site.slogan} {tx.site.complemento}</span>
+  </p>
+  <div class="rodape__grade">
+    <p>
+      <span class="rotulo">{r.autoria}</span>
+      <a href={`${rota(lingua, 'sobre')}#t-autor`}>{AUTOR.nomeCompleto}</a><br />
+      <span class="rodape__fina">NIPE · UNICAMP</span>
+    </p>
+    <p>
+      <span class="rotulo">{r.licenca}</span>
+      <a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a><br />
+      <span class="rodape__fina">{r.licencaFina}</span>
+    </p>
+    <p>
+      <span class="rotulo">{r.acompanhe}</span>
+      <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>RSS</a> ·
+      <a href={LINKS.zenodo} rel="noopener">Zenodo</a> ·
+      <a href={LINKS.github} rel="noopener">GitHub</a><br />
+      <span class="rodape__fina">{tx.site.cadencia}</span>
+    </p>
+  </div>
+  <p class="rodape__pe rotulo">{SITE.nome} · {ano} · {tx.site.colofao}</p>
+</footer>
+
+<style>
+  .rodape {
+    max-width: var(--feed-max);
+    margin: var(--e-8) auto 0;
+    padding-top: var(--e-5);
+    border-top: 1px solid var(--linha);
+    font-size: var(--t-sm);
+  }
+  .rodape p {
+    margin: 0;
+  }
+  .rodape__lema {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-2);
+    font-family: var(--f-titulo);
+    font-style: italic;
+    font-size: var(--t-md);
+    color: var(--tinta-2);
+  }
+  .rodape__lema :global(svg) {
+    flex: none;
+    color: var(--estrela);
+  }
+  .rodape__grade {
+    display: grid;
+    gap: var(--e-4);
+    margin: var(--e-5) 0;
+    padding: var(--e-4) 0;
+    border-top: 1px solid var(--linha-fina);
+    border-bottom: 1px solid var(--linha-fina);
+    line-height: 1.6;
+  }
+  @media (min-width: 560px) {
+    .rodape__grade {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .rodape__grade .rotulo {
+    display: block;
+    margin-bottom: var(--e-1);
+  }
+  .rodape__fina {
+    color: var(--tinta-3);
+  }
+  .rodape__pe {
+    color: var(--tinta-3);
+  }
+</style>

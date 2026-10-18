@@ -102,9 +102,7 @@ const secoes = [
     z-index: 40;
     height: var(--topo);
     border-bottom: 1px solid var(--linha-fina);
-    background: color-mix(in srgb, var(--painel) 88%, transparent);
-    -webkit-backdrop-filter: saturate(1.2) blur(10px);
-    backdrop-filter: saturate(1.2) blur(10px);
+    background: var(--painel);
   }
   .topo__faixa {
     display: flex;
@@ -151,7 +149,7 @@ const secoes = [
     font-size: 0.9375rem;
     color: var(--tinta-2);
     text-decoration: none;
-    transition: color 140ms ease;
+    transition: color 120ms linear;
   }
   .topo__nav a::after {
     content: '';
@@ -160,21 +158,20 @@ const secoes = [
     right: var(--e-3);
     bottom: -1px;
     height: 2px;
-    background: var(--nilo);
-    transform: scaleX(0);
-    transition: transform 180ms ease;
+    background: transparent;
+    transition: background-color 120ms linear;
   }
   .topo__nav a:hover {
     color: var(--tinta);
   }
   .topo__nav a:hover::after {
-    transform: scaleX(0.4);
+    background: var(--linha-fina);
   }
   .topo__nav a[aria-current='page'] {
     color: var(--tinta);
   }
   .topo__nav a[aria-current='page']::after {
-    transform: scaleX(1);
+    background: var(--nilo);
   }
 
   .topo__acoes {
@@ -220,8 +217,8 @@ const secoes = [
     border: 1px solid transparent;
     color: var(--tinta-2);
     transition:
-      background-color 140ms ease,
-      color 140ms ease;
+      background-color 120ms linear,
+      color 120ms linear;
   }
   .topo__botao:hover {
     background: var(--papel-2);
@@ -236,9 +233,6 @@ const secoes = [
     width: 16px;
     height: 1.5px;
     background: currentColor;
-    transition:
-      transform 180ms ease,
-      background-color 120ms ease;
   }
   .topo__hamburguer::before,
   .topo__hamburguer::after {
@@ -248,7 +242,6 @@ const secoes = [
     width: 16px;
     height: 1.5px;
     background: currentColor;
-    transition: transform 180ms ease;
   }
   .topo__hamburguer::before {
     top: -5px;
