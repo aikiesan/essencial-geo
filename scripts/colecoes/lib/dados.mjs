@@ -38,8 +38,12 @@ function campos(linha, sep) {
   return out;
 }
 
-export async function* linhasCsv(arq, { sep = ';', encoding = 'utf8' } = {}) {
-  const rl = createInterface({ input: createReadStream(arq, { encoding }), crlfDelay: Infinity });
+export async function* linhasCsv(arq, { sep = ';', encoding = 'utf8', zip = false } = {}) {
+  // `zip`: o arquivo é um ZIP com um CSV dentro (a ANEEL publica assim, às vezes com extensão .csv).
+  let input = createReadStream(arq);
+  if (zip) { const ents = Object.values(entradasZip(arq)); input = fluxoZip(arq, ents[0]); }
+  input.setEncoding(encoding);
+  const rl = createInterface({ input, crlfDelay: Infinity });
   let primeira = true;
   for await (let l of rl) {
     if (primeira) { l = l.replace(/^﻿/, ''); primeira = false; }

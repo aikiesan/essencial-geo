@@ -175,6 +175,16 @@ export const COLECOES = {
       resumo: 'São Paulo’s sewage and rubbish tract by tract in the 2022 Census: who is on the mains, where the rest goes, where rubbish burns and how much biomethane sludge could yield.',
     },
   },
+  'biogas-territorio-sp': {
+    pt: {
+      titulo: 'Biogás no território',
+      resumo: 'O potencial de biometano de São Paulo no chão: por km² e por pessoa, a fonte que lidera fora da cana, a distância aos gasodutos e à rede elétrica e o que já opera.',
+    },
+    en: {
+      titulo: 'Biogas on the ground',
+      resumo: 'São Paulo’s biomethane potential on the ground: per km² and per person, the leading source outside sugarcane, the distance to gas pipelines and the power grid, and what already operates.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

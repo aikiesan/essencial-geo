@@ -1,7 +1,7 @@
 ---
 # English version (EN-UK). Numbers, files, DOI and layers come from README.md.
 titulo: "Sewage, mains and biomethane"
-subtitulo: "Sludge gas exists only where sewage reaches the plant"
+subtitulo: "Sludge gas only exists where sewage reaches the plant"
 
 contexto: >-
   Sludge from sewage plants becomes biomethane, but only where sewage is collected and treated at a plant suited to digestion. Under the CP2B method, that gives São Paulo 121,000 m³ of biomethane a day, in only 128 of its 645 municipalities, and the capital accounts for 51%. Beside it, the 2022 Census: 349 municipalities still have fewer than 90% of households on the mains, the target of the sanitation legal framework for 2033. The crossing separates four groups. 77 municipalities, with 28.2 million people, already pass the target and have sludge; 297, with 4.36 million, are below the target and have no sludge at all, and add up to 437,000 households off the mains. Bringing the mains to those places is the condition for their sewage to count towards the gas. Last plate of the collection “Sanitation and biomethane”.

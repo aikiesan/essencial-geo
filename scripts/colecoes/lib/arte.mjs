@@ -154,7 +154,25 @@ function saneamento(w, h) {
   return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
 }
 
-const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento };
+/** Biogás no território: biodigestores em cúpula ligados por um duto com flanges, sobre o chão. */
+function biogas(w, h) {
+  const r = sorte(31);
+  const s = [];
+  const chao = h * 0.7;
+  const duto = h * 0.86;
+  s.push(`<path d="M0 ${f1(chao)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  s.push(`<path d="M0 ${f1(duto)}H${w}" stroke="${CESTO}" stroke-width="2.4"/>`);
+  for (let x = 18; x < w; x += 38) s.push(`<path d="M${x} ${f1(duto - 4)}v8" stroke="${VALE}" stroke-width="1.3"/>`);
+  for (let x = 30 + r() * 20; x < w - 30; x += 70 + r() * 40) {
+    const raio = 13 + r() * 9;
+    s.push(`<path d="M${f1(x - raio)} ${f1(chao)}A${f1(raio)} ${f1(raio * 0.9)} 0 0 1 ${f1(x + raio)} ${f1(chao)}" fill="none" stroke="${VALE}" stroke-width="1.1"/>`);
+    s.push(`<path d="M${f1(x - raio * 0.55)} ${f1(chao - raio * 0.55)}A${f1(raio * 0.7)} ${f1(raio * 0.5)} 0 0 1 ${f1(x + raio * 0.55)} ${f1(chao - raio * 0.55)}" fill="none" stroke="${CESTO}" stroke-width=".8"/>`);
+    s.push(`<path d="M${f1(x)} ${f1(chao)}V${f1(duto)}" stroke="${VALE}" stroke-width="1"/>`);
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas };
 
 /** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
 export function motivo(chave, w, h = 84) {

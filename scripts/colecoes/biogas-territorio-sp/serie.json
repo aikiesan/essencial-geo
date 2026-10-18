@@ -1,0 +1,7 @@
+[
+ { "tema": "densidade", "numero": 55, "pasta": "055-densidade-do-biometano-sp", "base": "sp_biometano_densidade", "data": "2026-11-15", "categoria": "energia" },
+ { "tema": "alem", "numero": 56, "pasta": "056-alem-da-cana-sp", "base": "sp_biometano_alem_da_cana", "data": "2026-11-16", "categoria": "energia" },
+ { "tema": "gas", "numero": 57, "pasta": "057-biometano-e-gasodutos-sp", "base": "sp_biometano_gasodutos", "data": "2026-11-17", "categoria": "energia" },
+ { "tema": "eletrica", "numero": 58, "pasta": "058-biometano-e-rede-eletrica-sp", "base": "sp_biometano_rede_eletrica", "data": "2026-11-18", "categoria": "energia" },
+ { "tema": "operacao", "numero": 59, "pasta": "059-biogas-em-operacao-sp", "base": "sp_biogas_em_operacao", "data": "2026-11-19", "categoria": "energia" }
+]
