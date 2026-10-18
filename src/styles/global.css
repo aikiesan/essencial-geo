@@ -80,7 +80,8 @@
   --e-7: 48px;
   --e-8: 64px;
 
-  --col-esq: 272px;
+  --col-esq: 288px;
+  --topo: 56px;
   --feed-max: 760px;
 
   /* Grão de papel: ruído neutro quase imperceptível, sem tingir o fundo */
@@ -119,7 +120,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-padding-top: var(--e-6);
+  scroll-padding-top: calc(var(--topo) + var(--e-5));
 }
 
 body {
@@ -348,11 +349,43 @@ hr {
 .estrutura {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  min-height: 100vh;
+  min-height: calc(100vh - var(--topo));
 }
 
 .col-esq {
   min-width: 0;
+}
+
+/* Telas estreitas, com JavaScript: a coluna esquerda vira o painel do menu, por cima da página.
+   Sem JavaScript ela fica no fluxo, antes do conteúdo. */
+@media (max-width: 859px) {
+  .js .col-esq {
+    position: fixed;
+    inset: var(--topo) 0 0 0;
+    z-index: 35;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--painel);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease,
+      visibility 0s linear 160ms;
+  }
+  .js.menu-aberto .col-esq {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease;
+  }
+  .menu-aberto,
+  .menu-aberto body {
+    overflow: hidden;
+  }
 }
 
 .col-centro {
@@ -377,11 +410,11 @@ hr {
   }
   .col-esq {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: var(--topo);
+    height: calc(100vh - var(--topo));
     overflow-y: auto;
     background: var(--painel);
-    border-right: 1px solid var(--linha);
+    border-right: 1px solid var(--linha-fina);
     scrollbar-width: thin;
   }
   .col-centro {

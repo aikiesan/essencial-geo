@@ -36,10 +36,26 @@ function iniciarMenu() {
   const esq = document.querySelector<HTMLElement>('[data-esq]');
   const botao = document.querySelector<HTMLButtonElement>('[data-menu]');
   if (!esq || !botao) return;
-  botao.addEventListener('click', () => {
-    const aberto = esq.toggleAttribute('data-aberto');
+  const raiz = document.documentElement;
+  const definir = (aberto: boolean) => {
+    raiz.classList.toggle('menu-aberto', aberto);
     botao.setAttribute('aria-expanded', String(aberto));
+    botao.setAttribute('aria-label', (aberto ? botao.dataset.rotuloFechar : botao.dataset.rotuloAbrir) ?? 'Menu');
+    if (aberto) esq.parentElement?.scrollTo(0, 0);
+  };
+  botao.addEventListener('click', () => definir(!raiz.classList.contains('menu-aberto')));
+  // Esc fecha; escolher um link também (a página muda, mas âncoras na mesma página não).
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape' && raiz.classList.contains('menu-aberto')) {
+      definir(false);
+      botao.focus();
+    }
   });
+  esq.addEventListener('click', (ev) => {
+    if ((ev.target as Element).closest('a')) definir(false);
+  });
+  // Ao alargar a janela, o painel deixa de existir: fecha para não travar a rolagem.
+  matchMedia('(min-width: 860px)').addEventListener('change', (m) => m.matches && definir(false));
 }
 
 /* ---------- Citação: abas, data de acesso e cópia ------------------------ */

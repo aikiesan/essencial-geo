@@ -1,10 +1,11 @@
 ---
 /**
- * Esqueleto de todas as páginas: <head>, tema, duas colunas, a gaveta da ficha e o visualizador.
+ * Esqueleto de todas as páginas: <head>, tema, a barra do topo, duas colunas, a gaveta da ficha e o visualizador.
  * Slots: padrão (coluna central) e "direita" (fichas técnicas, abertas na gaveta).
  */
 import '../styles/global.css';
 import BarraEsquerda from '../components/BarraEsquerda.astro';
+import Topo from '../components/Topo.astro';
 import Icone from '../components/Icone.astro';
 import { SITE } from '../site.config';
 import { IDIOMA, caminhoEquivalente, linguaDe, t, url } from '../i18n';
@@ -82,6 +83,8 @@ const temDireita = Astro.slots.has('direita');
   </head>
   <body>
     <a class="pular" href="#conteudo">{tx.geral.pular}</a>
+
+    <Topo categoriaAtiva={categoriaAtiva} />
 
     <div class="estrutura">
       <div class="col-esq">

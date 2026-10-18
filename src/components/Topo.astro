@@ -1,0 +1,326 @@
+---
+/**
+ * Barra de navegação fixa no topo: marca, as cinco seções do atlas, língua e tema.
+ * Em telas estreitas as seções vão para o menu, que abre a coluna esquerda por cima da página.
+ */
+import Logo from './Logo.astro';
+import Icone from './Icone.astro';
+import { SITE, type CategoriaId } from '../site.config';
+import { IDIOMA, LINGUAS, caminhoEquivalente, linguaDe, rota, t } from '../i18n';
+
+interface Props {
+  categoriaAtiva?: CategoriaId | 'todas';
+}
+const { categoriaAtiva } = Astro.props;
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const n = tx.topo;
+
+const caminho = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const comeca = (destino: string) => caminho.startsWith(destino);
+const secoes = [
+  {
+    rotulo: n.mapas,
+    href: rota(lingua),
+    ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) || comeca(rota(lingua, 'categoria')),
+  },
+  { rotulo: n.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')) },
+  { rotulo: n.indice, href: rota(lingua, 'indice'), ativo: comeca(rota(lingua, 'indice')) },
+  { rotulo: n.notas, href: rota(lingua, 'notas'), ativo: comeca(rota(lingua, 'notas')) },
+  { rotulo: n.sobre, href: rota(lingua, 'sobre'), ativo: comeca(rota(lingua, 'sobre')) },
+];
+---
+
+<header class="topo">
+  <div class="topo__faixa">
+    <a class="marca" href={rota(lingua)} aria-label={`${SITE.nome} — ${tx.geral.inicio}`}>
+      <Logo tamanho={28} />
+      <span class="marca__nome">Essencial Geo</span>
+    </a>
+
+    <nav class="topo__nav" aria-label={n.navegacao}>
+      <ul role="list">
+        {
+          secoes.map((s) => (
+            <li>
+              <a href={s.href} aria-current={s.ativo ? 'page' : undefined}>
+                {s.rotulo}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="topo__acoes">
+      <nav class="linguas" aria-label={tx.geral.lingua}>
+        {
+          LINGUAS.map((l) => (
+            <a
+              href={caminhoEquivalente(Astro.url.pathname, l)}
+              hreflang={IDIOMA[l].codigo}
+              lang={IDIOMA[l].codigo}
+              aria-current={l === lingua ? 'true' : undefined}
+              title={IDIOMA[l].nome}
+            >
+              {IDIOMA[l].sigla}
+            </a>
+          ))
+        }
+      </nav>
+      <button
+        type="button"
+        class="topo__botao"
+        data-tema-botao
+        data-nome-claro={tx.geral.temaNomes.claro}
+        data-nome-escuro={tx.geral.temaNomes.escuro}
+        aria-label={n.tema}
+        title={n.tema}
+      >
+        <Icone nome="tema" tamanho={16} />
+      </button>
+      <button
+        type="button"
+        class="topo__botao topo__menu"
+        data-menu
+        data-rotulo-abrir={n.menu}
+        data-rotulo-fechar={n.fecharMenu}
+        aria-expanded="false"
+        aria-controls="col-esq"
+        aria-label={n.menu}
+      >
+        <span class="topo__hamburguer" aria-hidden="true"><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .topo {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    height: var(--topo);
+    border-bottom: 1px solid var(--linha-fina);
+    background: color-mix(in srgb, var(--painel) 88%, transparent);
+    -webkit-backdrop-filter: saturate(1.2) blur(10px);
+    backdrop-filter: saturate(1.2) blur(10px);
+  }
+  .topo__faixa {
+    display: flex;
+    align-items: center;
+    gap: var(--e-4);
+    height: 100%;
+    padding: 0 var(--e-3) 0 var(--e-4);
+  }
+
+  .marca {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    text-decoration: none;
+    color: var(--tinta);
+    margin-right: auto;
+  }
+  .marca__nome {
+    font-family: var(--f-titulo);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+
+  /* Seções: texto calmo; a ativa ganha um filete em Blue Nile rente à borda da barra */
+  .topo__nav {
+    display: none;
+  }
+  .topo__nav ul {
+    display: flex;
+    gap: var(--e-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .topo__nav a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: var(--topo);
+    padding: 0 var(--e-3);
+    font-size: 0.9375rem;
+    color: var(--tinta-2);
+    text-decoration: none;
+    transition: color 140ms ease;
+  }
+  .topo__nav a::after {
+    content: '';
+    position: absolute;
+    left: var(--e-3);
+    right: var(--e-3);
+    bottom: -1px;
+    height: 2px;
+    background: var(--nilo);
+    transform: scaleX(0);
+    transition: transform 180ms ease;
+  }
+  .topo__nav a:hover {
+    color: var(--tinta);
+  }
+  .topo__nav a:hover::after {
+    transform: scaleX(0.4);
+  }
+  .topo__nav a[aria-current='page'] {
+    color: var(--tinta);
+  }
+  .topo__nav a[aria-current='page']::after {
+    transform: scaleX(1);
+  }
+
+  .topo__acoes {
+    display: flex;
+    align-items: center;
+    gap: var(--e-2);
+  }
+
+  /* Seletor de língua: duas casas discretas, a ativa em Wheat Sheaf */
+  .linguas {
+    display: flex;
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.12em;
+  }
+  .linguas a {
+    display: grid;
+    place-items: center;
+    min-width: 34px;
+    height: 30px;
+    padding: 0 var(--e-2);
+    border: 1px solid var(--linha-fina);
+    color: var(--tinta-3);
+    text-decoration: none;
+  }
+  .linguas a + a {
+    border-left: 0;
+  }
+  .linguas a:hover {
+    color: var(--acento);
+  }
+  .linguas a[aria-current] {
+    background: var(--trigo);
+    color: var(--tinta);
+    font-weight: 600;
+  }
+
+  .topo__botao {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid transparent;
+    color: var(--tinta-2);
+    transition:
+      background-color 140ms ease,
+      color 140ms ease;
+  }
+  .topo__botao:hover {
+    background: var(--papel-2);
+    color: var(--tinta);
+  }
+
+  /* Menu: três traços que viram um x */
+  .topo__hamburguer,
+  .topo__hamburguer span {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
+    transition:
+      transform 180ms ease,
+      background-color 120ms ease;
+  }
+  .topo__hamburguer::before,
+  .topo__hamburguer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 1.5px;
+    background: currentColor;
+    transition: transform 180ms ease;
+  }
+  .topo__hamburguer::before {
+    top: -5px;
+  }
+  .topo__hamburguer::after {
+    top: 5px;
+  }
+  .topo__hamburguer span {
+    display: none;
+  }
+  .topo__menu[aria-expanded='true'] .topo__hamburguer {
+    background: transparent;
+  }
+  .topo__menu[aria-expanded='true'] .topo__hamburguer::before {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .topo__menu[aria-expanded='true'] .topo__hamburguer::after {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  /* Sem JavaScript, em tela estreita, as seções aparecem numa segunda linha e o menu some */
+  :global(html:not(.js)) .topo {
+    height: auto;
+  }
+  :global(html:not(.js)) .topo__faixa {
+    flex-wrap: wrap;
+    padding-block: var(--e-2);
+  }
+  :global(html:not(.js)) .topo__nav {
+    display: block;
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+  }
+  :global(html:not(.js)) .topo__nav a {
+    height: 40px;
+  }
+  :global(html:not(.js)) .topo__menu {
+    display: none;
+  }
+
+  @media (min-width: 860px) {
+    .topo__faixa {
+      display: grid;
+      grid-template-columns: var(--col-esq) minmax(0, 1fr) auto;
+      gap: 0;
+      padding: 0 var(--e-5) 0 0;
+    }
+    .marca {
+      height: 100%;
+      padding-left: var(--e-5);
+      border-right: 1px solid var(--linha-fina);
+      margin-right: 0;
+    }
+    .topo__nav,
+    :global(html:not(.js)) .topo__nav {
+      display: block;
+      order: 0;
+      width: auto;
+      padding-left: var(--e-4);
+    }
+    :global(html:not(.js)) .topo__nav a {
+      height: var(--topo);
+    }
+    .topo__menu {
+      display: none;
+    }
+    :global(html:not(.js)) .topo {
+      height: var(--topo);
+    }
+    :global(html:not(.js)) .topo__faixa {
+      padding-block: 0;
+    }
+  }
+</style>
