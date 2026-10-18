@@ -2,7 +2,7 @@
 numero: 20
 titulo: "Maranhão"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-12-07
+data: 2026-11-17
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, maranhao, municipios, regioes-geograficas, rodovias, ibge]

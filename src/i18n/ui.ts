@@ -8,7 +8,7 @@ const pt = {
     complemento: '— até ser traduzido em um mapa.',
     descricao:
       'Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil. Camadas em GeoPackage, com estilos do QGIS, citáveis com DOI.',
-    cadencia: '1 mapa / 2 dias',
+    cadencia: '1 mapa por dia',
     colofao: 'Composto em Campinas, SP',
   },
   geral: {
@@ -42,7 +42,7 @@ const pt = {
   barra: {
     projeto: 'O projeto',
     objetivo:
-      'Um atlas aberto do território brasileiro. A cada dois dias, um mapa temático com as camadas em GeoPackage, o método explicado passo a passo e um DOI para citar — para quem pesquisa, planeja ou simplesmente gosta de mapas.',
+      'Um atlas aberto do território brasileiro. Todo dia, um mapa temático novo, com as camadas em GeoPackage, o método explicado passo a passo e um DOI para citar — para quem pesquisa, planeja ou simplesmente gosta de mapas.',
     proximoMapa: 'Próximo mapa',
     quemFaz: 'Quem faz',
     autorResumo:
@@ -103,12 +103,39 @@ const pt = {
     copieManual: 'Selecione e copie (Ctrl+C)',
     tipos: { ponto: 'ponto', linha: 'linha', poligono: 'polígono', grade: 'grade', raster: 'raster' },
   },
+  inicio: {
+    sobre: 'Atlas aberto do Brasil',
+    titulo: 'Mapas do Brasil para ver, baixar e citar.',
+    texto:
+      'O Essencial Geo é a coleção de mapas e cartografia produzida por Lucas Nakamura Cerejo, no NIPE/UNICAMP. Cada mapa traz as camadas para abrir no QGIS, o método explicado e um DOI para citar. Um mapa novo por dia.',
+    passos: 'Como usar',
+    passo1: 'Veja',
+    passo1Texto: 'Abra a prancha e amplie os detalhes. Cada mapa tem um parágrafo que explica o que ele mostra.',
+    passo2: 'Baixe',
+    passo2Texto: 'As camadas vêm em GeoPackage, já com o estilo do QGIS, e a prancha em alta resolução.',
+    passo3: 'Cite',
+    passo3Texto: 'Cada mapa tem DOI no Zenodo e citação pronta em ABNT, APA e BibTeX.',
+    noAr: 'mapas no ar',
+    colecoes: 'coleções',
+    temas: 'temas',
+    licenca: 'livre para reuso',
+    galeriaColecoes: 'Coleções',
+    galeriaColecoesFina: 'Séries sobre um mesmo tema, para ler em sequência.',
+    galeriaMapas: 'Todos os mapas',
+    galeriaMapasFina: 'Do mais recente ao mais antigo. Clique para abrir a prancha, a ficha e os downloads.',
+    filtro: 'Filtrar por coleção',
+    todos: 'Todos',
+    lerFeed: 'Ler um por um, como feed',
+    proximos: 'Próximos mapas',
+    proximosFina: 'Um mapa novo entra no ar todo dia às 9h de Brasília.',
+    verColecao: 'Ver a coleção',
+  },
   feed: {
     sobre: 'Feed cartográfico',
     folha: 'Folha',
     de: 'de',
     frase:
-      'Mapas temáticos do Brasil, um a cada dois dias. Cada prancha acompanha seus dados vetoriais, sua projeção declarada e uma citação com DOI.',
+      'Mapas temáticos do Brasil, um por dia. Cada prancha acompanha suas camadas, sua projeção declarada e uma citação com DOI.',
     vazio: 'Nenhum mapa nesta categoria ainda — o território segue em levantamento.',
     paginacao: 'Paginação',
     recentes: 'Mais recentes',
@@ -201,7 +228,7 @@ const en: Forma<Textos> = {
     complemento: '— until it is drawn as a map.',
     descricao:
       'A cartographic feed, open-data repository and ongoing portfolio of thematic maps of Brazil. Layers in GeoPackage, with QGIS styles, citable with a DOI.',
-    cadencia: '1 map / 2 days',
+    cadencia: '1 map a day',
     colofao: 'Set in Campinas, Brazil',
   },
   geral: {
@@ -235,7 +262,7 @@ const en: Forma<Textos> = {
   barra: {
     projeto: 'The project',
     objetivo:
-      'An open atlas of the Brazilian territory. Every other day, a thematic map with its layers in GeoPackage, the method explained step by step and a DOI to cite — for anyone who researches, plans or simply enjoys maps.',
+      'An open atlas of the Brazilian territory. Every day, a new thematic map with its layers in GeoPackage, the method explained step by step and a DOI to cite — for anyone who researches, plans or simply enjoys maps.',
     proximoMapa: 'Next map',
     quemFaz: 'Who makes it',
     autorResumo:
@@ -296,12 +323,39 @@ const en: Forma<Textos> = {
     copieManual: 'Select and copy (Ctrl+C)',
     tipos: { ponto: 'point', linha: 'line', poligono: 'polygon', grade: 'grid', raster: 'raster' },
   },
+  inicio: {
+    sobre: 'An open atlas of Brazil',
+    titulo: 'Maps of Brazil to view, download and cite.',
+    texto:
+      'Essencial Geo is the collection of maps and cartography made by Lucas Nakamura Cerejo at NIPE/UNICAMP. Each map comes with its layers ready for QGIS, the method explained and a DOI to cite. A new map every day.',
+    passos: 'How to use it',
+    passo1: 'View',
+    passo1Texto: 'Open the plate and zoom into the detail. Each map has a paragraph explaining what it shows.',
+    passo2: 'Download',
+    passo2Texto: 'Layers come in GeoPackage, already styled for QGIS, with the plate in high resolution.',
+    passo3: 'Cite',
+    passo3Texto: 'Each map has a Zenodo DOI and a ready-made citation in ABNT, APA and BibTeX.',
+    noAr: 'maps published',
+    colecoes: 'collections',
+    temas: 'themes',
+    licenca: 'free to reuse',
+    galeriaColecoes: 'Collections',
+    galeriaColecoesFina: 'Series on a single theme, to read in sequence.',
+    galeriaMapas: 'All maps',
+    galeriaMapasFina: 'Newest first. Click to open the plate, the data sheet and the downloads.',
+    filtro: 'Filter by collection',
+    todos: 'All',
+    lerFeed: 'Read them one by one, as a feed',
+    proximos: 'Coming next',
+    proximosFina: 'A new map goes live every day at 12:00 UTC.',
+    verColecao: 'See the collection',
+  },
   feed: {
     sobre: 'Cartographic feed',
     folha: 'Sheet',
     de: 'of',
     frase:
-      'Thematic maps of Brazil, one every two days. Each plate comes with its vector data, a declared projection and a citation with a DOI.',
+      'Thematic maps of Brazil, one a day. Each plate comes with its layers, a declared projection and a citation with a DOI.',
     vazio: 'No maps in this category yet — the survey of the territory continues.',
     paginacao: 'Pagination',
     recentes: 'Newer',

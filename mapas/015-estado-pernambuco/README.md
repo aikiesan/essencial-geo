@@ -2,7 +2,7 @@
 numero: 15
 titulo: "Pernambuco"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-25
+data: 2026-11-09
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, pernambuco, municipios, regioes-geograficas, rodovias, ibge]

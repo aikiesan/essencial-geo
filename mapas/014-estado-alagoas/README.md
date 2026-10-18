@@ -2,7 +2,7 @@
 numero: 14
 titulo: "Alagoas"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-23
+data: 2026-11-07
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, alagoas, municipios, regioes-geograficas, rodovias, ibge]

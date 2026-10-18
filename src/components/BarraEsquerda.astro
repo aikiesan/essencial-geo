@@ -34,7 +34,7 @@ const caminho = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro
 const comeca = (destino: string) => caminho.startsWith(destino);
 // As mesmas seções do topo, para o menu em telas estreitas.
 const secoes = [
-  { icone: 'casa', rotulo: n.mapas, href: rota(lingua), ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) },
+  { icone: 'ficha', rotulo: n.mapas, href: rota(lingua, 'mapas'), ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) },
   { icone: 'colecoes', rotulo: n.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')) },
   { icone: 'lista', rotulo: n.indice, href: rota(lingua, 'indice'), ativo: comeca(rota(lingua, 'indice')) },
   { icone: 'nota', rotulo: n.notas, href: rota(lingua, 'notas'), ativo: comeca(rota(lingua, 'notas')) },

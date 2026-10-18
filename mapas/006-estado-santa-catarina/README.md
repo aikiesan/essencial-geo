@@ -2,7 +2,7 @@
 numero: 6
 titulo: "Santa Catarina"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-04
+data: 2026-10-25
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, santa-catarina, municipios, regioes-geograficas, rodovias, ibge]

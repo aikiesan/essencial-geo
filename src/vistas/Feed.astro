@@ -1,5 +1,5 @@
 ---
-/** Feed principal, paginado em folhas de 8 pranchas. */
+/** Feed dos mapas (/mapas/), paginado em folhas de 8 pranchas. A página inicial é a galeria (Inicio.astro). */
 import type { Page } from 'astro';
 import Base from '../layouts/Base.astro';
 import ListaFeed from '../components/ListaFeed.astro';
@@ -7,7 +7,6 @@ import PainelFichas from '../components/PainelFichas.astro';
 import type { Mapa } from '../lib/mapas';
 import { linguaDe, t } from '../i18n';
 import { SITE } from '../site.config';
-import { jsonLd, siteEAutor } from '../lib/metadados';
 
 interface Props { page: Page<Mapa> }
 const { page } = Astro.props;
@@ -16,11 +15,10 @@ const primeira = page.currentPage === 1;
 ---
 
 <Base
-  titulo={primeira ? undefined : `${tx.feed.folha} ${page.currentPage}`}
+  titulo={primeira ? tx.topo.mapas : `${tx.topo.mapas} · ${tx.feed.folha} ${page.currentPage}`}
   categoriaAtiva="todas"
   imagem={page.data[0]?.data.imagem.src}
 >
-  {primeira && <script slot="head" type="application/ld+json" set:html={jsonLd(siteEAutor(linguaDe(Astro.url.pathname), tx.site.descricao, Astro.site))} />}
   <header class="mancha feed">
     <h1 class="rotulo mancha__titulo"><span class="sr-only">{SITE.nome}: </span>{tx.feed.sobre} · {tx.feed.folha} {page.currentPage} {tx.feed.de} {page.lastPage}</h1>
     <p class="mancha__frase">{tx.feed.frase}</p>

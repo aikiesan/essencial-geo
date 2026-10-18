@@ -3,7 +3,13 @@
 # e a presença da versão em inglês (README.en.md) de cada mapa publicado.
 #
 # Agenda: mapas e notas com data futura ficam fora do site até as 12h UTC (9h em
-# Brasília) do seu dia. A recompilação diária abaixo é o que os faz entrar no ar.
+# Brasília) do seu dia. A recompilação diária abaixo é o que os faz entrar no ar —
+# um mapa novo por dia.
+#
+# Depois de publicar, o job "conferir" lê o site no ar e confere os mapas publicados:
+# páginas PT/EN, sitemap, prancha e cada download. Se algo falhar, a execução falha e o
+# GitHub avisa por e-mail. O resumo da execução lista os mapas prontos para receber DOI,
+# com o comando do workflow "Publicar no Zenodo" (o DOI é sempre pedido à mão).
 name: Site (GitHub Pages)
 
 on:
@@ -51,3 +57,21 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  conferir:
+    if: github.event_name != 'pull_request'
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # O GitHub Pages leva alguns segundos para servir a versão nova.
+      - run: sleep 60
+      - name: Conferir os mapas no ar
+        run: node scripts/conferir-publicacao.mjs --todos

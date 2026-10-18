@@ -21,7 +21,7 @@ const comeca = (destino: string) => caminho.startsWith(destino);
 const secoes = [
   {
     rotulo: n.mapas,
-    href: rota(lingua),
+    href: rota(lingua, 'mapas'),
     ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) || comeca(rota(lingua, 'categoria')),
   },
   { rotulo: n.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')) },
