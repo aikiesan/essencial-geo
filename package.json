@@ -8,7 +8,7 @@
   "scripts": {
     "sincronizar": "node scripts/sincronizar-mapas.mjs",
     "dev": "npm run sincronizar && astro dev",
-    "build": "npm run sincronizar -- --publicadas && astro build",
+    "build": "npm run sincronizar -- --publicadas && astro build && node scripts/painel-cifrado.mjs",
     "preview": "astro preview",
     "novo-mapa": "node scripts/novo-mapa.mjs",
     "zenodo": "node scripts/zenodo-publicar.mjs"

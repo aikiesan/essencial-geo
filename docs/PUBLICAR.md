@@ -226,6 +226,21 @@ etiqueta HTML: copie só o valor de `content="…"` para `SITE.verificacao.googl
 Para testar um mapa: [Rich Results Test](https://search.google.com/test/rich-results) ou
 [validator.schema.org](https://validator.schema.org) com o endereço da página.
 
+## Painel de admin
+
+`/admin/` mostra todas as pranchas, no ar e agendadas, por coleção, com a agenda (próxima, até quando,
+dias repetidos ou vazios).
+
+- **No computador:** `npm run dev` e http://localhost:4321/essencial-geo/admin/, sem senha. Cada cartão
+  abre a página da prancha, que em desenvolvimento existe mesmo antes da data.
+- **No ar:** https://aikiesan.github.io/essencial-geo/admin/, com senha. O deploy cifra a página com o
+  segredo `ADMIN_SENHA` (`scripts/painel-cifrado.mjs`, AES-GCM); o navegador decifra. As agendadas
+  abrem a prancha no visualizador, também cifrada. Sem o segredo, o painel fica fora do site.
+
+Para definir ou trocar a senha (pelo menos 12 caracteres; o arquivo cifrado é público, então a força
+dela é toda a proteção), rode `gh secret set ADMIN_SENHA`, digite a senha e recompile o site
+(`gh workflow run deploy.yml --ref main`).
+
 ## Correções
 
 Um mapa publicado não é apagado nem reescrito em silêncio, como numa redação:
