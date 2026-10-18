@@ -1,0 +1,7 @@
+[
+ { "tema": "emprego", "numero": 76, "pasta": "076-bioeconomia-no-emprego-sp", "base": "sp_bioeconomia_emprego_2025", "data": "2026-12-06", "categoria": "energia" },
+ { "tema": "perfil", "numero": 77, "pasta": "077-perfil-da-bioeconomia-sp", "base": "sp_bioeconomia_perfil_2025", "data": "2026-12-07", "categoria": "energia" },
+ { "tema": "geradores", "numero": 78, "pasta": "078-industrias-do-residuo-organico-sp", "base": "sp_industrias_residuo_organico_2025", "data": "2026-12-08", "categoria": "energia" },
+ { "tema": "encontro", "numero": 79, "pasta": "079-biomassa-e-industria-sp", "base": "sp_biomassa_e_industria_2025", "data": "2026-12-09", "categoria": "energia" },
+ { "tema": "residuos", "numero": 80, "pasta": "080-quem-trata-o-residuo-sp", "base": "sp_tratamento_residuos_2025", "data": "2026-12-10", "categoria": "energia" }
+]
