@@ -1,0 +1,6 @@
+[
+ { "tema": "fcu", "numero": 67, "pasta": "067-favelas-sp", "base": "sp_favelas_2022", "data": "2026-11-27", "categoria": "censo-renda" },
+ { "tema": "metropole", "numero": 68, "pasta": "068-favelas-na-metropole-sp", "base": "sp_favelas_metropole_2022", "data": "2026-11-28", "categoria": "censo-renda" },
+ { "tema": "entorno", "numero": 69, "pasta": "069-entorno-das-favelas-sp", "base": "sp_entorno_favelas_2022", "data": "2026-11-29", "categoria": "censo-renda" },
+ { "tema": "dentro", "numero": 70, "pasta": "070-dentro-e-fora-das-favelas-sp", "base": "sp_dentro_e_fora_favelas_2022", "data": "2026-11-30", "categoria": "censo-renda" }
+]

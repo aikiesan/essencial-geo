@@ -205,6 +205,16 @@ export const COLECOES = {
       resumo: 'Where São Paulo’s people live, tract by tract: density, the age and sex of each municipality, those aged 60 or over and who still lives in the countryside.',
     },
   },
+  'favelas-sp': {
+    pt: {
+      titulo: 'Favelas e comunidades urbanas',
+      resumo: 'Um em cada doze paulistas mora em favela: onde ficam, as maiores da metrópole, a rua sem luz e sem calçada e a distância de renda para o resto da mesma cidade.',
+    },
+    en: {
+      titulo: 'Favelas and urban communities',
+      resumo: 'One in twelve people in São Paulo lives in a favela: where they are, the largest in the metropolis, streets without light or pavements and the income gap with the rest of the same town.',
+    },
+  },
   'animal-sp': {
     pt: {
       titulo: 'Leite, ovos, mel e peixe',
