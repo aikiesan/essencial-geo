@@ -128,19 +128,19 @@ uma frase («A colheita que acende a rede»), e cada coleção tem um friso dese
 | 29/10 | qui | 029 | Bioenergia em SP 2/4 | Rebanhos bovino, suíno e de galináceos | IBGE — PPM 2024 |
 | 03/11 | ter | 030 | Bioenergia em SP 3/4 | Cana-de-açúcar: área colhida e produção | IBGE — PAM 2024 |
 | 05/11 | qui | 031 | Bioenergia em SP 4/4 | Usinas sucroenergéticas e onde o resíduo está | ANEEL — SIGA, IBGE — PAM, EPE |
-| 10/11 | ter | 032 | RMC (`rmc`) 1/4 | Uso e cobertura da terra | MapBiomas |
-| 12/11 | qui | 033 | RMC 2/4 | Densidade de domicílios, grade estatística | IBGE — Censo 2022 |
-| 17/11 | ter | 034 | RMC 3/4 | Renda domiciliar | IBGE — Censo 2022 |
-| 19/11 | qui | 035 | RMC 4/4 | Hidrografia e APPs de um município | ANA, FBDS |
+| 10/11 | ter | 032 | RMC (`rmc`) 1/4 | Uso e cobertura da terra | MapBiomas — Coleção 10 (2024) |
+| 12/11 | qui | 033 | RMC 2/4 | Densidade de domicílios por setor censitário | IBGE — Censo 2022 |
+| 17/11 | ter | 034 | RMC 3/4 | Renda do responsável pelo domicílio | IBGE — Censo 2022 (setores) |
+| 19/11 | qui | 035 | RMC 4/4 | Hidrografia, nascentes e APPs de Campinas | FBDS |
 | 24/11 | ter | 036 | Água em SP (`agua-sp`) 1/3 | Bacias hidrográficas (UGRHIs) | SEADE, IBGE — Censo 2022, MapBiomas |
-| 26/11 | qui | 037 | Água em SP 2/3 | Drenagem ordenada | ANA — BHO |
+| 26/11 | qui | 037 | Água em SP 2/3 | Rede de drenagem e as vertentes | WWF/HydroSHEDS — HydroRIVERS |
 | 01/12 | ter | 038 | Água em SP 3/3 | Unidades de conservação sobre as bacias | MMA — CNUC (via SEADE), SEADE |
-| 03/12 | qui | 039 | Relevo (`relevo`) 1/3 | Serra da Mantiqueira | Copernicus DEM GLO-30 |
-| 08/12 | ter | 040 | Relevo 2/3 | Serra do Mar | Copernicus DEM GLO-30 |
-| 10/12 | qui | 041 | Relevo 3/3 | Cuestas paulistas | Copernicus DEM GLO-30 |
+| 03/12 | qui | 039 | Relevo (`relevo`) 1/3 | Serra da Mantiqueira | Copernicus DEM GLO-90 |
+| 08/12 | ter | 040 | Relevo 2/3 | Serra do Mar | Copernicus DEM GLO-90 |
+| 10/12 | qui | 041 | Relevo 3/3 | Cuestas paulistas | Copernicus DEM GLO-90 |
 | 15/12 | ter | 042 | Energia elétrica no Brasil (`energia-eletrica`) 1/3 | Linhas de transmissão e subestações | EPE (via MapBiomas) |
 | 17/12 | qui | 043 | Energia elétrica no Brasil 2/3 | Usinas por fonte | ANEEL — SIGA (via MapBiomas) |
-| 22/12 | ter | 044 | Energia elétrica no Brasil 3/3 | Geração distribuída solar por município | ANEEL |
+| 22/12 | ter | 044 | Energia elétrica no Brasil 3/3 | Geração solar distribuída por habitante | ANEEL — GD (10/2026), IBGE — Censo 2022 |
 
 **Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
 uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
