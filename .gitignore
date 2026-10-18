@@ -28,3 +28,11 @@ mapas/037-drenagem-sp/dados/sp_drenagem.csv
 
 # Microdados brutos do IBGE (Censo, SP): 1,5 GB, só para uso local; nunca vão ao repositório
 35_SP/
+# Bases brutas do IBGE baixadas na raiz (Censo 2022: agregados por setor, tabelas SIDRA,
+# áreas de ponderação). Ficam só no disco; os mapas levam apenas o recorte que usam.
+/*.zip
+/*.xlsx
+/*.gpkg
+/*.crdownload
+/DePara_*.csv
+/Agregados_por_setores_*
