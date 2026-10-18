@@ -2,7 +2,7 @@
 numero: 5
 titulo: "Paraná"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-02
+data: 2026-10-23
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, parana, municipios, regioes-geograficas, rodovias, ibge]
@@ -92,7 +92,7 @@ downloads:
     arquivo_en: mapa_preview.en.png
     rotulo: "Prancha (PNG 2400 px)"
     rotulo_en: "Plate (PNG, 2400 px)"
-    tamanho: "0,4 MB"
+    tamanho: "0,3 MB"
 
 versao: "1.0.0"
 discussoes: []

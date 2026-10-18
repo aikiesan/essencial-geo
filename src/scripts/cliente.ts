@@ -159,8 +159,24 @@ function iniciarGaveta() {
   });
 }
 
+/* ---------- Galeria da página inicial: filtro por coleção ---------------- */
+function iniciarGaleria() {
+  const grupo = document.querySelector<HTMLElement>('[data-filtros]');
+  const itens = $$('[data-galeria] > li');
+  if (!grupo || !itens.length) return;
+  const botoes = $$<HTMLButtonElement>('[data-filtro]', grupo);
+  botoes.forEach((b) =>
+    b.addEventListener('click', () => {
+      const alvo = b.dataset.filtro ?? '';
+      botoes.forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+      itens.forEach((li) => (li.hidden = alvo !== '' && li.dataset.colecao !== alvo));
+    }),
+  );
+}
+
 iniciarTema();
 iniciarMenu();
+iniciarGaleria();
 iniciarCitacoes();
 iniciarGaveta();
 iniciarVisor();

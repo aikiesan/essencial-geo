@@ -120,11 +120,25 @@ O build de produção é o juiz final: ele falha se um mapa publicado não tiver
    git push
    ```
 3. `data` de hoje (antes das 9h, sai às 9h; depois, sai em ~1 minuto) ou futura (sai às 9h do dia).
+   Cadência: **um mapa por dia** — cada pasta agendada com um dia livre na fila.
+
+**Conferência diária.** Depois de cada publicação (push ou recompilação das 9h05), o job `conferir` do
+`deploy.yml` roda `node scripts/conferir-publicacao.mjs --todos` contra o site no ar: páginas PT/EN (200),
+sitemap, imagem da prancha e cada download. Se algo falhar, a execução fica vermelha e o GitHub avisa por
+e-mail. Para conferir à mão: `node scripts/conferir-publicacao.mjs` (mapas de hoje), `--todos` ou
+`--dia 2026-10-19`. Um release que falta (download 404) aparece aqui antes de alguém reclamar.
 
 ### 6. DOI
 
-Depois que o mapa estiver no ar: *Actions → Publicar no Zenodo*, primeiro no sandbox, depois de verdade.
-Detalhes em [`ZENODO.md`](ZENODO.md).
+Depois que o mapa estiver no ar e conferido: o resumo da execução do `deploy.yml` lista os mapas
+**prontos para DOI** com o comando pronto. O DOI é permanente, então é sempre pedido à mão:
+
+```bash
+gh workflow run zenodo.yml -f pasta=001-estado-sao-paulo -f sandbox=false
+```
+
+(ou *Actions → Publicar no Zenodo*; primeiro no sandbox, se for o primeiro de uma coleção). O workflow
+grava o DOI no README e ele aparece no site na recompilação seguinte. Detalhes em [`ZENODO.md`](ZENODO.md).
 
 ### 7. Lattes
 

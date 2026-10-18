@@ -1,0 +1,461 @@
+---
+/**
+ * Página inicial: o que é o atlas e como usá-lo, em poucas linhas, e a galeria —
+ * as coleções e todos os mapas no ar, com filtro por coleção. O feed de cartões
+ * longos fica em /mapas/.
+ */
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Icone from '../components/Icone.astro';
+import Estrela from '../components/Estrela.astro';
+import Progresso from '../components/Progresso.astro';
+import { colecoesNoAr } from '../lib/colecoes';
+import { contarPorCategoria, linkMapa, mapasPublicados, numeroFormatado, proximosMapas } from '../lib/mapas';
+import { jsonLd, siteEAutor } from '../lib/metadados';
+import { CATEGORIA_IDS, COLECOES, SITE } from '../site.config';
+import { dataCurta, linguaDe, rota, t } from '../i18n';
+
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const i = tx.inicio;
+
+const mapas = await mapasPublicados(lingua);
+const series = await colecoesNoAr(lingua);
+const proximos = await proximosMapas(lingua, 3);
+const contagem = contarPorCategoria(mapas);
+const temas = CATEGORIA_IDS.filter((c) => contagem[c] > 0).length;
+const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
+---
+
+<Base imagem={mapas[0]?.data.imagem.src}>
+  <script slot="head" type="application/ld+json" set:html={jsonLd(siteEAutor(lingua, tx.site.descricao, Astro.site))} />
+
+  <div class="inicio">
+    <header class="abertura">
+      <p class="rotulo">{i.sobre}</p>
+      <h1 class="abertura__titulo"><span class="sr-only">{SITE.nome}: </span>{i.titulo}</h1>
+      <p class="abertura__texto">{i.texto}</p>
+
+      <h2 class="sr-only">{i.passos}</h2>
+      <ol class="passos" role="list">
+        <li>
+          <span class="passos__n mono">01</span>
+          <strong>{i.passo1}</strong>
+          <span>{i.passo1Texto}</span>
+        </li>
+        <li>
+          <span class="passos__n mono">02</span>
+          <strong>{i.passo2}</strong>
+          <span>{i.passo2Texto}</span>
+        </li>
+        <li>
+          <span class="passos__n mono">03</span>
+          <strong>{i.passo3}</strong>
+          <span>{i.passo3Texto}</span>
+        </li>
+      </ol>
+
+      <dl class="numeros">
+        <div><dt>{i.noAr}</dt><dd>{mapas.length}</dd></div>
+        <div><dt>{i.colecoes}</dt><dd>{series.length}</dd></div>
+        <div><dt>{i.temas}</dt><dd>{temas}</dd></div>
+        <div><dt>{i.licenca}</dt><dd>{SITE.licenca.nome}</dd></div>
+      </dl>
+    </header>
+
+    {
+      series.length > 0 && (
+        <section class="bloco" aria-labelledby="t-galeria-colecoes">
+          <div class="bloco__cabeca">
+            <h2 id="t-galeria-colecoes">{i.galeriaColecoes}</h2>
+            <p>{i.galeriaColecoesFina}</p>
+          </div>
+          <ul class="colecoes" role="list">
+            {series.map((c, n) => {
+              const total = Math.max(c.ordem.length, c.mapas.length);
+              return (
+                <li>
+                  <a class="colecao" href={rota(lingua, 'colecoes', c.id)}>
+                    <span class="colecao__capa">
+                      <Image
+                        src={c.mapas[0].data.imagem}
+                        alt=""
+                        widths={[320, 480, 640]}
+                        sizes="(min-width: 1100px) 320px, (min-width: 600px) 45vw, calc(100vw - 32px)"
+                        loading={n < 3 ? 'eager' : 'lazy'}
+                        format="webp"
+                        quality={74}
+                      />
+                    </span>
+                    <span class="colecao__titulo">{c.titulo}</span>
+                    <Progresso feitos={c.mapas.length} total={total} compacto />
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="bloco" aria-labelledby="t-galeria-mapas">
+      <div class="bloco__cabeca">
+        <h2 id="t-galeria-mapas">{i.galeriaMapas}</h2>
+        <p>{i.galeriaMapasFina}</p>
+      </div>
+
+      {
+        filtros.length > 0 && (
+          <div class="filtros" role="group" aria-label={i.filtro} data-filtros>
+            <button type="button" data-filtro="" aria-pressed="true">
+              {i.todos} <span class="mono">{mapas.length}</span>
+            </button>
+            {filtros.map((c) => (
+              <button type="button" data-filtro={c.id} aria-pressed="false">
+                {c.titulo} <span class="mono">{c.mapas.length}</span>
+              </button>
+            ))}
+          </div>
+        )
+      }
+
+      <ul class="mapas" role="list" data-galeria>
+        {
+          mapas.map((m, n) => (
+            <li data-colecao={m.data.colecao ?? ''}>
+              <a class="mapa" href={linkMapa(m)}>
+                <span class="mapa__capa">
+                  <Image
+                    src={m.data.imagem}
+                    alt=""
+                    widths={[280, 420, 560]}
+                    sizes="(min-width: 1100px) 240px, (min-width: 600px) 30vw, calc(50vw - 24px)"
+                    loading={n < 6 ? 'eager' : 'lazy'}
+                    format="webp"
+                    quality={72}
+                  />
+                </span>
+                <span class="mapa__no rotulo">
+                  Nº {numeroFormatado(m.data.numero)}
+                  {m.data.colecao && <> · {COLECOES[m.data.colecao][lingua].titulo}</>}
+                </span>
+                <span class="mapa__titulo">{m.data.titulo}</span>
+                <span class="mapa__recorte">{m.data.recorte}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <a class="feed-link rotulo" href={rota(lingua, 'mapas')}>
+        {i.lerFeed} <Icone nome="seta" tamanho={12} />
+      </a>
+    </section>
+
+    {
+      proximos.length > 0 && (
+        <section class="bloco proximos" aria-labelledby="t-proximos">
+          <div class="bloco__cabeca">
+            <h2 id="t-proximos">{i.proximos}</h2>
+            <p>{i.proximosFina}</p>
+          </div>
+          <ol class="proximos__lista" role="list">
+            {proximos.map((m) => (
+              <li>
+                <time class="mono" datetime={m.data.data.toISOString().slice(0, 10)}>{dataCurta(m.data.data, lingua)}</time>
+                <Estrela tamanho={9} />
+                <span>
+                  <span class="proximos__titulo">{m.data.titulo}</span>
+                  <span class="proximos__recorte">{m.data.recorte}</span>
+                </span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .inicio {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  /* Abertura: uma frase, um parágrafo, três passos e quatro números */
+  .abertura {
+    padding-bottom: var(--e-6);
+    border-bottom: 1px solid var(--linha);
+  }
+  .abertura .rotulo {
+    margin: 0 0 var(--e-3);
+  }
+  .abertura__titulo {
+    margin: 0 0 var(--e-4);
+    font-size: var(--t-xxl);
+    line-height: 1.08;
+    max-width: 18ch;
+  }
+  .abertura__texto {
+    margin: 0;
+    max-width: 62ch;
+    font-size: var(--t-lg);
+    line-height: 1.6;
+    color: var(--tinta-2);
+  }
+  .passos {
+    display: grid;
+    gap: var(--e-4);
+    margin: var(--e-6) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 700px) {
+    .passos {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--linha-fina);
+    }
+    .passos li + li {
+      border-left: 1px solid var(--linha-fina);
+      padding-left: var(--e-4);
+    }
+    .passos li {
+      padding: var(--e-4) var(--e-4) 0 0;
+    }
+  }
+  .passos li {
+    display: grid;
+    gap: var(--e-1);
+    font-size: var(--t-sm);
+    line-height: 1.55;
+    color: var(--tinta-2);
+  }
+  .passos strong {
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+    font-weight: 500;
+    color: var(--tinta);
+  }
+  .passos__n {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+  .numeros {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--e-4);
+    margin: var(--e-6) 0 0;
+  }
+  @media (min-width: 700px) {
+    .numeros {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .numeros div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2px;
+    padding-top: var(--e-2);
+    border-top: 1px solid var(--linha);
+  }
+  .numeros dt {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tinta-3);
+  }
+  .numeros dd {
+    margin: 0;
+    font-family: var(--f-titulo);
+    font-size: var(--t-xl);
+    line-height: 1.1;
+  }
+
+  /* Blocos da galeria */
+  .bloco {
+    margin-top: var(--e-7);
+  }
+  .bloco__cabeca {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--e-1) var(--e-4);
+    margin-bottom: var(--e-4);
+    padding-bottom: var(--e-2);
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .bloco__cabeca h2 {
+    margin: 0;
+    font-size: var(--t-xl);
+  }
+  .bloco__cabeca p {
+    margin: 0;
+    font-size: var(--t-sm);
+    color: var(--tinta-3);
+  }
+
+  /* Coleções: capa, título e andamento */
+  .colecoes,
+  .mapas {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .colecoes {
+    gap: var(--e-5);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  }
+  .colecao {
+    display: grid;
+    gap: var(--e-2);
+    text-decoration: none;
+    color: var(--tinta);
+  }
+  .colecao__capa,
+  .mapa__capa {
+    display: block;
+    padding: 4px;
+    border: 1px solid var(--linha);
+    background: var(--folha);
+    transition: border-color 120ms linear;
+  }
+  .colecao__capa :global(img),
+  .mapa__capa :global(img) {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #fff;
+  }
+  .colecao:hover .colecao__capa,
+  .mapa:hover .mapa__capa {
+    border-color: var(--acento);
+  }
+  .colecao__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+    line-height: 1.25;
+    transition: color 120ms linear;
+  }
+  .colecao:hover .colecao__titulo,
+  .mapa:hover .mapa__titulo {
+    color: var(--acento);
+  }
+
+  /* Filtro por coleção: etiquetas; sem JavaScript, a galeria mostra tudo */
+  .filtros {
+    display: none;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+    margin-bottom: var(--e-5);
+  }
+  :global(.js) .filtros {
+    display: flex;
+  }
+  .filtros button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: 32px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha-fina);
+    background: var(--painel);
+    font-size: var(--t-sm);
+    transition:
+      border-color 120ms linear,
+      background-color 120ms linear;
+  }
+  .filtros button:hover {
+    border-color: var(--tinta-3);
+  }
+  .filtros button[aria-pressed='true'] {
+    background: var(--trigo);
+    border-color: var(--trigo);
+  }
+  .filtros .mono {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+
+  /* Mapas: miniaturas em grade */
+  .mapas {
+    gap: var(--e-5) var(--e-4);
+    grid-template-columns: repeat(auto-fill, minmax(min(46%, 220px), 1fr));
+  }
+  .mapas li[hidden] {
+    display: none;
+  }
+  .mapa {
+    display: grid;
+    gap: var(--e-1);
+    text-decoration: none;
+    color: var(--tinta);
+  }
+  .mapa__capa {
+    margin-bottom: var(--e-1);
+  }
+  .mapa__no {
+    margin: 0;
+  }
+  .mapa__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    line-height: 1.25;
+    transition: color 120ms linear;
+  }
+  .mapa__recorte {
+    font-size: var(--t-xs);
+    line-height: 1.45;
+    color: var(--tinta-3);
+  }
+  .feed-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    margin-top: var(--e-6);
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--linha);
+    color: var(--tinta);
+    text-decoration: none;
+  }
+  .feed-link:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+
+  /* Próximos: a agenda dos dias seguintes */
+  .proximos__lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .proximos__lista li {
+    display: grid;
+    grid-template-columns: 7.5em auto minmax(0, 1fr);
+    align-items: baseline;
+    gap: var(--e-3);
+    padding: var(--e-3) 0;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .proximos__lista time {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+  .proximos__lista :global(svg) {
+    color: var(--estrela);
+  }
+  .proximos__titulo {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    margin-right: var(--e-2);
+  }
+  .proximos__recorte {
+    font-size: var(--t-sm);
+    color: var(--tinta-3);
+  }
+</style>

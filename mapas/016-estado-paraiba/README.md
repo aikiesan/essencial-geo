@@ -2,7 +2,7 @@
 numero: 16
 titulo: "Paraíba"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-27
+data: 2026-11-11
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, paraiba, municipios, regioes-geograficas, rodovias, ibge]

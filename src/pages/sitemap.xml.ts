@@ -39,7 +39,8 @@ export const GET: APIRoute = async ({ site }) => {
   const folhas = Math.max(1, Math.ceil(mapas.length / POR_FOLHA));
   const entradas: Entrada[] = [
     { caminhos: nas((l) => rota(l)), ultima: recente(mapas.map(dataDe)) },
-    ...Array.from({ length: folhas - 1 }, (_, i) => ({ caminhos: nas((l) => `${rota(l)}${i + 2}/`) })),
+    { caminhos: nas((l) => rota(l, 'mapas')), ultima: recente(mapas.map(dataDe)) },
+    ...Array.from({ length: folhas - 1 }, (_, i) => ({ caminhos: nas((l) => `${rota(l, 'mapas')}${i + 2}/`) })),
     ...CATEGORIA_IDS.filter((c) => mapas.some((m) => m.data.categoria === c)).map((c) => ({
       caminhos: nas((l) => rota(l, 'categoria', c)),
       ultima: recente(mapas.filter((m) => m.data.categoria === c).map(dataDe)),

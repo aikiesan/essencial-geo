@@ -2,7 +2,7 @@
 numero: 17
 titulo: "Rio Grande do Norte"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-30
+data: 2026-11-12
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, rio-grande-do-norte, municipios, regioes-geograficas, rodovias, ibge]

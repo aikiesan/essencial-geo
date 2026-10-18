@@ -11,181 +11,181 @@
   "nome": "Rio de Janeiro",
   "numero": 2,
   "pasta": "002-estado-rio-de-janeiro",
-  "data": "2026-10-26"
+  "data": "2026-10-18"
  },
  {
   "uf": "MG",
   "nome": "Minas Gerais",
   "numero": 3,
   "pasta": "003-estado-minas-gerais",
-  "data": "2026-10-28"
+  "data": "2026-10-20"
  },
  {
   "uf": "ES",
   "nome": "Espírito Santo",
   "numero": 4,
   "pasta": "004-estado-espirito-santo",
-  "data": "2026-10-30"
+  "data": "2026-10-22"
  },
  {
   "uf": "PR",
   "nome": "Paraná",
   "numero": 5,
   "pasta": "005-estado-parana",
-  "data": "2026-11-02"
+  "data": "2026-10-23"
  },
  {
   "uf": "SC",
   "nome": "Santa Catarina",
   "numero": 6,
   "pasta": "006-estado-santa-catarina",
-  "data": "2026-11-04"
+  "data": "2026-10-25"
  },
  {
   "uf": "RS",
   "nome": "Rio Grande do Sul",
   "numero": 7,
   "pasta": "007-estado-rio-grande-do-sul",
-  "data": "2026-11-06"
+  "data": "2026-10-27"
  },
  {
   "uf": "MS",
   "nome": "Mato Grosso do Sul",
   "numero": 8,
   "pasta": "008-estado-mato-grosso-do-sul",
-  "data": "2026-11-09"
+  "data": "2026-10-28"
  },
  {
   "uf": "MT",
   "nome": "Mato Grosso",
   "numero": 9,
   "pasta": "009-estado-mato-grosso",
-  "data": "2026-11-11"
+  "data": "2026-10-30"
  },
  {
   "uf": "GO",
   "nome": "Goiás",
   "numero": 10,
   "pasta": "010-estado-goias",
-  "data": "2026-11-13"
+  "data": "2026-11-01"
  },
  {
   "uf": "DF",
   "nome": "Distrito Federal",
   "numero": 11,
   "pasta": "011-distrito-federal",
-  "data": "2026-11-16"
+  "data": "2026-11-02"
  },
  {
   "uf": "BA",
   "nome": "Bahia",
   "numero": 12,
   "pasta": "012-estado-bahia",
-  "data": "2026-11-18"
+  "data": "2026-11-04"
  },
  {
   "uf": "SE",
   "nome": "Sergipe",
   "numero": 13,
   "pasta": "013-estado-sergipe",
-  "data": "2026-11-20"
+  "data": "2026-11-06"
  },
  {
   "uf": "AL",
   "nome": "Alagoas",
   "numero": 14,
   "pasta": "014-estado-alagoas",
-  "data": "2026-11-23"
+  "data": "2026-11-07"
  },
  {
   "uf": "PE",
   "nome": "Pernambuco",
   "numero": 15,
   "pasta": "015-estado-pernambuco",
-  "data": "2026-11-25"
+  "data": "2026-11-09"
  },
  {
   "uf": "PB",
   "nome": "Paraíba",
   "numero": 16,
   "pasta": "016-estado-paraiba",
-  "data": "2026-11-27"
+  "data": "2026-11-11"
  },
  {
   "uf": "RN",
   "nome": "Rio Grande do Norte",
   "numero": 17,
   "pasta": "017-estado-rio-grande-do-norte",
-  "data": "2026-11-30"
+  "data": "2026-11-12"
  },
  {
   "uf": "CE",
   "nome": "Ceará",
   "numero": 18,
   "pasta": "018-estado-ceara",
-  "data": "2026-12-02"
+  "data": "2026-11-14"
  },
  {
   "uf": "PI",
   "nome": "Piauí",
   "numero": 19,
   "pasta": "019-estado-piaui",
-  "data": "2026-12-04"
+  "data": "2026-11-16"
  },
  {
   "uf": "MA",
   "nome": "Maranhão",
   "numero": 20,
   "pasta": "020-estado-maranhao",
-  "data": "2026-12-07"
+  "data": "2026-11-17"
  },
  {
   "uf": "TO",
   "nome": "Tocantins",
   "numero": 21,
   "pasta": "021-estado-tocantins",
-  "data": "2026-12-09"
+  "data": "2026-11-19"
  },
  {
   "uf": "PA",
   "nome": "Pará",
   "numero": 22,
   "pasta": "022-estado-para",
-  "data": "2026-12-11"
+  "data": "2026-11-21"
  },
  {
   "uf": "AP",
   "nome": "Amapá",
   "numero": 23,
   "pasta": "023-estado-amapa",
-  "data": "2026-12-14"
+  "data": "2026-11-22"
  },
  {
   "uf": "AM",
   "nome": "Amazonas",
   "numero": 24,
   "pasta": "024-estado-amazonas",
-  "data": "2026-12-16"
+  "data": "2026-11-24"
  },
  {
   "uf": "RR",
   "nome": "Roraima",
   "numero": 25,
   "pasta": "025-estado-roraima",
-  "data": "2026-12-18"
+  "data": "2026-11-26"
  },
  {
   "uf": "AC",
   "nome": "Acre",
   "numero": 26,
   "pasta": "026-estado-acre",
-  "data": "2026-12-21"
+  "data": "2026-11-27"
  },
  {
   "uf": "RO",
   "nome": "Rondônia",
   "numero": 27,
   "pasta": "027-estado-rondonia",
-  "data": "2026-12-23"
+  "data": "2026-11-29"
  }
 ]

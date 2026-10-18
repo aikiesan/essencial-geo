@@ -35,6 +35,7 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
 >
   <Fragment slot="head">
     {citacaoMeta.map((m) => <meta name={m.name} content={m.content} />)}
+    {real && mapa.original.doi && <link rel="cite-as" href={`https://doi.org/${mapa.original.doi}`} />}
     {dataset && <script type="application/ld+json" set:html={jsonLd(dataset)} />}
   </Fragment>
   <div class="feed">

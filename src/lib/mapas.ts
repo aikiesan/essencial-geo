@@ -84,6 +84,17 @@ export async function proximaPublicacao(): Promise<Date | undefined> {
   return futuros.map((m) => m.data.data).sort((a, b) => a.getTime() - b.getTime())[0];
 }
 
+/** Os próximos mapas agendados (fora de rascunho), do mais próximo ao mais distante, na língua pedida. */
+export async function proximosMapas(lingua: Lingua, quantos = 3): Promise<Mapa[]> {
+  const agora = new Date();
+  const futuros = await getCollection('mapas', ({ data }) => !data.rascunho && !noAr(data.data, agora));
+  const traducoes = new Map((await getCollection('traducoes')).map((tr) => [tr.id, tr]));
+  return futuros
+    .sort((a, b) => a.data.data.getTime() - b.data.data.getTime() || a.data.numero - b.data.numero)
+    .slice(0, quantos)
+    .map((m) => localizar(m, lingua, traducoes, agora));
+}
+
 export function contarPorCategoria(mapas: Mapa[]): Record<CategoriaId, number> {
   const contagem = Object.fromEntries(CATEGORIA_IDS.map((c) => [c, 0])) as Record<CategoriaId, number>;
   for (const m of mapas) contagem[m.data.categoria]++;

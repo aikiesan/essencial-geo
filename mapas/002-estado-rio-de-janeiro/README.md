@@ -2,7 +2,7 @@
 numero: 2
 titulo: "Rio de Janeiro"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-10-26
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, rio-de-janeiro, municipios, regioes-geograficas, rodovias, ibge]

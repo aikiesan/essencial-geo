@@ -118,6 +118,11 @@ fixa a linguagem que os demais mapas devem seguir, também no layout do QGIS.
 faixa vertical com: “ESSENCIAL GEO” em versal espaçada, número da prancha grande, título, subtítulo em
 itálico, legenda, norte e escala gráfica, e o **carimbo** (Projeto, Prancha, Data, CRS, Fonte, Licença).
 
+A faixa lateral é o modelo de partida, não uma regra fixa. Quando o recorte pede, por exemplo um
+território largo e baixo, um perfil topográfico ou uma comparação lado a lado, a legenda e o carimbo podem ir
+numa faixa **embaixo** ou **em cima** do mapa. O que não muda: a moldura dupla, o número da prancha
+grande, o título com subtítulo em itálico, o carimbo completo e o fundo branco.
+
 **Moldura.** Linha de esquadria dupla (externa grossa, interna fina). Cruzes de grade a cada intervalo
 regular de coordenadas e marcas de graduação na moldura.
 
