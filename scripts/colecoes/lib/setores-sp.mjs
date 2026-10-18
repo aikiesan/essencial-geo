@@ -102,7 +102,7 @@ export async function tabelaCenso(grupo, variaveis = null) {
   return out;
 }
 
-/** Tabela básica: Map(CD_SETOR → { situacao, CD_MUN, NM_MUN, CD_FCU, NM_FCU, area, pessoas, domicilios, dpo }). */
+/** Tabela básica: Map(CD_SETOR → { situacao, CD_MUN, NM_MUN, NM_DIST, CD_FCU, NM_FCU, area, pessoas, domicilios, dpo }). */
 export async function basico() {
   const arq = join(BRUTOS, 'ibge', 'sp', 'basico.csv');
   const out = new Map();
@@ -112,7 +112,7 @@ export async function basico() {
     const v = (k) => l[cab.indexOf(k)];
     const t = (k) => { const s = v(k); return s === '.' || s === '' ? null : s; };
     out.set(l[0], {
-      situacao: v('SITUACAO'), CD_SIT: v('CD_SIT'), CD_MUN: v('CD_MUN'), NM_MUN: v('NM_MUN'), NM_BAIRRO: t('NM_BAIRRO'),
+      situacao: v('SITUACAO'), CD_SIT: v('CD_SIT'), CD_MUN: v('CD_MUN'), NM_MUN: v('NM_MUN'), NM_DIST: t('NM_DIST'), NM_BAIRRO: t('NM_BAIRRO'),
       CD_FCU: t('CD_FCU'), NM_FCU: t('NM_FCU'), CD_RGINT: v('CD_RGINT'), NM_RGINT: v('NM_RGINT'), CD_CONCURB: t('CD_CONCURB'),
       area: num(v('AREA_KM2')), pessoas: num(v('V0001')), domicilios: num(v('V0002')), dpo: num(v('V0007')),
     });

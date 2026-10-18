@@ -21,6 +21,11 @@ const GRUPOS = {
   basico: 'Agregados_por_setores_basico_BR_20260520/Agregados_por_setores_basico_BR.xlsx',
   renda: 'Agregados_por_setores_renda_responsavel_BR_20260508_xlsx/Agregados_por_setores_renda_responsavel_BR.xlsx',
   demografia: 'Agregados_por_setores_demografia_BR/Agregados_por_setores_demografia_BR.xlsx',
+  cor_ou_raca: 'Agregados_por_setores_cor_ou_raca_BR/Agregados_por_setores_cor_ou_raca_BR.xlsx',
+  indigenas: 'Agregados_por_setores_domicilios_indigenas_BR/Agregados_por_setores_domicilios_indigenas_BR.xlsx',
+  quilombolas: 'Agregados_por_setores_domicilios_quilombolas_BR/Agregados_por_setores_domicilios_quilombolas_BR.xlsx',
+  obitos: 'Agregados_por_setores_obitos_BR/Agregados_por_setores_obitos_BR.xlsx',
+  alfabetizacao: 'Agregados_por_setores_alfabetizacao_BR/Agregados_por_setores_alfabetizacao_BR.xlsx',
 };
 
 const campo = (v) => {

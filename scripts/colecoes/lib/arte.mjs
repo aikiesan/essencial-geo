@@ -172,7 +172,40 @@ function biogas(w, h) {
   return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
 }
 
-const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas };
+/** Renda e sol nos telhados: casas de alturas desiguais, algumas com placas no telhado, e o sol baixo. */
+function telhados(w, h) {
+  const r = sorte(43);
+  const s = [];
+  const chao = h - 4;
+  s.push(`<path d="M0 ${f1(chao)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  const sx = w - 46, sy = h * 0.3, sr = h * 0.17;
+  s.push(`<circle cx="${f1(sx)}" cy="${f1(sy)}" r="${f1(sr)}" fill="none" stroke="${CESTO}" stroke-width="1.2"/>`);
+  for (let k = 0; k < 12; k++) {
+    const a = (k / 12) * 2 * Math.PI;
+    s.push(`<path d="M${f1(sx + Math.cos(a) * (sr + 4))} ${f1(sy + Math.sin(a) * (sr + 4))}L${f1(sx + Math.cos(a) * (sr + 10))} ${f1(sy + Math.sin(a) * (sr + 10))}" stroke="${CESTO}" stroke-width="1"/>`);
+  }
+  for (let x = 8; x < w - 110;) {
+    const larg = 26 + r() * 30;
+    const alto = h * (0.22 + r() * 0.3);
+    const cume = alto * 0.45 + 4;
+    const topo = chao - alto;
+    s.push(`<path d="M${f1(x)} ${f1(chao)}V${f1(topo)}L${f1(x + larg / 2)} ${f1(topo - cume)}L${f1(x + larg)} ${f1(topo)}V${f1(chao)}" fill="none" stroke="${VALE}" stroke-width="1"/>`);
+    if (r() > 0.45) {
+      // Placas na água do telhado voltada para o sol: três faixas paralelas ao beiral.
+      for (let k = 1; k <= 3; k++) {
+        const t0 = 0.2 + k * 0.17;
+        const ax = x + larg / 2 + (larg / 2) * (t0 - 0.12), ay = topo - cume + cume * (t0 - 0.12);
+        const bx = x + larg / 2 + (larg / 2) * t0, by = topo - cume + cume * t0;
+        s.push(`<path d="M${f1(ax)} ${f1(ay)}L${f1(bx)} ${f1(by)}" stroke="${CESTO}" stroke-width="2.2"/>`);
+      }
+    }
+    if (r() > 0.4) s.push(`<rect x="${f1(x + larg * 0.3)}" y="${f1(chao - alto * 0.45)}" width="${f1(larg * 0.22)}" height="${f1(alto * 0.45)}" fill="none" stroke="${CESTO}" stroke-width=".8"/>`);
+    x += larg + 6 + r() * 14;
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas, telhados };
 
 /** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
 export function motivo(chave, w, h = 84) {
@@ -194,6 +227,8 @@ export function chamada(x, y, { dx, dy, titulo, linhas = [], tamanho = 18, largu
   const s = [];
   const cxp = x + dx * 0.15;
   const cyp = y + dy * 0.85;
+  // Anel com halo branco, para não sumir sobre as cores escuras do mapa.
+  s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="7" fill="none" stroke="#ffffff" stroke-width="4" stroke-opacity=".9"/>`);
   s.push(`<circle cx="${f1(x)}" cy="${f1(y)}" r="7" fill="none" stroke="${FLORESTA}" stroke-width="1.4"/>`);
   const ux = tx - (dx < 0 ? -6 : 6);
   s.push(`<path d="M${f1(x + (dx < 0 ? -5 : 5))} ${f1(y + (dy < 0 ? -5 : 5))}Q${f1(cxp)} ${f1(cyp)} ${f1(ux)} ${f1(ty - 5)}" fill="none" stroke="${FLORESTA}" stroke-width="1.2"/>`);

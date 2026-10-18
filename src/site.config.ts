@@ -185,6 +185,16 @@ export const COLECOES = {
       resumo: 'São Paulo’s biomethane potential on the ground: per km² and per person, the leading source outside sugarcane, the distance to gas pipelines and the power grid, and what already operates.',
     },
   },
+  'renda-solar-sp': {
+    pt: {
+      titulo: 'Renda e sol nos telhados',
+      resumo: 'Quanto ganha quem responde pela casa, setor por setor e na metrópole, e se os sistemas solares dos telhados seguem a renda: não seguem.',
+    },
+    en: {
+      titulo: 'Income and rooftop solar',
+      resumo: 'What the head of household earns, tract by tract and in the metropolis, and whether rooftop solar follows income: it does not.',
+    },
+  },
   'animal-sp': {
     pt: {
       titulo: 'Leite, ovos, mel e peixe',

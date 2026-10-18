@@ -248,7 +248,7 @@ export async function usarRegiao(nome) {
     },
     notaEscala: 'verdadeira no meridiano central',
     carimbo: () => [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(lon0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(lat0, 'S')}`],
-    loc: { fundo: cache.ufs.features, ajuste: cache.ufs.features.find((f) => f.properties.SIGLA_UF === 'SP'), alvo: lim },
+    loc: { fundo: cache.ufs.features, ajuste: cache.ufs.features.find((f) => f.properties.SIGLA_UF === 'SP'), alvo: r.alvoLoc ? r.alvoLoc.features[0] : lim },
   };
 }
 
