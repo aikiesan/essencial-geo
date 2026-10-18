@@ -162,13 +162,28 @@ if (simular) {
 }
 
 /* ---------- API ---------------------------------------------------------- */
+// O Zenodo barra clientes anônimos vindos de redes de nuvem (o fetch do Node se apresenta só
+// como "node"): o script se identifica, com o endereço do projeto.
+const AGENTE = 'EssencialGeo/1.0 (+https://github.com/aikiesan/essencial-geo)';
+
 async function chamar(metodo, url, corpo, tipo = 'application/json') {
   const r = await fetch(url.startsWith('http') ? url : `${API}${url}`, {
     method: metodo,
-    headers: { Authorization: `Bearer ${TOKEN}`, ...(corpo !== undefined ? { 'Content-Type': tipo } : {}) },
+    headers: {
+      Authorization: `Bearer ${TOKEN}`,
+      'User-Agent': AGENTE,
+      Accept: 'application/json',
+      ...(corpo !== undefined ? { 'Content-Type': tipo } : {}),
+    },
     body: corpo === undefined ? undefined : tipo === 'application/json' ? JSON.stringify(corpo) : corpo,
   });
   const texto = await r.text();
+  if (r.status === 403 && /unusual traffic/i.test(texto)) {
+    throw new Error(
+      `${metodo} ${url} → 403: o Zenodo barrou a rede de onde o pedido saiu (filtro anti-abuso), não o token.\n` +
+        `Tente de novo mais tarde ou rode o script do seu computador. Referência: ${texto.match(/Reference:\s*(\w+)/)?.[1] ?? '—'}`,
+    );
+  }
   if (!r.ok) throw new Error(`${metodo} ${url} → ${r.status}\n${texto}`);
   return texto ? JSON.parse(texto) : {};
 }
