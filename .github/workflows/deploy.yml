@@ -116,6 +116,7 @@ jobs:
             # Um mapa por vez: se o próximo falhar, o DOI já registrado fica gravado.
             git push
             echo "- $PASTA: https://doi.org/$DOI" >> "$GITHUB_STEP_SUMMARY"
+            sleep 20 # sem rajada de pedidos ao Zenodo
           done
       # Um push feito pelo GITHUB_TOKEN não dispara este workflow; um workflow_dispatch sim.
       - name: Recompilar o site com o DOI

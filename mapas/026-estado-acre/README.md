@@ -2,7 +2,7 @@
 numero: 26
 titulo: "Acre"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-27
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, acre, municipios, regioes-geograficas, rodovias, ibge]

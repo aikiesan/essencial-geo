@@ -1,5 +1,5 @@
 [
- { "tema": "transmissao", "numero": 42, "pasta": "042-transmissao-brasil", "base": "br_transmissao", "data": "2026-11-23", "categoria": "energia" },
- { "tema": "usinas", "numero": 43, "pasta": "043-usinas-por-fonte-brasil", "base": "br_usinas_por_fonte", "data": "2026-11-25", "categoria": "energia" },
- { "tema": "solar", "numero": 44, "pasta": "044-geracao-solar-distribuida-brasil", "base": "br_geracao_distribuida", "data": "2026-11-28", "categoria": "energia" }
+ { "tema": "transmissao", "numero": 42, "pasta": "042-transmissao-brasil", "base": "br_transmissao", "data": "2026-11-02", "categoria": "energia" },
+ { "tema": "usinas", "numero": 43, "pasta": "043-usinas-por-fonte-brasil", "base": "br_usinas_por_fonte", "data": "2026-11-03", "categoria": "energia" },
+ { "tema": "solar", "numero": 44, "pasta": "044-geracao-solar-distribuida-brasil", "base": "br_geracao_distribuida", "data": "2026-11-04", "categoria": "energia" }
 ]

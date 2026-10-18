@@ -2,7 +2,7 @@
 numero: 38
 titulo: "Unidades de conservação"
 subtitulo: "Onde a floresta ainda guarda a nascente"
-data: 2026-11-13
+data: 2026-10-29
 categoria: biomas
 colecao: agua-sp
 tags: [agua-sp, sao-paulo, unidades-de-conservacao, cnuc, protecao-integral, apa, bacias-hidrograficas, ugrhi]

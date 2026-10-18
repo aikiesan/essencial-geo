@@ -2,7 +2,7 @@
 numero: 24
 titulo: "Amazonas"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-24
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, amazonas, municipios, regioes-geograficas, rodovias, ibge]

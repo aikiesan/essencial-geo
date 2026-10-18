@@ -1,5 +1,5 @@
 [
- { "tema": "bacias", "numero": 36, "pasta": "036-bacias-hidrograficas-sp", "base": "sp_bacias_hidrograficas", "data": "2026-11-08", "categoria": "hidrografia" },
- { "tema": "drenagem", "numero": 37, "pasta": "037-drenagem-sp", "base": "sp_drenagem", "data": "2026-11-10", "categoria": "hidrografia" },
- { "tema": "ucs", "numero": 38, "pasta": "038-unidades-de-conservacao-sp", "base": "sp_unidades_conservacao", "data": "2026-11-13", "categoria": "biomas" }
+ { "tema": "bacias", "numero": 36, "pasta": "036-bacias-hidrograficas-sp", "base": "sp_bacias_hidrograficas", "data": "2026-10-27", "categoria": "hidrografia" },
+ { "tema": "drenagem", "numero": 37, "pasta": "037-drenagem-sp", "base": "sp_drenagem", "data": "2026-10-28", "categoria": "hidrografia" },
+ { "tema": "ucs", "numero": 38, "pasta": "038-unidades-de-conservacao-sp", "base": "sp_unidades_conservacao", "data": "2026-10-29", "categoria": "biomas" }
 ]

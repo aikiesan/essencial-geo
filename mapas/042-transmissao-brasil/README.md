@@ -2,7 +2,7 @@
 numero: 42
 titulo: "Linhas de transmissão"
 subtitulo: "Os fios que costuram o país"
-data: 2026-11-23
+data: 2026-11-02
 categoria: energia
 colecao: energia-eletrica
 tags: [energia-eletrica, brasil, transmissao, linhas-de-transmissao, subestacoes, corrente-continua, epe, mapbiomas]

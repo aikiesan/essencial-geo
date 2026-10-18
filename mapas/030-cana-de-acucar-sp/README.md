@@ -2,7 +2,7 @@
 numero: 30
 titulo: "Cana-de-açúcar"
 subtitulo: "Um mar verde sobre um quinto do estado"
-data: 2026-10-24
+data: 2026-10-21
 categoria: uso-do-solo
 colecao: bioenergia-sp
 tags: [bioenergia-sp, sao-paulo, cana-de-acucar, agricultura, etanol, bagaco, ibge, pam]

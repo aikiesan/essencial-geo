@@ -2,7 +2,7 @@
 numero: 22
 titulo: "Pará"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-21
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, para, municipios, regioes-geograficas, rodovias, ibge]

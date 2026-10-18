@@ -2,7 +2,7 @@
 numero: 41
 titulo: "Cuestas paulistas"
 subtitulo: "O degrau do basalto"
-data: 2026-11-20
+data: 2026-11-01
 categoria: altimetria-relevo
 colecao: relevo
 tags: [relevo, sao-paulo, cuestas, botucatu, itirapina, sao-pedro, depressao-periferica, altitude, hipsometria, copernicus-dem]

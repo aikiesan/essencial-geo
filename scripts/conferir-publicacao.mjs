@@ -37,7 +37,8 @@ const noAr = (d) => new Date(`${dia(d)}T${String(HORA_UTC).padStart(2, '0')}:00:
 /* ---------- mapas do repositório ---------------------------------------- */
 const pastas = (await readdir(join(RAIZ, 'mapas'), { withFileTypes: true }))
   .filter((e) => e.isDirectory() && /^\d{3}-/.test(e.name))
-  .map((e) => e.name);
+  .map((e) => e.name)
+  .sort();
 
 const mapas = [];
 for (const pasta of pastas) {
@@ -125,8 +126,8 @@ const resumo = [
   '',
   falhas.length ? `**${falhas.length} com problema:** ${falhas.join(', ')}` : '**Tudo certo.**',
   doiAutomatico.length
-    ? `\n### DOI automático\n\nNo ar, conferidos e aprovados (\`doi_automatico: true\`): o job "doi" registra agora no Zenodo.\n\n` +
-      doiAutomatico.map((p) => `- ${p}`).join('\n')
+    ? `\n### DOI automático\n\nNo ar, conferidos e aprovados (\`doi_automatico: true\`). O job "doi" registra até 5 por dia, na ordem:\n\n` +
+      doiAutomatico.map((p, i) => `- ${p}${i < 5 ? ' — hoje' : ''}`).join('\n')
     : '',
   doiPendentes.length
     ? `\n### Prontos para DOI, à mão\n\nNo ar, conferidos, sem DOI e sem aprovação automática. Para registrar no Zenodo (DOI permanente):\n\n` +
@@ -136,6 +137,9 @@ const resumo = [
 
 console.log(resumo);
 if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, resumo + '\n');
-// Para o job "doi". Com qualquer falha a lista sai vazia (e o job nem roda, porque este falha).
-if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `doi_automatico=${falhas.length ? '' : doiAutomatico.join(' ')}\n`);
+// Para o job "doi": no máximo DOI_POR_DIA por execução, os mais antigos primeiro (uma rajada de
+// pedidos ativa o filtro anti-abuso do Zenodo). Com qualquer falha a lista sai vazia.
+const DOI_POR_DIA = 5;
+const lote = falhas.length ? [] : doiAutomatico.slice(0, DOI_POR_DIA); // pastas em ordem de número
+if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `doi_automatico=${lote.join(' ')}\n`);
 process.exit(falhas.length ? 1 : 0);
