@@ -2,7 +2,7 @@
 numero: 9
 titulo: "Mato Grosso"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-10-30
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, mato-grosso, municipios, regioes-geograficas, rodovias, ibge]

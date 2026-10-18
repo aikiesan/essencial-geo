@@ -2,7 +2,7 @@
 numero: 29
 titulo: "Rebanhos"
 subtitulo: "Três rebanhos, três geografias"
-data: 2026-10-21
+data: 2026-10-20
 categoria: energia
 colecao: bioenergia-sp
 tags: [bioenergia-sp, sao-paulo, pecuaria, bovinos, suinos, galinaceos, biogas, ibge, ppm]

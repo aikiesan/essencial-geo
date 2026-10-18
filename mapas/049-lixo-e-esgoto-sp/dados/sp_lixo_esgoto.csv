@@ -1,0 +1,646 @@
+CD_MUN,NM_MUN,CD_RGINT,NM_RGINT,lixo_m3_dia,lodo_m3_dia,poda_m3_dia,urbano_m3_dia,lixo_ja_usado_ch4_m3_dia
+3500105,Adamantina,3505,Presidente Prudente,345.2,0.0,34.8,380.0,124.6
+3500204,Adolfo,3507,São José do Rio Preto,52.3,0.0,6.2,58.5,15.0
+3500303,Aguaí,3510,Campinas,440.8,23.9,50.1,514.8,3.6
+3500709,Agudos,3503,Bauru,549.4,0.0,38.7,588.1,0.0
+3500758,Alambari,3502,Sorocaba,62.2,0.0,9.6,71.8,0.0
+3500808,Alfredo Marcondes,3505,Presidente Prudente,31.9,0.0,2.6,34.5,19.7
+3500907,Altair,3507,São José do Rio Preto,37.6,0.0,4.9,42.5,10.8
+3501004,Altinópolis,3508,Ribeirão Preto,129.8,0.0,26.0,155.8,233.9
+3501103,Alto Alegre,3506,Araçatuba,16.3,0.0,3.0,19.3,0.0
+3501152,Alumínio,3502,Sorocaba,252.8,0.0,19.7,272.5,0.0
+3501509,Alvinlândia,3504,Marília,7.2,0.0,4.5,11.7,0.0
+3501608,Americana,3510,Campinas,5000.8,550.7,371.3,5922.8,40.6
+3501905,Amparo,3510,Campinas,939.2,0.0,100.2,1039.4,8.1
+3501707,Américo Brasiliense,3509,Araraquara,443.4,0.0,51.7,495.1,0.0
+3501806,Américo de Campos,3507,São José do Rio Preto,199.1,0.0,7.8,206.9,61.6
+3502002,Analândia,3510,Campinas,35.6,0.0,3.2,38.8,0.7
+3502101,Andradina,3506,Araçatuba,969.8,0.0,93.6,1063.4,0.0
+3502200,Angatuba,3502,Sorocaba,218.3,0.0,37.6,255.9,0.0
+3502309,Anhembi,3503,Bauru,65.4,0.0,5.5,70.9,0.0
+3502408,Anhumas,3505,Presidente Prudente,50.1,0.0,6.3,56.4,11.6
+3502507,Aparecida,3511,São José dos Campos,119.0,0.0,50.8,169.8,485.1
+3502606,Aparecida d'Oeste,3507,São José do Rio Preto,0.0,0.0,0.0,0.0,7.0
+3502705,Apiaí,3502,Sorocaba,261.7,0.0,38.1,299.8,0.0
+3503000,Aramina,3508,Ribeirão Preto,33.1,0.0,8.5,41.6,58.9
+3503109,Arandu,3502,Sorocaba,223.8,0.0,10.8,234.6,0.0
+3503158,Arapeí,3511,São José dos Campos,0.0,0.0,0.0,0.0,16.4
+3503208,Araraquara,3509,Araraquara,3961.3,954.3,379.1,5294.7,0.0
+3503307,Araras,3510,Campinas,1616.0,243.7,191.7,2051.4,14.0
+3502754,Araçariguama,3502,Sorocaba,116.4,0.0,10.5,126.9,0.0
+3502804,Araçatuba,3506,Araçatuba,3818.3,631.0,313.2,4762.5,0.0
+3502903,Araçoiaba da Serra,3502,Sorocaba,653.2,0.0,50.0,703.2,0.0
+3503356,Arco-Íris,3504,Marília,9.4,0.0,1.4,10.8,0.0
+3503406,Arealva,3503,Bauru,89.3,0.0,7.8,97.1,0.0
+3503505,Areias,3511,São José dos Campos,0.0,0.0,0.0,0.0,5.8
+3503604,Areiópolis,3503,Bauru,182.3,0.0,15.8,198.1,0.0
+3503703,Ariranha,3507,São José do Rio Preto,96.8,0.0,11.9,108.7,25.4
+3503802,Artur Nogueira,3510,Campinas,796.5,296.9,80.1,1173.5,6.5
+3503901,Arujá,3501,São Paulo,345.0,125.0,96.8,566.8,1387.7
+3503950,Aspásia,3507,São José do Rio Preto,16.9,0.0,2.3,19.2,5.5
+3504008,Assis,3504,Marília,1971.9,0.0,158.7,2130.6,0.0
+3504107,Atibaia,3510,Campinas,3032.6,486.7,241.9,3761.2,25.3
+3504206,Auriflama,3506,Araçatuba,206.6,0.0,21.3,227.9,0.0
+3504404,Avanhandava,3506,Araçatuba,93.3,0.0,17.6,110.9,0.0
+3504503,Avaré,3502,Sorocaba,2161.1,0.0,144.3,2305.4,0.0
+3504305,Avaí,3503,Bauru,23.0,0.0,2.9,25.9,0.0
+3504602,Bady Bassitt,3507,São José do Rio Preto,388.9,0.0,40.6,429.5,107.2
+3504701,Balbinos,3503,Bauru,26.9,0.0,4.6,31.5,0.0
+3504909,Bananal,3511,São José dos Campos,0.0,0.0,0.0,0.0,18.5
+3505104,Barbosa,3506,Araçatuba,130.6,0.0,8.8,139.4,0.0
+3505203,Bariri,3503,Bauru,559.5,0.0,49.4,608.9,0.0
+3505302,Barra Bonita,3503,Bauru,384.2,13.0,53.8,451.0,0.0
+3505351,Barra do Chapéu,3502,Sorocaba,26.3,0.0,1.9,28.2,0.0
+3505401,Barra do Turvo,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3505500,Barretos,3508,Ribeirão Preto,787.6,44.5,181.3,1013.4,1484.5
+3505609,Barrinha,3508,Ribeirão Preto,164.1,0.0,50.2,214.3,292.8
+3505708,Barueri,3501,São Paulo,1563.1,1055.4,487.6,3106.1,4554.1
+3505005,Barão de Antonina,3502,Sorocaba,61.8,0.0,4.9,66.7,0.0
+3505807,Bastos,3504,Marília,283.8,97.1,33.7,414.6,0.0
+3505906,Batatais,3508,Ribeirão Preto,307.5,301.5,91.4,700.4,548.2
+3506003,Bauru,3503,Bauru,6117.9,92.3,592.2,6802.4,0.0
+3506102,Bebedouro,3508,Ribeirão Preto,396.3,0.0,117.2,513.5,720.9
+3506201,Bento de Abreu,3506,Araçatuba,43.1,0.0,4.1,47.2,0.0
+3506300,Bernardino de Campos,3504,Marília,143.5,0.0,18.2,161.7,0.0
+3506359,Bertioga,3501,São Paulo,0.2,0.0,0.0,0.2,1745.3
+3506409,Bilac,3506,Araçatuba,107.8,0.0,9.3,117.1,0.0
+3506508,Birigui,3506,Araçatuba,2132.9,0.0,186.2,2319.1,0.0
+3506607,Biritiba Mirim,3501,São Paulo,51.0,0.0,23.5,74.5,289.7
+3506706,Boa Esperança do Sul,3509,Araraquara,52.1,0.0,15.5,67.6,0.0
+3506805,Bocaina,3503,Bauru,136.1,0.0,17.6,153.7,0.0
+3506904,Bofete,3503,Bauru,223.8,0.0,16.4,240.2,0.0
+3507001,Boituva,3502,Sorocaba,1136.4,0.0,95.1,1231.5,0.0
+3507100,Bom Jesus dos Perdões,3510,Campinas,383.8,0.0,31.5,415.3,3.4
+3507159,Bom Sucesso de Itararé,3502,Sorocaba,0.5,0.0,0.2,0.7,0.0
+3507308,Boracéia,3503,Bauru,52.8,0.0,7.4,60.2,0.0
+3507407,Borborema,3509,Araraquara,141.3,0.0,14.1,155.4,0.0
+3507456,Borebi,3503,Bauru,17.8,0.0,1.7,19.5,0.0
+3507209,Borá,3504,Marília,11.1,0.0,1.4,12.5,0.0
+3507506,Botucatu,3503,Bauru,2247.5,85.9,215.4,2548.8,0.0
+3507605,Bragança Paulista,3510,Campinas,3692.7,659.1,268.3,4620.1,30.9
+3507704,Braúna,3506,Araçatuba,84.9,0.0,8.4,93.3,0.0
+3507753,Brejo Alegre,3506,Araçatuba,28.0,0.0,4.0,32.0,0.0
+3507803,Brodowski,3508,Ribeirão Preto,146.6,0.0,39.2,185.8,263.1
+3507902,Brotas,3503,Bauru,495.4,0.0,37.4,532.8,0.0
+3508009,Buri,3502,Sorocaba,621.7,0.0,31.7,653.4,0.0
+3508108,Buritama,3506,Araçatuba,824.4,0.0,26.9,851.3,0.0
+3508207,Buritizal,3508,Ribeirão Preto,20.9,0.0,6.8,27.7,37.3
+3504800,Bálsamo,3507,São José do Rio Preto,102.7,0.0,15.0,117.7,27.0
+3508405,Cabreúva,3510,Campinas,862.1,0.0,71.3,933.4,7.2
+3508306,Cabrália Paulista,3503,Bauru,53.8,0.0,6.7,60.5,0.0
+3508603,Cachoeira Paulista,3511,São José dos Campos,64.0,0.0,40.2,104.2,319.7
+3508702,Caconde,3510,Campinas,293.1,0.0,26.1,319.2,2.4
+3508801,Cafelândia,3503,Bauru,272.6,0.0,24.7,297.3,0.0
+3508900,Caiabu,3505,Presidente Prudente,8.2,6.2,1.7,16.1,6.5
+3509007,Caieiras,3501,São Paulo,976.0,43.5,148.4,1167.9,2805.9
+3509106,Caiuá,3505,Presidente Prudente,1.1,0.0,0.2,1.3,11.3
+3509205,Cajamar,3501,São Paulo,286.4,0.0,104.7,391.1,1138.3
+3509254,Cajati,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3509304,Cajobi,3508,Ribeirão Preto,65.7,0.0,14.3,80.0,117.1
+3509403,Cajuru,3508,Ribeirão Preto,99.5,0.0,37.3,136.8,177.4
+3509452,Campina do Monte Alegre,3502,Sorocaba,86.1,0.0,9.2,95.3,0.0
+3509502,Campinas,3510,Campinas,23919.4,2371.7,1773.3,28064.4,195.2
+3509601,Campo Limpo Paulista,3510,Campinas,1416.8,199.6,112.3,1728.7,12.4
+3509809,Campos Novos Paulista,3504,Marília,65.6,0.0,7.6,73.2,0.0
+3509700,Campos do Jordão,3511,São José dos Campos,0.1,0.0,0.0,0.1,1033.9
+3509908,Cananéia,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3509957,Canas,3511,São José dos Campos,9.9,0.0,7.7,17.6,40.4
+3510153,Canitar,3504,Marília,95.6,0.0,9.8,105.4,0.0
+3510302,Capela do Alto,3502,Sorocaba,333.4,0.0,35.8,369.2,0.0
+3510401,Capivari,3510,Campinas,726.0,58.3,78.4,862.7,5.9
+3510203,Capão Bonito,3502,Sorocaba,458.9,0.0,72.5,531.4,0.0
+3510500,Caraguatatuba,3511,São José dos Campos,959.4,247.4,190.3,1397.1,4325.1
+3510609,Carapicuíba,3501,São Paulo,1973.6,1122.7,605.6,3701.9,5661.2
+3510708,Cardoso,3507,São José do Rio Preto,129.1,0.0,17.8,146.9,33.9
+3510807,Casa Branca,3510,Campinas,432.8,0.0,43.9,476.7,3.5
+3511003,Castilho,3506,Araçatuba,237.5,0.0,27.0,264.5,0.0
+3511102,Catanduva,3507,São José do Rio Preto,1844.3,0.0,181.2,2025.5,484.3
+3511201,Catiguá,3507,São José do Rio Preto,72.3,0.0,10.9,83.2,19.1
+3508504,Caçapava,3511,São José dos Campos,187.9,0.0,125.5,313.4,916.5
+3511300,Cedral,3507,São José do Rio Preto,434.7,0.0,19.7,454.4,114.4
+3511409,Cerqueira César,3502,Sorocaba,517.2,0.0,33.6,550.8,0.0
+3511508,Cerquilho,3502,Sorocaba,750.5,62.6,69.9,883.0,0.0
+3511607,Cesário Lange,3502,Sorocaba,260.7,16.3,29.8,306.8,0.0
+3511706,Charqueada,3510,Campinas,228.1,0.0,24.3,252.4,1.9
+3557204,Chavantes,3504,Marília,149.2,0.0,19.1,168.3,0.0
+3511904,Clementina,3506,Araçatuba,134.0,0.0,10.9,144.9,0.0
+3512001,Colina,3508,Ribeirão Preto,131.4,0.0,28.0,159.4,242.1
+3512100,Colômbia,3508,Ribeirão Preto,23.7,0.0,9.2,32.9,47.5
+3512209,Conchal,3510,Campinas,586.9,0.0,44.0,630.9,4.8
+3512308,Conchas,3503,Bauru,203.0,31.8,23.8,258.6,0.0
+3512407,Cordeirópolis,3510,Campinas,1064.2,15.6,38.4,1118.2,8.6
+3512506,Coroados,3506,Araçatuba,99.5,0.0,8.5,108.0,0.0
+3512605,Coronel Macedo,3502,Sorocaba,36.8,0.0,6.7,43.5,0.0
+3512704,Corumbataí,3510,Campinas,55.5,0.0,6.6,62.1,0.5
+3512902,Cosmorama,3507,São José do Rio Preto,71.8,0.0,13.6,85.4,18.8
+3512803,Cosmópolis,3510,Campinas,882.6,0.0,93.5,976.1,7.2
+3513009,Cotia,3501,São Paulo,2768.2,335.4,360.5,3464.1,9460.6
+3513108,Cravinhos,3508,Ribeirão Preto,157.9,0.0,40.8,198.7,359.2
+3513207,Cristais Paulista,3508,Ribeirão Preto,50.3,0.0,14.5,64.8,89.8
+3513405,Cruzeiro,3511,São José dos Campos,6.6,0.0,4.0,10.6,790.9
+3513306,Cruzália,3504,Marília,25.9,0.0,3.3,29.2,0.0
+3513504,Cubatão,3501,São Paulo,577.9,233.5,172.8,984.2,1688.2
+3513603,Cunha,3511,São José dos Campos,1.8,0.0,1.4,3.2,187.4
+3510906,Cássia dos Coqueiros,3508,Ribeirão Preto,26.3,0.0,4.4,30.7,46.9
+3510005,Cândido Mota,3504,Marília,466.3,0.0,46.1,512.4,0.0
+3510104,Cândido Rodrigues,3509,Araraquara,44.0,0.0,4.0,48.0,0.0
+3513702,Descalvado,3509,Araraquara,604.5,0.0,49.7,654.2,0.0
+3513801,Diadema,3501,São Paulo,1672.3,1572.1,615.4,3859.8,4797.0
+3513850,Dirce Reis,3507,São José do Rio Preto,31.6,0.0,2.5,34.1,8.3
+3513900,Divinolândia,3510,Campinas,133.8,11.8,15.4,161.0,1.2
+3514007,Dobrada,3509,Araraquara,192.7,0.0,13.7,206.4,0.0
+3514106,Dois Córregos,3503,Bauru,372.0,0.0,35.8,407.8,0.0
+3514205,Dolcinópolis,3507,São José do Rio Preto,15.8,0.0,1.8,17.6,8.0
+3514304,Dourado,3509,Araraquara,349.1,45.3,12.7,407.1,0.0
+3514403,Dracena,3505,Presidente Prudente,751.8,0.0,66.2,818.0,186.9
+3514502,Duartina,3503,Bauru,195.0,0.0,19.3,214.3,0.0
+3514601,Dumont,3508,Ribeirão Preto,50.8,0.0,14.6,65.4,92.0
+3514700,Echaporã,3504,Marília,32.2,0.0,3.8,36.0,0.0
+3514809,Eldorado,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3514908,Elias Fausto,3510,Campinas,285.1,0.0,27.7,312.8,2.3
+3514924,Elisiário,3507,São José do Rio Preto,44.9,0.0,4.9,49.8,11.8
+3514957,Embaúba,3507,São José do Rio Preto,25.0,0.0,3.3,28.3,7.3
+3515004,Embu das Artes,3501,São Paulo,2143.4,1018.8,379.0,3541.2,6364.0
+3515103,Embu-Guaçu,3501,São Paulo,64.7,0.0,23.6,88.3,825.3
+3515129,Emilianópolis,3505,Presidente Prudente,0.0,0.0,0.0,0.0,2.6
+3515152,Engenheiro Coelho,3510,Campinas,273.3,0.0,30.6,303.9,2.2
+3515186,Espírito Santo do Pinhal,3510,Campinas,565.2,0.0,62.2,627.4,4.6
+3515194,Espírito Santo do Turvo,3504,Marília,56.0,0.0,6.5,62.5,0.0
+3557303,Estiva Gerbi,3510,Campinas,141.5,0.0,17.7,159.2,1.1
+3515202,Estrela d'Oeste,3507,São José do Rio Preto,81.0,0.0,14.7,95.7,21.3
+3515301,Estrela do Norte,3505,Presidente Prudente,5.8,0.0,1.2,7.0,4.6
+3515350,Euclides da Cunha Paulista,3505,Presidente Prudente,1.8,0.0,0.2,2.0,22.5
+3515400,Fartura,3504,Marília,197.8,0.0,26.0,223.8,0.0
+3515608,Fernando Prestes,3507,São José do Rio Preto,18.9,0.0,8.0,26.9,5.8
+3515509,Fernandópolis,3507,São José do Rio Preto,1001.7,0.0,111.4,1113.1,263.0
+3515657,Fernão,3504,Marília,8.0,0.0,1.1,9.1,0.0
+3515707,Ferraz de Vasconcelos,3501,São Paulo,980.2,542.9,280.4,1803.5,2812.7
+3515806,Flora Rica,3505,Presidente Prudente,17.1,0.0,2.2,19.3,4.2
+3515905,Floreal,3507,São José do Rio Preto,21.4,0.0,4.3,25.7,5.6
+3516101,Florínea,3504,Marília,42.3,0.0,6.0,48.3,0.0
+3516002,Flórida Paulista,3505,Presidente Prudente,224.7,0.0,20.3,245.0,52.0
+3516200,Franca,3508,Ribeirão Preto,3270.8,777.5,551.1,4599.4,5837.8
+3516309,Francisco Morato,3501,São Paulo,738.4,0.0,254.4,992.8,2152.0
+3516408,Franco da Rocha,3501,São Paulo,529.6,5.2,223.2,758.0,1543.1
+3516507,Gabriel Monteiro,3506,Araçatuba,32.1,0.0,2.9,35.0,0.0
+3516705,Garça,3504,Marília,716.2,0.0,65.9,782.1,0.0
+3516804,Gastão Vidigal,3506,Araçatuba,71.1,0.0,5.1,76.2,0.0
+3516853,Gavião Peixoto,3509,Araraquara,139.5,0.0,6.6,146.1,0.0
+3516903,General Salgado,3506,Araçatuba,189.6,0.0,16.1,205.7,0.0
+3517000,Getulina,3504,Marília,77.6,0.0,16.0,93.6,0.0
+3517109,Glicério,3506,Araçatuba,28.2,0.0,4.4,32.6,0.0
+3517307,Guaimbê,3504,Marília,57.6,0.0,8.1,65.7,0.0
+3517208,Guaiçara,3503,Bauru,141.7,0.0,17.6,159.3,0.0
+3517604,Guapiara,3502,Sorocaba,87.0,33.5,26.7,147.2,0.0
+3517505,Guapiaçu,3507,São José do Rio Preto,281.1,0.0,32.9,314.0,76.1
+3517901,Guaraci,3508,Ribeirão Preto,80.9,14.9,14.8,110.6,158.3
+3518008,Guarani d'Oeste,3507,São José do Rio Preto,38.2,0.0,2.7,40.9,11.6
+3518107,Guarantã,3503,Bauru,87.0,0.0,10.1,97.1,0.0
+3518206,Guararapes,3506,Araçatuba,501.5,0.0,48.6,550.1,0.0
+3518305,Guararema,3501,São Paulo,180.9,23.4,42.6,246.9,594.9
+3518404,Guaratinguetá,3511,São José dos Campos,305.3,128.0,176.5,609.8,1298.5
+3517802,Guaraçaí,3506,Araçatuba,22.4,0.0,11.6,34.0,0.0
+3518503,Guareí,3502,Sorocaba,137.0,0.0,21.8,158.8,0.0
+3518602,Guariba,3508,Ribeirão Preto,442.5,0.0,58.7,501.2,788.9
+3518701,Guarujá,3501,São Paulo,2502.3,602.6,441.3,3546.2,7322.6
+3518800,Guarulhos,3501,São Paulo,5532.1,739.9,1996.8,8268.8,16066.0
+3517703,Guará,3508,Ribeirão Preto,87.1,0.0,29.1,116.2,155.2
+3518859,Guatapará,3508,Ribeirão Preto,32.6,0.0,11.4,44.0,58.3
+3517406,Guaíra,3508,Ribeirão Preto,229.4,81.3,61.5,372.2,408.9
+3518909,Guzolândia,3506,Araçatuba,57.8,0.0,6.6,64.4,0.0
+3516606,Gália,3504,Marília,97.2,0.0,9.9,107.1,0.0
+3519006,Herculândia,3504,Marília,154.0,0.0,14.3,168.3,0.0
+3519055,Holambra,3510,Campinas,295.9,13.2,23.4,332.5,2.4
+3519071,Hortolândia,3510,Campinas,3425.1,0.0,359.1,3784.2,28.7
+3519105,Iacanga,3503,Bauru,170.6,0.0,16.3,186.9,0.0
+3519204,Iacri,3504,Marília,77.7,0.0,9.6,87.3,0.0
+3519253,Iaras,3502,Sorocaba,50.7,0.0,12.5,63.2,0.0
+3519303,Ibaté,3509,Araraquara,845.7,0.0,50.4,896.1,0.0
+3519501,Ibirarema,3504,Marília,328.7,0.0,10.0,338.7,0.0
+3519402,Ibirá,3507,São José do Rio Preto,64.2,0.0,16.8,81.0,18.3
+3519600,Ibitinga,3509,Araraquara,992.6,0.0,94.0,1086.6,0.0
+3519709,Ibiúna,3502,Sorocaba,1402.2,0.0,106.7,1508.9,0.0
+3519808,Icém,3507,São José do Rio Preto,29.6,0.0,4.8,34.4,20.0
+3519907,Iepê,3505,Presidente Prudente,100.4,0.0,11.9,112.3,23.2
+3520103,Igarapava,3508,Ribeirão Preto,171.3,0.0,41.0,212.3,305.3
+3520202,Igaratá,3511,São José dos Campos,23.5,0.0,7.8,31.3,204.4
+3520004,Igaraçu do Tietê,3503,Bauru,535.9,106.1,36.2,678.2,0.0
+3520301,Iguape,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3520426,Ilha Comprida,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3520442,Ilha Solteira,3506,Araçatuba,351.6,0.0,29.1,380.7,0.0
+3520400,Ilhabela,3511,São José dos Campos,213.1,0.0,27.2,240.3,1741.6
+3520509,Indaiatuba,3510,Campinas,5163.6,938.1,400.3,6502.0,41.9
+3520608,Indiana,3505,Presidente Prudente,100.4,0.0,8.0,108.4,23.2
+3520707,Indiaporã,3507,São José do Rio Preto,61.2,0.0,6.3,67.5,16.1
+3520806,Inúbia Paulista,3505,Presidente Prudente,48.2,19.0,5.7,72.9,11.2
+3520905,Ipaussu,3504,Marília,95.6,0.0,21.5,117.1,0.0
+3521002,Iperó,3502,Sorocaba,786.1,0.0,56.5,842.6,0.0
+3521101,Ipeúna,3510,Campinas,140.3,0.0,10.7,151.0,1.1
+3521150,Ipiguá,3507,São José do Rio Preto,64.9,0.0,10.6,75.5,17.0
+3521200,Iporanga,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3521309,Ipuã,3508,Ribeirão Preto,116.8,0.0,20.0,136.8,235.1
+3521408,Iracemápolis,3510,Campinas,329.3,0.0,34.4,363.7,2.7
+3521606,Irapuru,3505,Presidente Prudente,89.9,0.0,11.1,101.0,20.8
+3521507,Irapuã,3507,São José do Rio Preto,116.3,0.0,9.8,126.1,33.5
+3521705,Itaberá,3502,Sorocaba,634.1,0.0,28.1,662.2,0.0
+3521903,Itajobi,3507,São José do Rio Preto,184.7,0.0,26.6,211.3,48.5
+3522000,Itaju,3503,Bauru,38.5,0.0,5.7,44.2,0.0
+3522109,Itanhaém,3501,São Paulo,686.2,339.8,175.4,1201.4,1975.5
+3522158,Itaoca,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3522208,Itapecerica da Serra,3501,São Paulo,601.6,514.4,172.8,1288.8,2476.9
+3522307,Itapetininga,3502,Sorocaba,2112.6,0.0,246.8,2359.4,0.0
+3522406,Itapeva,3502,Sorocaba,1243.4,0.0,140.4,1383.8,0.0
+3522505,Itapevi,3501,São Paulo,911.0,548.0,345.1,1804.1,2753.2
+3522604,Itapira,3510,Campinas,1401.8,0.0,111.5,1513.3,11.5
+3522653,Itapirapuã Paulista,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3522802,Itaporanga,3502,Sorocaba,206.8,0.0,22.0,228.8,0.0
+3523008,Itapura,3506,Araçatuba,98.2,0.0,6.2,104.4,0.0
+3522901,Itapuí,3503,Bauru,224.4,5.1,21.4,250.9,0.0
+3523107,Itaquaquecetuba,3501,São Paulo,1804.2,318.6,573.5,2696.3,5215.5
+3523206,Itararé,3502,Sorocaba,468.1,0.0,69.5,537.6,0.0
+3523305,Itariri,3501,São Paulo,5.4,0.0,1.8,7.2,204.0
+3523404,Itatiba,3510,Campinas,1991.8,500.0,188.5,2680.3,16.3
+3523503,Itatinga,3503,Bauru,249.3,0.0,29.8,279.1,0.0
+3521804,Itaí,3502,Sorocaba,354.4,0.0,38.5,392.9,0.0
+3523602,Itirapina,3509,Araraquara,436.9,0.0,25.3,462.2,0.0
+3523701,Itirapuã,3508,Ribeirão Preto,25.3,0.0,9.0,34.3,45.2
+3523800,Itobi,3510,Campinas,112.3,0.0,12.6,124.9,0.9
+3523909,Itu,3502,Sorocaba,3393.8,842.0,260.4,4496.2,0.0
+3524006,Itupeva,3510,Campinas,1175.8,0.0,103.9,1279.7,10.2
+3524105,Ituverava,3508,Ribeirão Preto,369.8,0.0,58.5,428.3,662.2
+3522703,Itápolis,3509,Araraquara,773.0,0.0,60.7,833.7,0.0
+3524204,Jaborandi,3508,Ribeirão Preto,33.2,0.0,6.2,39.4,93.3
+3524303,Jaboticabal,3508,Ribeirão Preto,296.8,0.0,85.5,382.3,695.4
+3524402,Jacareí,3511,São José dos Campos,968.9,453.9,367.3,1790.1,4031.1
+3524501,Jaci,3507,São José do Rio Preto,82.5,0.0,8.4,90.9,30.8
+3524600,Jacupiranga,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3524709,Jaguariúna,3510,Campinas,1155.5,209.5,91.6,1456.6,9.5
+3524808,Jales,3507,São José do Rio Preto,913.2,0.0,76.3,989.5,239.8
+3524907,Jambeiro,3511,São José dos Campos,31.9,15.9,9.6,57.4,135.2
+3525003,Jandira,3501,São Paulo,486.9,282.2,184.7,953.8,1396.6
+3525102,Jardinópolis,3508,Ribeirão Preto,241.8,0.0,70.7,312.5,432.2
+3525201,Jarinu,3510,Campinas,882.8,0.0,46.1,928.9,9.1
+3525300,Jaú,3503,Bauru,2237.7,347.8,208.9,2794.4,0.0
+3525409,Jeriquara,3508,Ribeirão Preto,15.2,0.0,6.0,21.2,27.2
+3525508,Joanópolis,3510,Campinas,1.1,0.0,0.1,1.2,2.5
+3525706,José Bonifácio,3507,São José do Rio Preto,579.7,0.0,56.6,636.3,154.1
+3525607,João Ramalho,3505,Presidente Prudente,31.8,0.0,6.8,38.6,7.4
+3525854,Jumirim,3502,Sorocaba,41.5,0.0,4.8,46.3,0.0
+3525904,Jundiaí,3510,Campinas,8129.7,1786.0,684.5,10600.2,66.9
+3526001,Junqueirópolis,3505,Presidente Prudente,266.8,0.0,31.6,298.4,62.5
+3526209,Juquitiba,3501,São Paulo,0.0,0.0,0.0,0.0,284.5
+3526100,Juquiá,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3525805,Júlio Mesquita,3504,Marília,2.1,0.0,0.1,2.2,0.0
+3526308,Lagoinha,3511,São José dos Campos,11.1,0.0,7.8,18.9,46.1
+3526407,Laranjal Paulista,3510,Campinas,636.2,0.0,41.1,677.3,5.2
+3526605,Lavrinhas,3511,São José dos Campos,0.0,0.0,0.0,0.0,82.7
+3526506,Lavínia,3506,Araçatuba,72.4,0.0,11.8,84.2,0.0
+3526704,Leme,3510,Campinas,1441.2,0.0,153.6,1594.8,11.7
+3526803,Lençóis Paulista,3503,Bauru,1189.9,0.0,104.1,1294.0,0.0
+3526902,Limeira,3510,Campinas,4414.4,609.8,456.6,5480.8,35.8
+3527009,Lindóia,3510,Campinas,90.5,0.0,10.1,100.6,0.8
+3527108,Lins,3503,Bauru,3178.2,0.0,116.7,3294.9,0.0
+3527207,Lorena,3511,São José dos Campos,194.6,0.0,127.4,322.0,824.1
+3527256,Lourdes,3506,Araçatuba,25.6,0.0,3.0,28.6,0.0
+3527306,Louveira,3510,Campinas,1303.8,317.1,81.1,1702.0,10.6
+3527504,Lucianópolis,3503,Bauru,16.2,0.0,2.1,18.3,0.0
+3527405,Lucélia,3505,Presidente Prudente,260.9,0.0,31.4,292.3,60.4
+3527702,Luiziânia,3506,Araçatuba,8.3,0.0,2.4,10.7,0.0
+3527801,Lupércio,3504,Marília,45.3,0.0,6.2,51.5,0.0
+3527900,Lutécia,3504,Marília,50.0,0.0,4.2,54.2,0.0
+3527603,Luís Antônio,3508,Ribeirão Preto,109.3,0.0,17.3,126.6,216.1
+3528007,Macatuba,3503,Bauru,212.6,0.0,26.3,238.9,0.0
+3528106,Macaubal,3507,São José do Rio Preto,93.4,0.0,11.7,105.1,24.5
+3528205,Macedônia,3507,São José do Rio Preto,29.6,0.0,3.6,33.2,13.4
+3528304,Magda,3506,Araçatuba,48.5,0.0,5.0,53.5,0.0
+3528403,Mairinque,3502,Sorocaba,809.8,0.0,70.8,880.6,0.0
+3528502,Mairiporã,3501,São Paulo,295.5,0.0,87.6,383.1,1420.8
+3528601,Manduri,3502,Sorocaba,146.3,0.0,15.4,161.7,0.0
+3528700,Marabá Paulista,3505,Presidente Prudente,1.0,0.0,0.7,1.7,2.2
+3528809,Maracaí,3504,Marília,240.9,0.0,19.8,260.7,0.0
+3528858,Marapoama,3507,São José do Rio Preto,41.1,0.0,5.2,46.3,10.8
+3529104,Marinópolis,3507,São José do Rio Preto,8.0,0.0,1.1,9.1,5.5
+3528908,Mariápolis,3505,Presidente Prudente,45.6,0.0,4.9,50.5,11.8
+3529203,Martinópolis,3505,Presidente Prudente,134.4,0.0,17.0,151.4,71.1
+3529005,Marília,3504,Marília,3679.0,330.1,371.5,4380.6,0.0
+3529302,Matão,3509,Araraquara,1495.9,503.2,123.1,2122.2,0.0
+3529401,Mauá,3501,São Paulo,2171.7,1912.3,654.6,4738.6,6229.4
+3529500,Mendonça,3507,São José do Rio Preto,80.2,0.0,9.6,89.8,21.1
+3529609,Meridiano,3507,São José do Rio Preto,37.4,0.0,5.6,43.0,12.5
+3529658,Mesópolis,3507,São José do Rio Preto,7.1,0.0,2.7,9.8,2.2
+3529708,Miguelópolis,3508,Ribeirão Preto,236.5,0.0,30.4,266.9,421.7
+3529807,Mineiros do Tietê,3503,Bauru,159.6,0.0,16.4,176.0,0.0
+3530003,Mira Estrela,3507,São José do Rio Preto,40.6,0.0,4.0,44.6,12.9
+3529906,Miracatu,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3530102,Mirandópolis,3506,Araçatuba,396.7,0.0,43.8,440.5,0.0
+3530201,Mirante do Paranapanema,3505,Presidente Prudente,187.4,0.0,24.0,211.4,45.1
+3530300,Mirassol,3507,São José do Rio Preto,799.3,64.0,96.2,959.5,216.2
+3530409,Mirassolândia,3507,São José do Rio Preto,80.6,0.0,7.3,87.9,21.2
+3530508,Mococa,3510,Campinas,961.8,0.0,105.9,1067.7,7.8
+3530706,Mogi Guaçu,3510,Campinas,2316.3,627.7,239.8,3183.8,18.9
+3530805,Mogi Mirim,3510,Campinas,1324.1,211.6,144.8,1680.5,10.8
+3530607,Mogi das Cruzes,3501,São Paulo,1831.6,1592.0,671.7,4095.3,5526.9
+3530904,Mombuca,3510,Campinas,98.6,0.0,5.8,104.4,0.8
+3531100,Mongaguá,3501,São Paulo,340.3,0.0,82.8,423.1,1143.6
+3531209,Monte Alegre do Sul,3510,Campinas,103.5,0.0,13.0,116.5,0.9
+3531308,Monte Alto,3508,Ribeirão Preto,275.0,0.0,54.9,329.9,664.9
+3531407,Monte Aprazível,3507,São José do Rio Preto,347.8,0.0,34.9,382.7,91.3
+3531506,Monte Azul Paulista,3508,Ribeirão Preto,91.7,0.0,28.1,119.8,165.0
+3531605,Monte Castelo,3505,Presidente Prudente,51.7,0.0,6.6,58.3,12.0
+3531803,Monte Mor,3510,Campinas,935.1,298.6,100.8,1334.5,7.6
+3531704,Monteiro Lobato,3511,São José dos Campos,0.5,0.0,0.3,0.8,40.2
+3531001,Monções,3506,Araçatuba,93.6,0.0,3.0,96.6,0.0
+3531902,Morro Agudo,3508,Ribeirão Preto,157.8,0.0,43.6,201.4,282.0
+3532009,Morungaba,3510,Campinas,227.2,0.0,21.5,248.7,1.8
+3532058,Motuca,3509,Araraquara,125.4,0.0,5.3,130.7,0.0
+3532108,Murutinga do Sul,3506,Araçatuba,78.3,0.0,5.1,83.4,0.0
+3532157,Nantes,3505,Presidente Prudente,55.2,0.0,4.2,59.4,12.8
+3532207,Narandiba,3505,Presidente Prudente,28.9,0.0,5.4,34.3,11.0
+3532306,Natividade da Serra,3511,São José dos Campos,0.1,0.0,0.0,0.1,121.7
+3532405,Nazaré Paulista,3510,Campinas,79.3,0.0,5.9,85.2,3.1
+3532504,Neves Paulista,3507,São José do Rio Preto,254.6,0.0,14.9,269.5,68.1
+3532603,Nhandeara,3507,São José do Rio Preto,146.5,0.0,15.3,161.8,38.7
+3532702,Nipoã,3507,São José do Rio Preto,89.1,0.0,6.3,95.4,27.6
+3532801,Nova Aliança,3507,São José do Rio Preto,76.1,0.0,10.5,86.6,20.0
+3532827,Nova Campina,3502,Sorocaba,17.3,0.0,9.9,27.2,0.0
+3532843,Nova Canaã Paulista,3507,São José do Rio Preto,9.2,0.0,1.7,10.9,4.6
+3532868,Nova Castilho,3506,Araçatuba,7.8,0.0,0.8,8.6,0.0
+3532900,Nova Europa,3509,Araraquara,125.4,0.0,14.6,140.0,0.0
+3533007,Nova Granada,3507,São José do Rio Preto,212.4,0.0,30.3,242.7,55.9
+3533106,Nova Guataporanga,3505,Presidente Prudente,26.4,0.0,2.8,29.2,7.3
+3533205,Nova Independência,3506,Araçatuba,77.1,0.0,7.2,84.3,0.0
+3533304,Nova Luzitânia,3506,Araçatuba,16.4,0.0,1.6,18.0,0.0
+3533403,Nova Odessa,3510,Campinas,1060.6,387.8,97.1,1545.5,8.6
+3533254,Novais,3507,São José do Rio Preto,38.8,0.0,4.1,42.9,17.0
+3533502,Novo Horizonte,3507,São José do Rio Preto,434.6,0.0,60.0,494.6,114.1
+3533601,Nuporanga,3508,Ribeirão Preto,41.6,0.0,11.6,53.2,74.2
+3533700,Ocauçu,3504,Marília,36.9,0.0,4.7,41.6,0.0
+3533908,Olímpia,3508,Ribeirão Preto,1004.3,0.0,78.1,1082.4,1975.9
+3534005,Onda Verde,3507,São José do Rio Preto,145.9,0.0,7.4,153.3,38.5
+3534104,Oriente,3504,Marília,102.6,0.0,9.5,112.1,0.0
+3534203,Orindiúva,3507,São José do Rio Preto,197.3,0.0,9.4,206.7,51.8
+3534302,Orlândia,3508,Ribeirão Preto,303.9,0.0,60.0,363.9,541.7
+3534401,Osasco,3501,São Paulo,4280.2,2181.6,1140.3,7602.1,12277.7
+3534500,Oscar Bressane,3504,Marília,42.3,0.0,3.6,45.9,0.0
+3534609,Osvaldo Cruz,3505,Presidente Prudente,429.8,0.0,48.9,478.7,99.5
+3534708,Ourinhos,3504,Marília,1778.1,0.0,162.7,1940.8,0.0
+3534807,Ouro Verde,3505,Presidente Prudente,122.7,0.0,11.3,134.0,30.5
+3534757,Ouroeste,3507,São José do Rio Preto,125.2,0.0,16.1,141.3,32.9
+3534906,Pacaembu,3505,Presidente Prudente,131.0,0.0,23.3,154.3,30.3
+3535002,Palestina,3507,São José do Rio Preto,115.2,0.0,15.6,130.8,34.7
+3535101,Palmares Paulista,3507,São José do Rio Preto,189.3,0.0,15.1,204.4,49.7
+3535200,Palmeira d'Oeste,3507,São José do Rio Preto,80.0,0.0,10.6,90.6,27.6
+3535309,Palmital,3504,Marília,289.7,0.0,30.7,320.4,0.0
+3535408,Panorama,3505,Presidente Prudente,136.6,0.0,20.6,157.2,36.0
+3535507,Paraguaçu Paulista,3504,Marília,539.8,0.0,62.4,602.2,0.0
+3535606,Paraibuna,3511,São José dos Campos,22.1,0.0,15.5,37.6,160.6
+3535804,Paranapanema,3502,Sorocaba,574.0,0.0,28.8,602.8,0.0
+3535903,Paranapuã,3507,São José do Rio Preto,170.6,0.0,6.3,176.9,44.8
+3536000,Parapuã,3504,Marília,131.7,17.5,16.6,165.8,0.0
+3535705,Paraíso,3507,São José do Rio Preto,80.6,0.0,9.5,90.1,21.2
+3536109,Pardinho,3503,Bauru,152.5,0.0,11.2,163.7,0.0
+3536208,Pariquera-Açu,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3536257,Parisi,3507,São José do Rio Preto,84.9,0.0,4.5,89.4,22.3
+3536307,Patrocínio Paulista,3508,Ribeirão Preto,89.2,0.0,22.7,111.9,159.2
+3536406,Paulicéia,3505,Presidente Prudente,103.4,0.0,12.4,115.8,23.9
+3536570,Paulistânia,3503,Bauru,38.1,0.0,2.5,40.6,0.0
+3536604,Paulo de Faria,3507,São José do Rio Preto,244.2,0.0,11.6,255.8,64.1
+3536505,Paulínia,3510,Campinas,1908.2,0.0,173.0,2081.2,15.5
+3536703,Pederneiras,3503,Bauru,477.6,0.0,69.7,547.3,0.0
+3536802,Pedra Bela,3510,Campinas,74.5,2.1,10.2,86.8,0.6
+3536901,Pedranópolis,3507,São José do Rio Preto,17.6,0.0,4.2,21.8,4.8
+3537008,Pedregulho,3508,Ribeirão Preto,73.2,0.0,21.4,94.6,148.3
+3537107,Pedreira,3510,Campinas,695.5,119.5,67.3,882.3,5.7
+3537156,Pedrinhas Paulista,3504,Marília,54.9,0.0,4.4,59.3,0.0
+3537206,Pedro de Toledo,3501,São Paulo,0.0,0.0,0.0,0.0,23.9
+3537305,Penápolis,3506,Araçatuba,1035.4,0.0,96.0,1131.4,0.0
+3537404,Pereira Barreto,3506,Araçatuba,217.6,0.0,37.7,255.3,0.0
+3537503,Pereiras,3502,Sorocaba,104.3,0.0,13.7,118.0,0.0
+3537602,Peruíbe,3501,São Paulo,231.8,0.0,50.0,281.8,1421.2
+3537701,Piacatu,3506,Araçatuba,85.6,0.0,7.4,93.0,0.0
+3537800,Piedade,3502,Sorocaba,736.5,2.4,71.2,810.1,0.0
+3537909,Pilar do Sul,3502,Sorocaba,360.7,0.0,42.7,403.4,0.0
+3538006,Pindamonhangaba,3511,São José dos Campos,479.1,256.3,251.7,987.1,2002.9
+3538105,Pindorama,3507,São José do Rio Preto,170.3,0.0,22.6,192.9,45.1
+3538204,Pinhalzinho,3510,Campinas,244.1,0.0,23.8,267.9,2.0
+3538303,Piquerobi,3505,Presidente Prudente,26.5,0.0,5.1,31.6,6.1
+3538501,Piquete,3511,São José dos Campos,21.6,0.0,18.3,39.9,93.9
+3538600,Piracaia,3510,Campinas,180.4,0.0,15.4,195.8,3.9
+3538709,Piracicaba,3510,Campinas,11418.3,479.7,662.5,12560.5,92.7
+3538808,Piraju,3504,Marília,452.8,0.0,46.1,498.9,0.0
+3538907,Pirajuí,3503,Bauru,265.2,0.0,35.1,300.3,0.0
+3539004,Pirangi,3507,São José do Rio Preto,211.7,0.0,17.0,228.7,55.6
+3539103,Pirapora do Bom Jesus,3501,São Paulo,8.3,0.0,3.4,11.7,202.5
+3539202,Pirapozinho,3505,Presidente Prudente,375.7,0.0,25.5,401.2,135.2
+3539301,Pirassununga,3509,Araraquara,850.5,241.4,115.1,1207.0,0.0
+3539400,Piratininga,3503,Bauru,209.1,0.0,22.8,231.9,0.0
+3539509,Pitangueiras,3508,Ribeirão Preto,349.0,0.0,52.7,401.7,622.4
+3539608,Planalto,3507,São José do Rio Preto,64.0,0.0,6.8,70.8,17.0
+3539707,Platina,3504,Marília,44.9,0.0,4.7,49.6,0.0
+3539905,Poloni,3507,São José do Rio Preto,58.0,0.0,8.8,66.8,15.2
+3540002,Pompéia,3504,Marília,345.5,0.0,29.8,375.3,0.0
+3540101,Pongaí,3503,Bauru,0.0,0.0,0.0,0.0,0.0
+3540200,Pontal,3508,Ribeirão Preto,276.5,0.0,58.1,334.6,499.0
+3540259,Pontalinda,3507,São José do Rio Preto,63.8,0.0,6.5,70.3,16.8
+3540309,Pontes Gestal,3507,São José do Rio Preto,12.3,0.0,3.7,16.0,3.2
+3540408,Populina,3507,São José do Rio Preto,30.0,0.0,5.0,35.0,10.3
+3540507,Porangaba,3502,Sorocaba,165.0,11.9,16.4,193.3,0.0
+3540606,Porto Feliz,3502,Sorocaba,970.9,0.0,86.9,1057.8,0.0
+3540705,Porto Ferreira,3509,Araraquara,984.2,74.5,82.4,1141.1,0.0
+3540754,Potim,3511,São José dos Campos,42.7,0.0,31.9,74.6,173.5
+3540804,Potirendaba,3507,São José do Rio Preto,292.2,0.0,28.8,321.0,77.1
+3539806,Poá,3501,São Paulo,490.9,547.0,162.4,1200.3,1408.1
+3540853,Pracinha,3505,Presidente Prudente,5.6,0.0,1.1,6.7,4.8
+3540903,Pradópolis,3508,Ribeirão Preto,102.9,0.0,26.7,129.6,183.5
+3541000,Praia Grande,3501,São Paulo,2099.5,0.0,482.0,2581.5,6842.9
+3541059,Pratânia,3503,Bauru,99.5,0.0,8.0,107.5,0.0
+3541109,Presidente Alves,3503,Bauru,37.4,0.0,5.9,43.3,0.0
+3541208,Presidente Bernardes,3505,Presidente Prudente,89.9,0.0,14.9,104.8,31.7
+3541307,Presidente Epitácio,3505,Presidente Prudente,0.0,0.0,0.0,0.0,149.4
+3541406,Presidente Prudente,3505,Presidente Prudente,5234.6,587.9,353.2,6175.7,1211.7
+3541505,Presidente Venceslau,3505,Presidente Prudente,514.8,0.0,54.7,569.5,120.1
+3541604,Promissão,3503,Bauru,407.1,0.0,54.9,462.0,0.0
+3541653,Quadra,3502,Sorocaba,65.3,3.1,5.3,73.7,0.0
+3541703,Quatá,3505,Presidente Prudente,301.1,46.0,20.6,367.7,69.7
+3541802,Queiroz,3504,Marília,49.7,0.0,5.1,54.8,0.0
+3541901,Queluz,3511,São José dos Campos,0.0,0.0,0.0,0.0,80.8
+3542008,Quintana,3504,Marília,63.0,0.0,3.0,66.0,0.0
+3542107,Rafard,3510,Campinas,209.6,0.9,14.0,224.5,1.7
+3542206,Rancharia,3505,Presidente Prudente,297.5,0.0,44.2,341.7,69.8
+3542305,Redenção da Serra,3511,São José dos Campos,2.1,0.0,1.2,3.3,51.6
+3542404,Regente Feijó,3505,Presidente Prudente,331.3,0.0,31.5,362.8,76.7
+3542503,Reginópolis,3503,Bauru,46.1,0.0,5.6,51.7,0.0
+3542602,Registro,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3542701,Restinga,3508,Ribeirão Preto,17.7,0.0,10.0,27.7,31.6
+3542800,Ribeira,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3542909,Ribeirão Bonito,3509,Araraquara,66.2,0.0,15.3,81.5,0.0
+3543006,Ribeirão Branco,3502,Sorocaba,185.7,0.0,29.2,214.9,0.0
+3543105,Ribeirão Corrente,3508,Ribeirão Preto,31.8,0.0,7.2,39.0,56.7
+3543253,Ribeirão Grande,3502,Sorocaba,60.3,9.3,11.7,81.3,0.0
+3543303,Ribeirão Pires,3501,São Paulo,545.7,403.4,180.9,1130.0,1565.3
+3543402,Ribeirão Preto,3508,Ribeirão Preto,5173.0,3990.8,1066.8,10230.6,9451.5
+3543204,Ribeirão do Sul,3504,Marília,71.6,0.0,7.3,78.9,0.0
+3543238,Ribeirão dos Índios,3505,Presidente Prudente,4.1,0.0,0.5,4.6,5.8
+3543600,Rifaina,3508,Ribeirão Preto,2.9,0.0,0.3,3.2,95.6
+3543709,Rincão,3509,Araraquara,108.2,0.0,12.8,121.0,0.0
+3543808,Rinópolis,3504,Marília,272.3,0.0,14.5,286.8,0.0
+3543907,Rio Claro,3510,Campinas,4419.9,564.8,315.2,5299.9,35.9
+3544103,Rio Grande da Serra,3501,São Paulo,127.8,139.6,69.1,336.5,366.6
+3544004,Rio das Pedras,3510,Campinas,483.0,48.4,49.0,580.4,3.9
+3544202,Riolândia,3507,São José do Rio Preto,60.7,0.0,16.1,76.8,15.9
+3543501,Riversul,3502,Sorocaba,36.1,0.0,8.8,44.9,0.0
+3544251,Rosana,3505,Presidente Prudente,296.9,0.0,22.4,319.3,83.6
+3544301,Roseira,3511,São José dos Campos,20.1,0.0,17.0,37.1,81.8
+3544509,Rubinéia,3507,São José do Rio Preto,37.3,0.0,5.7,43.0,10.3
+3544400,Rubiácea,3506,Araçatuba,23.9,0.0,4.2,28.1,0.0
+3544608,Sabino,3503,Bauru,32.6,0.0,3.4,36.0,0.0
+3544707,Sagres,3505,Presidente Prudente,14.0,0.0,3.0,17.0,4.2
+3544806,Sales,3507,São José do Rio Preto,39.8,0.0,2.7,42.5,38.3
+3544905,Sales Oliveira,3508,Ribeirão Preto,112.8,1.4,17.9,132.1,201.2
+3545001,Salesópolis,3501,São Paulo,1.0,0.0,0.5,1.5,134.2
+3545100,Salmourão,3505,Presidente Prudente,51.1,0.0,6.7,57.8,13.2
+3545159,Saltinho,3510,Campinas,146.7,0.0,12.8,159.5,1.2
+3545209,Salto,3502,Sorocaba,2649.6,619.9,210.2,3479.7,0.0
+3545407,Salto Grande,3504,Marília,45.0,0.0,14.2,59.2,0.0
+3545308,Salto de Pirapora,3502,Sorocaba,715.1,0.0,68.4,783.5,0.0
+3545506,Sandovalina,3505,Presidente Prudente,24.4,0.0,5.7,30.1,5.7
+3545605,Santa Adélia,3507,São José do Rio Preto,154.0,0.0,21.1,175.1,42.1
+3545704,Santa Albertina,3507,São José do Rio Preto,69.8,0.0,9.9,79.7,18.5
+3546009,Santa Branca,3511,São José dos Campos,11.7,0.0,5.7,17.4,182.4
+3545803,Santa Bárbara d'Oeste,3510,Campinas,3575.8,809.7,286.9,4672.4,29.0
+3546108,Santa Clara d'Oeste,3507,São José do Rio Preto,38.7,0.0,4.0,42.7,10.3
+3546207,Santa Cruz da Conceição,3510,Campinas,101.7,4.0,6.7,112.4,0.8
+3546256,Santa Cruz da Esperança,3508,Ribeirão Preto,13.6,0.0,2.9,16.5,27.3
+3546306,Santa Cruz das Palmeiras,3510,Campinas,496.0,0.0,45.0,541.0,4.0
+3546405,Santa Cruz do Rio Pardo,3504,Marília,826.7,0.0,72.7,899.4,0.0
+3546504,Santa Ernestina,3508,Ribeirão Preto,38.3,0.0,9.6,47.9,68.3
+3546603,Santa Fé do Sul,3507,São José do Rio Preto,502.4,38.3,54.3,595.0,132.2
+3546702,Santa Gertrudes,3510,Campinas,463.7,0.0,37.0,500.7,3.8
+3546801,Santa Isabel,3501,São Paulo,58.7,0.0,17.4,76.1,803.3
+3546900,Santa Lúcia,3509,Araraquara,47.9,0.0,11.2,59.1,0.0
+3547007,Santa Maria da Serra,3510,Campinas,109.9,0.0,8.2,118.1,0.9
+3547106,Santa Mercedes,3505,Presidente Prudente,30.2,0.0,4.6,34.8,7.0
+3547403,Santa Rita d'Oeste,3507,São José do Rio Preto,61.2,0.0,4.3,65.5,16.1
+3547502,Santa Rita do Passa Quatro,3509,Araraquara,466.8,0.0,38.9,505.7,0.0
+3547601,Santa Rosa de Viterbo,3508,Ribeirão Preto,103.3,0.0,36.6,139.9,184.2
+3547650,Santa Salete,3507,São José do Rio Preto,10.3,0.0,1.5,11.8,4.6
+3547205,Santana da Ponte Pensa,3507,São José do Rio Preto,14.7,0.0,2.6,17.3,3.9
+3547304,Santana de Parnaíba,3501,São Paulo,1025.3,278.9,196.4,1500.6,3612.4
+3547700,Santo Anastácio,3505,Presidente Prudente,144.2,15.3,28.1,187.6,33.4
+3547809,Santo André,3501,São Paulo,3570.9,1837.3,1172.1,6580.3,10243.0
+3547908,Santo Antônio da Alegria,3508,Ribeirão Preto,21.9,0.0,10.6,32.5,39.0
+3548005,Santo Antônio de Posse,3510,Campinas,348.8,0.0,36.4,385.2,2.8
+3548054,Santo Antônio do Aracanguá,3506,Araçatuba,136.3,0.0,12.1,148.4,0.0
+3548104,Santo Antônio do Jardim,3510,Campinas,92.0,0.0,9.5,101.5,0.8
+3548203,Santo Antônio do Pinhal,3511,São José dos Campos,1.1,0.0,0.6,1.7,87.5
+3548302,Santo Expedito,3505,Presidente Prudente,15.9,0.0,1.6,17.5,10.7
+3548500,Santos,3501,São Paulo,3221.1,0.0,650.3,3871.4,9308.5
+3548401,Santópolis do Aguapeí,3506,Araçatuba,89.5,11.9,6.1,107.5,0.0
+3551108,Sarapuí,3502,Sorocaba,73.7,0.0,11.9,85.6,0.0
+3551207,Sarutaiá,3504,Marília,48.1,0.0,5.8,53.9,0.0
+3551306,Sebastianópolis do Sul,3507,São José do Rio Preto,39.1,0.0,4.9,44.0,10.3
+3551405,Serra Azul,3508,Ribeirão Preto,43.4,0.0,15.8,59.2,97.8
+3551603,Serra Negra,3510,Campinas,201.9,0.0,20.3,222.2,3.8
+3551504,Serrana,3508,Ribeirão Preto,657.1,81.4,68.7,807.2,1171.4
+3551702,Sertãozinho,3508,Ribeirão Preto,765.5,0.0,198.6,964.1,1364.6
+3551801,Sete Barras,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3551900,Severínia,3508,Ribeirão Preto,101.4,0.0,22.8,124.2,180.8
+3552007,Silveiras,3511,São José dos Campos,0.0,0.0,0.0,0.0,52.6
+3552106,Socorro,3510,Campinas,583.8,0.0,62.7,646.5,4.7
+3552205,Sorocaba,3502,Sorocaba,14672.9,2291.3,1129.7,18093.9,0.0
+3552304,Sud Mennucci,3506,Araçatuba,76.4,0.0,11.4,87.8,0.0
+3552403,Sumaré,3510,Campinas,4169.9,177.5,437.2,4784.6,33.9
+3552502,Suzano,3501,São Paulo,1352.4,1118.6,481.1,2952.1,3879.3
+3552551,Suzanápolis,3507,São José do Rio Preto,60.9,0.0,5.3,66.2,16.0
+3548609,São Bento do Sapucaí,3511,São José dos Campos,0.0,0.0,0.0,0.0,146.0
+3548708,São Bernardo do Campo,3501,São Paulo,4096.5,906.6,1209.9,6213.0,12323.0
+3548807,São Caetano do Sul,3501,São Paulo,905.8,940.4,259.3,2105.5,2598.2
+3548906,São Carlos,3509,Araraquara,4238.3,1038.2,398.9,5675.4,0.0
+3549003,São Francisco,3507,São José do Rio Preto,15.7,0.0,3.6,19.3,4.7
+3549409,São Joaquim da Barra,3508,Ribeirão Preto,304.4,58.1,76.0,438.5,542.7
+3549508,São José da Bela Vista,3508,Ribeirão Preto,17.5,0.0,11.9,29.4,31.2
+3549607,São José do Barreiro,3511,São José dos Campos,0.0,0.0,0.0,0.0,33.8
+3549706,São José do Rio Pardo,3510,Campinas,887.3,15.0,81.7,984.0,7.2
+3549805,São José do Rio Preto,3507,São José do Rio Preto,8690.2,2901.7,746.0,12337.9,2299.1
+3549904,São José dos Campos,3511,São José dos Campos,2170.1,1398.6,1071.8,4640.5,8977.4
+3549102,São João da Boa Vista,3510,Campinas,1428.7,0.0,144.6,1573.3,11.6
+3549201,São João das Duas Pontes,3507,São José do Rio Preto,9.2,0.0,1.3,10.5,7.3
+3549250,São João de Iracema,3507,São José do Rio Preto,22.1,0.0,2.9,25.0,5.8
+3549300,São João do Pau d'Alho,3505,Presidente Prudente,41.3,0.0,3.0,44.3,11.0
+3549953,São Lourenço da Serra,3501,São Paulo,0.0,0.0,0.0,0.0,241.0
+3550001,São Luiz do Paraitinga,3511,São José dos Campos,5.4,0.0,4.1,9.5,87.4
+3550100,São Manuel,3503,Bauru,547.3,0.0,58.4,605.7,0.0
+3550209,São Miguel Arcanjo,3502,Sorocaba,252.7,0.0,48.5,301.2,0.0
+3550308,São Paulo,3501,São Paulo,64079.8,61964.6,17751.5,143795.9,185584.9
+3550407,São Pedro,3510,Campinas,637.2,68.1,59.7,765.0,5.2
+3550506,São Pedro do Turvo,3504,Marília,149.2,0.0,11.3,160.5,0.0
+3550605,São Roque,3502,Sorocaba,1316.2,58.8,119.2,1494.2,0.0
+3550704,São Sebastião,3511,São José dos Campos,278.8,0.0,50.4,329.2,2868.9
+3550803,São Sebastião da Grama,3510,Campinas,224.0,52.1,15.1,291.2,2.0
+3550902,São Simão,3508,Ribeirão Preto,25.9,0.0,6.7,32.6,144.5
+3551009,São Vicente,3501,São Paulo,1361.9,301.1,516.3,2179.3,3906.9
+3552601,Tabapuã,3507,São José do Rio Preto,74.5,0.0,10.8,85.3,32.1
+3552700,Tabatinga,3509,Araraquara,223.8,0.0,23.1,246.9,0.0
+3552809,Taboão da Serra,3501,São Paulo,1298.0,1304.7,428.1,3030.8,3723.4
+3552908,Taciba,3505,Presidente Prudente,25.7,0.0,4.1,29.8,14.2
+3553005,Taguaí,3502,Sorocaba,253.7,0.0,19.8,273.5,0.0
+3553104,Taiaçu,3508,Ribeirão Preto,16.9,0.0,6.3,23.2,42.5
+3553203,Taiúva,3508,Ribeirão Preto,3.8,0.0,4.0,7.8,17.3
+3553302,Tambaú,3510,Campinas,373.1,0.0,33.0,406.1,3.1
+3553401,Tanabi,3507,São José do Rio Preto,444.3,0.0,31.8,476.1,144.9
+3553609,Tapiratiba,3510,Campinas,227.8,0.0,18.4,246.2,1.9
+3553500,Tapiraí,3502,Sorocaba,0.0,0.0,0.0,0.0,0.0
+3553658,Taquaral,3508,Ribeirão Preto,12.9,0.0,3.9,16.8,24.2
+3553708,Taquaritinga,3509,Araraquara,775.8,317.8,81.6,1175.2,0.0
+3553807,Taquarituba,3502,Sorocaba,429.0,0.0,38.1,467.1,0.0
+3553856,Taquarivaí,3502,Sorocaba,93.3,0.0,10.8,104.1,0.0
+3553906,Tarabai,3505,Presidente Prudente,93.5,0.0,6.2,99.7,35.8
+3553955,Tarumã,3504,Marília,197.1,0.0,23.3,220.4,0.0
+3554003,Tatuí,3502,Sorocaba,1843.5,0.0,194.0,2037.5,0.0
+3554102,Taubaté,3511,São José dos Campos,1183.7,1753.5,475.5,3412.7,4919.8
+3554201,Tejupá,3504,Marília,66.8,0.1,6.5,73.4,0.0
+3554300,Teodoro Sampaio,3505,Presidente Prudente,445.7,0.0,23.5,469.2,152.7
+3554409,Terra Roxa,3508,Ribeirão Preto,36.9,0.0,10.5,47.4,77.4
+3554508,Tietê,3502,Sorocaba,703.2,75.7,58.9,837.8,0.0
+3554607,Timburi,3504,Marília,31.3,0.0,3.0,34.3,0.0
+3554656,Torre de Pedra,3502,Sorocaba,23.9,0.0,2.4,26.3,0.0
+3554706,Torrinha,3503,Bauru,168.0,0.0,14.6,182.6,0.0
+3554755,Trabiju,3509,Araraquara,33.9,0.0,2.6,36.5,0.0
+3554805,Tremembé,3511,São José dos Campos,195.7,275.4,80.0,551.1,796.3
+3554904,Três Fronteiras,3507,São José do Rio Preto,122.5,0.0,10.6,133.1,32.1
+3554953,Tuiuti,3510,Campinas,84.5,0.0,10.6,95.1,0.7
+3555109,Tupi Paulista,3505,Presidente Prudente,113.1,0.0,11.4,124.5,57.2
+3555000,Tupã,3504,Marília,1357.4,0.0,100.0,1457.4,0.0
+3555208,Turiúba,3506,Araçatuba,45.4,0.0,2.8,48.2,0.0
+3555307,Turmalina,3507,São José do Rio Preto,12.9,0.0,2.3,15.2,3.9
+3555356,Ubarana,3507,São José do Rio Preto,123.2,0.0,8.4,131.6,32.4
+3555406,Ubatuba,3511,São José dos Campos,1.4,0.0,0.3,1.7,2472.7
+3555505,Ubirajara,3503,Bauru,39.9,0.0,3.1,43.0,0.0
+3555604,Uchoa,3507,São José do Rio Preto,103.6,0.0,16.0,119.6,27.6
+3555703,União Paulista,3507,São José do Rio Preto,21.8,0.0,2.5,24.3,5.7
+3555901,Uru,3503,Bauru,0.0,0.0,0.0,0.0,0.0
+3556008,Urupês,3507,São José do Rio Preto,213.7,0.0,21.5,235.2,56.1
+3555802,Urânia,3507,São José do Rio Preto,64.3,0.0,12.0,76.3,19.5
+3556107,Valentim Gentil,3507,São José do Rio Preto,267.0,0.0,22.1,289.1,70.1
+3556206,Valinhos,3510,Campinas,2434.9,0.0,193.1,2628.0,20.3
+3556305,Valparaíso,3506,Araçatuba,336.6,0.0,37.9,374.5,0.0
+3556354,Vargem,3510,Campinas,114.3,0.0,11.9,126.2,1.3
+3556453,Vargem Grande Paulista,3501,São Paulo,151.0,0.0,53.1,204.1,643.5
+3556404,Vargem Grande do Sul,3510,Campinas,786.9,0.0,62.4,849.3,6.4
+3556602,Vera Cruz,3504,Marília,98.0,0.0,10.7,108.7,0.0
+3556701,Vinhedo,3510,Campinas,2186.3,175.1,119.1,2480.5,17.9
+3556800,Viradouro,3508,Ribeirão Preto,92.2,0.0,27.2,119.4,164.4
+3556909,Vista Alegre do Alto,3507,São José do Rio Preto,285.2,0.0,12.7,297.9,74.9
+3556958,Vitória Brasil,3507,São José do Rio Preto,21.5,0.0,2.4,23.9,6.6
+3557006,Votorantim,3502,Sorocaba,2671.0,154.2,191.7,3016.9,0.0
+3557105,Votuporanga,3507,São José do Rio Preto,1368.3,0.0,143.3,1511.6,379.1
+3556503,Várzea Paulista,3510,Campinas,1712.8,375.8,181.1,2269.7,13.9
+3557154,Zacarias,3506,Araçatuba,35.9,0.0,3.2,39.1,0.0
+3500402,Águas da Prata,3510,Campinas,62.5,0.0,9.9,72.4,0.6
+3500501,Águas de Lindóia,3510,Campinas,299.5,0.0,23.5,323.0,2.9
+3500550,Águas de Santa Bárbara,3502,Sorocaba,68.3,0.0,8.0,76.3,0.0
+3500600,Águas de São Pedro,3510,Campinas,184.9,8.5,4.4,197.8,1.5
+3501202,Álvares Florence,3507,São José do Rio Preto,27.6,0.0,5.8,33.4,7.6
+3501301,Álvares Machado,3505,Presidente Prudente,348.4,148.3,42.7,539.4,80.6
+3501400,Álvaro de Carvalho,3504,Marília,10.4,0.0,1.7,12.1,0.0
+3533809,Óleo,3502,Sorocaba,29.0,0.0,3.9,32.9,0.0

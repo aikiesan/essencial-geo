@@ -1,0 +1,874 @@
+codigo,nome,situacao,tratamento,familia_ana,familia,remocao_dbo,CD_MUN,NM_MUN,municipios_atendidos,lon,lat
+3534757_ETE_1,ETE Ouroeste,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.87,3534757,Ouroeste,1,-50.391954,-20.01478
+3541406_ETE_5,ETE Montalvão,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.89999998,3541406,Presidente Prudente,1,-51.358902,-22.049644
+3547601_ETE_1,ETE Nosso Teto,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3547601,Santa Rosa de Viterbo,1,-47.406422,-21.505296
+3554300_ETE_1,ETE Teodoro Sampaio,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3554300,Teodoro Sampaio,1,-52.144684,-22.538476
+3554409_ETE_1,ETE Terra Roxa - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.64999998,3554409,Terra Roxa,1,-48.327085,-20.76635
+3506359_ETE_3,ETE SESC,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3506359,Bertioga,1,-46.114719,-23.821604
+3509304_ETE_1,ETE Cajobi,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.80000001,3509304,Cajobi,1,-48.828128,-20.889248
+3556107_ETE_1,ETE Valentim Gentil,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.95999998,3556107,Valentim Gentil,1,-50.090285,-20.40274
+3505401_ETE_1,ETE Barra do Turvo,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3505401,Barra do Turvo,1,-48.5,-24.739444
+3502705_ETE_1,ETE Apiaá,Ativa,Lodos Ativados por Batelada + Filtração,Lodos Ativados,lodos,0.89999998,3502705,Apiaí,1,-48.837514,-24.549326
+3502804_ETE_2,ETE Maria Isabel,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3502804,Araçatuba,1,-50.469059,-21.135851
+3502804_ETE_1,ETE Baguaçu,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.91000003,3502804,Araçatuba,1,-50.403888,-21.1864
+3502903_ETE_1,ETE Vacariú,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3502903,Araçoiaba da Serra,1,-47.603767,-23.492528
+3503000_ETE_1,ETE Aramina,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3503000,Aramina,1,-47.798275,-20.089757
+3503109_ETE_1,ETE Arandu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.70999998,3503109,Arandu,1,-49.055205,-23.135069
+3503158_ETE_1,ETE Arapeí,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.81,3503158,Arapeí,1,-44.447031,-22.669883
+3503208_ETE_1,ETE Araraquara,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.56,3503208,Araraquara,1,-48.248551,-21.827624
+3505500_ETE_1,ETE 1 - Barretos 2,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3505500,Barretos,1,-48.54561,-20.524158
+3503307_ETE_1,ETE Araras - Sp,Ativa,Reator Anaeróbio + Lagoa Decantação/Facultativa/Maturação/Polimento,Reatores Anaeróbios,reator,0.74000001,3503307,Araras,1,-47.333166,-22.342284
+3503356_ETE_1,ETE Arco-áris,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3503356,Arco-Íris,1,-50.467639,-21.771728
+3503406_ETE_1,ETE Arealva,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.74000001,3503406,Arealva,1,-48.897493,-22.024014
+3503604_ETE_1,ETE Areiópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3503604,Areiópolis,1,-48.662506,-22.663325
+3503901_ETE_1,ETE Arujá,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3503901,Arujá,1,-46.357118,-23.397503
+3503901_ETE_3,ETE Vila Arujá,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3503901,Arujá,1,-46.291583,-23.378333
+3503950_ETE_1,ETE Aspásia,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3503950,Aspásia,1,-50.720505,-20.155352
+3504008_ETE_2,ETE Assis Jacu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3504008,Assis,1,-50.402373,-22.69315
+3504008_ETE_1,ETE Assis Fortuninha,Ativa,Lagoa Anaeróbia + Lagoas Facultativas em Série + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.91000003,3504008,Assis,1,-50.463005,-22.684419
+3504107_ETE_2,ETE Estoril - Atibaia,Ativa,Reator Anaeróbio + Lodos Ativados por Batelada,Reatores Anaeróbios,reator,0.89999998,3504107,Atibaia,1,-46.565894,-23.109369
+3504107_ETE_3,ETE Jardim das Palmeiras,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3504107,Atibaia,1,-46.578379,-23.113575
+3504107_ETE_1,ETE Cerejeiras,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.81,3504107,Atibaia,1,-46.595998,-23.126783
+3504206_ETE_1,ETE Auriflama,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.91000003,3504206,Auriflama,1,-50.559107,-20.663353
+3504305_ETE_1,ETE Avaí,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3504305,Avaí,1,-49.324729,-22.156404
+3504404_ETE_1,ETE Alambari - Avanhandava,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3504404,Avanhandava,1,-49.950157,-21.473956
+3504404_ETE_2,ETE Jacutinga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3504404,Avanhandava,1,-49.924278,-21.470918
+3504503_ETE_1,ETE Avaré,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3504503,Avaré,1,-48.948259,-23.063637
+3504602_ETE_1,ETE Bady Bassitt,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94999999,3504602,Bady Bassitt,1,-49.452154,-20.934864
+3525805_ETE_1,ETE Júlio Mesquita,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.87,3525805,Júlio Mesquita,1,-49.773187,-22.004986
+3510104_ETE_1,ETE Candido Rodrigues,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.83999997,3510104,Cândido Rodrigues,1,-48.62647,-21.320934
+3512100_ETE_1,ETE Colômbia,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3512100,Colômbia,1,-48.679673,-20.175462
+3501202_ETE_1,ETE Álvares de Florence,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.54000002,3501202,Álvares Florence,1,-49.916396,-20.314751
+3501509_ETE_1,ETE Alvinlândia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3501509,Alvinlândia,1,-49.727697,-22.436918
+3500105_ETE_2,ETE Adamantina Oeste,Ativa,Lagoa Anaeróbia + Lagoas Facultativas em Série + Fitofiltração,Sistemas de Lagoas,lagoa,0.88999999,3500105,Adamantina,1,-51.12396,-21.710796
+3500204_ETE_1,ETE Adolfo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3500204,Adolfo,1,-49.656622,-21.24666
+3500402_ETE_1,ETE Águas da Prata,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.74000001,3500402,Águas da Prata,1,-46.730269,-21.948196
+3500501_ETE_1,ETE Barreiros,Ativa,Lodos Ativados em Batelada - SBR + Escada de Aeração,Lodos Ativados,lodos,0.89999998,3500501,Águas de Lindóia,1,-46.627508,-22.510325
+3500550_ETE_1,ETE Águas de Santa Bárbara,Ativa,Lagoas Aeradas em Série + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.94,3500550,Águas de Santa Bárbara,1,-49.255357,-22.880896
+3500758_ETE_1,ETE Alambari - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3500758,Alambari,1,-47.90162,-23.546828
+3500808_ETE_1,ETE Alfredo Marcondes,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3500808,Alfredo Marcondes,1,-51.404692,-21.95232
+3500907_ETE_1,ETE Altair,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3500907,Altair,1,-49.062954,-20.518038
+3501004_ETE_1,ETE Altinópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75999999,3501004,Altinópolis,1,-47.369112,-21.02938
+3501103_ETE_1,ETE Alto Alegre - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3501103,Alto Alegre,1,-50.177308,-21.578706
+3501400_ETE_1,ETE Álvaro de Carvalho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3501400,Álvaro de Carvalho,1,-49.727219,-22.089741
+3501608_ETE_1,ETE Carióba,Ativa,Filtro Biológico + Decantação  (TRICKING FILTER SYSTEM),Miscelânea de Processos,outros,0.60000002,3501608,Americana,1,-47.334722,-22.714722
+3501608_ETE_2,ETE Praia Azul,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel,Lodos Ativados,lodos,0.85000002,3501608,Americana,1,-47.253057,-22.73264
+3501806_ETE_1,ETE Américo de Campos,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.77999997,3501806,Américo de Campos,1,-49.708388,-20.287854
+3501905_ETE_1,ETE Piero Floravante,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.75999999,3501905,Amparo,1,-46.821007,-22.70493
+3502002_ETE_1,ETE Analondia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3502002,Analândia,1,-47.662081,-22.137967
+3502101_ETE_4,ETE São Pedro I,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3502101,Andradina,1,-51.408003,-20.907328
+3502101_ETE_5,ETE São Pedro II,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3502101,Andradina,1,-51.405546,-20.908006
+3502101_ETE_1,ETE Figueira,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3502101,Andradina,1,-51.346605,-20.890567
+3502101_ETE_3,ETE Pereira JordIão,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3502101,Andradina,1,-51.399402,-20.923753
+3502101_ETE_2,ETE Friboi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3502101,Andradina,1,-51.346477,-20.867009
+3502200_ETE_1,ETE Angatuba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3502200,Angatuba,1,-48.416459,-23.483643
+3502309_ETE_1,ETE Anhembi,Ativa,Lagoa Aerada + Lagoa Decantação/Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.92000002,3502309,Anhembi,1,-48.142537,-22.778136
+3502408_ETE_1,ETE Anhumas - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3502408,Anhumas,1,-51.394963,-22.294732
+3502507_ETE_1,ETE Aparecida - SP,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.80000001,3502507,Aparecida,1,-45.234774,-22.83606
+3502606_ETE_1,ETE Aparecida D'Oeste,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88999999,3502606,Aparecida d'Oeste,1,-50.860927,-20.450718
+3509254_ETE_1,ETE Cajati,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3509254,Cajati,1,-48.09353,-24.722488
+3509403_ETE_1,ETE Cajuru,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3509403,Cajuru,1,-47.296821,-21.289944
+3509452_ETE_1,ETE Campina do Monte Alegre,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.93000001,3509452,Campina do Monte Alegre,1,-48.495556,-23.593516
+3509502_ETE_21,ETE Samambaia - Campinas,Ativa,Lagoas Aeradas em Série + Decantador,Sistemas de Lagoas,lagoa,0.95999998,3509502,Campinas,1,-47.009777,-22.928476
+3509502_ETE_3,ETE Anhumas - Campinas,Ativa,Reator Anaeróbio + Floculação Quimicamente Assistida + Flotação,Tratamento Químico e Biológico,outros,0.86390001,3509502,Campinas,1,-47.030433,-22.846034
+3509502_ETE_2,ETE Alphaville,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3509502,Campinas,1,-47.035829,-22.818329
+3509502_ETE_27,ETE Sousas,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3509502,Campinas,1,-46.959282,-22.859254
+3509502_ETE_4,ETE Arboreto dos Jequitibas,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3509502,Campinas,1,-46.991858,-22.890322
+3511508_ETE_4,ETE Taquaral,Ativa,Lagoa Anaeróbia + Filtro Biológico,Sistemas de Lagoas,lagoa,0.93000001,3511508,Cerquilho,1,-47.749601,-23.145824
+3509502_ETE_6,ETE Barão Geraldo,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico + Decantador,Reatores Anaeróbios,reator,0.92000002,3509502,Campinas,1,-47.089806,-22.767968
+3509502_ETE_29,ETE Terras do Barão,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3509502,Campinas,1,-47.094677,-22.774224
+3509502_ETE_8,ETE Bosque das Palmeiras,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3509502,Campinas,1,-47.0474,-22.782106
+3509502_ETE_24,ETE Santa Mônica - Vó Pureza,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3509502,Campinas,1,-47.118542,-22.841741
+3509502_ETE_13,ETE Ciatec,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3509502,Campinas,1,-47.131336,-22.850512
+3509502_ETE_16,ETE Mirassol - Campinas,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.83999997,3509502,Campinas,1,-47.14108,-22.839301
+3509502_ETE_9,ETE Campo Florido,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.150216,-22.830188
+3509502_ETE_28,ETE Takanos,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.85000002,3509502,Campinas,1,-47.142441,-22.834063
+3509502_ETE_19,ETE Piçarrão,Ativa,Reator Anaeróbio + Lodos Ativados + Filtração/Decantação/Flotação Quimicamente Assistidos,Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.149618,-22.899998
+3509502_ETE_10,ETE Capivari I,Ativa,Reator Anaeróbio + Câmara Anóxica + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.80000001,3509502,Campinas,1,-47.169892,-22.954296
+3509502_ETE_11,ETE Capivari II (Epar),Ativa,Lodos Ativados com Remoção de Nutrientes + Membranas Filtrantes (Estação Produtora de Água para Reuso - EPAR),Lodos Ativados,lodos,0.99000001,3509502,Campinas,1,-47.221389,-22.956944
+3509502_ETE_18,ETE Ouro Verde,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3509502,Campinas,1,-47.136358,-22.961983
+3509502_ETE_26,ETE São Luis,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.80000001,3509502,Campinas,1,-47.214107,-22.951815
+3509502_ETE_23,ETE Santa Lúcia,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.111512,-22.947455
+3509502_ETE_5,ETE Bandeirante,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3509502,Campinas,1,-47.102514,-22.985976
+3518008_ETE_1,ETE Guarani D'Oeste,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3518008,Guarani d'Oeste,1,-50.335621,-20.088583
+3518107_ETE_1,ETE Guarantã - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.12,3518107,Guarantã,1,-49.575278,-21.895463
+3518206_ETE_1,ETE Guararapes,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.62,3518206,Guararapes,1,-50.653282,-21.198057
+3518305_ETE_1,ETE Guararema - Sede,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.85000002,3518305,Guararema,1,-46.050068,-23.396837
+3518404_ETE_1,ETE Campo do Galvão,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.94,3518404,Guaratinguetá,1,-45.200666,-22.80805
+3518404_ETE_3,ETE Vila Bela,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.88,3518404,Guaratinguetá,1,-45.150666,-22.773605
+3518404_ETE_2,ETE Pedrinhas - Guaratinguetá,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.83999997,3518404,Guaratinguetá,1,-45.355292,-22.763321
+3518503_ETE_1,ETE Guareá,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.94,3518503,Guareí,1,-48.213141,-23.382019
+3518602_ETE_1,ETE Guariba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3518602,Guariba,1,-48.171917,-21.348926
+3518701_ETE_1,EPC Vila Zilda,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3518701,Guarujá,1,-46.249519,-23.977965
+3518701_ETE_2,ETE Vicente de Carvalho,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3518701,Guarujá,1,-46.270822,-23.951425
+3518800_ETE_2,ETE São João - Guarulhos,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.82999998,3518800,Guarulhos,1,-46.4497,-23.4179
+3518800_ETE_1,ETE Bonsucesso - Guarulhos,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.82999998,3518800,Guarulhos,1,-46.4104,-23.4222
+3518800_ETE_4,ETE Várzea do Palácio,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.82999998,3518800,Guarulhos,1,-46.4921,-23.4668
+3518909_ETE_1,ETE Guzolândia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3518909,Guzolândia,1,-50.632473,-20.671287
+3519006_ETE_1,ETE Herculândia I,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3519006,Herculândia,1,-50.384867,-21.990984
+3519006_ETE_2,ETE Herculândia II,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3519006,Herculândia,1,-50.368763,-21.993998
+3519055_ETE_1,ETE Holambra,Inativa/abandonada/desativada,Reator Anaeróbio + Lagoa Aerada/Lagoa Facultativa Aerada,Reatores Anaeróbios,reator,0.64999998,3519055,Holambra,1,-47.078083,-22.650889
+3519071_ETE_1,ETE Hortolãndia,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.85000002,3519071,Hortolândia,1,-47.233105,-22.860768
+3519105_ETE_1,ETE Iacanga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.77999997,3519105,Iacanga,1,-48.99615,-21.872262
+3519204_ETE_1,ETE Iacri,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3519204,Iacri,1,-50.681992,-21.848496
+3519253_ETE_1,ETE Iaras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3519253,Iaras,1,-49.163859,-22.865386
+3519303_ETE_1,ETE Ibaté,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3519303,Ibaté,1,-48.025862,-21.950037
+3519402_ETE_1,ETE Ibirá,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3519402,Ibirá,1,-49.247147,-21.077185
+3519501_ETE_1,ETE Ibirarema,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3519501,Ibirarema,1,-50.109786,-22.825336
+3509502_ETE_1,ETE Abaeté,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.102572,-22.992196
+3509502_ETE_30,ETE Vila Reggio,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3509502,Campinas,1,-47.141789,-22.873728
+3509502_ETE_15,ETE Icaraí - Campinas,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3509502,Campinas,1,-47.078827,-22.960429
+3509502_ETE_14,ETE Eldorado,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3509502,Campinas,1,-47.088431,-22.982489
+3509700_ETE_1,ETE Campos do Jordão,Ativa,Lodos Ativados de Aeração Prolongada com Ultrafiltração,Lodos Ativados,lodos,0.94999999,3509700,Campos do Jordão,1,-45.548195,-22.709909
+3509908_ETE_1,ETE Cananéia,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3509908,Cananéia,1,-47.946923,-24.995469
+3509957_ETE_1,ETE Canas,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.79000002,3509957,Canas,1,-45.067081,-22.694393
+3510005_ETE_1,ETE Candido Mota,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3510005,Cândido Mota,1,-50.370591,-22.730488
+3510203_ETE_1,ETE Capdúo Bonito,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3510203,Capão Bonito,1,-48.350513,-23.974982
+3510302_ETE_1,ETE Capela do Alto,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94,3510302,Capela do Alto,1,-47.715693,-23.449883
+3510401_ETE_4,ETE Jardim Elisa,Ativa,Filtro Anaeróbio + Decantador,Miscelânea de Processos,outros,0.60000002,3510401,Capivari,1,-47.511167,-23.007061
+3514957_ETE_1,ETE Embaúba,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3514957,Embaúba,1,-48.84246,-20.970122
+3510401_ETE_7,ETE São João Batista,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.72000003,3510401,Capivari,1,-47.487642,-22.992408
+3510401_ETE_6,ETE Porto Alegre (Engenho Velho),Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.60000002,3510401,Capivari,1,-47.528107,-22.999534
+3510401_ETE_1,ETE Castelani,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3510401,Capivari,1,-47.496056,-22.981079
+3510401_ETE_5,ETE Padovani,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3510401,Capivari,1,-47.511077,-23.009011
+3510500_ETE_1,ETE Indaiá,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3510500,Caraguatatuba,1,-45.427849,-23.602742
+3510500_ETE_2,ETE Martim de Sá,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3510500,Caraguatatuba,1,-45.377421,-23.620306
+3510500_ETE_4,ETE Porto Novo,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3510500,Caraguatatuba,1,-45.453139,-23.688389
+3510500_ETE_3,ETE Massaguaçu,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.80000001,3510500,Caraguatatuba,1,-45.295278,-23.569444
+3510708_ETE_1,ETE Cardoso,Ativa,Lagoa Aerada + Decantador com Recirculação de Lodo,Sistemas de Lagoas,lagoa,0.98000002,3510708,Cardoso,1,-49.91229,-20.060244
+3510807_ETE_1,ETE Casa Branca,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.75,3510807,Casa Branca,1,-47.098102,-21.741022
+3510906_ETE_1,ETE Cássia dos Coqueiros,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3510906,Cássia dos Coqueiros,1,-47.175444,-21.28695
+3511003_ETE_1,ETE Bairro 17,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3511003,Castilho,1,-51.511149,-20.861407
+3511003_ETE_2,ETE Laranjeiras - Castilho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3511003,Castilho,1,-51.486403,-20.888216
+3511102_ETE_1,ETE Catanduva,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.93000001,3511102,Catanduva,1,-49.001677,-21.112735
+3511201_ETE_1,ETE Catiguá,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.74000001,3511201,Catiguá,1,-49.078347,-21.047901
+3511300_ETE_1,ETE Cedral,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.25999999,3511300,Cedral,1,-49.279476,-20.906634
+3511409_ETE_1,ETE Cerqueira César,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.81999999,3511409,Cerqueira César,1,-49.151177,-23.017428
+3511508_ETE_1,ETE Aliança,Ativa,Lagoa Anaeróbia + Lagoas Facultativas em Série,Sistemas de Lagoas,lagoa,0.88,3511508,Cerquilho,1,-47.767154,-23.153642
+3511508_ETE_2,ETE Capuava - Cerquilho,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3511508,Cerquilho,1,-47.719769,-23.147219
+3511508_ETE_3,ETE Rio Sorocaba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3511508,Cerquilho,1,-47.78192,-23.148691
+3511607_ETE_1,ETE Cesário Lange,Ativa,Reator Anaeróbio + Decantador,Reatores Anaeróbios,reator,0.69,3511607,Cesário Lange,1,-47.9508,-23.235318
+3511706_ETE_1,ETE Charqueada,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3511706,Charqueada,1,-47.774123,-22.506356
+3512001_ETE_1,ETE Nosso Teto/Vila Guarnieri,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3512001,Colina,1,-48.566729,-20.732055
+3512001_ETE_2,ETE Sítio Colina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3512001,Colina,1,-48.506782,-20.723696
+3512308_ETE_1,ETE Conchas,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.89999998,3512308,Conchas,1,-48.008212,-23.002783
+3512506_ETE_1,ETE Coroados,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3512506,Coroados,1,-50.276034,-21.341917
+3512605_ETE_1,ETE Coronel Macedo,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.69999999,3512605,Coronel Macedo,1,-49.324009,-23.636096
+3512704_ETE_1,ETE Corumbataí,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.31999999,3512704,Corumbataí,1,-47.617004,-22.234458
+3512902_ETE_1,ETE Cosmorama,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.66000003,3512902,Cosmorama,1,-49.769397,-20.464506
+3513009_ETE_2,ETE Jardim Japão,Ativa,Reator Anaeróbio + Floculação Quimicamente Assistida + Flotação,Tratamento Químico e Biológico,outros,0.92000002,3513009,Cotia,1,-46.885401,-23.579708
+3513108_ETE_1,ETE Cravinhos,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.77999997,3513108,Cravinhos,1,-47.765695,-21.316682
+3513207_ETE_1,ETE Cristais Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3513207,Cristais Paulista,1,-47.411138,-20.395357
+3513306_ETE_1,ETE Cruzália,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81999999,3513306,Cruzália,1,-50.799367,-22.743063
+3513504_ETE_2,ETE Lagoa Cubatão,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.81999999,3513504,Cubatão,1,-46.408857,-23.88477
+3513504_ETE_1,ETE Casqueiro,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3513504,Cubatão,1,-46.434333,-23.936348
+3513702_ETE_1,ETE Descalvado,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3513702,Descalvado,1,-47.591221,-21.887124
+3513850_ETE_1,ETE Dirce Reis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.83999997,3513850,Dirce Reis,1,-50.603983,-20.475777
+3513900_ETE_1,ETE Divinolândia,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.87,3513900,Divinolândia,1,-46.759575,-21.656975
+3514007_ETE_1,ETE Dobrada,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3514007,Dobrada,1,-48.407235,-21.510809
+3514106_ETE_1,ETE Dois Córregos,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.86000001,3514106,Dois Córregos,1,-48.389176,-22.345961
+3514205_ETE_1,ETE Dolcinópolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.93000001,3514205,Dolcinópolis,1,-50.516913,-20.106342
+3514304_ETE_1,ETE Dourado - SP,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Decantador + Filtração,Reatores Anaeróbios,reator,0.81,3514304,Dourado,1,-48.337096,-22.128985
+3514403_ETE_2,ETE Mirassol - Dracena,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.72000003,3514403,Dracena,1,-51.556062,-21.454341
+3514403_ETE_1,ETE Bairro das Antas,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.99000001,3514403,Dracena,1,-51.554417,-21.497627
+3514502_ETE_1,ETE Duartina,Ativa,Lagoas Aeradas em Série + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3514502,Duartina,1,-49.406233,-22.457383
+3514601_ETE_1,ETE Dumont,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3514601,Dumont,1,-47.989815,-21.252592
+3514700_ETE_1,ETE Echaporã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3514700,Echaporã,1,-50.193548,-22.415956
+3514809_ETE_1,ETE Eldorado - SP,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3514809,Eldorado,1,-48.105286,-24.533724
+3514908_ETE_1,ETE Elias Fausto,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.83999997,3514908,Elias Fausto,1,-47.370536,-23.014234
+3514924_ETE_1,ETE Elisiário,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.74000001,3514924,Elisiário,1,-49.11418,-21.17267
+3515103_ETE_2,ETE Sede - Embu-Guaçu,Ativa,Reator Anaeróbio + Lagoa Decantação/Facultativa/Maturação/Polimento,Reatores Anaeróbios,reator,0.74000001,3515103,Embu-Guaçu,1,-46.81463,-23.816751
+3515103_ETE_1,ETE Cipó,Ativa,Reator Anaeróbio + Lagoa Facultativa/Maturação/Decantação + Disposição no Solo,Reatores Anaeróbios,reator,0.76999998,3515103,Embu-Guaçu,1,-46.807615,-23.879725
+3515129_ETE_1,ETE Emilianópolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3515129,Emilianópolis,1,-51.49669,-21.830799
+3515152_ETE_1,ETE Engenheiro Coelho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3515152,Engenheiro Coelho,1,-47.203278,-22.470028
+3515186_ETE_1,ETE Espírito Santo do Pinhal,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3515186,Espírito Santo do Pinhal,1,-46.786389,-22.22
+3515194_ETE_1,ETE Espírito Santo do Turvo,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3515194,Espírito Santo do Turvo,1,-49.43052,-22.683551
+3515202_ETE_1,ETE Estrela D'Oeste - Bacia 1,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3515202,Estrela d'Oeste,1,-50.396072,-20.262022
+3515202_ETE_2,ETE Estrela D'Oeste - Bacia 2,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3515202,Estrela d'Oeste,1,-50.406751,-20.299107
+3515301_ETE_1,ETE Estrela do Norte,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3515301,Estrela do Norte,1,-51.673438,-22.49579
+3515350_ETE_1,ETE Euclides da Cunha Paulista,Ativa,Lagoa Facultativa Aerada + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3515350,Euclides da Cunha Paulista,1,-52.605507,-22.561772
+3515400_ETE_1,ETE Fartura - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.93000001,3515400,Fartura,1,-49.516209,-23.383839
+3515509_ETE_2,ETE Ribeirão Santa Rita,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3515509,Fernandópolis,1,-50.292127,-20.261804
+3515509_ETE_1,ETE Córrego da Aldeia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3515509,Fernandópolis,1,-50.192865,-20.256985
+3515608_ETE_1,ETE Fernando Prestes,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.86000001,3515608,Fernando Prestes,1,-48.694151,-21.257222
+3515657_ETE_1,ETE Fernão,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3515657,Fernão,1,-49.521147,-22.366624
+3515806_ETE_1,ETE Flora Rica,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3515806,Flora Rica,1,-51.385745,-21.665309
+3515905_ETE_1,ETE Floreal,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração/área Alagada - Banhado),Sistemas de Lagoas,lagoa,0.75,3515905,Floreal,1,-50.131684,-20.658018
+3516002_ETE_1,ETE Flórida Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3516002,Flórida Paulista,1,-51.194834,-21.61459
+3516101_ETE_1,ETE Florânia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3516101,Florínea,1,-50.73653,-22.904401
+3516200_ETE_5,ETE Paulistano II,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.72000003,3516200,Franca,1,-47.352716,-20.514578
+3516200_ETE_2,ETE Franca,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3516200,Franca,1,-47.421515,-20.561035
+3516200_ETE_3,ETE Jardim Luiza,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.89999998,3516200,Franca,1,-47.432797,-20.490938
+3516200_ETE_4,ETE Paulistano I,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.95999998,3516200,Franca,1,-47.350993,-20.526939
+3516200_ETE_1,ETE City Petrópolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.95999998,3516200,Franca,1,-47.397949,-20.466672
+3516507_ETE_1,ETE Gabriel Monteiro,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3516507,Gabriel Monteiro,1,-50.578412,-21.526719
+3516606_ETE_1,ETE Gália,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.93000001,3516606,Gália,1,-49.555595,-22.298974
+3516705_ETE_1,ETE Peixe - Garça,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.80000001,3516705,Garça,1,-49.660652,-22.228401
+3516705_ETE_2,ETE Tibiriça,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3516705,Garça,1,-49.668419,-22.188978
+3516804_ETE_1,ETE Gastão Vidigal,Ativa,Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.91000003,3516804,Gastão Vidigal,1,-50.182571,-20.817105
+3516903_ETE_1,ETE General Salgado,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.89999998,3516903,General Salgado,1,-50.396419,-20.63945
+3517000_ETE_1,ETE Getulina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3517000,Getulina,1,-49.912925,-21.784942
+3517109_ETE_1,ETE Glicério,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81,3517109,Glicério,1,-50.171631,-21.352017
+3517208_ETE_1,ETE Guaiçara,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3517208,Guaiçara,1,-49.805331,-21.594561
+3517307_ETE_1,ETE Guaimbê,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3517307,Guaimbê,1,-49.905424,-21.918795
+3517406_ETE_3,ETE Santa Quitéria - Guaíra,Ativa,Reator Anaeróbio + Lagoa Facultativa +  Lagoa de Maturação,Reatores Anaeróbios,reator,0.80000001,3517406,Guaíra,1,-48.320294,-20.295785
+3517406_ETE_2,ETE Matadouro - Guaíra,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.28,3517406,Guaíra,1,-48.297996,-20.302652
+3517406_ETE_1,ETE Fogão,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.28,3517406,Guaíra,1,-48.335668,-20.324577
+3517505_ETE_1,ETE Guapiaçu I,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3517505,Guapiaçu,1,-49.198087,-20.774802
+3517505_ETE_2,ETE Guapiaçu II,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3517505,Guapiaçu,1,-49.213272,-20.788907
+3517604_ETE_1,ETE Guapiara,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.81,3517604,Guapiara,1,-48.538248,-24.174717
+3517703_ETE_1,ETE Guará,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.61000001,3517703,Guará,1,-47.822318,-20.446611
+3517703_ETE_2,ETE Pioneiros,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3517703,Guará,1,-47.831278,-20.506405
+3517802_ETE_2,ETE Norte - Guaraçaí,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81,3517802,Guaraçaí,1,-51.210092,-20.995318
+3517802_ETE_1,ETE Guaraçaí,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3517802,Guaraçaí,1,-51.201453,-21.030807
+3517901_ETE_1,ETE Guaraci,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3517901,Guaraci,1,-48.943366,-20.489943
+3504701_ETE_1,ETE Balbinos,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.5,3504701,Balbinos,1,-49.353831,-21.911054
+3504800_ETE_1,ETE Bálsamo,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.87,3504800,Bálsamo,1,-49.568559,-20.726771
+3504909_ETE_1,ETE Bananal - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.75,3504909,Bananal,1,-44.31037,-22.67314
+3505005_ETE_1,ETE Barão de Antonina,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3505005,Barão de Antonina,1,-49.565964,-23.652252
+3505104_ETE_1,ETE Barbosa - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.55000001,3505104,Barbosa,1,-49.952238,-21.247875
+3505203_ETE_1,ETE Bariri,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3505203,Bariri,1,-48.764599,-22.081982
+3505500_ETE_2,ETE 2 - Dama,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3505500,Barretos,1,-48.595164,-20.497869
+3505500_ETE_4,ETE 4 - Estrada da Vendinha,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3505500,Barretos,1,-48.541631,-20.585149
+3505500_ETE_3,ETE 3 - Buracdúo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3505500,Barretos,1,-48.530123,-20.572282
+3505500_ETE_5,ETE 5 - Distrito Industrial,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3505500,Barretos,1,-48.583544,-20.56405
+3505500_ETE_6,ETE 6 - Alberto Moreira,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3505500,Barretos,1,-48.550854,-20.446239
+3505609_ETE_1,ETE Barrinha,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3505609,Barrinha,1,-48.159566,-21.175454
+3505807_ETE_1,ETE Bastos,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3505807,Bastos,1,-50.755635,-21.937072
+3505906_ETE_1,ETE Batatais,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.94999999,3505906,Batatais,1,-47.552583,-20.898939
+3506003_ETE_1,ETE Vargem Limpa,Ativa,Reator Anaeróbio + Lodos Ativados com Remoção de Nutrientes,Reatores Anaeróbios,reator,0.85000002,3506003,Bauru,1,-49.086838,-22.267651
+3506102_ETE_1,ETE Mandembo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3506102,Bebedouro,1,-48.491677,-20.890079
+3506201_ETE_1,ETE Bento de Abreu,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3506201,Bento de Abreu,1,-50.804619,-21.27062
+3506300_ETE_1,ETE Norte - Bernardino de Campos,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3506300,Bernardino de Campos,1,-49.485277,-23.026493
+3506300_ETE_2,ETE Sul - Bernardino de Campos,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3506300,Bernardino de Campos,1,-49.488925,-23.026582
+3506359_ETE_1,ETE Bertioga - ETE 1,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3506359,Bertioga,1,-46.146506,-23.825284
+3506359_ETE_4,ETE Vista Linda - ETE 2,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3506359,Bertioga,1,-46.091239,-23.799684
+3506409_ETE_1,ETE Bilac,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3506409,Bilac,1,-50.462097,-21.391362
+3506508_ETE_1,ETE Birigui,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75999999,3506508,Birigui,1,-50.293733,-21.26227
+3506607_ETE_1,ETE Biritiba-Mirim,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3506607,Biritiba Mirim,1,-46.040876,-23.56359
+3506706_ETE_1,ETE Boa Esperança do Sul,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.89999998,3506706,Boa Esperança do Sul,1,-48.398987,-21.982401
+3506805_ETE_1,ETE Bocaina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3506805,Bocaina,1,-48.51556,-22.133
+3506904_ETE_1,ETE Bofete,Ativa,Lagoa Anaeróbia + Lagoas Facultativas em Série,Sistemas de Lagoas,lagoa,0.94999999,3506904,Bofete,1,-48.246011,-23.098483
+3507001_ETE_1,ETE Campos de Boituva,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.86000001,3507001,Boituva,1,-47.696599,-23.273368
+3507001_ETE_2,ETE Novo Mundo - Boituva,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.69999999,3507001,Boituva,1,-47.672354,-23.259618
+3507159_ETE_1,ETE Bom Sucesso de Itararé,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3507159,Bom Sucesso de Itararé,1,-49.128529,-24.311824
+3507209_ETE_1,ETE Borá,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico + Lagoa de Decantação/Facultativa/Maturação,Reatores Anaeróbios,reator,0.75,3507209,Borá,1,-50.54572,-22.269011
+3507308_ETE_1,ETE Boracéia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3507308,Boracéia,1,-48.78122,-22.193057
+3507407_ETE_1,ETE Borborema,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.74000001,3507407,Borborema,1,-49.088471,-21.630244
+3507506_ETE_2,ETE Sede - Lageado,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.82999998,3507506,Botucatu,1,-48.429938,-22.832213
+3507506_ETE_1,ETE Rubião Júnior - Parte 1,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.94,3507506,Botucatu,1,-48.49412,-22.88761
+3507605_ETE_1,ETE Bragança Paulista,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3507605,Bragança Paulista,1,-46.569654,-22.90593
+3507704_ETE_1,ETE Braúna,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3507704,Braúna,1,-50.309925,-21.496769
+3507753_ETE_1,ETE Brejo Alegre,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.83999997,3507753,Brejo Alegre,1,-50.181422,-21.17189
+3507803_ETE_1,ETE Córrego da Divisa,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3507803,Brodowski,1,-47.685868,-21.004725
+3507803_ETE_2,ETE Córrego do Matadouro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.83999997,3507803,Brodowski,1,-47.640323,-21.004558
+3507902_ETE_1,ETE Cidade,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.69,3507902,Brotas,1,-48.148939,-22.287018
+3508009_ETE_1,ETE Buri,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.50999999,3508009,Buri,1,-48.59369,-23.793594
+3508108_ETE_1,ETE Buritama,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3508108,Buritama,1,-50.167306,-21.081203
+3508207_ETE_1,ETE Buritizal,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3508207,Buritizal,1,-47.716882,-20.190096
+3508306_ETE_1,ETE Cabrália Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3508306,Cabrália Paulista,1,-49.349433,-22.453265
+3508405_ETE_1,ETE Cabreúva,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3508405,Cabreúva,1,-47.153054,-23.295837
+3508405_ETE_2,ETE Jacaré,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94999999,3508405,Cabreúva,1,-47.073167,-23.244528
+3508504_ETE_1,ETE Bacia Central,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.69999999,3508504,Caçapava,1,-45.717788,-23.095147
+3508504_ETE_2,ETE Bacia Leste,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.69999999,3508504,Caçapava,1,-45.707781,-23.091633
+3508504_ETE_3,ETE Bacia Oeste,Ativa,Lagoas Aeradas em Série + Decantador,Sistemas de Lagoas,lagoa,0.94999999,3508504,Caçapava,1,-45.72305,-23.100443
+3508603_ETE_1,ETE Cachoeira Paulista,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.83999997,3508603,Cachoeira Paulista,1,-45.030651,-22.661973
+3508900_ETE_1,ETE Caiabu,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3508900,Caiabu,1,-51.240079,-22.007545
+3509106_ETE_1,ETE Caiuá,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.97000003,3509106,Caiuá,1,-51.992756,-21.819836
+3524204_ETE_1,ETE Jaborandi,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3524204,Jaborandi,1,-48.411537,-20.683043
+3524303_ETE_1,ETE Jaboticabal - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3524303,Jaboticabal,1,-48.272036,-21.241603
+3524402_ETE_8,ETE Villa Branca,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.89999998,3524402,Jacareí,1,-45.93883,-23.262558
+3524402_ETE_6,ETE Santa Paula,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3524402,Jacareí,1,-45.921694,-23.267506
+3524402_ETE_1,ETE 22 de Abril,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3524402,Jacareí,1,-46.06593,-23.266802
+3530904_ETE_1,ETE Mombuca,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.77999997,3530904,Mombuca,1,-47.560127,-22.931066
+3524402_ETE_5,ETE Parque Meia Lua,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.85000002,3524402,Jacareí,1,-45.968003,-23.253554
+3524402_ETE_2,ETE Bandeira Branca,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.85000002,3524402,Jacareí,1,-46.002597,-23.338457
+3524402_ETE_7,ETE São Silvestre,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.95999998,3524402,Jacareí,1,-46.015459,-23.361516
+3524402_ETE_3,ETE Central,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.89999998,3524402,Jacareí,1,-45.969159,-23.281306
+3524501_ETE_1,ETE Jaci,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3524501,Jaci,1,-49.58944,-20.892298
+3524600_ETE_1,ETE Jacupiranga,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.98000002,3524600,Jacupiranga,1,-47.99513,-24.687924
+3524709_ETE_1,ETE Jaguariúna,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.83999997,3524709,Jaguariúna,1,-46.97634,-22.668204
+3524808_ETE_1,ETE Jales - Bacia 1,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3524808,Jales,1,-50.556037,-20.275603
+3524808_ETE_2,ETE Jales - Bacia 2,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3524808,Jales,1,-50.545291,-20.315606
+3524907_ETE_1,ETE Jambeiro,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3524907,Jambeiro,1,-45.698501,-23.269628
+3525201_ETE_2,ETE Jarinu Nova,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.85000002,3525201,Jarinu,1,-46.696081,-23.073727
+3525300_ETE_1,ETE SANEJ,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3525300,Jaú,1,-48.5775,-22.276944
+3525409_ETE_1,ETE Jeriquara,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3525409,Jeriquara,1,-47.594133,-20.313667
+3525508_ETE_1,ETE Joanópolis,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.89999998,3525508,Joanópolis,1,-46.286275,-22.939236
+3525607_ETE_1,ETE João Ramalho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3525607,João Ramalho,1,-50.754254,-22.256844
+3525706_ETE_1,ETE José Bonifácio,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.70999998,3525706,José Bonifácio,1,-49.707495,-21.057599
+3525904_ETE_1,ETE Fernandes,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.77999997,3525904,Jundiaí,1,-46.94065,-23.107634
+3525904_ETE_3,ETE São José - Jundiaí,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.75,3525904,Jundiaí,1,-46.915274,-23.107944
+3519709_ETE_1,ETE Ibiúna,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3519709,Ibiúna,1,-47.217927,-23.640126
+3519808_ETE_1,ETE Icém,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3519808,Icém,1,-49.198151,-20.322815
+3519907_ETE_1,ETE Iepê,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3519907,Iepê,1,-51.080132,-22.668065
+3520004_ETE_1,ETE Savério Campanucchi,Ativa,"Reator Anaeróbio (RAFA, RALF, UASB, DAFA)",Reatores Anaeróbios,reator,0.64999998,3520004,Igaraçu do Tietê,1,-48.555182,-22.505308
+3520103_ETE_1,ETE Igarapava,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3520103,Igarapava,1,-47.745824,-20.012946
+3520202_ETE_1,ETE Igaratá,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88999999,3520202,Igaratá,1,-46.151349,-23.192456
+3520301_ETE_1,ETE Iguape,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3520301,Iguape,1,-47.554519,-24.686427
+3522109_ETE_1,ETE Anchieta,Ativa,Lodos Ativados UNITANK,Lodos Ativados,lodos,0.89999998,3522109,Itanhaém,1,-46.794921,-24.171456
+3520400_ETE_3,ETE P. Pinto e Ponta Azeda,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3520400,Ilhabela,1,-45.341615,-23.745112
+3520400_ETE_1,EPC Itaquanduba,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3520400,Ilhabela,1,-45.363695,-23.800038
+3520426_ETE_2,ETE Ilha Comprida 2,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3520426,Ilha Comprida,1,-47.536514,-24.733132
+3520426_ETE_1,ETE Ilha Comprida 1,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3520426,Ilha Comprida,1,-47.555719,-24.739795
+3520442_ETE_1,ETE Ilha Solteira,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.61000001,3520442,Ilha Solteira,1,-51.360885,-20.422366
+3520509_ETE_1,ETE Mário Araldo Candello,Ativa,Lodos Ativados com Aeração Prolongada e Membranas  - Sistema MBR,Lodos Ativados,lodos,0.89999998,3520509,Indaiatuba,1,-47.241727,-23.144284
+3520509_ETE_2,ETE Portal de Itaici,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94,3520509,Indaiatuba,1,-47.177949,-23.107418
+3520509_ETE_3,ETE São Lourenço - Indaiatuba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3520509,Indaiatuba,1,-47.169957,-23.089266
+3520707_ETE_1,ETE Indiaporã - Bacia 1,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.92000002,3520707,Indiaporã,1,-50.291223,-19.986032
+3520707_ETE_2,ETE Indiaporã - Bacia 2,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.92000002,3520707,Indiaporã,1,-50.300306,-19.985616
+3520806_ETE_1,ETE Inúbia Paulista,Ativa,Reator Anaeróbio + Decantador,Reatores Anaeróbios,reator,0.69,3520806,Inúbia Paulista,1,-50.966533,-21.771552
+3520905_ETE_1,ETE Ipaussu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3520905,Ipaussu,1,-49.634611,-23.06724
+3521002_ETE_1,ETE Iperó,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.69999999,3521002,Iperó,1,-47.68283,-23.345184
+3521101_ETE_1,ETE Ipeúna,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.60000002,3521101,Ipeúna,1,-47.709211,-22.440859
+3521150_ETE_1,ETE Ipiguá,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3521150,Ipiguá,1,-49.365939,-20.670103
+3521200_ETE_1,ETE Iporanga - SP,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3521200,Iporanga,1,-48.59073,-24.581221
+3521309_ETE_2,ETE Ipuã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3521309,Ipuã,1,-48.008899,-20.419851
+3521309_ETE_1,ETE Capela - Ipuã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3521309,Ipuã,1,-47.994393,-20.486563
+3521408_ETE_1,ETE Iracemápolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.79000002,3521408,Iracemápolis,1,-47.525299,-22.609273
+3521507_ETE_1,ETE Irapuã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3521507,Irapuã,1,-49.417322,-21.300885
+3521705_ETE_1,ETE Itaberá,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.91000003,3521705,Itaberá,1,-49.135067,-23.854796
+3521804_ETE_1,ETE Itaí,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.76999998,3521804,Itaí,1,-49.094145,-23.400122
+3521903_ETE_1,ETE Itajobi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.73000002,3521903,Itajobi,1,-49.062964,-21.330932
+3522000_ETE_1,ETE Itaju,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3522000,Itaju,1,-48.822834,-21.978665
+3523909_ETE_1,ETE Canjica,Ativa,Lodos Ativados de Tanque Profundo (DEEP SHAFT),Lodos Ativados,lodos,0.75999999,3523909,Itu,1,-47.310091,-23.230033
+3522109_ETE_2,ETE Guapiranga - Itanhaém,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3522109,Itanhaém,1,-46.81126,-24.180433
+3522158_ETE_1,ETE Itaóca,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Fitofiltragem,Reatores Anaeróbios,reator,0.89999998,3522158,Itaoca,1,-48.835404,-24.649101
+3522307_ETE_1,ETE Ponte Alta,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.41999999,3522307,Itapetininga,1,-48.038506,-23.57103
+3522406_ETE_1,ETE Itapeva,Ativa,Lagoas Aeradas em Série + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.85000002,3522406,Itapeva,1,-48.91019,-23.944203
+3522604_ETE_1,ETE Itapira,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.82999998,3522604,Itapira,1,-46.839733,-22.407169
+3522653_ETE_1,ETE Itapirapuã Paulista,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3522653,Itapirapuã Paulista,1,-49.171071,-24.580341
+3522703_ETE_1,ETE Lagoas de Tratamento de Esgoto de Itapolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.69999999,3522703,Itápolis,1,-48.834959,-21.638368
+3522802_ETE_1,ETE Itaporanga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3522802,Itaporanga,1,-49.479714,-23.69089
+3523008_ETE_1,ETE Itapura,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.89999998,3523008,Itapura,1,-51.527122,-20.632405
+3554706_ETE_1,ETE Torrinha,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.67000002,3554706,Torrinha,1,-48.178703,-22.386209
+3554904_ETE_1,ETE Três Fronteiras,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3554904,Três Fronteiras,1,-50.910103,-20.229153
+3555000_ETE_1,ETE Tupã,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3555000,Tupã,1,-50.496267,-21.90766
+3555109_ETE_1,ETE Tupi Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3555109,Tupi Paulista,1,-51.5696,-21.365152
+3555208_ETE_1,ETE Turiúba,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3555208,Turiúba,1,-50.084964,-20.955659
+3555307_ETE_1,ETE Turmalina - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.91000003,3555307,Turmalina,1,-50.479348,-20.039637
+3555356_ETE_1,ETE Ubarana,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3555356,Ubarana,1,-49.725002,-21.168884
+3555406_ETE_2,ETE Principal,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3555406,Ubatuba,1,-45.070737,-23.457053
+3555406_ETE_1,ETE Ipiranguinha,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3555406,Ubatuba,1,-45.107377,-23.430207
+3555505_ETE_1,ETE Ubirajara,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3555505,Ubirajara,1,-49.665986,-22.529882
+3555604_ETE_1,ETE Uchoa,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94999999,3555604,Uchoa,1,-49.157399,-20.964424
+3555703_ETE_1,ETE União Paulista,Ativa,Lagoa Facultativa + Lagoa de Maturação + Escada de Aeração,Sistemas de Lagoas,lagoa,0.75,3555703,União Paulista,1,-49.917839,-20.883759
+3555802_ETE_1,ETE Urânia,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.77999997,3555802,Urânia,1,-50.631389,-20.240627
+3555901_ETE_1,ETE Uru,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.91000003,3555901,Uru,1,-49.276605,-21.783902
+3556008_ETE_1,ETE Urupês,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3556008,Urupês,1,-49.322014,-21.190263
+3556206_ETE_1,ETE Capuava - Valinhos,Ativa,Reator Anaeróbio + Lodos Ativados + Filtração/Decantação/Flotação Quimicamente Assistidos,Tratamento Químico e Biológico,outros,0.85000002,3556206,Valinhos,1,-46.976566,-22.945284
+3532405_ETE_1,ETE Nazaré Paulista,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3532405,Nazaré Paulista,1,-46.395222,-23.174861
+3556305_ETE_1,ETE Norte,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3556305,Valparaíso,1,-50.870283,-21.206201
+3556305_ETE_2,ETE Sul - Valparaíso,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3556305,Valparaíso,1,-50.881051,-21.24938
+3556354_ETE_2,ETE Vargem - Nova,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.77999997,3556354,Vargem,1,-46.429229,-22.911645
+3556404_ETE_1,ETE Rio Verde - Vargem Grande do Sul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3556404,Vargem Grande do Sul,1,-46.92367,-21.825022
+3556602_ETE_1,ETE Vera Cruz - SP,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.83999997,3556602,Vera Cruz,1,-49.812644,-22.216776
+3556701_ETE_1,ETE Capivari,Ativa,Lodos Ativados de Aeração Prolongada com Flotador por Ar Dissolvido,Lodos Ativados,lodos,0.89999998,3556701,Vinhedo,1,-46.999958,-23.057587
+3556701_ETE_2,ETE Pinheirinho,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3556701,Vinhedo,1,-46.985549,-23.006765
+3556800_ETE_1,ETE Viradouro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3556800,Viradouro,1,-48.287942,-20.844842
+3556909_ETE_1,ETE Vista Alegre do Alto,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3556909,Vista Alegre do Alto,1,-48.617071,-21.167626
+3556958_ETE_1,ETE Vitória Brasil,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3556958,Vitória Brasil,1,-50.508022,-20.196408
+3557006_ETE_5,ETE Novo Mundo,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.82999998,3557006,Votorantim,1,-47.502562,-23.545966
+3557006_ETE_7,ETE Salto de Guimarães,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.86000001,3557006,Votorantim,1,-47.447974,-23.527039
+3557006_ETE_8,ETE Votocel,Ativa,Lagoas Anaeróbias em Série + Lagoa Facultativa Aerada + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3557006,Votorantim,1,-47.441572,-23.561377
+3557105_ETE_2,ETE Votuporanga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3557105,Votuporanga,1,-50.050733,-20.338727
+3557105_ETE_1,ETE Simonsen,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3557105,Votuporanga,1,-49.882352,-20.443631
+3557154_ETE_1,ETE Zacarias,Ativa,Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.80000001,3557154,Zacarias,1,-50.04645,-21.060228
+3525854_ETE_1,ETE Jumirim,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.60000002,3525854,Jumirim,1,-47.781347,-23.081703
+3557204_ETE_1,ETE Irapé,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3557204,Chavantes,1,-49.743889,-23.065556
+3530300_ETE_1,ETE Fundão - Mirassol,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.77999997,3530300,Mirassol,1,-49.503802,-20.793564
+3505708_ETE_1,ETE Barueri,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3505708,Barueri,11,-46.850934,-23.511287
+3541406_ETE_3,ETE Limoeiro,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.86000001,3541406,Presidente Prudente,2,-51.467481,-22.117535
+3550308_ETE_1,ETE ABC,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3550308,São Paulo,8,-46.586124,-23.611052
+3550308_ETE_5,ETE São Miguel - São Paulo,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3550308,São Paulo,5,-46.447497,-23.484091
+3552502_ETE_1,ETE Suzano,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3552502,Suzano,5,-46.317285,-23.526919
+3554805_ETE_1,ETE Taubaté/Tremembé,Ativa,Lodos Ativados de Tanque Profundo (DEEP SHAFT),Lodos Ativados,lodos,0.89999998,3554805,Tremembé,2,-45.588199,-22.969845
+3556503_ETE_1,ETE Várzea Paulista (Itália),Ativa,Reator Anaeróbio + Lodos Ativados por Batelada,Reatores Anaeróbios,reator,0.89999998,3556503,Várzea Paulista,2,-46.851916,-23.200395
+3523206_ETE_1,ETE Itararé,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.97000003,3523206,Itararé,1,-49.368583,-24.114694
+3523305_ETE_1,ETE Itariri,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3523305,Itariri,1,-47.182927,-24.28079
+3523404_ETE_1,ETE Itatiba,Ativa,Primário Quimicamente Assistido (CEPT) + Filtro Aeróbio + Decantação,Tratamento Químico e Biológico,outros,0.85000002,3523404,Itatiba,1,-46.840882,-22.983705
+3523503_ETE_1,ETE Itatinga - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3523503,Itatinga,1,-48.628278,-23.09303
+3523602_ETE_1,ETE Itirapina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3523602,Itirapina,1,-47.837579,-22.242239
+3523701_ETE_1,ETE Itirapuã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.94,3523701,Itirapuã,1,-47.208662,-20.642274
+3523800_ETE_1,ETE Itobi,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.91000003,3523800,Itobi,1,-46.981026,-21.728985
+3524006_ETE_1,ETE Nica Preta,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.81,3524006,Itupeva,1,-47.072778,-23.15112
+3524105_ETE_1,ETE Ituverava,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.76999998,3524105,Ituverava,1,-47.779599,-20.303134
+3531100_ETE_2,ETE Bichoró,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3531100,Mongaguá,1,-46.648226,-24.094799
+3531100_ETE_1,ETE Barigui,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3531100,Mongaguá,1,-46.728254,-24.102235
+3531308_ETE_3,ETE Rico,Ativa,Lagoa Anaeróbia + Lagoas Facultativas em Série + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.95999998,3531308,Monte Alto,1,-48.450306,-21.310278
+3531308_ETE_2,ETE Jardim Alvorada,Inativa/abandonada/desativada,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.95999998,3531308,Monte Alto,1,-48.474173,-21.254462
+3531308_ETE_4,ETE Rio Turvo,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.75,3531308,Monte Alto,1,-48.47791,-21.224165
+3531407_ETE_1,ETE Monte Aprazável,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.72000003,3531407,Monte Aprazível,1,-49.73497,-20.752726
+3531506_ETE_1,ETE Lago Santa Rosa,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.94999999,3531506,Monte Azul Paulista,1,-48.661166,-20.907445
+3531605_ETE_1,ETE Monte Castelo,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.76999998,3531605,Monte Castelo,1,-51.580753,-21.289883
+3531704_ETE_1,ETE Monteiro Lobato,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3531704,Monteiro Lobato,1,-45.833331,-22.959487
+3531803_ETE_2,ETE Natércio,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3531803,Monte Mor,1,-47.33248,-22.964635
+3531803_ETE_1,ETE Monte Mor,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3531803,Monte Mor,1,-47.24117,-22.935015
+3531902_ETE_1,ETE Morro Agudo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3531902,Morro Agudo,1,-48.072824,-20.752842
+3532009_ETE_1,ETE Morungaba,Ativa,Lagoa Aerada + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3532009,Morungaba,1,-46.788666,-22.86394
+3532058_ETE_1,ETE Motuca,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3532058,Motuca,1,-48.151888,-21.50021
+3532108_ETE_1,ETE Murutinga do Sul,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.63,3532108,Murutinga do Sul,1,-51.284377,-21.001698
+3532157_ETE_1,ETE Nantes,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3532157,Nantes,1,-51.234678,-22.624978
+3532207_ETE_1,ETE Narandiba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa Aerada + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3532207,Narandiba,1,-51.537186,-22.406371
+3532603_ETE_1,ETE Nhandeara,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3532603,Nhandeara,1,-50.045672,-20.673646
+3532702_ETE_1,ETE Nipoã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3532702,Nipoã,1,-49.779007,-20.921762
+3532801_ETE_1,ETE Nova Aliança,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.75999999,3532801,Nova Aliança,1,-49.491882,-21.033086
+3532827_ETE_1,ETE Nova Campina,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.93000001,3532827,Nova Campina,1,-48.881305,-24.130843
+3532843_ETE_1,ETE Nova Canaã Paulista,Ativa,Lagoa Facultativa + Lagoa de Maturação + Polimento Final (Vala de Infiltração/Tanque de Macrófitas),Sistemas de Lagoas,lagoa,0.80000001,3532843,Nova Canaã Paulista,1,-50.951418,-20.370046
+3532868_ETE_1,ETE Nova Castilho,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.38999999,3532868,Nova Castilho,1,-50.351954,-20.761928
+3533007_ETE_1,ETE Nova Granada,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3533007,Nova Granada,1,-49.307047,-20.513962
+3533106_ETE_1,ETE Nova Guataporanga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3533106,Nova Guataporanga,1,-51.629857,-21.322238
+3533205_ETE_1,ETE Nova Independência,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.55000001,3533205,Nova Independência,1,-51.503036,-21.099461
+3533254_ETE_1,ETE Novais,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3533254,Novais,1,-48.923933,-20.984828
+3539400_ETE_1,ETE Piratininga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3539400,Piratininga,1,-49.119437,-22.378128
+3539608_ETE_1,ETE Planalto,Ativa,Lagoa Facultativa Aerada + Escada de Aeração,Sistemas de Lagoas,lagoa,0.76999998,3539608,Planalto,1,-49.951359,-21.026082
+3539707_ETE_1,ETE Platina,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3539707,Platina,1,-50.208858,-22.645027
+3540002_ETE_1,ETE Futuro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3540002,Pompéia,1,-50.185199,-22.120646
+3540002_ETE_2,ETE Morro Azul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3540002,Pompéia,1,-50.172978,-22.084282
+3540101_ETE_1,ETE Pongaí,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3540101,Pongaí,1,-49.350192,-21.715546
+3540200_ETE_1,ETE Pontal - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3540200,Pontal,1,-48.063458,-21.036838
+3540259_ETE_1,ETE Pontalinda,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.91000003,3540259,Pontalinda,1,-50.518609,-20.453535
+3540309_ETE_1,ETE Pontes Gestal,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3540309,Pontes Gestal,1,-49.691776,-20.191958
+3540507_ETE_1,ETE Porangaba,Ativa,Fossa Séptica + Lagoa Facultativa,Miscelânea de Processos,outros,0.85000002,3540507,Porangaba,1,-48.128436,-23.169565
+3540606_ETE_1,ETE Xyko - SAAE,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico + Decantador,Reatores Anaeróbios,reator,0.80000001,3540606,Porto Feliz,1,-47.538365,-23.196762
+3540705_ETE_1,ETE Fazendinha,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.89999998,3540705,Porto Ferreira,1,-47.505221,-21.845567
+3540705_ETE_2,ETE Santa Rosa - Porto Ferreira,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.82999998,3540705,Porto Ferreira,1,-47.464417,-21.866094
+3540804_ETE_1,ETE Potirendaba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.86000001,3540804,Potirendaba,1,-49.392927,-21.033612
+3540853_ETE_1,ETE Pracinha,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.55000001,3540853,Pracinha,1,-51.074623,-21.863331
+3540903_ETE_1,ETE Pradópolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3540903,Pradópolis,1,-48.090954,-21.346239
+3541000_ETE_2,EPC Emissário Forte,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3541000,Praia Grande,1,-46.400973,-24.016257
+3541000_ETE_3,EPC Emissário Tupi,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3541000,Praia Grande,1,-46.459558,-24.024662
+3541000_ETE_1,EPC Caiçara,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3541000,Praia Grande,1,-46.54068,-24.058148
+3541059_ETE_1,ETE Pratânia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94999999,3541059,Pratânia,1,-48.671699,-22.802967
+3541109_ETE_1,ETE Presidente Alves,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3541109,Presidente Alves,1,-49.433959,-22.099685
+3541208_ETE_1,ETE Presidente Bernardes,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3541208,Presidente Bernardes,1,-51.54683,-22.004546
+3541307_ETE_1,ETE Presidente Epitácio,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.86000001,3541307,Presidente Epitácio,1,-52.171492,-21.809321
+3541505_ETE_1,ETE Presidente Venceslau,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3541505,Presidente Venceslau,1,-51.854531,-21.860722
+3541604_ETE_1,ETE Promissâo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.47999999,3541604,Promissão,1,-49.861136,-21.513218
+3541653_ETE_1,ETE Quadra,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico + Decantador,Reatores Anaeróbios,reator,0.77999997,3541653,Quadra,1,-48.051485,-23.295297
+3541703_ETE_1,ETE Quatá,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3541703,Quatá,1,-50.701654,-22.258522
+3541802_ETE_1,ETE Queiroz,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.60000002,3541802,Queiroz,1,-50.24669,-21.795948
+3533304_ETE_1,ETE Nova Luzitânia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3533304,Nova Luzitânia,1,-50.254247,-20.858362
+3533403_ETE_2,ETE Quilombo - Nova Odessa,Ativa,Reator Anaeróbio + Lodos Ativados - Processo U-BOX (configuração compacta),Reatores Anaeróbios,reator,0.85000002,3533403,Nova Odessa,1,-47.318201,-22.764145
+3533403_ETE_1,ETE Palmital - Nova Odessa,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel + Lagoa de Maturação,Lodos Ativados,lodos,0.89999998,3533403,Nova Odessa,1,-47.284116,-22.801412
+3533502_ETE_1,ETE Novo Horizonte - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3533502,Novo Horizonte,1,-49.197193,-21.512455
+3533601_ETE_1,ETE Nuporanga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.52999997,3533601,Nuporanga,1,-47.742599,-20.721381
+3533700_ETE_1,ETE Ocauçu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3533700,Ocauçu,1,-49.925914,-22.443438
+3533809_ETE_1,ETE Batista Botelho,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3533809,Óleo,1,-49.330383,-22.921339
+3533908_ETE_1,ETE Córrego dos Pretos,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico,Reatores Anaeróbios,reator,0.88,3533908,Olímpia,1,-48.887396,-20.723291
+3534005_ETE_1,ETE Onda Verde,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3534005,Onda Verde,1,-49.304944,-20.617641
+3534104_ETE_1,ETE Oriente,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.83999997,3534104,Oriente,1,-50.118363,-22.16597
+3534203_ETE_1,ETE Orindiúva,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.91000003,3534203,Orindiúva,1,-49.320618,-20.172453
+3534302_ETE_1,ETE Orlândia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3534302,Orlândia,1,-47.903772,-20.728084
+3534500_ETE_1,ETE Oscar Bressane,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3534500,Oscar Bressane,1,-50.270362,-22.311532
+3534609_ETE_1,ETE Osvaldo Cruz,Ativa,Lagoa Anaeróbia + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.73000002,3534609,Osvaldo Cruz,1,-50.890525,-21.817824
+3534708_ETE_1,ETE Rio Paranapanema,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.67000002,3534708,Ourinhos,1,-49.900761,-22.998146
+3534708_ETE_2,ETE Rio Pardo - Ourinhos,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.67000002,3534708,Ourinhos,1,-49.890987,-22.936411
+3534906_ETE_1,ETE Pacaembu,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.94,3534906,Pacaembu,1,-51.242835,-21.552582
+3535002_ETE_1,ETE Piau,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3535002,Palestina,1,-49.357589,-20.34036
+3535101_ETE_1,ETE Palmares Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.60000002,3535101,Palmares Paulista,1,-48.805245,-21.072768
+3535200_ETE_1,ETE Palmeira D'Oeste,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.88,3535200,Palmeira d'Oeste,1,-50.787181,-20.436881
+3547205_ETE_1,ETE Santana da Ponte Pensa,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3547205,Santana da Ponte Pensa,1,-50.822863,-20.251407
+3535309_ETE_1,ETE Palmital - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3535309,Palmital,1,-50.183251,-22.775962
+3535408_ETE_1,ETE Panorama,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.61000001,3535408,Panorama,1,-51.843012,-21.350313
+3535507_ETE_1,ETE Paraguaçu Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.95999998,3535507,Paraguaçu Paulista,1,-50.555057,-22.454666
+3535705_ETE_1,ETE Paraíso - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.60000002,3535705,Paraíso,1,-48.763551,-21.013039
+3535804_ETE_1,ETE Paranapanema,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3535804,Paranapanema,1,-48.704279,-23.411391
+3535903_ETE_1,ETE Paranapuã,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.83999997,3535903,Paranapuã,1,-50.583371,-20.11618
+3539905_ETE_1,ETE Poloni,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3539905,Poloni,1,-49.796375,-20.805524
+3536000_ETE_1,ETE Parapuã,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3536000,Parapuã,1,-50.797239,-21.772551
+3536109_ETE_1,ETE Pardinho,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.92000002,3536109,Pardinho,1,-48.371171,-23.077132
+3536208_ETE_1,ETE Pariquera - Açu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3536208,Pariquera-Açu,1,-47.882103,-24.702564
+3536257_ETE_1,ETE Parisi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.55000001,3536257,Parisi,1,-50.007462,-20.300174
+3536307_ETE_1,ETE Patrocínio Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3536307,Patrocínio Paulista,1,-47.289893,-20.648194
+3536406_ETE_1,ETE Paulicéia,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.69999999,3536406,Paulicéia,1,-51.830566,-21.305065
+3536505_ETE_1,ETE Paulínia,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.79000002,3536505,Paulínia,1,-47.179163,-22.766063
+3536570_ETE_1,ETE Paulistânia,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3536570,Paulistânia,1,-49.403834,-22.592612
+3536604_ETE_1,ETE Paulo de Faria,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3536604,Paulo de Faria,1,-49.399809,-20.014918
+3536703_ETE_1,ETE Pederneiras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3536703,Pederneiras,1,-48.738646,-22.34752
+3536901_ETE_1,ETE Pedranópolis,Ativa,Lagoas Facultativas em Série + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3536901,Pedranópolis,1,-50.101351,-20.262296
+3537008_ETE_1,ETE Pedregulho - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3537008,Pedregulho,1,-47.483573,-20.265157
+3537107_ETE_1,ETE Pedreira - SP,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.82999998,3537107,Pedreira,1,-46.924575,-22.741628
+3537156_ETE_1,ETE Pedrinhas Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3537156,Pedrinhas Paulista,1,-50.792456,-22.804483
+3537206_ETE_1,ETE Pedro de Toledo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3537206,Pedro de Toledo,1,-47.235148,-24.270913
+3537305_ETE_2,ETE Complexo 2,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3537305,Penápolis,1,-50.050347,-21.396792
+3537305_ETE_1,ETE Complexo 1,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.89999998,3537305,Penápolis,1,-50.049547,-21.396647
+3537404_ETE_1,ETE Pereira Barreto,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3537404,Pereira Barreto,1,-51.133545,-20.618873
+3537503_ETE_1,ETE Pereiras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3537503,Pereiras,1,-47.979805,-23.064091
+3537602_ETE_1,ETE P1,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3537602,Peruíbe,1,-47.016055,-24.318258
+3537602_ETE_2,ETE P2,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3537602,Peruíbe,1,-46.979357,-24.267196
+3537701_ETE_1,ETE Piacatu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3537701,Piacatu,1,-50.610686,-21.590673
+3537800_ETE_1,ETE Piedade - SP,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3537800,Piedade,1,-47.422485,-23.706573
+3537909_ETE_1,ETE Pilar do Sul,Ativa,Lagoas Facultativas Aeradas em Série + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.94999999,3537909,Pilar do Sul,1,-47.736786,-23.792038
+3538006_ETE_3,ETE Sede - Pindamonhangaba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.67000002,3538006,Pindamonhangaba,1,-45.455386,-22.910707
+3538006_ETE_1,ETE Araretama,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.85000002,3538006,Pindamonhangaba,1,-45.513726,-22.943536
+3538006_ETE_2,ETE Moreira César,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3538006,Pindamonhangaba,1,-45.376136,-22.880942
+3538105_ETE_1,ETE Pindorama - Fortaleza,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.77999997,3538105,Pindorama,1,-48.914899,-21.16756
+3538204_ETE_1,ETE Pinhalzinho - SP,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3538204,Pinhalzinho,1,-46.610157,-22.786173
+3538303_ETE_1,ETE Piquerobi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3538303,Piquerobi,1,-51.720601,-21.892665
+3538600_ETE_1,ETE Piracaia,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.83999997,3538600,Piracaia,1,-46.377293,-23.054808
+3538709_ETE_1,ETE Anhumas - Piracicaba,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.931531,-22.828975
+3538709_ETE_2,ETE ártemis,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3538709,Piracicaba,1,-47.767888,-22.694506
+3538709_ETE_4,ETE Bela Vista - Piracicaba,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3538709,Piracicaba,1,-47.712159,-22.695272
+3538709_ETE_5,ETE Capim Fino - Santa Rosa,Ativa,Reator Anaeróbio + Lodos Ativados - Processo U-BOX (configuração compacta),Reatores Anaeróbios,reator,0.85000002,3538709,Piracicaba,1,-47.60514,-22.699807
+3538709_ETE_7,ETE Chácara Unidas,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.659985,-22.767873
+3538709_ETE_8,ETE Cortume,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico,Reatores Anaeróbios,reator,0.75,3538709,Piracicaba,1,-47.581347,-22.764764
+3538709_ETE_10,ETE Ibitiruna,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.964544,-22.775847
+3538709_ETE_11,ETE Jupiá - Piracicaba,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3538709,Piracicaba,1,-47.68685,-22.709311
+3547403_ETE_1,ETE Santa Rita D'Oeste,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.86000001,3547403,Santa Rita d'Oeste,1,-50.840252,-20.144125
+3538709_ETE_12,ETE Lago Azul - Piracicaba,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.775322,-22.663203
+3538709_ETE_13,ETE Piracicamirim,Ativa,Reator Anaeróbio + Lagoas Facultativas/Maturação Aeradas em Série,Reatores Anaeróbios,reator,0.85000002,3538709,Piracicaba,1,-47.62144,-22.718441
+3538709_ETE_14,ETE Ponte do Caixão,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3538709,Piracicaba,1,-47.673539,-22.700256
+3538709_ETE_15,ETE Santa Olímpia I,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.92000002,3538709,Piracicaba,1,-47.735124,-22.604663
+3538709_ETE_16,ETE Santa Olímpia II,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.751517,-22.615069
+3538709_ETE_17,ETE Santa Silvia,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3538709,Piracicaba,1,-47.612394,-22.745006
+3538709_ETE_18,ETE Santana I,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3538709,Piracicaba,1,-47.729392,-22.627497
+3538709_ETE_19,ETE Santana II,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.733861,-22.624939
+3538709_ETE_20,ETE Santana III,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.736264,-22.625025
+3538709_ETE_21,ETE Santana IV,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.742492,-22.625181
+3538709_ETE_22,ETE Santana V,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.7249,-22.622194
+3538709_ETE_23,ETE Santana VI,Ativa,Fossa Séptica + Filtro Anaeróbio + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Sumidouro),Processos Simplificados,outros,0.89999998,3538709,Piracicaba,1,-47.722903,-22.626903
+3538709_ETE_24,ETE Santana VII,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.734197,-22.623722
+3538709_ETE_25,ETE São Jorge - Piracicaba,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.92000002,3538709,Piracicaba,1,-47.636362,-22.665379
+3540408_ETE_1,ETE Populina,Ativa,Disposição Superficial no Solo,Processos Simplificados,outros,0.80000001,3540408,Populina,1,-50.54443,-19.954029
+3538709_ETE_26,ETE Tanquinho,Ativa,Fossa Séptica + Lagoa Facultativa,Miscelânea de Processos,outros,0.85000002,3538709,Piracicaba,1,-47.605522,-22.576089
+3538709_ETE_27,ETE Tupi,Ativa,Reator Anaeróbio + Lodos Ativados - Processo U-BOX (configuração compacta),Reatores Anaeróbios,reator,0.85000002,3538709,Piracicaba,1,-47.528317,-22.739378
+3538709_ETE_28,ETE Vale do Sol I,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.705047,-22.684264
+3538709_ETE_29,ETE Vale do Sol II,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.706058,-22.687402
+3538709_ETE_30,ETE Vila Belém,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.695528,-22.636222
+3538709_ETE_31,ETE Zoonoses,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3538709,Piracicaba,1,-47.689061,-22.701033
+3538709_ETE_9,ETE Engenho - Piracicaba,Ativa,Bacias de Infiltração no Solo (Dunas de Areia/ Áreas Alagadas - Wetland),Processos Simplificados,outros,0.69999999,3538709,Piracicaba,1,-47.658074,-22.721373
+3538808_ETE_1,ETE Piraju,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3538808,Piraju,1,-49.402184,-23.177068
+3538907_ETE_1,ETE Pirajuí (Início de Operação: 01/2015),Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3538907,Pirajuí,1,-49.450773,-21.967054
+3539004_ETE_1,ETE Pirangi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.79000002,3539004,Pirangi,1,-48.647235,-21.07666
+3539103_ETE_1,ETE Pirapora do Bom Jesus,Ativa,Lodos Ativados UNITANK,Lodos Ativados,lodos,0.64999998,3539103,Pirapora do Bom Jesus,1,-46.99805,-23.390523
+3539202_ETE_1,ETE Pirapozinho,Ativa,Fossa Séptica + Filtro Anaeróbio + Decantador,Processos Simplificados,outros,0.77999997,3539202,Pirapozinho,1,-51.513127,-22.261439
+3539301_ETE_1,ETE Laranja Azeda,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3539301,Pirassununga,1,-47.410251,-21.955796
+3539301_ETE_3,ETE Santa Fé,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3539301,Pirassununga,1,-47.367785,-21.941078
+3525904_ETE_2,ETE Jundiaí,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.98000002,3525904,Jundiaí,1,-46.999143,-23.140242
+3526001_ETE_1,ETE Junqueirópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.74000001,3526001,Junqueirópolis,1,-51.424704,-21.522989
+3526100_ETE_1,ETE Juquiá,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3526100,Juquiá,1,-47.649528,-24.324665
+3526100_ETE_2,ETE Juquiá - Cedro,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.63999999,3526100,Juquiá,1,-47.57435,-24.323343
+3528601_ETE_1,ETE Manduri,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3528601,Manduri,1,-49.322356,-23.019772
+3526209_ETE_1,ETE Juquitiba,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3526209,Juquitiba,1,-47.073233,-23.934119
+3526308_ETE_1,ETE Lagoinha - SP,Ativa,Lagoa Aerada + Disposição no Solo,Sistemas de Lagoas,lagoa,0.93000001,3526308,Lagoinha,1,-45.194377,-23.081921
+3526407_ETE_1,ETE Laranjal Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3526407,Laranjal Paulista,1,-47.829379,-23.019872
+3526605_ETE_1,ETE Capela do Jacu,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.80000001,3526605,Lavrinhas,1,-44.914482,-22.562044
+3526704_ETE_1,ETE Anselmo Luiggi Faggion,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3526704,Leme,1,-47.338315,-22.182874
+3526803_ETE_1,ETE Lençóis Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3526803,Lençóis Paulista,1,-48.756054,-22.592636
+3526902_ETE_5,ETE Tatu,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.36000001,3526902,Limeira,1,-47.376328,-22.597558
+3526902_ETE_1,ETE Águas da Serra,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.99000001,3526902,Limeira,1,-47.462033,-22.571789
+3526902_ETE_3,ETE Lopes,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.52999997,3526902,Limeira,1,-47.350267,-22.650579
+3526902_ETE_2,ETE Graminha,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3526902,Limeira,1,-47.439613,-22.592681
+3527108_ETE_1,ETE Lins,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3527108,Lins,1,-49.747988,-21.646041
+3527207_ETE_1,ETE Lorena,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3527207,Lorena,1,-45.1334,-22.711244
+3527256_ETE_1,ETE Lourdes,Ativa,Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.82999998,3527256,Lourdes,1,-50.231342,-20.976981
+3527405_ETE_1,ETE Lucélia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3527405,Lucélia,1,-51.02156,-21.705148
+3527504_ETE_1,ETE Lucianópolis,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.76999998,3527504,Lucianópolis,1,-49.521747,-22.434419
+3527603_ETE_1,ETE Luís Antônio,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.74000001,3527603,Luís Antônio,1,-47.701946,-21.530109
+3527702_ETE_1,ETE Luiziânia,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.75,3527702,Luiziânia,1,-50.335975,-21.673938
+3527801_ETE_1,ETE Lupércio,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3527801,Lupércio,1,-49.826575,-22.418225
+3527900_ETE_1,ETE Lutécia,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3527900,Lutécia,1,-50.387204,-22.323398
+3528007_ETE_1,ETE Macatuba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75999999,3528007,Macatuba,1,-48.701906,-22.491284
+3528106_ETE_1,ETE Macaubal,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.68000001,3528106,Macaubal,1,-49.9745,-20.809252
+3528205_ETE_1,ETE Macedônia,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3528205,Macedônia,1,-50.187017,-20.138743
+3528304_ETE_1,ETE Magda,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.69,3528304,Magda,1,-50.225278,-20.620154
+3532900_ETE_1,ETE Nova Europa,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.72000003,3532900,Nova Europa,1,-48.565788,-21.793082
+3528502_ETE_1,ETE Sede - Mairiporã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3528502,Mairiporã,1,-46.57806,-23.314193
+3528700_ETE_1,ETE Marabá Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3528700,Marabá Paulista,1,-51.975699,-22.093799
+3528809_ETE_1,ETE Maracaí,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3528809,Maracaí,1,-50.682694,-22.614054
+3528858_ETE_1,ETE Marapoama,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.62,3528858,Marapoama,1,-49.1504,-21.26199
+3528908_ETE_1,ETE Mariápolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3528908,Mariápolis,1,-51.200156,-21.794382
+3529104_ETE_1,ETE Marinópolis,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88999999,3529104,Marinópolis,1,-50.814735,-20.442432
+3529302_ETE_1,ETE São Lourenço - Matão,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3529302,Matão,1,-48.387257,-21.59044
+3529401_ETE_2,ETE Mauá,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.93000001,3529401,Mauá,1,-46.48456,-23.655571
+3529500_ETE_1,ETE Mendonça,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.52999997,3529500,Mendonça,1,-49.570877,-21.19553
+3529609_ETE_1,ETE Meridiano,Ativa,Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.86000001,3529609,Meridiano,1,-50.170069,-20.324302
+3529658_ETE_1,ETE Mesópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.89999998,3529658,Mesópolis,1,-50.621681,-19.950833
+3529708_ETE_1,ETE Miguelópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.93000001,3529708,Miguelópolis,1,-48.058287,-20.196112
+3529807_ETE_1,ETE Mineiros - Mineiros do Tietê,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3529807,Mineiros do Tietê,1,-48.445857,-22.395418
+3529906_ETE_1,ETE Miracatu,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.49000001,3529906,Miracatu,1,-47.468214,-24.275603
+3530003_ETE_1,ETE Mira Estrela,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.87,3530003,Mira Estrela,1,-50.139044,-19.953281
+3530102_ETE_1,ETE Mirandópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3530102,Mirandópolis,1,-51.116455,-21.160395
+3530201_ETE_1,ETE Mirante do Paranapanema,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.93000001,3530201,Mirante do Paranapanema,1,-51.878303,-22.284598
+3530300_ETE_2,ETE Piedade - Mirassol,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3530300,Mirassol,1,-49.462853,-20.839212
+3530409_ETE_1,ETE Mirassolândia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.73000002,3530409,Mirassolândia,1,-49.485191,-20.590841
+3530508_ETE_2,ETE Mococa,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.95999998,3530508,Mococa,1,-47.035264,-21.447499
+3530607_ETE_1,ETE Leste,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.94,3530607,Mogi das Cruzes,1,-46.170342,-23.509105
+3530706_ETE_1,ETE Av. Brasil,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3530706,Mogi Guaçu,1,-46.965244,-22.368428
+3530706_ETE_2,ETE Ipê - Mogi Guaçú,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.66000003,3530706,Mogi Guaçu,1,-46.964719,-22.307517
+3530805_ETE_1,ETE Mogi Mirim,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3530805,Mogi Mirim,1,-46.998611,-22.362778
+3531001_ETE_1,ETE Monçues,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3531001,Monções,1,-50.091416,-20.858569
+3554102_ETE_2,ETE Marlene,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3554102,Taubaté,1,-45.54423,-23.071433
+3554508_ETE_3,ETE Povo Feliz,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.92000002,3554508,Tietê,1,-47.726642,-23.111132
+3554508_ETE_2,ETE Central - Tietê,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3554508,Tietê,1,-47.719442,-23.113504
+3554508_ETE_4,ETE Terra Nova - Tietê,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3554508,Tietê,1,-47.7008,-23.085933
+3554508_ETE_1,ETE Bertola,Inativa/abandonada/desativada,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3554508,Tietê,1,-47.730867,-23.07551
+3554607_ETE_1,ETE Timburi,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.69,3554607,Timburi,1,-49.621823,-23.208334
+3554656_ETE_1,ETE Torre de Pedra,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.93000001,3554656,Torre de Pedra,1,-48.197443,-23.23083
+3542008_ETE_1,ETE Quintana,Ativa,Lagoa Facultativa + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.77999997,3542008,Quintana,1,-50.313192,-22.059208
+3542206_ETE_2,ETE Rancharia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação + Filtro Biológico,Sistemas de Lagoas,lagoa,0.64999998,3542206,Rancharia,1,-50.890418,-22.24587
+3542305_ETE_1,ETE Redenção da Serra,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel,Lodos Ativados,lodos,0.89999998,3542305,Redenção da Serra,1,-45.536815,-23.280661
+3542404_ETE_1,ETE Regente Feijó,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3542404,Regente Feijó,1,-51.310146,-22.238345
+3542602_ETE_1,ETE Registro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3542602,Registro,1,-47.832222,-24.491389
+3542701_ETE_1,ETE Restinga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.66000003,3542701,Restinga,1,-47.502779,-20.600786
+3542909_ETE_1,ETE Ribeirão Bonito I,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3542909,Ribeirão Bonito,1,-48.176815,-22.037894
+3542909_ETE_2,ETE Ribeirão Bonito II,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3542909,Ribeirão Bonito,1,-48.304528,-22.03947
+3543006_ETE_1,ETE Ribeirão Branco - SP,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.87,3543006,Ribeirão Branco,1,-48.758261,-24.219992
+3543105_ETE_1,ETE Ribeirão Corrente,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.89999998,3543105,Ribeirão Corrente,1,-47.587347,-20.446226
+3543204_ETE_1,ETE Ribeirão do Sul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.80000001,3543204,Ribeirão do Sul,1,-49.943276,-22.785219
+3543238_ETE_1,ETE Ribeirão dos Índios,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.87,3543238,Ribeirão dos Índios,1,-51.591345,-21.836178
+3543253_ETE_1,ETE Ribeirão Grande,Ativa,Lodos Ativados com Remoção Biológica de Nitrogênio (Zona Anóxica),Lodos Ativados,lodos,0.89999998,3543253,Ribeirão Grande,1,-48.354823,-24.094182
+3543402_ETE_1,ETE Caiçara - Ribeirão Preto,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.97000003,3543402,Ribeirão Preto,1,-47.758523,-21.114793
+3543402_ETE_2,ETE Ribeirão,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.97000003,3543402,Ribeirão Preto,1,-47.8127,-21.104581
+3543501_ETE_1,ETE Riversul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3543501,Riversul,1,-49.438988,-23.816909
+3543600_ETE_1,ETE Rifaina,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3543600,Rifaina,1,-47.432531,-20.071542
+3543808_ETE_1,ETE Rinópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3543808,Rinópolis,1,-50.694595,-21.730307
+3543907_ETE_9,ETE Jardim Palmeiras,Ativa,Reator Anaeróbio + Lagoa Aerada/Lagoa Facultativa Aerada + Lagoa Decantação/Facultativa/Maturação,Reatores Anaeróbios,reator,0.91000003,3543907,Rio Claro,1,-47.589651,-22.430261
+3543907_ETE_1,ETE Ajapi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.97000003,3543907,Rio Claro,1,-47.568547,-22.28394
+3543907_ETE_2,ETE Assistência Alta,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.88,3543907,Rio Claro,1,-47.589504,-22.49604
+3543907_ETE_4,ETE Batovi,Ativa,Fossa Séptica + Reator Anaeróbio + Filtro Aeróbio,Miscelânea de Processos,outros,0.97000003,3543907,Rio Claro,1,-47.613973,-22.386267
+3543907_ETE_5,ETE Conduta,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.97000003,3543907,Rio Claro,1,-47.549152,-22.428743
+3543907_ETE_6,ETE Ferraz,Ativa,Fossa Séptica + Reator Anaeróbio + Vala de Infiltração,Miscelânea de Processos,outros,0.92000002,3543907,Rio Claro,1,-47.585479,-22.259168
+3543907_ETE_7,ETE Jardim Flores,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.89999998,3543907,Rio Claro,1,-47.588188,-22.378209
+3544202_ETE_1,ETE Riolândia - Bacia 1,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3544202,Riolândia,1,-49.703139,-19.974123
+3544202_ETE_2,ETE Riolândia - Bacia 2,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.82999998,3544202,Riolândia,1,-49.666408,-19.978278
+3544251_ETE_2,ETE Rosana,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3544251,Rosana,1,-52.936661,-22.542873
+3544301_ETE_1,ETE Roseira,Ativa,Lagoa Anaeróbia + Lagoa Aerada + Lagoa Decantação,Sistemas de Lagoas,lagoa,0.91000003,3544301,Roseira,1,-45.316895,-22.900148
+3544400_ETE_1,ETE Rubiácea,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3544400,Rubiácea,1,-50.726368,-21.306299
+3544509_ETE_1,ETE Rubinéia,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.86000001,3544509,Rubinéia,1,-50.999072,-20.178662
+3544608_ETE_1,ETE Sabino,Ativa,Lagoa Anaeróbia,Sistemas de Lagoas,lagoa,0.85000002,3544608,Sabino,1,-49.575606,-21.450506
+3544707_ETE_1,ETE Sagres,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3544707,Sagres,1,-50.941919,-21.886286
+3545001_ETE_2,ETE Sede - Salesópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.79000002,3545001,Salesópolis,1,-45.865941,-23.52597
+3545100_ETE_1,ETE Salmourão,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3545100,Salmourão,1,-50.855065,-21.619255
+3545159_ETE_1,ETE Saltinho,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.69,3545159,Saltinho,1,-47.667488,-22.827931
+3545209_ETE_1,ETE Santa Isabel,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico,Reatores Anaeróbios,reator,0.88,3545209,Salto,1,-47.333593,-23.193719
+3545308_ETE_1,ETE Salto de Pirapora,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.93000001,3545308,Salto de Pirapora,1,-47.572973,-23.631932
+3545407_ETE_1,ETE Salto Grande,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.83999997,3545407,Salto Grande,1,-49.990405,-22.877145
+3545506_ETE_1,ETE Sandovalina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.86000001,3545506,Sandovalina,1,-51.766702,-22.466828
+3545605_ETE_1,ETE Santa Adélia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.94,3545605,Santa Adélia,1,-48.795258,-21.25926
+3545704_ETE_1,ETE Santa Albertina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3545704,Santa Albertina,1,-50.727614,-20.017783
+3545803_ETE_6,ETE Ribeirão dos Toledos,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.85000002,3545803,Santa Bárbara d'Oeste,1,-47.40504,-22.751659
+3545803_ETE_2,ETE Balsa,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3545803,Santa Bárbara d'Oeste,1,-47.38794,-22.703556
+3545803_ETE_3,ETE Barrocão - Vila Rica,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel + Lagoa de Maturação,Lodos Ativados,lodos,0.88,3545803,Santa Bárbara d'Oeste,1,-47.404838,-22.73051
+3545803_ETE_4,ETE Cruzeiro do Sul,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.80000001,3545803,Santa Bárbara d'Oeste,1,-47.487148,-22.733304
+3545803_ETE_1,ETE Andorinhas,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3545803,Santa Bárbara d'Oeste,1,-47.426305,-22.803953
+3545803_ETE_5,ETE Nova Conquista,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3545803,Santa Bárbara d'Oeste,1,-47.380484,-22.727349
+3546108_ETE_1,ETE Santa Clara D'Oeste,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.87,3546108,Santa Clara d'Oeste,1,-50.937064,-20.082954
+3546207_ETE_1,ETE Santa Cruz da Conceição,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.85000002,3546207,Santa Cruz da Conceição,1,-47.447026,-22.129131
+3546256_ETE_1,ETE Santa Cruz da Esperança,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3546256,Santa Cruz da Esperança,1,-47.435297,-21.297477
+3546306_ETE_1,ETE Santa Cruz das Palmeiras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.75,3546306,Santa Cruz das Palmeiras,1,-47.228269,-21.850645
+3546405_ETE_1,ETE Santa Cruz do Rio Pardo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3546405,Santa Cruz do Rio Pardo,1,-49.632751,-22.949135
+3546504_ETE_1,ETE Santa Ernestina,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.93000001,3546504,Santa Ernestina,1,-48.417903,-21.444258
+3546603_ETE_1,ETE 1 - Estrada Municipal SFS-255,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.77999997,3546603,Santa Fé do Sul,1,-50.937106,-20.217216
+3546603_ETE_2,ETE 2 - Córrego Mula,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.60000002,3546603,Santa Fé do Sul,1,-50.956931,-20.182341
+3546702_ETE_1,ETE Santa Gertrudes,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3546702,Santa Gertrudes,1,-47.558002,-22.461502
+3547007_ETE_1,ETE Santa Maria da Serra,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.52999997,3547007,Santa Maria da Serra,1,-48.167222,-22.574444
+3547106_ETE_1,ETE Santa Mercedes,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3547106,Santa Mercedes,1,-51.762872,-21.38746
+3547601_ETE_2,ETE Santa Constância,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3547601,Santa Rosa de Viterbo,1,-47.359475,-21.448087
+3547650_ETE_1,ETE Santa Salete,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3547650,Santa Salete,1,-50.685559,-20.247501
+3547700_ETE_1,ETE Santo Anastácio - Bacia 1,Ativa,Filtro Biológico + Decantação  (TRICKING FILTER SYSTEM),Miscelânea de Processos,outros,0.81,3547700,Santo Anastácio,1,-51.645283,-21.977269
+3547700_ETE_2,ETE Santo Anastácio - Bacia 2,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3547700,Santo Anastácio,1,-51.667469,-21.994181
+3547809_ETE_2,ETE Parque Andreense,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3547809,Santo André,1,-46.462838,-23.770849
+3547908_ETE_1,ETE Santo Antônio da Alegria,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.63999999,3547908,Santo Antônio da Alegria,1,-47.158426,-21.083745
+3548054_ETE_1,ETE Santo Antônio do Aracanguá,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.69999999,3548054,Santo Antônio do Aracanguá,1,-50.506393,-20.9469
+3548104_ETE_1,ETE Santo Antônio do Jardim,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3548104,Santo Antônio do Jardim,1,-46.69053,-22.103412
+3548203_ETE_1,ETE Santo Antônio do Pinhal,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3548203,Santo Antônio do Pinhal,1,-45.676111,-22.824167
+3548302_ETE_1,ETE Santo Expedito,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.89999998,3548302,Santo Expedito,1,-51.40178,-21.836026
+3548401_ETE_1,ETE Santópolis do Aguapeí,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3548401,Santópolis do Aguapeí,1,-50.498509,-21.651744
+3548609_ETE_1,ETE São Bento do Sapucaí,Ativa,Reator Anaeróbio + Filtro Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.77999997,3548609,São Bento do Sapucaí,1,-45.740278,-22.677639
+3548708_ETE_2,ETE Riacho Grande,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel + Lagoa de Maturação,Lodos Ativados,lodos,0.89999998,3548708,São Bernardo do Campo,1,-46.601045,-23.759699
+3548906_ETE_2,ETE Monjolinho,Ativa,Reator Anaeróbio + Floculação Quimicamente Assistida + Flotação,Tratamento Químico e Biológico,outros,0.89999998,3548906,São Carlos,1,-47.927684,-22.031224
+3553807_ETE_1,ETE Taquarituba,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3553807,Taquarituba,1,-49.236323,-23.516111
+3549003_ETE_1,ETE São Francisco - SP,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3549003,São Francisco,1,-50.705668,-20.356257
+3549102_ETE_1,ETE São João da Boa Vista,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.69999999,3549102,São João da Boa Vista,1,-46.811227,-21.942087
+3549201_ETE_1,ETE São João das Duas Pontes,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.75,3549201,São João das Duas Pontes,1,-50.374666,-20.39846
+3549250_ETE_2,ETE São João de Iracema - Centro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3549250,São João de Iracema,1,-50.349135,-20.513511
+3549300_ETE_1,ETE São João do Pau D'Alho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3549300,São João do Pau d'Alho,1,-51.651041,-21.264126
+3549508_ETE_1,ETE São José da Bela Vista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3549508,São José da Bela Vista,1,-47.664286,-20.6027
+3549607_ETE_1,ETE São José do Barreiro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3549607,São José do Barreiro,1,-44.568008,-22.633209
+3549805_ETE_1,ETE Rio Preto,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.82999998,3549805,São José do Rio Preto,1,-49.373603,-20.735346
+3549904_ETE_2,ETE Lavapés,Ativa,Lodos Ativados de Tanque Profundo (DEEP SHAFT),Lodos Ativados,lodos,0.89999998,3549904,São José dos Campos,1,-45.869425,-23.161381
+3549904_ETE_3,ETE Pararangaba,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.94999999,3549904,São José dos Campos,1,-45.778922,-23.133456
+3549904_ETE_6,ETE Vista Verde,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.80000001,3549904,São José dos Campos,1,-45.828556,-23.180028
+3549904_ETE_5,ETE Urbanova,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.80000001,3549904,São José dos Campos,1,-45.931583,-23.190173
+3549953_ETE_1,ETE São Lourenço da Serra,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.81999999,3549953,São Lourenço da Serra,1,-46.956088,-23.85827
+3550001_ETE_1,ETE São Luís do Paraitinga,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.85000002,3550001,São Luiz do Paraitinga,1,-45.314312,-23.241636
+3550100_ETE_1,ETE São Manuel,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoas de Maturação em Série,Sistemas de Lagoas,lagoa,0.89999998,3550100,São Manuel,1,-48.577797,-22.716343
+3550209_ETE_1,ETE São Miguel Arcanjo,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81999999,3550209,São Miguel Arcanjo,1,-48.01577,-23.868937
+3550308_ETE_4,ETE Parque Novo Mundo,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.89999998,3550308,São Paulo,1,-46.558699,-23.514511
+3550407_ETE_1,ETE Horto Florestal,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.82999998,3550407,São Pedro,1,-47.887198,-22.545784
+3550506_ETE_1,ETE São Pedro do Turvo,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3550506,São Pedro do Turvo,1,-49.726579,-22.763874
+3550704_ETE_4,ETE Barequeçaba,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3550704,São Sebastião,1,-45.433982,-23.827371
+3550704_ETE_5,ETE Boiçucanga,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3550704,São Sebastião,1,-45.619746,-23.776442
+3550704_ETE_2,EPC Itatinga (Central),Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3550704,São Sebastião,1,-45.400062,-23.811639
+3550704_ETE_7,ETE Juquehy,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3550704,São Sebastião,1,-45.722056,-23.758676
+3550704_ETE_3,ETE Baleia/Sahy,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3550704,São Sebastião,1,-45.683278,-23.767041
+3551009_ETE_2,ETE Humaitá - São Vicente,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3551009,São Vicente,1,-46.449552,-23.954466
+3551009_ETE_3,ETE Samaritá,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3551009,São Vicente,1,-46.496737,-23.98021
+3551207_ETE_1,ETE Sarutaiá,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3551207,Sarutaiá,1,-49.486329,-23.267875
+3551306_ETE_1,ETE Sebastianópolis do Sul,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.76999998,3551306,Sebastianópolis do Sul,1,-49.915666,-20.64825
+3551405_ETE_1,ETE Serra Azul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3551405,Serra Azul,1,-47.557787,-21.294034
+3551603_ETE_1,ETE Serra Negra - SP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação + Escada de Aeração,Sistemas de Lagoas,lagoa,0.89999998,3551603,Serra Negra,1,-46.783916,-22.550449
+3551702_ETE_1,ETE Sertãozinho,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.63999999,3551702,Sertãozinho,1,-48.031725,-21.105527
+3551801_ETE_1,ETE Sete Barras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3551801,Sete Barras,1,-47.907778,-24.395278
+3551900_ETE_1,ETE Severánia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.82999998,3551900,Severínia,1,-48.821224,-20.799628
+3552007_ETE_1,ETE Silveiras,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3552007,Silveiras,1,-44.851469,-22.656486
+3552106_ETE_1,ETE Socorro - SP,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.94999999,3552106,Socorro,1,-46.569151,-22.548716
+3552205_ETE_6,ETE S-1,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.92000002,3552205,Sorocaba,1,-47.458373,-23.468571
+3552205_ETE_4,ETE Pitico,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.97000003,3552205,Sorocaba,1,-47.499234,-23.425387
+3552205_ETE_3,ETE Itanguá,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.82999998,3552205,Sorocaba,1,-47.520651,-23.430545
+3552205_ETE_5,ETE Quintais do Imperador,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.97000003,3552205,Sorocaba,1,-47.548959,-23.502651
+3552205_ETE_7,ETE S-2,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.88,3552205,Sorocaba,1,-47.463318,-23.411843
+3552205_ETE_2,ETE Ipaneminha,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.85000002,3552205,Sorocaba,1,-47.534592,-23.524436
+3552205_ETE_1,ETE Aparecidinha,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.80000001,3552205,Sorocaba,1,-47.369189,-23.434136
+3552304_ETE_1,ETE Sud Mennucci,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3552304,Sud Mennucci,1,-50.937877,-20.682149
+3552403_ETE_9,ETE Santa Maria - Sumaré,Ativa,"Reator Anaeróbio (RAFA, RALF, UASB, DAFA)",Reatores Anaeróbios,reator,0.64999998,3552403,Sumaré,1,-47.231384,-22.796591
+3552403_ETE_10,ETE Vila Flores,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3552403,Sumaré,1,-47.235328,-22.822175
+3552403_ETE_1,ETE Bordon I,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.76999998,3552403,Sumaré,1,-47.272683,-22.79427
+3552403_ETE_8,ETE Jardim Aclimação,Ativa,Lodos Ativados de Aeração Prolongada - Valo de Oxidação/Sistema Carrossel,Lodos Ativados,lodos,0.89999998,3552403,Sumaré,1,-47.177631,-22.845595
+3552403_ETE_7,ETE Guaíra,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.76999998,3552403,Sumaré,1,-47.275015,-22.808797
+3552403_ETE_2,ETE Dall'orto,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.76999998,3552403,Sumaré,1,-47.21822,-22.789233
+3552403_ETE_11,ETE Voloboef,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.76999998,3552403,Sumaré,1,-47.200664,-22.800384
+3552403_ETE_4,ETE Ff Parque da Floresta,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3552403,Sumaré,1,-47.283207,-22.82147
+3552403_ETE_3,ETE Ff Amália Luiza,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3552403,Sumaré,1,-47.282837,-22.831764
+3552403_ETE_6,ETE Ff Veccon,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3552403,Sumaré,1,-47.258747,-22.83995
+3552403_ETE_5,ETE Ff Ravagnani,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3552403,Sumaré,1,-47.273025,-22.836555
+3552551_ETE_1,ETE Suzanápolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.61000001,3552551,Suzanápolis,1,-51.014469,-20.509957
+3552601_ETE_1,ETE Tabapuã,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3552601,Tabapuã,1,-49.025135,-20.940702
+3552700_ETE_1,ETE Tabatinga,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3552700,Tabatinga,1,-48.71611,-21.751769
+3552908_ETE_1,ETE Taciba,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.81,3552908,Taciba,1,-51.281453,-22.398933
+3553005_ETE_1,ETE Taguaí,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.86000001,3553005,Taguaí,1,-49.416047,-23.44064
+3553104_ETE_1,ETE Taiaçu,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.47,3553104,Taiaçu,1,-48.509442,-21.13224
+3553203_ETE_1,ETE Taiúva I,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.75,3553203,Taiúva,1,-48.450167,-21.141048
+3553203_ETE_2,ETE Taiúva II,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.80000001,3553203,Taiúva,1,-48.476377,-21.123073
+3553302_ETE_1,ETE Tambaú,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3553302,Tambaú,1,-47.252278,-21.691355
+3553401_ETE_1,ETE Tanabi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.89999998,3553401,Tanabi,1,-49.620745,-20.613995
+3553500_ETE_2,ETE Tapiraí - Sede,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3553500,Tapiraí,1,-47.497489,-23.950651
+3553500_ETE_1,ETE Tapirai - Bairro Turvo,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.85000002,3553500,Tapiraí,1,-47.517909,-23.8964
+3553609_ETE_1,ETE Tapiratiba,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3553609,Tapiratiba,1,-46.737871,-21.479883
+3553708_ETE_1,ETE Guabiroba,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.77999997,3553708,Taquaritinga,1,-48.515579,-21.442036
+3553856_ETE_1,ETE Taquarivaí,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.83999997,3553856,Taquarivaí,1,-48.678653,-23.919345
+3553906_ETE_1,ETE Tarabai,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3553906,Tarabai,1,-51.560863,-22.307914
+3553955_ETE_1,ETE Tarumã,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.85000002,3553955,Tarumã,1,-50.571409,-22.761313
+3554003_ETE_2,ETE CEAGESP,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.83999997,3554003,Tatuí,1,-47.802488,-23.344103
+3554003_ETE_3,ETE INOCOOP,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.83999997,3554003,Tatuí,1,-47.857784,-23.370178
+3554003_ETE_1,ETE Bassi,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.83999997,3554003,Tatuí,1,-47.831839,-23.368394
+3554102_ETE_1,ETE Estoril,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.89999998,3554102,Taubaté,1,-45.605133,-23.057953
+3509502_ETE_22,ETE San Martin,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3509502,Campinas,1,-47.154405,-22.82391
+3509502_ETE_12,ETE Casas do Parque,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.168691,-22.970095
+3509502_ETE_25,ETE São José,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.80000001,3509502,Campinas,1,-47.16494,-22.962845
+3509502_ETE_20,ETE Porto Seguro,Ativa,Primário Quimicamente Assistido (CEPT) + MBBR (Mídia livre + Mídia Fixa + Decantador),Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.164591,-22.97849
+3521606_ETE_3,ETE Penitenciária,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3521606,Irapuru,1,-51.319305,-21.545994
+3526506_ETE_1,ETE Lavánia - Sede,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.85000002,3526506,Lavínia,1,-51.084107,-21.191049
+3526506_ETE_2,ETE Lavánia Penitenciária,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3526506,Lavínia,1,-51.053739,-21.197127
+3529203_ETE_4,ETE Vila Escócia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3529203,Martinópolis,1,-51.037956,-21.998671
+3529203_ETE_1,ETE Frimart,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3529203,Martinópolis,1,-51.184858,-22.128361
+3529203_ETE_2,ETE Martinópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3529203,Martinópolis,1,-51.191686,-22.111607
+3529203_ETE_3,ETE Represa Laranja Doce,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81,3529203,Martinópolis,1,-51.170057,-22.224812
+3532306_ETE_1,ETE Natividade da Serra,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3532306,Natividade da Serra,1,-45.447286,-23.378114
+3534807_ETE_1,ETE Ouro Verde,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88,3534807,Ouro Verde,1,-51.699305,-21.50343
+3546900_ETE_1,ETE Santa Lúcia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3546900,Santa Lúcia,1,-48.099162,-21.667434
+3550803_ETE_1,ETE São Sebasitão da Grama,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3550803,São Sebastião da Grama,1,-46.839396,-21.706985
+3554755_ETE_1,ETE Trabiju,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.92000002,3554755,Trabiju,1,-48.335667,-22.032939
+3543907_ETE_3,ETE Assistência Baixa,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3543907,Rio Claro,1,-47.587519,-22.509894
+3506359_ETE_2,ETE Riviera,Ativa,Primário Quimicamente Assistido (CEPT) + Lagoa Pulmão + Lagoa Facultativa + Lagoa de Maturação + Remoção de Algas,Tratamento Químico e Biológico,outros,0.86000001,3506359,Bertioga,1,-46.046286,-23.787897
+3510153_ETE_1,ETE Canitar,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.88,3510153,Canitar,1,-49.798225,-22.974323
+3511904_ETE_1,ETE Clementina Leste,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3511904,Clementina,1,-50.43765,-21.556923
+3511904_ETE_2,ETE Clementina Oeste,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.91000003,3511904,Clementina,1,-50.455652,-21.561724
+3512209_ETE_1,ETE Conchal,Ativa,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.92000002,3512209,Conchal,1,-47.182825,-22.320798
+3512209_ETE_2,ETE Tujuguaba,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3512209,Conchal,1,-47.16748,-22.377321
+3521606_ETE_1,ETE Irapuru Norte,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.88,3521606,Irapuru,1,-51.357644,-21.573186
+3521606_ETE_2,ETE Irapuru Sul,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.77999997,3521606,Irapuru,1,-51.355061,-21.57673
+3541901_ETE_1,ETE Queluz,Ativa,Reator Anaeróbio + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Reatores Anaeróbios,reator,0.80000001,3541901,Queluz,1,-44.741002,-22.52874
+3500709_ETE_1,ETE Agudos,Ativa,Lagoa Facultativa Aerada + Lagoa de Maturação Aerada,Sistemas de Lagoas,lagoa,0.85000002,3500709,Agudos,1,-48.982129,-22.429488
+3509809_ETE_1,ETE Campos Novos Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3509809,Campos Novos Paulista,1,-50.008921,-22.613257
+3513603_ETE_1,ETE Campos de Cunha,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3513603,Cunha,1,-44.827489,-22.921894
+3513603_ETE_2,ETE Cunha,Projeto/prevista/planejada,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3513603,Cunha,1,-44.990987,-23.059587
+3503802_ETE_2,ETE Stocco,Em construção/ampliação,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3503802,Artur Nogueira,1,-47.189172,-22.584233
+3503802_ETE_1,ETE Três Barras,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3503802,Artur Nogueira,1,-47.1595,-22.607659
+3500105_ETE_1,ETE Adamantina Leste,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.88999999,3500105,Adamantina,1,-51.037571,-21.659062
+3500501_ETE_2,ETE Moreiras,Ativa,Reator Anaeróbio + Lodos Ativados - Processo U-BOX (configuração compacta),Reatores Anaeróbios,reator,0.85000002,3500501,Águas de Lindóia,1,-46.654013,-22.482327
+3518859_ETE_1,ETE Guatapará,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3518859,Guatapará,1,-48.041055,-21.482991
+3550605_ETE_1,ETE Guaçu,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.89999998,3550605,São Roque,1,-47.143995,-23.50291
+3502754_ETE_1,ETE Araçariguama,Ativa,Lagoa Aerada + Filtro Aeróbio (FBAS/FBP/BAS/FAE/FBN/Filtro Russo),Sistemas de Lagoas,lagoa,0.85000002,3502754,Araçariguama,1,-47.085685,-23.416536
+3507506_ETE_3,ETE Vitoriana,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3507506,Botucatu,1,-48.400023,-22.77736
+3510401_ETE_3,ETE Dic,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3510401,Capivari,1,-47.436893,-23.013769
+3511607_ETE_2,ETE Fazenda Velha,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.5,3511607,Cesário Lange,1,-47.878737,-23.192137
+3512308_ETE_2,ETE Juquiratiba,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3512308,Conchas,1,-48.099082,-22.960885
+3520400_ETE_2,EPC Saco da Capela,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3520400,Ilhabela,1,-45.358064,-23.776291
+3523404_ETE_2,ETE Villagge Paradiso,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3523404,Itatiba,1,-46.898824,-23.054545
+3524402_ETE_4,ETE Parque dos Sinos,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3524402,Jacareí,1,-45.965086,-23.280027
+3525201_ETE_1,ETE Jarinu,Ativa,Lagoa Anaeróbia Aerada + Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.75,3525201,Jarinu,1,-46.716777,-23.084103
+3530508_ETE_1,ETE Igaraí,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.95999998,3530508,Mococa,1,-46.819655,-21.393526
+3531308_ETE_1,ETE Aparecida do Monte Alto,Ativa,Lagoa Facultativa,Sistemas de Lagoas,lagoa,0.77999997,3531308,Monte Alto,1,-48.645264,-21.240901
+3533908_ETE_2,ETE Olímpia,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3533908,Olímpia,1,-48.922459,-20.691418
+3537602_ETE_3,ETE Peruíbe Antiga,Inativa/abandonada/desativada,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3537602,Peruíbe,1,-47.015115,-24.318205
+3539301_ETE_2,ETE Mamonal,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3539301,Pirassununga,1,-47.45093,-22.028611
+3541406_ETE_1,ETE Ameliópolis,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3541406,Presidente Prudente,1,-51.324454,-21.804008
+3541406_ETE_2,ETE Floresta do Sul,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3541406,Presidente Prudente,1,-51.309903,-21.979754
+3548906_ETE_1,ETE Água Vermelha,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico,Reatores Anaeróbios,reator,0.75,3548906,São Carlos,1,-47.886269,-21.871518
+3548906_ETE_3,ETE Santa Eudóxia,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.87,3548906,São Carlos,1,-47.787923,-21.776225
+3549904_ETE_1,ETE Eugênio de Melo,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.80000001,3549904,São José dos Campos,1,-45.770366,-23.139143
+3549904_ETE_4,ETE São Francisco Xavier,Ativa,Lodos Ativados + Lagoa de Polimento,Lodos Ativados,lodos,0.80000001,3549904,São José dos Campos,1,-45.948313,-22.910422
+3550704_ETE_1,EPC Cigarras,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3550704,São Sebastião,1,-45.399941,-23.729014
+3550704_ETE_6,ETE CDHU,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3550704,São Sebastião,1,-45.436699,-23.723966
+3550704_ETE_8,ETE Paúba,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3550704,São Sebastião,1,-45.540245,-23.797118
+3555406_ETE_3,ETE Taquaral,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3555406,Ubatuba,1,-45.064386,-23.40781
+3555406_ETE_4,ETE Toninhas,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3555406,Ubatuba,1,-45.0788,-23.486387
+3556453_ETE_1,ETE Vargem Grande Paulista,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano) - Tem remoção de algas,Sistemas de Lagoas,lagoa,0.0,3556453,Vargem Grande Paulista,1,-47.034309,-23.605761
+3546801_ETE_1,ETE Santa Isabel,Ativa,Lodos Ativados de Aeração Prolongada,Lodos Ativados,lodos,0.89999998,3546801,Santa Isabel,1,-46.230283,-23.309038
+3529005_ETE_1,ETE Córrego do Pombo,Em construção/ampliação,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3529005,Marília,1,-49.992621,-22.206478
+3529005_ETE_2,ETE Córrego do Barbosa,Em construção/ampliação,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3529005,Marília,1,-49.957748,-22.276255
+3556354_ETE_1,ETE CDHU,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3556354,Vargem,1,-46.428314,-22.907477
+3524006_ETE_2,ETE Rio das Pedras,Ativa,Lodos Ativados em Batelada - SBR Sequencing Batch Reactor/ICEAS Aeração Prolongada c/Ciclos Intermitentes,Lodos Ativados,lodos,0.94999999,3524006,Itupeva,1,-47.080845,-23.139531
+3538709_ETE_6,ETE CECAP,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3538709,Piracicaba,1,-47.604326,-22.772007
+3538709_ETE_3,ETE Bartira II,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3538709,Piracicaba,1,-47.54057,-22.733217
+3548500_ETE_1,EPC Santos/São Vicente,Ativa,EPC - Estação de Pré Condicionamento (Peneiramento/Gradeamento/Primário),Processos Simplificados,outros,0.30000001,3548500,Santos,2,-46.350429,-23.972115
+3519303_ETE_2,ETE Chibarro,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3519303,Ibaté,1,-47.990745,-21.933573
+3507001_ETE_3,ETE  Pau d'Alho,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.85000002,3507001,Boituva,1,-47.641931,-23.28178
+3551108_ETE_1,ETE Sarapuí,Em construção/ampliação,Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.75,3551108,Sarapuí,1,-47.77656,-23.625849
+3505302_ETE_1,ETE Barra Bonita,Em construção/ampliação,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.80000001,3505302,Barra Bonita,1,-48.549462,-22.470154
+3509502_ETE_17,ETE Nova América,Em construção/ampliação,Reator Anaeróbio + Lodos Ativados + Filtração/Decantação/Flotação Quimicamente Assistidos,Tratamento Químico e Biológico,outros,0.89999998,3509502,Campinas,1,-47.09635,-23.002514
+3549706_ETE_1,ETE São José do Rio Pardo,Em construção/ampliação,Reator Anaeróbio + Floculação Quimicamente Assistida + Flotação,Tratamento Químico e Biológico,outros,0.80110002,3549706,São José do Rio Pardo,1,-46.917342,-21.591409
+3509502_ETE_7,ETE Boa Vista,Em construção/ampliação,Lodos Ativados de Aeração Prolongada com Ultrafiltração,Lodos Ativados,lodos,0.89999998,3509502,Campinas,1,-47.132509,-22.853973
+3544251_ETE_1,ETE Rosana,Ativa,Lagoa Aerada,Sistemas de Lagoas,lagoa,0.75,3544251,Rosana,1,-53.035957,-22.592976
+3542206_ETE_1,ETE Jardim América,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.64999998,3542206,Rancharia,1,-50.874412,-22.235904
+3526902_ETE_4,ETE Suzano Papel e Celulose,Ativa,Lagoas Aeradas em Série,Sistemas de Lagoas,lagoa,0.52999997,3526902,Limeira,1,-47.333246,-22.70782
+3508900_ETE_2,ETE Esperança D'Oeste,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico + Decantador,Reatores Anaeróbios,reator,0.69999999,3508900,Caiabu,1,-51.216587,-21.863112
+3518305_ETE_3,ETE Parateí,Ativa,Processo BIOLAC (Sistema de Cadeias Móveis Flutuantes),Miscelânea de Processos,outros,0.85000002,3518305,Guararema,1,-46.108844,-23.311207
+3518305_ETE_2,ETE Luís Carlos,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3518305,Guararema,1,-46.058659,-23.457518
+3541703_ETE_2,ETE Quatá Nova,Ativa,Reator Anaeróbio + Lagoa Aerada/Lagoa Facultativa Aerada,Reatores Anaeróbios,reator,0.94999999,3541703,Quatá,1,-50.710466,-22.275608
+3552551_ETE_2,ETE União da Vitória,Ativa,Fossa Séptica/Tanque Imhoff/Decanto-Digestor/Biodigestor,Processos Simplificados,outros,0.5,3552551,Suzanápolis,1,-51.072483,-20.460669
+3557154_ETE_2,ETE Zacarias,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3557154,Zacarias,1,-50.049874,-21.060824
+3503208_ETE_3,ETE Bueno de Andrada,Ativa,Lodos Ativados por Batelada + Filtração,Lodos Ativados,lodos,0.89999998,3503208,Araraquara,1,-48.246188,-21.671855
+3503208_ETE_2,ETE Bela Vista,Ativa,Reator Anaeróbio + Filtro Anaeróbio/Biológico,Reatores Anaeróbios,reator,0.75,3503208,Araraquara,1,-48.197025,-21.920682
+3545803_ETE_7,ETE Toledos II,Ativa,Lodos Ativados Convencional,Lodos Ativados,lodos,0.88,3545803,Santa Bárbara d'Oeste,1,-47.446894,-22.73415
+3550407_ETE_2,ETE Samambaia,Ativa,Reator Anaeróbio + Tanque de Aeração,Reatores Anaeróbios,reator,0.85000002,3550407,São Pedro,1,-47.911283,-22.565139
+3546603_ETE_3,ETE Figorífico Golden Imex Eireli,Ativa,Reator Anaeróbio + Lagoa Facultativa +  Lagoa de Maturação,Reatores Anaeróbios,reator,0.83999997,3546603,Santa Fé do Sul,1,-50.945237,-20.213773
+3544806_ETE_1,ETE Sales,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3544806,Sales,1,-49.486937,-21.367155
+3553658_ETE_1,ETE Taquaral,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3553658,Taquaral,1,-48.404492,-21.060692
+3521200_ETE_2,ETE PETAR,Ativa,"Reator Anaeróbio (RAFA, RALF, UASB, DAFA)",Reatores Anaeróbios,reator,0.68000001,3521200,Iporanga,1,-48.678001,-24.552344
+3501152_ETE-1,ETE Alumínio,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.95999998,3501152,Alumínio,1,-47.262283,-23.512141
+3543907_ETE_8,ETE Jardim Novo,Ativa,Lodos Ativados NEREDA,Lodos Ativados,lodos,0.89999998,3543907,Rio Claro,1,-47.59068,-22.459716
+3549250_ETE_1,ETE Rua São João,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.89999998,3549250,São João de Iracema,1,-50.353004,-20.506647
+3545001_ETE_1,ETE Bairro dos Remédios,Ativa,Lagoa Facultativa + Disposição no Solo (Infiltração no Solo/Escoamento Superficial/Escada de Aeração),Sistemas de Lagoas,lagoa,0.79000002,3545001,Salesópolis,1,-45.961735,-23.538446
+3557006_ETE_6,ETE Promorar,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3557006,Votorantim,1,-47.408208,-23.538795
+3557006_ETE_2,ETE Altos de Votorantim,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3557006,Votorantim,1,-47.413088,-23.541925
+3557006_ETE_1,ETE Altos de Fortaleza,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3557006,Votorantim,1,-47.419286,-23.534548
+3557006_ETE_3,ETE Green Valley,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3557006,Votorantim,1,-47.492271,-23.561486
+3557006_ETE_4,ETE Jardim São Lucas,Ativa,Fossa Séptica + Filtro Anaeróbio/Biológico,Processos Simplificados,outros,0.55000001,3557006,Votorantim,1,-47.447476,-23.555153
+3553203_ETE_3,ETE Taiúva III,Ativa,Lagoa Facultativa Aerada,Sistemas de Lagoas,lagoa,0.80000001,3553203,Taiúva,1,-48.433094,-21.134526
+3516853_ETE_1,ETE Gavião Peixoto,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.95999998,3516853,Gavião Peixoto,1,-48.494392,-21.847313
+3542800_ETE_1,ETE Ribeira,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3542800,Ribeira,1,-49.006919,-24.658691
+3505351_ETE_1,ETE Barra do Chapéu,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3505351,Barra do Chapéu,1,-49.030112,-24.472785
+3514809_ETE_2,ETE Barra dos Batatais,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3514809,Eldorado,1,-48.271395,-24.586111
+3500600_ETE_1,ETE Águas de São Pedro,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3500600,Águas de São Pedro,1,-47.866922,-22.614059
+3529906_ETE_2,ETE Pedro Bastos,Ativa,Reator Anaeróbio + Filtro Aeróbio + Decantador,Reatores Anaeróbios,reator,0.85000002,3529906,Miracatu,1,-47.375694,-24.249868
+3527306_ETE_1,ETE Louveira (Capivari),Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.89999998,3527306,Louveira,1,-46.96782,-23.073609
+3520608_ETE_1,ETE Indiana,Ativa,Lagoa Anaeróbia + Lagoa Facultativa/Lagoa de Decantação (Sistema Australiano),Sistemas de Lagoas,lagoa,0.81999999,3520608,Indiana,1,-51.262484,-22.162337
+3503703_ETE_1,ETE Ariranha,Ativa,Lagoa Anaeróbia + Lagoa Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.81999999,3503703,Ariranha,1,-48.770009,-21.164326
+3548005_ETE_1,ETE Santo Antônio de Posse,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa/Maturação,Sistemas de Lagoas,lagoa,0.81999999,3548005,Santo Antônio de Posse,1,-46.981438,-22.615216
+3542503_ETE_1,ETE Reginópolis,Ativa,Reator Anaeróbio + Lodos Ativados,Reatores Anaeróbios,reator,0.85000002,3542503,Reginópolis,1,-49.22916,-21.886835
+3547502_ETE_1,ETE Marinho,Ativa,Lagoa Aerada + Lagoa de Decantação/Facultativa + Lagoa de Maturação,Sistemas de Lagoas,lagoa,0.85000002,3547502,Santa Rita do Passa Quatro,1,-47.477621,-21.722059
+3547502_ETE_2,ETE Capituva,Ativa,Lagoas Aeradas em Série,Sistemas de Lagoas,lagoa,0.80000001,3547502,Santa Rita do Passa Quatro,1,-47.507204,-21.71478

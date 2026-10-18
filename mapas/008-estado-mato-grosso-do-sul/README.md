@@ -2,7 +2,7 @@
 numero: 8
 titulo: "Mato Grosso do Sul"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-10-28
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, mato-grosso-do-sul, municipios, regioes-geograficas, rodovias, ibge]

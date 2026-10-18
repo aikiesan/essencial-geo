@@ -2,7 +2,7 @@
 numero: 27
 titulo: "Rondônia"
 subtitulo: "Divisão territorial e rodovias"
-data: 2026-11-29
+data: 2026-10-18
 categoria: divisao-territorial
 colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, rondonia, municipios, regioes-geograficas, rodovias, ibge]
