@@ -2,7 +2,7 @@
 numero: 32
 titulo: "Uso e cobertura da terra"
 subtitulo: "Entre a cana e a cidade, ilhas de mata"
-data: 2026-11-10
+data: 2026-10-29
 categoria: uso-do-solo
 colecao: rmc
 tags: [rmc, campinas, uso-do-solo, cobertura-da-terra, mapbiomas, urbanizacao, cana-de-acucar, mata-atlantica, fragmentos-florestais]

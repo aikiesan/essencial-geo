@@ -130,8 +130,14 @@ e-mail. Para conferir à mão: `node scripts/conferir-publicacao.mjs` (mapas de 
 
 ### 6. DOI
 
-Depois que o mapa estiver no ar e conferido: o resumo da execução do `deploy.yml` lista os mapas
-**prontos para DOI** com o comando pronto. O DOI é permanente, então é sempre pedido à mão:
+**Automático, para mapas aprovados.** Com `doi_automatico: true` no README, o job `doi` do
+`deploy.yml` registra o mapa no Zenodo no dia em que ele entra no ar, logo depois de a conferência
+passar. Ele grava o DOI no README e recompila o site. Se qualquer conferência falhar, nenhum DOI é
+pedido. A série dos estados já vem aprovada (`scripts/estados/readme.mjs`). Nas coleções, ponha o
+campo depois de revisar a prancha: o DOI é permanente, e um erro só se corrige com uma nova versão.
+
+**À mão, para os demais.** O resumo da execução do `deploy.yml` lista os mapas **prontos para DOI**
+com o comando pronto:
 
 ```bash
 gh workflow run zenodo.yml -f pasta=001-estado-sao-paulo -f sandbox=false

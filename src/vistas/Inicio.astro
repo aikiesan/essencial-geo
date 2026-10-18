@@ -22,6 +22,8 @@ const i = tx.inicio;
 const mapas = await mapasPublicados(lingua);
 const series = await colecoesNoAr(lingua);
 const proximos = await proximosMapas(lingua, 3);
+// Compilado antes das 9h, o mapa do dia ainda está na fila: aparece como "hoje", não como data passada.
+const hojeBrasilia = new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
 const contagem = contarPorCategoria(mapas);
 const temas = CATEGORIA_IDS.filter((c) => contagem[c] > 0).length;
 const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
@@ -162,7 +164,9 @@ const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
           <ol class="proximos__lista" role="list">
             {proximos.map((m) => (
               <li>
-                <time class="mono" datetime={m.data.data.toISOString().slice(0, 10)}>{dataCurta(m.data.data, lingua)}</time>
+                <time class="mono" datetime={m.data.data.toISOString().slice(0, 10)}>
+                  {m.data.data.toISOString().slice(0, 10) === hojeBrasilia ? i.hoje : dataCurta(m.data.data, lingua)}
+                </time>
                 <Estrela tamanho={9} />
                 <span>
                   <span class="proximos__titulo">{m.data.titulo}</span>

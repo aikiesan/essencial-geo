@@ -128,6 +128,7 @@ const pt = {
     lerFeed: 'Ler um por um, como feed',
     proximos: 'Próximos mapas',
     proximosFina: 'Um mapa novo entra no ar todo dia às 9h de Brasília.',
+    hoje: 'hoje, às 9h',
     verColecao: 'Ver a coleção',
   },
   feed: {
@@ -348,6 +349,7 @@ const en: Forma<Textos> = {
     lerFeed: 'Read them one by one, as a feed',
     proximos: 'Coming next',
     proximosFina: 'A new map goes live every day at 12:00 UTC.',
+    hoje: 'today, 12:00 UTC',
     verColecao: 'See the collection',
   },
   feed: {

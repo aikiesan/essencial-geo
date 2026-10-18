@@ -2,7 +2,7 @@
 numero: 40
 titulo: "Serra do Mar"
 subtitulo: "Oitocentos metros entre o porto e o planalto"
-data: 2026-12-08
+data: 2026-11-18
 categoria: altimetria-relevo
 colecao: relevo
 tags: [relevo, sao-paulo, serra-do-mar, baixada-santista, cubatao, planalto-paulistano, altitude, hipsometria, copernicus-dem]

@@ -36,3 +36,6 @@ mapas/037-drenagem-sp/dados/sp_drenagem.csv
 /*.crdownload
 /DePara_*.csv
 /Agregados_por_setores_*
+
+# Bases brutas organizadas (IBGE e outras): só no disco, nunca no repositório
+/dados-brutos/

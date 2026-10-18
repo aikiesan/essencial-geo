@@ -2,7 +2,7 @@
 numero: 36
 titulo: "Bacias hidrográficas"
 subtitulo: "Vinte e duas casas para a mesma chuva"
-data: 2026-11-24
+data: 2026-11-08
 categoria: hidrografia
 colecao: agua-sp
 tags: [agua-sp, sao-paulo, bacias-hidrograficas, ugrhi, recursos-hidricos, censo-2022, hidrovia, seade]

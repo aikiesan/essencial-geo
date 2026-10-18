@@ -8,8 +8,12 @@
 #
 # Depois de publicar, o job "conferir" lê o site no ar e confere os mapas publicados:
 # páginas PT/EN, sitemap, prancha e cada download. Se algo falhar, a execução falha e o
-# GitHub avisa por e-mail. O resumo da execução lista os mapas prontos para receber DOI,
-# com o comando do workflow "Publicar no Zenodo" (o DOI é sempre pedido à mão).
+# GitHub avisa por e-mail — e nenhum DOI é pedido.
+#
+# Com tudo certo, o job "doi" registra no Zenodo os mapas no ar, sem DOI e aprovados de
+# antemão (`doi_automatico: true` no README), grava o DOI no README e pede uma nova
+# compilação para o DOI aparecer no site. Os mapas sem a aprovação saem no resumo da
+# execução com o comando para pedir à mão.
 name: Site (GitHub Pages)
 
 on:
@@ -25,9 +29,11 @@ permissions:
   pages: write
   id-token: write
 
+# Pushes seguidos cancelam a compilação anterior; a recompilação diária e a pedida pelo
+# job "doi" esperam a vez (não podem interromper um registro no Zenodo pela metade).
 concurrency:
   group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   build:
@@ -73,5 +79,46 @@ jobs:
       - run: npm ci
       # O GitHub Pages leva alguns segundos para servir a versão nova.
       - run: sleep 60
-      - name: Conferir os mapas no ar
+      - id: conferencia
+        name: Conferir os mapas no ar
         run: node scripts/conferir-publicacao.mjs --todos
+    outputs:
+      doi_automatico: ${{ steps.conferencia.outputs.doi_automatico }}
+
+  doi:
+    needs: conferir
+    if: github.ref == 'refs/heads/main' && needs.conferir.outputs.doi_automatico != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # grava o DOI no README
+      actions: write # pede a recompilação do site
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Registrar no Zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          PASTAS: ${{ needs.conferir.outputs.doi_automatico }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for PASTA in $PASTAS; do
+            node scripts/zenodo-publicar.mjs "$PASTA"
+            DOI=$(sed -n 's/^doi: //p' "mapas/$PASTA/README.md")
+            git add "mapas/$PASTA/README.md"
+            git commit -m "Nº $PASTA: DOI $DOI"
+            # Um mapa por vez: se o próximo falhar, o DOI já registrado fica gravado.
+            git push
+            echo "- $PASTA: https://doi.org/$DOI" >> "$GITHUB_STEP_SUMMARY"
+          done
+      # Um push feito pelo GITHUB_TOKEN não dispara este workflow; um workflow_dispatch sim.
+      - name: Recompilar o site com o DOI
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
