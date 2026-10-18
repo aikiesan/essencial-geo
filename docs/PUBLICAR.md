@@ -21,7 +21,7 @@ Princípios que valem para tudo:
 | --- | --- |
 | Autoria e ORCID (`src/site.config.ts`, `.zenodo.json`, `CITATION.cff`) | Preenchidos |
 | Repositório e GitHub Pages (fonte: GitHub Actions) | No ar em https://aikiesan.github.io/essencial-geo/ |
-| Recompilação diária às 9h05 (agenda) | `.github/workflows/deploy.yml` |
+| Recompilação diária às 9h17, reserva às 10h47 (agenda) | `.github/workflows/deploy.yml` |
 | Zenodo, comunidade, tokens, ORCID ↔ DataCite | **A fazer** — siga [`ZENODO.md`](ZENODO.md) |
 
 **Domínio próprio (opcional):** em `astro.config.mjs`, troque `site` pelo domínio e `base` por `'/'`;
@@ -122,7 +122,7 @@ O build de produção é o juiz final: ele falha se um mapa publicado não tiver
 3. `data` de hoje (antes das 9h, sai às 9h; depois, sai em ~1 minuto) ou futura (sai às 9h do dia).
    Cadência: **um mapa por dia** — cada pasta agendada com um dia livre na fila.
 
-**Conferência diária.** Depois de cada publicação (push ou recompilação das 9h05), o job `conferir` do
+**Conferência diária.** Depois de cada publicação (push ou recompilação das 9h17), o job `conferir` do
 `deploy.yml` roda `node scripts/conferir-publicacao.mjs --todos` contra o site no ar: páginas PT/EN (200),
 sitemap, imagem da prancha e cada download. Se algo falhar, a execução fica vermelha e o GitHub avisa por
 e-mail. Para conferir à mão: `node scripts/conferir-publicacao.mjs` (mapas de hoje), `--todos` ou

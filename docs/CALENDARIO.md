@@ -14,7 +14,7 @@ linha de data de notícia (“Publicado em segunda-feira, 26 de outubro de 2026�
 | **Campo** | `data:` no `README.md` do mapa (ou no `pt.md`/`en.md` da nota) |
 | **Data passada ou hoje** | Publicado |
 | **Data futura** | Agendado: entra no ar às **9h de Brasília** (12h UTC) desse dia |
-| **Quem publica** | A recompilação diária do site (`deploy.yml`, todo dia às 9h05) |
+| **Quem publica** | A recompilação diária do site (`deploy.yml`, todo dia às 9h17, com reserva às 10h47) |
 | **No `npm run dev`** | Agendados aparecem, com o selo “Agendado”, para revisão |
 
 Brasília não tem horário de verão desde 2019: 12h UTC é 9h o ano todo.
@@ -34,7 +34,7 @@ Duas ressalvas do GitHub Actions:
 | Quando | O quê |
 | --- | --- |
 | **Sábado ou domingo** (ou o seu dia de oficina) | Produção do lote da **semana seguinte**: 7 mapas. QGIS → pranchas PT e EN, dados, os dois READMEs, `data:` já com o dia de saída. Um commit por mapa; push. Nada aparece antes da hora. |
-| **Todo dia — 9h** | O mapa entra no ar sozinho; às 9h05 a conferência lê o site no ar (páginas, sitemap, downloads). |
+| **Todo dia — 9h** | O mapa entra no ar sozinho; às 9h17 a conferência lê o site no ar (páginas, sitemap, downloads). |
 | **Mesmo dia, depois das 9h** | Divulgação (Reddit, LinkedIn, Bluesky) com o link da página em cada língua. Depois, `discussoes:` no README. |
 | **Mesmo dia** | DOI: sozinho, se o README tem `doi_automatico: true`; senão, com o comando que sai no resumo da execução (veja [`PUBLICAR.md`](PUBLICAR.md#6-doi)). |
 | **Último dia útil do mês** | Lattes: registrar de uma vez os DOIs do mês. Nota “agenda” com o que vem no mês seguinte. |
