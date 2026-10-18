@@ -95,6 +95,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "1,5 MB"
 
+doi_automatico: true
 versao: "1.0.0"
 discussoes: []
 ---
