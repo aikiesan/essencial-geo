@@ -32,15 +32,18 @@ ready to download and get to work.
 | `rodovias` | line | federal and state highways: `sigla`, `revestimento`, `situacao_fisica`, `n_pistas`, `pavimentada` |
 | `capital` | point | indicative point inside the municipality (not the seat) |
 
-The **GPKG** and **DXF** are zipped and attached to the repository’s
+The **GPKG** is zipped and attached to the repository’s
 [`estados-2025` release](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025),
 together with those of the other 26 units.
 
-The **DXF** is in metres (SIRGAS 2000 / Brazil Polyconic, EPSG:5880 — the same system
-for all 27 units, so the bases fit together in CAD). Its layers are
-`MUNICIPIOS_LIMITES`, `REGIOES_IMEDIATAS_LIMITES`, `REGIOES_INTERMEDIARIAS_LIMITES`,
-`LIMITE_ESTADUAL`, `RODOVIAS_FEDERAIS`, `RODOVIAS_ESTADUAIS`, `CAPITAL` and
-`MUNICIPIOS_NOMES` (text). Every shared boundary appears once, as a single polyline.
+The GPKG carries its own **QGIS styles**, saved as each layer’s default style: drag the
+file into QGIS and the municipalities appear in the colours of their intermediate
+regions, boundaries and highways with the plate’s strokes, and names with a halo.
+Highway sections without a confirmed physical status sit in a legend rule that is
+switched off, as on the plate; tick it to see them. Other GIS software opens the layers
+as usual, without the style. To match the plate, stack them from top to bottom:
+`capital`, `rodovias`, `limite_estadual`, `regioes_intermediarias`,
+`regioes_imediatas` and `municipios`.
 
 The **CSV** holds the municipal table in UTF-8, ready to join with Census data or any
 dataset keyed on the seven-digit IBGE code.
@@ -56,10 +59,6 @@ dataset keyed on the seven-digit IBGE code.
    (903,208.0 km²).
 5. On the plate, geometries are simplified as a coverage (≈ 400 m), so the unit, its
    neighbours and the coastline share the same edges.
-
-Scripts: [`scripts/estados/preparar.py`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (data),
-[`scripts/estados/prancha.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (plate) and
-[`scripts/estados/readme.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (this sheet).
 
 ## Limitations
 

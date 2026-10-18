@@ -16,7 +16,7 @@ function iniciarTema() {
     claro: botao?.dataset.nomeClaro ?? 'papel',
     escuro: botao?.dataset.nomeEscuro ?? 'nanquim',
   };
-  const atualizar = () => $('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
+  const atualizar = () => $$('[data-tema-nome]').forEach((el) => (el.textContent = nomes[raiz.dataset.tema ?? 'claro']));
   atualizar();
   $$('[data-tema-botao]').forEach((b) =>
     b.addEventListener('click', () => {
@@ -36,10 +36,26 @@ function iniciarMenu() {
   const esq = document.querySelector<HTMLElement>('[data-esq]');
   const botao = document.querySelector<HTMLButtonElement>('[data-menu]');
   if (!esq || !botao) return;
-  botao.addEventListener('click', () => {
-    const aberto = esq.toggleAttribute('data-aberto');
+  const raiz = document.documentElement;
+  const definir = (aberto: boolean) => {
+    raiz.classList.toggle('menu-aberto', aberto);
     botao.setAttribute('aria-expanded', String(aberto));
+    botao.setAttribute('aria-label', (aberto ? botao.dataset.rotuloFechar : botao.dataset.rotuloAbrir) ?? 'Menu');
+    if (aberto) esq.parentElement?.scrollTo(0, 0);
+  };
+  botao.addEventListener('click', () => definir(!raiz.classList.contains('menu-aberto')));
+  // Esc fecha; escolher um link também (a página muda, mas âncoras na mesma página não).
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Escape' && raiz.classList.contains('menu-aberto')) {
+      definir(false);
+      botao.focus();
+    }
   });
+  esq.addEventListener('click', (ev) => {
+    if ((ev.target as Element).closest('a')) definir(false);
+  });
+  // Ao alargar a janela, o painel deixa de existir: fecha para não travar a rolagem.
+  matchMedia('(min-width: 860px)').addEventListener('change', (m) => m.matches && definir(false));
 }
 
 /* ---------- Citação: abas, data de acesso e cópia ------------------------ */
@@ -111,43 +127,40 @@ function selecionar(el: Element) {
   s?.addRange(r);
 }
 
-/* ---------- Painel direito acompanha o cartão em foco -------------------- */
-function iniciarPainel() {
-  const fichas = $$('[data-ficha-de]');
-  if (fichas.length < 2) return;
-  const cartoes = $$('[data-mapa]');
-  const indicador = document.querySelector<HTMLElement>('[data-painel-indice]');
-  let atual = fichas.find((f) => !f.hidden)?.dataset.fichaDe;
+/* ---------- Gaveta da ficha: abre pela direita ao clicar ----------------- */
+function iniciarGaveta() {
+  const gaveta = document.querySelector<HTMLDialogElement>('[data-gaveta]');
+  if (!gaveta || typeof gaveta.showModal !== 'function') return;
+  const corpo = gaveta.querySelector<HTMLElement>('[data-gaveta-corpo]');
+  const fichas = $$('[data-ficha-de]', gaveta);
+  let origem: HTMLElement | null = null;
 
-  const mostrar = (id: string) => {
-    if (id === atual) return;
-    atual = id;
-    fichas.forEach((f) => (f.hidden = f.dataset.fichaDe !== id));
-    if (indicador) {
-      const i = cartoes.findIndex((c) => c.dataset.mapa === id);
-      indicador.textContent = `${String(i + 1).padStart(2, '0')} / ${String(cartoes.length).padStart(2, '0')}`;
-    }
-  };
+  document.addEventListener('click', (ev) => {
+    const gatilho = (ev.target as Element).closest<HTMLElement>('[data-abrir-ficha]');
+    if (!gatilho) return;
+    const alvo = fichas.find((f) => f.dataset.fichaDe === gatilho.dataset.abrirFicha);
+    if (!alvo) return; // sem ficha nesta página: o link leva à página do mapa
+    ev.preventDefault();
+    fichas.forEach((f) => (f.hidden = f !== alvo));
+    origem = gatilho;
+    gaveta.showModal();
+    if (corpo) corpo.scrollTop = 0;
+    document.documentElement.style.overflow = 'hidden';
+  });
 
-  // O cartão "em foco" é o que cruza a faixa a ~35% da altura da janela.
-  const visiveis = new Map<string, number>();
-  const obs = new IntersectionObserver(
-    (entradas) => {
-      for (const e of entradas) {
-        const id = (e.target as HTMLElement).dataset.mapa!;
-        if (e.isIntersecting) visiveis.set(id, e.boundingClientRect.top);
-        else visiveis.delete(id);
-      }
-      const primeiro = cartoes.find((c) => visiveis.has(c.dataset.mapa!));
-      if (primeiro) mostrar(primeiro.dataset.mapa!);
-    },
-    { rootMargin: '-35% 0px -60% 0px' },
-  );
-  cartoes.forEach((c) => obs.observe(c));
+  gaveta.querySelector('[data-gaveta-fechar]')?.addEventListener('click', () => gaveta.close());
+  // Clique fora do painel (no fundo escurecido) fecha a gaveta.
+  gaveta.addEventListener('click', (ev) => {
+    if (ev.target === gaveta) gaveta.close();
+  });
+  gaveta.addEventListener('close', () => {
+    document.documentElement.style.overflow = '';
+    origem?.focus({ preventScroll: true });
+  });
 }
 
 iniciarTema();
 iniciarMenu();
 iniciarCitacoes();
-iniciarPainel();
+iniciarGaveta();
 iniciarVisor();

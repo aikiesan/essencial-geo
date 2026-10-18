@@ -8,7 +8,7 @@ tags: [lancamento, atlas, dados-abertos]
 
 O Essencial Geo começa hoje como três coisas ao mesmo tempo: um **feed** de mapas temáticos do
 Brasil, um **repositório** de dados abertos e um **portfólio** de cartografia que cresce em
-público. Cada prancha vem com os arquivos que a produziram (GeoPackage, DXF, CSV), com a
+público. Cada prancha vem com os arquivos que a produziram (GeoPackage, CSV, SVG), com a
 projeção e as fontes declaradas e, a partir dos mapas com dados reais, com um DOI próprio no
 Zenodo — para que possa ser citada num artigo, numa prancha de projeto ou no Lattes.
 
@@ -16,7 +16,7 @@ Zenodo — para que possa ser citada num artigo, numa prancha de projeto ou no L
 
 A prancha 001 abre a primeira série, **Brasil, estado por estado**: uma base cartográfica de cada
 unidade da federação, com municípios, regiões geográficas imediatas e intermediárias, limite e
-rodovias, em GeoPackage, DXF e CSV. Começa por São Paulo, hoje, e segue às segundas, quartas e
+rodovias, em GeoPackage já estilizado para o QGIS, CSV e SVG. Começa por São Paulo, hoje, e segue às segundas, quartas e
 sextas até 23 de dezembro, quando chega a Rondônia — 27 pranchas, todas com o mesmo desenho.
 
 ## Duas línguas, sempre

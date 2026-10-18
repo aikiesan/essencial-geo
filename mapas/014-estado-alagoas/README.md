@@ -4,6 +4,7 @@ titulo: "Alagoas"
 subtitulo: "Divisão territorial e rodovias"
 data: 2026-11-23
 categoria: divisao-territorial
+colecao: brasil-estado-por-estado
 tags: [brasil-estado-por-estado, alagoas, municipios, regioes-geograficas, rodovias, ibge]
 
 contexto: >-
@@ -28,9 +29,9 @@ fontes:
   - nome: "Natural Earth — países (só na prancha)"
     nome_en: "Natural Earth — countries (plate only)"
     url: https://www.naturalearthdata.com/
-crs: "SIRGAS 2000 (EPSG:4674) · DXF em Policônica SIRGAS (EPSG:5880)"
+crs: "SIRGAS 2000 (EPSG:4674)"
 epsg: 4674
-software: ["Python", "GeoPandas", "GDAL", "Node.js", "d3-geo"]
+software: ["Python", "GeoPandas", "GDAL", "QGIS", "Node.js", "d3-geo"]
 metodo: "Limites da Malha Municipal do IBGE, dissolvidos em regiões imediatas, intermediárias e limite estadual; rodovias recortadas pelo limite da unidade."
 
 camadas:
@@ -68,14 +69,9 @@ indicadores:
 downloads:
   - formato: gpkg
     url: https://github.com/aikiesan/essencial-geo/releases/download/estados-2025/al_divisao_territorial.gpkg.zip
-    rotulo: "Seis camadas, SIRGAS 2000"
-    rotulo_en: "Six layers, SIRGAS 2000"
+    rotulo: "Seis camadas, SIRGAS 2000, com estilos do QGIS"
+    rotulo_en: "Six layers, SIRGAS 2000, with QGIS styles"
     tamanho: "3,5 MB"
-  - formato: dxf
-    url: https://github.com/aikiesan/essencial-geo/releases/download/estados-2025/al_divisao_territorial.dxf.zip
-    rotulo: "Limites, rodovias e nomes, em metros (EPSG:5880)"
-    rotulo_en: "Boundaries, highways and names, in metres (EPSG:5880)"
-    tamanho: "2,6 MB"
   - formato: csv
     arquivo: dados/al_municipios.csv
     rotulo: "Municípios com códigos e regiões"
@@ -117,15 +113,18 @@ para baixar e começar a trabalhar.
 | `rodovias` | linha | federais e estaduais: `sigla`, `revestimento`, `situacao_fisica`, `n_pistas`, `pavimentada` |
 | `capital` | ponto | ponto indicativo, dentro do município (não é a sede) |
 
-O **GPKG** e o **DXF** vão compactados (ZIP) e ficam nos anexos da
+O **GPKG** vai compactado (ZIP) e fica nos anexos da
 [release `estados-2025`](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025)
 do repositório, junto com os das outras 26 unidades.
 
-O **DXF** está em metros (SIRGAS 2000 / Policônica, EPSG:5880 — o mesmo sistema para as
-27 unidades, de modo que as bases se encaixam no CAD). As camadas são
-`MUNICIPIOS_LIMITES`, `REGIOES_IMEDIATAS_LIMITES`, `REGIOES_INTERMEDIARIAS_LIMITES`,
-`LIMITE_ESTADUAL`, `RODOVIAS_FEDERAIS`, `RODOVIAS_ESTADUAIS`, `CAPITAL` e
-`MUNICIPIOS_NOMES` (texto). Cada limite comum aparece uma só vez, como uma polilinha.
+O GPKG já traz os **estilos do QGIS**, gravados como estilo padrão de cada camada: ao
+arrastar o arquivo para o QGIS, os municípios aparecem com as cores das regiões
+intermediárias, os limites e as rodovias com o traço da prancha e os nomes com halo.
+Os trechos de rodovia sem situação física confirmada ficam numa regra desligada da
+legenda, como na prancha; basta marcá-la para vê-los. Em outros SIGs as camadas abrem
+normalmente, sem o estilo. Para repetir a ordem da prancha, empilhe de cima para baixo
+`capital`, `rodovias`, `limite_estadual`, `regioes_intermediarias`,
+`regioes_imediatas` e `municipios`.
 
 O **CSV** traz a tabela dos municípios, em UTF-8, pronta para cruzar com dados do
 Censo ou de qualquer base que use o código IBGE de sete dígitos.
@@ -141,10 +140,6 @@ Censo ou de qualquer base que use o código IBGE de sete dígitos.
    (27.830,7 km²).
 5. Na prancha, as geometrias são simplificadas como cobertura (≈ 400 m), para que
    a unidade, as vizinhas e o litoral compartilhem as mesmas bordas.
-
-Scripts: [`scripts/estados/preparar.py`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/preparar.py) (dados),
-[`scripts/estados/prancha.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/prancha.mjs) (prancha) e
-[`scripts/estados/readme.mjs`](https://github.com/aikiesan/essencial-geo/blob/main/scripts/estados/readme.mjs) (esta ficha).
 
 ## Limitações
 

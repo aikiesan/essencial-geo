@@ -44,7 +44,7 @@ essencial-geo/
 │       ├── README.md        ← ficha técnica (frontmatter) + notas de método — fonte única de verdade
 │       ├── README.en.md     ← o mesmo texto em inglês (título, contexto, notas de método)
 │       ├── mapa_preview.png ← imagem do feed (~2400 px), e mapa_preview.en.png em inglês
-│       └── dados/           ← .csv (GPKG, DXF e SVG vão como anexos de release)
+│       └── dados/           ← .csv (GPKG e SVG vão como anexos de release)
 │
 ├── notas/                   ← novidades, bastidores, método: uma pasta por nota, pt.md + en.md
 ├── templates/mapa/          ← modelo copiado por `npm run novo-mapa`
@@ -106,9 +106,10 @@ em [`docs/ZENODO.md`](docs/ZENODO.md).
 
 As pranchas 001 a 027 formam a primeira série: uma base cartográfica de cada unidade da federação —
 municípios, regiões geográficas imediatas e intermediárias, limite e rodovias —, com os mesmos arquivos e o
-mesmo desenho, publicada às segundas, quartas e sextas de 17/10 a 23/12/2026. Tudo sai de três scripts em
-[`scripts/estados/`](scripts/estados/): `preparar.py` (dados), `prancha.mjs` (prancha PT e EN) e `readme.mjs`
-(fichas). O GeoPackage e o DXF de cada estado, compactados, ficam nos anexos da release
+mesmo desenho, publicada às segundas, quartas e sextas de 17/10 a 23/12/2026. Tudo sai de quatro scripts em
+[`scripts/estados/`](scripts/estados/): `preparar.py` (dados), `prancha.mjs` (prancha PT e EN), `estilos.py`
+(estilos do QGIS gravados no GeoPackage, com as cores da prancha) e `readme.mjs` (fichas). O GeoPackage de
+cada estado, compactado, fica nos anexos da release
 [`estados-2025`](https://github.com/aikiesan/essencial-geo/releases/tag/estados-2025).
 
 ## Licença

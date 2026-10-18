@@ -1,0 +1,48 @@
+---
+/** Andamento de uma coleção: "12 de 27 no ar", com uma barra fina. */
+import { linguaDe, t } from '../i18n';
+
+interface Props { feitos: number; total: number; compacto?: boolean }
+const { feitos, total, compacto = false } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
+const fracao = total > 0 ? Math.min(1, feitos / total) : 0;
+---
+
+<div class:list={['progresso', { 'progresso--compacto': compacto }]}>
+  <span class="progresso__barra" aria-hidden="true"><span style={`width:${(fracao * 100).toFixed(1)}%`}></span></span>
+  <span class="progresso__texto mono">
+    {feitos} {tx.colecoes.de} {total}{!compacto && ` ${tx.colecoes.noAr}`}
+  </span>
+</div>
+
+<style>
+  .progresso {
+    display: flex;
+    align-items: center;
+    gap: var(--e-3);
+  }
+  .progresso__barra {
+    flex: 1;
+    height: 4px;
+    background: var(--linha-fina);
+  }
+  .progresso__barra span {
+    display: block;
+    height: 100%;
+    background: var(--nilo);
+  }
+  .progresso__texto {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+    white-space: nowrap;
+  }
+  .progresso--compacto .progresso__barra {
+    height: 3px;
+  }
+  @media (forced-colors: active) {
+    .progresso__barra span {
+      forced-color-adjust: none;
+      background: Highlight;
+    }
+  }
+</style>

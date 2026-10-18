@@ -1,10 +1,12 @@
 ---
 /**
- * Esqueleto de todas as páginas: <head>, tema, três colunas e o visualizador.
- * Slots: padrão (coluna central) e "direita" (ficha técnica / painel).
+ * Esqueleto de todas as páginas: <head>, tema, a barra do topo, duas colunas, a gaveta da ficha e o visualizador.
+ * Slots: padrão (coluna central) e "direita" (fichas técnicas, abertas na gaveta).
  */
 import '../styles/global.css';
 import BarraEsquerda from '../components/BarraEsquerda.astro';
+import Topo from '../components/Topo.astro';
+import Rodape from '../components/Rodape.astro';
 import Icone from '../components/Icone.astro';
 import { SITE } from '../site.config';
 import { IDIOMA, caminhoEquivalente, linguaDe, t, url } from '../i18n';
@@ -83,6 +85,8 @@ const temDireita = Astro.slots.has('direita');
   <body>
     <a class="pular" href="#conteudo">{tx.geral.pular}</a>
 
+    <Topo categoriaAtiva={categoriaAtiva} />
+
     <div class="estrutura">
       <div class="col-esq">
         <BarraEsquerda categoriaAtiva={categoriaAtiva} />
@@ -90,16 +94,28 @@ const temDireita = Astro.slots.has('direita');
 
       <main class="col-centro" id="conteudo" tabindex="-1">
         <slot />
+        <Rodape />
       </main>
 
-      {
-        temDireita && (
-          <aside class="col-dir" aria-label={tx.ficha.rotulo}>
-            <slot name="direita" />
-          </aside>
-        )
-      }
     </div>
+
+    {
+      /* Ficha técnica numa gaveta que abre pela direita ao clicar em "Ficha, downloads e citação".
+         Sem JavaScript a gaveta não abre, e cada cartão mostra a ficha embutida (details). */
+      temDireita && (
+        <dialog class="gaveta" data-gaveta aria-label={tx.ficha.rotulo}>
+          <div class="gaveta__barra">
+            <p class="rotulo">{tx.ficha.rotulo}</p>
+            <button type="button" class="gaveta__fechar" data-gaveta-fechar aria-label={tx.gaveta.fechar}>
+              <Icone nome="fechar" tamanho={16} />
+            </button>
+          </div>
+          <div class="gaveta__corpo" data-gaveta-corpo>
+            <slot name="direita" />
+          </div>
+        </dialog>
+      )
+    }
 
     <dialog class="visor" data-visor aria-label={tx.visor.rotulo}>
       <div class="visor__barra">
@@ -133,6 +149,56 @@ const temDireita = Astro.slots.has('direita');
 </html>
 
 <style>
+  .gaveta {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(440px, 100vw);
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: 0;
+    border-left: 1px solid var(--linha);
+    background: var(--painel);
+    color: var(--tinta);
+    overflow: hidden;
+  }
+  .gaveta[open] {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .gaveta::backdrop {
+    background: rgb(26 33 26 / 0.32);
+  }
+  .gaveta__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--e-3);
+    padding: var(--e-2) var(--e-2) var(--e-2) var(--e-5);
+    border-bottom: 1px solid var(--linha);
+  }
+  .gaveta__barra p {
+    margin: 0;
+  }
+  .gaveta__fechar {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--linha);
+  }
+  .gaveta__fechar:hover {
+    background: var(--tinta);
+    color: var(--papel);
+  }
+  .gaveta__corpo {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
   .visor {
     width: 100vw;
     height: 100dvh;

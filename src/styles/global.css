@@ -80,8 +80,8 @@
   --e-7: 48px;
   --e-8: 64px;
 
-  --col-esq: 272px;
-  --col-dir: 344px;
+  --col-esq: 288px;
+  --topo: 56px;
   --feed-max: 760px;
 
   /* Grão de papel: ruído neutro quase imperceptível, sem tingir o fundo */
@@ -120,7 +120,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  scroll-padding-top: var(--e-6);
+  scroll-padding-top: calc(var(--topo) + var(--e-5));
 }
 
 body {
@@ -349,12 +349,32 @@ hr {
 .estrutura {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  min-height: 100vh;
+  min-height: calc(100vh - var(--topo));
 }
 
-.col-esq,
-.col-dir {
+.col-esq {
   min-width: 0;
+}
+
+/* Telas estreitas, com JavaScript: a coluna esquerda vira o painel do menu, por cima da página.
+   Sem JavaScript ela fica no fluxo, antes do conteúdo. */
+@media (max-width: 859px) {
+  .js .col-esq {
+    position: fixed;
+    inset: var(--topo) 0 0 0;
+    z-index: 35;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--painel);
+    display: none;
+  }
+  .js.menu-aberto .col-esq {
+    display: block;
+  }
+  .menu-aberto,
+  .menu-aberto body {
+    overflow: hidden;
+  }
 }
 
 .col-centro {
@@ -362,8 +382,15 @@ hr {
   padding: var(--e-5) var(--e-4) var(--e-8);
 }
 
-.col-dir {
-  display: none;
+/* Ficha técnica: com JavaScript abre na gaveta (botão .abrir-ficha); sem ele, embutida no cartão. */
+.abrir-ficha {
+  display: none !important;
+}
+.js .abrir-ficha {
+  display: inline-flex !important;
+}
+.js .so-estreito {
+  display: none !important;
 }
 
 @media (min-width: 860px) {
@@ -372,35 +399,15 @@ hr {
   }
   .col-esq {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: var(--topo);
+    height: calc(100vh - var(--topo));
     overflow-y: auto;
     background: var(--painel);
-    border-right: 1px solid var(--linha);
+    border-right: 1px solid var(--linha-fina);
     scrollbar-width: thin;
   }
   .col-centro {
     padding: var(--e-7) var(--e-6) var(--e-8);
-  }
-}
-
-@media (min-width: 1240px) {
-  .estrutura {
-    grid-template-columns: var(--col-esq) minmax(0, 1fr) var(--col-dir);
-  }
-  .col-dir {
-    display: block;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    background: var(--painel);
-    border-left: 1px solid var(--linha);
-    scrollbar-width: thin;
-  }
-  /* Em telas largas, a ficha vive na coluna direita, não dentro do cartão */
-  .so-estreito {
-    display: none !important;
   }
 }
 
@@ -497,6 +504,16 @@ hr {
   /* nomes de arquivo longos quebram dentro da célula: a página nunca rola de lado (WCAG 1.4.10) */
   overflow-wrap: anywhere;
 }
+/* Com espaço de sobra, as palavras ficam inteiras: nomes de camada e cabeçalhos não se partem ao meio. */
+@media (min-width: 860px) {
+  .prosa th,
+  .prosa td {
+    overflow-wrap: break-word;
+  }
+  .prosa th {
+    white-space: nowrap;
+  }
+}
 .prosa th {
   font-family: var(--f-mono);
   font-size: var(--t-xs);
@@ -521,7 +538,8 @@ hr {
     background: #fff;
   }
   .col-esq,
-  .col-dir,
+  .gaveta,
+  .abrir-ficha,
   .so-estreito,
   .divisor {
     display: none !important;

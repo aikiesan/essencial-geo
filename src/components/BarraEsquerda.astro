@@ -1,381 +1,399 @@
 ---
 /**
- * Coluna esquerda: identidade, seletor de língua, manifesto, estado da
- * plataforma, índice do atlas por categoria e ligações acadêmicas.
- * Em telas estreitas vira um cabeçalho com menu recolhível.
+ * Coluna esquerda: o que é o projeto e quem o faz, o próximo mapa, as coleções em
+ * andamento, os temas e a nota mais recente. As seções do site ficam na barra do topo.
+ * Em telas estreitas a coluna vira o painel do menu e repete as seções no alto.
  */
-import Logo from './Logo.astro';
 import Estrela from './Estrela.astro';
 import Icone from './Icone.astro';
-import { CATEGORIA_IDS, LINKS, SITE, type CategoriaId } from '../site.config';
-import { contarPorCategoria, mapasPublicados, numeroFormatado, proximaPublicacao } from '../lib/mapas';
+import Progresso from './Progresso.astro';
+import { AUTOR, CATEGORIA_IDS, LINKS, type CategoriaId } from '../site.config';
+import { contarPorCategoria, mapasPublicados, proximaPublicacao } from '../lib/mapas';
+import { colecoesNoAr } from '../lib/colecoes';
 import { notasPublicadas } from '../lib/notas';
-import { IDIOMA, LINGUAS, caminhoEquivalente, dataCurta, dataIso, linguaDe, rota, t, url } from '../i18n';
+import { dataCurta, dataExtensa, dataIso, linguaDe, rota, t } from '../i18n';
 
 interface Props {
-  /** Categoria ativa no filtro (undefined = todas). */
+  /** Categoria ativa (undefined = nenhuma; 'todas' = feed). */
   categoriaAtiva?: CategoriaId | 'todas';
 }
 const { categoriaAtiva } = Astro.props;
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
+const b = tx.barra;
+const n = tx.topo;
 
 const mapas = await mapasPublicados(lingua);
 const contagem = contarPorCategoria(mapas);
-const ultima = mapas[0]?.data.atualizado ?? mapas[0]?.data.data;
 const proxima = await proximaPublicacao();
 const ultimaNota = (await notasPublicadas(lingua))[0];
+const series = await colecoesNoAr(lingua);
+const temas = CATEGORIA_IDS.filter((id) => contagem[id] > 0);
 
-const p = tx.barra.perfis;
-const ligacoes = [
+const caminho = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const comeca = (destino: string) => caminho.startsWith(destino);
+// As mesmas seções do topo, para o menu em telas estreitas.
+const secoes = [
+  { icone: 'casa', rotulo: n.mapas, href: rota(lingua), ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) },
+  { icone: 'colecoes', rotulo: n.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')) },
+  { icone: 'lista', rotulo: n.indice, href: rota(lingua, 'indice'), ativo: comeca(rota(lingua, 'indice')) },
+  { icone: 'nota', rotulo: n.notas, href: rota(lingua, 'notas'), ativo: comeca(rota(lingua, 'notas')) },
+  { icone: 'info', rotulo: n.sobre, href: rota(lingua, 'sobre'), ativo: comeca(rota(lingua, 'sobre')) },
+] as const;
+
+const p = b.perfis;
+const perfis = [
   { rotulo: p.lattes, href: LINKS.lattes },
   { rotulo: p.orcid, href: LINKS.orcid },
   { rotulo: p.scholar, href: LINKS.scholar },
+  { rotulo: p.github, href: LINKS.github },
+  { rotulo: p.zenodo, href: LINKS.zenodo },
   { rotulo: p.fapesp, href: LINKS.fapesp },
   { rotulo: p.unicamp, href: LINKS.unicamp },
-  { rotulo: p.zenodo, href: LINKS.zenodo },
-  { rotulo: p.github, href: LINKS.github },
 ];
+const autor = AUTOR[lingua];
+const iniciais = AUTOR.nomeCompleto
+  .split(' ')
+  .filter((_, i, a) => i === 0 || i === a.length - 1)
+  .map((s) => s[0])
+  .join('');
 ---
 
-<header class="esq" data-esq>
-  <div class="esq__topo">
-    <a class="marca" href={rota(lingua)} aria-label={`${SITE.nome} — ${tx.geral.inicio}`}>
-      <Logo tamanho={38} />
-      <span class="marca__nome">Essencial<br />Geo</span>
-    </a>
-    <div class="esq__acoes">
-      <nav class="linguas" aria-label={tx.geral.lingua}>
-        {
-          LINGUAS.map((l) => (
-            <a
-              href={caminhoEquivalente(Astro.url.pathname, l)}
-              hreflang={IDIOMA[l].codigo}
-              lang={IDIOMA[l].codigo}
-              aria-current={l === lingua ? 'true' : undefined}
-              title={IDIOMA[l].nome}
-            >
-              {IDIOMA[l].sigla}
+<aside class="esq" id="col-esq" data-esq aria-label={b.projeto}>
+  <nav class="secoes" aria-label={n.navegacao}>
+    <ul role="list">
+      {
+        secoes.map((s) => (
+          <li>
+            <a href={s.href} aria-current={s.ativo ? 'page' : undefined}>
+              <Icone nome={s.icone} tamanho={16} />
+              {s.rotulo}
             </a>
-          ))
-        }
-      </nav>
-      <button type="button" class="esq__menu" data-menu aria-expanded="false" aria-controls="esq-corpo">
-        <Icone nome="menu" tamanho={16} />
-        <span class="rotulo">{tx.geral.menu}</span>
-      </button>
-    </div>
-  </div>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
 
-  <div class="esq__corpo" id="esq-corpo">
-    <span class="meandro" aria-hidden="true"></span>
-    <p class="lema">
-      <span class="lema__a">{tx.site.slogan}</span>
-      <span class="lema__b">{tx.site.complemento}</span>
-    </p>
-
-    <section aria-labelledby="t-manifesto">
-      <h2 class="secao" id="t-manifesto">{tx.barra.manifesto}</h2>
-      <p class="manifesto">{tx.barra.manifestoTexto}</p>
-      <a class="esq__link-sobre rotulo" href={rota(lingua, 'sobre')}>{tx.barra.lerManifesto} <Icone nome="seta" tamanho={11} /></a>
-    </section>
-
-    <section aria-labelledby="t-estado">
-      <h2 class="secao" id="t-estado">{tx.barra.estado}</h2>
-      <dl class="estado">
-        <div><dt>{tx.barra.mapas}</dt><dd class="mono">{numeroFormatado(mapas.length)}</dd></div>
-        {ultima && <div><dt>{tx.barra.atualizado}</dt><dd class="mono">{dataCurta(ultima, lingua)}</dd></div>}
-        {proxima && <div><dt>{tx.barra.proxima}</dt><dd class="mono estado__proxima">{dataCurta(proxima, lingua)}</dd></div>}
-        <div><dt>{tx.barra.cadencia}</dt><dd class="mono">{tx.site.cadencia}</dd></div>
-        <div><dt>{tx.barra.licenca}</dt><dd><a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a></dd></div>
-      </dl>
-    </section>
-
+  <section class="projeto" aria-labelledby="t-projeto">
+    <h2 class="secao" id="t-projeto">{b.projeto}</h2>
+    <p class="projeto__lema">{tx.site.slogan}</p>
+    <p class="projeto__texto">{b.objetivo}</p>
     {
-      ultimaNota && (
-        <section aria-labelledby="t-nota" class="nota-recente">
-          <h2 class="secao" id="t-nota">{tx.barra.notas}</h2>
-          <a href={rota(lingua, 'notas', ultimaNota.pasta)}>
-            <time class="rotulo" datetime={dataIso(ultimaNota.data.data)}>{dataCurta(ultimaNota.data.data, lingua)}</time>
-            <span class="nota-recente__titulo">{ultimaNota.data.titulo}</span>
-          </a>
-        </section>
+      proxima && (
+        <p class="proximo">
+          <Estrela tamanho={10} />
+          <span class="proximo__rotulo">{b.proximoMapa}</span>
+          <time datetime={dataIso(proxima)}>{dataExtensa(proxima, lingua).replace(/,? de \d{4}$| \d{4}$/, '')}</time>
+        </p>
       )
     }
+  </section>
 
-    <nav aria-labelledby="t-atlas">
-      <h2 class="secao" id="t-atlas">{tx.barra.atlas}</h2>
-      <ul class="indice" role="list">
-        <li>
-          <a href={rota(lingua)} aria-current={categoriaAtiva === 'todas' ? 'page' : undefined}>
-            <span>{tx.barra.todos}</span><span class="indice__guia" /><span class="mono">{numeroFormatado(mapas.length)}</span>
-          </a>
-        </li>
-        {
-          CATEGORIA_IDS.map((id) => (
-            <li class:list={{ vazio: contagem[id] === 0 }}>
-              <a href={rota(lingua, 'categoria', id)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
-                <span>{tx.categorias[id].rotulo}</span>
-                <span class="indice__guia" />
-                <span class="mono">{numeroFormatado(contagem[id])}</span>
-              </a>
-            </li>
-          ))
-        }
-        <li>
-          <a href={rota(lingua, 'indice')}>
-            <span class="italico">{tx.barra.indice}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
-          </a>
-        </li>
-        <li>
-          <a href={rota(lingua, 'notas')}>
-            <span class="italico">{tx.barra.notas}</span><span class="indice__guia" /><Icone nome="seta" tamanho={11} />
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <section aria-labelledby="t-ligacoes">
-      <h2 class="secao" id="t-ligacoes">{tx.barra.ligacoes}</h2>
-      <ul class="ligacoes" role="list">
-        {
-          ligacoes.map((l) => (
-            <li>
-              <a href={l.href} rel="noopener me">
-                {l.rotulo} <Icone nome="externo" tamanho={11} />
-              </a>
-            </li>
-          ))
-        }
-        <li>
-          <a href={url(lingua === 'en' ? 'en/rss.xml' : 'rss.xml')}>{tx.barra.rss} <Icone nome="rss" tamanho={11} /></a>
-        </li>
-      </ul>
-    </section>
-
-    <div class="esq__pe">
-      <span class="meandro esq__meandro" aria-hidden="true"></span>
-      <button
-        type="button"
-        class="botao botao--fantasma tema"
-        data-tema-botao
-        data-nome-claro={tx.geral.temaNomes.claro}
-        data-nome-escuro={tx.geral.temaNomes.escuro}
-      >
-        <Icone nome="tema" />
-        <span>{tx.geral.tema}: <span data-tema-nome>{tx.geral.temaNomes.claro}</span></span>
-      </button>
-      <p class="colofao rotulo">
-        <Estrela tamanho={9} /> {tx.site.colofao}<br />
-        22°49′S · 47°04′W · SIRGAS 2000
-      </p>
+  <section class="autor" aria-labelledby="t-autor-barra">
+    <h2 class="secao" id="t-autor-barra">{b.quemFaz}</h2>
+    <div class="autor__cabeca">
+      <span class="autor__monograma" aria-hidden="true">{iniciais}</span>
+      <div>
+        <p class="autor__nome">{AUTOR.nomeCompleto}</p>
+        <p class="autor__funcao">{autor.funcao.split(' · ')[0]}</p>
+      </div>
     </div>
-  </div>
-</header>
+    <p class="autor__resumo">{b.autorResumo}</p>
+    <ul class="perfis" role="list">
+      {
+        perfis.map((l) => (
+          <li>
+            <a href={l.href} rel="noopener me">{l.rotulo}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <a class="autor__mais" href={`${rota(lingua, 'sobre')}#t-autor`}>
+      {b.maisAutor} <Icone nome="seta" tamanho={12} />
+    </a>
+  </section>
+
+  {
+    series.length > 0 && (
+      <section aria-labelledby="t-colecoes">
+        <h2 class="secao" id="t-colecoes">{b.colecoes}</h2>
+        <ul class="series" role="list">
+          {series.map((c) => (
+            <li>
+              <a href={rota(lingua, 'colecoes', c.id)} aria-current={comeca(rota(lingua, 'colecoes', c.id)) ? 'page' : undefined}>
+                <span class="series__titulo">{c.titulo}</span>
+                <Progresso feitos={c.mapas.length} total={Math.max(c.ordem.length, c.mapas.length)} compacto />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    temas.length > 0 && (
+      <nav aria-labelledby="t-temas">
+        <h2 class="secao" id="t-temas">{b.temas}</h2>
+        <ul class="temas" role="list">
+          {temas.map((id) => (
+            <li>
+              <a href={rota(lingua, 'categoria', id)} aria-current={categoriaAtiva === id ? 'page' : undefined}>
+                {tx.categorias[id].curto} <span class="mono">{contagem[id]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
+
+  {
+    ultimaNota && (
+      <section aria-labelledby="t-nota" class="nota-recente">
+        <h2 class="secao" id="t-nota">{b.notas}</h2>
+        <a href={rota(lingua, 'notas', ultimaNota.pasta)}>
+          <time class="rotulo" datetime={dataIso(ultimaNota.data.data)}>{dataCurta(ultimaNota.data.data, lingua)}</time>
+          <span class="nota-recente__titulo">{ultimaNota.data.titulo}</span>
+        </a>
+      </section>
+    )
+  }
+
+  <footer class="esq__pe">
+    <span class="meandro esq__meandro" aria-hidden="true"></span>
+    <p class="colofao rotulo">
+      <span><Estrela tamanho={9} /> {tx.site.colofao}</span>
+      <span>22°49′S · 47°04′W · SIRGAS 2000</span>
+    </p>
+  </footer>
+</aside>
 
 <style>
   .esq {
-    padding: var(--e-4);
-    border-bottom: 1px solid var(--linha);
+    display: flex;
+    flex-direction: column;
+    gap: var(--e-6);
+    padding: var(--e-5) var(--e-4) var(--e-5);
     background: var(--painel);
-    position: sticky;
-    top: 0;
-    z-index: 20;
   }
-  .esq__topo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--e-3);
-  }
-  .marca {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--e-3);
-    text-decoration: none;
-  }
-  .marca__nome {
-    font-family: var(--f-titulo);
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    line-height: 1.05;
-  }
-  .esq__acoes {
-    display: flex;
-    align-items: center;
-    gap: var(--e-2);
+  .esq > section,
+  .esq > nav {
+    margin: 0;
   }
 
-  /* Seletor de língua: duas casas, a ativa em Wheat Sheaf */
-  .linguas {
+  /* Seções do site: só no menu de telas estreitas (no desktop estão no topo) */
+  .secoes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .secoes a {
     display: flex;
-    font-family: var(--f-mono);
-    font-size: var(--t-xs);
-    letter-spacing: 0.12em;
-  }
-  .linguas a {
-    display: grid;
-    place-items: center;
-    min-width: 36px;
-    min-height: 32px;
-    padding: 0 var(--e-2);
-    border: 1px solid var(--linha);
-    color: var(--tinta-3);
-    text-decoration: none;
-  }
-  .linguas a + a {
-    border-left: 0;
-  }
-  .linguas a:hover {
-    color: var(--acento);
-  }
-  .linguas a[aria-current] {
-    background: var(--trigo);
-    color: var(--tinta);
-    font-weight: 600;
-  }
-
-  .esq__menu {
-    display: inline-flex;
     align-items: center;
-    gap: var(--e-2);
-    min-height: 40px;
+    gap: var(--e-3);
+    min-height: 44px;
     padding: 0 var(--e-3);
-    border: 1px solid var(--linha);
-  }
-  .esq__menu .rotulo {
+    margin: 0 calc(-1 * var(--e-3));
+    font-size: var(--t-lg);
+    text-decoration: none;
     color: var(--tinta);
   }
-  /* Telas muito estreitas (320 px, ou zoom de 400%): o menu fica só com o ícone,
-     e o nome continua para leitores de tela. */
-  @media (max-width: 400px) {
-    .esq__menu {
-      min-width: 40px;
-      justify-content: center;
-      padding: 0;
-    }
-    .esq__menu .rotulo {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      white-space: nowrap;
-    }
-    .marca {
-      gap: var(--e-2);
-    }
-    .marca__nome {
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-    }
+  .secoes a :global(.icone) {
+    color: var(--tinta-3);
   }
-
-  .esq__corpo {
-    display: none;
-    padding-top: var(--e-5);
-    max-height: calc(100vh - 80px);
-    overflow-y: auto;
+  .secoes a[aria-current='page'] {
+    background: var(--trigo);
   }
-  .esq[data-aberto] .esq__corpo,
-  :global(html:not(.js)) .esq__corpo {
-    display: block;
-  }
-  .esq__corpo > section,
-  .esq__corpo > nav {
-    margin-bottom: var(--e-6);
-  }
-
   @media (min-width: 860px) {
-    .esq {
-      position: static;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-      padding: var(--e-6) var(--e-5) var(--e-5);
-      border-bottom: 0;
-    }
-    .esq__topo {
-      align-items: flex-start;
-    }
-    .esq__menu {
+    .secoes {
       display: none;
     }
-    .esq__corpo,
-    .esq[data-aberto] .esq__corpo,
-    :global(html:not(.js)) .esq__corpo {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      max-height: none;
-      overflow: visible;
-    }
   }
 
-  .lema {
-    margin: 0 0 var(--e-6);
-    padding: var(--e-4) 0;
-    border-bottom: 1px solid var(--linha);
+  /* O projeto: o lema em itálico e uma frase clara sobre o objetivo */
+  .projeto__lema {
+    margin: 0 0 var(--e-2);
     font-family: var(--f-titulo);
     font-style: italic;
-    font-size: 1.125rem;
-    line-height: 1.35;
+    font-size: 1.1875rem;
+    line-height: 1.3;
   }
-  .lema__a,
-  .lema__b {
-    display: block;
-  }
-  .lema__b {
-    color: var(--tinta-2);
-    font-size: 0.95rem;
-    margin-top: var(--e-1);
-  }
-
-  .manifesto {
-    font-size: var(--t-sm);
-    line-height: 1.6;
-    color: var(--tinta-2);
-    margin-bottom: var(--e-2);
-  }
-  .esq__link-sobre {
-    display: inline-flex;
-    align-items: center;
-    min-height: 24px;
-    gap: var(--e-1);
-    color: var(--tinta);
-    text-decoration: none;
-  }
-  .esq__link-sobre:hover {
-    color: var(--acento);
-  }
-
-  .estado {
+  .projeto__texto {
     margin: 0;
     font-size: var(--t-sm);
+    line-height: 1.65;
+    color: var(--tinta-2);
   }
-  .estado > div {
+  .proximo {
     display: flex;
-    justify-content: space-between;
-    gap: var(--e-3);
-    padding: var(--e-1) 0;
-    border-bottom: 1px solid var(--linha-fina);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-1) var(--e-2);
+    margin: var(--e-4) 0 0;
+    padding: var(--e-2) var(--e-3);
+    background: var(--papel);
+    font-size: var(--t-sm);
   }
-  .estado dt {
+  .proximo__rotulo {
     font-family: var(--f-mono);
     font-size: var(--t-xs);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--tinta-3);
   }
-  .estado dd {
-    margin: 0;
-    text-align: right;
+  .proximo time {
+    font-style: italic;
   }
-  .estado__proxima {
+  .proximo time::first-letter {
+    text-transform: uppercase;
+  }
+
+  /* Quem faz: monograma, nome, função e os perfis acadêmicos à vista */
+  .autor {
+    padding: var(--e-4);
+    margin-inline: calc(-1 * var(--e-2)) !important;
+    border: 1px solid var(--linha-fina);
+    background: var(--papel);
+  }
+  .autor__cabeca {
+    display: flex;
+    align-items: center;
+    gap: var(--e-3);
+  }
+  .autor__cabeca p {
+    margin: 0;
+  }
+  .autor__monograma {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background: var(--trigo);
+    box-shadow: inset 0 0 0 1px var(--cesto, var(--linha-fina));
+    font-family: var(--f-titulo);
+    font-style: italic;
+    font-size: 1.0625rem;
+    letter-spacing: 0.04em;
+    color: var(--tinta);
+  }
+  .autor__nome {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+    line-height: 1.2;
+  }
+  .autor__funcao {
+    margin-top: 2px !important;
+    font-size: var(--t-xs);
+    line-height: 1.4;
+    color: var(--tinta-3);
+  }
+  .autor__resumo {
+    margin: var(--e-3) 0;
+    font-size: var(--t-sm);
+    line-height: 1.6;
+    color: var(--tinta-2);
+  }
+  .perfis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 var(--e-3);
+    padding: 0;
+    list-style: none;
+  }
+  .perfis a {
+    display: inline-block;
+    padding: 3px 9px;
+    border: 1px solid var(--linha-fina);
+    background: var(--painel);
+    font-size: var(--t-xs);
+    color: var(--tinta-2);
+    text-decoration: none;
+    transition:
+      border-color 120ms linear,
+      color 120ms linear;
+  }
+  .perfis a:hover {
+    border-color: var(--acento);
     color: var(--acento);
+  }
+  .autor__mais {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    font-size: var(--t-sm);
+    color: var(--acento);
+    text-decoration: none;
+  }
+  .autor__mais:hover {
+    text-decoration: underline;
+  }
+
+  /* Coleções em andamento: linhas leves, como um sumário */
+  .series,
+  .temas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .series {
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .series a {
+    display: grid;
+    gap: 6px;
+    padding: var(--e-3) var(--e-2);
+    margin: 0 calc(-1 * var(--e-2));
+    border-top: 1px solid var(--linha-fina);
+    text-decoration: none;
+    transition: background-color 120ms linear;
+  }
+  .series a:hover {
+    background: var(--papel);
+  }
+  .series a:hover .series__titulo {
+    color: var(--acento);
+  }
+  .series a[aria-current='page'] {
+    background: var(--papel);
+    box-shadow: inset 2px 0 0 var(--nilo);
+  }
+  .series__titulo {
+    font-family: var(--f-titulo);
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    transition: color 120ms linear;
+  }
+
+  /* Temas: etiquetas */
+  .temas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2);
+  }
+  .temas a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-height: 30px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha-fina);
+    font-size: var(--t-sm);
+    text-decoration: none;
+  }
+  .temas a:hover {
+    border-color: var(--tinta-3);
+  }
+  .temas a[aria-current='page'] {
+    background: var(--trigo);
+    border-color: var(--trigo);
+  }
+  .temas .mono {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
   }
 
   /* Última nota: uma manchete curta, como o "último minuto" de um jornal */
@@ -388,7 +406,7 @@ const ligacoes = [
     text-decoration: none;
   }
   .nota-recente a:hover {
-    border-color: var(--linha);
+    border-color: var(--tinta-3);
     border-left-color: var(--nilo);
   }
   .nota-recente time {
@@ -400,70 +418,17 @@ const ligacoes = [
     line-height: 1.25;
   }
 
-  /* Índice de atlas: rótulo, guia pontilhada, número */
-  .indice,
-  .ligacoes {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: var(--t-sm);
-  }
-  .indice a {
-    display: flex;
-    align-items: baseline;
-    gap: var(--e-2);
-    padding: 5px 0;
-    text-decoration: none;
-  }
-  .indice__guia {
-    flex: 1;
-    border-bottom: 1px dotted var(--tinta-3);
-    transform: translateY(-0.25em);
-  }
-  .indice .mono {
-    font-size: 0.75rem;
-  }
-  .indice a:hover {
-    color: var(--acento);
-  }
-  .indice a[aria-current='page'] {
-    font-weight: 600;
-  }
-  .indice a[aria-current='page'] span:first-child::before {
-    content: '▸ ';
-    color: var(--acento);
-  }
-  .indice .vazio a {
-    color: var(--tinta-3);
-  }
-
-  .ligacoes li + li {
-    border-top: 1px solid var(--linha-fina);
-  }
-  .ligacoes a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 0;
-    text-decoration: none;
-  }
-  .ligacoes a:hover {
-    color: var(--acento);
-  }
-
   .esq__pe {
     margin-top: auto;
-    padding-top: var(--e-5);
   }
   .esq__meandro {
     margin-bottom: var(--e-4);
   }
-  .tema {
-    width: 100%;
-    justify-content: center;
-  }
   .colofao {
-    margin: var(--e-4) 0 0;
-    line-height: 1.7;
+    display: grid;
+    gap: 2px;
+    margin: 0;
+    font-size: 0.6875rem;
+    line-height: 1.6;
   }
 </style>

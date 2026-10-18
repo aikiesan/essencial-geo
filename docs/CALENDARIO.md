@@ -106,13 +106,46 @@ do Sudeste ao Norte.
 | 21/12 | seg | 026 | Acre (AC) | `026-estado-acre` |
 | 23/12 | qua | 027 | Rondônia (RO) | `027-estado-rondonia` |
 
-**Antes de cada saída:** o GPKG e o DXF compactados daquele estado precisam estar nos anexos da release
+**Antes de cada saída:** o GPKG compactado daquele estado precisa estar nos anexos da release
 `estados-2025` (veja [`PUBLICAR.md`](PUBLICAR.md#série-brasil-estado-por-estado)). Como a release sobe de
 uma vez, isso vale para a série inteira no primeiro push.
 
 **Notas sugeridas no meio da série:** 31/10 (agenda de novembro), 14/11 (método: como a prancha escolhe
 cores, rótulos e cantos sozinha), 28/11 (agenda de dezembro), 26/12 (bastidores: a série inteira numa
 prancha só).
+
+## Coleções temáticas (27/10 a 22/12/2026)
+
+Às terças e quintas, nos dias livres da série dos estados, saem as **coleções**: grupos de pranchas
+sobre um mesmo tema, reunidos numa página própria pelo campo `colecao:` do README (`/colecoes/<id>/`).
+O número da prancha na coleção vai no cabeçalho («BIOENERGIA EM SP · 1/4»); o subtítulo fica livre para
+uma frase («A colheita que acende a rede»), e cada coleção tem um friso desenhado no painel. Uma coleção sai inteira antes da seguinte, sempre às
+9h de Brasília (12h UTC).
+
+| Data | Dia | Nº | Coleção (`colecao:`) | Prancha | Fontes |
+| --- | --- | --- | --- | --- | --- |
+| 27/10 | ter | 028 | Bioenergia em SP (`bioenergia-sp`) 1/4 | Usinas de biogás em operação | MapBiomas, ANEEL — SIGA |
+| 29/10 | qui | 029 | Bioenergia em SP 2/4 | Rebanhos bovino, suíno e de galináceos | IBGE — PPM 2024 |
+| 03/11 | ter | 030 | Bioenergia em SP 3/4 | Cana-de-açúcar: área colhida e produção | IBGE — PAM 2024 |
+| 05/11 | qui | 031 | Bioenergia em SP 4/4 | Usinas sucroenergéticas e onde o resíduo está | ANEEL — SIGA, IBGE — PAM, EPE |
+| 10/11 | ter | 032 | RMC (`rmc`) 1/4 | Uso e cobertura da terra | MapBiomas — Coleção 10 (2024) |
+| 12/11 | qui | 033 | RMC 2/4 | Densidade de domicílios por setor censitário | IBGE — Censo 2022 |
+| 17/11 | ter | 034 | RMC 3/4 | Renda do responsável pelo domicílio | IBGE — Censo 2022 (setores) |
+| 19/11 | qui | 035 | RMC 4/4 | Hidrografia, nascentes e APPs de Campinas | FBDS |
+| 24/11 | ter | 036 | Água em SP (`agua-sp`) 1/3 | Bacias hidrográficas (UGRHIs) | SEADE, IBGE — Censo 2022, MapBiomas |
+| 26/11 | qui | 037 | Água em SP 2/3 | Rede de drenagem e as vertentes | WWF/HydroSHEDS — HydroRIVERS |
+| 01/12 | ter | 038 | Água em SP 3/3 | Unidades de conservação sobre as bacias | MMA — CNUC (via SEADE), SEADE |
+| 03/12 | qui | 039 | Relevo (`relevo`) 1/3 | Serra da Mantiqueira | Copernicus DEM GLO-90 |
+| 08/12 | ter | 040 | Relevo 2/3 | Serra do Mar | Copernicus DEM GLO-90 |
+| 10/12 | qui | 041 | Relevo 3/3 | Cuestas paulistas | Copernicus DEM GLO-90 |
+| 15/12 | ter | 042 | Energia elétrica no Brasil (`energia-eletrica`) 1/3 | Linhas de transmissão e subestações | EPE (via MapBiomas) |
+| 17/12 | qui | 043 | Energia elétrica no Brasil 2/3 | Usinas por fonte | ANEEL — SIGA (via MapBiomas) |
+| 22/12 | ter | 044 | Energia elétrica no Brasil 3/3 | Geração solar distribuída por habitante | ANEEL — GD (10/2026), IBGE — Censo 2022 |
+
+**Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
+uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
+`energia-eletrica-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
+do push da primeira prancha dela.
 
 ## Pautas para depois da série
 
@@ -138,4 +171,4 @@ território). Nenhum resultado está antecipado aqui: cada número sai dos dados
 | Usinas sucroenergéticas e área de cana: onde o resíduo está | energia | ANEEL — SIGA, IBGE — PAM |
 
 **Séries.** As pautas de energia formam uma série (biogás → rebanhos → cana → usinas), e as da RMC outra.
-Vale numerar a série no subtítulo (“Bioenergia em SP, 1/4”) e anunciar a sequência numa nota.
+Elas viraram as coleções acima: o número vai no cabeçalho da prancha e a sequência pode ser anunciada numa nota.

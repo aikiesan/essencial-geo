@@ -80,7 +80,7 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
     </nav>
   </div>
 
-  <div slot="direita" class="direita-mapa">
+  <div slot="direita" class="direita-mapa" data-ficha-de={mapa.id}>
     <Ficha mapa={mapa} cabecalho />
   </div>
 </Base>
@@ -135,6 +135,6 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
     line-height: 1.25;
   }
   .direita-mapa {
-    padding: var(--e-6) var(--e-5);
+    padding: var(--e-5);
   }
 </style>

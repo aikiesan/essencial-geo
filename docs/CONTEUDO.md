@@ -15,6 +15,7 @@ obrigatório faltar ou estiver no formato errado (o esquema está em `src/conten
 | `data` | sim | `2026-10-18` | Dia de publicação. Define a ordem do feed e a linha de data (“Publicado em domingo, 18 de outubro de 2026”). **Data futura = agendado:** o mapa entra no ar às 9h de Brasília desse dia. |
 | `atualizado` | não | `2026-11-02` | Última revisão. Aparece como “Atualizado em …” ao lado da data de publicação. |
 | `categoria` | sim | `censo-renda` | Uma das chaves de `CATEGORIAS` em `src/site.config.ts`. |
+| `colecao` | não | `bioenergia-sp` | Série a que o mapa pertence: uma das chaves de `COLECOES` em `src/site.config.ts` (título e resumo nas duas línguas ficam lá). O mapa entra na página da coleção (`/colecoes/<id>/`, `/en/collections/<id>/`), em ordem de número, e o cartão mostra “Coleção 3/27”. A coleção só ganha página quando a primeira prancha entra no ar. |
 | `tags` | não | `[renda, censo-2022]` | Viram palavras-chave no Zenodo e categorias no RSS. |
 | `rascunho` | não | `true` | Esconde do site publicado (aparece no `npm run dev`). |
 | `exemplo` | não | `true` | Selo “dados sintéticos”; bloqueia o envio ao Zenodo. |
@@ -111,7 +112,13 @@ tracejado “em breve”.
 ### Corpo do README
 
 Depois do frontmatter, o corpo em Markdown vira as **Notas de método** na página do mapa (o `# Título`
-inicial é para o GitHub e não se repete no site). Seções sugeridas: *Método*, *Arquivos*, *Como reproduzir*.
+inicial é para o GitHub e não se repete no site). Seções sugeridas: *O que vem nos arquivos*, *Método*,
+*Limitações*.
+
+A publicação leva **as camadas e a descrição do método**, nunca o código: a ficha não cita nem linka os
+scripts que geraram o mapa (eles ficam em `scripts/`, para uso interno), e o Zenodo recebe só os arquivos da
+pasta do mapa. O método se escreve em passos que qualquer pessoa repete num SIG — fonte, recorte,
+operação, classificação.
 
 ---
 

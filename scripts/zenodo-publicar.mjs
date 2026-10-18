@@ -136,7 +136,7 @@ async function listar(dir) {
   }
   return saida;
 }
-// Downloads hospedados nos anexos de uma release deste repositório (GPKG, DXF e SVG, fora do Git)
+// Downloads hospedados nos anexos de uma release deste repositório (GPKG e SVG, fora do Git)
 // também vão para o Zenodo: se não estiverem na pasta (ex.: no GitHub Actions), são baixados para dados/.
 const RELEASES = 'https://github.com/aikiesan/essencial-geo/releases/download/';
 const anexos = (fm.downloads ?? []).flatMap((d) => [d.url, d.url_en]).filter((u) => u?.startsWith(RELEASES));

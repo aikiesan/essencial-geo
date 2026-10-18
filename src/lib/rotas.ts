@@ -8,6 +8,7 @@ import { CATEGORIA_IDS } from '../site.config';
 import type { Lingua } from '../i18n';
 import { mapasPublicados } from './mapas';
 import { notasPublicadas } from './notas';
+import { colecoesNoAr } from './colecoes';
 
 export const POR_FOLHA = 8;
 
@@ -23,6 +24,10 @@ export const caminhosCategoria = (lingua: Lingua): GetStaticPaths =>
       props: { categoria, mapas: mapas.filter((m) => m.data.categoria === categoria) },
     }));
   };
+
+export const caminhosColecao = (lingua: Lingua): GetStaticPaths =>
+  async () =>
+    (await colecoesNoAr(lingua)).map((colecao) => ({ params: { colecao: colecao.id }, props: { colecao } }));
 
 export const caminhosMapa = (lingua: Lingua): GetStaticPaths =>
   async () => {

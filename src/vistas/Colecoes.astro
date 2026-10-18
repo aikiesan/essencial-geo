@@ -1,0 +1,192 @@
+---
+/** Página das coleções: as séries no ar, com capa e andamento, e as que estão em preparação. */
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import Progresso from '../components/Progresso.astro';
+import Icone from '../components/Icone.astro';
+import Estrela from '../components/Estrela.astro';
+import { colecoes } from '../lib/colecoes';
+import { dataCurta, linguaDe, rota, t } from '../i18n';
+
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const todas = await colecoes(lingua);
+const noAr = todas.filter((c) => c.mapas.length > 0);
+const emPreparo = todas.filter((c) => c.mapas.length === 0);
+---
+
+<Base titulo={tx.colecoes.titulo} descricao={tx.colecoes.descricao} imagem={noAr[0]?.mapas[0]?.data.imagem.src}>
+  <div class="feed">
+    <CabecalhoPagina sobre={tx.colecoes.sobre} titulo={tx.colecoes.titulo} linhaFina={tx.colecoes.fina} />
+
+    <ul class="colecoes" role="list">
+      {
+        noAr.map((c, i) => {
+          const capa = c.mapas[0];
+          const total = Math.max(c.ordem.length, c.mapas.length);
+          return (
+            <li class="colecao">
+              <a class="colecao__capa" href={rota(lingua, 'colecoes', c.id)} tabindex="-1" aria-hidden="true">
+                <Image
+                  src={capa.data.imagem}
+                  alt=""
+                  widths={[360, 560, 760]}
+                  sizes="(min-width: 860px) 340px, calc(100vw - 48px)"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  format="webp"
+                  quality={78}
+                />
+              </a>
+              <div class="colecao__texto">
+                <p class="rotulo">{tx.colecoes.colecao} · {total} {total === 1 ? tx.colecoes.mapa : tx.colecoes.mapas}</p>
+                <h2 class="colecao__titulo">
+                  <a href={rota(lingua, 'colecoes', c.id)}>{c.titulo}</a>
+                </h2>
+                <p class="colecao__resumo">{c.resumo}</p>
+                <Progresso feitos={c.mapas.length} total={total} />
+                {c.proxima && (
+                  <p class="colecao__proxima rotulo">
+                    {tx.colecoes.proxima}: <span class="mono">{dataCurta(c.proxima, lingua)}</span>
+                  </p>
+                )}
+                <a class="colecao__ver rotulo" href={rota(lingua, 'colecoes', c.id)}>
+                  {tx.colecoes.ver} <Icone nome="seta" tamanho={12} />
+                </a>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    {
+      emPreparo.length > 0 && (
+        <section class="preparo" aria-labelledby="t-preparo">
+          <h2 class="secao" id="t-preparo">{tx.colecoes.emPreparo}</h2>
+          <p class="preparo__fina">{tx.colecoes.emPreparoFina}</p>
+          <ul class="preparo__lista" role="list">
+            {emPreparo.map((c) => (
+              <li>
+                <Estrela tamanho={10} />
+                <div>
+                  <p class="preparo__titulo">{c.titulo}</p>
+                  <p class="preparo__resumo">{c.resumo}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .colecoes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--e-7);
+  }
+  .colecao {
+    display: grid;
+    gap: var(--e-5);
+  }
+  @media (min-width: 700px) {
+    .colecao {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+      align-items: start;
+    }
+  }
+  .colecao__capa {
+    display: block;
+    padding: 5px;
+    border: 1px solid var(--linha);
+    background: var(--folha);
+  }
+  .colecao__capa :global(img) {
+    width: 100%;
+    border: 1px solid var(--linha-fina);
+    background: #fff;
+  }
+  .colecao__capa:hover {
+    border-color: var(--acento);
+  }
+  .colecao__texto .rotulo {
+    margin: 0 0 var(--e-2);
+  }
+  .colecao__titulo {
+    font-size: var(--t-xl);
+  }
+  .colecao__titulo a {
+    text-decoration: none;
+  }
+  .colecao__titulo a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--acento);
+  }
+  .colecao__resumo {
+    margin: var(--e-3) 0 var(--e-4);
+    color: var(--tinta-2);
+    line-height: 1.6;
+  }
+  .colecao__proxima {
+    margin: var(--e-2) 0 0;
+  }
+  .colecao__ver {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    margin-top: var(--e-4);
+    padding: var(--e-2) 0;
+    color: var(--tinta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linha);
+  }
+  .colecao__ver:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+
+  .preparo {
+    margin-top: var(--e-8);
+  }
+  .preparo__fina {
+    color: var(--tinta-2);
+    font-style: italic;
+  }
+  .preparo__lista {
+    list-style: none;
+    margin: var(--e-4) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--e-4);
+  }
+  @media (min-width: 700px) {
+    .preparo__lista {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .preparo__lista li {
+    display: flex;
+    gap: var(--e-3);
+    padding: var(--e-4);
+    border: 1px dashed var(--linha-fina);
+  }
+  .preparo__lista li :global(.estrela) {
+    margin-top: 0.4em;
+    flex: none;
+  }
+  .preparo__titulo {
+    margin: 0 0 var(--e-1);
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+  }
+  .preparo__resumo {
+    margin: 0;
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+  }
+</style>
