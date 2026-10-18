@@ -1,0 +1,6 @@
+[
+ { "tema": "dornas", "numero": 89, "pasta": "089-co2-das-dornas-sp", "base": "sp_co2_dornas", "data": "2026-12-19", "categoria": "energia" },
+ { "tema": "biogas", "numero": 90, "pasta": "090-co2-do-biogas-sp", "base": "sp_co2_biogas", "data": "2026-12-20", "categoria": "energia" },
+ { "tema": "fossil", "numero": 91, "pasta": "091-co2-biogenico-e-fossil-sp", "base": "sp_co2_biogenico_fossil", "data": "2026-12-21", "categoria": "energia" },
+ { "tema": "ptx", "numero": 92, "pasta": "092-o-que-o-co2-pode-virar-sp", "base": "sp_co2_power_to_x", "data": "2026-12-22", "categoria": "energia" }
+]
