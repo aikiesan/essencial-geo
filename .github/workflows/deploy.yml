@@ -52,6 +52,9 @@ jobs:
       - run: npm run build
         env:
           ASTRO_TELEMETRY_DISABLED: 1
+          # Senha do painel de admin (/admin/), que sai cifrado (scripts/painel-cifrado.mjs).
+          # Sem o segredo, o painel fica fora do site.
+          ADMIN_SENHA: ${{ secrets.ADMIN_SENHA }}
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:

@@ -1,10 +1,13 @@
 ---
 /**
  * Painel de admin: todas as pranchas do atlas (no ar, agendadas e rascunhos), por coleção.
- * Injetado em /admin/ só no `npm run dev` (astro.config.mjs → painelAdmin); nunca vai para o build.
- * Em desenvolvimento as páginas das pranchas agendadas também existem, então cada cartão abre a prévia.
+ * Injetado em /admin/ pelo astro.config.mjs (painelAdmin): no `npm run dev`, aberto, e cada cartão
+ * abre a página da prancha, que em desenvolvimento existe mesmo antes da data.
+ * No build com ADMIN_SENHA, a página sai cifrada (scripts/painel-cifrado.mjs). Como as páginas das
+ * agendadas não existem no site publicado, a capa delas abre a prancha no visualizador; a imagem
+ * grande (data-grande) também é cifrada e só é baixada e decifrada no clique.
  */
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import CabecalhoPagina from '../components/CabecalhoPagina.astro';
@@ -14,24 +17,46 @@ import { dataCurta, dataIso, rota } from '../i18n';
 import { momentoPublicacao, noAr, numeroFormatado } from '../lib/mapas';
 
 type Status = 'publicada' | 'agendada' | 'rascunho';
+interface Grande {
+  src: string;
+  largura: number;
+  altura: number;
+}
 interface Prancha {
   m: CollectionEntry<'mapas'>;
   status: Status;
   temEn: boolean;
   /** Dias até entrar no ar (só agendadas). */
   faltam?: number;
+  /** Só no build: a prancha ainda não tem página no site, então abre no visualizador. */
+  visor?: { pt: Grande; en?: Grande };
 }
 
+const CIFRADO = !import.meta.env.DEV;
 const DIA = 86_400_000;
 const agora = new Date();
-const comEn = new Set((await getCollection('traducoes')).map((tr) => tr.id));
-const pranchas: Prancha[] = (await getCollection('mapas'))
-  .sort((a, b) => a.data.numero - b.data.numero)
-  .map((m) => {
-    const status: Status = m.data.rascunho ? 'rascunho' : noAr(m.data.data, agora) ? 'publicada' : 'agendada';
-    const faltam = status === 'agendada' ? Math.ceil((momentoPublicacao(m.data.data).getTime() - agora.getTime()) / DIA) : undefined;
-    return { m, status, temEn: comEn.has(m.id), faltam };
-  });
+const traducoes = new Map((await getCollection('traducoes')).map((tr) => [tr.id, tr]));
+
+async function grande(src: ImageMetadata): Promise<Grande> {
+  const largura = Math.min(src.width, 2000);
+  const img = await getImage({ src, width: largura, format: 'webp', quality: 80 });
+  return { src: img.src, largura, altura: Math.round((src.height * largura) / src.width) };
+}
+
+const pranchas: Prancha[] = await Promise.all(
+  (await getCollection('mapas'))
+    .sort((a, b) => a.data.numero - b.data.numero)
+    .map(async (m) => {
+      const status: Status = m.data.rascunho ? 'rascunho' : noAr(m.data.data, agora) ? 'publicada' : 'agendada';
+      const faltam = status === 'agendada' ? Math.ceil((momentoPublicacao(m.data.data).getTime() - agora.getTime()) / DIA) : undefined;
+      const imagemEn = traducoes.get(m.id)?.data.imagem;
+      const visor =
+        CIFRADO && status !== 'publicada'
+          ? { pt: await grande(m.data.imagem), en: imagemEn ? await grande(imagemEn) : undefined }
+          : undefined;
+      return { m, status, temEn: traducoes.has(m.id), faltam, visor };
+    }),
+);
 
 // Grupos na ordem de leitura do atlas (a menor prancha de cada coleção); as avulsas no fim.
 const grupos = new Map<ColecaoId | '', Prancha[]>();
@@ -70,16 +95,28 @@ if (proxima && ultima) {
     if (!porDia.has(dia)) vazios.push(dia);
   }
 }
+/** Atributos do botão que abre a prancha no visualizador (src/scripts/visor.ts). */
+const visor = (g: Grande, legenda: string) => ({
+  'data-lightbox': true,
+  'data-grande': g.src,
+  'data-largura': g.largura,
+  'data-altura': g.altura,
+  'data-legenda': legenda,
+});
 const curta = (iso: string) => dataCurta(new Date(`${iso}T00:00:00Z`));
 const ROTULO: Record<Status, string> = { publicada: 'No ar', agendada: 'Agendada', rascunho: 'Rascunho' };
 ---
 
-<Base titulo="Painel do atlas" descricao="Todas as pranchas, no ar e agendadas (só no npm run dev).">
+<Base titulo="Painel do atlas" descricao="Todas as pranchas, no ar e agendadas.">
   <div class="painel" data-filtro="todas">
     <CabecalhoPagina
-      sobre="Admin · só no npm run dev · fora do site publicado"
+      sobre={CIFRADO ? 'Admin · área com senha' : 'Admin · npm run dev'}
       titulo="Painel do atlas"
-      linhaFina="Todas as pranchas, no ar e agendadas, por coleção. Cada cartão abre a página da prancha, mesmo antes da data."
+      linhaFina={
+        CIFRADO
+          ? 'Todas as pranchas, no ar e agendadas, por coleção. As no ar abrem a página; as agendadas abrem a prancha no visualizador.'
+          : 'Todas as pranchas, no ar e agendadas, por coleção. Cada cartão abre a página da prancha, mesmo antes da data.'
+      }
     />
 
     <dl class="resumo">
@@ -152,23 +189,40 @@ const ROTULO: Record<Status, string> = { publicada: 'No ar', agendada: 'Agendada
               const d = p.m.data;
               return (
                 <li class:list={['carta', `carta--${p.status}`]} data-status={p.status}>
-                  <a class="carta__capa" href={rota('pt', 'mapas', p.m.id)} tabindex="-1" aria-hidden="true">
-                    <Image src={d.imagem} alt="" width={360} loading={i < 4 ? 'eager' : 'lazy'} format="webp" quality={72} />
-                  </a>
+                  {p.visor ? (
+                    <button type="button" class="carta__capa" {...visor(p.visor.pt, `Nº ${numeroFormatado(d.numero)} — ${d.titulo}`)} aria-label={`Ampliar a prancha: ${d.titulo}`}>
+                      <Image src={d.imagem} alt="" width={360} loading={i < 4 ? 'eager' : 'lazy'} format="webp" quality={72} />
+                    </button>
+                  ) : (
+                    <a class="carta__capa" href={rota('pt', 'mapas', p.m.id)} tabindex="-1" aria-hidden="true">
+                      <Image src={d.imagem} alt="" width={360} loading={i < 4 ? 'eager' : 'lazy'} format="webp" quality={72} />
+                    </a>
+                  )}
                   <p class="carta__meta rotulo">
                     <span class="mono">Nº {numeroFormatado(d.numero)}</span>
                     <span class:list={['selo', `selo--${p.status}`]}>{ROTULO[p.status]}</span>
                   </p>
                   <h3 class="carta__titulo">
-                    <a href={rota('pt', 'mapas', p.m.id)}>{d.titulo}</a>
+                    {p.visor ? d.titulo : <a href={rota('pt', 'mapas', p.m.id)}>{d.titulo}</a>}
                   </h3>
                   <p class="carta__data mono">
                     <time datetime={dataIso(d.data)}>{dataCurta(d.data)}</time>
                     {p.faltam !== undefined && <span> · em {p.faltam} {p.faltam === 1 ? 'dia' : 'dias'}</span>}
                   </p>
                   <p class="carta__linguas rotulo">
-                    <a href={rota('pt', 'mapas', p.m.id)}>PT</a>
-                    {p.temEn ? <a href={rota('en', 'mapas', p.m.id)}>EN</a> : <span class="falta">sem EN</span>}
+                    {p.visor ? (
+                      <>
+                        <button type="button" {...visor(p.visor.pt, `Nº ${numeroFormatado(d.numero)} — ${d.titulo}`)}>Prancha PT</button>
+                        {p.visor.en && (
+                          <button type="button" {...visor(p.visor.en, `Nº ${numeroFormatado(d.numero)} — ${traducoes.get(p.m.id)?.data.titulo ?? d.titulo}`)}>
+                            Prancha EN
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      <a href={rota('pt', 'mapas', p.m.id)}>PT</a>
+                    )}
+                    {!p.temEn ? <span class="falta">sem EN</span> : !p.visor && <a href={rota('en', 'mapas', p.m.id)}>EN</a>}
                   </p>
                 </li>
               );
@@ -187,6 +241,51 @@ const ROTULO: Record<Status, string> = { publicada: 'No ar', agendada: 'Agendada
       )
     }
   </div>
+  {
+    CIFRADO && (
+      <script is:inline>
+        // Prancha cifrada: baixa e decifra no clique, com a chave guardada pela página da senha
+        // (scripts/painel-cifrado.mjs), e entrega a imagem ao visualizador como data-src.
+        (() => {
+          const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+          async function chave() {
+            if (window.__chavePainel) return window.__chavePainel;
+            let bruta = null;
+            try {
+              bruta = sessionStorage.getItem('essencial-geo:painel-chave');
+            } catch {}
+            if (!bruta) throw new Error('abra o painel de novo com a senha');
+            return (window.__chavePainel = await crypto.subtle.importKey('raw', b64(bruta), 'AES-GCM', false, ['decrypt']));
+          }
+          document.addEventListener(
+            'click',
+            async (ev) => {
+              const btn = ev.target.closest('[data-cifrada]');
+              if (!btn) return;
+              ev.preventDefault();
+              ev.stopImmediatePropagation();
+              if (btn.dataset.carregando) return;
+              btn.dataset.carregando = '1';
+              try {
+                const r = await fetch(btn.dataset.cifrada);
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                const dados = new Uint8Array(await r.arrayBuffer());
+                const claro = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: dados.slice(0, 12) }, await chave(), dados.slice(12));
+                btn.dataset.src = URL.createObjectURL(new Blob([claro], { type: 'image/webp' }));
+                delete btn.dataset.cifrada;
+                btn.click();
+              } catch (e) {
+                btn.title = `Não foi possível abrir a prancha: ${e.message}`;
+              } finally {
+                delete btn.dataset.carregando;
+              }
+            },
+            true,
+          );
+        })();
+      </script>
+    )
+  }
 </Base>
 
 <script>
@@ -281,9 +380,17 @@ const ROTULO: Record<Status, string> = { publicada: 'No ar', agendada: 'Agendada
   }
   .carta__capa {
     display: block;
+    width: 100%;
     padding: 4px;
     border: 1px solid var(--linha);
     background: var(--folha);
+  }
+  button.carta__capa {
+    cursor: zoom-in;
+  }
+  [data-carregando] {
+    cursor: progress;
+    opacity: 0.6;
   }
   .carta--agendada .carta__capa {
     border-color: var(--nilo-tinta);
@@ -334,6 +441,18 @@ const ROTULO: Record<Status, string> = { publicada: 'No ar', agendada: 'Agendada
   }
   .carta__linguas a {
     color: var(--tinta-2);
+  }
+  .carta__linguas button {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: var(--tinta-2);
+    text-decoration: underline;
+    text-decoration-color: var(--linha-fina);
+    cursor: zoom-in;
   }
   .falta {
     color: var(--argila);
