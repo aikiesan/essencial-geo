@@ -1,0 +1,646 @@
+CD_MUN,NM_MUN,CD_RGINT,NM_RGINT,producao_2008,producao_2024,situacao_2024
+3500105,Adamantina,3505,Presidente Prudente,1300.0,1100.0,valor
+3500204,Adolfo,3507,São José do Rio Preto,15000.0,6000.0,valor
+3500303,Aguaí,3510,Campinas,1600.0,3600.0,valor
+3500709,Agudos,3503,Bauru,20160.0,317018.0,valor
+3500758,Alambari,3502,Sorocaba,490.0,2200.0,valor
+3500808,Alfredo Marcondes,3505,Presidente Prudente,0.0,0.0,zero
+3500907,Altair,3507,São José do Rio Preto,200.0,580.0,valor
+3501004,Altinópolis,3508,Ribeirão Preto,28500.0,57600.0,valor
+3501103,Alto Alegre,3506,Araçatuba,0.0,0.0,zero
+3501152,Alumínio,3502,Sorocaba,3000.0,13900.0,valor
+3501509,Alvinlândia,3504,Marília,750.0,0.0,zero
+3501608,Americana,3510,Campinas,0.0,,nao_disponivel
+3501905,Amparo,3510,Campinas,12000.0,5800.0,valor
+3501707,Américo Brasiliense,3509,Araraquara,2000.0,0.0,zero
+3501806,Américo de Campos,3507,São José do Rio Preto,1200.0,0.0,zero
+3502002,Analândia,3510,Campinas,1000.0,4200.0,valor
+3502101,Andradina,3506,Araçatuba,800.0,360.0,valor
+3502200,Angatuba,3502,Sorocaba,3650.0,75500.0,valor
+3502309,Anhembi,3503,Bauru,7634.0,20000.0,valor
+3502408,Anhumas,3505,Presidente Prudente,0.0,101.0,valor
+3502507,Aparecida,3511,São José dos Campos,0.0,0.0,zero
+3502606,Aparecida d'Oeste,3507,São José do Rio Preto,133.0,3100.0,valor
+3502705,Apiaí,3502,Sorocaba,1000.0,30000.0,valor
+3503000,Aramina,3508,Ribeirão Preto,0.0,0.0,zero
+3503109,Arandu,3502,Sorocaba,0.0,180.0,valor
+3503158,Arapeí,3511,São José dos Campos,6000.0,380.0,valor
+3503208,Araraquara,3509,Araraquara,18000.0,215000.0,valor
+3503307,Araras,3510,Campinas,30000.0,9300.0,valor
+3502754,Araçariguama,3502,Sorocaba,3150.0,,nao_disponivel
+3502804,Araçatuba,3506,Araçatuba,1100.0,560.0,valor
+3502903,Araçoiaba da Serra,3502,Sorocaba,10875.0,3100.0,valor
+3503356,Arco-Íris,3504,Marília,860.0,0.0,zero
+3503406,Arealva,3503,Bauru,630.0,51000.0,valor
+3503505,Areias,3511,São José dos Campos,1200.0,0.0,zero
+3503604,Areiópolis,3503,Bauru,0.0,6000.0,valor
+3503703,Ariranha,3507,São José do Rio Preto,0.0,15000.0,valor
+3503802,Artur Nogueira,3510,Campinas,6770.0,4012.0,valor
+3503901,Arujá,3501,São Paulo,0.0,0.0,zero
+3503950,Aspásia,3507,São José do Rio Preto,480.0,0.0,zero
+3504008,Assis,3504,Marília,6000.0,800.0,valor
+3504107,Atibaia,3510,Campinas,20000.0,110000.0,valor
+3504206,Auriflama,3506,Araçatuba,0.0,0.0,zero
+3504404,Avanhandava,3506,Araçatuba,0.0,0.0,zero
+3504503,Avaré,3502,Sorocaba,700.0,16039.0,valor
+3504305,Avaí,3503,Bauru,1600.0,6500.0,valor
+3504602,Bady Bassitt,3507,São José do Rio Preto,2210.0,1700.0,valor
+3504701,Balbinos,3503,Bauru,430.0,9600.0,valor
+3504909,Bananal,3511,São José dos Campos,15000.0,6400.0,valor
+3505104,Barbosa,3506,Araçatuba,0.0,300.0,valor
+3505203,Bariri,3503,Bauru,4000.0,5230.0,valor
+3505302,Barra Bonita,3503,Bauru,0.0,0.0,zero
+3505351,Barra do Chapéu,3502,Sorocaba,200.0,35000.0,valor
+3505401,Barra do Turvo,3502,Sorocaba,1600.0,10000.0,valor
+3505500,Barretos,3508,Ribeirão Preto,25160.0,42780.0,valor
+3505609,Barrinha,3508,Ribeirão Preto,0.0,0.0,zero
+3505708,Barueri,3501,São Paulo,,,nao_disponivel
+3505005,Barão de Antonina,3502,Sorocaba,,200.0,valor
+3505807,Bastos,3504,Marília,2150.0,0.0,zero
+3505906,Batatais,3508,Ribeirão Preto,0.0,0.0,zero
+3506003,Bauru,3503,Bauru,23940.0,18000.0,valor
+3506102,Bebedouro,3508,Ribeirão Preto,26000.0,58000.0,valor
+3506201,Bento de Abreu,3506,Araçatuba,0.0,210.0,valor
+3506300,Bernardino de Campos,3504,Marília,1500.0,23536.0,valor
+3506359,Bertioga,3501,São Paulo,,,nao_disponivel
+3506409,Bilac,3506,Araçatuba,480.0,70.0,valor
+3506508,Birigui,3506,Araçatuba,0.0,530.0,valor
+3506607,Biritiba Mirim,3501,São Paulo,2000.0,730.0,valor
+3506706,Boa Esperança do Sul,3509,Araraquara,20000.0,250000.0,valor
+3506805,Bocaina,3503,Bauru,0.0,13790.0,valor
+3506904,Bofete,3503,Bauru,28650.0,30000.0,valor
+3507001,Boituva,3502,Sorocaba,0.0,0.0,zero
+3507100,Bom Jesus dos Perdões,3510,Campinas,3500.0,14500.0,valor
+3507159,Bom Sucesso de Itararé,3502,Sorocaba,980.0,14000.0,valor
+3507308,Boracéia,3503,Bauru,0.0,600.0,valor
+3507407,Borborema,3509,Araraquara,15850.0,20100.0,valor
+3507456,Borebi,3503,Bauru,458.0,60000.0,valor
+3507209,Borá,3504,Marília,0.0,0.0,zero
+3507506,Botucatu,3503,Bauru,85000.0,725000.0,valor
+3507605,Bragança Paulista,3510,Campinas,50000.0,5500.0,valor
+3507704,Braúna,3506,Araçatuba,0.0,0.0,zero
+3507753,Brejo Alegre,3506,Araçatuba,0.0,0.0,zero
+3507803,Brodowski,3508,Ribeirão Preto,0.0,0.0,zero
+3507902,Brotas,3503,Bauru,4000.0,15500.0,valor
+3508009,Buri,3502,Sorocaba,2300.0,10000.0,valor
+3508108,Buritama,3506,Araçatuba,1700.0,290.0,valor
+3508207,Buritizal,3508,Ribeirão Preto,0.0,0.0,zero
+3504800,Bálsamo,3507,São José do Rio Preto,4700.0,0.0,zero
+3508405,Cabreúva,3510,Campinas,700.0,2500.0,valor
+3508306,Cabrália Paulista,3503,Bauru,74.0,343000.0,valor
+3508603,Cachoeira Paulista,3511,São José dos Campos,1000.0,900.0,valor
+3508702,Caconde,3510,Campinas,0.0,15000.0,valor
+3508801,Cafelândia,3503,Bauru,1120.0,1700.0,valor
+3508900,Caiabu,3505,Presidente Prudente,5.0,79.0,valor
+3509007,Caieiras,3501,São Paulo,0.0,0.0,zero
+3509106,Caiuá,3505,Presidente Prudente,0.0,0.0,zero
+3509205,Cajamar,3501,São Paulo,575.0,0.0,zero
+3509254,Cajati,3502,Sorocaba,0.0,500.0,valor
+3509304,Cajobi,3508,Ribeirão Preto,5220.0,23000.0,valor
+3509403,Cajuru,3508,Ribeirão Preto,0.0,4500.0,valor
+3509452,Campina do Monte Alegre,3502,Sorocaba,1030.0,48000.0,valor
+3509502,Campinas,3510,Campinas,25830.0,4515.0,valor
+3509601,Campo Limpo Paulista,3510,Campinas,7020.0,3870.0,valor
+3509809,Campos Novos Paulista,3504,Marília,0.0,0.0,zero
+3509700,Campos do Jordão,3511,São José dos Campos,7000.0,5100.0,valor
+3509908,Cananéia,3502,Sorocaba,0.0,20000.0,valor
+3509957,Canas,3511,São José dos Campos,0.0,0.0,zero
+3510153,Canitar,3504,Marília,0.0,0.0,zero
+3510302,Capela do Alto,3502,Sorocaba,0.0,0.0,zero
+3510401,Capivari,3510,Campinas,0.0,0.0,zero
+3510203,Capão Bonito,3502,Sorocaba,1700.0,270000.0,valor
+3510500,Caraguatatuba,3511,São José dos Campos,0.0,0.0,zero
+3510609,Carapicuíba,3501,São Paulo,,,nao_disponivel
+3510708,Cardoso,3507,São José do Rio Preto,0.0,0.0,zero
+3510807,Casa Branca,3510,Campinas,22000.0,150000.0,valor
+3511003,Castilho,3506,Araçatuba,0.0,72.0,valor
+3511102,Catanduva,3507,São José do Rio Preto,0.0,0.0,zero
+3511201,Catiguá,3507,São José do Rio Preto,2115.0,0.0,zero
+3508504,Caçapava,3511,São José dos Campos,0.0,4000.0,valor
+3511300,Cedral,3507,São José do Rio Preto,3800.0,2950.0,valor
+3511409,Cerqueira César,3502,Sorocaba,0.0,3500.0,valor
+3511508,Cerquilho,3502,Sorocaba,0.0,0.0,zero
+3511607,Cesário Lange,3502,Sorocaba,0.0,0.0,zero
+3511706,Charqueada,3510,Campinas,0.0,1380.0,valor
+3557204,Chavantes,3504,Marília,36.0,0.0,zero
+3511904,Clementina,3506,Araçatuba,100.0,0.0,zero
+3512001,Colina,3508,Ribeirão Preto,2210.0,1745.0,valor
+3512100,Colômbia,3508,Ribeirão Preto,2160.0,74290.0,valor
+3512209,Conchal,3510,Campinas,,16000.0,valor
+3512308,Conchas,3503,Bauru,0.0,2000.0,valor
+3512407,Cordeirópolis,3510,Campinas,8262.0,0.0,zero
+3512506,Coroados,3506,Araçatuba,0.0,0.0,zero
+3512605,Coronel Macedo,3502,Sorocaba,1000.0,0.0,zero
+3512704,Corumbataí,3510,Campinas,7650.0,2815.0,valor
+3512902,Cosmorama,3507,São José do Rio Preto,0.0,0.0,zero
+3512803,Cosmópolis,3510,Campinas,0.0,0.0,zero
+3513009,Cotia,3501,São Paulo,,,nao_disponivel
+3513108,Cravinhos,3508,Ribeirão Preto,0.0,560.0,valor
+3513207,Cristais Paulista,3508,Ribeirão Preto,5500.0,5600.0,valor
+3513405,Cruzeiro,3511,São José dos Campos,2600.0,2000.0,valor
+3513306,Cruzália,3504,Marília,600.0,0.0,zero
+3513504,Cubatão,3501,São Paulo,,,nao_disponivel
+3513603,Cunha,3511,São José dos Campos,7950.0,21000.0,valor
+3510906,Cássia dos Coqueiros,3508,Ribeirão Preto,0.0,0.0,zero
+3510005,Cândido Mota,3504,Marília,4000.0,260.0,valor
+3510104,Cândido Rodrigues,3509,Araraquara,2000.0,6000.0,valor
+3513702,Descalvado,3509,Araraquara,0.0,10000.0,valor
+3513801,Diadema,3501,São Paulo,,,nao_disponivel
+3513850,Dirce Reis,3507,São José do Rio Preto,845.0,0.0,zero
+3513900,Divinolândia,3510,Campinas,60.0,500.0,valor
+3514007,Dobrada,3509,Araraquara,850.0,0.0,zero
+3514106,Dois Córregos,3503,Bauru,1600.0,8000.0,valor
+3514205,Dolcinópolis,3507,São José do Rio Preto,640.0,0.0,zero
+3514304,Dourado,3509,Araraquara,0.0,380.0,valor
+3514403,Dracena,3505,Presidente Prudente,800.0,11500.0,valor
+3514502,Duartina,3503,Bauru,300.0,45000.0,valor
+3514601,Dumont,3508,Ribeirão Preto,0.0,0.0,zero
+3514700,Echaporã,3504,Marília,12000.0,8550.0,valor
+3514809,Eldorado,3502,Sorocaba,3000.0,870.0,valor
+3514908,Elias Fausto,3510,Campinas,0.0,0.0,zero
+3514924,Elisiário,3507,São José do Rio Preto,0.0,0.0,zero
+3514957,Embaúba,3507,São José do Rio Preto,1105.0,1000.0,valor
+3515004,Embu das Artes,3501,São Paulo,,,nao_disponivel
+3515103,Embu-Guaçu,3501,São Paulo,,,nao_disponivel
+3515129,Emilianópolis,3505,Presidente Prudente,0.0,0.0,zero
+3515152,Engenheiro Coelho,3510,Campinas,9920.0,6960.0,valor
+3515186,Espírito Santo do Pinhal,3510,Campinas,2250.0,16000.0,valor
+3515194,Espírito Santo do Turvo,3504,Marília,50.0,3500.0,valor
+3557303,Estiva Gerbi,3510,Campinas,100.0,185.0,valor
+3515202,Estrela d'Oeste,3507,São José do Rio Preto,4300.0,5800.0,valor
+3515301,Estrela do Norte,3505,Presidente Prudente,0.0,0.0,zero
+3515350,Euclides da Cunha Paulista,3505,Presidente Prudente,0.0,0.0,zero
+3515400,Fartura,3504,Marília,2900.0,0.0,zero
+3515608,Fernando Prestes,3507,São José do Rio Preto,950.0,0.0,zero
+3515509,Fernandópolis,3507,São José do Rio Preto,2100.0,570.0,valor
+3515657,Fernão,3504,Marília,1102.0,0.0,zero
+3515707,Ferraz de Vasconcelos,3501,São Paulo,0.0,0.0,zero
+3515806,Flora Rica,3505,Presidente Prudente,0.0,705.0,valor
+3515905,Floreal,3507,São José do Rio Preto,300.0,40.0,valor
+3516101,Florínea,3504,Marília,0.0,465.0,valor
+3516002,Flórida Paulista,3505,Presidente Prudente,0.0,0.0,zero
+3516200,Franca,3508,Ribeirão Preto,29494.0,33000.0,valor
+3516309,Francisco Morato,3501,São Paulo,,1280.0,valor
+3516408,Franco da Rocha,3501,São Paulo,550.0,302.0,valor
+3516507,Gabriel Monteiro,3506,Araçatuba,0.0,0.0,zero
+3516705,Garça,3504,Marília,1500.0,0.0,zero
+3516804,Gastão Vidigal,3506,Araçatuba,0.0,0.0,zero
+3516853,Gavião Peixoto,3509,Araraquara,8000.0,8900.0,valor
+3516903,General Salgado,3506,Araçatuba,0.0,0.0,zero
+3517000,Getulina,3504,Marília,9000.0,1500.0,valor
+3517109,Glicério,3506,Araçatuba,0.0,0.0,zero
+3517307,Guaimbê,3504,Marília,900.0,940.0,valor
+3517208,Guaiçara,3503,Bauru,287.0,3400.0,valor
+3517604,Guapiara,3502,Sorocaba,1400.0,10000.0,valor
+3517505,Guapiaçu,3507,São José do Rio Preto,2200.0,2620.0,valor
+3517901,Guaraci,3508,Ribeirão Preto,0.0,55842.0,valor
+3518008,Guarani d'Oeste,3507,São José do Rio Preto,820.0,200.0,valor
+3518107,Guarantã,3503,Bauru,1200.0,800.0,valor
+3518206,Guararapes,3506,Araçatuba,0.0,0.0,zero
+3518305,Guararema,3501,São Paulo,3000.0,7200.0,valor
+3518404,Guaratinguetá,3511,São José dos Campos,0.0,50.0,valor
+3517802,Guaraçaí,3506,Araçatuba,140.0,0.0,zero
+3518503,Guareí,3502,Sorocaba,1650.0,2000.0,valor
+3518602,Guariba,3508,Ribeirão Preto,0.0,0.0,zero
+3518701,Guarujá,3501,São Paulo,,,nao_disponivel
+3518800,Guarulhos,3501,São Paulo,10700.0,2900.0,valor
+3517703,Guará,3508,Ribeirão Preto,0.0,0.0,zero
+3518859,Guatapará,3508,Ribeirão Preto,0.0,0.0,zero
+3517406,Guaíra,3508,Ribeirão Preto,0.0,0.0,zero
+3518909,Guzolândia,3506,Araçatuba,0.0,0.0,zero
+3516606,Gália,3504,Marília,4050.0,0.0,zero
+3519006,Herculândia,3504,Marília,1650.0,0.0,zero
+3519055,Holambra,3510,Campinas,3500.0,800.0,valor
+3519071,Hortolândia,3510,Campinas,0.0,,nao_disponivel
+3519105,Iacanga,3503,Bauru,4400.0,50000.0,valor
+3519204,Iacri,3504,Marília,2050.0,1550.0,valor
+3519253,Iaras,3502,Sorocaba,0.0,21000.0,valor
+3519303,Ibaté,3509,Araraquara,680.0,0.0,zero
+3519501,Ibirarema,3504,Marília,0.0,0.0,zero
+3519402,Ibirá,3507,São José do Rio Preto,1300.0,920.0,valor
+3519600,Ibitinga,3509,Araraquara,15600.0,7900.0,valor
+3519709,Ibiúna,3502,Sorocaba,3940.0,10400.0,valor
+3519808,Icém,3507,São José do Rio Preto,1920.0,3250.0,valor
+3519907,Iepê,3505,Presidente Prudente,0.0,0.0,zero
+3520103,Igarapava,3508,Ribeirão Preto,0.0,6000.0,valor
+3520202,Igaratá,3511,São José dos Campos,200.0,4000.0,valor
+3520004,Igaraçu do Tietê,3503,Bauru,0.0,0.0,zero
+3520301,Iguape,3502,Sorocaba,2700.0,25000.0,valor
+3520426,Ilha Comprida,3502,Sorocaba,,,nao_disponivel
+3520442,Ilha Solteira,3506,Araçatuba,0.0,0.0,zero
+3520400,Ilhabela,3511,São José dos Campos,0.0,0.0,zero
+3520509,Indaiatuba,3510,Campinas,3250.0,4700.0,valor
+3520608,Indiana,3505,Presidente Prudente,1100.0,220.0,valor
+3520707,Indiaporã,3507,São José do Rio Preto,1280.0,505.0,valor
+3520806,Inúbia Paulista,3505,Presidente Prudente,0.0,0.0,zero
+3520905,Ipaussu,3504,Marília,229.0,4000.0,valor
+3521002,Iperó,3502,Sorocaba,0.0,3500.0,valor
+3521101,Ipeúna,3510,Campinas,1980.0,2758.0,valor
+3521150,Ipiguá,3507,São José do Rio Preto,3150.0,520.0,valor
+3521200,Iporanga,3502,Sorocaba,0.0,23000.0,valor
+3521309,Ipuã,3508,Ribeirão Preto,0.0,0.0,zero
+3521408,Iracemápolis,3510,Campinas,0.0,0.0,zero
+3521606,Irapuru,3505,Presidente Prudente,50.0,0.0,zero
+3521507,Irapuã,3507,São José do Rio Preto,1880.0,4000.0,valor
+3521705,Itaberá,3502,Sorocaba,0.0,500.0,valor
+3521903,Itajobi,3507,São José do Rio Preto,2750.0,35000.0,valor
+3522000,Itaju,3503,Bauru,0.0,0.0,zero
+3522109,Itanhaém,3501,São Paulo,,1000.0,valor
+3522158,Itaoca,3502,Sorocaba,175.0,2000.0,valor
+3522208,Itapecerica da Serra,3501,São Paulo,,,nao_disponivel
+3522307,Itapetininga,3502,Sorocaba,11440.0,67000.0,valor
+3522406,Itapeva,3502,Sorocaba,900.0,35000.0,valor
+3522505,Itapevi,3501,São Paulo,,,nao_disponivel
+3522604,Itapira,3510,Campinas,15000.0,8500.0,valor
+3522653,Itapirapuã Paulista,3502,Sorocaba,1000.0,70000.0,valor
+3522802,Itaporanga,3502,Sorocaba,1230.0,950.0,valor
+3523008,Itapura,3506,Araçatuba,0.0,0.0,zero
+3522901,Itapuí,3503,Bauru,0.0,0.0,zero
+3523107,Itaquaquecetuba,3501,São Paulo,0.0,0.0,zero
+3523206,Itararé,3502,Sorocaba,2538.0,9000.0,valor
+3523305,Itariri,3501,São Paulo,0.0,,nao_disponivel
+3523404,Itatiba,3510,Campinas,3000.0,3350.0,valor
+3523503,Itatinga,3503,Bauru,103150.0,750000.0,valor
+3521804,Itaí,3502,Sorocaba,1300.0,1180.0,valor
+3523602,Itirapina,3509,Araraquara,4000.0,3506.0,valor
+3523701,Itirapuã,3508,Ribeirão Preto,0.0,550.0,valor
+3523800,Itobi,3510,Campinas,0.0,0.0,zero
+3523909,Itu,3502,Sorocaba,2660.0,1360.0,valor
+3524006,Itupeva,3510,Campinas,4100.0,1800.0,valor
+3524105,Ituverava,3508,Ribeirão Preto,0.0,0.0,zero
+3522703,Itápolis,3509,Araraquara,40000.0,41500.0,valor
+3524204,Jaborandi,3508,Ribeirão Preto,0.0,0.0,zero
+3524303,Jaboticabal,3508,Ribeirão Preto,1500.0,0.0,zero
+3524402,Jacareí,3511,São José dos Campos,9000.0,4000.0,valor
+3524501,Jaci,3507,São José do Rio Preto,4600.0,1000.0,valor
+3524600,Jacupiranga,3502,Sorocaba,200.0,2500.0,valor
+3524709,Jaguariúna,3510,Campinas,2000.0,1600.0,valor
+3524808,Jales,3507,São José do Rio Preto,6072.0,3500.0,valor
+3524907,Jambeiro,3511,São José dos Campos,0.0,2500.0,valor
+3525003,Jandira,3501,São Paulo,,,nao_disponivel
+3525102,Jardinópolis,3508,Ribeirão Preto,3600.0,3600.0,valor
+3525201,Jarinu,3510,Campinas,725.0,1255.0,valor
+3525300,Jaú,3503,Bauru,0.0,830.0,valor
+3525409,Jeriquara,3508,Ribeirão Preto,3000.0,2500.0,valor
+3525508,Joanópolis,3510,Campinas,8500.0,4000.0,valor
+3525706,José Bonifácio,3507,São José do Rio Preto,6800.0,0.0,zero
+3525607,João Ramalho,3505,Presidente Prudente,0.0,0.0,zero
+3525854,Jumirim,3502,Sorocaba,,0.0,zero
+3525904,Jundiaí,3510,Campinas,3787.0,2240.0,valor
+3526001,Junqueirópolis,3505,Presidente Prudente,850.0,4000.0,valor
+3526209,Juquitiba,3501,São Paulo,,,nao_disponivel
+3526100,Juquiá,3502,Sorocaba,6920.0,7000.0,valor
+3525805,Júlio Mesquita,3504,Marília,0.0,0.0,zero
+3526308,Lagoinha,3511,São José dos Campos,154.0,7750.0,valor
+3526407,Laranjal Paulista,3510,Campinas,0.0,350.0,valor
+3526605,Lavrinhas,3511,São José dos Campos,1600.0,550.0,valor
+3526506,Lavínia,3506,Araçatuba,1800.0,200.0,valor
+3526704,Leme,3510,Campinas,0.0,15000.0,valor
+3526803,Lençóis Paulista,3503,Bauru,34180.0,60000.0,valor
+3526902,Limeira,3510,Campinas,29105.0,5708.0,valor
+3527009,Lindóia,3510,Campinas,250.0,5000.0,valor
+3527108,Lins,3503,Bauru,900.0,0.0,zero
+3527207,Lorena,3511,São José dos Campos,9604.0,1400.0,valor
+3527256,Lourdes,3506,Araçatuba,0.0,0.0,zero
+3527306,Louveira,3510,Campinas,1120.0,0.0,zero
+3527504,Lucianópolis,3503,Bauru,631.0,110000.0,valor
+3527405,Lucélia,3505,Presidente Prudente,900.0,350.0,valor
+3527702,Luiziânia,3506,Araçatuba,0.0,0.0,zero
+3527801,Lupércio,3504,Marília,900.0,1250.0,valor
+3527900,Lutécia,3504,Marília,470.0,340.0,valor
+3527603,Luís Antônio,3508,Ribeirão Preto,1200.0,20000.0,valor
+3528007,Macatuba,3503,Bauru,0.0,0.0,zero
+3528106,Macaubal,3507,São José do Rio Preto,1500.0,1000.0,valor
+3528205,Macedônia,3507,São José do Rio Preto,1100.0,1200.0,valor
+3528304,Magda,3506,Araçatuba,0.0,0.0,zero
+3528403,Mairinque,3502,Sorocaba,5650.0,7000.0,valor
+3528502,Mairiporã,3501,São Paulo,0.0,0.0,zero
+3528601,Manduri,3502,Sorocaba,1189.0,0.0,zero
+3528700,Marabá Paulista,3505,Presidente Prudente,250.0,0.0,zero
+3528809,Maracaí,3504,Marília,500.0,710.0,valor
+3528858,Marapoama,3507,São José do Rio Preto,0.0,0.0,zero
+3529104,Marinópolis,3507,São José do Rio Preto,1045.0,3900.0,valor
+3528908,Mariápolis,3505,Presidente Prudente,0.0,0.0,zero
+3529203,Martinópolis,3505,Presidente Prudente,530.0,420.0,valor
+3529005,Marília,3504,Marília,12000.0,12200.0,valor
+3529302,Matão,3509,Araraquara,9000.0,4500.0,valor
+3529401,Mauá,3501,São Paulo,0.0,0.0,zero
+3529500,Mendonça,3507,São José do Rio Preto,3900.0,7000.0,valor
+3529609,Meridiano,3507,São José do Rio Preto,520.0,370.0,valor
+3529658,Mesópolis,3507,São José do Rio Preto,490.0,0.0,zero
+3529708,Miguelópolis,3508,Ribeirão Preto,0.0,0.0,zero
+3529807,Mineiros do Tietê,3503,Bauru,0.0,100.0,valor
+3530003,Mira Estrela,3507,São José do Rio Preto,1140.0,5000.0,valor
+3529906,Miracatu,3502,Sorocaba,2100.0,800.0,valor
+3530102,Mirandópolis,3506,Araçatuba,5500.0,0.0,zero
+3530201,Mirante do Paranapanema,3505,Presidente Prudente,210.0,880.0,valor
+3530300,Mirassol,3507,São José do Rio Preto,2700.0,1600.0,valor
+3530409,Mirassolândia,3507,São José do Rio Preto,4100.0,680.0,valor
+3530508,Mococa,3510,Campinas,250.0,20000.0,valor
+3530706,Mogi Guaçu,3510,Campinas,6000.0,7500.0,valor
+3530805,Mogi Mirim,3510,Campinas,6000.0,6500.0,valor
+3530607,Mogi das Cruzes,3501,São Paulo,17500.0,10200.0,valor
+3530904,Mombuca,3510,Campinas,65.0,0.0,zero
+3531100,Mongaguá,3501,São Paulo,,,nao_disponivel
+3531209,Monte Alegre do Sul,3510,Campinas,4500.0,3200.0,valor
+3531308,Monte Alto,3508,Ribeirão Preto,1500.0,0.0,zero
+3531407,Monte Aprazível,3507,São José do Rio Preto,2400.0,4500.0,valor
+3531506,Monte Azul Paulista,3508,Ribeirão Preto,6300.0,10900.0,valor
+3531605,Monte Castelo,3505,Presidente Prudente,0.0,430.0,valor
+3531803,Monte Mor,3510,Campinas,0.0,32000.0,valor
+3531704,Monteiro Lobato,3511,São José dos Campos,0.0,0.0,zero
+3531001,Monções,3506,Araçatuba,0.0,0.0,zero
+3531902,Morro Agudo,3508,Ribeirão Preto,0.0,10.0,valor
+3532009,Morungaba,3510,Campinas,700.0,2120.0,valor
+3532058,Motuca,3509,Araraquara,3800.0,0.0,zero
+3532108,Murutinga do Sul,3506,Araçatuba,0.0,50.0,valor
+3532157,Nantes,3505,Presidente Prudente,0.0,45.0,valor
+3532207,Narandiba,3505,Presidente Prudente,0.0,0.0,zero
+3532306,Natividade da Serra,3511,São José dos Campos,256.0,8400.0,valor
+3532405,Nazaré Paulista,3510,Campinas,3500.0,6600.0,valor
+3532504,Neves Paulista,3507,São José do Rio Preto,380.0,0.0,zero
+3532603,Nhandeara,3507,São José do Rio Preto,480.0,0.0,zero
+3532702,Nipoã,3507,São José do Rio Preto,500.0,0.0,zero
+3532801,Nova Aliança,3507,São José do Rio Preto,5930.0,2000.0,valor
+3532827,Nova Campina,3502,Sorocaba,100.0,13000.0,valor
+3532843,Nova Canaã Paulista,3507,São José do Rio Preto,291.0,4700.0,valor
+3532868,Nova Castilho,3506,Araçatuba,0.0,0.0,zero
+3532900,Nova Europa,3509,Araraquara,6000.0,2900.0,valor
+3533007,Nova Granada,3507,São José do Rio Preto,1040.0,56000.0,valor
+3533106,Nova Guataporanga,3505,Presidente Prudente,0.0,400.0,valor
+3533205,Nova Independência,3506,Araçatuba,0.0,0.0,zero
+3533304,Nova Luzitânia,3506,Araçatuba,0.0,160.0,valor
+3533403,Nova Odessa,3510,Campinas,0.0,0.0,zero
+3533254,Novais,3507,São José do Rio Preto,5110.0,600.0,valor
+3533502,Novo Horizonte,3507,São José do Rio Preto,12100.0,18000.0,valor
+3533601,Nuporanga,3508,Ribeirão Preto,0.0,0.0,zero
+3533700,Ocauçu,3504,Marília,1125.0,1335.0,valor
+3533908,Olímpia,3508,Ribeirão Preto,3300.0,13360.0,valor
+3534005,Onda Verde,3507,São José do Rio Preto,100.0,3850.0,valor
+3534104,Oriente,3504,Marília,4000.0,1890.0,valor
+3534203,Orindiúva,3507,São José do Rio Preto,1000.0,0.0,zero
+3534302,Orlândia,3508,Ribeirão Preto,0.0,500.0,valor
+3534401,Osasco,3501,São Paulo,,,nao_disponivel
+3534500,Oscar Bressane,3504,Marília,3000.0,0.0,zero
+3534609,Osvaldo Cruz,3505,Presidente Prudente,300.0,420.0,valor
+3534708,Ourinhos,3504,Marília,60.0,900.0,valor
+3534807,Ouro Verde,3505,Presidente Prudente,2500.0,0.0,zero
+3534757,Ouroeste,3507,São José do Rio Preto,1100.0,620.0,valor
+3534906,Pacaembu,3505,Presidente Prudente,0.0,0.0,zero
+3535002,Palestina,3507,São José do Rio Preto,600.0,22752.0,valor
+3535101,Palmares Paulista,3507,São José do Rio Preto,0.0,0.0,zero
+3535200,Palmeira d'Oeste,3507,São José do Rio Preto,3010.0,500.0,valor
+3535309,Palmital,3504,Marília,0.0,0.0,zero
+3535408,Panorama,3505,Presidente Prudente,0.0,0.0,zero
+3535507,Paraguaçu Paulista,3504,Marília,500.0,430.0,valor
+3535606,Paraibuna,3511,São José dos Campos,0.0,20000.0,valor
+3535804,Paranapanema,3502,Sorocaba,0.0,490.0,valor
+3535903,Paranapuã,3507,São José do Rio Preto,1050.0,0.0,zero
+3536000,Parapuã,3504,Marília,1100.0,0.0,zero
+3535705,Paraíso,3507,São José do Rio Preto,2380.0,5500.0,valor
+3536109,Pardinho,3503,Bauru,560.0,20000.0,valor
+3536208,Pariquera-Açu,3502,Sorocaba,4290.0,5400.0,valor
+3536257,Parisi,3507,São José do Rio Preto,2000.0,0.0,zero
+3536307,Patrocínio Paulista,3508,Ribeirão Preto,4600.0,3800.0,valor
+3536406,Paulicéia,3505,Presidente Prudente,0.0,0.0,zero
+3536570,Paulistânia,3503,Bauru,205.0,13000.0,valor
+3536604,Paulo de Faria,3507,São José do Rio Preto,470.0,40.0,valor
+3536505,Paulínia,3510,Campinas,0.0,0.0,zero
+3536703,Pederneiras,3503,Bauru,12150.0,7000.0,valor
+3536802,Pedra Bela,3510,Campinas,2800.0,0.0,zero
+3536901,Pedranópolis,3507,São José do Rio Preto,3140.0,7000.0,valor
+3537008,Pedregulho,3508,Ribeirão Preto,3200.0,2400.0,valor
+3537107,Pedreira,3510,Campinas,3000.0,40000.0,valor
+3537156,Pedrinhas Paulista,3504,Marília,750.0,0.0,zero
+3537206,Pedro de Toledo,3501,São Paulo,0.0,0.0,zero
+3537305,Penápolis,3506,Araçatuba,1300.0,1850.0,valor
+3537404,Pereira Barreto,3506,Araçatuba,0.0,1350.0,valor
+3537503,Pereiras,3502,Sorocaba,0.0,0.0,zero
+3537602,Peruíbe,3501,São Paulo,0.0,100.0,valor
+3537701,Piacatu,3506,Araçatuba,670.0,720.0,valor
+3537800,Piedade,3502,Sorocaba,5900.0,17000.0,valor
+3537909,Pilar do Sul,3502,Sorocaba,4960.0,13000.0,valor
+3538006,Pindamonhangaba,3511,São José dos Campos,15000.0,15450.0,valor
+3538105,Pindorama,3507,São José do Rio Preto,4350.0,3000.0,valor
+3538204,Pinhalzinho,3510,Campinas,8000.0,2000.0,valor
+3538303,Piquerobi,3505,Presidente Prudente,1000.0,6000.0,valor
+3538501,Piquete,3511,São José dos Campos,3000.0,0.0,zero
+3538600,Piracaia,3510,Campinas,8200.0,10500.0,valor
+3538709,Piracicaba,3510,Campinas,11100.0,7870.0,valor
+3538808,Piraju,3504,Marília,6300.0,2380.0,valor
+3538907,Pirajuí,3503,Bauru,725.0,15000.0,valor
+3539004,Pirangi,3507,São José do Rio Preto,950.0,950.0,valor
+3539103,Pirapora do Bom Jesus,3501,São Paulo,,,nao_disponivel
+3539202,Pirapozinho,3505,Presidente Prudente,1420.0,2080.0,valor
+3539301,Pirassununga,3509,Araraquara,35000.0,19600.0,valor
+3539400,Piratininga,3503,Bauru,5100.0,100000.0,valor
+3539509,Pitangueiras,3508,Ribeirão Preto,0.0,0.0,zero
+3539608,Planalto,3507,São José do Rio Preto,545.0,0.0,zero
+3539707,Platina,3504,Marília,200.0,370.0,valor
+3539905,Poloni,3507,São José do Rio Preto,720.0,0.0,zero
+3540002,Pompéia,3504,Marília,3800.0,0.0,zero
+3540101,Pongaí,3503,Bauru,0.0,0.0,zero
+3540200,Pontal,3508,Ribeirão Preto,0.0,0.0,zero
+3540259,Pontalinda,3507,São José do Rio Preto,460.0,6800.0,valor
+3540309,Pontes Gestal,3507,São José do Rio Preto,0.0,0.0,zero
+3540408,Populina,3507,São José do Rio Preto,450.0,150.0,valor
+3540507,Porangaba,3502,Sorocaba,900.0,250.0,valor
+3540606,Porto Feliz,3502,Sorocaba,870.0,1100.0,valor
+3540705,Porto Ferreira,3509,Araraquara,8000.0,8000.0,valor
+3540754,Potim,3511,São José dos Campos,0.0,0.0,zero
+3540804,Potirendaba,3507,São José do Rio Preto,5900.0,3900.0,valor
+3539806,Poá,3501,São Paulo,0.0,,nao_disponivel
+3540853,Pracinha,3505,Presidente Prudente,200.0,200.0,valor
+3540903,Pradópolis,3508,Ribeirão Preto,0.0,0.0,zero
+3541000,Praia Grande,3501,São Paulo,,,nao_disponivel
+3541059,Pratânia,3503,Bauru,580.0,15000.0,valor
+3541109,Presidente Alves,3503,Bauru,230.0,8000.0,valor
+3541208,Presidente Bernardes,3505,Presidente Prudente,450.0,370.0,valor
+3541307,Presidente Epitácio,3505,Presidente Prudente,350.0,1000.0,valor
+3541406,Presidente Prudente,3505,Presidente Prudente,905.0,489.0,valor
+3541505,Presidente Venceslau,3505,Presidente Prudente,11400.0,5200.0,valor
+3541604,Promissão,3503,Bauru,900.0,1900.0,valor
+3541653,Quadra,3502,Sorocaba,0.0,0.0,zero
+3541703,Quatá,3505,Presidente Prudente,2800.0,178.0,valor
+3541802,Queiroz,3504,Marília,900.0,0.0,zero
+3541901,Queluz,3511,São José dos Campos,0.0,2300.0,valor
+3542008,Quintana,3504,Marília,1250.0,2000.0,valor
+3542107,Rafard,3510,Campinas,0.0,77.0,valor
+3542206,Rancharia,3505,Presidente Prudente,578.0,6790.0,valor
+3542305,Redenção da Serra,3511,São José dos Campos,92.0,22000.0,valor
+3542404,Regente Feijó,3505,Presidente Prudente,0.0,7850.0,valor
+3542503,Reginópolis,3503,Bauru,1130.0,14000.0,valor
+3542602,Registro,3502,Sorocaba,675.0,4500.0,valor
+3542701,Restinga,3508,Ribeirão Preto,2200.0,988.0,valor
+3542800,Ribeira,3502,Sorocaba,0.0,12000.0,valor
+3542909,Ribeirão Bonito,3509,Araraquara,7800.0,14000.0,valor
+3543006,Ribeirão Branco,3502,Sorocaba,1600.0,10000.0,valor
+3543105,Ribeirão Corrente,3508,Ribeirão Preto,1800.0,1400.0,valor
+3543253,Ribeirão Grande,3502,Sorocaba,700.0,14000.0,valor
+3543303,Ribeirão Pires,3501,São Paulo,0.0,0.0,zero
+3543402,Ribeirão Preto,3508,Ribeirão Preto,0.0,0.0,zero
+3543204,Ribeirão do Sul,3504,Marília,855.0,0.0,zero
+3543238,Ribeirão dos Índios,3505,Presidente Prudente,0.0,0.0,zero
+3543600,Rifaina,3508,Ribeirão Preto,2870.0,1600.0,valor
+3543709,Rincão,3509,Araraquara,15000.0,3950.0,valor
+3543808,Rinópolis,3504,Marília,1350.0,0.0,zero
+3543907,Rio Claro,3510,Campinas,30100.0,43175.0,valor
+3544103,Rio Grande da Serra,3501,São Paulo,0.0,0.0,zero
+3544004,Rio das Pedras,3510,Campinas,0.0,0.0,zero
+3544202,Riolândia,3507,São José do Rio Preto,110.0,0.0,zero
+3543501,Riversul,3502,Sorocaba,1890.0,900.0,valor
+3544251,Rosana,3505,Presidente Prudente,2680.0,4300.0,valor
+3544301,Roseira,3511,São José dos Campos,20580.0,0.0,zero
+3544509,Rubinéia,3507,São José do Rio Preto,68.0,0.0,zero
+3544400,Rubiácea,3506,Araçatuba,0.0,350.0,valor
+3544608,Sabino,3503,Bauru,800.0,0.0,zero
+3544707,Sagres,3505,Presidente Prudente,0.0,0.0,zero
+3544806,Sales,3507,São José do Rio Preto,630.0,6250.0,valor
+3544905,Sales Oliveira,3508,Ribeirão Preto,0.0,0.0,zero
+3545001,Salesópolis,3501,São Paulo,4000.0,3550.0,valor
+3545100,Salmourão,3505,Presidente Prudente,0.0,0.0,zero
+3545159,Saltinho,3510,Campinas,0.0,0.0,zero
+3545209,Salto,3502,Sorocaba,2600.0,400.0,valor
+3545407,Salto Grande,3504,Marília,260.0,100.0,valor
+3545308,Salto de Pirapora,3502,Sorocaba,1000.0,7600.0,valor
+3545506,Sandovalina,3505,Presidente Prudente,0.0,200.0,valor
+3545605,Santa Adélia,3507,São José do Rio Preto,7165.0,0.0,zero
+3545704,Santa Albertina,3507,São José do Rio Preto,470.0,210.0,valor
+3546009,Santa Branca,3511,São José dos Campos,240.0,6000.0,valor
+3545803,Santa Bárbara d'Oeste,3510,Campinas,0.0,0.0,zero
+3546108,Santa Clara d'Oeste,3507,São José do Rio Preto,136.0,100.0,valor
+3546207,Santa Cruz da Conceição,3510,Campinas,3560.0,5950.0,valor
+3546256,Santa Cruz da Esperança,3508,Ribeirão Preto,0.0,0.0,zero
+3546306,Santa Cruz das Palmeiras,3510,Campinas,15000.0,4000.0,valor
+3546405,Santa Cruz do Rio Pardo,3504,Marília,1642.0,165000.0,valor
+3546504,Santa Ernestina,3508,Ribeirão Preto,660.0,0.0,zero
+3546603,Santa Fé do Sul,3507,São José do Rio Preto,1560.0,6320.0,valor
+3546702,Santa Gertrudes,3510,Campinas,0.0,810.0,valor
+3546801,Santa Isabel,3501,São Paulo,0.0,9600.0,valor
+3546900,Santa Lúcia,3509,Araraquara,1000.0,9900.0,valor
+3547007,Santa Maria da Serra,3510,Campinas,250.0,440.0,valor
+3547106,Santa Mercedes,3505,Presidente Prudente,180.0,100.0,valor
+3547403,Santa Rita d'Oeste,3507,São José do Rio Preto,87.0,100.0,valor
+3547502,Santa Rita do Passa Quatro,3509,Araraquara,15000.0,7000.0,valor
+3547601,Santa Rosa de Viterbo,3508,Ribeirão Preto,2000.0,3250.0,valor
+3547650,Santa Salete,3507,São José do Rio Preto,480.0,230.0,valor
+3547205,Santana da Ponte Pensa,3507,São José do Rio Preto,173.0,180.0,valor
+3547304,Santana de Parnaíba,3501,São Paulo,,1750.0,valor
+3547700,Santo Anastácio,3505,Presidente Prudente,1020.0,1000.0,valor
+3547809,Santo André,3501,São Paulo,,,nao_disponivel
+3547908,Santo Antônio da Alegria,3508,Ribeirão Preto,1901.0,2000.0,valor
+3548005,Santo Antônio de Posse,3510,Campinas,2000.0,13500.0,valor
+3548054,Santo Antônio do Aracanguá,3506,Araçatuba,0.0,0.0,zero
+3548104,Santo Antônio do Jardim,3510,Campinas,0.0,3200.0,valor
+3548203,Santo Antônio do Pinhal,3511,São José dos Campos,5200.0,6100.0,valor
+3548302,Santo Expedito,3505,Presidente Prudente,0.0,0.0,zero
+3548500,Santos,3501,São Paulo,,,nao_disponivel
+3548401,Santópolis do Aguapeí,3506,Araçatuba,465.0,700.0,valor
+3551108,Sarapuí,3502,Sorocaba,1100.0,17000.0,valor
+3551207,Sarutaiá,3504,Marília,980.0,6000.0,valor
+3551306,Sebastianópolis do Sul,3507,São José do Rio Preto,380.0,0.0,zero
+3551405,Serra Azul,3508,Ribeirão Preto,0.0,0.0,zero
+3551603,Serra Negra,3510,Campinas,5500.0,6000.0,valor
+3551504,Serrana,3508,Ribeirão Preto,0.0,0.0,zero
+3551702,Sertãozinho,3508,Ribeirão Preto,0.0,0.0,zero
+3551801,Sete Barras,3502,Sorocaba,3700.0,4000.0,valor
+3551900,Severínia,3508,Ribeirão Preto,0.0,0.0,zero
+3552007,Silveiras,3511,São José dos Campos,500.0,1270.0,valor
+3552106,Socorro,3510,Campinas,12000.0,13500.0,valor
+3552205,Sorocaba,3502,Sorocaba,59950.0,53140.0,valor
+3552304,Sud Mennucci,3506,Araçatuba,0.0,0.0,zero
+3552403,Sumaré,3510,Campinas,0.0,0.0,zero
+3552502,Suzano,3501,São Paulo,0.0,0.0,zero
+3552551,Suzanápolis,3507,São José do Rio Preto,0.0,0.0,zero
+3548609,São Bento do Sapucaí,3511,São José dos Campos,16200.0,5000.0,valor
+3548708,São Bernardo do Campo,3501,São Paulo,,,nao_disponivel
+3548807,São Caetano do Sul,3501,São Paulo,,,fora_da_tabela
+3548906,São Carlos,3509,Araraquara,117280.0,40000.0,valor
+3549003,São Francisco,3507,São José do Rio Preto,430.0,0.0,zero
+3549409,São Joaquim da Barra,3508,Ribeirão Preto,0.0,3000.0,valor
+3549508,São José da Bela Vista,3508,Ribeirão Preto,6762.0,1050.0,valor
+3549607,São José do Barreiro,3511,São José dos Campos,300.0,490.0,valor
+3549706,São José do Rio Pardo,3510,Campinas,1500.0,1300.0,valor
+3549805,São José do Rio Preto,3507,São José do Rio Preto,9800.0,4500.0,valor
+3549904,São José dos Campos,3511,São José dos Campos,0.0,0.0,zero
+3549102,São João da Boa Vista,3510,Campinas,2280.0,6000.0,valor
+3549201,São João das Duas Pontes,3507,São José do Rio Preto,1200.0,1350.0,valor
+3549250,São João de Iracema,3507,São José do Rio Preto,0.0,0.0,zero
+3549300,São João do Pau d'Alho,3505,Presidente Prudente,750.0,650.0,valor
+3549953,São Lourenço da Serra,3501,São Paulo,,,nao_disponivel
+3550001,São Luiz do Paraitinga,3511,São José dos Campos,320.0,5800.0,valor
+3550100,São Manuel,3503,Bauru,620.0,40000.0,valor
+3550209,São Miguel Arcanjo,3502,Sorocaba,7020.0,21000.0,valor
+3550308,São Paulo,3501,São Paulo,0.0,19186.0,valor
+3550407,São Pedro,3510,Campinas,4520.0,7190.0,valor
+3550506,São Pedro do Turvo,3504,Marília,59.0,2500.0,valor
+3550605,São Roque,3502,Sorocaba,10000.0,3800.0,valor
+3550704,São Sebastião,3511,São José dos Campos,0.0,0.0,zero
+3550803,São Sebastião da Grama,3510,Campinas,0.0,700.0,valor
+3550902,São Simão,3508,Ribeirão Preto,1850.0,33750.0,valor
+3551009,São Vicente,3501,São Paulo,,,nao_disponivel
+3552601,Tabapuã,3507,São José do Rio Preto,3550.0,800.0,valor
+3552700,Tabatinga,3509,Araraquara,4400.0,33000.0,valor
+3552809,Taboão da Serra,3501,São Paulo,,,nao_disponivel
+3552908,Taciba,3505,Presidente Prudente,360.0,364.0,valor
+3553005,Taguaí,3502,Sorocaba,199.0,0.0,zero
+3553104,Taiaçu,3508,Ribeirão Preto,450.0,450.0,valor
+3553203,Taiúva,3508,Ribeirão Preto,250.0,300.0,valor
+3553302,Tambaú,3510,Campinas,20000.0,12600.0,valor
+3553401,Tanabi,3507,São José do Rio Preto,1500.0,1500.0,valor
+3553609,Tapiratiba,3510,Campinas,0.0,800.0,valor
+3553500,Tapiraí,3502,Sorocaba,2375.0,1500.0,valor
+3553658,Taquaral,3508,Ribeirão Preto,0.0,34100.0,valor
+3553708,Taquaritinga,3509,Araraquara,13000.0,1300.0,valor
+3553807,Taquarituba,3502,Sorocaba,700.0,0.0,zero
+3553856,Taquarivaí,3502,Sorocaba,340.0,0.0,zero
+3553906,Tarabai,3505,Presidente Prudente,0.0,0.0,zero
+3553955,Tarumã,3504,Marília,0.0,0.0,zero
+3554003,Tatuí,3502,Sorocaba,0.0,0.0,zero
+3554102,Taubaté,3511,São José dos Campos,160.0,11500.0,valor
+3554201,Tejupá,3504,Marília,1200.0,0.0,zero
+3554300,Teodoro Sampaio,3505,Presidente Prudente,0.0,2032.0,valor
+3554409,Terra Roxa,3508,Ribeirão Preto,0.0,65.0,valor
+3554508,Tietê,3502,Sorocaba,2000.0,1500.0,valor
+3554607,Timburi,3504,Marília,1000.0,800.0,valor
+3554656,Torre de Pedra,3502,Sorocaba,0.0,250.0,valor
+3554706,Torrinha,3503,Bauru,3500.0,3242.0,valor
+3554755,Trabiju,3509,Araraquara,5000.0,4200.0,valor
+3554805,Tremembé,3511,São José dos Campos,230.0,4600.0,valor
+3554904,Três Fronteiras,3507,São José do Rio Preto,115.0,0.0,zero
+3554953,Tuiuti,3510,Campinas,3500.0,450.0,valor
+3555109,Tupi Paulista,3505,Presidente Prudente,800.0,3200.0,valor
+3555000,Tupã,3504,Marília,10675.0,20000.0,valor
+3555208,Turiúba,3506,Araçatuba,100.0,0.0,zero
+3555307,Turmalina,3507,São José do Rio Preto,710.0,420.0,valor
+3555356,Ubarana,3507,São José do Rio Preto,2600.0,0.0,zero
+3555406,Ubatuba,3511,São José dos Campos,0.0,0.0,zero
+3555505,Ubirajara,3503,Bauru,57.0,40000.0,valor
+3555604,Uchoa,3507,São José do Rio Preto,14600.0,2350.0,valor
+3555703,União Paulista,3507,São José do Rio Preto,320.0,400.0,valor
+3555901,Uru,3503,Bauru,0.0,0.0,zero
+3556008,Urupês,3507,São José do Rio Preto,2750.0,10000.0,valor
+3555802,Urânia,3507,São José do Rio Preto,820.0,600.0,valor
+3556107,Valentim Gentil,3507,São José do Rio Preto,0.0,0.0,zero
+3556206,Valinhos,3510,Campinas,0.0,174.0,valor
+3556305,Valparaíso,3506,Araçatuba,0.0,0.0,zero
+3556354,Vargem,3510,Campinas,7500.0,6000.0,valor
+3556453,Vargem Grande Paulista,3501,São Paulo,,,nao_disponivel
+3556404,Vargem Grande do Sul,3510,Campinas,0.0,0.0,zero
+3556602,Vera Cruz,3504,Marília,20.0,368.0,valor
+3556701,Vinhedo,3510,Campinas,50.0,45.0,valor
+3556800,Viradouro,3508,Ribeirão Preto,320.0,50.0,valor
+3556909,Vista Alegre do Alto,3507,São José do Rio Preto,2050.0,0.0,zero
+3556958,Vitória Brasil,3507,São José do Rio Preto,380.0,1200.0,valor
+3557006,Votorantim,3502,Sorocaba,5375.0,7100.0,valor
+3557105,Votuporanga,3507,São José do Rio Preto,4000.0,610.0,valor
+3556503,Várzea Paulista,3510,Campinas,0.0,0.0,zero
+3557154,Zacarias,3506,Araçatuba,0.0,0.0,zero
+3500402,Águas da Prata,3510,Campinas,850.0,6000.0,valor
+3500501,Águas de Lindóia,3510,Campinas,1200.0,25.0,valor
+3500550,Águas de Santa Bárbara,3502,Sorocaba,1450.0,14546.0,valor
+3500600,Águas de São Pedro,3510,Campinas,,,nao_disponivel
+3501202,Álvares Florence,3507,São José do Rio Preto,500.0,35.0,valor
+3501301,Álvares Machado,3505,Presidente Prudente,0.0,160.0,valor
+3501400,Álvaro de Carvalho,3504,Marília,0.0,235.0,valor
+3533809,Óleo,3502,Sorocaba,1330.0,110.0,valor
