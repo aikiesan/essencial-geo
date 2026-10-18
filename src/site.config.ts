@@ -155,6 +155,16 @@ export const COLECOES = {
       resumo: 'Transmission lines and substations, power plants by source and distributed solar generation by municipality.',
     },
   },
+  'agro-sp': {
+    pt: {
+      titulo: 'Do campo ao biometano',
+      resumo: 'O mosaico agrícola paulista (cana, laranja, milho e soja), o lixo e o esgoto das cidades e o biometano que pode sair de tudo isso.',
+    },
+    en: {
+      titulo: 'From field to biomethane',
+      resumo: 'São Paulo’s farming mosaic (sugarcane, oranges, maize and soy), urban waste and sewage, and the biomethane that could come from all of it.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
