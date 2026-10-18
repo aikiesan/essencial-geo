@@ -195,6 +195,16 @@ export const COLECOES = {
       resumo: 'What the head of household earns, tract by tract and in the metropolis, and whether rooftop solar follows income: it does not.',
     },
   },
+  'gente-sp': {
+    pt: {
+      titulo: 'Gente no território',
+      resumo: 'Onde mora a gente de São Paulo, setor por setor: a densidade, a idade e o sexo de cada município, os de 60 anos ou mais e quem ainda vive no campo.',
+    },
+    en: {
+      titulo: 'People across the land',
+      resumo: 'Where São Paulo’s people live, tract by tract: density, the age and sex of each municipality, those aged 60 or over and who still lives in the countryside.',
+    },
+  },
   'animal-sp': {
     pt: {
       titulo: 'Leite, ovos, mel e peixe',

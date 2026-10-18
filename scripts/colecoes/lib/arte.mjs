@@ -205,7 +205,58 @@ function telhados(w, h) {
   return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
 }
 
-const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas, telhados };
+function gente(w, h) {
+  const r = sorte(61);
+  const s = [];
+  const chao = h - 4;
+  s.push(`<path d="M0 ${f1(chao)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  for (let x = 14; x < w - 14;) {
+    // Figura de traço: cabeça, tronco, braços e pernas; a altura varia da criança ao adulto,
+    // e um em cada tantos anda de bengala (as pranchas de idade).
+    const alto = h * (0.38 + r() * 0.5);
+    const cab = alto * 0.11;
+    const ombro = chao - alto + 2 * cab + 2;
+    const quadril = chao - alto * 0.45;
+    const cor = r() > 0.7 ? CESTO : VALE;
+    const curvado = alto > h * 0.6 && r() > 0.78;
+    const dx = curvado ? alto * 0.06 : 0;
+    s.push(`<circle cx="${f1(x + dx)}" cy="${f1(chao - alto + cab)}" r="${f1(cab)}" fill="none" stroke="${cor}" stroke-width="1"/>`);
+    s.push(`<path d="M${f1(x + dx)} ${f1(ombro - 2)}L${f1(x)} ${f1(quadril)}M${f1(x)} ${f1(quadril)}L${f1(x - alto * 0.1)} ${f1(chao)}M${f1(x)} ${f1(quadril)}L${f1(x + alto * 0.1)} ${f1(chao)}M${f1(x + dx - alto * 0.12)} ${f1(ombro + alto * 0.2)}L${f1(x + dx)} ${f1(ombro + 2)}L${f1(x + dx + alto * 0.12)} ${f1(ombro + alto * 0.2)}" fill="none" stroke="${cor}" stroke-width="1"/>`);
+    if (curvado) s.push(`<path d="M${f1(x + dx + alto * 0.12)} ${f1(ombro + alto * 0.2)}L${f1(x + dx + alto * 0.16)} ${f1(chao)}" stroke="${cor}" stroke-width="1"/>`);
+    x += alto * 0.32 + 4 + r() * 16;
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+function morro(w, h) {
+  const r = sorte(67);
+  const s = [];
+  const chao = h - 4;
+  // Encosta ocupada: casas de laje empilhadas no morro e, na rua de baixo, postes de luz.
+  const encosta = (x) => chao - Math.max(0, Math.sin((Math.PI * x) / (w * 0.62)) * h * 0.62);
+  const pts = [];
+  for (let x = 0; x <= w; x += 8) pts.push(`${f1(x)} ${f1(Math.min(chao, encosta(x)))}`);
+  s.push(`<path d="M${pts.join('L')}" fill="none" stroke="${VALE}" stroke-width="1.1"/>`);
+  s.push(`<path d="M0 ${f1(chao)}H${w}" stroke="${VALE}" stroke-width="1.1"/>`);
+  for (let x = 10; x < w * 0.62 - 10;) {
+    const larg = 12 + r() * 12;
+    const base = Math.min(chao, encosta(x + larg / 2)) + 3;
+    const andares = 1 + Math.floor(r() * 3);
+    const alt = 9 + r() * 4;
+    s.push(`<rect x="${f1(x)}" y="${f1(base - andares * alt)}" width="${f1(larg)}" height="${f1(andares * alt)}" fill="none" stroke="${VALE}" stroke-width=".9"/>`);
+    if (r() > 0.5) s.push(`<rect x="${f1(x + larg * 0.35)}" y="${f1(base - alt * 0.75)}" width="${f1(larg * 0.25)}" height="${f1(alt * 0.4)}" fill="none" stroke="${CESTO}" stroke-width=".8"/>`);
+    x += larg + 1 + r() * 4;
+  }
+  for (let x = w * 0.66; x < w - 10; x += 52 + r() * 14) {
+    const topo = chao - h * 0.72;
+    s.push(`<path d="M${f1(x)} ${f1(chao)}V${f1(topo)}h10" fill="none" stroke="${VALE}" stroke-width="1"/>`);
+    s.push(`<circle cx="${f1(x + 12)}" cy="${f1(topo + 3)}" r="2.6" fill="none" stroke="${CESTO}" stroke-width="1"/>`);
+    s.push(`<path d="M${f1(x + 12)} ${f1(topo + 7)}L${f1(x + 2)} ${f1(chao)}M${f1(x + 12)} ${f1(topo + 7)}L${f1(x + 22)} ${f1(chao)}" stroke="${CESTO}" stroke-width=".6" stroke-dasharray="2 4"/>`);
+  }
+  return `<g clip-path="url(#motivo-recorte)">${s.join('')}</g>`;
+}
+
+const FRISOS = { cana, agua, relevo, energia, rmc, agro, saneamento, biogas, telhados, gente, morro };
 
 /** Friso da coleção, `w` × `h` px, com uma legenda mínima à direita (opcional). */
 export function motivo(chave, w, h = 84) {
