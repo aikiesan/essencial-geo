@@ -82,8 +82,24 @@ export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
 export const f1 = (v) => Math.round(v * 10) / 10;
 export const halo = (l = 4) => `stroke="${PAPEL}" stroke-width="${l}" stroke-linejoin="round" paint-order="stroke"`;
 
-export function largura(texto, tamanho, { mono = false, espaco = 0 } = {}) {
+// Avanços da Georgia Itálica (centésimos de em, de georgiai.ttf); acentos contam como a letra-base.
+const ITALICO_C = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,;:!?'’‘\"“”()[]-–—%/&·ºª°×+=…«»$#*€§";
+const ITALICO_W = [
+  57, 55, 45, 58, 47, 33, 57, 56, 30, 29, 53, 29, 88, 59, 54, 58, 56, 46, 43, 35, 58, 54, 82, 50, 56, 44,
+  67, 65, 64, 75, 65, 60, 73, 81, 39, 52, 69, 60, 93, 77, 73, 61, 73, 70, 56, 62, 76, 67, 98, 71, 62, 60,
+  61, 43, 56, 55, 56, 53, 57, 50, 60, 57, 24, 27, 27, 38, 38, 33, 48, 22, 20, 20, 41, 39, 39, 38, 38, 38,
+  38, 37, 64, 86, 82, 47, 71, 28, 50, 50, 42, 64, 64, 64, 81, 58, 58, 61, 64, 47, 64, 50,
+];
+const ITALICO = new Map([...ITALICO_C].map((c, i) => [c, ITALICO_W[i] / 100]));
+for (const c of '₀₁₂₃₄₅₆₇₈₉⁰¹²³') ITALICO.set(c, 0.5);
+
+export function largura(texto, tamanho, { mono = false, espaco = 0, italico = false } = {}) {
   if (mono) return texto.length * (0.55 * tamanho + espaco) - espaco;
+  if (italico) {
+    let w = 0;
+    for (const c of texto.normalize('NFD')) if (!/\p{M}/u.test(c)) w += ITALICO.get(c) ?? 0.6;
+    return w * tamanho + espaco * (texto.length - 1);
+  }
   let w = 0;
   for (const c of texto) {
     if (c === ' ') w += 0.25;
@@ -114,13 +130,20 @@ export function quebrar(texto, n) {
   return melhor;
 }
 
-/** Linhas de no máximo `max` px, quebrando por palavra. */
+/**
+ * Linhas de no máximo `max` px, quebrando por palavra. Com `italico`, vale a maior das duas
+ * estimativas (a genérica e a da Georgia Itálica, com 1,5 px de tolerância para o erro de
+ * medida): só muda a quebra de linha que não cabia.
+ */
 export function linhasDe(texto, tamanho, max, opts = {}) {
+  const w = opts.italico
+    ? (t) => Math.max(largura(t, tamanho, { ...opts, italico: false }), largura(t, tamanho, opts) - 1.5)
+    : (t) => largura(t, tamanho, opts);
   const out = [];
   let atual = '';
   for (const p of texto.split(' ')) {
     const t = atual ? `${atual} ${p}` : p;
-    if (largura(t, tamanho, opts) > max && atual) { out.push(atual); atual = p; } else atual = t;
+    if (w(t) > max && atual) { out.push(atual); atual = p; } else atual = t;
   }
   if (atual) out.push(atual);
   return out;
@@ -531,7 +554,7 @@ function cabecalho(tema, numero) {
   let y = 226 + 26 + tt;
   linhas.forEach((l, i) => s.push(`<text x="0" y="${y + i * tt * 1.05}" font-family="${SERIF}" font-size="${tt}">${esc(l)}</text>`));
   y += (linhas.length - 1) * tt * 1.05 + 38;
-  for (const l of linhasDe(tema.subtitulo(), 24, LP)) {
+  for (const l of linhasDe(tema.subtitulo(), 24, LP, { italico: true })) {
     s.push(`<text x="0" y="${y}" font-family="${SERIF}" font-style="italic" font-size="24" fill="#4f4a41">${esc(l)}</text>`);
     y += 32;
   }
