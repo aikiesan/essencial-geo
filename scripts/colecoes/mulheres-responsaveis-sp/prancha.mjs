@@ -341,7 +341,7 @@ function esgoto() {
       'Diferença, em pontos percentuais, entre a parte dos domicílios com esgoto na rede geral ou pluvial (ou fossa ligada à rede) quando a responsável é mulher e quando é homem, por município (Censo 2022, universo)',
       'Gap, in percentage points, between the share of households on mains or storm sewers (or a septic tank linked to them) when the responsible person is a woman and when it is a man, by municipality (2022 Census, full count)'),
     chamadas: () => [
-      chamada(a, 40, -300, L(`${a.NM_MUN.toUpperCase()} · ${pp(a.esgoto_rede_dif, 0)}`, `${a.NM_MUN.toUpperCase()} · ${pp(a.esgoto_rede_dif, 0)}`),
+      chamada(a, -10, -500, L(`${a.NM_MUN.toUpperCase()} · ${pp(a.esgoto_rede_dif, 0)}`, `${a.NM_MUN.toUpperCase()} · ${pp(a.esgoto_rede_dif, 0)}`),
         L([`a maior diferença; dentro do setor, ${pp(a.esgoto_rede_dif_setor, 1)}:`, 'é o campo, de responsável homem, sem rede'], [`the widest gap; within tracts, ${pp(a.esgoto_rede_dif_setor, 1)}:`, 'it is the countryside, man-headed, unsewered'])),
       chamada(b, -40, 250, L(`${b.NM_MUN.toUpperCase()} · ${pp(b.esgoto_rede_dif, 1)}`, `${b.NM_MUN.toUpperCase()} · ${pp(b.esgoto_rede_dif, 1)}`),
         L(['um dos poucos em que as casas delas', 'têm menos rede, mesmo no pior caso do sigilo'], ['one of few where women’s homes have', 'less network, even in the worst X case'])),
@@ -363,7 +363,7 @@ function agua() {
       'Diferença, em pontos percentuais, entre a parte dos domicílios abastecidos pela rede geral de água quando a responsável é mulher e quando é homem, por município (Censo 2022, universo)',
       'Gap, in percentage points, between the share of households supplied by the mains water network when the responsible person is a woman and when it is a man, by municipality (2022 Census, full count)'),
     chamadas: () => [
-      chamada(a, 40, -300, L(`${a.NM_MUN.toUpperCase()} · ${pp(a.agua_rede_dif, 0)}`, `${a.NM_MUN.toUpperCase()} · ${pp(a.agua_rede_dif, 0)}`),
+      chamada(a, -10, -500, L(`${a.NM_MUN.toUpperCase()} · ${pp(a.agua_rede_dif, 0)}`, `${a.NM_MUN.toUpperCase()} · ${pp(a.agua_rede_dif, 0)}`),
         L([`a maior diferença; dentro do setor, ${pp(a.agua_rede_dif_setor, 1)}:`, 'no campo, poço e nascente são das casas deles'], [`the widest gap; within tracts, ${pp(a.agua_rede_dif_setor, 1)}:`, 'rural wells and springs are men’s homes'])),
       chamada(b, -380, 60, L(`${b.NM_MUN.toUpperCase()} · ${pp(b.agua_rede_dif, 0)}`, `${b.NM_MUN.toUpperCase()} · ${pp(b.agua_rede_dif, 0)}`),
         L([`${pp(b.agua_rede_dif_setor, 1)} dentro do setor, das maiores`, 'entre os de 50 mil habitantes ou mais'], [`${pp(b.agua_rede_dif_setor, 1)} within tracts, among the largest`, 'in towns of 50,000 or more'])),
