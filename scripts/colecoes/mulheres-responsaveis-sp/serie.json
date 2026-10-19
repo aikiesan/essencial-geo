@@ -1,0 +1,10 @@
+[
+ { "tema": "distribuicao", "numero": 103, "pasta": "103-quase-metade-das-casas-sp", "base": "sp_responsaveis_mulheres_apond_2022", "data": "2027-01-02", "categoria": "censo-renda" },
+ { "tema": "crescimento", "numero": 104, "pasta": "104-dez-pontos-em-doze-anos-sp", "base": "sp_responsaveis_mulheres_2010_2022", "data": "2027-01-03", "categoria": "censo-renda" },
+ { "tema": "conjuge", "numero": 105, "pasta": "105-responsavel-nao-e-mae-solo-sp", "base": "sp_responsaveis_mulheres_conjuge_2022", "data": "2027-01-04", "categoria": "censo-renda" },
+ { "tema": "esgoto", "numero": 106, "pasta": "106-esgoto-e-responsaveis-mulheres-sp", "base": "sp_esgoto_por_sexo_do_responsavel_2022", "data": "2027-01-05", "categoria": "censo-renda" },
+ { "tema": "agua", "numero": 107, "pasta": "107-agua-e-responsaveis-mulheres-sp", "base": "sp_agua_por_sexo_do_responsavel_2022", "data": "2027-01-06", "categoria": "censo-renda" },
+ { "tema": "iluminacao", "numero": 108, "pasta": "108-luz-na-rua-sp", "base": "sp_iluminacao_publica_2022", "data": "2027-01-07", "categoria": "censo-renda" },
+ { "tema": "renda", "numero": 109, "pasta": "109-renda-e-responsaveis-mulheres-sp", "base": "sp_responsaveis_mulheres_e_renda_2022", "data": "2027-01-08", "categoria": "censo-renda" },
+ { "tema": "sintese", "numero": 110, "pasta": "110-na-mesma-rua-sp", "base": "sp_servicos_dentro_do_setor_2022", "data": "2027-01-09", "categoria": "censo-renda" }
+]

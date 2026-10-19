@@ -275,6 +275,16 @@ export const COLECOES = {
       resumo: 'Ten pairs of 2022 Census variables that move together across São Paulo’s municipalities, picked from a screen of 4,455 crossings and read as patterns, not causes.',
     },
   },
+  'mulheres-responsaveis-sp': {
+    pt: {
+      titulo: 'Mulheres responsáveis pelo domicílio',
+      resumo: 'Quase metade das casas paulistas tem uma mulher como responsável. Oito mapas cruzam esse dado com esgoto, água, iluminação e renda e mostram que a diferença de serviços vem do endereço.',
+    },
+    en: {
+      titulo: 'Women heading households',
+      resumo: 'Nearly half of São Paulo’s homes name a woman as the person responsible. Eight maps cross this with sewerage, water, lighting and income, and show that the service gap comes from address.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
