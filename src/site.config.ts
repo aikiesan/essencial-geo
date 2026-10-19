@@ -265,6 +265,16 @@ export const COLECOES = {
       resumo: 'The CO₂ released by ethanol fermentation and biogas upgrading: where it is, how much there is and what it could become.',
     },
   },
+  'censo-cruzado-sp': {
+    pt: {
+      titulo: 'O Censo cruzado',
+      resumo: 'Dez pares de variáveis do Censo 2022 que andam juntos nos municípios paulistas, escolhidos numa triagem de 4.455 cruzamentos e lidos como padrão, não como causa.',
+    },
+    en: {
+      titulo: 'The Census, crossed',
+      resumo: 'Ten pairs of 2022 Census variables that move together across São Paulo’s municipalities, picked from a screen of 4,455 crossings and read as patterns, not causes.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
