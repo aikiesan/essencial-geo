@@ -235,11 +235,15 @@ dias repetidos ou vazios).
   abre a página da prancha, que em desenvolvimento existe mesmo antes da data.
 - **No ar:** https://aikiesan.github.io/essencial-geo/admin/, com senha. O deploy cifra a página com o
   segredo `ADMIN_SENHA` (`scripts/painel-cifrado.mjs`, AES-GCM); o navegador decifra. As agendadas
-  abrem a prancha no visualizador, também cifrada. Sem o segredo, o painel fica fora do site.
+  abrem a prancha no visualizador, também cifrada. Depois de 5 senhas erradas, a página trava por
+  15 minutos naquele navegador.
+- **Sem o segredo, ou com senha de menos de 12 caracteres,** o painel fica fora do site e o deploy
+  segue, com um aviso no resumo da execução. A publicação diária nunca para por causa do painel.
 
-Para definir ou trocar a senha (pelo menos 12 caracteres; o arquivo cifrado é público, então a força
-dela é toda a proteção), rode `gh secret set ADMIN_SENHA`, digite a senha e recompile o site
-(`gh workflow run deploy.yml --ref main`).
+Para definir ou trocar a senha, rode `gh secret set ADMIN_SENHA`, digite a senha e recompile o site
+(`gh workflow run deploy.yml --ref main`). Use pelo menos 12 caracteres, de preferência uma frase
+longa: o arquivo cifrado é público, e quem o baixa testa senhas fora da página, sem trava. A trava
+só freia quem tenta pela própria página; a força da senha é toda a proteção.
 
 ## Correções
 
