@@ -13,7 +13,9 @@ const painelAdmin = {
   hooks: {
     /** @param {{ command: string; injectRoute: (r: { pattern: string; entrypoint: string }) => void }} opcoes */
     'astro:config:setup': ({ command, injectRoute }) => {
-      if (command !== 'dev' && !(command === 'build' && process.env.ADMIN_SENHA)) return;
+      // Senha curta: o script de cifra recusa e avisa; o painel nem é gerado.
+      const comSenha = (process.env.ADMIN_SENHA ?? '').length >= 12;
+      if (command !== 'dev' && !(command === 'build' && comSenha)) return;
       injectRoute({ pattern: '/admin', entrypoint: fileURLToPath(new URL('./src/admin/Painel.astro', import.meta.url)) });
     },
   },
