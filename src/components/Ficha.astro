@@ -116,7 +116,7 @@ const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
     <div>
       <dt>{tx.ficha.doi}</dt>
       <dd class="mono">
-        {d.doi ? <a href={`https://doi.org/${d.doi}`} rel="noopener">{d.doi}</a> : <span class="ficha__pendente">{tx.ficha.doiPendente}</span>}
+        {d.doi ? <a href={`https://doi.org/${d.doi}`} rel="noopener" data-goatcounter-click={`doi/${mapa.id}`}>{d.doi}</a> : <span class="ficha__pendente">{tx.ficha.doiPendente}</span>}
       </dd>
     </div>
   </dl>
@@ -135,6 +135,8 @@ const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
                 href={a.href}
                 download={a.externo ? undefined : ''}
                 rel={a.externo ? 'noopener' : undefined}
+                data-goatcounter-click={`baixar/${mapa.id}/${a.formato}/${lingua}`}
+                data-goatcounter-title={`${a.rotulo} (${a.ext})`}
               >
                 <span class="arquivo__sigla">{a.sigla}</span>
                 <span class="arquivo__rotulo">

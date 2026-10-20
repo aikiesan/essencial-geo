@@ -18,6 +18,11 @@ export const SITE = {
     google: '6AO0_cB4UqZfjnteowBYa91HsgxbVIKEzjuA9TSsPCQ', // Google Search Console → etiqueta HTML
     bing: '', // Bing Webmaster Tools → etiqueta HTML
   },
+  /**
+   * Contagem de visitas sem cookies (GoatCounter): código da conta em https://<código>.goatcounter.com.
+   * Só entra no build de produção. Vazio = sem contagem.
+   */
+  goatcounter: 'essencial-geo',
 };
 // Slogan, descrição e demais textos da interface: src/i18n/ui.ts (PT-BR e EN-UK).
 
