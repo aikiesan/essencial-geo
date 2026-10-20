@@ -2,7 +2,7 @@
 numero: 97
 titulo: "O prédio e a desigualdade"
 subtitulo: "Quanto mais a cidade sobe, mais a renda varia de um bairro para outro"
-data: 2026-12-27
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, verticalizacao, desigualdade, renda, apartamentos, setores-censitarios, municipios]

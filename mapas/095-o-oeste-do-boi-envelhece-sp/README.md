@@ -2,7 +2,7 @@
 numero: 95
 titulo: "O oeste do boi envelhece"
 subtitulo: "Onde há mais boi por quilômetro quadrado, há mais gente com 60 anos ou mais"
-data: 2026-12-25
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, envelhecimento, pecuaria, bovinos, ppm, municipios]

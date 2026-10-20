@@ -2,7 +2,7 @@
 numero: 31
 titulo: "Usinas e cana"
 subtitulo: "A colheita que acende a rede"
-data: 2026-10-22
+data: 2026-10-20
 categoria: energia
 colecao: bioenergia-sp
 tags: [bioenergia-sp, sao-paulo, cana-de-acucar, bagaco, cogeracao, termeletricas, aneel, ibge, pam]

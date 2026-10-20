@@ -2,7 +2,7 @@
 numero: 60
 titulo: "Quanto ganha quem responde pela casa"
 subtitulo: "O salário mínimo é a régua de um terço do estado"
-data: 2026-11-20
+data: 2026-10-20
 categoria: censo-renda
 colecao: renda-solar-sp
 tags: [renda-solar-sp, sao-paulo, renda, censo-2022, setores-censitarios, salario-minimo, desigualdade]

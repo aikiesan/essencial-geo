@@ -2,7 +2,7 @@
 numero: 81
 titulo: "O nitrogênio dos dejetos"
 subtitulo: "Meio milhão de toneladas por ano; em Bastos, três vezes o teto europeu"
-data: 2026-12-11
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: nutrientes-sp
 tags: [nutrientes-sp, sao-paulo, dejetos, nitrogenio, pecuaria, balanco-de-nutrientes, municipios]

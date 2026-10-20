@@ -2,7 +2,7 @@
 numero: 98
 titulo: "A cor da juventude"
 subtitulo: "Na metrópole, as áreas com mais crianças são as mais negras; quanto menor a escala, mais forte o laço"
-data: 2026-12-28
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, juventude, cor-ou-raca, areas-de-ponderacao, metropole, maup]

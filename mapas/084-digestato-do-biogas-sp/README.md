@@ -2,7 +2,7 @@
 numero: 84
 titulo: "O digestato do biogás"
 subtitulo: "Se os dejetos passassem pelo biodigestor, voltariam ao campo 98 mil t de N e 49 mil t de P₂O₅ por ano"
-data: 2026-12-14
+data: 2026-10-20
 categoria: energia
 colecao: nutrientes-sp
 tags: [nutrientes-sp, sao-paulo, biogas, biometano, digestato, cp2b, dejetos, balanco-de-nutrientes, municipios]

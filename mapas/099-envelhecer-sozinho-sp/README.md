@@ -2,7 +2,7 @@
 numero: 99
 titulo: "Envelhecer sozinho"
 subtitulo: "Onde a população é mais velha, mais casas têm um morador só"
-data: 2026-12-29
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, envelhecimento, domicilios, arranjos-domiciliares, areas-de-ponderacao, municipios]

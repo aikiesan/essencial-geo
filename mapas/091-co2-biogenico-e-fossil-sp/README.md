@@ -2,7 +2,7 @@
 numero: 91
 titulo: "Biogênico contra fóssil"
 subtitulo: "Nas grandes fontes fixas do estado, metade do CO₂ vem da cana"
-data: 2026-12-21
+data: 2026-10-20
 categoria: energia
 colecao: carbono-sp
 tags: [carbono-sp, sao-paulo, co2-biogenico, co2-fossil, gas-natural, industria, etanol, semil]

@@ -2,7 +2,7 @@
 numero: 57
 titulo: "Biometano e gasodutos"
 subtitulo: "O gás do campo fica longe do cano"
-data: 2026-11-17
+data: 2026-10-20
 categoria: energia
 colecao: biogas-territorio-sp
 tags: [biogas-territorio-sp, sao-paulo, biometano, gasodutos, gas-natural, infraestrutura, cp2b, epe]

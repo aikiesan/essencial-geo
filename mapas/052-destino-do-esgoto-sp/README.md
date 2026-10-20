@@ -2,7 +2,7 @@
 numero: 52
 titulo: "Para onde vai o esgoto"
 subtitulo: "Rede na cidade, fossa no campo, rio na beira"
-data: 2026-11-12
+data: 2026-10-20
 categoria: censo-renda
 colecao: saneamento-sp
 tags: [saneamento-sp, sao-paulo, censo-2022, esgoto, fossa, saneamento, setores-censitarios]

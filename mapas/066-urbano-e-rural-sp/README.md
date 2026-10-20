@@ -2,7 +2,7 @@
 numero: 66
 titulo: "Urbano e rural"
 subtitulo: "Três em cada cem paulistas moram no campo"
-data: 2026-11-26
+data: 2026-10-20
 categoria: censo-renda
 colecao: gente-sp
 tags: [gente-sp, sao-paulo, populacao-rural, urbano-e-rural, censo-2022, municipios]

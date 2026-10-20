@@ -2,7 +2,7 @@
 numero: 108
 titulo: "Luz na rua"
 subtitulo: "O Censo 2022 não perguntou pela energia elétrica; a iluminação pública não segue o sexo do responsável"
-data: 2027-01-07
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, iluminacao-publica, energia, entorno, genero, municipios]

@@ -2,7 +2,7 @@
 numero: 73
 titulo: "Mel"
 subtitulo: "Mais que triplicou em dezesseis anos"
-data: 2026-12-03
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: animal-sp
 tags: [animal-sp, sao-paulo, mel, apicultura, pecuaria, ibge, ppm]

@@ -2,7 +2,7 @@
 numero: 64
 titulo: "Idade e sexo"
 subtitulo: "O noroeste envelhece, a metrópole é jovem e os presídios são homens"
-data: 2026-11-24
+data: 2026-10-20
 categoria: censo-renda
 colecao: gente-sp
 tags: [gente-sp, sao-paulo, idade, envelhecimento, razao-de-sexo, piramide-etaria, censo-2022, municipios]

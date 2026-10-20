@@ -2,7 +2,7 @@
 numero: 79
 titulo: "Onde a biomassa encontra a fábrica"
 subtitulo: "Os polos que já têm resíduo e indústria, e os que só têm um dos dois"
-data: 2026-12-09
+data: 2026-10-20
 categoria: energia
 colecao: bioeconomia-sp
 tags: [bioeconomia-sp, sao-paulo, bioeconomia, biometano, cp2b, agroindustria, rais, municipios]

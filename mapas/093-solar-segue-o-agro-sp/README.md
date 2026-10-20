@@ -2,7 +2,7 @@
 numero: 93
 titulo: "O sol segue o canavial"
 subtitulo: "Onde há mais cana, há mais watts solares por casa, mesmo descontada a renda"
-data: 2026-12-23
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, energia-solar, cana-de-acucar, mapbiomas, aneel, municipios]

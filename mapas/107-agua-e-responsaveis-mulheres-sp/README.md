@@ -2,7 +2,7 @@
 numero: 107
 titulo: "A água chega pelo endereço"
 subtitulo: "Em quase todo município, as casas delas têm mais água da rede; quase tudo é onde ficam"
-data: 2027-01-06
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, agua, genero, setores-censitarios, municipios]

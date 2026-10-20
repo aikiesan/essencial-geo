@@ -2,7 +2,7 @@
 numero: 94
 titulo: "Cana e esgoto"
 subtitulo: "As cidades do canavial estão entre as mais ligadas à rede de esgoto"
-data: 2026-12-24
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, saneamento, esgoto, cana-de-acucar, mapbiomas, municipios]

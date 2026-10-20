@@ -2,7 +2,7 @@
 numero: 85
 titulo: "Biometano a 30 km"
 subtitulo: "Num raio de caminhão, três quartos do estado juntam gás para uma planta"
-data: 2026-12-15
+data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, mapbiomas, raio-de-coleta, logistica]

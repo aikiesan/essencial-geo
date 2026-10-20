@@ -106,7 +106,7 @@ const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
     <div>
       <dt>{tx.ficha.versao}</dt>
       <dd class="mono">
-        v{d.versao} · {dataCurta(d.atualizado ?? d.data, lingua)}
+        v{d.versao}{d.atualizado && ` · ${dataCurta(d.atualizado, lingua)}`}
       </dd>
     </div>
     <div>

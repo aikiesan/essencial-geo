@@ -2,7 +2,7 @@
 numero: 87
 titulo: "Biometano à porta da rede"
 subtitulo: "As bacias dos pontos de entrega de gás e das subestações"
-data: 2026-12-17
+data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, pontos-de-entrega, subestacoes, voronoi]

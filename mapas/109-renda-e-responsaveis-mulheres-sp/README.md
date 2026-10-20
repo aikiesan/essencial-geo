@@ -2,7 +2,7 @@
 numero: 109
 titulo: "Onde elas ganham mais perto deles"
 subtitulo: "Onde a renda das mulheres chega mais perto da dos homens, há mais casas com responsável mulher"
-data: 2027-01-08
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, renda, genero, bivariado, municipios]

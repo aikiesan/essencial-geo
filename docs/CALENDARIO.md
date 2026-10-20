@@ -29,14 +29,14 @@ Duas ressalvas do GitHub Actions:
 
 ## A rotina: produção em lote, publicação em dias fixos
 
-**Cadência:** um mapa por dia, às 9h de Brasília (12h UTC). A série dos estados entrou inteira em 17 e 18/10; depois, as coleções, uma prancha por dia.
+**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11).
 
 | Quando | O quê |
 | --- | --- |
-| **Sábado ou domingo** (ou o seu dia de oficina) | Produção do lote da **semana seguinte**: 7 mapas. QGIS → pranchas PT e EN, dados, os dois READMEs, `data:` já com o dia de saída. Um commit por mapa; push. Nada aparece antes da hora. |
-| **Todo dia — 9h** | O mapa entra no ar sozinho; às 9h17 a conferência lê o site no ar (páginas, sitemap, downloads). |
-| **Mesmo dia, depois das 9h** | Divulgação (Reddit, LinkedIn, Bluesky) com o link da página em cada língua. Depois, `discussoes:` no README. |
-| **Mesmo dia** | DOI: sozinho, se o README tem `doi_automatico: true`; senão, com o comando que sai no resumo da execução (veja [`PUBLICAR.md`](PUBLICAR.md#6-doi)). |
+| **Sábado ou domingo** (ou o seu dia de oficina) | Produção de uma **coleção** para o fim da fila (a reserva). QGIS → pranchas PT e EN, dados, os dois READMEs, `data:` já com o dia de saída. Um commit por mapa; push. Nada aparece antes da hora. |
+| **Terça — 9h** | A coleção da semana entra no ar sozinha; às 9h17 a conferência lê o site no ar (páginas, sitemap, downloads). |
+| **Terça, depois das 9h** | Post da coleção no LinkedIn (carrossel com 4 a 6 pranchas); Reddit e Bluesky com o link da página em cada língua. Depois, `discussoes:` no README. |
+| **Dias seguintes** | DOI: sozinho, até 5 por dia, se o README tem `doi_automatico: true`; senão, com o comando que sai no resumo da execução (veja [`PUBLICAR.md`](PUBLICAR.md#6-doi)). |
 | **Último dia útil do mês** | Lattes: registrar de uma vez os DOIs do mês. Nota “agenda” com o que vem no mês seguinte. |
 
 **Colchão de uma semana.** Mantenha sempre o lote da semana seguinte pronto e agendado. Uma semana
@@ -113,9 +113,9 @@ uma vez, isso vale para a série inteira no primeiro push.
 cores, rótulos e cantos sozinha), 28/11 (agenda de dezembro), 26/12 (bastidores: a série inteira numa
 prancha só).
 
-## Coleções temáticas (19/10 a 04/11/2026)
+## Coleções temáticas
 
-Depois dos estados, um por dia, saem as **coleções**: grupos de pranchas
+Depois dos estados saem as **coleções** (028 a 092 juntas em 20/10; depois, uma por semana, às terças). A data de publicação não aparece nas páginas: fica no Zenodo, no RSS e nos metadados. As coleções são grupos de pranchas
 sobre um mesmo tema, reunidos numa página própria pelo campo `colecao:` do README (`/colecoes/<id>/`).
 O número da prancha na coleção vai no cabeçalho («BIOENERGIA EM SP · 1/4»); o subtítulo fica livre para
 uma frase («A colheita que acende a rede»), e cada coleção tem um friso desenhado no painel. Uma coleção sai inteira antes da seguinte, sempre às

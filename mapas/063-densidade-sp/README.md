@@ -2,7 +2,7 @@
 numero: 63
 titulo: "Onde mora a gente"
 subtitulo: "Metade dos paulistas cabe em meio por cento do estado"
-data: 2026-11-23
+data: 2026-10-20
 categoria: censo-renda
 colecao: gente-sp
 tags: [gente-sp, sao-paulo, densidade-demografica, populacao, censo-2022, setores-censitarios]

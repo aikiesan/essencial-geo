@@ -2,7 +2,7 @@
 numero: 68
 titulo: "As favelas da metrópole"
 subtitulo: "Nas margens, nas encostas e nos mangues"
-data: 2026-11-28
+data: 2026-10-20
 categoria: censo-renda
 colecao: favelas-sp
 tags: [favelas-sp, sao-paulo, favelas, comunidades-urbanas, regiao-metropolitana-de-sao-paulo, baixada-santista, censo-2022, setores-censitarios]

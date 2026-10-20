@@ -2,7 +2,7 @@
 numero: 70
 titulo: "Dentro e fora da favela"
 subtitulo: "Na mesma cidade, dois quintos da renda"
-data: 2026-11-30
+data: 2026-10-20
 categoria: censo-renda
 colecao: favelas-sp
 tags: [favelas-sp, sao-paulo, favelas, comunidades-urbanas, renda, desigualdade, saneamento, censo-2022, municipios]

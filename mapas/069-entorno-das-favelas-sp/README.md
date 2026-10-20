@@ -2,7 +2,7 @@
 numero: 69
 titulo: "A rua da favela"
 subtitulo: "Sem luz pública na porta: 15 % nas favelas paulistas, 9 % nas do país"
-data: 2026-11-29
+data: 2026-10-20
 categoria: censo-renda
 colecao: favelas-sp
 tags: [favelas-sp, sao-paulo, favelas, comunidades-urbanas, iluminacao-publica, pavimentacao, calcada, entorno-dos-domicilios, censo-2022, municipios]

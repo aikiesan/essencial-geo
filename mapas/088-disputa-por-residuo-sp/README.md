@@ -2,7 +2,7 @@
 numero: 88
 titulo: "Disputa por resíduo"
 subtitulo: "Onde as usinas dividem o raio de coleta, e onde o gás não tem usina"
-data: 2026-12-18
+data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, anp, aneel, geracao-distribuida, cp2b, raio-de-coleta]

@@ -2,7 +2,7 @@
 numero: 100
 titulo: "As letras e a enxada"
 subtitulo: "Onde mais gente trabalha no campo, maior o hiato entre o analfabetismo de negros e o de brancos"
-data: 2026-12-30
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, analfabetismo, desigualdade-racial, trabalho-rural, educacao, municipios]

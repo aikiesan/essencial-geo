@@ -2,7 +2,7 @@
 numero: 101
 titulo: "Veraneio sem esgoto"
 subtitulo: "Onde há mais casas de uso ocasional, menos domicílios estão ligados à rede de esgoto"
-data: 2026-12-31
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, saneamento, esgoto, segunda-residencia, litoral, domicilios, municipios]

@@ -2,7 +2,7 @@
 numero: 51
 titulo: "Esgoto na rede"
 subtitulo: "A rede cobre a cidade; o campo fica na fossa"
-data: 2026-11-11
+data: 2026-10-20
 categoria: censo-renda
 colecao: saneamento-sp
 tags: [saneamento-sp, sao-paulo, censo-2022, esgoto, saneamento, setores-censitarios]

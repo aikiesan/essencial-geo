@@ -2,7 +2,7 @@
 numero: 72
 titulo: "Leite"
 subtitulo: "Em quase todo o estado, no menor volume da série"
-data: 2026-12-02
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: animal-sp
 tags: [animal-sp, sao-paulo, leite, bovinos, pecuaria, biometano, cp2b, ibge, ppm]

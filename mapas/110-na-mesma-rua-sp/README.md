@@ -2,7 +2,7 @@
 numero: 110
 titulo: "Na mesma rua"
 subtitulo: "Ao lado da casa de um homem responsável, a casa de uma mulher tem a mesma água, esgoto e coleta"
-data: 2027-01-09
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, agua, esgoto, coleta-de-lixo, genero, setores-censitarios, municipios]

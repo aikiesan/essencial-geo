@@ -2,7 +2,7 @@
 numero: 53
 titulo: "Lixo fora da coleta"
 subtitulo: "Onde o caminhão não passa, o lixo queima"
-data: 2026-11-13
+data: 2026-10-20
 categoria: censo-renda
 colecao: saneamento-sp
 tags: [saneamento-sp, sao-paulo, censo-2022, lixo, residuos-solidos, coleta, setores-censitarios]

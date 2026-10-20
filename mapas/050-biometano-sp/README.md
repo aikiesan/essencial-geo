@@ -2,7 +2,7 @@
 numero: 50
 titulo: "Biometano em SP"
 subtitulo: "O gás que já está no campo"
-data: 2026-11-10
+data: 2026-10-20
 categoria: energia
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, biometano, biogas, residuos, cana, pecuaria, cp2b, municipios]

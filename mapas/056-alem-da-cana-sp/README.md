@@ -2,7 +2,7 @@
 numero: 56
 titulo: "Além da cana"
 subtitulo: "Sem a cana, aparecem o milho, a granja e a cidade"
-data: 2026-11-16
+data: 2026-10-20
 categoria: energia
 colecao: biogas-territorio-sp
 tags: [biogas-territorio-sp, sao-paulo, biometano, biogas, cp2b, milho, soja, aves, residuos-urbanos, municipios]

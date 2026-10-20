@@ -2,7 +2,7 @@
 numero: 102
 titulo: "O pau de arara"
 subtitulo: "Ir trabalhar na carroceria ainda é coisa do campo e de quem estudou menos"
-data: 2027-01-01
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, mobilidade, trabalho-rural, deslocamento, escolaridade, municipios]

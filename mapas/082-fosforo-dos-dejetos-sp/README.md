@@ -2,7 +2,7 @@
 numero: 82
 titulo: "O fósforo dos dejetos"
 subtitulo: "Em 177 municípios, as granjas dão mais fósforo do que a colheita leva"
-data: 2026-12-12
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: nutrientes-sp
 tags: [nutrientes-sp, sao-paulo, dejetos, fosforo, avicultura, suinocultura, leite, balanco-de-nutrientes, municipios]

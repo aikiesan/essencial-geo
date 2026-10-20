@@ -2,7 +2,7 @@
 numero: 89
 titulo: "O CO₂ das dornas"
 subtitulo: "Toda usina de etanol solta um gás quase puro, que hoje vai para o ar"
-data: 2026-12-19
+data: 2026-10-20
 categoria: energia
 colecao: carbono-sp
 tags: [carbono-sp, sao-paulo, etanol, fermentacao, co2-biogenico, captura-de-carbono, usinas, anp]

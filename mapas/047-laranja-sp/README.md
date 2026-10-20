@@ -2,7 +2,7 @@
 numero: 47
 titulo: "O cinturão da laranja"
 subtitulo: "O pomar no campo, o bagaço na fábrica"
-data: 2026-11-07
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, laranja, citros, agricultura, biometano, cp2b, ibge, pam]

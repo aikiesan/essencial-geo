@@ -2,7 +2,7 @@
 numero: 59
 titulo: "Biogás em operação"
 subtitulo: "Do potencial, o que já virou planta"
-data: 2026-11-19
+data: 2026-10-20
 categoria: energia
 colecao: biogas-territorio-sp
 tags: [biogas-territorio-sp, sao-paulo, biometano, biogas, anp, aneel, geracao-distribuida, cp2b]

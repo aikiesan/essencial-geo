@@ -2,7 +2,7 @@
 numero: 78
 titulo: "As fábricas do resíduo orgânico"
 subtitulo: "Usinas, frigoríficos, laticínios, sucos e cervejarias: onde a indústria deixa resíduo orgânico"
-data: 2026-12-08
+data: 2026-10-20
 categoria: energia
 colecao: bioeconomia-sp
 tags: [bioeconomia-sp, sao-paulo, bioeconomia, residuos-organicos, agroindustria, biogas, rais, municipios]

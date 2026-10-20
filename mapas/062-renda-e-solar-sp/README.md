@@ -2,7 +2,7 @@
 numero: 62
 titulo: "Renda e telhado solar"
 subtitulo: "O sol dos telhados não segue o dinheiro"
-data: 2026-11-22
+data: 2026-10-20
 categoria: energia
 colecao: renda-solar-sp
 tags: [renda-solar-sp, sao-paulo, geracao-distribuida, energia-solar, renda, censo-2022, aneel, bivariado]

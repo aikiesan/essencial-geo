@@ -2,7 +2,7 @@
 numero: 104
 titulo: "Dez pontos em doze anos"
 subtitulo: "De 2010 a 2022, a parte de casas com responsável mulher subiu no campo e na cidade"
-data: 2027-01-03
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, censo-2010, municipios]

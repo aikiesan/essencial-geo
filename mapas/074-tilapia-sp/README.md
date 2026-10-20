@@ -2,7 +2,7 @@
 numero: 74
 titulo: "Tilápia"
 subtitulo: "Quase todo peixe criado no estado é tilápia"
-data: 2026-12-04
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: animal-sp
 tags: [animal-sp, sao-paulo, tilapia, aquicultura, piscicultura, represas, mapbiomas, ibge, ppm]

@@ -2,7 +2,7 @@
 numero: 43
 titulo: "Usinas por fonte"
 subtitulo: "Água, vento, sol e fogo"
-data: 2026-11-03
+data: 2026-10-20
 categoria: energia
 colecao: energia-eletrica
 tags: [energia-eletrica, brasil, usinas, hidreletricas, eolicas, solar, termeletricas, aneel, siga, matriz-eletrica]

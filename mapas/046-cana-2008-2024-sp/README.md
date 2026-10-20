@@ -2,7 +2,7 @@
 numero: 46
 titulo: "Cana: 2008 × 2024"
 subtitulo: "Em dezesseis anos, a mancha andou para o oeste"
-data: 2026-11-06
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, cana-de-acucar, agricultura, serie-historica, ibge, pam]

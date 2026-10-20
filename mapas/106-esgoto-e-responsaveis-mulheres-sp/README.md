@@ -2,7 +2,7 @@
 numero: 106
 titulo: "O esgoto e o endereço"
 subtitulo: "As casas com responsável mulher têm mais esgoto na rede porque ficam mais na cidade"
-data: 2027-01-05
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, esgoto, genero, setores-censitarios, municipios]

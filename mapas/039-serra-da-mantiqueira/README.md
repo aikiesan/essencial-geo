@@ -2,7 +2,7 @@
 numero: 39
 titulo: "Serra da Mantiqueira"
 subtitulo: "A muralha sobre o vale do Paraíba"
-data: 2026-10-30
+data: 2026-10-20
 categoria: altimetria-relevo
 colecao: relevo
 tags: [relevo, sao-paulo, mantiqueira, vale-do-paraiba, pedra-da-mina, altitude, hipsometria, copernicus-dem]

@@ -2,7 +2,7 @@
 numero: 105
 titulo: "Responsável não é mãe solo"
 subtitulo: "44% das mulheres responsáveis vivem com cônjuge, e são mais onde elas são mais"
-data: 2027-01-04
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, familia, municipios]

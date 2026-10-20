@@ -2,7 +2,7 @@
 numero: 65
 titulo: "Os de 60 anos ou mais"
 subtitulo: "Um em cada seis paulistas, e um em cada três nas cidades pequenas do noroeste"
-data: 2026-11-25
+data: 2026-10-20
 categoria: censo-renda
 colecao: gente-sp
 tags: [gente-sp, sao-paulo, idosos, envelhecimento, idade, censo-2022, setores-censitarios]

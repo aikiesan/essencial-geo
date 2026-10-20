@@ -2,7 +2,7 @@
 numero: 96
 titulo: "Separados e desiguais"
 subtitulo: "Nas cidades mais segregadas, a renda dos brancos fica mais longe da dos pardos"
-data: 2026-12-26
+data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, segregacao, desigualdade-racial, renda, cor-ou-raca, setores-censitarios, municipios]

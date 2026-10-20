@@ -2,7 +2,7 @@
 numero: 55
 titulo: "Biometano por km² e por pessoa"
 subtitulo: "O gás está onde a gente não está"
-data: 2026-11-15
+data: 2026-10-20
 categoria: energia
 colecao: biogas-territorio-sp
 tags: [biogas-territorio-sp, sao-paulo, biometano, biogas, cp2b, densidade, censo-2022, municipios]

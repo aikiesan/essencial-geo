@@ -2,7 +2,7 @@
 numero: 103
 titulo: "Quase metade das casas"
 subtitulo: "Em 2022, 49% dos domicílios paulistas tinham uma mulher como responsável"
-data: 2027-01-02
+data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, areas-de-ponderacao]

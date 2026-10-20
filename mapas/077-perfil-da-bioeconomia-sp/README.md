@@ -2,7 +2,7 @@
 numero: 77
 titulo: "Que bioeconomia"
 subtitulo: "O campo lidera no interior e no Vale do Ribeira; a fábrica de alimentos, em volta das cidades"
-data: 2026-12-07
+data: 2026-10-20
 categoria: energia
 colecao: bioeconomia-sp
 tags: [bioeconomia-sp, sao-paulo, bioeconomia, emprego, rais, agroindustria, municipios]

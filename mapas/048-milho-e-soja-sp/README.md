@@ -2,7 +2,7 @@
 numero: 48
 titulo: "Milho e soja"
 subtitulo: "A soja passou o milho, e a palha ficou no chão"
-data: 2026-11-08
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, soja, milho, graos, agricultura, biometano, cp2b, ibge, pam]
