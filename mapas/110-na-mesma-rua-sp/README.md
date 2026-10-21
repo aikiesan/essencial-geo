@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, agua, esgoto, coleta-de-lixo, genero, setores-censitarios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Comparadas, dentro de cada setor censitário, às casas com responsável homem, as casas com responsável mulher têm quase a mesma cobertura: +0,15 ponto na água da rede, +0,07 no esgoto e +0,03 na coleta de lixo, no estado. Em 595 dos 645 municípios, a média das três fica entre −1 e +1 ponto. A vantagem das casas delas nas pranchas 106 e 107 vem do endereço: elas moram mais nos setores urbanos, onde a rede já chegou. Banheiro de uso exclusivo e água encanada dentro de casa quase não variam. Taquarivaí tem a maior diferença dentro do setor (+3,9). O setor é a menor área publicada; dentro dele, o Censo não diz qual casa fica onde. Oitava e última prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -87,7 +88,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

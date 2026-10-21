@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, juventude, cor-ou-raca, areas-de-ponderacao, metropole, maup]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Na metrópole de São Paulo e na Baixada Santista, as áreas com mais crianças são as mais negras. Nas 825 áreas de ponderação do Censo 2022 dos 44 municípios das duas concentrações urbanas, a correlação de postos entre a parte de pessoas de 0 a 14 anos e a de pretos e pardos é 0,85; nas 2.470 áreas do estado, 0,73; nos 44 municípios da metrópole, 0,64; nos 640 municípios do estado, 0,50. Quanto menor a unidade, mais forte o laço: a escala muda a medida. Em Caieiras, uma área tem 28% de crianças e 68% de pretos e pardos; em Santos, 10% e 15%. Sexta prancha da coleção «O Censo cruzado».
@@ -87,7 +88,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

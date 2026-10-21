@@ -6,6 +6,7 @@ data: 2026-10-20
 categoria: energia
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, biometano, biogas, residuos, cana, pecuaria, cp2b, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Somados todos os resíduos, São Paulo poderia produzir 16,9 milhões de m³ de biometano por dia no nível acessível do método CP2B, que desconta o que precisa ficar no solo, os usos que já disputam cada resíduo e a distância até onde o gás seria feito. A cana responde por 82%: só a palha deixada no canavial daria 6,9 milhões. O potencial se concentra no norte do estado. As regiões de Ribeirão Preto e São José do Rio Preto somam 41%, 68 municípios reúnem metade do total, e Guaíra lidera, com 333 mil m³ por dia. A cana é a maior fonte em 370 municípios; o lixo e o esgoto, em 105, 86 deles nas regiões de São Paulo, Campinas e São José dos Campos. Do potencial teórico ao acessível, sobra um quarto. Última prancha da coleção «Do campo ao biometano».
@@ -88,7 +89,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

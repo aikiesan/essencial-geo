@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, analfabetismo, desigualdade-racial, trabalho-rural, educacao, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde mais gente trabalha no campo, maior a distância entre o analfabetismo de negros e o de brancos. A correlação de postos entre a parte dos ocupados como trabalhadores qualificados da agropecuária e o hiato, em pontos percentuais, entre a taxa de analfabetismo de pretos e pardos e a de brancos de 15 anos ou mais (Censo 2022) é 0,51 nos 645 municípios e 0,33 descontadas urbanização, densidade e renda; 122 municípios estão no terço de cima dos dois. Dois Córregos tem hiato de 5,8 pontos e 6,5% dos ocupados no campo; São Paulo, 2,0. O mapa não diz que o trabalho rural produza o hiato: os dois carregam a mesma história de escola desigual no interior. Oitava prancha da coleção «O Censo cruzado».
@@ -85,7 +86,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, saneamento, esgoto, cana-de-acucar, mapbiomas, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   As cidades do canavial estão entre as mais ligadas à rede de esgoto. A correlação de postos entre a parte do município em cana (MapBiomas) e os domicílios com esgoto na rede geral (Censo 2022) é 0,55 nos 645 municípios e 0,50 descontadas urbanização, densidade e renda; 121 municípios estão no terço de cima dos dois. Sertãozinho, com 68% da área em cana, tem 99,3% dos domicílios na rede; Atibaia, sem cana, 61%. A cana desenha cidades médias, compactas e operárias (cana × operários 0,48), mas o mapa não diz que ela traga o esgoto. Segunda prancha da coleção «O Censo cruzado».
@@ -89,7 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

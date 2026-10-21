@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, esgoto, genero, setores-censitarios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   No estado, 92,4% das casas com responsável mulher têm esgoto na rede, contra 90,1% das com responsável homem: +2,2 pontos. Quase tudo (+2,17) é endereço: as casas delas ficam mais nos setores urbanos já ligados à rede. Comparadas às casas de homens do mesmo setor censitário, sobram +0,07 ponto. Elas têm mais esgoto em 611 dos 645 municípios; Cunha tem a maior diferença (73% contra 47%), e em Cubatão elas têm menos (−2,4). Descontada a urbanização, a parte de responsáveis mulheres não se relaciona com a cobertura (parcial −0,04). Quarta prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -85,7 +86,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
