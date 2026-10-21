@@ -2,7 +2,7 @@
 numero: 71
 titulo: "Ovos"
 subtitulo: "Um em cada cinco ovos paulistas sai de Bastos"
-data: 2026-12-01
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: animal-sp
 tags: [animal-sp, sao-paulo, ovos, avicultura, pecuaria, biometano, cp2b, ibge, ppm]

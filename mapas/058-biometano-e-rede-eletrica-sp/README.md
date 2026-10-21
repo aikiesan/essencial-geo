@@ -2,7 +2,7 @@
 numero: 58
 titulo: "Biometano e rede elétrica"
 subtitulo: "O fio chega mais perto do que o cano"
-data: 2026-11-18
+data: 2026-10-20
 categoria: energia
 colecao: biogas-territorio-sp
 tags: [biogas-territorio-sp, sao-paulo, biogas, biometano, transmissao, subestacoes, infraestrutura, cp2b, epe]

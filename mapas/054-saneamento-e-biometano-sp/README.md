@@ -2,7 +2,7 @@
 numero: 54
 titulo: "Esgoto, rede e biometano"
 subtitulo: "O gás do lodo só existe onde o esgoto chega à estação"
-data: 2026-11-14
+data: 2026-10-20
 categoria: energia
 colecao: saneamento-sp
 tags: [saneamento-sp, sao-paulo, censo-2022, esgoto, biometano, biogas, lodo, cp2b, municipios]

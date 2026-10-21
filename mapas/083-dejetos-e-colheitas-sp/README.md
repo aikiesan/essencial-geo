@@ -2,7 +2,7 @@
 numero: 83
 titulo: "Dejetos e colheitas"
 subtitulo: "O esterco confinado repõe 46% do fósforo que as colheitas levam, 25% do nitrogênio"
-data: 2026-12-13
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: nutrientes-sp
 tags: [nutrientes-sp, sao-paulo, dejetos, colheitas, nitrogenio, fosforo, potassio, balanco-de-nutrientes, municipios]

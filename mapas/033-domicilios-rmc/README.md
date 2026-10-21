@@ -2,7 +2,7 @@
 numero: 33
 titulo: "Domicílios por km²"
 subtitulo: "Metade dos lares em 3,4 % do chão"
-data: 2026-10-24
+data: 2026-10-20
 categoria: censo-renda
 colecao: rmc
 tags: [rmc, campinas, censo-2022, domicilios, densidade, setores-censitarios, urbanizacao]

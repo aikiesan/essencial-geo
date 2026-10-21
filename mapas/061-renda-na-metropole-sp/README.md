@@ -2,7 +2,7 @@
 numero: 61
 titulo: "A renda na metrópole"
 subtitulo: "Do Itaim Bibi ao Jardim Ângela, onze vezes"
-data: 2026-11-21
+data: 2026-10-20
 categoria: censo-renda
 colecao: renda-solar-sp
 tags: [renda-solar-sp, sao-paulo, renda, censo-2022, areas-de-ponderacao, grande-sao-paulo, baixada-santista, desigualdade]

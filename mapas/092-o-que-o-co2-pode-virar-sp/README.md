@@ -2,7 +2,7 @@
 numero: 92
 titulo: "O que o CO₂ poderia virar"
 subtitulo: "Com hidrogênio verde, a cana renderia quase duas vezes o gás consumido no estado"
-data: 2026-12-22
+data: 2026-10-20
 categoria: energia
 colecao: carbono-sp
 tags: [carbono-sp, sao-paulo, co2-biogenico, hidrogenio-verde, e-metano, e-metanol, power-to-x, gasodutos]

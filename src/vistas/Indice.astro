@@ -1,9 +1,9 @@
 ---
-/** Índice cronológico do atlas — uma tabela, como o sumário de um atlas impresso. */
+/** Índice do atlas — uma tabela, como o sumário de um atlas impresso (sem datas: a de publicação fica no Zenodo). */
 import Base from '../layouts/Base.astro';
 import CabecalhoPagina from '../components/CabecalhoPagina.astro';
 import { linkMapa, mapasPublicados, numeroFormatado } from '../lib/mapas';
-import { dataCurta, dataIso, linguaDe, t } from '../i18n';
+import { linguaDe, t } from '../i18n';
 
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
@@ -22,7 +22,6 @@ const mapas = await mapasPublicados(lingua);
             <th scope="col">{col.no}</th>
             <th scope="col">{col.titulo}</th>
             <th scope="col">{col.categoria}</th>
-            <th scope="col">{col.data}</th>
             <th scope="col">{col.doi}</th>
           </tr>
         </thead>
@@ -36,9 +35,6 @@ const mapas = await mapasPublicados(lingua);
                   <span class="indice-tab__recorte">{m.data.recorte}</span>
                 </td>
                 <td class="rotulo">{tx.categorias[m.data.categoria].curto}</td>
-                <td class="mono">
-                  <time datetime={dataIso(m.data.data)}>{dataCurta(m.data.data, lingua)}</time>
-                </td>
                 <td class="mono">{m.data.doi ? <a href={`https://doi.org/${m.data.doi}`}>{m.data.doi}</a> : '—'}</td>
               </tr>
             ))

@@ -2,7 +2,7 @@
 numero: 86
 titulo: "A curva de oferta"
 subtitulo: "Metade do biometano fica a mais de 76 km de um ponto de entrega de gás"
-data: 2026-12-16
+data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, gasodutos, pontos-de-entrega, curva-de-oferta]

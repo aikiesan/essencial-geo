@@ -2,7 +2,7 @@
 numero: 49
 titulo: "Lixo e esgoto"
 subtitulo: "A cidade também é lavoura de gás"
-data: 2026-11-09
+data: 2026-10-20
 categoria: energia
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, residuos-solidos, esgoto, biogas, biometano, cp2b, ana]

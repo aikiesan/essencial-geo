@@ -2,7 +2,7 @@
 numero: 45
 titulo: "O tabuleiro agrícola"
 subtitulo: "Quase um quarto do estado é cana"
-data: 2026-11-05
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: agro-sp
 tags: [agro-sp, sao-paulo, uso-da-terra, agricultura, cana, soja, pastagem, mapbiomas]

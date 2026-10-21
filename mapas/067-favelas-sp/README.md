@@ -2,7 +2,7 @@
 numero: 67
 titulo: "Favelas e comunidades urbanas"
 subtitulo: "Um em cada doze paulistas, quase todos na metrópole e no litoral"
-data: 2026-11-27
+data: 2026-10-20
 categoria: censo-renda
 colecao: favelas-sp
 tags: [favelas-sp, sao-paulo, favelas, comunidades-urbanas, censo-2022, municipios]

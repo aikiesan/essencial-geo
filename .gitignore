@@ -39,3 +39,8 @@ mapas/037-drenagem-sp/dados/sp_drenagem.csv
 
 # Bases brutas organizadas (IBGE e outras): só no disco, nunca no repositório
 /dados-brutos/
+
+# Dados brutos do TSE (eleitorado, candidatos): podem ter dados pessoais, nunca vão ao repositório
+ELEITORAL-TSE-DADOS/
+# Listas de terceiros baixadas para consulta
+/*.csv

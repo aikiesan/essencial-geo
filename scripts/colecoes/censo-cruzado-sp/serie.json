@@ -1,0 +1,12 @@
+[
+ { "tema": "solar", "numero": 93, "pasta": "093-solar-segue-o-agro-sp", "base": "sp_solar_e_cana_2022", "data": "2026-12-23", "categoria": "censo-renda" },
+ { "tema": "esgoto", "numero": 94, "pasta": "094-cana-e-esgoto-sp", "base": "sp_cana_e_esgoto_2022", "data": "2026-12-24", "categoria": "censo-renda" },
+ { "tema": "boi", "numero": 95, "pasta": "095-o-oeste-do-boi-envelhece-sp", "base": "sp_bovinos_e_idosos_2022", "data": "2026-12-25", "categoria": "censo-renda" },
+ { "tema": "segregacao", "numero": 96, "pasta": "096-segregacao-e-desigualdade-racial-sp", "base": "sp_segregacao_e_renda_racial_2022", "data": "2026-12-26", "categoria": "censo-renda" },
+ { "tema": "vertical", "numero": 97, "pasta": "097-verticalizacao-e-desigualdade-sp", "base": "sp_apartamentos_e_desigualdade_2022", "data": "2026-12-27", "categoria": "censo-renda" },
+ { "tema": "juventude", "numero": 98, "pasta": "098-a-cor-da-juventude-sp", "base": "sp_criancas_e_cor_apond_2022", "data": "2026-12-28", "categoria": "censo-renda" },
+ { "tema": "sozinho", "numero": 99, "pasta": "099-envelhecer-sozinho-sp", "base": "sp_idosos_e_unipessoais_2022", "data": "2026-12-29", "categoria": "censo-renda" },
+ { "tema": "letras", "numero": 100, "pasta": "100-letras-e-enxada-sp", "base": "sp_analfabetismo_racial_e_agro_2022", "data": "2026-12-30", "categoria": "censo-renda" },
+ { "tema": "veraneio", "numero": 101, "pasta": "101-casas-de-veraneio-sem-esgoto-sp", "base": "sp_uso_ocasional_e_esgoto_2022", "data": "2026-12-31", "categoria": "censo-renda" },
+ { "tema": "paudearara", "numero": 102, "pasta": "102-pau-de-arara-sp", "base": "sp_pau_de_arara_2022", "data": "2027-01-01", "categoria": "censo-renda" }
+]

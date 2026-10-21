@@ -2,7 +2,7 @@
 numero: 90
 titulo: "O CO₂ do biogás"
 subtitulo: "Para virar biometano, o biogás solta o CO₂, quase metade do volume"
-data: 2026-12-20
+data: 2026-10-20
 categoria: energia
 colecao: carbono-sp
 tags: [carbono-sp, sao-paulo, biogas, biometano, purificacao, co2-biogenico, cp2b]

@@ -80,6 +80,12 @@ const temDireita = Astro.slots.has('direita');
         d.dataset.tema = t;
       })();
     </script>
+    {
+      // Contagem de visitas sem cookies; links com data-goatcounter-click contam o clique (downloads, DOI).
+      import.meta.env.PROD && SITE.goatcounter && (
+        <script is:inline async data-goatcounter={`https://${SITE.goatcounter}.goatcounter.com/count`} src="https://gc.zgo.at/count.js" />
+      )
+    }
     <slot name="head" />
   </head>
   <body>

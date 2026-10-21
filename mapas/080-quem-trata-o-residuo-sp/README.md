@@ -2,7 +2,7 @@
 numero: 80
 titulo: "Quem trata o resíduo"
 subtitulo: "O resíduo urbano está em toda parte; quem o trata, em poucos lugares"
-data: 2026-12-10
+data: 2026-10-20
 categoria: energia
 colecao: bioeconomia-sp
 tags: [bioeconomia-sp, sao-paulo, bioeconomia, residuos-solidos, saneamento, biometano, cp2b, rais, municipios]

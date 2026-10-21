@@ -8,7 +8,7 @@ const pt = {
     complemento: '— até ser traduzido em um mapa.',
     descricao:
       'Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil. Camadas em GeoPackage, com estilos do QGIS, citáveis com DOI.',
-    cadencia: '1 mapa por dia',
+    cadencia: '1 coleção por semana',
     colofao: 'Composto em Campinas, SP',
   },
   geral: {
@@ -42,8 +42,8 @@ const pt = {
   barra: {
     projeto: 'O projeto',
     objetivo:
-      'Um atlas aberto do território brasileiro. Todo dia, um mapa temático novo, com as camadas em GeoPackage, o método explicado passo a passo e um DOI para citar — para quem pesquisa, planeja ou simplesmente gosta de mapas.',
-    proximoMapa: 'Próximo mapa',
+      'Um atlas aberto do território brasileiro. Toda semana, uma coleção nova de mapas temáticos, com as camadas em GeoPackage, o método explicado passo a passo e um DOI para citar — para quem pesquisa, planeja ou simplesmente gosta de mapas.',
+    proximoMapa: 'Próxima coleção',
     quemFaz: 'Quem faz',
     autorResumo:
       'Arquiteto e urbanista, pesquisador de pós-doutorado no NIPE/UNICAMP. Mapeia resíduos de biomassa e o potencial de bioenergia do território.',
@@ -107,7 +107,7 @@ const pt = {
     sobre: 'Atlas aberto do Brasil',
     titulo: 'Mapas do Brasil para ver, baixar e citar.',
     texto:
-      'O Essencial Geo é a coleção de mapas e cartografia produzida por Lucas Nakamura Cerejo, no NIPE/UNICAMP. Cada mapa traz as camadas para abrir no QGIS, o método explicado e um DOI para citar. Um mapa novo por dia.',
+      'O Essencial Geo é a coleção de mapas e cartografia produzida por Lucas Nakamura Cerejo, no NIPE/UNICAMP. Cada mapa traz as camadas para abrir no QGIS, o método explicado e um DOI para citar. Uma coleção nova por semana.',
     passos: 'Como usar',
     passo1: 'Veja',
     passo1Texto: 'Abra a prancha e amplie os detalhes. Cada mapa tem um parágrafo que explica o que ele mostra.',
@@ -127,7 +127,7 @@ const pt = {
     todos: 'Todos',
     lerFeed: 'Ler um por um, como feed',
     proximos: 'Próximos mapas',
-    proximosFina: 'Um mapa novo entra no ar todo dia às 9h de Brasília.',
+    proximosFina: 'Uma coleção nova entra no ar toda terça, às 9h de Brasília.',
     hoje: 'hoje, às 9h',
     verColecao: 'Ver a coleção',
   },
@@ -136,7 +136,7 @@ const pt = {
     folha: 'Folha',
     de: 'de',
     frase:
-      'Mapas temáticos do Brasil, um por dia. Cada prancha acompanha suas camadas, sua projeção declarada e uma citação com DOI.',
+      'Mapas temáticos do Brasil, em coleções semanais. Cada prancha acompanha suas camadas, sua projeção declarada e uma citação com DOI.',
     vazio: 'Nenhum mapa nesta categoria ainda — o território segue em levantamento.',
     paginacao: 'Paginação',
     recentes: 'Mais recentes',
@@ -229,7 +229,7 @@ const en: Forma<Textos> = {
     complemento: '— until it is drawn as a map.',
     descricao:
       'A cartographic feed, open-data repository and ongoing portfolio of thematic maps of Brazil. Layers in GeoPackage, with QGIS styles, citable with a DOI.',
-    cadencia: '1 map a day',
+    cadencia: '1 collection a week',
     colofao: 'Set in Campinas, Brazil',
   },
   geral: {
@@ -263,8 +263,8 @@ const en: Forma<Textos> = {
   barra: {
     projeto: 'The project',
     objetivo:
-      'An open atlas of the Brazilian territory. Every day, a new thematic map with its layers in GeoPackage, the method explained step by step and a DOI to cite — for anyone who researches, plans or simply enjoys maps.',
-    proximoMapa: 'Next map',
+      'An open atlas of the Brazilian territory. Every week, a new collection of thematic maps with their layers in GeoPackage, the method explained step by step and a DOI to cite — for anyone who researches, plans or simply enjoys maps.',
+    proximoMapa: 'Next collection',
     quemFaz: 'Who makes it',
     autorResumo:
       'Architect and urban planner, postdoctoral researcher at NIPE/UNICAMP. Maps biomass residues and the bioenergy potential of the territory.',
@@ -328,7 +328,7 @@ const en: Forma<Textos> = {
     sobre: 'An open atlas of Brazil',
     titulo: 'Maps of Brazil to view, download and cite.',
     texto:
-      'Essencial Geo is the collection of maps and cartography made by Lucas Nakamura Cerejo at NIPE/UNICAMP. Each map comes with its layers ready for QGIS, the method explained and a DOI to cite. A new map every day.',
+      'Essencial Geo is the collection of maps and cartography made by Lucas Nakamura Cerejo at NIPE/UNICAMP. Each map comes with its layers ready for QGIS, the method explained and a DOI to cite. A new collection every week.',
     passos: 'How to use it',
     passo1: 'View',
     passo1Texto: 'Open the plate and zoom into the detail. Each map has a paragraph explaining what it shows.',
@@ -348,7 +348,7 @@ const en: Forma<Textos> = {
     todos: 'All',
     lerFeed: 'Read them one by one, as a feed',
     proximos: 'Coming next',
-    proximosFina: 'A new map goes live every day at 12:00 UTC.',
+    proximosFina: 'A new collection goes live every Tuesday at 12:00 UTC.',
     hoje: 'today, 12:00 UTC',
     verColecao: 'See the collection',
   },
@@ -357,7 +357,7 @@ const en: Forma<Textos> = {
     folha: 'Sheet',
     de: 'of',
     frase:
-      'Thematic maps of Brazil, one a day. Each plate comes with its layers, a declared projection and a citation with a DOI.',
+      'Thematic maps of Brazil, in weekly collections. Each plate comes with its layers, a declared projection and a citation with a DOI.',
     vazio: 'No maps in this category yet — the survey of the territory continues.',
     paginacao: 'Pagination',
     recentes: 'Newer',

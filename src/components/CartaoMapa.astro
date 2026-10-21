@@ -65,19 +65,15 @@ const serie = await colecaoDoMapa(mapa);
       {destaque ? d.titulo : <a href={linkMapa(mapa)}>{d.titulo}</a>}
     </Titulo>
     {d.subtitulo && <p class="cartao__sub">{d.subtitulo}</p>}
-    <p class="linha-data">
-      <span class="linha-data__rotulo">{tx.cartao.publicado}</span>
-      <time datetime={dataIso(d.data)}>{dataExtensa(d.data, lingua)}</time>
-      {
-        d.atualizado && (
-          <>
-            <span aria-hidden="true">·</span>
-            <span class="linha-data__rotulo">{tx.cartao.atualizadoEm}</span>
-            <time datetime={dataIso(d.atualizado)}>{dataExtensa(d.atualizado, lingua)}</time>
-          </>
-        )
-      }
-    </p>
+    {
+      /* A data de publicação não aparece na página (fica no Zenodo, no RSS e nos metadados); só a de correção. */
+      d.atualizado && (
+        <p class="linha-data">
+          <span class="linha-data__rotulo">{tx.cartao.atualizadoEm}</span>
+          <time datetime={dataIso(d.atualizado)}>{dataExtensa(d.atualizado, lingua)}</time>
+        </p>
+      )
+    }
     {
       /* Na página do mapa, a ficha é o que mais se procura: o botão vem logo no cabeçalho. */
       destaque && (

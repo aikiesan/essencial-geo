@@ -2,7 +2,7 @@
 numero: 75
 titulo: "O valor da produção animal"
 subtitulo: "O leite está em toda parte; o dinheiro, nos ovos"
-data: 2026-12-05
+data: 2026-10-20
 categoria: uso-do-solo
 colecao: animal-sp
 tags: [animal-sp, sao-paulo, pecuaria, ovos, leite, mel, aquicultura, valor-da-producao, ibge, ppm]

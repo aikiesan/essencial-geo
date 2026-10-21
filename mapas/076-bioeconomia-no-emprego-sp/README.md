@@ -2,7 +2,7 @@
 numero: 76
 titulo: "A bioeconomia no emprego"
 subtitulo: "Um em cada quinze empregos formais vem da biomassa"
-data: 2026-12-06
+data: 2026-10-20
 categoria: energia
 colecao: bioeconomia-sp
 tags: [bioeconomia-sp, sao-paulo, bioeconomia, emprego, rais, biomassa, municipios]
