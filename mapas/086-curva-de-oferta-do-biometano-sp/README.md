@@ -6,6 +6,7 @@ data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, gasodutos, pontos-de-entrega, curva-de-oferta]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Quanto do biometano fica perto de onde o gás entra na rede? Medindo a distância em linha reta de cada célula de 1 km ao ponto de entrega de gás existente mais próximo, só 14% do potencial do estado fica a até 25 km e 33% a até 50 km; metade está a mais de 76 km, e um décimo, a mais de 157 km. A curva muda com a fonte: 57% do lixo, poda e esgoto fica a até 25 km, porque cidades e gasodutos andam juntos; metade dos dejetos está a até 59 km, a da cana a até 80 km e a das outras lavouras a até 101 km. A rede elétrica é mais densa: metade do potencial está a até 33 km de uma subestação da rede básica. O fim da curva é o norte canavieiro, como Igarapava, a 226 km do ponto de entrega mais próximo. Segunda prancha da coleção «Bacias de suprimento».
@@ -88,7 +89,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

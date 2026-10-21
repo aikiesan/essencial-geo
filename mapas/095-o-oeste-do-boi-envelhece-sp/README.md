@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, envelhecimento, pecuaria, bovinos, ppm, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde há mais boi por quilômetro quadrado, a população é mais velha. A correlação de postos entre a densidade de bovinos (Pesquisa da Pecuária Municipal 2024) e a parte das pessoas com 60 anos ou mais (Censo 2022) é 0,52 em 617 municípios e 0,41 descontadas urbanização, densidade e renda; 120 municípios estão no terço de cima dos dois. Jales tem 110 bois por km² e 22,2% de idosos. A cana não mostra o mesmo laço (ρ 0,09): o padrão é do pasto, que emprega pouca gente por hectare. Os jovens saem e quem fica envelhece é uma hipótese que o mapa sustenta, mas não prova. Terceira prancha da coleção «O Censo cruzado».
@@ -89,7 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, saneamento, esgoto, segunda-residencia, litoral, domicilios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde há mais casas de veraneio, menos domicílios estão ligados à rede de esgoto. A correlação de postos entre a parte dos domicílios de uso ocasional e a dos domicílios ocupados sem esgoto na rede geral (Censo 2022) é 0,64 nos 645 municípios e 0,41 descontadas urbanização, densidade e renda; 139 municípios estão no terço de cima dos dois. Ibiúna tem 71% dos domicílios fora da rede e 32% de casas de uso ocasional; Ubatuba, 50% e 62%. Praia Grande, com 42% de uso ocasional e 2% fora da rede, mostra que dá para ter as duas coisas. Nona prancha da coleção «O Censo cruzado».
@@ -81,7 +82,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

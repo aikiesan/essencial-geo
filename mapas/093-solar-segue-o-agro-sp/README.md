@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, energia-solar, cana-de-acucar, mapbiomas, aneel, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde a cana ocupa mais área, as casas têm mais painel solar. A correlação de postos entre a parte do município em cana (MapBiomas) e a potência solar residencial de geração distribuída por domicílio (ANEEL e Censo 2022) é 0,55 nos 645 municípios e fica em 0,44 descontadas urbanização, densidade e renda. Em 102 municípios os dois estão no terço de cima. Jaboticabal, com 72% da área em cana, tem 957 W por domicílio; Santa Fé do Sul, quase sem cana, tem 1.400 W; São Paulo, 38 W. A renda sozinha explica pouco (ρ 0,23). É um padrão entre municípios, não uma causa. Primeira prancha da coleção «O Censo cruzado».
@@ -85,7 +86,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

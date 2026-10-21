@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, mobilidade, trabalho-rural, deslocamento, escolaridade, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Ir trabalhar na carroceria de caminhonete ou caminhão adaptado, o pau de arara, ainda é coisa do campo e de quem estudou menos. Em 135 municípios paulistas, 1% ou mais dos ocupados que se deslocam ao trabalho vão assim (Censo 2022, amostra); em 32, a amostra não achou nenhum. Herculândia tem a maior taxa entre os municípios de 5 mil habitantes ou mais: 4,8%. A correlação de postos com a parte dos adultos sem fundamental completo é 0,41 (0,27 descontadas urbanização, densidade e renda) e, com o emprego formal na bioeconomia, 0,38. São poucas pessoas e dado de amostra: o mapa usa classes largas e se lê como padrão entre municípios. Décima e última prancha da coleção «O Censo cruzado».
@@ -89,7 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

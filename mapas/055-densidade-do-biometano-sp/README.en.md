@@ -19,7 +19,7 @@ metodo: "Biomethane potential from 17 residues by municipality (CP2B method v5.1
 
 Plate No. 055, the first of five in the collection **Biogas on the ground**, which takes the
 biomethane potential of plates [049](../049-lixo-e-esgoto-sp/README.en.md) and
-[050](../050-biometano-sp/README.en.md) down to the ground: how much it weighs per km² and per
+050 down to the ground: how much it weighs per km² and per
 person, which source leads outside sugarcane, how far it lies from gas pipelines and the power grid
 and how much has already become a plant.
 

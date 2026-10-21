@@ -6,6 +6,7 @@ data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, anp, aneel, geracao-distribuida, cp2b, raio-de-coleta]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde as plantas que já existem disputariam o mesmo resíduo, e onde há gás sem planta? Tomando como usina os 28 municípios com planta de biometano autorizada pela ANP (9) ou geração distribuída a biogás registrada na ANEEL (24) e um raio de coleta de 30 km, 71% do potencial do estado não tem nenhuma delas por perto, e só 8,4% está ao alcance de duas ou mais. A disputa se concentra entre Campinas, Piracicaba e a capital: Elias Fausto tem outros seis municípios com usina a menos de 60 km e divide 99% do seu raio; Paulínia e Caieiras, cerca de 90%. Fora do alcance fica justamente o maior potencial do estado: Sertãozinho, com 1,06 milhão de m³ por dia a 30 km, seguido de Pindorama e Morro Agudo. As plantas da ANP somam 558 mil m³ por dia, 3,3% do potencial. Última prancha da coleção «Bacias de suprimento».
@@ -88,7 +89,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,2 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

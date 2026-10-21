@@ -18,7 +18,7 @@ metodo: "Biomethane potential by municipality and residue (CP2B method v5.1, lev
 <p class="so-github"><a href="README.md">Português</a> · <strong>English</strong></p>
 
 Plate No. 056, the second of five in the collection **Biogas on the ground**.
-[Plate 050](../050-biometano-sp/README.en.md) shows that cane leads in 370 municipalities; this one
+Plate 050 shows that cane leads in 370 municipalities; this one
 takes cane out of the count and asks what comes next.
 
 ## What the files contain

@@ -6,6 +6,7 @@ data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, mapbiomas, raio-de-coleta, logistica]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Uma planta de biometano precisa de resíduo a uma distância que o caminhão pague. Somando o potencial do CP2B a até 30 km de cada ponto do estado, 73% da área de São Paulo junta 60 mil m³ por dia ou mais, a mediana das nove plantas paulistas autorizadas pela ANP. Quase tudo é cana: sem ela, só 17% da área chega lá. O máximo fica em Sertãozinho, com 1,06 milhão de m³ por dia a 30 km, 98% da cana. Fora dela, os maiores alcances são o lixo, a poda e o esgoto da capital (206 mil), os dejetos em torno de Cesário Lange (155 mil) e as outras lavouras de Itapeva (107 mil). Só 13% da área, sobretudo no Vale do Ribeira, no litoral e no Vale do Paraíba, junta menos de 10 mil. Primeira prancha da coleção «Bacias de suprimento».
@@ -96,7 +97,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,2 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

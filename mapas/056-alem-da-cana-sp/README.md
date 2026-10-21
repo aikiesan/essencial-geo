@@ -76,7 +76,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
@@ -86,7 +86,7 @@ discussoes: []
 <p class="so-github"><strong>Português</strong> · <a href="README.en.md">English</a></p>
 
 Prancha Nº 056, a segunda de cinco da coleção **Biogás no território**. A
-[prancha 050](../050-biometano-sp/README.md) mostra que a cana lidera em 370 municípios; esta
+prancha 050 mostra que a cana lidera em 370 municípios; esta
 tira a cana da conta e pergunta o que vem depois.
 
 ## O que vem nos arquivos

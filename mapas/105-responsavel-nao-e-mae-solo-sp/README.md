@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, familia, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Pessoa responsável não é sinônimo de mãe solo. Das casas paulistas com responsável mulher, 44,0% têm cônjuge (nas de responsável homem, 71,3%) e 27,7% são de mulher sem cônjuge com filhos ou enteados. Ainda assim, 86% dos lares sem cônjuge com filhos têm uma mulher à frente. Nos municípios, onde há mais responsáveis mulheres, mais delas vivem com cônjuge (correlação de postos 0,50; parcial 0,56) e menos são sem cônjuge com filhos (−0,43). Em Itupeva, 63% vivem com cônjuge; em Santos, 35%. Terceira prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -79,7 +80,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

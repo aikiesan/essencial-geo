@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, verticalizacao, desigualdade, renda, apartamentos, setores-censitarios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Quanto mais a cidade sobe, mais a renda varia de um bairro para outro. A correlação de postos entre a desigualdade de renda entre setores censitários (coeficiente de variação ponderado do rendimento dos responsáveis) e a parte dos domicílios em apartamento (Censo 2022) é 0,69 em 570 municípios e 0,45 descontadas urbanização, densidade e renda. São Paulo tem 36% dos domicílios em apartamento e coeficiente 0,94; Barueri, 31% e 1,02. Em 253 municípios não há nenhum domicílio em apartamento. O prédio marca a cidade que se divide em bairros ricos e pobres, sem que o mapa diga qual veio antes. Quinta prancha da coleção «O Censo cruzado».
@@ -77,7 +78,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
