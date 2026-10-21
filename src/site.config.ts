@@ -290,6 +290,16 @@ export const COLECOES = {
       resumo: 'Nearly half of São Paulo’s homes name a woman as the person responsible. Eight maps cross this with sewerage, water, lighting and income, and show that the service gap comes from address.',
     },
   },
+  'funil-sp': {
+    pt: {
+      titulo: 'O funil do biometano',
+      resumo: 'Do potencial teórico ao acessível, nos quatro níveis do CP2B: o que fica no campo, o que vai para a caldeira, o que a estrada leva e quanto muda entre o cenário mínimo e o máximo.',
+    },
+    en: {
+      titulo: 'The biomethane funnel',
+      resumo: 'From theoretical to accessible potential, through CP2B’s four levels: what stays in the field, what goes to the boiler, what the road takes and how much changes between the lowest and highest scenarios.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

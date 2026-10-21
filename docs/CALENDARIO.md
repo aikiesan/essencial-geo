@@ -29,7 +29,7 @@ Duas ressalvas do GitHub Actions:
 
 ## A rotina: produção em lote, publicação em dias fixos
 
-**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11).
+**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11).
 
 | Quando | O quê |
 | --- | --- |
@@ -143,7 +143,7 @@ uma frase («A colheita que acende a rede»), e cada coleção tem um friso dese
 
 **Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
 uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
-`energia-eletrica-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
+`energia-eletrica-2026`, `funil-sp-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
 do push da primeira prancha dela.
 
 ## Pautas para depois da série
