@@ -373,8 +373,10 @@ for (const [cd, o] of mun) {
   const n = T081.get(cd) ?? {}, r = T029.get(cd) ?? {}, c = T030.get(cd) ?? {}, k = T091.get(cd) ?? {};
   o.pct_urbana = g.pct_rural != null ? 100 - g.pct_rural : null;
   o.idade_mediana = g.idade_mediana ?? null;
-  o.log_biometano_hab = lg(a.m3d_por_hab);
-  o.log_biometano_km2 = lg(a.m3d_por_km2);
+  // das colunas sem arredondar (m3d_por_hab da prancha tem 3 casas e virava 0 → sem dado em 40 municípios do
+  // litoral e do Vale do Ribeira); zero de verdade vai para o piso, depois do laço
+  o._bm_hab = a.biometano_m3d != null && o.pessoas > 0 ? a.biometano_m3d / o.pessoas : null;
+  o._bm_km2 = a.biometano_m3d != null && a.area_km2 > 0 ? a.biometano_m3d / a.area_km2 : null;
   o.pct_biometano_cana = a.biometano_m3d > 0 ? (100 * a.cana_m3d) / a.biometano_m3d : null;
   o.pct_biometano_pecuaria = a.biometano_m3d > 0 ? (100 * a.pecuaria_m3d) / a.biometano_m3d : null;
   o.km_gasoduto = a.km_gasoduto ?? null;
@@ -390,11 +392,23 @@ for (const [cd, o] of mun) {
   o.pct_area_silvicultura = u.pct_silvicultura ?? null;
   o.pct_area_citros = u.pct_citros ?? null;
   o.n_kg_ha_agro = n.n_kg_ha_agro ?? null;
-  o.log_dens_bovino = lg(r.dens_bovino);
-  o.log_dens_aves = lg(r.dens_galinaceos);
+  // PPM: "-" é zero de verdade (45 municípios sem galináceos) e entra no piso -2 (0,01 por km², como em base_bio);
+  // os 28 "sem informação" do IBGE (quase todos da Região Metropolitana) continuam sem dado.
+  const lgz = (v) => (v === 0 ? -2 : lg(v));
+  o.log_dens_bovino = lgz(r.dens_bovino);
+  o.log_dens_aves = lgz(r.dens_galinaceos);
   o.cana_t_ha = c.rendimento_t_ha ?? null;
-  o.log_co2_biogenico_hab = o.pessoas > 0 ? lg(k.co2_biogenico_t / o.pessoas) : null;
+  o._co2_hab = o.pessoas > 0 && k.co2_biogenico_t != null ? k.co2_biogenico_t / o.pessoas : null;
 }
+// log com piso: zero de verdade fica meia ordem de grandeza abaixo do menor valor positivo do estado
+const comPiso = (bruto, alvo) => {
+  const pos = [...mun.values()].map((o) => o[bruto]).filter((v) => v > 0);
+  const piso = Math.log10(Math.min(...pos)) - 0.5;
+  for (const o of mun.values()) { const v = o[bruto]; o[alvo] = v == null ? null : v > 0 ? Math.log10(v) : piso; delete o[bruto]; }
+};
+comPiso('_bm_hab', 'log_biometano_hab');
+comPiso('_bm_km2', 'log_biometano_km2');
+comPiso('_co2_hab', 'log_co2_biogenico_hab');
 def('log_renda_pc', 'controle', 'Rendimento domiciliar per capita médio (log10 R$)', 'Censo 2022, amostra (SIDRA 10295)');
 for (const o of mun.values()) o.log_renda_pc = lg(o.renda_pc_media);
 
