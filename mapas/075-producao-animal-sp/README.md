@@ -91,6 +91,7 @@ downloads:
 
 doi_automatico: true
 versao: "1.0.0"
+doi: 10.5281/zenodo.23540722
 discussoes: []
 ---
 
