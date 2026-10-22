@@ -300,6 +300,16 @@ export const COLECOES = {
       resumo: 'From theoretical to accessible potential, through CP2B’s four levels: what stays in the field, what goes to the boiler, what the road takes and how much changes between the lowest and highest scenarios.',
     },
   },
+  'bioenergia-cruzada-sp': {
+    pt: {
+      titulo: 'Bioenergia cruzada',
+      resumo: 'Cinco cruzamentos da bioenergia paulista com o que os postos vendem, com o campo e com as prefeituras: cana e etanol, biometano e diesel, eucalipto e mata, boi e adubo, e os municípios pequenos longe do gasoduto.',
+    },
+    en: {
+      titulo: 'Bioenergy, crossed',
+      resumo: 'Five crossings of São Paulo’s bioenergy with what filling stations sell, with the countryside and with town halls: cane and ethanol, biomethane and diesel, eucalyptus and forest, cattle and fertiliser, and small towns far from the pipeline.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];
