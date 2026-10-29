@@ -6,6 +6,7 @@ data: 2026-11-10
 categoria: energia
 colecao: funil-sp
 tags: [funil-sp, sao-paulo, biogas, biometano, logistica, estrada, cp2b]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   O último passo do funil do biometano é o menor no total e o mais desigual no mapa: 1,0 bilhão de m³ de metano por ano, 15 % do potencial mobilizável de São Paulo, se perde na estocagem e no caminho até uma usina (CP2B, do N3 ao N4, cenário de referência). O fator logístico do método mede, na malha viária, quanto do resíduo cabe no raio econômico de uma usina. O esterco de vaca de leite perde 70 %, porque vem pouco por vaca e espalhado em muitos sítios; o lixo orgânico, só 5 %, porque já chega junto ao aterro. Em 126 municípios a estrada leva mais da metade do mobilizável, como Anhembi, com 94 %, e Presidente Epitácio, com 91 %; em 27, no Vale do Ribeira e no fundo do Vale do Paraíba, leva tudo. É modelo, não medição. Quarta prancha da coleção «O funil do biometano».
@@ -80,6 +81,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

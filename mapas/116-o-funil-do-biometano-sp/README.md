@@ -6,6 +6,7 @@ data: 2026-11-10
 categoria: energia
 colecao: funil-sp
 tags: [funil-sp, sao-paulo, biogas, biometano, potencial, cp2b, metodo]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Somados os resíduos da cana, das lavouras, dos rebanhos e das cidades, o metano teórico de São Paulo passa de 23,6 bilhões de m³ por ano no cenário de referência do CP2B (nível N1). Depois vem o funil do método: 8,4 bilhões ficam no campo, porque não se recolhem; 8,2 bilhões já têm outro destino, quase todo o bagaço que vai para as caldeiras; e 1,0 bilhão se perde na estocagem e na estrada. No nível acessível (N4) sobram 6,0 bilhões, 25 % do teórico, ou 16,9 milhões de m³ de biometano por dia. A retenção varia muito: 71 % em Bastos, onde a cama e o esterco das granjas se recolhem quase inteiros; 24 % em Guaíra, o maior potencial teórico do estado; 3 % em Guariba, onde os resíduos da cana já alimentam um biodigestor; e zero em 27 municípios do Vale do Ribeira e do fundo do Vale do Paraíba. É modelo, não medição. Primeira prancha da coleção «O funil do biometano».
@@ -82,6 +83,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

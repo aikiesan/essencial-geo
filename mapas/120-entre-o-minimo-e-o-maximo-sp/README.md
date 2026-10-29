@@ -6,6 +6,7 @@ data: 2026-11-10
 categoria: energia
 colecao: funil-sp
 tags: [funil-sp, sao-paulo, biogas, biometano, cenarios, incerteza, cp2b]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   As quatro pranchas anteriores usam o cenário de referência do CP2B. Mas cada fator do método, da geração de resíduo à coleta, aos usos concorrentes e à logística, tem uma faixa na literatura, e o método calcula também um cenário com todos no fim baixo e outro com todos no fim alto. O metano acessível (N4) de São Paulo vai de 1,9 bilhão de m³ por ano no mínimo a 15,6 bilhões no máximo, 8,3 vezes mais; no teórico (N1), a faixa é de 3,7 vezes, porque as perdas de cada passo também mudam. No mínimo, 145 municípios ficam sem nada acessível, sobretudo no leste e no sul; no máximo, nenhum. Na pecuária, o máximo é 26 vezes o mínimo, porque o esterco que se recolhe e o raio da usina variam muito; na cana, 6,7 vezes. Os cenários são extremos, não intervalos de confiança. Quinta e última prancha da coleção «O funil do biometano».
@@ -79,6 +80,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,4 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

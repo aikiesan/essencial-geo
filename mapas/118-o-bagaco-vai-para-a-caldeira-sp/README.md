@@ -6,6 +6,7 @@ data: 2026-11-10
 categoria: energia
 colecao: funil-sp
 tags: [funil-sp, sao-paulo, biogas, biometano, bagaco, cogeracao, usos-concorrentes, cp2b]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   O segundo passo do funil do biometano tira do potencial o que já tem outro destino: 8,2 bilhões de m³ de metano por ano, 35 % do teórico de São Paulo (CP2B, do N2 ao N3, cenário de referência). Quase tudo, 7,5 bilhões, é bagaço de cana, que as usinas queimam nas caldeiras para gerar vapor e eletricidade; o método respeita esse uso e só conta como disponível o excedente, 10 % do bagaço. O resto do passo é pequeno: 0,37 bilhão de palha, grãos, cama de aviário e poda com outro uso, 0,12 de bagaço de laranja que vira ração e 0,23 que já vira biogás hoje, 71 % dele do lixo dos aterros. O mapa segue a cana: Guaíra e Sertãozinho passam de 240 milhões de m³ cada; a Região Metropolitana e o Vale do Paraíba quase não aparecem, a não ser pelo biogás que já existe, 70 milhões de m³ na capital. É modelo, não medição. Terceira prancha da coleção «O funil do biometano».
@@ -78,6 +79,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

@@ -6,6 +6,7 @@ data: 2026-11-10
 categoria: energia
 colecao: funil-sp
 tags: [funil-sp, sao-paulo, biogas, biometano, palha, esterco, coleta, cp2b]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   O primeiro passo do funil do biometano é o mais largo: 8,4 bilhões de m³ de metano por ano, 36 % do potencial teórico de São Paulo, ficam no campo porque o resíduo não pode ou não deve ser recolhido (CP2B, do N1 ao N2, cenário de referência). Mais da metade, 5,0 bilhões, é palha de cana: o método recolhe 40 % dela e deixa o resto cobrindo o solo, contra a erosão e a perda de umidade. Outros 1,38 bilhão são o esterco do gado no pasto, que se espalha e não se junta; 0,95 bilhão é palha de soja e de milho. A palha de cana é a maior causa em 350 municípios, com Morro Agudo e Guaíra à frente, cerca de 104 milhões de m³ cada; o esterco de pasto lidera em 165, onde há pouca cana: no Vale do Paraíba, no leste e no sul do estado e no Pontal do Paranapanema. É modelo, não medição. Segunda prancha da coleção «O funil do biometano».
@@ -78,6 +79,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
