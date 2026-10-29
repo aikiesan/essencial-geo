@@ -1,0 +1,7 @@
+[
+ { "tema": "cana", "numero": 111, "pasta": "111-cana-no-tanque-sp", "base": "sp_cana_e_etanol_2024", "data": "2026-11-03", "categoria": "energia" },
+ { "tema": "diesel", "numero": 112, "pasta": "112-diesel-que-o-biometano-cobriria-sp", "base": "sp_biometano_sobre_diesel_2024", "data": "2026-11-03", "categoria": "energia" },
+ { "tema": "eucalipto", "numero": 113, "pasta": "113-eucalipto-encostado-na-mata-sp", "base": "sp_mata_e_madeira_para_celulose_2024", "data": "2026-11-03", "categoria": "energia" },
+ { "tema": "esterco", "numero": 114, "pasta": "114-esterco-longe-de-quem-aduba-sp", "base": "sp_bovinos_e_adubo_organico", "data": "2026-11-03", "categoria": "energia" },
+ { "tema": "pequenos", "numero": 115, "pasta": "115-pequenos-longe-do-gas-sp", "base": "sp_pequenos_longe_do_gas", "data": "2026-11-03", "categoria": "energia" }
+]

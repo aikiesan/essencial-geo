@@ -29,7 +29,7 @@ Duas ressalvas do GitHub Actions:
 
 ## A rotina: produção em lote, publicação em dias fixos
 
-**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11).
+**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11). O resguardo de artigos de 21/10 pôs as três em rascunho, e em 28/10 «Bioenergia cruzada» (111 a 115) passou para 03/11; depois dela, a fila está vazia.
 
 | Quando | O quê |
 | --- | --- |
@@ -143,7 +143,7 @@ uma frase («A colheita que acende a rede»), e cada coleção tem um friso dese
 
 **Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
 uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
-`energia-eletrica-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
+`energia-eletrica-2026`, `funil-sp-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
 do push da primeira prancha dela.
 
 ## Pautas para depois da série
@@ -168,6 +168,10 @@ território). Nenhum resultado está antecipado aqui: cada número sai dos dados
 | Renda domiciliar na RMC | censo-renda | IBGE — Censo 2022 |
 | Rede hidrográfica e APPs de um município da RMC | hidrografia | ANA, FBDS |
 | Usinas sucroenergéticas e área de cana: onde o resíduo está | energia | ANEEL — SIGA, IBGE — PAM |
+| A noite paulista: luz noturna de 2015 a 2025 (em produção) | uso-do-solo | NASA — Black Marble (VNP46A4, VNP46A3) |
+| Fogo em SP: focos de calor e área queimada, 2024 e a série | biomas | INPE — BDQueimadas, MapBiomas Fogo |
+| Quem mora longe do posto de saúde | censo-renda | DATASUS — CNES, IBGE — Censo 2022 (setores) |
+| Mulheres nos nomes de rua | infraestrutura-dxf | OpenStreetMap |
 
 **Séries.** As pautas de energia formam uma série (biogás → rebanhos → cana → usinas), e as da RMC outra.
 Elas viraram as coleções acima: o número vai no cabeçalho da prancha e a sequência pode ser anunciada numa nota.

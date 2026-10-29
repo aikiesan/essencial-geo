@@ -1,0 +1,7 @@
+[
+ { "tema": "funil", "numero": 116, "pasta": "116-o-funil-do-biometano-sp", "base": "sp_funil_biometano", "data": "2026-11-10", "categoria": "energia" },
+ { "tema": "campo", "numero": 117, "pasta": "117-o-que-fica-no-campo-sp", "base": "sp_funil_coleta", "data": "2026-11-10", "categoria": "energia" },
+ { "tema": "caldeira", "numero": 118, "pasta": "118-o-bagaco-vai-para-a-caldeira-sp", "base": "sp_funil_usos_concorrentes", "data": "2026-11-10", "categoria": "energia" },
+ { "tema": "estrada", "numero": 119, "pasta": "119-a-estrada-cobra-sp", "base": "sp_funil_logistica", "data": "2026-11-10", "categoria": "energia" },
+ { "tema": "cenarios", "numero": 120, "pasta": "120-entre-o-minimo-e-o-maximo-sp", "base": "sp_funil_cenarios", "data": "2026-11-10", "categoria": "energia" }
+]
