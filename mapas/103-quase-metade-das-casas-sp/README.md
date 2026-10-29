@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, areas-de-ponderacao]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Em 2022, 49,2% dos domicílios paulistas (7,99 milhões de 16,24 milhões) tinham uma mulher como pessoa responsável; em 2010 eram 39,0%. Por área de ponderação, a parte é maior nas cidades e nos bairros densos: correlação de postos de 0,51 com a urbanização e 0,59 com a densidade, nas 2.520 áreas. Entre os municípios, vai de 25% a 65%. Responsável é quem os moradores apontam ao recenseador: não quer dizer quem sustenta a casa, nem mãe solo. Primeira prancha da coleção «Mulheres responsáveis pelo domicílio», que cruza esse dado com esgoto, água, iluminação e renda, sempre comparando lugares, não pessoas.
@@ -97,7 +98,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

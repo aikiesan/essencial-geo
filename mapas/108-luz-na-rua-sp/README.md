@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, iluminacao-publica, energia, entorno, genero, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   O Censo 2022 não perguntou pela energia elétrica; em 2010, 99,88% dos domicílios paulistas tinham energia (15 mil sem). O substituto mais próximo é a iluminação pública da Pesquisa Urbanística do Entorno: 2,1% das casas pesquisadas (325 mil) ficam em face de quadra sem luz na rua, e em 23 municípios são 10% ou mais (Sete Barras, 26%; Juquitiba, 22%). A pesquisa cobre os setores que o IBGE percorreu, quase todos urbanos, e não separa por sexo do responsável. A relação com a parte de responsáveis mulheres é fraca e não passa no teste (ρ −0,08; parcial −0,02): o mapa fica como retrato descritivo. Sexta prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -89,7 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, saneamento, agua, genero, setores-censitarios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   No estado, 96,9% das casas com responsável mulher recebem água da rede geral, contra 94,5% das com responsável homem: +2,4 pontos, dos quais +2,26 são endereço e +0,15 sobram dentro do mesmo setor censitário. Elas têm mais água da rede em 620 dos 645 municípios, de forma robusta ao sigilo. Em Cunha são 77% contra 48%; em Piedade, 67% contra 50%; no Guarujá, uma das exceções, elas têm um pouco menos. Descontada a urbanização, a parte de responsáveis mulheres quase não se relaciona com a cobertura (parcial 0,07). Quinta prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -85,7 +86,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

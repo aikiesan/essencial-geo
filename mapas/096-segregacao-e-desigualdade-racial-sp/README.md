@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, segregacao, desigualdade-racial, renda, cor-ou-raca, setores-censitarios, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Nas cidades onde brancos e não brancos moram mais separados, a renda dos brancos fica mais longe da dos pardos. A correlação de postos entre o índice de dissimilaridade, medido nos setores censitários, e a razão entre a renda domiciliar per capita mediana de brancos e de pardos (Censo 2022) é 0,43 em 588 municípios e 0,38 descontadas urbanização e densidade. Campinas tem índice 34 e renda dos brancos 1,7 vez a dos pardos; Diadema, índice 14 e razão 1,17. O mapa não diz se a segregação produz a desigualdade, se a desigualdade produz a segregação ou se as duas vêm da mesma história. Quarta prancha da coleção «O Censo cruzado».
@@ -83,7 +84,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

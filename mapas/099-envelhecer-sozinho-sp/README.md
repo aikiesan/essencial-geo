@@ -6,6 +6,7 @@ data: 2026-10-27
 categoria: censo-renda
 colecao: censo-cruzado-sp
 tags: [censo-cruzado-sp, sao-paulo, censo-2022, envelhecimento, domicilios, arranjos-domiciliares, areas-de-ponderacao, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde a população é mais velha, mais casas têm um morador só. A correlação de postos entre a parte das pessoas com 60 anos ou mais e a dos domicílios com um único morador (Censo 2022) é 0,60 nos 645 municípios e 0,55 descontadas urbanização, densidade e renda; 125 municípios estão no terço de cima dos dois. O par se mantém fora da região de São Paulo (parcial 0,57) e dentro das cidades: nas 2.517 áreas de ponderação do estado, 0,65. Santos tem 25% das casas com um morador e 25% de idosos. O agregado não diz se quem mora só é o idoso; viuvez e saída dos filhos são as hipóteses de sempre. Sétima prancha da coleção «O Censo cruzado».
@@ -81,7 +82,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

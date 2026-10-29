@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, domicilios, genero, censo-2010, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   De 2010 a 2022, a parte dos domicílios paulistas com responsável mulher subiu de 39,0% para 49,2%: +10,3 pontos e 60% mais casas (de 5,00 para 7,99 milhões). Subiu em 627 dos 645 municípios; os 18 em que caiu são pequenos. Morro Agudo foi de 23% para 49%, o maior salto entre os de 20 mil habitantes ou mais; a capital, que já partia de 44%, chegou a 53%. O aumento não segue a urbanização (ρ −0,07) e foi maior onde a parte era menor em 2010 (ρ −0,58). Os dois Censos usam o mesmo conceito de responsável e o mesmo universo de domicílios. Segunda prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -87,7 +88,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

@@ -92,7 +92,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
@@ -102,7 +102,7 @@ discussoes: []
 <p class="so-github"><strong>Português</strong> · <a href="README.en.md">English</a></p>
 
 Prancha Nº 055, a primeira de cinco da coleção **Biogás no território**, que leva o potencial de
-biometano das pranchas [049](../049-lixo-e-esgoto-sp/README.md) e [050](../050-biometano-sp/README.md)
+biometano das pranchas [049](../049-lixo-e-esgoto-sp/README.md) e 050
 para o chão: quanto pesa por km² e por pessoa, de que fonte vem fora da cana, a que distância
 está dos gasodutos e da rede elétrica e quanto já virou planta.
 

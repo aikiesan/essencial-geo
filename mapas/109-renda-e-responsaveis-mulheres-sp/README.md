@@ -6,6 +6,7 @@ data: 2026-11-03
 categoria: censo-renda
 colecao: mulheres-responsaveis-sp
 tags: [mulheres-responsaveis-sp, sao-paulo, censo-2022, renda, genero, bivariado, municipios]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   Onde a renda média das mulheres de 14 anos ou mais chega mais perto da dos homens, há mais casas com responsável mulher: correlação de postos de 0,25 nos 645 municípios e 0,35 descontadas urbanização e densidade, a relação mais firme da coleção. Em 98 municípios os dois estão no terço de cima. Em Lucélia, as mulheres ganham 87% do que ganham os homens e 49% das casas têm responsável mulher; em Pilar do Sul, 51% e 39%. No município mediano, elas ganham 63%. A razão vem da amostra e compara todas as mulheres com todos os homens, não as responsáveis: o Censo 2022 não publica renda por sexo do responsável no município. Sétima prancha da coleção «Mulheres responsáveis pelo domicílio».
@@ -81,7 +82,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

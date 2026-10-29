@@ -6,6 +6,7 @@ data: 2026-10-20
 categoria: energia
 colecao: suprimento-sp
 tags: [suprimento-sp, sao-paulo, biometano, biogas, cp2b, pontos-de-entrega, subestacoes, voronoi]
+rascunho: true                      # fora do ar: resguardo de artigo em preparação
 
 contexto: >-
   A que porta da rede chegaria o biometano? Dando cada célula de 1 km ao ponto de entrega de gás mais próximo, 43 pontos ficam com uma bacia em São Paulo, mas o potencial se concentra em poucos: os cinco maiores, todos no gasoduto Bolívia-Brasil, no centro e no oeste do estado, somam 65% dele. O de Boa Esperança do Sul, sozinho, tem 3,44 milhões de m³ por dia na bacia, 20% do potencial, a 104 km em média. Sem a cana, a ordem muda: Itapetininga lidera com 566 mil, de lavouras e dejetos do sudoeste, seguida de Bilac e Guaiçara. Na rede elétrica, 111 subestações da rede básica dividem o estado em bacias menores; a maior é a de Morro Agudo, com 1,99 milhão de m³ por dia a 38 km em média. Terceira prancha da coleção «Bacias de suprimento».
@@ -91,7 +92,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,2 MB"
 
-doi_automatico: true
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
