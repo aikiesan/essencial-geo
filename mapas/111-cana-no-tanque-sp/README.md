@@ -2,7 +2,7 @@
 numero: 111
 titulo: "Cana no tanque"
 subtitulo: "Onde há mais canavial, o etanol pesa mais no que os postos vendem"
-data: 2026-11-17
+data: 2026-11-03
 categoria: energia
 colecao: bioenergia-cruzada-sp
 tags: [bioenergia-cruzada-sp, sao-paulo, cana, etanol, combustiveis, mapbiomas, correlacao]
@@ -88,6 +88,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

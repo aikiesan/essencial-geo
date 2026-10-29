@@ -2,7 +2,7 @@
 numero: 115
 titulo: "Pequenos, cheios de gás e sozinhos"
 subtitulo: "48 municípios de menos de 20 mil habitantes têm 21 % do potencial de biometano e ficam longe do gasoduto"
-data: 2026-11-17
+data: 2026-11-03
 categoria: energia
 colecao: bioenergia-cruzada-sp
 tags: [bioenergia-cruzada-sp, sao-paulo, biometano, cp2b, residuos-solidos, consorcios, gasodutos, munic]
@@ -98,6 +98,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

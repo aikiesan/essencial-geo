@@ -2,7 +2,7 @@
 numero: 114
 titulo: "O esterco longe de quem aduba"
 subtitulo: "Onde há mais boi por km², menos estabelecimentos usam adubo orgânico"
-data: 2026-11-17
+data: 2026-11-03
 categoria: energia
 colecao: bioenergia-cruzada-sp
 tags: [bioenergia-cruzada-sp, sao-paulo, bovinos, adubo-organico, esterco, censo-agro-2017, correlacao]
@@ -90,6 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

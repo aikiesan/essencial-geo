@@ -343,7 +343,7 @@ SERIE.forEach((s, i) => {
     '  - formato: csv', `    arquivo: dados/${CSV}`, '    rotulo: "Tabela dos municípios (a mesma nas cinco pranchas)"', '    rotulo_en: "Municipal table (the same on all five plates)"', `    tamanho: "${kb(csv)}"`,
     '  - formato: svg', `    url: ${REL}/${s.base}_prancha.svg`, `    url_en: ${REL}/${s.base}_prancha.en.svg`, '    rotulo: "Prancha em vetor, para impressão"', '    rotulo_en: "Vector plate, for printing"', `    tamanho: "${mb(svg)}"`,
     '  - formato: png', '    arquivo: mapa_preview.png', '    arquivo_en: mapa_preview.en.png', '    rotulo: "Prancha (PNG 2400 px)"', '    rotulo_en: "Plate (PNG, 2400 px)"', `    tamanho: "${mb(join(pasta, 'mapa_preview.png'))}"`,
-    '', 'versao: "1.0.0"', 'discussoes: []', '---', '', '');
+    '', 'doi_automatico: false', 'versao: "1.0.0"', 'discussoes: []', '---', '', '');
 
   // ---------- corpo PT
   const b = [];

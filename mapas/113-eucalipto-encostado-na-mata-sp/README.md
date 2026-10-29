@@ -2,7 +2,7 @@
 numero: 113
 titulo: "Eucalipto encostado na mata"
 subtitulo: "Onde sobra mais vegetação nativa, mais madeira sai para o papel e a celulose"
-data: 2026-11-17
+data: 2026-11-03
 categoria: energia
 colecao: bioenergia-cruzada-sp
 tags: [bioenergia-cruzada-sp, sao-paulo, silvicultura, eucalipto, celulose, vegetacao-nativa, mapbiomas, correlacao]
@@ -90,6 +90,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---

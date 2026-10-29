@@ -2,7 +2,7 @@
 numero: 112
 titulo: "O diesel que o biometano cobriria"
 subtitulo: "Em 300 municípios, o potencial de biometano passa, em energia, do diesel que os postos vendem"
-data: 2026-11-17
+data: 2026-11-03
 categoria: energia
 colecao: bioenergia-cruzada-sp
 tags: [bioenergia-cruzada-sp, sao-paulo, biometano, diesel, cp2b, combustiveis, potencial]
@@ -87,6 +87,7 @@ downloads:
     rotulo_en: "Plate (PNG, 2400 px)"
     tamanho: "0,3 MB"
 
+doi_automatico: false
 versao: "1.0.0"
 discussoes: []
 ---
