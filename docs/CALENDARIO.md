@@ -168,6 +168,10 @@ território). Nenhum resultado está antecipado aqui: cada número sai dos dados
 | Renda domiciliar na RMC | censo-renda | IBGE — Censo 2022 |
 | Rede hidrográfica e APPs de um município da RMC | hidrografia | ANA, FBDS |
 | Usinas sucroenergéticas e área de cana: onde o resíduo está | energia | ANEEL — SIGA, IBGE — PAM |
+| A noite paulista: luz noturna de 2015 a 2025 (em produção) | uso-do-solo | NASA — Black Marble (VNP46A4, VNP46A3) |
+| Fogo em SP: focos de calor e área queimada, 2024 e a série | biomas | INPE — BDQueimadas, MapBiomas Fogo |
+| Quem mora longe do posto de saúde | censo-renda | DATASUS — CNES, IBGE — Censo 2022 (setores) |
+| Mulheres nos nomes de rua | infraestrutura-dxf | OpenStreetMap |
 
 **Séries.** As pautas de energia formam uma série (biogás → rebanhos → cana → usinas), e as da RMC outra.
 Elas viraram as coleções acima: o número vai no cabeçalho da prancha e a sequência pode ser anunciada numa nota.
