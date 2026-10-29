@@ -29,7 +29,7 @@ Duas ressalvas do GitHub Actions:
 
 ## A rotina: produção em lote, publicação em dias fixos
 
-**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11).
+**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11). O resguardo de artigos de 21/10 pôs as três em rascunho, e em 28/10 «Bioenergia cruzada» (111 a 115) passou para 03/11; depois dela, a fila está vazia.
 
 | Quando | O quê |
 | --- | --- |
