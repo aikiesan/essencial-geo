@@ -31,6 +31,12 @@ const mapaSetores = (c, extra = {}) => ({
   ...extra,
 });
 const rotulosRede = () => L(['até 10 %', '10 a 50 %', '50 a 80 %', '80 a 95 %', '95 a 99 %', 'mais de 99 %'], ['up to 10%', '10 to 50%', '50 to 80%', '80 to 95%', '95 to 99%', 'over 99%']);
+/** Legenda da figura de reuso: as classes do mapa, o setor vazio e a hachura, sem contagens nem barras. */
+function legendaFigura(itens, titulo, zero, semInfo) {
+  const lg = legendaCategorias(itens, 0, { titulo });
+  const s = [lg.svg, caixaLegenda(ZERO, zero, lg.y), caixaLegenda(null, semInfo, lg.y + 25, { hachura: true })];
+  return { svg: s.join('\n'), altura: lg.y + 29, largura: 420 };
+}
 
 /* ------------------------------------------------------------------ 1/4 esgoto na rede */
 async function esgoto() {
@@ -57,6 +63,9 @@ async function esgoto() {
         linhas: L([`${nf(d.fora)} domicílios: a maior parte`, 'entre as cidades com mais de 20 mil'], [`${nf(d.fora)} homes: the largest share`, 'among towns with over 20,000']),
       }],
     }),
+    legendaFigura: () => legendaFigura(c.cores.map((k, i) => [k, rotulosRede()[i]]),
+      L('DOMICÍLIOS LIGADOS À REDE NO SETOR', 'HOMES ON THE MAINS IN THE TRACT'),
+      L('setor sem domicílio ocupado', 'tract with no occupied home'), L('sem informação', 'no data')),
     numeros: () => [
       [pct(c.uf.pct_rede, 1), [L('dos domicílios com esgoto', 'of homes with sewage'), L('na rede ou fossa ligada', 'on the mains or a linked tank')]],
       [grande(c.uf.fora), [L('domicílios fora da rede', 'homes off the mains')]],
@@ -107,6 +116,9 @@ async function destino() {
         linhas: L(['na capital lançam o esgoto', 'em rio, córrego, lago ou mar'], ['in the capital send sewage', 'into a river, stream, lake or sea']),
       }],
     }),
+    legendaFigura: () => legendaFigura(c.destinos.map((x) => [x.cor, L(x.pt, x.en)]),
+      L('DESTINO À FRENTE NO SETOR', 'LEADING DESTINATION IN THE TRACT'),
+      L('setor sem domicílio ocupado', 'tract with no occupied home'), L('empate ou sem informação', 'tie or no data')),
     numeros: () => [
       [pct((100 * c.area[iRud]) / areaTot, 0), [L('da área dos setores tem a', 'of the tracts’ area has'), L('fossa rudimentar à frente', 'rudimentary pits in the lead')]],
       [pct((100 * c.area[iRede]) / areaTot, 0), [L('da área tem a rede à frente,', 'of the area has the mains ahead,'), L(`com ${pct((100 * c.dom[iRede]) / c.dom.reduce((a, b) => a + b, 0), 0)} dos domicílios`, `with ${pct((100 * c.dom[iRede]) / c.dom.reduce((a, b) => a + b, 0), 0)} of homes`)]],
@@ -141,7 +153,7 @@ async function lixo() {
   const r = await lerRaster('grade-saneamento-sp-lixo');
   const corDe = (v) => (v >= 1 && v <= c.cores.length ? c.cores[v - 1] : v === 252 || v === 253 ? ZERO : null);
   const totDom = c.dom.reduce((a, b) => a + b, 0);
-  const rot = L(['até 1 %', '1 a 5 %', '5 a 20 %', '20 a 50 %', 'mais de 50 %'], ['up to 1%', '1 to 5%', '5 to 20%', '20 to 50%', 'over 50%']);
+  const rot = () => L(['até 1 %', '1 a 5 %', '5 a 20 %', '20 a 50 %', 'mais de 50 %'], ['up to 1%', '1 to 5%', '5 to 20%', '20 to 50%', 'over 50%']);
   const topo = c.pct_top[0];
   return () => ({
     layout: 'um',
@@ -160,6 +172,9 @@ async function lixo() {
         linhas: L(['a maior parte de domicílios', 'com lixo fora da coleta'], ['the largest share of homes', 'with rubbish outside collection']),
       }],
     }),
+    legendaFigura: () => legendaFigura(c.cores.map((k, i) => [k, rot()[i]]),
+      L('DOMICÍLIOS COM LIXO FORA DA COLETA', 'HOMES WITH UNCOLLECTED RUBBISH'),
+      L('nenhum, ou setor sem domicílio', 'none, or tract with no home'), L('sem informação', 'no data')),
     numeros: () => [
       [pct((100 * c.uf.fora) / c.uf.total, 2), [L('dos domicílios do estado', 'of the state’s homes'), L(`(${grande(c.uf.fora)}) sem coleta`, `(${grande(c.uf.fora)}) without collection`)]],
       [grande(c.uf.queimado), [L('domicílios queimam', 'homes burn their'), L('o lixo na propriedade', 'rubbish on the property')]],
@@ -167,7 +182,7 @@ async function lixo() {
       [pct((100 * c.dom[0]) / totDom, 0), [L('dos domicílios vivem em setores', 'of homes are in tracts where'), L('com coleta para todos', 'everyone has collection')]],
     ],
     painel: (y) => {
-      const itens = c.cores.map((k, i) => [k, rot[i], c.dom[i + 1], totDom]);
+      const itens = c.cores.map((k, i) => [k, rot()[i], c.dom[i + 1], totDom]);
       const lg = legendaBarras(itens, y, { titulo: L('DOMICÍLIOS COM LIXO FORA DA COLETA', 'HOMES WITH UNCOLLECTED RUBBISH'), rotuloValor: L('parte dos domicílios do estado', 'share of the state’s homes') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(ZERO, L(`nenhum, ou setor sem domicílio (${pct((100 * c.dom[0]) / totDom, 0)})`, `none, or tract with no home (${pct((100 * c.dom[0]) / totDom, 0)})`), yy)];

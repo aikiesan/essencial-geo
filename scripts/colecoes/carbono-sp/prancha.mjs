@@ -57,6 +57,7 @@ function dornas() {
   const g1 = c.top_ferm[0], g2 = c.linhas.find((l) => l.NM_MUN === 'Piracicaba');
   const s = c.safra;
   const top = c.top_ferm.slice(0, 6);
+  const circulos = (y) => legendaCirculos([250000, 100000, 25000], raio, (v) => L(`${nf(v / 1000)} mil t`, `${nf(v / 1000)} kt`), { y, cor: FERM });
   return () => ({
     layout: 'um',
     motivo: friso,
@@ -89,9 +90,16 @@ function dornas() {
       [nf(c.n_usinas), [L('usinas com capacidade', 'mills with authorised'), L(`autorizada, em ${nf(c.n_mun_ferm)} municípios`, `capacity, in ${nf(c.n_mun_ferm)} municipalities`)]],
       [L(`${nf(K.t_co2_por_m3_hidratado, 2)} t`, `${nf(K.t_co2_por_m3_hidratado, 2)} t`), [L('de CO₂ por m³ de hidratado;', 'of CO₂ per m³ of hydrous;'), L(`${nf(K.t_co2_por_m3_anidro, 2)} t por m³ de anidro`, `${nf(K.t_co2_por_m3_anidro, 2)} t per m³ of anhydrous`)]],
     ],
+    legendaFigura: () => {
+      const lc = circulos(18);
+      // Os rótulos dos círculos descem um passo de texto por valor; a caixa do fundo vem depois deles.
+      const y = 18 + Math.max(lc.altura, 2 * 21 + 10) + 24;
+      const fundo = caixaLegenda('#ece4dc', L('município com usina de etanol', 'municipality with an ethanol mill'), y);
+      return { svg: [rotuloPainel(L('CO₂ NA SAFRA', 'CO₂ PER HARVEST'), 0), lc.svg, fundo].join('\n'), altura: y + 6, largura: 340 };
+    },
     painel: (y) => {
       const out = [rotuloPainel(L('CO₂ NA SAFRA', 'CO₂ PER HARVEST'), y)];
-      const lc = legendaCirculos([250000, 100000, 25000], raio, (v) => L(`${nf(v / 1000)} mil t`, `${nf(v / 1000)} kt`), { y: y + 18, cor: FERM });
+      const lc = circulos(y + 18);
       out.push(lc.svg);
       // Sazonalidade: CO2 por mês da safra.
       const xC = 300, wC = LP - xC, hC = 88, y0 = y + 6;
@@ -166,6 +174,10 @@ function biogas() {
       [nf(c.com_biogas), [L('municípios com algum', 'municipalities with some'), L('CO₂ de biogás possível', 'possible biogas CO₂')]],
       [mt(c.T.fermentacao), [L('das dornas, na safra: as duas', 'from the vats per harvest: the'), L('fontes têm quase o mesmo tamanho', 'two sources are about the same')]],
     ],
+    legendaFigura: () => ({
+      svg: `${rotuloPainel(L('CO₂ DO BIOGÁS · T POR ANO', 'BIOGAS CO₂ · T A YEAR'), 0)}\n${legendaFaixa(CORES_BIOGAS, L(rotLim(lim), rotLimEn(lim)), { y: 18, larg: 62, semInfo: false, id: 'lfb' })}`,
+      altura: 54, largura: 440,
+    }),
     painel: (y) => {
       const out = [rotuloPainel(L('CO₂ DO BIOGÁS · T POR ANO', 'BIOGAS CO₂ · T A YEAR'), y)];
       out.push(legendaFaixa(CORES_BIOGAS, L(rotLim(lim), rotLimEn(lim)), { y: y + 18, larg: 62, semInfo: false, id: 'lfb' }));
@@ -201,6 +213,16 @@ function fossil() {
   const parte = (100 * T.fermentacao_2024) / (T.fermentacao_2024 + T.fossil_est);
   const cub = por.get('3513504'), gua = por.get('3517406'), pir = por.get('3538709');
   const nBio = ls.filter((l) => l.pct_biogenico_grandes > 50).length;
+  /** As seis classes da parte biogênica em duas colunas de três; com `n`, o número de municípios (só na prancha). */
+  const classesPct = (y, col, n = null) => {
+    const rot = L(['até 10 %', '10 a 25 %', '25 a 50 %', '50 a 75 %', '75 a 90 %', 'mais de 90 %'], ['up to 10%', '10 to 25%', '25 to 50%', '50 to 75%', '75 to 90%', 'over 90%']);
+    return CORES_PCT.map((k, i) => {
+      const x = i < 3 ? 0 : col + 20, yl = y + (i % 3) * 22;
+      const t = n ? `${rot[i]} · ${nf(n[i])} ${L('mun.', 'mun.')}` : rot[i];
+      return `<circle cx="${x + 9}" cy="${yl - 6}" r="8" fill="${k}" stroke="${TINTA}" stroke-width=".6"/><text x="${x + 26}" y="${yl}" font-family="${SERIF}" font-size="15">${esc(t)}</text>`;
+    }).join('\n');
+  };
+  const circulos = (y) => legendaCirculos([800000, 300000, 50000], raio, (v) => L(`${nf(v / 1000)} mil t`, `${nf(v / 1000)} kt`), { y, cor: '#6f6672' });
   return () => ({
     layout: 'um',
     motivo: friso,
@@ -238,6 +260,14 @@ function fossil() {
       [mt(T.fossil_energia, 0), [L('de CO₂ fóssil de toda a energia', 'of fossil CO₂ from all energy'), L('do estado, transporte incluído', 'in the state, transport included')]],
       [L('~100 %', '~100%'), [L('de CO₂ no gás da dorna;', 'CO₂ in the vat gas;'), L('3 a 15 % numa chaminé', '3 to 15% in a stack')]],
     ],
+    legendaFigura: () => {
+      const lc = circulos(128);
+      return {
+        svg: [rotuloPainel(L('PARTE BIOGÊNICA, POR MUNICÍPIO', 'BIOGENIC SHARE, BY MUNICIPALITY'), 0), classesPct(26, 130),
+          rotuloPainel(L('CO₂ DAS GRANDES FONTES FIXAS, 2024', 'CO₂ FROM LARGE FIXED SOURCES, 2024'), 110), lc.svg].join('\n'),
+        altura: 128 + Math.max(lc.altura, 2 * 21 + 10), largura: 380,
+      };
+    },
     painel: (y) => {
       const out = [rotuloPainel(L('CO₂ EM SÃO PAULO · MT POR ANO', 'CO₂ IN SÃO PAULO · MT A YEAR'), y)];
       const itens = [
@@ -250,17 +280,12 @@ function fossil() {
       out.push(b.svg);
       let yy = b.y + 30;
       out.push(rotuloPainel(L('PARTE BIOGÊNICA, POR MUNICÍPIO', 'BIOGENIC SHARE, BY MUNICIPALITY'), yy));
-      const rot = L(['até 10 %', '10 a 25 %', '25 a 50 %', '50 a 75 %', '75 a 90 %', 'mais de 90 %'], ['up to 10%', '10 to 25%', '25 to 50%', '50 to 75%', '75 to 90%', 'over 90%']);
       const nCl = new Array(6).fill(0);
       for (const l of ls) nCl[classe(l.pct_biogenico_grandes, LIM_PCT)]++;
       yy += 26;
-      const col = (LP - 20) / 2;
-      CORES_PCT.forEach((k, i) => {
-        const x = i < 3 ? 0 : col + 20, yl = yy + (i % 3) * 22;
-        out.push(`<circle cx="${x + 9}" cy="${yl - 6}" r="8" fill="${k}" stroke="${TINTA}" stroke-width=".6"/><text x="${x + 26}" y="${yl}" font-family="${SERIF}" font-size="15">${esc(`${rot[i]} · ${nf(nCl[i])} ${L('mun.', 'mun.')}`)}</text>`);
-      });
+      out.push(classesPct(yy, (LP - 20) / 2, nCl));
       yy += 3 * 22 + 4;
-      const lc = legendaCirculos([800000, 300000, 50000], raio, (v) => L(`${nf(v / 1000)} mil t`, `${nf(v / 1000)} kt`), { y: yy, cor: '#6f6672' });
+      const lc = circulos(yy);
       out.push(lc.svg);
       const n = nota(L(`Estimativa. O fóssil é um piso: o Anuário só vê o combustível vendido, e ficam fora o consumo próprio das refinarias, o carvão da siderurgia e o CO₂ da calcinação do cimento. ${nf(nBio)} municípios têm mais CO₂ biogênico que fóssil.`,
         `An estimate. The fossil figure is a floor: the Yearbook sees only fuel sold, leaving out refineries’ own use, steelworks’ coal and cement calcination. ${nf(nBio)} municipalities have more biogenic than fossil CO₂.`), yy + lc.altura + 16, { tamanho: 13 });
@@ -326,6 +351,21 @@ function ptx() {
       [L(`${nf(emetF / 1e6, 1)} mi m³`, `${nf(emetF / 1e6, 1)} M m³`), [L('por dia só com as dornas,', 'a day from the vats alone,'), L(`${pct((100 * emetF) / gasDia, 0)} do gás consumido`, `${nf((100 * emetF) / gasDia, 0)}% of gas consumed`)]],
       [pct((100 * fx[3].t) / c.T.fermentacao, 0), [L('do CO₂ das dornas fica a', 'of the vat CO₂ lies over'), L('mais de 50 km de um gasoduto', '50 km from a gas pipeline')]],
     ],
+    legendaFigura: () => {
+      // Na prancha, a cor de cada região vem no quadrado da sua barra; na figura, as classes vêm por extenso.
+      const rot = L([`até ${nf(100)}`, `${nf(100)} a ${nf(1000)}`, `${nf(1000)} a ${nf(2000)}`, `${nf(2000)} a ${nf(4000)}`, `mais de ${nf(4000)}`],
+        [`up to ${nf(100)}`, `${nf(100)} to ${nf(1000)}`, `${nf(1000)} to ${nf(2000)}`, `${nf(2000)} to ${nf(4000)}`, `over ${nf(4000)}`]);
+      const out = [rotuloPainel(L('E-METANO POSSÍVEL · MIL M³ POR DIA', 'POSSIBLE E-METHANE · THOUSAND M³ A DAY'), 0)];
+      let y = 26;
+      CORES_REG.forEach((k, i) => { out.push(caixaLegenda(k, rot[i], y)); y += 24; });
+      const lg = legendaLinhas([[GAS_T, 3, L('gasoduto de transporte', 'transmission pipeline')], [GAS_D, 1.3, L('gasoduto de distribuição', 'distribution pipeline')]], y + 8);
+      out.push(lg.svg);
+      y = lg.y + 14;
+      out.push(rotuloPainel(L('DORNAS DE 100 MIL T DE CO₂ OU MAIS', 'VATS OF 100 KT OF CO₂ OR MORE'), y));
+      const lc = legendaCirculos([250000, 100000], raio, (v) => L(`${nf(v / 1000)} mil t`, `${nf(v / 1000)} kt`), { y: y + 16, cor: FERM });
+      out.push(lc.svg);
+      return { svg: out.join('\n'), altura: y + 16 + Math.max(lc.altura, 21 + 10), largura: 420 };
+    },
     painel: (y) => {
       const out = [rotuloPainel(L('A CONTA, POR TONELADA DE CO₂', 'THE SUM, PER TONNE OF CO₂'), y)];
       const linhas = L([

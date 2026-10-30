@@ -58,6 +58,17 @@ function caixaListras(rot, y, { fundo = CORES_P[2], cor = TINTA } = {}) {
   return `<defs><pattern id="lgx" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-55)"><rect width="5" height="5" fill="${fundo}"/><path d="M0 0V5" stroke="${cor}" stroke-width=".8" stroke-opacity=".75"/></pattern></defs><rect x="0" y="${y - 14}" width="30" height="17" fill="url(#lgx)" stroke="#1a211a" stroke-width=".6"/><text x="42" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`;
 }
 
+/** Legenda da figura: título e uma caixa por classe, sem contagens: [[cor, rótulo, 'hachura' | 'listras']]. */
+function colunaFigura(titulo, itens, y = 0) {
+  const s = [rotuloPainel(titulo, y)];
+  y += 24;
+  for (const [cor, rot, tipo] of itens) {
+    s.push(tipo === 'listras' ? caixaListras(rot, y) : caixaLegenda(cor, rot, y, { hachura: tipo === 'hachura' }));
+    y += 25;
+  }
+  return { svg: s.join('\n'), y };
+}
+
 /* ------------------------------------------------------------------ 1/4 nitrogênio */
 function nitrogenio() {
   const c = C.n081;
@@ -99,8 +110,13 @@ function nitrogenio() {
         },
       ],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('NITROGÊNIO DOS DEJETOS POR HECTARE', 'MANURE NITROGEN PER HECTARE'),
+        [...CORES_N.map((k, i) => [k, rot[i]]), [null, L('sem dado da PPM', 'no PPM data'), 'hachura']]);
+      return { svg: g.svg, altura: g.y, largura: 380 };
+    },
     numeros: () => [
-      [kt(c.total_t), [L('de nitrogênio nos dejetos', 'of nitrogen in manure'), L('por ano, estimadas', 'a year, estimated')]],
+      [kt(c.total_t),[L('de nitrogênio nos dejetos', 'of nitrogen in manure'), L('por ano, estimadas', 'a year, estimated')]],
       [`${nf(c.kg_ha, 1)} kg`, [L('de N por hectare agropecuário;', 'of N per farmland hectare;'), L(`a mediana é ${nf(c.mediana)} kg`, `the median is ${nf(c.mediana)} kg`)]],
       [pc((100 * g.bovinos) / c.total_t, 0), [L('vêm do gado de corte,', 'comes from beef cattle,'), L('espalhado nos pastos', 'spread over the pastures')]],
       [nf(c.acima.length), [L(`municípios acima de ${DIRETIVA} kg/ha,`, `municipalities above ${DIRETIVA} kg/ha,`), L('o teto europeu', 'the European cap')]],
@@ -162,6 +178,14 @@ function fosforo() {
         },
       ],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('P₂O₅ DOS DEJETOS CONFINADOS POR HECTARE', 'HOUSED-HERD MANURE P₂O₅ PER HECTARE'), [
+        ...CORES_P.map((k, i) => [k, rot[i]]),
+        [null, L('dejeto passa a exportação', 'manure exceeds removal'), 'listras'],
+        [null, L('sem dado da PPM', 'no PPM data'), 'hachura'],
+      ]);
+      return { svg: g.svg, altura: g.y, largura: 420 };
+    },
     numeros: () => [
       [kt(c.p_t), [L('de P₂O₅ por ano nos dejetos', 'of P₂O₅ a year in the manure'), L('de aves, suínos e leite', 'of poultry, pigs and dairy')]],
       [pc((100 * g.aves) / c.p_t, 0), [L('vêm das aves, frangos', 'comes from poultry, broilers'), L('e galinhas poedeiras', 'and laying hens')]],
@@ -325,6 +349,13 @@ function digestato() {
         },
       ],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('DIGESTATO SOBRE A EXPORTAÇÃO DE P₂O₅', 'DIGESTATE OVER P₂O₅ REMOVAL'),
+        [...CORES_C.map((k, i) => [k, rot[i]]), [NEUTRO, L(`sem potencial ou ${POUCA()}`, `no potential or ${POUCA()}`)]]);
+      const yy = g.y + 12;
+      const lc = legendaCirculos([2000, 500, 100], raio, (v) => nf(v), { y: yy + 18, cor: SUINOS, tamanho: 14 });
+      return { svg: [g.svg, rotuloPainel(L('P₂O₅ NO DIGESTATO (T/ANO)', 'P₂O₅ IN THE DIGESTATE (T/YEAR)'), yy), lc.svg].join('\n'), altura: yy + 18 + lc.altura, largura: 420 };
+    },
     numeros: () => [
       [kt(c.p_t), [L('de P₂O₅ no digestato,', 'of P₂O₅ in the digestate,'), L(`${pc(c.sobre_exp.p, 0)} do que a colheita leva`, `${nf(c.sobre_exp.p, 0)}% of crop removal`)]],
       [kt(c.n_t), [L('de nitrogênio e', 'of nitrogen and'), L(`${kt(c.k_t)} de K₂O`, `${kt(c.k_t)} of K₂O`)]],

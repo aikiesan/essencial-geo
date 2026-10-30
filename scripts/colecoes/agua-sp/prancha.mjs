@@ -124,6 +124,22 @@ async function bacias() {
       s.push(ix.svg);
       return { svg: s.join('\n'), y: ix.y };
     },
+    // Figura: as classes, a hidrovia e o selo; o índice dos nomes fica só na prancha.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('HABITANTES POR KM²', 'PEOPLE PER KM²'), 0)];
+      const itens = q.map((_, i) => [VIRIDIS[i], rot(i)]);
+      const a = legendaClasses(itens.slice(0, 3), { y: 16, passo: 27, tamanho: 16, id: 'flgb1' });
+      const b = legendaClasses(itens.slice(3), { x: LP / 2 + 8, y: 16, passo: 27, tamanho: 16, id: 'flgb2' });
+      s.push(a.svg, b.svg);
+      const y = 16 + a.altura + 14;
+      s.push(`<path d="M2 ${y + 8}H34" stroke="${PAPEL}" stroke-width="7"/><path d="M2 ${y + 8}H34" stroke="${AZUL}" stroke-width="2.8"/>`);
+      s.push(`<rect x="${LP / 2 + 13}" y="${y + 3}" width="10" height="10" fill="${PAPEL}" stroke="${AZUL}" stroke-width="2" transform="rotate(45 ${LP / 2 + 18} ${y + 8})"/>`);
+      s.push(`<text x="50" y="${y + 14}" font-family="${SERIF}" font-size="16">${L('hidrovia', 'waterway')}</text>`);
+      s.push(`<text x="${LP / 2 + 40}" y="${y + 14}" font-family="${SERIF}" font-size="16">${L('eclusa', 'lock')}</text>`);
+      s.push(selos(([x, yy]) => [x, yy], { 6: [18, y + 40] }));
+      s.push(`<text x="50" y="${y + 46}" font-family="${SERIF}" font-size="16">${L('número da UGRHI', 'UGRHI number')}</text>`);
+      return { svg: s.join('\n'), altura: y + 54, largura: LP };
+    },
     fontes: () => [
       L('SEADE, GeoSEADE: UGRHIs (CRH-SP)', 'SEADE, GeoSEADE: UGRHIs (CRH-SP)'),
       L('IBGE, Censo 2022; Malha Municipal 2025', 'IBGE, 2022 Census; Municipal Mesh 2025'),
@@ -221,6 +237,27 @@ async function drenagem() {
       s.push(`<text x="${x0}" y="${y + 8}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('1 = cabeceira; cada encontro de dois rios de mesma ordem sobe um', '1 = headwater; each meeting of two equal orders adds one')}</text>`);
       return { svg: s.join('\n'), y: y + 18 };
     },
+    // Figura: vertente e vazão, sem os quilômetros nem as ordens de Strahler.
+    legendaFigura: () => {
+      // Os rios de fora do estado passam por baixo da legenda: um fundo da cor do vizinho a deixa legível
+      // (data-fundo: a figura sem mapa de base, que não tem esses rios, o tira).
+      const s = [`<rect data-fundo="1" x="-14" y="-30" width="${5 * 90 + 14}" height="${24 + 50 + 16 + 26 + 28 + 40}" fill="#f2f3f4" fill-opacity=".92"/>`, rotuloPainel(L('VERTENTE', 'SLOPE'), 0)];
+      let y = 24;
+      for (const [cor, rot] of [[AZUL, L('para o interior, bacia do Prata', 'inland, River Plate basin')], [ATL, L('direto para o Atlântico', 'straight to the Atlantic')]]) {
+        s.push(`<path d="M0 ${y - 5}h34" stroke="${cor}" stroke-width="3.2" stroke-linecap="round"/>`);
+        s.push(`<text x="46" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+        y += 25;
+      }
+      y += 16;
+      s.push(rotuloPainel(L('VAZÃO MÉDIA (M³/S)', 'MEAN DISCHARGE (M³/S)'), y));
+      y += 26;
+      const w = 90;
+      [1, 10, 100, 1000, 5000].forEach((q, i) => {
+        s.push(`<path d="M${i * w} ${y}h${w - 26}" stroke="${AZUL}" stroke-width="${f1(esp(q))}" stroke-linecap="round"/>`);
+        s.push(`<text x="${i * w}" y="${y + 24}" font-family="${MONO}" font-size="12">${nf(q)}</text>`);
+      });
+      return { svg: s.join('\n'), altura: y + 28, largura: 5 * w };
+    },
     fontes: () => [
       L('WWF/HydroSHEDS, HydroRIVERS v1.0', 'WWF/HydroSHEDS, HydroRIVERS v1.0'),
       L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025'),
@@ -297,6 +334,23 @@ async function ucs() {
       y += barras.length * passo + 4;
       s.push(`<text x="0" y="${y + 14}" font-family="${MONO}" font-size="12" fill="${CINZA}">${L('números das bacias: ver o mapa e a ficha', 'basin numbers: see the map and the notes')}</text>`);
       return { svg: s.join('\n'), y: y + 22 };
+    },
+    // Figura: os três grupos sem as contagens, o limite e o selo das bacias; sem as barras.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('GRUPO', 'GROUP'), 0)];
+      const caixa = (yy, fill, rot) => {
+        s.push(`<rect x="0" y="${yy}" width="34" height="21" fill="${fill}" stroke="#1a211a" stroke-width=".8"/>`);
+        s.push(`<text x="46" y="${yy + 16}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+      };
+      s.push(`<defs><pattern id="flgapa" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="${HACH.fundo}"/><path d="M0 0V6" stroke="${HACH.cor}" stroke-width="1.1"/></pattern></defs>`);
+      caixa(16, MIN.verde_mata, L('proteção integral', 'strict protection'));
+      caixa(46, MIN.oliva, L('uso sustentável, sem APA', 'sustainable use, not APA'));
+      caixa(76, 'url(#flgapa)', L('Área de Proteção Ambiental', 'Environmental Protection Area'));
+      s.push(`<path d="M0 118H34" stroke="${PAPEL}" stroke-width="3.2"/><path d="M0 118H34" stroke="${AZUL}" stroke-width="1.2"/>`);
+      s.push(`<text x="46" y="123" font-family="${SERIF}" font-size="16">${L('limite de bacia (UGRHI)', 'basin (UGRHI) boundary')}</text>`);
+      s.push(selos(([x, yy]) => [x, yy], { 3: [17, 150] }));
+      s.push(`<text x="46" y="156" font-family="${SERIF}" font-size="16">${L('número da UGRHI', 'UGRHI number')}</text>`);
+      return { svg: s.join('\n'), altura: 164, largura: 360 };
     },
     fontes: () => [
       L('MMA, CNUC 2024 (via SEADE, GeoSEADE)', 'MMA, CNUC 2024 (via SEADE, GeoSEADE)'),

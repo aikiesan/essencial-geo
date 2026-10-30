@@ -6,9 +6,9 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, gerarPrancha, rotuloPainel } from '../lib/prancha-sp.mjs';
+import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, largura, gerarPrancha, rotuloPainel } from '../lib/prancha-sp.mjs';
 import { lerRaster } from '../lib/raster.mjs';
-import { L, NEUTRO, ZERO, HACHURA, pct, grande, barras, legendaBarras, caixaLegenda, nota } from '../lib/painel.mjs';
+import { L, NEUTRO, ZERO, HACHURA, pct, grande, barras, legendaBarras, legendaCategorias, caixaLegenda, nota } from '../lib/painel.mjs';
 import { CORES_MEDIANA, LIM_MEDIANA, CORES_ENV, LIM_ENV, CORES_SEXO, LIM_SEXO, CORES_RURAL, LIM_RURAL } from './preparar.mjs';
 
 const SERIE = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'gente-sp', 'serie.json'), 'utf8'));
@@ -29,6 +29,17 @@ const mapaSetores = (extra = {}) => ({
   ...extra,
 });
 
+/** Legenda da figura de reuso: as classes da legenda do painel, sem as barras, e as caixas avulsas
+ * ([cor, rótulo, hachura?]) logo abaixo. */
+function legendaReuso(titulo, cores, rotulos, avulsas = []) {
+  const g = legendaCategorias(cores.map((k, i) => [k, rotulos[i]]), 0, { titulo });
+  const s = [g.svg];
+  let y = g.y;
+  for (const [cor, rot, hachura] of avulsas) { s.push(caixaLegenda(cor, rot, y, { hachura: !!hachura })); y += 25; }
+  const larg = Math.max(largura(titulo, 15, { mono: true, espaco: 2.4 }), ...[...rotulos, ...avulsas.map((a) => a[1])].map((r) => 42 + largura(r, 16)));
+  return { svg: s.join('\n'), altura: y - 25 + 6, largura: Math.ceil(larg) };
+}
+
 /** Faixa de cores contínua, com os limites nas junções (sem caixa de zero). */
 function faixa(cores, limites, { larg = 64, zero = null } = {}) {
   const s = [];
@@ -48,7 +59,7 @@ async function densidade() {
   const c = await ler('densidade');
   const r = await lerRaster('grade-gente-sp-densidade');
   const corDe = (v) => (v >= 1 && v <= 6 ? c.cores[v - 1] : v === 253 ? ZERO : null);
-  const rot = L(['até 10', '10 a 100', '100 a 1.000', '1.000 a 5.000', '5.000 a 15.000', 'mais de 15.000'], ['up to 10', '10 to 100', '100 to 1,000', '1,000 to 5,000', '5,000 to 15,000', 'over 15,000']);
+  const rot = () => L(['até 10', '10 a 100', '100 a 1.000', '1.000 a 5.000', '5.000 a 15.000', 'mais de 15.000'], ['up to 10', '10 to 100', '100 to 1,000', '1,000 to 5,000', '5,000 to 15,000', 'over 15,000']);
   const denso = c.mun_densos[0], vazio = c.mun_vazios[0];
   const pctAreaBaixa = (100 * c.area[0]) / c.tot_a, pctPesBaixa = (100 * c.pessoas[0]) / c.tot_p;
   return () => ({
@@ -75,6 +86,8 @@ async function densidade() {
         },
       ],
     }),
+    legendaFigura: () => legendaReuso(L('PESSOAS POR KM² NO SETOR', 'PEOPLE PER KM² IN THE TRACT'), c.cores, rot(),
+      [[ZERO, L('setor sem morador', 'tract with no residents')]]),
     numeros: () => [
       [pct(c.metade.pct_area, 1), [L('do território abriga', 'of the land holds'), L(`metade da gente (${nf(c.metade.area)} km²)`, `half the people (${nf(c.metade.area)} km²)`)]],
       [pct(c.noventa.pct_area, 1), [L('do território abriga', 'of the land holds'), L('90 % dos paulistas', '90% of the population')]],
@@ -82,13 +95,13 @@ async function densidade() {
       [grande(c.tot_p), [L('pessoas em', 'people in'), L(`${nf(c.tot_a)} km²`, `${nf(c.tot_a)} km²`)]],
     ],
     painel: (y) => {
-      const itens = c.cores.map((k, i) => [k, rot[i], c.pessoas[i], c.tot_p]);
+      const itens = c.cores.map((k, i) => [k, rot()[i], c.pessoas[i], c.tot_p]);
       const lg = legendaBarras(itens, y, { titulo: L('PESSOAS POR KM² NO SETOR', 'PEOPLE PER KM² IN THE TRACT'), rotuloValor: L('parte da população do estado', 'share of the state’s population') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(ZERO, L(`setor sem morador (${nf(c.n_vazios)})`, `tract with no residents (${nf(c.n_vazios)})`), yy)];
       yy += 42;
       s.push(rotuloPainel(L('PARTE DA ÁREA DO ESTADO EM CADA CLASSE', 'SHARE OF THE STATE’S AREA IN EACH CLASS'), yy));
-      const b = barras(c.cores.map((k, i) => [rot[i], (100 * c.area[i]) / c.tot_a, k, pct((100 * c.area[i]) / c.tot_a)]), yy + 14, { max: pctAreaBaixa * 1.1, x0: 200 });
+      const b = barras(c.cores.map((k, i) => [rot()[i], (100 * c.area[i]) / c.tot_a, k, pct((100 * c.area[i]) / c.tot_a)]), yy + 14, { max: pctAreaBaixa * 1.1, x0: 200 });
       s.push(b.svg);
       yy = b.y + 26;
       s.push(rotuloPainel(L('MUNICÍPIOS MAIS DENSOS (PESSOAS POR KM²)', 'DENSEST MUNICIPALITIES (PEOPLE PER KM²)'), yy));
@@ -198,7 +211,7 @@ async function idosos() {
   const c = await ler('idosos');
   const r = await lerRaster('grade-gente-sp-idosos');
   const corDe = (v) => (v >= 1 && v <= 6 ? c.cores[v - 1] : v === 253 ? ZERO : null);
-  const rot = L(['até 10 %', '10 a 15 %', '15 a 20 %', '20 a 25 %', '25 a 30 %', 'mais de 30 %'], ['up to 10%', '10 to 15%', '15 to 20%', '20 to 25%', '25 to 30%', 'over 30%']);
+  const rot = () => L(['até 10 %', '10 a 15 %', '15 a 20 %', '20 a 25 %', '25 a 30 %', 'mais de 30 %'], ['up to 10%', '10 to 15%', '15 to 20%', '20 to 25%', '25 to 30%', 'over 30%']);
   const velho = c.mun_velhos[0], jovem = c.mun_jovens.find((m) => m.pessoas > 50000);
   const tot = c.pessoas.reduce((a, b) => a + b, 0);
   const rg = c.rgint;
@@ -227,6 +240,8 @@ async function idosos() {
         },
       ],
     }),
+    legendaFigura: () => legendaReuso(L('60 ANOS OU MAIS, PARTE DO SETOR', 'AGED 60 OR OVER, SHARE OF THE TRACT'), c.cores, rot(),
+      [[ZERO, L('setor sem morador', 'tract with no residents')], [null, L('sem informação (sigilo)', 'no data (confidentiality)'), true]]),
     numeros: () => [
       [pct(c.uf.pct60, 1), [L('dos paulistas têm', 'of São Paulo’s people'), L(`60 anos ou mais (${grande(c.uf.de60)})`, `are 60 or over (${grande(c.uf.de60)})`)]],
       [grande(c.uf.de80), [L('pessoas de 80 anos', 'people aged 80'), L('ou mais', 'or over')]],
@@ -234,7 +249,7 @@ async function idosos() {
       [pct(rg[0].pct60, 1), [L(`em ${rg[0].NM_RGINT},`, `in ${rg[0].NM_RGINT},`), L(`e ${pct(rg.at(-1).pct60, 1)} na região de ${rg.at(-1).NM_RGINT}`, `and ${pct(rg.at(-1).pct60, 1)} in the ${rg.at(-1).NM_RGINT} region`)]],
     ],
     painel: (y) => {
-      const itens = c.cores.map((k, i) => [k, rot[i], c.pessoas[i], tot]);
+      const itens = c.cores.map((k, i) => [k, rot()[i], c.pessoas[i], tot]);
       const lg = legendaBarras(itens, y, { titulo: L('60 ANOS OU MAIS, PARTE DO SETOR', 'AGED 60 OR OVER, SHARE OF THE TRACT'), rotuloValor: L('parte da população dos setores com informação', 'share of population in tracts with data') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(ZERO, L(`setor sem morador (${nf(c.vazios)})`, `tract with no residents (${nf(c.vazios)})`), yy)];
@@ -255,7 +270,7 @@ async function rural() {
   const c = await ler('municipios');
   const por = new Map(c.linhas.map((l) => [l.CD_MUN, l]));
   const top = c.rural_max[0], abs = c.rural_abs[0];
-  const rot = L(['até 2 %', '2 a 5 %', '5 a 10 %', '10 a 20 %', '20 a 40 %', 'mais de 40 %'], ['up to 2%', '2 to 5%', '5 to 10%', '10 to 20%', '20 to 40%', 'over 40%']);
+  const rot = () => L(['até 2 %', '2 a 5 %', '5 a 10 %', '10 a 20 %', '20 a 40 %', 'mais de 40 %'], ['up to 2%', '2 to 5%', '5 to 10%', '10 to 20%', '20 to 40%', 'over 40%']);
   const ruraisCl = new Array(6).fill(0), munCl = new Array(6).fill(0);
   for (const l of c.linhas) if (l.moradores_rural > 0) { const k = classe(l.pct_rural, LIM_RURAL); ruraisCl[k] += l.moradores_rural; munCl[k]++; }
   return () => ({
@@ -283,6 +298,8 @@ async function rural() {
         },
       ],
     }),
+    legendaFigura: () => legendaReuso(L('MORADORES RURAIS, PARTE DO MUNICÍPIO', 'RURAL RESIDENTS, SHARE OF THE MUNICIPALITY'), CORES_RURAL, rot(),
+      [[ZERO, L('nenhum morador rural', 'no rural residents')]]),
     numeros: () => [
       [pct(c.uf.pct_rural, 1), [L('dos moradores vivem', 'of residents live'), L(`no campo (${grande(c.uf.rural)})`, `in rural areas (${grande(c.uf.rural)})`)]],
       [nf(c.rural_maioria), [L('municípios com maioria', 'municipalities with a'), L('rural', 'rural majority')]],
@@ -290,7 +307,7 @@ async function rural() {
       [nf(c.sem_rural), [L('municípios sem nenhum', 'municipalities with no'), L('morador rural', 'rural residents at all')]],
     ],
     painel: (y) => {
-      const itens = CORES_RURAL.map((k, i) => [k, `${rot[i]} · ${nf(munCl[i])} ${L('mun.', 'mun.')}`, ruraisCl[i], c.uf.rural]);
+      const itens = CORES_RURAL.map((k, i) => [k, `${rot()[i]} · ${nf(munCl[i])} ${L('mun.', 'mun.')}`, ruraisCl[i], c.uf.rural]);
       const lg = legendaBarras(itens, y, { titulo: L('MORADORES RURAIS, PARTE DO MUNICÍPIO', 'RURAL RESIDENTS, SHARE OF THE MUNICIPALITY'), rotuloValor: L('parte dos moradores rurais do estado', 'share of the state’s rural residents') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(ZERO, L(`nenhum morador rural (${nf(c.sem_rural)} municípios)`, `no rural residents (${nf(c.sem_rural)} municipalities)`), yy)];

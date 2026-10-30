@@ -41,6 +41,7 @@ const { values: opt, positionals } = parseArgs({
     numero: { type: 'string' },
     data: { type: 'string' },
     mascara: { type: 'boolean', default: false }, // grava a máscara de rótulos, para conferência
+    'so-figura': { type: 'boolean', default: false }, // refaz só a figura de reuso, sem tocar na prancha
   },
 });
 const UF = (positionals[0] ?? '').toUpperCase();
@@ -126,6 +127,8 @@ const EN = {
   'Transversa de Mercator': 'Transverse Mercator',
   'IBGE, Malha Municipal 2025': 'IBGE, Municipal Mesh 2025',
   'MapBiomas, rodovias': 'MapBiomas, highways',
+  Fonte: 'Source',
+  Mapa: 'Map',
 };
 const tr = (s) => (LINGUA === 'en' ? (EN[s] ?? s) : s);
 const nf = (v, casas = 0) =>
@@ -472,23 +475,25 @@ const corRgint = new Map();
 const corDaRgint = (cd) => corRgint.get(idRgint.get(cd));
 
 /* ------------------------------------------------------------------ camadas do mapa */
-function mapa() {
+function mapa({ graticulado = true, semBase = false } = {}) {
   const s = [];
-  const terra = [...paises, ...cache.vizinhos.features].map((f) => pathR(f)).filter(Boolean).join('');
-
-  // Linhas-d’água: traços concêntricos do litoral, cada vez mais fracos.
-  for (const [dd, op] of [[34, 0.35], [24, 0.5], [15, 0.7], [7, 0.9]]) {
-    s.push(`<path d="${terra}" fill="none" stroke="${LINHA_AGUA}" stroke-opacity="${op}" stroke-width="${2 * dd + 1.4}" stroke-linejoin="round"/>`);
-    s.push(`<path d="${terra}" fill="none" stroke="${OCEANO}" stroke-width="${2 * dd}" stroke-linejoin="round"/>`);
+  // Sem mapa de base (figura «sem base»): nada de mar, linhas-d’água, países ou UFs vizinhas; só o estado.
+  if (!semBase) {
+    const terra = [...paises, ...cache.vizinhos.features].map((f) => pathR(f)).filter(Boolean).join('');
+    // Linhas-d’água: traços concêntricos do litoral, cada vez mais fracos.
+    for (const [dd, op] of [[34, 0.35], [24, 0.5], [15, 0.7], [7, 0.9]]) {
+      s.push(`<path d="${terra}" fill="none" stroke="${LINHA_AGUA}" stroke-opacity="${op}" stroke-width="${2 * dd + 1.4}" stroke-linejoin="round"/>`);
+      s.push(`<path d="${terra}" fill="none" stroke="${OCEANO}" stroke-width="${2 * dd}" stroke-linejoin="round"/>`);
+    }
+    // Países (Natural Earth) e UFs vizinhas (IBGE).
+    s.push(`<g fill="${ESTRANGEIRO}" stroke="${ESTRANGEIRO}" stroke-width="3" stroke-linejoin="round">${paises.map((p) => pathR(p)).filter(Boolean).map((d) => `<path d="${d}"/>`).join('')}</g>`);
+    s.push(`<g fill="${VIZINHO}" stroke="${BORDA_VIZINHO}" stroke-width="1.1" stroke-linejoin="round">${cache.vizinhos.features.filter((v) => v.properties.SIGLA_UF !== UF).map((v) => `<path d="${pathR(v)}"/>`).join('')}</g>`);
   }
-  // Países (Natural Earth) e UFs vizinhas (IBGE).
-  s.push(`<g fill="${ESTRANGEIRO}" stroke="${ESTRANGEIRO}" stroke-width="3" stroke-linejoin="round">${paises.map((p) => pathR(p)).filter(Boolean).map((d) => `<path d="${d}"/>`).join('')}</g>`);
-  s.push(`<g fill="${VIZINHO}" stroke="${BORDA_VIZINHO}" stroke-width="1.1" stroke-linejoin="round">${cache.vizinhos.features.filter((v) => v.properties.SIGLA_UF !== UF).map((v) => `<path d="${pathR(v)}"/>`).join('')}</g>`);
 
   // Graticulado.
   const passo = (bx1 - bx0 > 9 || by1 - by0 > 9) ? 2 : 1;
   const grat = geoGraticule().step([passo, passo]).extent([[-80, -40], [-30, 10]]);
-  s.push(`<path d="${pathR(grat())}" fill="none" stroke="#8b949c" stroke-width=".7" stroke-opacity=".5"/>`);
+  if (graticulado) s.push(`<path d="${pathR(grat())}" fill="none" stroke="#8b949c" stroke-width=".7" stroke-opacity=".5"/>`);
 
   // Estado: municípios coloridos pela região intermediária.
   s.push(`<g stroke="${PAPEL}" stroke-width=".6" stroke-linejoin="round">${cache.municipios.features.map((m) => `<path d="${path(m)}" fill="${corDaRgint(m.properties.CD_RGINT)}"/>`).join('')}</g>`);
@@ -546,7 +551,7 @@ function rotuloMono(texto, [x, y, raio], { tamanhos = [17, 16, 15, 14, 13], espa
     .join('')}</text>`;
 }
 
-function rotulos() {
+function rotulos({ semBase = false } = {}) {
   const s = [];
   // Capital: estrela e nome.
   const [cx, cy] = capXY;
@@ -560,7 +565,7 @@ function rotulos() {
     if (p) s.push(rotuloMono(c.nome.toLocaleUpperCase('pt-BR'), p, { tamanhos: [16, 15, 14, 13, 12], espaco: 1.8, peso: 700 }));
   }
   // UFs vizinhas e países: cinza, só se houver espaço visível suficiente.
-  for (const c of classes.filter((k) => k.tipo === 'uf' || k.tipo === 'pais')) {
+  for (const c of semBase ? [] : classes.filter((k) => k.tipo === 'uf' || k.tipo === 'pais')) {
     const p = internos.get(c.id);
     if (!p || p[2] < 34) continue;
     const nome = c.tipo === 'uf' ? c.nome.toLocaleUpperCase('pt-BR') : PAISES[c.chave]?.[LINGUA === 'en' ? 1 : 0];
@@ -568,7 +573,7 @@ function rotulos() {
     s.push(rotuloMono(nome, p, { tamanhos: [16, 15, 14, 13], espaco: 3.2, cor: '#8a9198', maxLinhas: 2 }));
   }
   // Oceano.
-  let o = internos.get(0);
+  let o = semBase ? null : internos.get(0);
   if (o && o[2] > 40) {
     // O ponto mais "dentro" do mar mede só a altura livre; o rótulo tem ~240 px de largura.
     // Se a caixa sair do mar ou bater no norte, no localizador ou nas ilhas, vai para o lugar livre mais próximo.
@@ -820,16 +825,66 @@ function painel() {
   });
   y += 2 * 86 + 30;
 
-  // Legenda das regiões intermediárias (ordem: mais municípios primeiro).
+  const leg = legenda(y);
+  s.push(leg.svg);
+  y = leg.y;
+
+  // Escala (o norte é a folha, no mapa).
+  const { km, px } = escalaKm();
+  // Centrada no vão entre a legenda e o carimbo.
+  const yNE = y + Math.max(10, (MH - carimboAltura() - 24 - y - 110) / 2);
+  const seg = px / 4;
+  s.push(`<g transform="translate(0 ${yNE + 46})">
+    <text x="0" y="-18" font-family="${MONO}" font-size="13" letter-spacing="1.5" fill="${CINZA}">${tr('ESCALA GRÁFICA')}</text>
+    ${[0, 1, 2, 3].map((i) => `<rect x="${f1(i * seg)}" y="0" width="${f1(seg)}" height="9" fill="${i % 2 ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1.1"/>`).join('')}
+    ${[0, 2, 4].map((i) => `<text x="${f1(i * seg)}" y="32" text-anchor="middle" font-family="${MONO}" font-size="14">${nf((km / 4) * i)}</text>`).join('')}
+    <text x="${f1(px + 16)}" y="9" font-family="${MONO}" font-size="14" fill="${CINZA}">km</text>
+    <text x="0" y="54" font-family="${MONO}" font-size="12" fill="${CINZA}">${tr('verdadeira no meridiano central')}</text>
+  </g>`);
+
+  // Carimbo.
+  const dataTxt = DATA.toLocaleDateString(LINGUA === 'en' ? 'en-GB' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
+  const gr = (v, h) => `${nf(Math.abs(v), 1)}° ${h}`;
+  const carimbo = [
+    ['PRANCHA', [`Essencial Geo · ${tr('Nº')} ${String(NUMERO).padStart(3, '0')}`]],
+    ['DATA', [dataTxt]],
+    ['PROJEÇÃO', [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`]],
+    ['FONTES', FONTES()],
+    ['LICENÇA', ['CC BY 4.0']],
+  ];
+  const alturaC = carimboAltura();
+  let yc = MH - alturaC - 24;
+  for (const [i, [k, v]] of carimbo.entries()) {
+    s.push(`<path d="M0 ${yc}H${LP}" stroke="${TINTA}" stroke-width="${i ? 0.8 : 1.6}"/>`);
+    s.push(`<text x="0" y="${yc + 28}" font-family="${MONO}" font-size="14" letter-spacing="2" fill="${CINZA}">${tr(k)}</text>`);
+    v.forEach((l, j) => s.push(`<text x="138" y="${yc + 28 + j * 22}" font-family="${MONO}" font-size="16" fill="${TINTA}">${esc(l)}</text>`));
+    yc += 22 + v.length * 22;
+  }
+  s.push(`<path d="M0 ${yc}H${LP}" stroke="${TINTA}" stroke-width="1.6"/>`);
+  s.push(molecula(LP - 20, yc - 34, 20)); // marca do autor, na linha da licença
+  const sobra = MH - alturaC - 24 - (yNE + 120);
+  return { svg: s.join('\n'), sobra };
+}
+
+const FONTES = () => [tr('IBGE, Malha Municipal 2025'), tr('MapBiomas, rodovias')];
+
+/**
+ * Legenda das regiões intermediárias, dos limites e das rodovias, a partir de y. Na figura de reuso
+ * (`contagem: false`) sai sem a coluna de municípios por região.
+ */
+function legenda(y, { contagem = true } = {}) {
+  const s = [];
+  const legT = (t, yy) => `<text x="0" y="${yy}" font-family="${MONO}" font-size="15" letter-spacing="2.4" fill="${CINZA}">${esc(tr(t))}</text>`;
+  // Regiões intermediárias (ordem: mais municípios primeiro).
   s.push(legT('REGIÕES GEOGRÁFICAS INTERMEDIÁRIAS', y));
-  s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13" letter-spacing="1.5" fill="${CINZA}">${tr('MUN.')}</text>`);
+  if (contagem) s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13" letter-spacing="1.5" fill="${CINZA}">${tr('MUN.')}</text>`);
   y += 14;
   const passoL = N.municipios_por_rgint.length > 12 ? 27 : 30;
   N.municipios_por_rgint.forEach((r, i) => {
     const yy = y + i * passoL;
     s.push(`<rect x="0" y="${yy}" width="34" height="${passoL - 8}" fill="${corDaRgint(r.codigo)}" stroke="${LIM_RGINT}" stroke-width=".9"/>`);
     s.push(`<text x="50" y="${yy + passoL - 13}" font-family="${SERIF}" font-size="19.5">${esc(r.nome)}</text>`);
-    s.push(`<text x="${LP}" y="${yy + passoL - 13}" text-anchor="end" font-family="${MONO}" font-size="15">${r.n}</text>`);
+    if (contagem) s.push(`<text x="${LP}" y="${yy + passoL - 13}" text-anchor="end" font-family="${MONO}" font-size="15">${r.n}</text>`);
   });
   y += N.municipios_por_rgint.length * passoL + 34;
 
@@ -856,41 +911,74 @@ function painel() {
   itensR.forEach((it, i) => s.push(item(it, col, y + i * 30)));
   y += 4 * 30;
 
-  // Escala (o norte é a folha, no mapa).
-  const { km, px } = escalaKm();
-  // Centrada no vão entre a legenda e o carimbo.
-  const yNE = y + Math.max(10, (MH - carimboAltura() - 24 - y - 110) / 2);
-  const seg = px / 4;
-  s.push(`<g transform="translate(0 ${yNE + 46})">
-    <text x="0" y="-18" font-family="${MONO}" font-size="13" letter-spacing="1.5" fill="${CINZA}">${tr('ESCALA GRÁFICA')}</text>
-    ${[0, 1, 2, 3].map((i) => `<rect x="${f1(i * seg)}" y="0" width="${f1(seg)}" height="9" fill="${i % 2 ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1.1"/>`).join('')}
-    ${[0, 2, 4].map((i) => `<text x="${f1(i * seg)}" y="32" text-anchor="middle" font-family="${MONO}" font-size="14">${nf((km / 4) * i)}</text>`).join('')}
-    <text x="${f1(px + 16)}" y="9" font-family="${MONO}" font-size="14" fill="${CINZA}">km</text>
-    <text x="0" y="54" font-family="${MONO}" font-size="12" fill="${CINZA}">${tr('verdadeira no meridiano central')}</text>
-  </g>`);
+  return { svg: s.join('\n'), y };
+}
 
-  // Carimbo.
-  const dataTxt = DATA.toLocaleDateString(LINGUA === 'en' ? 'en-GB' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
+/* ------------------------------------------------------------------ figura (reuso) */
+const FAIXA_CR = 46; // linha de crédito
+const ESC_LEG = 1.15; // a legenda da figura sai maior que a da prancha
+const FW = Math.round(MW + 40 + LP * ESC_LEG + 40);
+const FH = MH + FAIXA_CR;
+// Texto escrito sobre o mapa leva um contorno da cor do papel por baixo.
+const HALO = `<style>.halo text { stroke: ${PAPEL}; stroke-width: 5px; stroke-linejoin: round; paint-order: stroke; }</style>`;
+
+/** Norte de figura: seta simples, metade cheia, com o N em cima; (cx, cy) é o centro da seta. */
+function norteSimples(cx, cy, h = 64) {
+  const [m, b] = [h / 2, h * 0.22];
+  return `<g transform="translate(${f1(cx)} ${f1(cy)})" stroke="${TINTA}" stroke-width="1.2" stroke-linejoin="round">
+  <path d="M0 ${-m}L${b} ${m}L0 ${m * 0.62}Z" fill="${PAPEL}"/>
+  <path d="M0 ${-m}L${-b} ${m}L0 ${m * 0.62}Z" fill="${TINTA}"/>
+  <text x="0" y="${-m - 10}" text-anchor="middle" font-family="${MONO}" font-size="20" stroke="none" fill="${TINTA}">N</text>
+</g>`;
+}
+
+/**
+ * Figura para reuso (artigo, aula, apresentação): sem moldura, graticulado, coordenadas nem localizador. O mapa
+ * cobre a figura inteira; a legenda, a escala, o sistema de referência, o norte e o crédito são escritos sobre
+ * ele (no contexto à direita e embaixo), de modo que recortar o crédito corta o mapa junto (docs/ESTILO.md «Figura»).
+ */
+function figura(doi, { semBase = false } = {}) {
+  ocupados.length = 0;
+  if (quadroIlhas) ocupados.push([quadroIlhas.x, quadroIlhas.y, quadroIlhas.x + IB.w, quadroIlhas.y + IB.h]);
+  // O contexto (UFs vizinhas, países, mar) passa a cobrir a figura toda, não só o quadro da prancha.
+  projRecorte.clipExtent([[-20, -20], [FW + 20, FH + 20]]);
+  const camadas = mapa({ graticulado: false, semBase });
+  projRecorte.clipExtent([[-20, -20], [MW + 20, MH + 20]]);
+  const rots = rotulos({ semBase });
+  const esc_ = escudos();
+  const leg = legenda(0, { contagem: false });
+  const { km, px } = escalaKm();
   const gr = (v, h) => `${nf(Math.abs(v), 1)}° ${h}`;
-  const carimbo = [
-    ['PRANCHA', [`Essencial Geo · ${tr('Nº')} ${String(NUMERO).padStart(3, '0')}`]],
-    ['DATA', [dataTxt]],
-    ['PROJEÇÃO', [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`]],
-    ['FONTES', [tr('IBGE, Malha Municipal 2025'), tr('MapBiomas, rodovias')]],
-    ['LICENÇA', ['CC BY 4.0']],
-  ];
-  const alturaC = carimboAltura();
-  let yc = MH - alturaC - 24;
-  for (const [i, [k, v]] of carimbo.entries()) {
-    s.push(`<path d="M0 ${yc}H${LP}" stroke="${TINTA}" stroke-width="${i ? 0.8 : 1.6}"/>`);
-    s.push(`<text x="0" y="${yc + 28}" font-family="${MONO}" font-size="14" letter-spacing="2" fill="${CINZA}">${tr(k)}</text>`);
-    v.forEach((l, j) => s.push(`<text x="138" y="${yc + 28 + j * 22}" font-family="${MONO}" font-size="16" fill="${TINTA}">${esc(l)}</text>`));
-    yc += 22 + v.length * 22;
-  }
-  s.push(`<path d="M0 ${yc}H${LP}" stroke="${TINTA}" stroke-width="1.6"/>`);
-  s.push(molecula(LP - 20, yc - 34, 20)); // marca do autor, na linha da licença
-  const sobra = MH - alturaC - 24 - (yNE + 120);
-  return { svg: s.join('\n'), sobra };
+  const sistema = [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`];
+  const xL = MW + 40;
+  const yL = 96;
+  const yEsc = yL + leg.y * ESC_LEG + 40;
+  const fonte = `${tr('Fonte')}: ${FONTES().join(' · ')}`;
+  const onde = doi ? `doi.org/${doi}` : `aikiesan.github.io/essencial-geo/${LINGUA === 'en' ? 'en/maps' : 'mapas'}/${opt.pasta}`;
+  const credito = `${tr('Mapa')}: Essencial Geo ${tr('Nº')} ${String(NUMERO).padStart(3, '0')} · Cerejo, L. N. (${DATA.getUTCFullYear()}) · CC BY 4.0 · ${onde}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${FW}" height="${FH}" viewBox="0 0 ${FW} ${FH}">
+<title>${esc(`${N.nome} — ${tr('Divisão territorial e rodovias')}`)}</title>
+${HALO}
+<rect width="${FW}" height="${FH}" fill="${PAPEL}"/>
+<defs><clipPath id="mapa"><rect width="${FW}" height="${FH}"/></clipPath></defs>
+<g clip-path="url(#mapa)">
+  <rect width="${FW}" height="${FH}" fill="${semBase ? PAPEL : OCEANO}"/>
+  ${camadas}
+  ${rots}
+  ${esc_}
+  ${quadroDasIlhas()}
+</g>
+<g class="halo" transform="translate(${xL} ${yL}) scale(${ESC_LEG})" fill="${TINTA}">${leg.svg}</g>
+<g class="halo" transform="translate(${xL} ${f1(yEsc)})" fill="${TINTA}">
+  ${[0, 1].map((i) => `<rect x="${f1((i * px) / 2)}" y="0" width="${f1(px / 2)}" height="8" fill="${i ? PAPEL : TINTA}" stroke="${TINTA}" stroke-width="1"/>`).join('')}
+  <text x="${f1(px + 12)}" y="9" font-family="${MONO}" font-size="20">${nf(km)} km</text>
+  ${sistema.map((t, k) => `<text x="0" y="${44 + 22 * k}" font-family="${MONO}" font-size="16" fill-opacity="0.75">${esc(t)}</text>`).join('')}
+</g>
+<g class="halo">${norteSimples(FW - 64, 84)}</g>
+<g class="halo" font-family="${MONO}" font-size="15" fill="${TINTA}">
+<text x="40" y="${FH - 17}" fill-opacity="0.75">${esc(fonte)}</text>
+<text x="${FW - 40}" y="${FH - 17}" text-anchor="end">${esc(credito)}</text></g>
+</svg>`;
 }
 
 /* ------------------------------------------------------------------ montagem */
@@ -932,15 +1020,35 @@ const destino = join(RAIZ, 'mapas', opt.pasta);
 await mkdir(join(destino, 'dados'), { recursive: true });
 const t0 = Date.now();
 const saidas = [];
+const doi = (await readFile(join(destino, 'README.md'), 'utf8').catch(() => '')).match(/^doi:\s*["']?(10\.[^\s"']+)/m)?.[1] ?? null;
+const png8 = (svg, arq) => sharp(Buffer.from(svg), { density: 72, limitInputPixels: false }).png({ compressionLevel: 9, palette: true, quality: 95, dither: 0 }).toFile(arq);
 for (const lingua of ['pt', 'en']) {
   LINGUA = lingua;
-  const svg = prancha();
   const sufixo = lingua === 'en' ? '.en' : '';
-  const svgArq = join(destino, 'dados', `${UF.toLowerCase()}_prancha${sufixo}.svg`);
-  await writeFile(svgArq, svg);
-  const png = join(destino, `mapa_preview${sufixo}.png`);
-  await sharp(Buffer.from(svg), { density: 72, limitInputPixels: false }).png({ compressionLevel: 9, palette: true, quality: 95, dither: 0 }).toFile(png);
-  for (const a of [png, svgArq]) saidas.push(`  ${a.slice(destino.length + 1)}  ${((await stat(a)).size / 1e6).toFixed(2)} MB`);
+  const arquivos = [];
+  if (!opt['so-figura']) {
+    const svg = prancha();
+    const svgArq = join(destino, 'dados', `${UF.toLowerCase()}_prancha${sufixo}.svg`);
+    await writeFile(svgArq, svg);
+    const png = join(destino, `mapa_preview${sufixo}.png`);
+    await png8(svg, png);
+    arquivos.push(png, svgArq);
+  }
+  // Figura com e sem mapa de base.
+  for (const semBase of [false, true]) {
+    const nome = semBase ? '_figura_sem_base' : '_figura';
+    const fig = figura(doi, { semBase });
+    const figSvg = join(destino, 'dados', `${UF.toLowerCase()}${nome}${sufixo}.svg`);
+    await writeFile(figSvg, fig);
+    const figPng = join(destino, `mapa${nome}${sufixo}.png`);
+    await png8(fig, figPng);
+    arquivos.push(figPng, figSvg);
+  }
+  for (const a of arquivos) saidas.push(`  ${a.slice(destino.length + 1)}  ${((await stat(a)).size / 1e6).toFixed(2)} MB`);
+}
+if (opt['so-figura']) {
+  console.log(`✓ ${UF} · figura Nº ${NUMERO}\n${saidas.join('\n')}`);
+  process.exit(0);
 }
 if (opt.mascara) {
   const img = Buffer.alloc(mw * mh * 3);

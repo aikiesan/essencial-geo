@@ -9,7 +9,8 @@ import Icone from './Icone.astro';
 import LeituraRapida from './LeituraRapida.astro';
 import { SITE } from '../site.config';
 import { citar } from '../lib/citacao';
-import { emLingua, linkMapa, nomeFonte, numeroFormatado, resolverDownloads, urlAbsoluta, type Mapa } from '../lib/mapas';
+import { emLingua, figuraDoMapa, linkMapa, nomeFonte, numeroFormatado, resolverDownloads, urlAbsoluta, type Mapa } from '../lib/mapas';
+import { qrSvg } from '../lib/qr';
 import { dataCurta, t } from '../i18n';
 
 interface Props {
@@ -25,6 +26,11 @@ const tx = t(lingua);
 const downloads = resolverDownloads(mapa);
 const permalink = urlAbsoluta(linkMapa(mapa), Astro.site);
 const citacao = citar(mapa, permalink);
+// Figura de reuso e QR code do endereço permanente, para quem compartilha a figura achar o atlas.
+const figura = figuraDoMapa(mapa);
+const figuraSemBase = figuraDoMapa(mapa, { semBase: true });
+const qr = await qrSvg(permalink);
+const qrArquivo = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(await qrSvg(permalink, { margem: 2 }))}`;
 // A aba aberta por padrão: ABNT para quem lê em português, APA para quem lê em inglês.
 const formatos = lingua === 'en' ? (['apa', 'abnt', 'bibtex'] as const) : (['abnt', 'apa', 'bibtex'] as const);
 const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
@@ -160,6 +166,34 @@ const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
     )
   }
 
+  <h3 class="secao">{tx.ficha.figura}</h3>
+  <div class="reuso">
+    <a class="reuso__qr" href={permalink} aria-label={tx.ficha.qrRotulo} set:html={qr} />
+    <div class="reuso__texto">
+      <p>{tx.ficha.figuraTexto}</p>
+      <p class="reuso__links">
+        {
+          figura && (
+            <a href={figura} download data-goatcounter-click={`baixar/${mapa.id}/figura/${lingua}`}>
+              <Icone nome="baixar" tamanho={12} /> {tx.ficha.baixarFigura} <span class="arquivo__ext">(PNG)</span>
+            </a>
+          )
+        }
+        {
+          figuraSemBase && (
+            <a href={figuraSemBase} download data-goatcounter-click={`baixar/${mapa.id}/figura-sem-base/${lingua}`}>
+              <Icone nome="baixar" tamanho={12} /> {tx.ficha.baixarFiguraSemBase} <span class="arquivo__ext">(PNG)</span>
+            </a>
+          )
+        }
+        <a href={qrArquivo} download={`essencial-geo-${numeroFormatado(d.numero)}-qr.svg`} data-goatcounter-click={`baixar/${mapa.id}/qr/${lingua}`}>
+          <Icone nome="baixar" tamanho={12} /> {tx.ficha.baixarQr} <span class="arquivo__ext">(SVG)</span>
+        </a>
+      </p>
+      <p class="rotulo">{tx.ficha.qrDica}</p>
+    </div>
+  </div>
+
   <h3 class="secao">{tx.ficha.citar}</h3>
   <div class="citacao" data-citacao>
     <div class="citacao__abas" role="group" aria-label={tx.ficha.formatoCitacao}>
@@ -241,6 +275,38 @@ const ROTULO_FORMATO = { abnt: 'ABNT', apa: 'APA', bibtex: 'BibTeX' };
   .ficha__pendente {
     color: var(--tinta-3);
     font-style: italic;
+  }
+
+  .reuso {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--e-3);
+    align-items: start;
+  }
+  .reuso__qr {
+    display: block;
+    padding: 6px;
+    background: #fff;
+    border: 1px solid var(--linha);
+  }
+  .reuso__qr :global(svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .reuso__texto p {
+    margin: 0 0 var(--e-2);
+  }
+  .reuso__links {
+    display: grid;
+    gap: var(--e-1);
+  }
+  .reuso__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    min-height: 24px;
+    color: var(--tinta);
   }
 
   .ficha__downloads {

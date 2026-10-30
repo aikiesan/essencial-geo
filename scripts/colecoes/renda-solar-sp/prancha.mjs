@@ -16,6 +16,17 @@ const serie = (i) => () => L(`RENDA E SOL NOS TELHADOS · ${i}/3`, `INCOME AND R
 const reais = (v) => L(`R$ ${nf(v)}`, `R$ ${nf(v)}`);
 const rotSM = () => L(['até 1 SM', '1 a 1,5 SM', '1,5 a 2 SM', '2 a 3 SM', '3 a 5 SM', 'mais de 5 SM'], ['up to 1 min. wage', '1 to 1.5 min. wages', '1.5 to 2 min. wages', '2 to 3 min. wages', '3 to 5 min. wages', 'over 5 min. wages']);
 
+/** Legenda da figura: título e uma caixa por classe, sem as barras nem as contagens: [[cor | null (hachura), rótulo]]. */
+function colunaFigura(titulo, itens, y = 0) {
+  const s = [rotuloPainel(titulo, y)];
+  y += 24;
+  for (const [cor, rot] of itens) {
+    s.push(caixaLegenda(cor, rot, y, { hachura: cor === null }));
+    y += 25;
+  }
+  return { svg: s.join('\n'), y };
+}
+
 /* ------------------------------------------------------------------ 1/3 renda mediana por setor */
 async function setores() {
   const c = await ler('setores');
@@ -50,6 +61,14 @@ async function setores() {
         linhas: L(['dos responsáveis em setores', 'com mediana de até 1,5 SM'], ['of household heads in tracts', 'with a median of up to 1.5 min. wages']),
       }],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('MEDIANA DO SETOR, EM SALÁRIOS MÍNIMOS', 'TRACT MEDIAN, IN MINIMUM WAGES'), [
+        ...c.cores.map((k, i) => [k, rotSM()[i]]),
+        [ZERO, L('setor sem domicílio ocupado', 'tract with no occupied home')],
+        [null, L('sem informação, sigilo', 'no data, confidentiality')],
+      ]);
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
       [pct((100 * ate15) / tot, 0), [L('dos responsáveis vivem em', 'of household heads live in'), L('setores de até 1,5 SM', 'tracts of up to 1.5 min. wages')]],
       [nf(c.n_iguais_sm), [L('setores com a mediana', 'tracts whose median is'), L(`de R$ ${nf(c.sm)}, um SM exato`, `R$ ${nf(c.sm)}, exactly one minimum wage`)]],
@@ -82,7 +101,7 @@ async function apond() {
   const c = await ler('apond');
   const base = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'cache', 'renda-solar-sp-metropole-base.json'), 'utf8'));
   const cores = ['#f3ece4', '#e2cfc9', '#c9a7ae', '#a67d92', '#7a5474', '#4b2f4f'];
-  const rot = L(['até 1,5 SM', '1,5 a 2 SM', '2 a 3 SM', '3 a 5 SM', '5 a 8 SM', 'mais de 8 SM'], ['up to 1.5 min. wages', '1.5 to 2 min. wages', '2 to 3 min. wages', '3 to 5 min. wages', '5 to 8 min. wages', 'over 8 min. wages']);
+  const rot = () => L(['até 1,5 SM', '1,5 a 2 SM', '2 a 3 SM', '3 a 5 SM', '5 a 8 SM', 'mais de 8 SM'], ['up to 1.5 min. wages', '1.5 to 2 min. wages', '2 to 3 min. wages', '3 to 5 min. wages', '5 to 8 min. wages', 'over 8 min. wages']);
   const com = c.apond.filter((f) => f.properties.k !== null), sem = c.apond.filter((f) => f.properties.k === null);
   const sp = c.sp;
   const dentro = c.dentro.filter((d) => d.rico.b && d.pobre.b && !/Setor|Bacia/.test(d.rico.b)).slice(0, 5);
@@ -122,6 +141,15 @@ async function apond() {
         },
       ],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('MÉDIA DA ÁREA, EM SALÁRIOS MÍNIMOS', 'AREA MEAN, IN MINIMUM WAGES'), [
+        ...cores.map((k, i) => [k, rot()[i]]),
+        ...(c.n_sem_dom ? [[ZERO, L('área sem domicílio ocupado', 'area with no occupied home')]] : []),
+        ...(c.n_sigilo ? [[null, L('sem informação, sigilo', 'no data, confidentiality')]] : []),
+      ]);
+      // O sudoeste é malha municipal fora do recorte; o mar a sudeste fica livre.
+      return { svg: g.svg, altura: g.y, largura: 380, canto: 'se' };
+    },
     numeros: () => [
       [`${nf(sp.razao, 1)}×`, [L('a renda média do Itaim Bibi', 'Itaim Bibi’s mean income'), L('sobre a do Jardim Ângela', 'over Jardim Ângela’s')]],
       [nf(c.n_janela), [L('áreas de ponderação', 'weighting areas'), L(`em ${nf(c.n_mun_janela)} municípios`, `in ${nf(c.n_mun_janela)} municipalities`)]],
@@ -129,7 +157,7 @@ async function apond() {
       [pct((100 * (c.resp_cl[4] + c.resp_cl[5])) / c.tot_resp, 0), [L('em áreas de mais de 5 SM,', 'in areas over 5 min. wages,'), L(`${nf(c.ap_cl[4] + c.ap_cl[5])} das ${nf(c.n_janela)}`, `${nf(c.ap_cl[4] + c.ap_cl[5])} of the ${nf(c.n_janela)}`)]],
     ],
     painel: (y) => {
-      const itens = cores.map((k, i) => [k, rot[i], c.resp_cl[i], c.tot_resp]);
+      const itens = cores.map((k, i) => [k, rot()[i], c.resp_cl[i], c.tot_resp]);
       const lg = legendaBarras(itens, y, { titulo: L('MÉDIA DA ÁREA, EM SALÁRIOS MÍNIMOS', 'AREA MEAN, IN MINIMUM WAGES'), rotuloValor: L('parte dos responsáveis do recorte', 'share of household heads in the map') });
       let yy = lg.y + 4;
       const s = [lg.svg];
@@ -164,6 +192,26 @@ async function solar() {
   const porTerco = [1, 2, 3].map((r) => { const ks = [1, 2, 3].map((s) => g[`${s}${r}`]); return (100 * ks.reduce((a, k) => a + k.sistemas, 0)) / ks.reduce((a, k) => a + k.dppo, 0); });
   const rotT = (i) => L(['baixa', 'média', 'alta'], ['low', 'mid', 'high'])[i];
   const tR = c.tercos_renda, tS = c.tercos_solar;
+  /** Chave bivariada 3 × 3 com os eixos e os limites dos terços; `contagens` põe os municípios em cada casa. */
+  function chave(y, { contagens = true } = {}) {
+    const s = [rotuloPainel(L('RENDA × SOLAR, EM TERÇOS DOS MUNICÍPIOS', 'INCOME × SOLAR, IN THIRDS OF MUNICIPALITIES'), y)];
+    const cx = 150, cy = y + 40, lado = 62;
+    for (let si = 0; si < 3; si++) for (let ri = 0; ri < 3; ri++) {
+      const x = cx + ri * lado, yy = cy + (2 - si) * lado;
+      s.push(`<rect x="${x}" y="${yy}" width="${lado}" height="${lado}" fill="${c.biv[si][ri]}" stroke="#ffffff" stroke-width="1.5"/>`);
+      if (contagens) s.push(`<text x="${x + lado / 2}" y="${yy + lado / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="14" fill="${si === 2 && ri === 2 ? '#ffffff' : TINTA}">${g[`${si + 1}${ri + 1}`].n}</text>`);
+    }
+    s.push(`<rect x="${cx}" y="${cy}" width="${3 * lado}" height="${3 * lado}" fill="none" stroke="${TINTA}" stroke-width=".8"/>`);
+    s.push(`<path d="M${cx} ${cy + 3 * lado + 14}h${3 * lado}m-8 -4l8 4l-8 4" fill="none" stroke="${TINTA}" stroke-width="1"/>`);
+    s.push(`<text x="${cx + 1.5 * lado}" y="${cy + 3 * lado + 36}" text-anchor="middle" font-family="${MONO}" font-size="12">${L('renda média do responsável', 'mean income of household head')}</text>`);
+    s.push(`<text x="${cx}" y="${cy + 3 * lado + 54}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L(`≤ ${nf(tR[0], 2)}`, `≤ ${nf(tR[0], 2)}`)}</text>`);
+    s.push(`<text x="${cx + 3 * lado}" y="${cy + 3 * lado + 54}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">${L(`> ${nf(tR[1], 2)} SM`, `> ${nf(tR[1], 2)} min. wages`)}</text>`);
+    s.push(`<path d="M${cx - 14} ${cy + 3 * lado}v${-3 * lado}m-4 8l4 -8l4 8" fill="none" stroke="${TINTA}" stroke-width="1"/>`);
+    s.push(`<text transform="translate(${cx - 26} ${cy + 1.5 * lado}) rotate(-90)" text-anchor="middle" font-family="${MONO}" font-size="12">${L('sistemas por 100 domicílios', 'systems per 100 homes')}</text>`);
+    s.push(`<text x="${cx - 46}" y="${cy + 3 * lado}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">≤ ${nf(tS[0], 1)}</text>`);
+    s.push(`<text x="${cx - 46}" y="${cy + 10}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">&gt; ${nf(tS[1], 1)}</text>`);
+    return { svg: s.join('\n'), cx, cy, lado };
+  }
   return () => ({
     layout: 'um',
     motivo: 'telhados',
@@ -195,23 +243,13 @@ async function solar() {
       [nf(c.rho, 2).replace('-', '−'), [L('correlação de postos entre', 'rank correlation between'), L('renda e adoção (Spearman)', 'income and uptake (Spearman)')]],
       [nf(contra.sistemas_100_dom, 0), [L(`por 100 em ${contra.NM_MUN},`, `per 100 in ${contra.NM_MUN},`), L(`com ${nf(contra.renda_media_sm, 1)} SM de renda média`, `with a mean income of ${nf(contra.renda_media_sm, 1)} min. wages`)]],
     ],
+    legendaFigura: () => {
+      const k = chave(0, { contagens: false });
+      return { svg: k.svg, altura: k.cy + 3 * k.lado + 58, largura: 470 };
+    },
     painel: (y) => {
-      const s = [rotuloPainel(L('RENDA × SOLAR, EM TERÇOS DOS MUNICÍPIOS', 'INCOME × SOLAR, IN THIRDS OF MUNICIPALITIES'), y)];
-      const cx = 150, cy = y + 40, lado = 62;
-      for (let si = 0; si < 3; si++) for (let ri = 0; ri < 3; ri++) {
-        const x = cx + ri * lado, yy = cy + (2 - si) * lado;
-        s.push(`<rect x="${x}" y="${yy}" width="${lado}" height="${lado}" fill="${c.biv[si][ri]}" stroke="#ffffff" stroke-width="1.5"/>`);
-        s.push(`<text x="${x + lado / 2}" y="${yy + lado / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="14" fill="${si === 2 && ri === 2 ? '#ffffff' : TINTA}">${g[`${si + 1}${ri + 1}`].n}</text>`);
-      }
-      s.push(`<rect x="${cx}" y="${cy}" width="${3 * lado}" height="${3 * lado}" fill="none" stroke="${TINTA}" stroke-width=".8"/>`);
-      s.push(`<path d="M${cx} ${cy + 3 * lado + 14}h${3 * lado}m-8 -4l8 4l-8 4" fill="none" stroke="${TINTA}" stroke-width="1"/>`);
-      s.push(`<text x="${cx + 1.5 * lado}" y="${cy + 3 * lado + 36}" text-anchor="middle" font-family="${MONO}" font-size="12">${L('renda média do responsável', 'mean income of household head')}</text>`);
-      s.push(`<text x="${cx}" y="${cy + 3 * lado + 54}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L(`≤ ${nf(tR[0], 2)}`, `≤ ${nf(tR[0], 2)}`)}</text>`);
-      s.push(`<text x="${cx + 3 * lado}" y="${cy + 3 * lado + 54}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">${L(`> ${nf(tR[1], 2)} SM`, `> ${nf(tR[1], 2)} min. wages`)}</text>`);
-      s.push(`<path d="M${cx - 14} ${cy + 3 * lado}v${-3 * lado}m-4 8l4 -8l4 8" fill="none" stroke="${TINTA}" stroke-width="1"/>`);
-      s.push(`<text transform="translate(${cx - 26} ${cy + 1.5 * lado}) rotate(-90)" text-anchor="middle" font-family="${MONO}" font-size="12">${L('sistemas por 100 domicílios', 'systems per 100 homes')}</text>`);
-      s.push(`<text x="${cx - 46}" y="${cy + 3 * lado}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">≤ ${nf(tS[0], 1)}</text>`);
-      s.push(`<text x="${cx - 46}" y="${cy + 10}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">&gt; ${nf(tS[1], 1)}</text>`);
+      const { svg, cx, cy, lado } = chave(y);
+      const s = [svg];
       const n = nota(L('Cada casa mostra quantos municípios caem nela. Se o solar seguisse a renda, eles se juntariam na diagonal; estão espalhados.',
         'Each cell shows how many municipalities fall in it. Were solar to follow income, they would gather on the diagonal; they are spread out.'), cy + 10, { tamanho: 14, max: LP - cx - 3 * lado - 30 });
       s.push(n.svg.replace(/<text x="0"/g, `<text x="${cx + 3 * lado + 30}"`));

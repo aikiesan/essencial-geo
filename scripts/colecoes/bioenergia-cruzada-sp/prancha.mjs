@@ -7,7 +7,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, gerarPrancha, rotuloPainel } from '../lib/prancha-sp.mjs';
+import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, largura, gerarPrancha, rotuloPainel } from '../lib/prancha-sp.mjs';
 import { L, NEUTRO, barras, caixaLegenda, nota } from '../lib/painel.mjs';
 import { BIV, LIM_DIESEL, COR_DIESEL, COR_115, LIM_POP_115, LIM_KM_115, classe } from './preparar.mjs';
 
@@ -64,23 +64,31 @@ function legenda(itens, y, { titulo, unidade, passo = 24 }) {
   return { svg: s.join('\n'), y: y + 4 };
 }
 
-/** Grade 3 × 3 com o número de municípios em cada casa, setas dos eixos e os limites dos terços. */
+/** Grade 3 × 3 com o número de municípios em cada casa, setas dos eixos e os limites dos terços (sem `casas`, só as cores). */
 function grade(casas, y, cfg) {
   const s = [rotuloPainel(cfg.titulo, y)];
   const q = 44, x0 = 116, y0 = y + 28;
   for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) {
     const xx = x0 + b * q, yy = y0 + (2 - a) * q;
     s.push(`<rect x="${xx}" y="${yy}" width="${q}" height="${q}" fill="${BIV[a][b]}" stroke="#ffffff" stroke-width="1"/>`);
-    s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${a === 2 || (a === 1 && b === 2) ? '#ffffff' : TINTA}">${casas[a][b]}</text>`);
+    if (casas) s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${a === 2 || (a === 1 && b === 2) ? '#ffffff' : TINTA}">${casas[a][b]}</text>`);
   }
   s.push(`<path d="M${x0} ${y0 + 3 * q + 10}h${3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 + 3 * q - 6} ${y0 + 3 * q + 6}l6 4l-6 4" fill="none" stroke="${TINTA}"/>`);
   s.push(`<text x="${x0 + 1.5 * q}" y="${y0 + 3 * q + 30}" text-anchor="middle" font-family="${MONO}" font-size="12">${esc(`${cfg.eixoX} →`)}</text>`);
   s.push(`<path d="M${x0 - 10} ${y0 + 3 * q}v${-3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 - 14} ${y0 + 6}l4 -6l4 6" fill="none" stroke="${TINTA}"/>`);
   s.push(`<text x="${x0 - 22}" y="${y0 + 1.5 * q}" text-anchor="middle" font-family="${MONO}" font-size="12" transform="rotate(-90 ${x0 - 22} ${y0 + 1.5 * q})">${esc(`${cfg.eixoY} →`)}</text>`);
   const tx = x0 + 3 * q + 30;
-  const lin = [...cfg.terX, '', ...cfg.terY, '', cfg.unidade];
+  const lin = [...cfg.terX, '', ...cfg.terY, ...(cfg.unidade ? ['', cfg.unidade] : [])];
   lin.forEach((l, k) => s.push(`<text x="${tx}" y="${y0 + 10 + k * 15}" font-family="${MONO}" font-size="12" fill="${CINZA}">${esc(l)}</text>`));
-  return { svg: s.join('\n'), y: Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8) };
+  const larg = Math.max(largura(cfg.titulo, 15, { mono: true, espaco: 2.4 }), tx + Math.max(...lin.map((l) => largura(l, 12, { mono: true }))));
+  return { svg: s.join('\n'), y: Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8), largura: larg };
+}
+
+/** Legenda da figura de reuso: a grade sem as contagens e, se o mapa tem hachura, o «sem dado». */
+function legendaGrade(cfg, semDado = null) {
+  const g = grade(null, 0, cfg);
+  if (!semDado) return { svg: g.svg, altura: g.y, largura: g.largura };
+  return { svg: `${g.svg}\n${caixaLegenda(null, semDado, g.y + 16, { hachura: true })}`, altura: g.y + 24, largura: Math.max(g.largura, 42 + largura(semDado, 16)) };
 }
 
 const CONTROLE_NOME = () => ({ pct_urbana: L('urbanização', 'urbanisation'), log_densidade: L('densidade', 'density'), log_renda_pc: L('renda', 'income') });
@@ -114,6 +122,11 @@ function cana() {
   const e = C.e111;
   const a = mun('Ibaté'), b = mun('São Luiz do Paraitinga'), sp = mun('São Paulo');
   const T = e.porTercoCana;
+  const eixos = () => ({
+    titulo: L('CANA × ETANOL, EM TERÇOS DOS MUNICÍPIOS', 'CANE × ETHANOL, IN THIRDS OF MUNICIPALITIES'),
+    eixoX: L('área com cana', 'area under cane'), eixoY: L('etanol no Otto', 'ethanol in Otto'),
+    terX: tercos('cana', 'cane', e.ter_x, fPct(0)), terY: tercos('etanol', 'ethanol', e.ter_y, fPct(0)),
+  });
   return () => ({
     layout: 'um',
     serie: serie('cana'),
@@ -140,13 +153,9 @@ function cana() {
       [nf(e.casas[2][2]), [L('municípios no terço de cima', 'municipalities in the top third'), L('dos dois', 'of both')]],
       [L(`${nf(T[0].otto, 0)} → ${nf(T[2].otto, 0)} %`, `${nf(T[0].otto, 0)} → ${nf(T[2].otto, 0)}%`), [L('de etanol no Otto, do terço com', 'ethanol in Otto, from the'), L('menos ao terço com mais cana', 'least- to the most-cane third')]],
     ],
+    legendaFigura: () => legendaGrade(eixos(), L('sem venda de etanol ou gasolina no Anuário', 'no ethanol or petrol sales in the Yearbook')),
     painel: (y) => {
-      const g = grade(e.casas, y, {
-        titulo: L('CANA × ETANOL, EM TERÇOS DOS MUNICÍPIOS', 'CANE × ETHANOL, IN THIRDS OF MUNICIPALITIES'),
-        eixoX: L('área com cana', 'area under cane'), eixoY: L('etanol no Otto', 'ethanol in Otto'),
-        terX: tercos('cana', 'cane', e.ter_x, fPct(0)), terY: tercos('etanol', 'ethanol', e.ter_y, fPct(0)),
-        unidade: L('municípios em cada casa', 'municipalities in each cell'),
-      });
+      const g = grade(e.casas, y, { ...eixos(), unidade: L('municípios em cada casa', 'municipalities in each cell') });
       const r = relacao(e, g.y + 10);
       const n = nota(`${VENDA()} ${L(
         'Preço na bomba, frota flex e distância da usina podem estar por trás da relação, que fica firme fora da metrópole.',
@@ -189,6 +198,11 @@ function diesel() {
       [nf(e.ge1), [L(`de ${nf(e.n)} municípios em que`, `of ${nf(e.n)} municipalities where`), L('o potencial passa do diesel', 'potential exceeds diesel')]],
       [dec(e.mediana, 2), [L('no município mediano:', 'in the median town:'), L('quase todo o diesel', 'nearly all the diesel')]],
     ],
+    legendaFigura: () => {
+      const g = legenda([...COR_DIESEL.map((cor, i) => [cor, rot()[i], null]), ['hachura', L('sem venda de diesel no Anuário', 'no diesel sales in the Yearbook'), null]], 0,
+        { titulo: L('BIOMETANO ÷ DIESEL VENDIDO, EM ENERGIA', 'BIOMETHANE ÷ DIESEL SOLD, IN ENERGY'), passo: 22 });
+      return { svg: g.svg, altura: g.y, largura: 380 };
+    },
     painel: (y) => {
       const s = [];
       const g = legenda([...COR_DIESEL.map((cor, i) => [cor, rot()[i], e.cont[i]]), ['hachura', L('sem venda de diesel no Anuário', 'no diesel sales in the Yearbook'), e.sem]], y,
@@ -214,6 +228,12 @@ function eucalipto() {
   const mi = (v) => L(`${nf(v / 1e6, 2)} milhão de m³`, `${nf(v / 1e6, 2)} million m³`);
   const mi2 = (v) => L(`${nf(v / 1e6, 2)} milhões de m³`, `${nf(v / 1e6, 2)} million m³`);
   const mPorKm = (v) => L(`${nf(v)} m³/km²`, `${nf(v)} m³/km²`);
+  const eixos = () => ({
+    titulo: L('MATA × MADEIRA PARA CELULOSE', 'NATIVE COVER × PULPWOOD'),
+    eixoX: L('vegetação nativa', 'native vegetation'), eixoY: L('madeira por km²', 'wood per km²'),
+    terX: tercos('mata', 'native cover', e.ter_x, fPct(0)),
+    terY: L(['madeira para celulose:', `nenhuma, até ${mPorKm(e.med_prod)}`, `e mais de ${mPorKm(e.med_prod)}`], ['pulpwood:', `none, up to ${mPorKm(e.med_prod)}`, `and over ${mPorKm(e.med_prod)}`]),
+  });
   return () => ({
     layout: 'um',
     serie: serie('eucalipto'),
@@ -238,14 +258,9 @@ function eucalipto() {
       [nf(e.casas[2][2]), [L('municípios com mais mata', 'municipalities with most forest'), L('e mais madeira por km²', 'and most wood per km²')]],
       [pc(e.nativa_prod), [L('de mata no produtor mediano', 'native cover in the median producer'), L(`(${pc(e.nativa_nao)} nos que não produzem)`, `(${pc(e.nativa_nao)} in non-producers)`)]],
     ],
+    legendaFigura: () => legendaGrade(eixos(), L('fora da PEVS 2024: sem dado, não zero', 'outside PEVS 2024: no data, not zero')),
     painel: (y) => {
-      const g = grade(e.casas, y, {
-        titulo: L('MATA × MADEIRA PARA CELULOSE', 'NATIVE COVER × PULPWOOD'),
-        eixoX: L('vegetação nativa', 'native vegetation'), eixoY: L('madeira por km²', 'wood per km²'),
-        terX: tercos('mata', 'native cover', e.ter_x, fPct(0)),
-        terY: L(['madeira para celulose:', `nenhuma, até ${mPorKm(e.med_prod)}`, `e mais de ${mPorKm(e.med_prod)}`], ['pulpwood:', `none, up to ${mPorKm(e.med_prod)}`, `and over ${mPorKm(e.med_prod)}`]),
-        unidade: L('municípios em cada casa', 'municipalities in each cell'),
-      });
+      const g = grade(e.casas, y, { ...eixos(), unidade: L('municípios em cada casa', 'municipalities in each cell') });
       const r = relacao(e, g.y + 10, [], { semForaSp: true });
       const lg = caixaLegenda(null, L(`fora da PEVS 2024 (${nf(e.sem)} municípios): sem dado, não zero`, `outside PEVS 2024 (${nf(e.sem)} municipalities): no data, not zero`), r.y + 20, { hachura: true });
       const n = nota(L(
@@ -262,6 +277,11 @@ function esterco() {
   const e = C.e114;
   const a = mun('Ferraz de Vasconcelos'), b = mun('Presidente Bernardes');
   const bov = (v) => nf(v, v < 10 ? 1 : 0);
+  const eixos = () => ({
+    titulo: L('BOVINOS × ADUBO ORGÂNICO, EM TERÇOS', 'CATTLE × ORGANIC FERTILISER, IN THIRDS'),
+    eixoX: L('bovinos por km²', 'cattle per km²'), eixoY: L('adubo orgânico', 'organic fert.'),
+    terX: tercos('bovinos/km²', 'cattle/km²', e.ter_x, (v) => nf(v, 0)), terY: tercos('adubo orgânico', 'organic fertiliser', e.ter_y, fPct(0)),
+  });
   return () => ({
     layout: 'um',
     serie: serie('esterco'),
@@ -286,13 +306,9 @@ function esterco() {
       [nf(e.casas[0][2]), [L('municípios com mais boi', 'municipalities with most cattle'), L('e menos adubo orgânico', 'and least organic fertiliser')]],
       [`${nf(e.bov.medBaixo, 0)} · ${nf(e.bov.medAlto, 0)}`, [L('% com adubo orgânico: quartil', '% with organic fertiliser: least'), L('com menos e com mais boi', 'and most cattle quartile')]],
     ],
+    legendaFigura: () => legendaGrade(eixos(), L('sem dado', 'no data')),
     painel: (y) => {
-      const g = grade(e.casas, y, {
-        titulo: L('BOVINOS × ADUBO ORGÂNICO, EM TERÇOS', 'CATTLE × ORGANIC FERTILISER, IN THIRDS'),
-        eixoX: L('bovinos por km²', 'cattle per km²'), eixoY: L('adubo orgânico', 'organic fert.'),
-        terX: tercos('bovinos/km²', 'cattle/km²', e.ter_x, (v) => nf(v, 0)), terY: tercos('adubo orgânico', 'organic fertiliser', e.ter_y, fPct(0)),
-        unidade: L('municípios em cada casa', 'municipalities in each cell'),
-      });
+      const g = grade(e.casas, y, { ...eixos(), unidade: L('municípios em cada casa', 'municipalities in each cell') });
       const r = relacao(e, g.y + 10, [[L('pouco adubo cercado de muito boi (LISA)', 'little fertiliser amid many cattle (LISA)'), `${e.lisa.BA} mun.`]], { semForaSp: true });
       const n = nota(`${L(
         `Censo Agropecuário de 2017, rebanho de 2024. Adubo orgânico não é só esterco: inclui o composto das hortas, e o gado solto deixa o esterco no pasto. Pelo nitrogênio dos dejetos, a queda é parecida (${nf(e.nitro.medBaixo, 0)} → ${nf(e.nitro.medAlto, 0)} %). Os casos se juntam no oeste. O mapa compara municípios, não fazendas.`,
@@ -315,6 +331,22 @@ function pequenos() {
   };
   const m3 = (v) => L(`${mil(v)} m³/dia`, `${mil(v)} m³/day`);
   const km = (v) => `${nf(v, 0)} km`;
+  /** Classes do mapa e as duas linhas de gás; `contar` põe o número de municípios à direita (só na prancha). */
+  const classes = (y, contar) => {
+    const s = [];
+    const g = legenda([
+      [COR_115.sozinho, L('presta sozinho', 'runs it alone'), e.sozinho],
+      [COR_115.regional, L('outra forma regionalizada', 'other regional arrangement'), e.regional],
+      [COR_115.consorcio, L('em consórcio público', 'in a public consortium'), e.consorcio],
+      [COR_115.outro, L('outros no quartil de cima', 'others in the top quartile'), e.cheios_n - e.n],
+    ].map(([c, r, n]) => [c, r, contar ? n : null]), y, { titulo: L('PEQUENOS, CHEIOS DE GÁS E LONGE: RESÍDUOS', 'SMALL, GAS-RICH AND FAR: WASTE SERVICES'), unidade: L('mun.', 'mun.'), passo: 22 });
+    s.push(g.svg);
+    let yy = g.y + 2;
+    s.push(`<path d="M0 ${yy - 5}h30" stroke="#ffffff" stroke-width="5.4"/><path d="M0 ${yy - 5}h30" stroke="${TINTA}" stroke-width="2.4"/><text x="42" y="${yy}" font-family="${SERIF}" font-size="16">${esc(L('gasoduto de transporte', 'transmission pipeline'))}</text>`);
+    yy += 22;
+    s.push(`<path d="M0 ${yy - 5}h30" stroke="#7a8189" stroke-width="1.2"/><text x="42" y="${yy}" font-family="${SERIF}" font-size="16">${esc(L('rede de distribuição de gás', 'gas distribution network'))}</text>`);
+    return { svg: s.join('\n'), y: yy + 14 };
+  };
   return () => ({
     layout: 'um',
     serie: serie('pequenos'),
@@ -345,20 +377,15 @@ function pequenos() {
       [`${e.sozinho}/${e.n}`, [L('prestam o serviço de', 'run their waste services'), L('resíduos sozinhos', 'on their own')]],
       [`${e.gas_canalizado}/${e.n}`, [L('têm gás canalizado', 'have piped gas'), L(`(no estado, ${645 - e.sem_gas_n} de 645)`, `(statewide, ${645 - e.sem_gas_n} of 645)`)]],
     ],
+    legendaFigura: () => {
+      const g = classes(0, false);
+      return { svg: g.svg, altura: g.y, largura: 430 };
+    },
     painel: (y) => {
       const s = [];
-      const g = legenda([
-        [COR_115.sozinho, L('presta sozinho', 'runs it alone'), e.sozinho],
-        [COR_115.regional, L('outra forma regionalizada', 'other regional arrangement'), e.regional],
-        [COR_115.consorcio, L('em consórcio público', 'in a public consortium'), e.consorcio],
-        [COR_115.outro, L('outros no quartil de cima', 'others in the top quartile'), e.cheios_n - e.n],
-      ], y, { titulo: L('PEQUENOS, CHEIOS DE GÁS E LONGE: RESÍDUOS', 'SMALL, GAS-RICH AND FAR: WASTE SERVICES'), unidade: L('mun.', 'mun.'), passo: 22 });
+      const g = classes(y, true);
       s.push(g.svg);
-      let yy = g.y + 2;
-      s.push(`<path d="M0 ${yy - 5}h30" stroke="#ffffff" stroke-width="5.4"/><path d="M0 ${yy - 5}h30" stroke="${TINTA}" stroke-width="2.4"/><text x="42" y="${yy}" font-family="${SERIF}" font-size="16">${esc(L('gasoduto de transporte', 'transmission pipeline'))}</text>`);
-      yy += 22;
-      s.push(`<path d="M0 ${yy - 5}h30" stroke="#7a8189" stroke-width="1.2"/><text x="42" y="${yy}" font-family="${SERIF}" font-size="16">${esc(L('rede de distribuição de gás', 'gas distribution network'))}</text>`);
-      yy += 14;
+      const yy = g.y;
       const fr = (k, n) => `${k}/${n} · ${pc((100 * k) / n)}`;
       const q = quadro([
         [L('em consórcio público · no grupo', 'public consortium · in the group'), fr(e.consorcio, e.n), true],

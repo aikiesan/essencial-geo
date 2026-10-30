@@ -163,6 +163,16 @@ async function tabuleiro() {
       s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('do estado', 'of the state')}</text>`);
       return { svg: s.join('\n'), y: y + 10 };
     },
+    // Figura: as classes da fita, sem área nem percentual.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('USO E COBERTURA DA TERRA, 2024', 'LAND USE AND LAND COVER, 2024'), 0)];
+      c.grupos.forEach((k, i) => {
+        const y = 34 + i * 25;
+        s.push(`<rect x="0" y="${y - 13}" width="26" height="15" fill="${k.cor}" stroke="#1a211a" stroke-width=".6"/>`);
+        s.push(`<text x="38" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(k.rotulo, k.rotulo_en))}</text>`);
+      });
+      return { svg: s.join('\n'), altura: 34 + c.grupos.length * 25 - 10, largura: 360 };
+    },
     fontes: () => [L('MapBiomas, Coleção 10 (2024)', 'MapBiomas, Collection 10 (2024)'), MALHA()],
   });
 }
@@ -291,6 +301,23 @@ async function laranja() {
       const l = lista(c.biometano_maiores.slice(0, 3).map((m) => [m.nome, nf(m.valor)]), y + 46, { x: 160, larg: LP - 160, passo: 24, tamanho: 16 });
       s.push(l.svg);
       return { svg: s.join('\n'), y: Math.max(y + 20 + lc.altura, l.y) + 4 };
+    },
+    // Figura: as classes, as listras e os círculos; sem a série nem a lista das fábricas.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L(`PRODUÇÃO EM ${a1} (MIL T)`, `PRODUCTION IN ${a1} (THOUSAND T)`), 0)];
+      const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [LARANJA[i], rot(i)]), [null, L('sem informação', 'no data')]];
+      const l1 = legendaClasses(itens.slice(0, 4), { y: 16, passo: 27, tamanho: 16, id: 'flgl1' });
+      const l2 = legendaClasses(itens.slice(4), { x: LP / 2 + 8, y: 16, passo: 27, tamanho: 16, id: 'flgl2' });
+      s.push(l1.svg, l2.svg);
+      let y = 16 + l1.altura + 6;
+      s.push(`<defs><pattern id="flglx" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-50)"><rect width="5" height="5" fill="${ZERO}"/><path d="M0 0V5" stroke="#c2410c" stroke-width="1.1"/></pattern></defs>`);
+      s.push(`<rect x="0" y="${y}" width="34" height="19" fill="url(#flglx)" stroke="#1a211a" stroke-width=".8"/>`);
+      s.push(`<text x="50" y="${y + 15}" font-family="${SERIF}" font-size="16">${esc(L(`listras: deixou a laranja desde ${a0}`, `stripes: gave up oranges since ${a0}`))}</text>`);
+      y += 58;
+      s.push(rotuloPainel(L('BAGAÇO NAS FÁBRICAS DE SUCO (M³/DIA)', 'BAGASSE AT THE JUICE MILLS (M³/DAY)'), y));
+      const lc = legendaCirculos([20000, 5000, 1000], raio, (v) => nf(v), { y: y + 20, cor: METANO[4] });
+      s.push(lc.svg);
+      return { svg: s.join('\n'), altura: y + 20 + lc.altura, largura: LP };
     },
     fontes: () => [L(`IBGE, PAM ${a0} a ${a1} (tabela 1613)`, `IBGE, PAM ${a0}–${a1} (table 1613)`), CP2B(), MALHA()],
   });
@@ -433,6 +460,19 @@ async function urbano() {
       }
       return { svg: s.join('\n'), y: y + 4 };
     },
+    // Figura: as classes e os tipos de estação, sem as contagens nem as barras de origem.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('BIOMETANO URBANO (M³/DIA)', 'URBAN BIOMETHANE (M³/DAY)'), 0)];
+      const itens = [[ZERO, L('zero: longe demais', 'zero: too far')], ...c.quebras.map((_, i) => [METANO[i], rot(i)])];
+      const l1 = legendaClasses(itens.slice(0, 4), { y: 16, passo: 27, tamanho: 16, id: 'flgu1' });
+      const l2 = legendaClasses(itens.slice(4), { x: LP / 2 + 8, y: 16, passo: 27, tamanho: 16, id: 'flgu2' });
+      s.push(l1.svg, l2.svg);
+      const y = 16 + l1.altura + 34;
+      s.push(rotuloPainel(L('ESTAÇÕES DE ESGOTO (ANA, 2019)', 'SEWAGE TREATMENT PLANTS (ANA, 2019)'), y));
+      const lp = legendaPontos(Object.values(FAM).map(([cc, pt, en, r]) => [cc, L(pt, en), r + 1]), y + 34);
+      s.push(lp.svg);
+      return { svg: s.join('\n'), altura: lp.y - 18, largura: LP };
+    },
     fontes: () => [CP2B(), L('ANA, estações de tratamento de esgoto (2019)', 'ANA, sewage treatment plants (2019)'), MALHA()],
   });
 }
@@ -498,6 +538,21 @@ async function sintese() {
         y += 26;
       }
       return { svg: s.join('\n'), y: y + 4 };
+    },
+    // Figura: as cores da maior fonte e os círculos, sem as barras nem os níveis.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('A MAIOR FONTE DO MUNICÍPIO', 'THE MUNICIPALITY’S LARGEST SOURCE'), 0)];
+      let y = 22;
+      for (const [cc, pt, en] of Object.values(GRUPO)) {
+        s.push(`<circle cx="14" cy="${y + 10}" r="9" fill="${cc}" fill-opacity=".85"/>`);
+        s.push(`<text x="34" y="${y + 16}" font-family="${SERIF}" font-size="16">${esc(L(pt, en))}</text>`);
+        y += 28;
+      }
+      y += 28;
+      s.push(rotuloPainel(L('BIOMETANO POR DIA', 'BIOMETHANE PER DAY'), y));
+      const lc = legendaCirculos([300000, 100000, 20000], raio, (v) => `${mil(v)} ${L('mil m³', 'k m³')}`, { y: y + 18, cor: CINZA });
+      s.push(lc.svg);
+      return { svg: s.join('\n'), altura: y + 18 + lc.altura, largura: 360 };
     },
     fontes: () => [CP2B(), MALHA()],
   });

@@ -196,6 +196,16 @@ gh release create estados-2025 mapas/*/dados/*_divisao_territorial.gpkg.zip mapa
 ```
 
 Para trocar o arquivo de um estado depois (correção): `gh release upload estados-2025 <arquivo> --clobber`.
+
+**Figuras de reuso.** O SVG da figura (`*_figura.svg`, `*_figura.en.svg`, docs/ESTILO.md «Figura») segue o
+da prancha: fora do Git, anexo da mesma release. Os PNGs ficam no repositório, ao lado da prévia: com mapa
+de base (`mapa_figura.png`) e sem (`mapa_figura_sem_base.png`), cada um também em `.en.png`. O deploy confere
+os quatro em cada mapa no ar. Os mapas em resguardo de artigo não levam figura ao Git: elas ficam locais,
+listadas em `.git/info/exclude`. Para anexar as figuras dos estados (as duas versões) a uma release que já existe:
+
+```bash
+gh release upload estados-2025 mapas/*/dados/[a-z][a-z]_figura*.svg --clobber
+```
 O `zenodo-publicar.mjs` baixa esses anexos sozinho quando eles não estão na pasta, de modo que o DOI de
 cada estado leva o GPKG e o SVG.
 

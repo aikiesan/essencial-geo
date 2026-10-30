@@ -95,6 +95,12 @@ function emprego() {
       s.push(n.svg);
       return { svg: s.join('\n'), y: n.y };
     },
+    // Figura: só as classes, sem contagens nem barras; os rótulos saem aqui, já na língua da figura.
+    legendaFigura: () => {
+      const r = L(['até 3 %', '3 a 6 %', '6 a 12 %', '12 a 20 %', '20 a 35 %', 'mais de 35 %'], ['up to 3%', '3 to 6%', '6 to 12%', '12 to 20%', '20 to 35%', 'over 35%']);
+      const lg = legendaCategorias(CORES_BIO.map((k, i) => [k, r[i]]), 0, { titulo: L('PARTE DOS VÍNCULOS NA BIOECONOMIA', 'SHARE OF JOBS IN THE BIOECONOMY') });
+      return { svg: lg.svg, altura: lg.y - 22, largura: 420 };
+    },
     fontes: FONTES,
   });
 }
@@ -156,6 +162,12 @@ function perfil() {
         'Each bar adds up to 100% of the region’s bioeconomy jobs. Sugar counts as food; ethanol as biofuel.'), yy + 10, { tamanho: 14 });
       s.push(n.svg);
       return { svg: s.join('\n'), y: n.y };
+    },
+    // Figura: os segmentos, sem contagens nem a composição por região.
+    legendaFigura: () => {
+      const ns = NOME_SEG();
+      const lg = legendaCategorias(SEGMENTOS.map((k) => [COR_SEG[k], ns[k]]), 0, { titulo: L('SEGMENTO COM MAIS VÍNCULOS', 'SEGMENT WITH MOST JOBS'), passo: 24 });
+      return { svg: lg.svg, altura: lg.y - 21, largura: 420 };
     },
     fontes: FONTES,
   });
@@ -225,6 +237,22 @@ function geradores() {
         'The biomethane potential on plates 055 to 059 already counts mill vinasse, filter cake and bagasse; effluent from slaughterhouses, dairies, juice plants and breweries is not in it.'), b.y + 12, { tamanho: 14 });
       s.push(n.svg);
       return { svg: s.join('\n'), y: n.y };
+    },
+    // Figura: os ramos e a escala dos círculos, sem os vínculos de cada ramo nem a lista.
+    legendaFigura: () => {
+      const ng = NOME_GER();
+      const lg = legendaCategorias(grupos.map((g) => [COR_GER[g], ng[g]]), 0, { titulo: L('RAMO COM MAIS VÍNCULOS (COR DO CÍRCULO)', 'BRANCH WITH MOST JOBS (CIRCLE COLOUR)'), passo: 24 });
+      const s = [lg.svg];
+      const yy = lg.y + 6;
+      s.push(rotuloPainel(L('VÍNCULOS (ÁREA DO CÍRCULO)', 'JOBS (CIRCLE AREA)'), yy));
+      let x = 20;
+      for (const v of [500, 2000, 8000]) {
+        const r = raio(v);
+        s.push(`<circle cx="${f1(x + r)}" cy="${f1(yy + 14 + 2 * rMax - r)}" r="${f1(r)}" fill="none" stroke="${TINTA}" stroke-width=".8"/>`);
+        s.push(`<text x="${f1(x + r)}" y="${f1(yy + 30 + 2 * rMax)}" text-anchor="middle" font-family="${MONO}" font-size="12">${nf(v)}</text>`);
+        x += 2 * r + 46;
+      }
+      return { svg: s.join('\n'), altura: yy + 34 + 2 * rMax, largura: 460 };
     },
     fontes: FONTES,
   });
@@ -308,6 +336,22 @@ function encontro() {
       s.push(b2.svg);
       return { svg: s.join('\n'), y: b2.y };
     },
+    // Figura: a grade bivariada com os eixos e os limites dos terços, sem o número de municípios nem as listas.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('BIOMETANO × INDÚSTRIA DE BASE BIOLÓGICA', 'BIOMETHANE × BIO-BASED INDUSTRY'), 0)];
+      const q = 54, x0 = 40, y0 = 30;
+      for (let p = 0; p < 3; p++) for (let i = 0; i < 3; i++)
+        s.push(`<rect x="${x0 + i * q}" y="${y0 + (2 - p) * q}" width="${q}" height="${q}" fill="${BIV[p][i]}" stroke="#ffffff" stroke-width="1"/>`);
+      s.push(`<path d="M${x0} ${y0 + 3 * q + 10}h${3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 + 3 * q - 6} ${y0 + 3 * q + 6}l6 4l-6 4" fill="none" stroke="${TINTA}"/>`);
+      s.push(`<text x="${x0 + 1.5 * q}" y="${y0 + 3 * q + 30}" text-anchor="middle" font-family="${MONO}" font-size="12">${esc(L('vínculos na indústria →', 'industry jobs →'))}</text>`);
+      s.push(`<path d="M${x0 - 10} ${y0 + 3 * q}v${-3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 - 14} ${y0 + 6}l4 -6l4 6" fill="none" stroke="${TINTA}"/>`);
+      s.push(`<text x="${x0 - 22}" y="${y0 + 1.5 * q}" text-anchor="middle" font-family="${MONO}" font-size="12" transform="rotate(-90 ${x0 - 22} ${y0 + 1.5 * q})">${esc(L('biometano →', 'biomethane →'))}</text>`);
+      const tx = x0 + 3 * q + 34;
+      const lin = L([`terços do biometano: até ${nf(Math.round(tP[0] / 1e3))} mil,`, `${nf(Math.round(tP[0] / 1e3))} a ${nf(Math.round(tP[1] / 1e3))} mil e mais de`, `${nf(Math.round(tP[1] / 1e3))} mil m³/dia`, '', `terços da indústria: até ${nf(tI[0])},`, `${nf(tI[0])} a ${nf(tI[1])} e mais de ${nf(tI[1])} vínculos`],
+        [`biomethane thirds: up to ${nf(Math.round(tP[0] / 1e3))} thousand,`, `${nf(Math.round(tP[0] / 1e3))} to ${nf(Math.round(tP[1] / 1e3))} thousand and over`, `${nf(Math.round(tP[1] / 1e3))} thousand m³/day`, '', `industry thirds: up to ${nf(tI[0])},`, `${nf(tI[0])} to ${nf(tI[1])} and over ${nf(tI[1])} jobs`]);
+      lin.forEach((l, k) => s.push(`<text x="${tx}" y="${y0 + 12 + k * 18}" font-family="${MONO}" font-size="12" fill="${CINZA}">${esc(l)}</text>`));
+      return { svg: s.join('\n'), altura: y0 + 3 * q + 34, largura: tx + 330 };
+    },
     fontes: () => [
       L('MTE, RAIS 2025: estabelecimentos (PDET)', 'MTE, RAIS 2025: establishments (PDET)'),
       L('CP2B (Unicamp), potencial de biometano, v5.1', 'CP2B (Unicamp), biomethane potential, v5.1'),
@@ -386,6 +430,22 @@ function residuos() {
         'RAIS places each job at the company’s address: a regional landfill shows in one municipality, a concession at its head office.'), b.y + 10, { tamanho: 14 });
       s.push(n.svg);
       return { svg: s.join('\n'), y: n.y };
+    },
+    // Figura: as classes e a escala dos círculos, sem as barras por região nem a nota.
+    legendaFigura: () => {
+      const rot = L(['até 500', '500 a 1.500', '1.500 a 4.000', '4.000 a 10.000', 'mais de 10.000'], ['up to 500', '500 to 1,500', '1,500 to 4,000', '4,000 to 10,000', 'over 10,000']);
+      const lg = legendaCategorias(CORES_U.map((k, i) => [k, rot[i]]), 0, { titulo: L('BIOMETANO URBANO (M³/DIA)', 'URBAN BIOMETHANE (M³/DAY)'), passo: 23 });
+      const s = [lg.svg];
+      const yy = lg.y + 4;
+      s.push(rotuloPainel(L('VÍNCULOS EM TRATAMENTO (ÁREA)', 'JOBS IN TREATMENT (AREA)'), yy));
+      let x = 20;
+      for (const v of [50, 300, 1500]) {
+        const r = raio(v);
+        s.push(`<circle cx="${f1(x + r)}" cy="${f1(yy + 14 + 2 * rMax - r)}" r="${f1(r)}" fill="#8a4a2a" fill-opacity=".85" stroke="#ffffff"/>`);
+        s.push(`<text x="${f1(x + r)}" y="${f1(yy + 30 + 2 * rMax)}" text-anchor="middle" font-family="${MONO}" font-size="12">${nf(v)}</text>`);
+        x += 2 * r + 46;
+      }
+      return { svg: s.join('\n'), altura: yy + 34 + 2 * rMax, largura: 420 };
     },
     fontes: () => [
       L('MTE, RAIS 2025: estabelecimentos (PDET)', 'MTE, RAIS 2025: establishments (PDET)'),

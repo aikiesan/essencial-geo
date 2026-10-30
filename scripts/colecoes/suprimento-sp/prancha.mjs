@@ -99,6 +99,14 @@ function alcance() {
         { coord: itp.coord, dx: -60, dy: 230, tamanho: 16, titulo: L(`${itp.NM_MUN.toUpperCase()} · ${MIL(itp.v)} M³/DIA`, `${itp.NM_MUN.toUpperCase()} · ${MIL(itp.v)} M³/DAY`), linhas: L(['de outras lavouras a 30 km:', 'o maior fora da cana'], ['of other crops within 30 km:', 'the largest outside cane']) },
       ],
     }),
+    // Figura: só a faixa de classes, com a marca do porte de referência.
+    legendaFigura: () => ({
+      svg: [rotuloPainel(L('BIOMETANO A ATÉ 30 KM · M³/DIA', 'BIOMETHANE WITHIN 30 KM · M³/DAY'), 0),
+        `<g transform="translate(0 18)">${faixa(CORES_ALC, rotAlc(), { larg: 78 })}</g>`,
+        `<path d="M${3 * 78} 16v18" stroke="${TINTA}" stroke-width="1.6"/>`,
+        `<text x="${3 * 78}" y="70" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('porte de referência', 'reference size'))}</text>`].join('\n'),
+      altura: 76, largura: 7 * 78,
+    }),
     numeros: () => [
       [pct(pA(aT), 0), [L('da área junta, a 30 km,', 'of the area gathers, within'), L(`${nf(S.ref_m3d / 1000)} mil m³/dia ou mais`, `30 km, ${nf(S.ref_m3d / 1000)},000 m³/day or more`)]],
       [pct(pA(S.area_ref_fora_cana), 0), [L('da área chega lá', 'of the area gets there'), L('sem contar a cana', 'leaving cane out')]],
@@ -165,6 +173,19 @@ function curva() {
       chamadas: [
         { coord: longe.coord, dx: 120, dy: 200, tamanho: 16, titulo: L(`${longe.NM_MUN.toUpperCase()} · ${nf(longe.v, 0)} KM`, `${longe.NM_MUN.toUpperCase()} · ${nf(longe.v, 0)} KM`), linhas: L(['do ponto de entrega mais próximo,', 'no fim da curva'], ['from the nearest delivery point,', 'at the end of the curve']) },
       ],
+    }),
+    // Figura: as duas faixas de distância, a rede de gás e as células sem potencial (cinza do zero).
+    legendaFigura: () => ({
+      svg: [rotuloPainel(L('DISTÂNCIA AO PONTO DE ENTREGA · KM', 'DISTANCE TO THE DELIVERY POINT · KM'), 0),
+        `<g transform="translate(0 18)">${faixa(CORES_KM, LIM_KM.map((v) => nf(v)), { larg: 62 })}</g>`,
+        `<g transform="translate(0 58)">${faixa(CORES_KM_CLARO, [], { larg: 62 })}</g>`,
+        `<text x="${6 * 62 + 12}" y="30" font-family="${MONO}" font-size="11">${esc(L('células que somam 75 %', 'cells holding 75%'))}</text>`,
+        `<text x="${6 * 62 + 12}" y="44" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('do potencial', 'of potential'))}</text>`,
+        `<text x="${6 * 62 + 12}" y="70" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('as demais', 'the rest'))}</text>`,
+        `<path d="M0 99H30" stroke="${PAPEL}" stroke-width="5"/><path d="M0 99H30" stroke="${GAS_T}" stroke-width="2.4"/><text x="42" y="104" font-family="${SERIF}" font-size="15">${esc(L('gasoduto de transporte', 'transmission pipeline'))}</text>`,
+        `<circle cx="${LP / 2 + 15}" cy="99" r="5" fill="${GAS_T}" stroke="${PAPEL}" stroke-width="1.6"/><text x="${LP / 2 + 30}" y="104" font-family="${SERIF}" font-size="15">${esc(L('ponto de entrega de gás', 'gas delivery point'))}</text>`,
+        caixaLegenda(ZERO, L('sem potencial', 'no potential'), 130)].join('\n'),
+      altura: 134, largura: 520,
     }),
     numeros: () => [
       [km(S.mediana_km[0]), [L('juntam metade do', 'gather half of the'), L('biometano do estado', 'state’s biomethane')]],
@@ -372,6 +393,24 @@ function disputa() {
       [nf(us.length), [L('municípios com usina:', 'municipalities with plants:'), L(`${anp.length} com biometano (ANP)`, `${anp.length} with biomethane (ANP)`)]],
       [pct((100 * anp[0].cap) / anp[0].alcance, 0), [L(`do potencial a 30 km de ${anp[0].nome}`, `of the potential within 30 km of`), L('é a capacidade da planta', `${anp[0].nome}: the plant’s capacity`)]],
     ],
+    // Figura: as classes de cobertura, sem as partes do potencial, e as duas chaves de círculos.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('MUNICÍPIOS COM USINA A ATÉ 30 KM', 'MUNICIPALITIES WITH PLANTS WITHIN 30 KM'), 0)];
+      const leg = [
+        [CORES_COB[0], L(`nenhum, menos de ${nf(S.ref_m3d / 1000)} mil m³/dia a 30 km`, `none, under ${nf(S.ref_m3d / 1000)},000 m³/day within 30 km`)],
+        [CORES_COB[1], L(`nenhum, ${nf(S.ref_m3d / 1000)} a 300 mil m³/dia`, `none, ${nf(S.ref_m3d / 1000)},000 to 300,000 m³/day`)],
+        [CORES_COB[2], L('nenhum, mais de 300 mil m³/dia', 'none, over 300,000 m³/day')],
+        [CORES_COB[3], L('um', 'one')], [CORES_COB[4], L('dois', 'two')], [CORES_COB[5], L('três ou mais', 'three or more')],
+      ];
+      leg.forEach(([cor, t], i) => s.push(caixaLegenda(cor, t, 24 + i * 21)));
+      const yy = 24 + leg.length * 21 + 8;
+      s.push(legendaCirculos([130000, 30000], raioAnp, (v) => L(`${nf(v / 1000)} mil m³/dia`, `${nf(v / 1000)},000 m³/day`), { y: yy, cor: AZUL, tamanho: 13 }).svg);
+      s.push(legendaCirculos([5000, 500], raioGd, (v) => `${nf(v / 1000, v < 1000 ? 1 : 0)} MW`, { x: LP / 2 + 40, y: yy + 2 * (raioAnp(130000) - raioGd(5000)), cor: ARGILA, tamanho: 13 }).svg);
+      const yr = yy + 2 * raioAnp(130000) + 20;
+      s.push(`<text x="0" y="${yr}" font-family="${SERIF}" font-size="14">${esc(L('biometano autorizado (ANP)', 'authorised biomethane (ANP)'))}</text>`);
+      s.push(`<text x="${LP / 2 + 40}" y="${yr}" font-family="${SERIF}" font-size="14">${esc(L('GD a biogás (ANEEL)', 'biogas DG (ANEEL)'))}</text>`);
+      return { svg: s.join('\n'), altura: yr + 6, largura: 460 };
+    },
     painel: (y) => {
       const s = [rotuloPainel(L('BIOMETANO AUTORIZADO E O QUE HÁ A 30 KM', 'AUTHORISED BIOMETHANE AND WHAT LIES WITHIN 30 KM'), y)];
       const x0 = 190, larg = LP - x0 - 120;

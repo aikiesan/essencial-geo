@@ -109,6 +109,17 @@ function produto(c, paleta, t) {
       s.push(l.svg);
       return { svg: s.join('\n'), y: l.y - 10 };
     },
+    // Figura: só as classes (e a água do raster, na tilápia); sem a série nem os maiores produtores.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L(`PRODUÇÃO EM ${a1} (${t.unidade[0]})`, `PRODUCTION IN ${a1} (${t.unidade[1]})`), 0)];
+      const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [paleta[i], rot(i)]), [null, L(t.semInfo[0], t.semInfo[1])]];
+      if (t.raster) itens.push(['#7fa7c9', L('rios e represas', 'rivers and reservoirs')]);
+      const meio = Math.ceil(itens.length / 2);
+      const l1 = legendaClasses(itens.slice(0, meio), { y: 16, passo: 27, tamanho: 16, id: 'flga1' });
+      const l2 = legendaClasses(itens.slice(meio), { x: LP / 2 + 8, y: 16, passo: 27, tamanho: 16, id: 'flga2' });
+      s.push(l1.svg, l2.svg);
+      return { svg: s.join('\n'), altura: 16 + l1.altura - 8, largura: LP };
+    },
     fontes: t.fontes,
   });
 }
@@ -279,6 +290,22 @@ async function valor() {
       const lc = legendaCirculos([1000000, 100000], raio, (v) => `R$ ${nf(v / 1e3, 0)} ${L('mi', 'm')}`, { y: y + 20, cor: '#9aa3ab' });
       s.push(lc.svg);
       return { svg: s.join('\n'), y: y + 20 + lc.altura + 4 };
+    },
+    // Figura: as cores do produto e os círculos, sem as contagens nem as barras.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('O PRODUTO DE MAIOR VALOR NO MUNICÍPIO', 'THE MOST VALUABLE PRODUCT IN THE MUNICIPALITY'), 0)];
+      let y = 30;
+      for (const [k] of ordem) {
+        const [cc, pt, en] = PRODUTO[k];
+        s.push(`<circle cx="12" cy="${y - 5}" r="7" fill="${cc}" fill-opacity=".85" stroke="${PAPEL}"/>`);
+        s.push(`<text x="28" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(pt, en))}</text>`);
+        y += 25;
+      }
+      y += 22;
+      s.push(rotuloPainel(L(`VALOR POR MUNICÍPIO EM ${c.ano}`, `VALUE BY MUNICIPALITY IN ${c.ano}`), y));
+      const lc = legendaCirculos([1000000, 100000], raio, (v) => `R$ ${nf(v / 1e3, 0)} ${L('mi', 'm')}`, { y: y + 20, cor: '#9aa3ab' });
+      s.push(lc.svg);
+      return { svg: s.join('\n'), altura: y + 20 + lc.altura, largura: 480 };
     },
     fontes: () => [PPM(74, c.ano, c.ano).replace(/ a \d+| ?–\d+/, ''), L(`IBGE, PPM ${c.ano} (tabela 3940)`, `IBGE, PPM ${c.ano} (table 3940)`), MALHA()],
   });
