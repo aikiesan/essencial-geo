@@ -44,6 +44,11 @@ async function transmissao() {
   const F = Object.fromEntries(c.faixas.map((f) => [f.rotulo, f]));
   const longa = c.longas[0];
   const cc = c.faixas[3];
+  // Os símbolos da legenda (traço de cada tensão, ponto da subestação), comuns ao painel e à figura.
+  const traco = (f, y) => `<path d="M2 ${y - 6}H38" stroke="${PAPEL}" stroke-width="${f.largura + 3}" stroke-linecap="round"/><path d="M2 ${y - 6}H38" stroke="${f.cor}" stroke-width="${f.largura * 1.6}" stroke-linecap="round"/>
+<text x="52" y="${y}" font-family="${SERIF}" font-size="17">${esc(L(f.rotulo, EN_FAIXA[f.rotulo]))}</text>`;
+  const subestacao = (y) => `<circle cx="20" cy="${y - 4}" r="3.2" fill="${TINTA}" stroke="${PAPEL}" stroke-width="1.2"/>
+<text x="52" y="${y + 2}" font-family="${SERIF}" font-size="17">${L('subestação', 'substation')}</text>`;
   return () => ({
     layout: 'um',
     motivo: 'energia',
@@ -74,6 +79,15 @@ async function transmissao() {
           ['the country’s longest line:', `Xingu – Terminal Rio, direct current (${longa.ano})`]),
       }],
     }),
+    // Só os símbolos, sem as barras de quilometragem.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('TENSÃO', 'VOLTAGE'), 0)];
+      let y = 32;
+      for (const f of [...c.faixas].reverse()) { s.push(traco(f, y)); y += 30; }
+      s.push(subestacao(y));
+      const larg = 52 + Math.max(...c.faixas.map((f) => largura(L(f.rotulo, EN_FAIXA[f.rotulo]), 17)));
+      return { svg: s.join('\n'), altura: y + 8, largura: Math.ceil(larg), canto: 'se' };
+    },
     numeros: () => [
       [nf(c.trechos), [L('trechos de linha', 'line stretches'), L('na rede básica', 'in the bulk grid')]],
       [`${milKm(c.km_campo)} mil km`, [L('somados os circuitos', 'adding up circuits'), L('(extensão declarada)', '(declared length)')]],
@@ -85,15 +99,13 @@ async function transmissao() {
       y += 34;
       const maxKm = Math.max(...c.faixas.map((f) => f.km));
       for (const f of [...c.faixas].reverse()) {
-        s.push(`<path d="M2 ${y - 6}H38" stroke="${PAPEL}" stroke-width="${f.largura + 3}" stroke-linecap="round"/><path d="M2 ${y - 6}H38" stroke="${f.cor}" stroke-width="${f.largura * 1.6}" stroke-linecap="round"/>`);
-        s.push(`<text x="52" y="${y}" font-family="${SERIF}" font-size="17">${esc(L(f.rotulo, EN_FAIXA[f.rotulo]))}</text>`);
+        s.push(traco(f, y));
         const wb = (f.km / maxKm) * (LP - 120);
         s.push(`<rect x="52" y="${y + 9}" width="${f1(wb)}" height="7" fill="${f.cor}" fill-opacity=".85"/>`);
         s.push(`<text x="${f1(60 + wb)}" y="${y + 17}" font-family="${MONO}" font-size="12.5">${milKm(f.km)}</text>`);
         y += 46;
       }
-      s.push(`<circle cx="20" cy="${y - 4}" r="3.2" fill="${TINTA}" stroke="${PAPEL}" stroke-width="1.2"/>`);
-      s.push(`<text x="52" y="${y + 2}" font-family="${SERIF}" font-size="17">${L('subestação', 'substation')}</text>`);
+      s.push(subestacao(y));
       y += 44;
       s.push(rotuloPainel(L('AS MAIS LONGAS (KM)', 'THE LONGEST (KM)'), y));
       const nomes = c.longas.slice(0, 4).map((l) => [l.nome.replace(/^LT /, '').replace(/ n° \d+ C\d\/C\d$| C\d(\/C\d)?$/, ''), nf(l.km, 0)]);
@@ -123,6 +135,11 @@ async function usinas() {
   const centro = [pantanal.reduce((a, p) => a + p[1], 0) / pantanal.length, pantanal.reduce((a, p) => a + p[2], 0) / pantanal.length];
   // Desenho: as maiores por baixo; os pontos pequenos (solar) por cima, com borda branca fina.
   const pontos = c.pontos.map(([k, lon, lat, kw, op]) => ({ coord: [lon, lat], r: raio(kw), cor: COR[k], vazado: !op && kw >= 50000, opacidade: 0.82, bordaLargura: Math.min(1.2, 0.3 * raio(kw)) }));
+  // Os símbolos da legenda (cor de cada fonte, usina em obra), comuns ao painel e à figura.
+  const fonte = (f, y) => `<circle cx="12" cy="${y - 6}" r="8" fill="${f.cor}" fill-opacity=".85" stroke="${PAPEL}"/>
+<text x="32" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(f.rotulo, f.rotulo_en))}</text>`;
+  const emObra = (x, y) => `<circle cx="${x}" cy="${y}" r="8" fill="${PAPEL}" stroke="${CINZA}" stroke-width="2"/>
+<text x="${x + 16}" y="${y + 6}" font-family="${SERIF}" font-size="15">${L('em obra (≥ 50 MW)', 'being built (≥ 50 MW)')}</text>`;
   return () => ({
     layout: 'um',
     motivo: 'energia',
@@ -150,6 +167,21 @@ async function usinas() {
         linhas: L(['sistemas de menos de 5 kW,', 'registrados um a um'], ['systems under 5 kW,', 'registered one by one']),
       }],
     }),
+    // As fontes e os círculos da potência, sem a fita da matriz nem as contagens.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('FONTE', 'SOURCE'), 0)];
+      let y = 26;
+      for (const f of c.fontes) { s.push(fonte(f, y)); y += 25; }
+      y += 22;
+      s.push(rotuloPainel(L('POTÊNCIA OUTORGADA', 'LICENSED CAPACITY'), y));
+      const lc = legendaCirculos([10000000, 3000000, 500000], raio, (v) => `${nf(v / 1000)} MW`, { y: y + 18, cor: CINZA });
+      s.push(lc.svg);
+      y += 18 + lc.altura + 24;
+      s.push(emObra(12, y - 6));
+      // No canto direito a escala começa onde começa a legenda: a largura cobre também a escala e os círculos.
+      const larg = Math.max(260, 32 + Math.max(...c.fontes.map((f) => largura(L(f.rotulo, f.rotulo_en), 16))));
+      return { svg: s.join('\n'), altura: y + 6, largura: Math.ceil(larg), canto: 'se' };
+    },
     numeros: () => [
       [nf(c.n), [L('usinas', 'power plants'), L('(em operação e em obra)', '(operating and being built)')]],
       [`${nf(totOp / 1e6, 0)} GW`, [L('em operação', 'in operation')]],
@@ -169,8 +201,7 @@ async function usinas() {
       s.push(`<rect x="0" y="${y}" width="${LP}" height="22" fill="none" stroke="${TINTA}" stroke-width=".8"/>`);
       y += 52;
       for (const f of c.fontes) {
-        s.push(`<circle cx="12" cy="${y - 6}" r="8" fill="${f.cor}" fill-opacity=".85" stroke="${PAPEL}"/>`);
-        s.push(`<text x="32" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(f.rotulo, f.rotulo_en))}</text>`);
+        s.push(fonte(f, y));
         s.push(`<text x="${LP - 92}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13" fill="${CINZA}">${nf(f.n)}</text>`);
         s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13">${nf((f.kw_operacao / totOp) * 100, 1)} %</text>`);
         y += 25;
@@ -181,8 +212,7 @@ async function usinas() {
       s.push(rotuloPainel(L('POTÊNCIA OUTORGADA', 'LICENSED CAPACITY'), y));
       const lc = legendaCirculos([10000000, 3000000, 500000], raio, (v) => `${nf(v / 1000)} MW`, { y: y + 18, cor: CINZA });
       s.push(lc.svg);
-      s.push(`<circle cx="${LP - 190}" cy="${y + 34}" r="8" fill="${PAPEL}" stroke="${CINZA}" stroke-width="2"/>`);
-      s.push(`<text x="${LP - 174}" y="${y + 40}" font-family="${SERIF}" font-size="15">${L('em obra (≥ 50 MW)', 'being built (≥ 50 MW)')}</text>`);
+      s.push(emObra(LP - 190, y + 34));
       return { svg: s.join('\n'), y: y + 18 + lc.altura };
     },
     fontes: () => [
@@ -202,6 +232,9 @@ async function solar() {
   const res = c.consumo.find((k) => k.classe === 'Residencial');
   const gw = (kw, casas = 1) => nf(kw / 1e6, casas);
   const mesMax = c.periodo;
+  // Caixa de classe da legenda (y = topo da caixa), comum ao painel e à figura.
+  const caixa = (cor, rot, y, passo) => `<rect x="0" y="${y}" width="34" height="${passo - 8}" fill="${cor}" stroke="#c9ced3" stroke-width=".8"/>
+<text x="48" y="${y + passo - 12}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`;
   return () => ({
     layout: 'um',
     motivo: 'energia',
@@ -233,6 +266,16 @@ async function solar() {
           [`${base.nome} (${base.uf}), the lowest among`, 'towns of more than 100,000 people']),
       }],
     }),
+    // As classes, sem as barras de municípios; mais a caixa do município novo, sem população no Censo.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('WATTS POR HABITANTE', 'WATTS PER INHABITANT'), 0)];
+      const passo = 27;
+      let y = 22;
+      const itens = [...c.classes.map((k) => [k.cor, L(k.rotulo, k.rotulo_en)]), ['#d5d9dd', L('sem população no Censo 2022', 'no population in the 2022 Census')]];
+      for (const [cor, rot] of itens) { s.push(caixa(cor, rot, y, passo)); y += passo; }
+      const larg = 48 + Math.max(...itens.map(([, r]) => largura(r, 16)));
+      return { svg: s.join('\n'), altura: y - 8, largura: Math.ceil(larg), canto: 'se' };
+    },
     numeros: () => [
       [`${gw(c.kw)} GW`, [L('de potência instalada', 'of installed capacity'), L('em telhados e terrenos', 'on roofs and plots')]],
       [`${nf(c.n / 1e6, 2)} mi`, [L('de sistemas solares', 'solar systems'), L(`em ${nf(c.municipios_com)} municípios`, `in ${nf(c.municipios_com)} municipalities`)]],
@@ -245,8 +288,7 @@ async function solar() {
       const passo = 27;
       const maxM = Math.max(...c.classes.map((k) => k.municipios));
       for (const k of c.classes) {
-        s.push(`<rect x="0" y="${y}" width="34" height="${passo - 8}" fill="${k.cor}" stroke="#c9ced3" stroke-width=".8"/>`);
-        s.push(`<text x="48" y="${y + passo - 12}" font-family="${SERIF}" font-size="16">${esc(L(k.rotulo, k.rotulo_en))}</text>`);
+        s.push(caixa(k.cor, L(k.rotulo, k.rotulo_en), y, passo));
         const wb = (k.municipios / maxM) * (LP - 290);
         s.push(`<rect x="200" y="${y + 5}" width="${f1(wb)}" height="${passo - 18}" fill="${k.cor}" stroke="#a8642a" stroke-width=".5"/>`);
         s.push(`<text x="${f1(208 + wb)}" y="${y + passo - 12}" font-family="${MONO}" font-size="12.5">${nf(k.municipios)}</text>`);

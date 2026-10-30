@@ -6,7 +6,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, PAPEL, esc, nf, f1, gerarPrancha, rotuloPainel, legendaFaixa } from '../lib/prancha-sp.mjs';
+import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, PAPEL, esc, nf, f1, largura, gerarPrancha, rotuloPainel, legendaFaixa } from '../lib/prancha-sp.mjs';
 import { L, NEUTRO, ZERO, pct, barras, nota } from '../lib/painel.mjs';
 import { legendaCirculos } from '../lib/arte.mjs';
 import { CORES_RET, LIM_RET, CORES_COLETA, CORES_USOS, CORES_ESTRADA, LIM_ESTRADA, CORES_N4 } from './cores.mjs';
@@ -30,6 +30,22 @@ const mi = (v, casas = 0) => L(`${nf(v / 1e6, casas)} mi m³`, `${nf(v / 1e6, ca
 const classe = (v, lim) => { let i = 0; while (i < lim.length && v > lim[i] + 1e-9) i++; return i; };
 const rotPct = (lim) => lim.map((v) => `${nf(v)}`);
 const rotMi = (lim) => lim.slice(0, -1).map((v) => nf(v / 1e6));
+
+/**
+ * Legenda da figura de reuso: a faixa do painel (título, caixas, limites nas junções), com a caixa de zero só
+ * onde o mapa a usa; legendaFaixa a desenha sempre, e em caldeira e estrada nenhum município fica em zero.
+ */
+function faixaFigura(titulo, cores, limites, { zero = false, larg = 62 } = {}) {
+  const s = [rotuloPainel(titulo, 0)];
+  const x0 = zero ? larg : 0;
+  if (zero) {
+    s.push(`<rect x="0" y="18" width="${larg}" height="14" fill="${ZERO}" stroke="#1a211a" stroke-width=".6"/>`);
+    s.push(`<text x="${larg / 2}" y="50" text-anchor="middle" font-family="${MONO}" font-size="12" fill="${TINTA}">0</text>`);
+  }
+  cores.forEach((k, i) => s.push(`<rect x="${x0 + i * larg}" y="18" width="${larg}" height="14" fill="${k}" stroke="#1a211a" stroke-width=".6"/>`));
+  limites.forEach((l, i) => s.push(`<text x="${x0 + (i + 1) * larg}" y="50" text-anchor="middle" font-family="${MONO}" font-size="12" fill="${TINTA}">${esc(l)}</text>`));
+  return { svg: s.join('\n'), altura: 54, largura: Math.ceil(Math.max(x0 + cores.length * larg, largura(titulo, 15, { mono: true, espaco: 2.4 }))) };
+}
 
 /** O funil desenhado: quatro barras centradas, da largura de cada nível, com as perdas ao lado. */
 function desenhoFunil(y, { destaque = null } = {}) {
@@ -100,6 +116,7 @@ function funil() {
         },
       ],
     }),
+    legendaFigura: () => faixaFigura(L('PARTE DO TEÓRICO QUE CHEGA AO N4, %', 'SHARE OF THE THEORETICAL REACHING N4, %'), CORES_RET, rotPct(LIM_RET), { zero: true }),
     numeros: () => [
       [bi(R.n1), [L('de metano por ano: o teórico', 'of methane a year: the theoretical'), L('de todos os resíduos (N1)', 'from all residues (N1)')]],
       [bi(R.n4), [L('acessíveis (N4): ', 'accessible (N4): ') + pct((100 * R.n4) / R.n1, 0), L('do teórico', 'of the theoretical')]],
@@ -162,6 +179,21 @@ function campo() {
         },
       ],
     }),
+    // A cor de cada causa (sem as barras nem as contagens) e os círculos da perda.
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('A MAIOR CAUSA, POR MUNICÍPIO', 'THE LARGEST CAUSE, BY MUNICIPALITY'), 0)];
+      let y = 26;
+      for (const [k, rot] of CAUSAS()) {
+        s.push(`<circle cx="12" cy="${y - 6}" r="8" fill="${CORES_COLETA[k]}" fill-opacity=".85" stroke="${PAPEL}"/><text x="32" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+        y += 25;
+      }
+      y += 22;
+      s.push(rotuloPainel(L('METANO QUE FICA NO CAMPO', 'METHANE LEFT IN THE FIELD'), y));
+      const lc = legendaCirculos([1e8, 2e7], raio, (v) => mi(v), { y: y + 18, cor: '#6d7165' });
+      s.push(lc.svg);
+      const larg = Math.max(largura(L('A MAIOR CAUSA, POR MUNICÍPIO', 'THE LARGEST CAUSE, BY MUNICIPALITY'), 15, { mono: true, espaco: 2.4 }), ...CAUSAS().map(([, r]) => 32 + largura(r, 16)));
+      return { svg: s.join('\n'), altura: y + 18 + lc.altura + 4, largura: Math.ceil(larg) };
+    },
     numeros: () => [
       [bi(T.coleta), [L('de metano por ano ficam', 'of methane a year stay'), L(`no campo: ${pct((100 * T.coleta) / R.n1, 0)} do teórico`, `in the field: ${pct((100 * T.coleta) / R.n1, 0)} of the theoretical`)]],
       [bi(T.coleta_palha_cana), [L('na palha da cana: 60 % dela', 'in cane straw: 60% of it'), L('fica para cobrir o solo', 'stays to cover the soil')]],
@@ -236,6 +268,13 @@ function caldeira() {
         },
       ],
     }),
+    // A faixa do que tem outro destino e os anéis do que já vira biogás, sem as barras de destino.
+    legendaFigura: () => {
+      const f = faixaFigura(L('METANO COM OUTRO DESTINO · M³ POR ANO', 'METHANE WITH ANOTHER USE · M³ A YEAR'), CORES_USOS, L(rotMi(lim).map((v) => `${v} mi`), rotMi(lim).map((v) => `${v}M`)));
+      const y = f.altura + 18;
+      const lc = legendaCirculos([7e7, 1e7], raio, (v) => L(`${mi(v)} já em biogás`, `${mi(v)} already biogas`), { y, cor: '#2a788e' });
+      return { svg: `${f.svg}\n${lc.svg}`, altura: y + lc.altura + 4, largura: f.largura };
+    },
     numeros: () => [
       [bi(T.usos + T.ja_em_uso), [L('de metano por ano já têm', 'of methane a year already'), L(`outro destino: ${pct((100 * (T.usos + T.ja_em_uso)) / R.n1, 0)} do teórico`, `have a use: ${pct((100 * (T.usos + T.ja_em_uso)) / R.n1, 0)} of the theoretical`)]],
       [bi(T.usos_bagaco), [L('no bagaço: só 10 % dele', 'in bagasse: only 10% of it'), L('sobra para o biodigestor', 'is left for a digester')]],
@@ -309,6 +348,7 @@ function estrada() {
         },
       ],
     }),
+    legendaFigura: () => faixaFigura(L('PARTE DO N3 PERDIDA ATÉ O N4, %', 'SHARE OF N3 LOST BEFORE N4, %'), CORES_ESTRADA, rotPct(LIM_ESTRADA)),
     numeros: () => [
       [bi(T.estrada), [L('de metano por ano se perdem', 'of methane a year are lost'), L(`do N3 ao N4: ${pct((100 * T.estrada) / R.n3, 0)}`, `from N3 to N4: ${pct((100 * T.estrada) / R.n3, 0)}`)]],
       [pct(perdaN3('BOV_LEITE'), 0), [L('do esterco de leite', 'of dairy manure'), L('não chega a uma usina', 'never reaches a plant')]],

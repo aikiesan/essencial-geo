@@ -119,6 +119,15 @@ export function arquivoDoMapa(m: { id: string }, arquivo: string): string {
   return url(`mapas/${m.id}/${arquivo.replace(/^\.\//, '')}`);
 }
 
+/**
+ * Figura de reuso (mapa_figura.png, ou .en.png nas páginas em inglês) quando ela existe na pasta do mapa; com
+ * `semBase`, a variante sem mapa de base (mapa_figura_sem_base(.en).png).
+ */
+export function figuraDoMapa(m: Mapa, { semBase = false } = {}): string | undefined {
+  const nome = `mapa_figura${semBase ? '_sem_base' : ''}${m.lingua === 'en' ? '.en' : ''}.png`;
+  return existsSync(join(process.cwd(), 'mapas', m.id, nome)) ? arquivoDoMapa(m, nome) : undefined;
+}
+
 export interface DownloadResolvido {
   formato: keyof typeof FORMATOS;
   sigla: string;

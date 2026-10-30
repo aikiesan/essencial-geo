@@ -172,6 +172,11 @@ function alem() {
       [nf(F.get('lixo').municipios), [L('lideram com o lixo', 'led by organic waste'), L('orgânico e a poda', 'and tree pruning')]],
       [nf(F.get('aves').municipios), [L('lideram com as granjas', 'led by poultry'), L('de aves', 'farms')]],
     ],
+    legendaFigura: () => {
+      const lg = legendaCategorias([...ordem.map((f) => [f.cor, L(f.pt, f.en)]), [ZERO, L('só cana, ou sem potencial', 'cane only, or no potential')]], 0,
+        { titulo: L('MAIOR FONTE FORA DA CANA', 'LARGEST SOURCE OUTSIDE CANE') });
+      return { svg: lg.svg, altura: lg.y - 20, largura: 380 };
+    },
     painel: (y) => {
       const lg = legendaCategorias(ordem.map((f) => [f.cor, L(f.pt, f.en), L(`${nf(f.municipios)} mun. · ${grande(f.m3d)} m³/dia`, `${nf(f.municipios)} mun. · ${grande(f.m3d)} m³/day`)]), y, { titulo: L('MAIOR FONTE FORA DA CANA', 'LARGEST SOURCE OUTSIDE CANE'), direita: L('municípios que lidera · biometano no estado', 'municipalities led · biomethane in the state') });
       const s = [lg.svg];
@@ -191,6 +196,17 @@ function alem() {
 function gas() {
   const fx = c.gas_faixas;
   const longe = c.longe_gas[0];
+  /** Faixa do potencial e os traços do gás; `distribuidoras` nomeia as concessionárias (só na prancha). */
+  const chave = (y, distribuidoras) => {
+    const lp = legendaPotencial(y, 'lpg');
+    const d = distribuidoras ? ` (${c.infra.distribuicao.distribuidoras.join(', ')})` : '';
+    const lt = legendaTracos([
+      ['linha', GAS_T, 3.2, L('gasoduto de transporte', 'transmission pipeline')],
+      ['linha', GAS_D, 1.5, L(`gasoduto de distribuição${d}`, `distribution pipeline${d}`)],
+      ['ponto', GAS_T, 4.2, L('ponto de entrega de gás', 'gas delivery point')],
+    ], lp.y + 10);
+    return { svg: `${lp.svg}\n${lt.svg}`, y: lt.y };
+  };
   return () => ({
     layout: 'um',
     motivo: 'biogas',
@@ -221,17 +237,13 @@ function gas() {
       const b = barrasFaixas(fx, y + 14);
       s.push(b.svg);
       s.push(`<text x="130" y="${b.y + 12}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('m³/dia · parte do estado · municípios; do centro do município', 'm³/day · share of the state · municipalities; from the municipality’s centre'))}</text>`);
-      let yy = b.y + 50;
-      const lp = legendaPotencial(yy, 'lpg');
-      s.push(lp.svg);
-      yy = lp.y + 10;
-      const lt = legendaTracos([
-        ['linha', GAS_T, 3.2, L('gasoduto de transporte', 'transmission pipeline')],
-        ['linha', GAS_D, 1.5, L(`gasoduto de distribuição (${c.infra.distribuicao.distribuidoras.join(', ')})`, `distribution pipeline (${c.infra.distribuicao.distribuidoras.join(', ')})`)],
-        ['ponto', GAS_T, 4.2, L('ponto de entrega de gás', 'gas delivery point')],
-      ], yy);
-      s.push(lt.svg);
-      return { svg: s.join('\n'), y: lt.y };
+      const k = chave(b.y + 50, true);
+      s.push(k.svg);
+      return { svg: s.join('\n'), y: k.y };
+    },
+    legendaFigura: () => {
+      const k = chave(0, false);
+      return { svg: k.svg, altura: k.y - 20, largura: 440 };
     },
     fontes: () => [CP2B(), L('EPE, WebMap (via MapBiomas)', 'EPE, WebMap (via MapBiomas)'), L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025')],
   });
@@ -243,6 +255,15 @@ function eletrica() {
   const fs = c.se_faixas;
   const longe = [...c.linhas].filter((l) => l.km_subestacao > 50).sort((a, z) => z.biometano_m3d - a.biometano_m3d)[0];
   const faixaLt = (kv) => LT_FAIXAS.find(([f]) => f(kv));
+  /** Faixa do potencial, as linhas por tensão e as subestações. */
+  const chave = (y) => {
+    const lp = legendaPotencial(y, 'lpe');
+    const lt = legendaTracos([
+      ...LT_FAIXAS.map(([, cor, w, pt, en]) => ['linha', cor, w, L(pt, en)]),
+      ['ponto', TINTA, 4, L('subestação', 'substation')],
+    ], lp.y + 10);
+    return { svg: `${lp.svg}\n${lt.svg}`, y: lt.y };
+  };
   return () => ({
     layout: 'um',
     motivo: 'biogas',
@@ -274,15 +295,14 @@ function eletrica() {
       const b2 = barrasFaixas(fs, yy + 14);
       s.push(b2.svg);
       s.push(`<text x="130" y="${b2.y + 12}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('m³/dia · parte do estado · municípios; do centro do município', 'm³/day · share of the state · municipalities; from the municipality’s centre'))}</text>`);
-      yy = b2.y + 50;
-      const lp = legendaPotencial(yy, 'lpe');
-      s.push(lp.svg);
-      const lt = legendaTracos([
-        ...LT_FAIXAS.map(([, cor, w, pt, en]) => ['linha', cor, w, L(pt, en)]),
-        ['ponto', TINTA, 4, L('subestação', 'substation')],
-      ], lp.y + 10);
-      s.push(lt.svg);
-      return { svg: s.join('\n'), y: lt.y };
+      const k = chave(b2.y + 50);
+      s.push(k.svg);
+      return { svg: s.join('\n'), y: k.y };
+    },
+    legendaFigura: () => {
+      const k = chave(0);
+      // As linhas do Paraná enchem o canto de baixo à esquerda; a legenda vai para o mar.
+      return { svg: k.svg, altura: k.y - 20, largura: 440, canto: 'se' };
     },
     fontes: () => [CP2B(), L('EPE, WebMap (via MapBiomas)', 'EPE, WebMap (via MapBiomas)'), L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025')],
   });
@@ -302,6 +322,21 @@ function operacao() {
   const pm = c.desenho.pontoMun;
   const maior = anp[0];
   const ref = anp[0].referencia;
+  /** Faixa do potencial (clara) e os dois conjuntos de círculos, plantas da ANP e GD da ANEEL. */
+  const chave = (y) => {
+    const s = [];
+    const lp = legendaPotencial(y, 'lpo', CORES_CLARO);
+    s.push(lp.svg);
+    let yy = lp.y + 18;
+    const lc = legendaCirculos([130000, 60000, 20000], raioAnp, (v) => L(`${nf(v / 1000)} mil m³/dia`, `${nf(v / 1000)} thousand m³/day`), { y: yy, cor: '#234e70' });
+    s.push(lc.svg);
+    const lg = legendaCirculos([8000, 1000], raioGd, (v) => `${nf(v / 1000, v < 1000 ? 1 : 0)} MW`, { x: LP / 2 + 30, y: yy + 2 * (raioAnp(130000) - raioGd(8000)), cor: '#9c4a32' });
+    s.push(lg.svg);
+    yy += Math.max(lc.altura, 2 * raioAnp(130000)) + 18;
+    s.push(`<text x="0" y="${yy}" font-family="${SERIF}" font-size="15">${esc(L('plantas de biometano (ANP)', 'biomethane plants (ANP)'))}</text>`);
+    s.push(`<text x="${LP / 2 + 30}" y="${yy}" font-family="${SERIF}" font-size="15">${esc(L('GD a biogás por município (ANEEL)', 'biogas DG by municipality (ANEEL)'))}</text>`);
+    return { svg: s.join('\n'), y: yy + 10 };
+  };
   return () => ({
     layout: 'um',
     motivo: 'biogas',
@@ -331,18 +366,13 @@ function operacao() {
       const b = barras(anp.map((p) => [p.NM_MUN, p.capacidade_m3d, '#234e70', `${nf(p.capacidade_m3d)} · ${L('uso', 'use')} ${nf(p.utilizacao_pct)} %`]), y + 14, { max: 1.3 * anp[0].capacidade_m3d, x0: 170 });
       s.push(b.svg);
       s.push(`<text x="170" y="${b.y + 12}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('uso = biogás processado ÷ capacidade de biogás, no mês', 'use = biogas processed ÷ biogas capacity, in the month'))}</text>`);
-      let yy = b.y + 50;
-      const lp = legendaPotencial(yy, 'lpo', CORES_CLARO);
-      s.push(lp.svg);
-      yy = lp.y + 18;
-      const lc = legendaCirculos([130000, 60000, 20000], raioAnp, (v) => L(`${nf(v / 1000)} mil m³/dia`, `${nf(v / 1000)} thousand m³/day`), { y: yy, cor: '#234e70' });
-      s.push(lc.svg);
-      const lg = legendaCirculos([8000, 1000], raioGd, (v) => `${nf(v / 1000, v < 1000 ? 1 : 0)} MW`, { x: LP / 2 + 30, y: yy + 2 * (raioAnp(130000) - raioGd(8000)), cor: '#9c4a32' });
-      s.push(lg.svg);
-      yy += Math.max(lc.altura, 2 * raioAnp(130000)) + 18;
-      s.push(`<text x="0" y="${yy}" font-family="${SERIF}" font-size="15">${esc(L('plantas de biometano (ANP)', 'biomethane plants (ANP)'))}</text>`);
-      s.push(`<text x="${LP / 2 + 30}" y="${yy}" font-family="${SERIF}" font-size="15">${esc(L('GD a biogás por município (ANEEL)', 'biogas DG by municipality (ANEEL)'))}</text>`);
-      return { svg: s.join('\n'), y: yy + 10 };
+      const k = chave(b.y + 50);
+      s.push(k.svg);
+      return { svg: s.join('\n'), y: k.y };
+    },
+    legendaFigura: () => {
+      const k = chave(0);
+      return { svg: k.svg, altura: k.y - 6, largura: 560 };
     },
     fontes: () => [L(`ANP, biometano, ${ref}`, `ANP, biomethane, ${ref}`), L(`ANEEL, geração distribuída, ${c.gd_ref}`, `ANEEL, distributed generation, ${c.gd_ref}`), CP2B()],
   });

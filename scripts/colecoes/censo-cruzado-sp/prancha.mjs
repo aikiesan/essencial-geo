@@ -6,7 +6,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, gerarPrancha, rotuloPainel, usarRegiao } from '../lib/prancha-sp.mjs';
+import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, largura, tr, gerarPrancha, rotuloPainel, usarRegiao } from '../lib/prancha-sp.mjs';
 import { L, NEUTRO, ZERO, HACHURA, barras, caixaLegenda, nota } from '../lib/painel.mjs';
 import { BIV, LIM_PAU, CORES_PAU } from './preparar.mjs';
 import { friso } from './friso.mjs';
@@ -24,7 +24,7 @@ const pTxtEn = (p) => (p < 0.001 ? '< 0.001' : nf(p, 3));
 const mun = (nome) => C.mun.find((m) => m.NM_MUN === nome);
 const pc = (v, c = 1) => L(`${nf(v, c)} %`, `${nf(v, c)}%`);
 
-const FONTE_MALHA = L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025');
+const FONTE_MALHA = () => L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025');
 const FONTE_CENSO = L('IBGE, Censo 2022: SIDRA e agregados por setor', 'IBGE, 2022 Census: SIDRA and tract aggregates');
 
 /** Casa [terço de y, terço de x] de um município numa prancha, ou null. */
@@ -34,6 +34,7 @@ const casa = (m, N) => { const b = m?.[`b${N}`]; return b == null ? null : [(b %
 /**
  * Grade 3 × 3 com o número de unidades em cada casa, setas dos eixos e os limites dos terços; depois o
  * quadro «como se relacionam» e os cruzamentos vizinhos. cfg: { eixoX, eixoY, terX, terY, unidade }.
+ * Sem `unidade` (a figura de reuso), as casas ficam sem as contagens.
  */
 function grade(casas, y, cfg) {
   const s = [rotuloPainel(cfg.titulo, y)];
@@ -41,16 +42,28 @@ function grade(casas, y, cfg) {
   for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) {
     const xx = x0 + b * q, yy = y0 + (2 - a) * q;
     s.push(`<rect x="${xx}" y="${yy}" width="${q}" height="${q}" fill="${BIV[a][b]}" stroke="#ffffff" stroke-width="1"/>`);
-    s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${a === 2 || (a === 1 && b === 2) ? '#ffffff' : TINTA}">${casas[a][b]}</text>`);
+    if (cfg.unidade) s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${a === 2 || (a === 1 && b === 2) ? '#ffffff' : TINTA}">${casas[a][b]}</text>`);
   }
   s.push(`<path d="M${x0} ${y0 + 3 * q + 10}h${3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 + 3 * q - 6} ${y0 + 3 * q + 6}l6 4l-6 4" fill="none" stroke="${TINTA}"/>`);
   s.push(`<text x="${x0 + 1.5 * q}" y="${y0 + 3 * q + 30}" text-anchor="middle" font-family="${MONO}" font-size="12">${esc(`${cfg.eixoX} →`)}</text>`);
   s.push(`<path d="M${x0 - 10} ${y0 + 3 * q}v${-3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 - 14} ${y0 + 6}l4 -6l4 6" fill="none" stroke="${TINTA}"/>`);
   s.push(`<text x="${x0 - 22}" y="${y0 + 1.5 * q}" text-anchor="middle" font-family="${MONO}" font-size="12" transform="rotate(-90 ${x0 - 22} ${y0 + 1.5 * q})">${esc(`${cfg.eixoY} →`)}</text>`);
   const tx = x0 + 3 * q + 30;
-  const lin = [...cfg.terX, '', ...cfg.terY, '', cfg.unidade];
+  const lin = [...cfg.terX, '', ...cfg.terY, ...(cfg.unidade ? ['', cfg.unidade] : [])];
   lin.forEach((l, k) => s.push(`<text x="${tx}" y="${y0 + 10 + k * 15}" font-family="${MONO}" font-size="12" fill="${CINZA}">${esc(l)}</text>`));
-  return { svg: s.join('\n'), y: Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8) };
+  const larg = Math.max(largura(tr(cfg.titulo), 15, { mono: true, espaco: 2.4 }), tx + Math.max(...lin.map((l) => largura(l, 12, { mono: true }))));
+  return { svg: s.join('\n'), y: Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8), largura: Math.ceil(larg) };
+}
+
+/**
+ * Legenda da figura de reuso de um mapa bivariado: a grade sem as contagens, com os eixos e os limites dos
+ * terços, e a hachura quando o mapa a tem. A grade é a chave do mapa; o quadro e a nota ficam na prancha.
+ */
+function gradeFigura(casas, cfg, semInfo = null) {
+  const g = grade(casas, 0, { ...cfg, unidade: null });
+  if (!semInfo) return { svg: g.svg, altura: g.y - 14, largura: g.largura };
+  const y = g.y + 10;
+  return { svg: `${g.svg}\n${caixaLegenda(null, semInfo, y, { hachura: true })}`, altura: y + 6, largura: Math.max(g.largura, Math.ceil(42 + largura(semInfo, 16))) };
 }
 
 /** Linhas de rótulo e valor (valor alinhado à direita). */
@@ -93,6 +106,8 @@ const ECOLOGICA = () => L(
 function bivariado(tema, cfg) {
   const N = NUM[tema];
   const e = C.pr[tema];
+  // Município sem casa na grade fica hachurado no mapa; cfg.semInfo diz por quê.
+  const temHachura = C.mun.some((m) => casa(m, N) === null);
   return () => ({
     layout: 'um',
     motivo: friso,
@@ -105,6 +120,7 @@ function bivariado(tema, cfg) {
       bordaMunicipio: 0.5,
       chamadas: cfg.chamadas(),
     }),
+    legendaFigura: () => gradeFigura(e.casas, { titulo: cfg.tituloGrade(), ...cfg.eixos() }, temHachura ? (cfg.semInfo?.() ?? L('sem informação', 'no data')) : null),
     numeros: () => [
       [dec(e.rho), [L('correlação de postos', 'rank correlation'), L(`em ${nf(e.n)} municípios`, `across ${nf(e.n)} municipalities`)]],
       [dec(e.parcial), [L('descontadas', 'net of'), controles(e)]],
@@ -162,7 +178,7 @@ function solar() {
     nota: () => L(
       `A renda sozinha explica pouco (ρ ${dec(renda.rho)}); a cana pesa mesmo com ela descontada. A irradiação também cresce para o oeste, onde estão cana e pasto, e o mapa não separa os dois efeitos.`,
       `Income alone explains little (ρ ${dec(renda.rho)}); cane still weighs once it is netted out. Irradiance also rises westwards, where cane and pasture are, and the map does not separate the two.`),
-    fontes: () => [L('ANEEL, geração distribuída (out. 2026)', 'ANEEL, distributed generation (Oct. 2026)'), L('MapBiomas, coleção 10 (2024); IBGE, Censo 2022', 'MapBiomas, collection 10 (2024); IBGE, 2022 Census'), FONTE_MALHA],
+    fontes: () => [L('ANEEL, geração distribuída (out. 2026)', 'ANEEL, distributed generation (Oct. 2026)'), L('MapBiomas, coleção 10 (2024); IBGE, Censo 2022', 'MapBiomas, collection 10 (2024); IBGE, 2022 Census'), FONTE_MALHA()],
   });
 }
 
@@ -199,7 +215,7 @@ function esgoto() {
     nota: () => L(
       'A cana desenha cidades médias, compactas e operárias, onde a rede chega a quase todos; a periferia metropolitana e a serra ficam no terço de baixo. Os operários vêm da amostra do Censo, com erro maior nos municípios pequenos.',
       'Cane shapes compact, working-class mid-sized towns where the mains reach nearly everyone; the metropolitan fringe and the hills sit in the bottom third. Operatives come from the Census sample, with larger error in small municipalities.'),
-    fontes: () => [L('IBGE, Censo 2022: SIDRA 6805 e amostra', 'IBGE, 2022 Census: SIDRA 6805 and sample'), L('MapBiomas, coleção 10 (2024)', 'MapBiomas, collection 10 (2024)'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: SIDRA 6805 e amostra', 'IBGE, 2022 Census: SIDRA 6805 and sample'), L('MapBiomas, coleção 10 (2024)', 'MapBiomas, collection 10 (2024)'), FONTE_MALHA()],
   });
 }
 
@@ -228,6 +244,7 @@ function boi() {
       chamada(c, 120, -250, `${c.NM_MUN.toUpperCase()} · ${pc(c.pct_60mais)}`, `${c.NM_MUN.toUpperCase()} · ${nf(c.pct_60mais, 1)}%`,
         ['com 60 anos ou mais, entre', 'pastos de morro'], ['aged 60 or over, among', 'hillside pastures']),
     ],
+    semInfo: () => L('sem rebanho informado', 'no reported herd'),
     quarto: () => [dec(cana.rho), [L('entre cana e 60 anos ou mais:', 'between cane and aged 60+:'), L('o padrão é do boi, não do agro', 'the pattern is cattle, not farming')]],
     extras: () => [
       [L('pastagem × idade mediana', 'pasture × median age'), pas],
@@ -265,12 +282,13 @@ function segregacao() {
       chamada(b, 170, 230, `${b.NM_MUN.toUpperCase()} · ÍNDICE ${nf(b.segregacao_racial, 0)}`, `${b.NM_MUN.toUpperCase()} · INDEX ${nf(b.segregacao_racial, 0)}`,
         [`e razão de ${nf(b.razao_renda_raca, 2)}: a periferia`, 'é mais misturada e mais igual'], [`and a ratio of ${nf(b.razao_renda_raca, 2)}: the fringe`, 'is more mixed and more equal']),
     ],
+    semInfo: () => L('menos de 10 setores', 'fewer than 10 tracts'),
     quarto: () => [dec(est.rho), [L('entre segregação e hiato', 'between segregation and the'), L('racial de anos de estudo', 'racial gap in schooling')]],
     extras: () => [[L('segregação × hiato de estudo', 'segregation × schooling gap'), est]],
     nota: () => L(
       `O índice vai de 0 (mistura perfeita) a 100; só entra o município com 10 setores ou mais (${nf(sem)} ficam hachurados). A razão de renda vem da amostra do Censo e oscila nos municípios pequenos. O mapa não diz se a segregação produz a desigualdade ou o contrário.`,
       `The index runs from 0 (perfect mix) to 100; only municipalities with 10 tracts or more count (${nf(sem)} are hatched). The income ratio comes from the Census sample and wobbles in small municipalities. The map does not say whether segregation produces inequality or the reverse.`),
-    fontes: () => [L('IBGE, Censo 2022: setores (cor ou raça)', 'IBGE, 2022 Census: tracts (colour or race)'), L('IBGE, Censo 2022: SIDRA 10295 e 10062 (amostra)', 'IBGE, 2022 Census: SIDRA 10295 and 10062 (sample)'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: setores (cor ou raça)', 'IBGE, 2022 Census: tracts (colour or race)'), L('IBGE, Censo 2022: SIDRA 10295 e 10062 (amostra)', 'IBGE, 2022 Census: SIDRA 10295 and 10062 (sample)'), FONTE_MALHA()],
   });
 }
 
@@ -301,12 +319,14 @@ function vertical() {
       chamada(c, -200, -220, `${c.NM_MUN.toUpperCase()} · ${pc(c.pct_apartamento, 1)}`, `${c.NM_MUN.toUpperCase()} · ${nf(c.pct_apartamento, 1)}%`,
         ['em apartamento e renda', 'parecida em toda a cidade'], ['in flats and similar incomes', 'across the whole town']),
     ],
+    // Além dos de menos de 10 setores, 18 municípios ficam sem a parte de apartamentos.
+    semInfo: () => L('sem informação', 'no data'),
     quarto: () => [nf(sem), [L('municípios sem nenhum', 'municipalities with no'), L('domicílio em apartamento', 'homes in flats at all')]],
     extras: () => [[L('desigualdade × renda per capita', 'inequality × income per head'), renda]],
     nota: () => L(
       'A desigualdade entre setores cresce com o tamanho da cidade; descontados urbanização, densidade e renda, o prédio ainda acompanha a distância entre bairros ricos e pobres. Municípios com menos de 10 setores ficam hachurados.',
       'Inequality between tracts grows with town size; net of urbanisation, density and income, high-rises still track the gap between rich and poor neighbourhoods. Municipalities with fewer than 10 tracts are hatched.'),
-    fontes: () => [L('IBGE, Censo 2022: setores (renda e domicílios)', 'IBGE, 2022 Census: tracts (income and households)'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: setores (renda e domicílios)', 'IBGE, 2022 Census: tracts (income and households)'), FONTE_MALHA()],
   });
 }
 
@@ -321,6 +341,12 @@ async function juventude() {
   const nomeAp = (o) => C.mun.find((m) => m.CD_MUN === o.CD_MUN)?.NM_MUN ?? '';
   const j = M.jovem, v = M.velha;
   const DESTAQUES = [['3518800', 'GUARULHOS'], ['3534401', 'OSASCO'], ['3547809', 'SANTO ANDRÉ'], ['3530607', 'MOGI DAS CRUZES'], ['3548500', 'SANTOS']];
+  // Título, eixos e terços da grade, comuns ao painel e à figura.
+  const eixos = () => ({
+    titulo: L('0 A 14 ANOS × PRETOS E PARDOS, EM TERÇOS', 'AGED 0–14 × BLACK AND BROWN, IN THIRDS'),
+    eixoX: L('0 a 14 anos', 'aged 0–14'), eixoY: L('pretos e pardos', 'black and brown'),
+    terX: tercos('0 a 14 anos', 'aged 0–14', M.ter_x, fPct(0)), terY: tercos('pretos e pardos', 'black and brown', M.ter_y, fPct(0)),
+  });
   return () => ({
     layout: 'um',
     motivo: friso,
@@ -362,14 +388,10 @@ async function juventude() {
       [dec(e.rho), [L(`nos ${nf(e.n)} municípios;`, `across the ${nf(e.n)} municipalities;`), L(`${dec(M.rho_mun_janela.rho)} nos ${nf(M.n_mun)} da metrópole`, `${dec(M.rho_mun_janela.rho)} in the ${nf(M.n_mun)} metropolitan ones`)]],
       [nf(M.casas[2][2]), [L('áreas no terço de cima', 'areas in the top third'), L('das duas variáveis', 'of both variables')]],
     ],
+    legendaFigura: () => gradeFigura(M.casas, eixos(), L('área com menos de mil moradores', 'area with under 1,000 residents')),
     painel: (y) => {
       const s = [];
-      const g = grade(M.casas, y, {
-        titulo: L('0 A 14 ANOS × PRETOS E PARDOS, EM TERÇOS', 'AGED 0–14 × BLACK AND BROWN, IN THIRDS'),
-        eixoX: L('0 a 14 anos', 'aged 0–14'), eixoY: L('pretos e pardos', 'black and brown'),
-        terX: tercos('0 a 14 anos', 'aged 0–14', M.ter_x, fPct(0)), terY: tercos('pretos e pardos', 'black and brown', M.ter_y, fPct(0)),
-        unidade: L('áreas de ponderação em cada casa', 'weighting areas in each cell'),
-      });
+      const g = grade(M.casas, y, { ...eixos(), unidade: L('áreas de ponderação em cada casa', 'weighting areas in each cell') });
       s.push(g.svg);
       let yy = g.y + 4;
       s.push(caixaLegenda(null, L(`área com menos de mil moradores (${nf(sem.length)})`, `area with under 1,000 residents (${nf(sem.length)})`), yy, { hachura: true }));
@@ -389,7 +411,7 @@ async function juventude() {
       s.push(n.svg);
       return { svg: s.join('\n'), y: n.y };
     },
-    fontes: () => [L('IBGE, Censo 2022: setores (idade, cor ou raça)', 'IBGE, 2022 Census: tracts (age, colour or race)'), L('IBGE, Áreas de Ponderação 2022', 'IBGE, 2022 Weighting Areas'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: setores (idade, cor ou raça)', 'IBGE, 2022 Census: tracts (age, colour or race)'), L('IBGE, Áreas de Ponderação 2022', 'IBGE, 2022 Weighting Areas'), FONTE_MALHA()],
   });
 }
 
@@ -422,7 +444,7 @@ function sozinho() {
     nota: () => L(
       'O par se mantém fora da metrópole e dentro das cidades, por área de ponderação. Não se sabe, pelo agregado, se quem mora só é o idoso; viuvez e saída dos filhos são as hipóteses de sempre.',
       'The pair holds outside the metropolis and within towns, by weighting area. The aggregate cannot tell whether those living alone are the elderly; widowhood and children moving out are the usual hypotheses.'),
-    fontes: () => [L('IBGE, Censo 2022: setores (idade e domicílios)', 'IBGE, 2022 Census: tracts (age and households)'), L('IBGE, Áreas de Ponderação 2022', 'IBGE, 2022 Weighting Areas'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: setores (idade e domicílios)', 'IBGE, 2022 Census: tracts (age and households)'), L('IBGE, Áreas de Ponderação 2022', 'IBGE, 2022 Weighting Areas'), FONTE_MALHA()],
   });
 }
 
@@ -459,7 +481,7 @@ function letras() {
     nota: () => L(
       'O hiato é a diferença em pontos percentuais e só entra onde os dois grupos somam 200 pessoas ou mais. Os ocupados no campo vêm da amostra do Censo, com erro maior nos municípios pequenos; o analfabetismo é do universo.',
       'The gap is the difference in percentage points and counts only where both groups have 200 people or more. Farm workers come from the Census sample, with larger error in small municipalities; illiteracy is from the full count.'),
-    fontes: () => [L('IBGE, Censo 2022: SIDRA 9542 (universo)', 'IBGE, 2022 Census: SIDRA 9542 (full count)'), L('IBGE, Censo 2022: SIDRA 10264 (amostra)', 'IBGE, 2022 Census: SIDRA 10264 (sample)'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: SIDRA 9542 (universo)', 'IBGE, 2022 Census: SIDRA 9542 (full count)'), L('IBGE, Censo 2022: SIDRA 10264 (amostra)', 'IBGE, 2022 Census: SIDRA 10264 (sample)'), FONTE_MALHA()],
   });
 }
 
@@ -496,7 +518,7 @@ function veraneio() {
     nota: () => L(
       'O esgoto conta só os domicílios ocupados; a casa de veraneio vazia no dia do Censo não entra nele. A serra, a represa e o litoral norte têm chácaras e casas de praia longe da rede; a Baixada Santista mostra que dá para ter as duas coisas.',
       'Sewerage counts only occupied homes; a holiday home empty on Census day is not in it. The hills, the reservoirs and the north coast have country and beach houses far from the mains; the Santos lowlands show both can go together.'),
-    fontes: () => [L('IBGE, Censo 2022: SIDRA 6805 (esgoto)', 'IBGE, 2022 Census: SIDRA 6805 (sewerage)'), L('IBGE, Censo 2022: setores (básico)', 'IBGE, 2022 Census: tracts (basic)'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: SIDRA 6805 (esgoto)', 'IBGE, 2022 Census: SIDRA 6805 (sewerage)'), L('IBGE, Censo 2022: setores (básico)', 'IBGE, 2022 Census: tracts (basic)'), FONTE_MALHA()],
   });
 }
 
@@ -531,6 +553,15 @@ function paudearara() {
           ['dos ocupados vão de pau de arara:', 'a maior taxa entre os de 5 mil hab.'], ['of workers ride an open truck: the', 'highest rate in towns of 5,000+']),
       ],
     }),
+    // As classes do painel, sem as contagens de municípios.
+    legendaFigura: () => {
+      const titulo = L('OCUPADOS QUE VÃO DE PAU DE ARARA', 'WORKERS WHO RIDE OPEN TRUCKS');
+      const itens = [[ZERO, rot()[0]], ...CORES_PAU.map((cor, i) => [cor, rot()[i + 1]])];
+      const s = [rotuloPainel(titulo, 0)];
+      itens.forEach(([cor, r], i) => s.push(caixaLegenda(cor, r, 24 + i * 24)));
+      const larg = Math.max(largura(titulo, 15, { mono: true, espaco: 2.4 }), ...itens.map(([, r]) => 42 + largura(r, 16)));
+      return { svg: s.join('\n'), altura: 24 + (itens.length - 1) * 24 + 6, largura: Math.ceil(larg) };
+    },
     numeros: () => [
       [nf(umPct), [L('municípios com 1 % ou mais', 'municipalities with 1% or more'), L('dos ocupados no pau de arara', 'of workers riding open trucks')]],
       [dec(e.rho), [L('com quem não tem fundamental', 'with no completed primary'), L(`completo; parcial ${dec(e.parcial)}`, `schooling; partial ${dec(e.parcial)}`)]],
@@ -565,7 +596,7 @@ function paudearara() {
       s.push(nt.svg);
       return { svg: s.join('\n'), y: nt.y };
     },
-    fontes: () => [L('IBGE, Censo 2022: SIDRA 10332 e 10061 (amostra)', 'IBGE, 2022 Census: SIDRA 10332 and 10061 (sample)'), L('MTE, RAIS 2025; MapBiomas, coleção 10', 'MTE, RAIS 2025; MapBiomas, collection 10'), FONTE_MALHA],
+    fontes: () => [L('IBGE, Censo 2022: SIDRA 10332 e 10061 (amostra)', 'IBGE, 2022 Census: SIDRA 10332 and 10061 (sample)'), L('MTE, RAIS 2025; MapBiomas, coleção 10', 'MTE, RAIS 2025; MapBiomas, collection 10'), FONTE_MALHA()],
   });
 }
 

@@ -64,6 +64,29 @@ async function biogas() {
   const raioUte = (kw) => 4 + 0.09 * Math.sqrt(kw);
   const maior = c.ute[0];
   const operando = c.por_situacao['Em operação'];
+  /** Origem, porte e termelétricas; `contar` põe o número de usinas entre parênteses (só na prancha). */
+  const chave = (y, contar) => {
+    const n = (v) => (contar ? ` (${v})` : '');
+    const s = [rotuloPainel(L('USINAS POR ORIGEM DO RESÍDUO', 'PLANTS BY WASTE SOURCE'), y)];
+    const itens = Object.entries(CAT).map(([k, [cc, pt, en]]) => [cc, `${L(pt, en)}${n(c.por_categoria[k])}`, 9]);
+    itens.push([CINZA, L('fora de operação (vazado)', 'not in operation (hollow)'), 7, true]);
+    const l = legendaPontos(itens, y + 36);
+    s.push(l.svg);
+    y = l.y + 10;
+    s.push(rotuloPainel(L('PORTE', 'SCALE'), y));
+    const portes = [['pequeno', 'pequeno', 'small'], ['medio', 'médio', 'medium'], ['grande', 'grande', 'large']];
+    portes.forEach(([k, pt, en], i) => {
+      const x = i * (contar ? 150 : 120);
+      s.push(`<circle cx="${x + 14}" cy="${y + 30}" r="${R[k]}" fill="${CINZA}" fill-opacity=".55" stroke="${PAPEL}"/>`);
+      s.push(`<text x="${x + 34}" y="${y + 36}" font-family="${SERIF}" font-size="17">${L(pt, en)}${n(c.por_porte[k])}</text>`);
+    });
+    y += 70;
+    s.push(rotuloPainel(L('TERMELÉTRICAS A BIOGÁS (ANEEL)', 'BIOGAS POWER STATIONS (ANEEL)'), y));
+    const lc = legendaCirculos([25000, 5000, 1000], raioUte, (v) => `${nf(v / 1000)} MW`, { y: y + 18, cor: MIN.argila });
+    s.push(`<g>${lc.svg}</g>`);
+    // Os rótulos dos círculos descem um passo de texto por valor, abaixo do menor círculo.
+    return { svg: s.join('\n'), y, altura: Math.max(lc.altura, 2 * 21 + 10) };
+  };
   return () => ({
     layout: 'um',
     motivo: 'cana',
@@ -92,27 +115,15 @@ async function biogas() {
       [String(c.ute.length), [L('termelétricas a biogás', 'biogas power stations'), L('registradas na ANEEL', 'registered with ANEEL')]],
       [`${mw(c.ute_total_kw)} MW`, [L('de potência outorgada', 'of licensed capacity')]],
     ],
+    legendaFigura: () => {
+      const k = chave(0, false);
+      return { svg: k.svg, altura: k.y + 18 + k.altura, largura: 420 };
+    },
     painel: (y) => {
-      const s = [rotuloPainel(L('USINAS POR ORIGEM DO RESÍDUO', 'PLANTS BY WASTE SOURCE'), y)];
-      const itens = Object.entries(CAT).map(([k, [cc, pt, en]]) => [cc, `${L(pt, en)} (${c.por_categoria[k]})`, 9]);
-      itens.push([CINZA, L('fora de operação (vazado)', 'not in operation (hollow)'), 7, true]);
-      let l = legendaPontos(itens, y + 36);
-      s.push(l.svg);
-      y = l.y + 10;
-      s.push(rotuloPainel(L('PORTE', 'SCALE'), y));
-      const portes = [['pequeno', 'pequeno', 'small'], ['medio', 'médio', 'medium'], ['grande', 'grande', 'large']];
-      portes.forEach(([k, pt, en], i) => {
-        const x = i * 150;
-        s.push(`<circle cx="${x + 14}" cy="${y + 30}" r="${R[k]}" fill="${CINZA}" fill-opacity=".55" stroke="${PAPEL}"/>`);
-        s.push(`<text x="${x + 34}" y="${y + 36}" font-family="${SERIF}" font-size="17">${L(pt, en)} (${c.por_porte[k]})</text>`);
-      });
-      y += 70;
-      s.push(rotuloPainel(L('TERMELÉTRICAS A BIOGÁS (ANEEL)', 'BIOGAS POWER STATIONS (ANEEL)'), y));
-      const lc = legendaCirculos([25000, 5000, 1000], raioUte, (v) => `${nf(v / 1000)} MW`, { y: y + 18, cor: MIN.argila });
-      s.push(`<g>${lc.svg}</g>`);
+      const k = chave(y, true);
+      y = k.y;
       const top = lista(c.ute.slice(0, 4).map((u) => [u.nome, `${mw(u.potencia_kw)} MW`]), y + 42, { x: 130, larg: LP - 130, tamanho: 16, passo: 23 });
-      s.push(top.svg);
-      return { svg: s.join('\n'), y: Math.max(y + 18 + lc.altura, top.y) + 6 };
+      return { svg: `${k.svg}\n${top.svg}`, y: Math.max(y + 18 + k.altura, top.y) + 6 };
     },
     fontes: () => [
       L('MapBiomas, infraestrutura: usinas de biogás', 'MapBiomas, infrastructure: biogas plants'),
@@ -207,6 +218,18 @@ async function cana() {
   const rot = (i) => (i ? `${nf(c.quebras[i - 1], 1)} – ${nf(c.quebras[i], 1)} %` : L(`até ${nf(c.quebras[0], 1)} %`, `up to ${nf(c.quebras[0], 1)} %`));
   const acima = new Set(c.acima_de_50pct_cds);
   const topo = c.maior_parte[0];
+  /** Classes da área colhida e as listras de mais da metade do território. */
+  const chave = (y) => {
+    const s = [rotuloPainel(L('ÁREA COLHIDA ÷ ÁREA DO MUNICÍPIO', 'HARVESTED AREA ÷ MUNICIPAL AREA'), y)];
+    const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [VIRIDIS[i], rot(i)]), [null, L('sem informação', 'no data')]];
+    const leg = legendaClasses(itens, { y: y + 16, passo: 29, tamanho: 18, id: 'legcana' });
+    s.push(leg.svg);
+    y += 16 + leg.altura + 6;
+    s.push(`<defs><pattern id="leghx" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-60)"><rect width="6" height="6" fill="${VIRIDIS[5]}"/><path d="M0 0V6" stroke="#fff" stroke-width="1"/></pattern></defs>`);
+    s.push(`<rect x="0" y="${y}" width="34" height="21" fill="url(#leghx)" stroke="#1a211a" stroke-width=".8"/>`);
+    s.push(`<text x="50" y="${y + 16}" font-family="${SERIF}" font-size="18">${L('listras: mais da metade do território', 'stripes: over half the territory')}</text>`);
+    return { svg: s.join('\n'), y: y + 21 };
+  };
   return () => ({
     layout: 'um',
     motivo: 'cana',
@@ -232,16 +255,14 @@ async function cana() {
       [`${nf(pctSp, 1)} %`, [L('do território paulista', 'of the state’s territory')]],
       [String(c.acima_de_50pct), [L('municípios com mais da', 'municipalities with over'), L('metade do território em cana', 'half their territory in cane')]],
     ],
+    legendaFigura: () => {
+      const k = chave(0);
+      return { svg: k.svg, altura: k.y, largura: 360 };
+    },
     painel: (y) => {
-      const s = [rotuloPainel(L('ÁREA COLHIDA ÷ ÁREA DO MUNICÍPIO', 'HARVESTED AREA ÷ MUNICIPAL AREA'), y)];
-      const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [VIRIDIS[i], rot(i)]), [null, L('sem informação', 'no data')]];
-      const leg = legendaClasses(itens, { y: y + 16, passo: 29, tamanho: 18, id: 'legcana' });
-      s.push(leg.svg);
-      y += 16 + leg.altura + 6;
-      s.push(`<defs><pattern id="leghx" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-60)"><rect width="6" height="6" fill="${VIRIDIS[5]}"/><path d="M0 0V6" stroke="#fff" stroke-width="1"/></pattern></defs>`);
-      s.push(`<rect x="0" y="${y}" width="34" height="21" fill="url(#leghx)" stroke="#1a211a" stroke-width=".8"/>`);
-      s.push(`<text x="50" y="${y + 16}" font-family="${SERIF}" font-size="18">${L('listras: mais da metade do território', 'stripes: over half the territory')}</text>`);
-      y += 64;
+      const k = chave(y);
+      const s = [k.svg];
+      y = k.y + 43;
       s.push(rotuloPainel(L('MAIORES PRODUTORES (T)', 'LARGEST PRODUCERS (T)'), y));
       const l = lista(c.maiores_producao.slice(0, 5).map((m) => [m.nome, nf(m.valor)]), y + 32, { passo: 26 });
       s.push(l.svg);
@@ -259,6 +280,21 @@ async function usinas() {
   const pctCana = (c.producao_em_municipios_com_ute / c.producao_t) * 100;
   const fx = (v) => nf(v / 1000, 0);
   const rot = (i) => (i ? `${fx(c.quebras[i - 1])} – ${fx(c.quebras[i])}` : L(`até ${fx(c.quebras[0])}`, `up to ${fx(c.quebras[0])}`));
+  /** Círculos das termelétricas, o vazado «em construção» em `xObra` e as classes de cana em duas colunas (a 2ª em `xCol`). */
+  const chave = (y, xObra, xCol) => {
+    const s = [rotuloPainel(L('TERMELÉTRICAS A BAGAÇO (ANEEL)', 'BAGASSE POWER STATIONS (ANEEL)'), y)];
+    const lc = legendaCirculos([100000, 50000, 10000], raio, (v) => `${nf(v / 1000)} MW`, { y: y + 20, cor: MIN.argila });
+    s.push(lc.svg);
+    s.push(`<circle cx="${xObra}" cy="${y + 34}" r="8" fill="${PAPEL}" stroke="${MIN.argila}" stroke-width="2"/>`);
+    s.push(`<text x="${xObra + 18}" y="${y + 40}" font-family="${SERIF}" font-size="17">${L('em construção', 'being built')}</text>`);
+    y += 20 + lc.altura + 40;
+    s.push(rotuloPainel(L('CANA PRODUZIDA (MIL T)', 'CANE PRODUCED (THOUSAND T)'), y));
+    const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [CANA_CLARO[i], rot(i)]), [null, L('sem informação', 'no data')]];
+    const leg = legendaClasses(itens.slice(0, 5), { y: y + 16, passo: 27, tamanho: 16, id: 'legu1' });
+    const leg2 = legendaClasses(itens.slice(5), { x: xCol, y: y + 16, passo: 27, tamanho: 16, id: 'legu2' });
+    s.push(leg.svg, leg2.svg);
+    return { svg: s.join('\n'), y: y + 16 + leg.altura };
+  };
   return () => ({
     layout: 'um',
     motivo: 'cana',
@@ -284,19 +320,14 @@ async function usinas() {
       [String(c.ute_municipios), [L('municípios com', 'municipalities with'), L('ao menos uma usina', 'at least one station')]],
       [`${nf(pctCana, 1)} %`, [L('da cana colhida em', 'of the cane harvested in'), L('municípios com usina', 'municipalities with a station')]],
     ],
+    legendaFigura: () => {
+      const k = chave(0, 200, 180);
+      return { svg: k.svg, altura: k.y, largura: 360 };
+    },
     painel: (y) => {
-      const s = [rotuloPainel(L('TERMELÉTRICAS A BAGAÇO (ANEEL)', 'BAGASSE POWER STATIONS (ANEEL)'), y)];
-      const lc = legendaCirculos([100000, 50000, 10000], raio, (v) => `${nf(v / 1000)} MW`, { y: y + 20, cor: MIN.argila });
-      s.push(lc.svg);
-      s.push(`<circle cx="${LP - 210}" cy="${y + 34}" r="8" fill="${PAPEL}" stroke="${MIN.argila}" stroke-width="2"/>`);
-      s.push(`<text x="${LP - 192}" y="${y + 40}" font-family="${SERIF}" font-size="17">${L('em construção', 'being built')}</text>`);
-      y += 20 + lc.altura + 40;
-      s.push(rotuloPainel(L('CANA PRODUZIDA (MIL T)', 'CANE PRODUCED (THOUSAND T)'), y));
-      const itens = [[ZERO, L('zero', 'zero')], ...c.quebras.map((_, i) => [CANA_CLARO[i], rot(i)]), [null, L('sem informação', 'no data')]];
-      const leg = legendaClasses(itens.slice(0, 5), { y: y + 16, passo: 27, tamanho: 16, id: 'legu1' });
-      const leg2 = legendaClasses(itens.slice(5), { x: LP / 2 + 8, y: y + 16, passo: 27, tamanho: 16, id: 'legu2' });
-      s.push(leg.svg, leg2.svg);
-      y += 16 + leg.altura + 30;
+      const k = chave(y, LP - 210, LP / 2 + 8);
+      const s = [k.svg];
+      y = k.y + 30;
       s.push(rotuloPainel(L('MAIORES (MW)', 'LARGEST (MW)'), y));
       const l = lista(c.ute.slice(0, 4).map((u) => [u.nome, mw(u.potencia_kw, 1)]), y + 30, { passo: 25, tamanho: 17 });
       s.push(l.svg);

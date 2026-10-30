@@ -125,6 +125,11 @@ function distribuicao() {
           linhas: L(['a menor, entre as áreas', 'de 5 mil moradores ou mais'], ['the smallest, among areas', 'of 5,000+ residents']) },
       ],
     }),
+    legendaFigura: () => {
+      const g = legenda([...LILAS.map((c, i) => [c, rot()[i], null]), ['hachura', L('sem informação', 'no data'), null]], 0,
+        { titulo: L('DOMICÍLIOS COM RESPONSÁVEL MULHER', 'HOUSEHOLDS WITH A WOMAN RESPONSIBLE'), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
       [pc(E.pct), [L(`${milhoes(E.domF)} de domicílios`, `${milhoes(E.domF)} households`), L(`de ${milhoes(E.domF + E.domM)} no estado`, `out of ${milhoes(E.domF + E.domM)} in the state`)]],
       [pc(E.pct2010), [L('em 2010, com o mesmo', 'in 2010, with the same'), L('conceito e o mesmo universo', 'concept and universe')]],
@@ -183,6 +188,11 @@ function crescimento() {
           L([`de ${nf(sp.pct_resp_mulher_2010, 0)} % para ${nf(sp.pct_resp_mulher, 0)} %: a capital`, 'já partia de cima'], [`from ${nf(sp.pct_resp_mulher_2010, 0)}% to ${nf(sp.pct_resp_mulher, 0)}%: the capital`, 'was already high'])),
       ],
     }),
+    legendaFigura: () => {
+      const g = legenda([[COR_QUEDA, rot()[0], null], ...COR_VAR.map((c, i) => [c, rot()[i + 1], null])], 0,
+        { titulo: L('VARIAÇÃO 2010–2022', 'CHANGE 2010–2022'), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 300 };
+    },
     numeros: () => [
       [pp(E.pct - E.pct2010), [L(`no estado: de ${pc(E.pct2010)}`, `statewide: from ${pc(E.pct2010)}`), L(`para ${pc(E.pct)}`, `to ${pc(E.pct)}`)]],
       [L(`+${nf(Math.round((100 * (E.domF - E.f2010)) / E.f2010))} %`, `+${nf(Math.round((100 * (E.domF - E.f2010)) / E.f2010))}%`), [L(`domicílios com responsável mulher:`, 'households with a woman responsible:'), L(`${milhoes(E.f2010)} → ${milhoes(E.domF)}`, `${milhoes(E.f2010)} → ${milhoes(E.domF)}`)]],
@@ -241,6 +251,11 @@ function conjuge() {
           L(['com cônjuge, numa cidade', 'de muitas idosas que moram sós'], ['with a spouse, in a city of', 'many older women living alone'])),
       ],
     }),
+    legendaFigura: () => {
+      const g = legenda(OCRE.map((c, i) => [c, rot()[i], null]), 0,
+        { titulo: L('RESPONSÁVEIS MULHERES COM CÔNJUGE', 'WOMEN RESPONSIBLE LIVING WITH A SPOUSE'), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 420 };
+    },
     numeros: () => [
       [pc(E.f_conjuge, 0), [L('das responsáveis mulheres', 'of women responsible'), L(`vivem com cônjuge (homens: ${pc(E.m_conjuge, 0)})`, `live with a spouse (men: ${pc(E.m_conjuge, 0)})`)]],
       [pc(E.f_sem_conjuge_filhos, 0), [L('não têm cônjuge e moram', 'have no spouse and live'), L('com filhos ou enteados', 'with children or stepchildren')]],
@@ -300,8 +315,12 @@ function servico(tema, s, cfg) {
       bordaMunicipio: 0.5,
       chamadas: cfg.chamadas(),
     }),
+    legendaFigura: () => {
+      const g = legenda(COR_DIF.map((c, i) => [c, ROT_DIF()[i], null]), 0, { titulo: cfg.tituloLegenda(), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
-      [pp(d.dif), [L(`no estado: ${pc(d.mulher)} nas casas delas,`, `statewide: ${pc(d.mulher)} in their homes,`), L(`${pc(d.homem)} nas deles`, `${pc(d.homem)} in men’s`)]],
+      [pp(d.dif),[L(`no estado: ${pc(d.mulher)} nas casas delas,`, `statewide: ${pc(d.mulher)} in their homes,`), L(`${pc(d.homem)} nas deles`, `${pc(d.homem)} in men’s`)]],
       [pp(d.setor, 2), [L('dentro do mesmo setor', 'within the same tract'), L(`(e ${pp(d.comp, 2)} de endereço)`, `(and ${pp(d.comp, 2)} from address)`)]],
       [nf(r.mulheres_mais), [L(`de ${nf(com.length)} municípios em que`, `of ${nf(com.length)} municipalities where`), L('elas têm mais, além do sigilo', 'women have more, beyond the X range')]],
       [mil(E[s].sem_mulher), [L('casas com responsável mulher', 'homes with a woman responsible'), cfg.semRede()]],
@@ -404,8 +423,13 @@ function iluminacao() {
           L(['chácaras e loteamentos', 'da serra, na metrópole'], ['smallholdings and plots', 'in the hills of the metropolis'])),
       ],
     }),
+    legendaFigura: () => {
+      const g = legenda(COR_LUZ.map((c, i) => [c, rot()[i], null]), 0,
+        { titulo: L('DOMICÍLIOS SEM ILUMINAÇÃO PÚBLICA', 'HOUSEHOLDS WITH NO STREET LIGHTING'), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
-      [pc(E.energia2010, 2), [L('das casas tinham energia', 'of homes had electricity'), L(`em 2010 (${mil(E.sem_energia2010)} sem)`, `in 2010 (${mil(E.sem_energia2010)} without)`)]],
+      [pc(E.energia2010, 2),[L('das casas tinham energia', 'of homes had electricity'), L(`em 2010 (${mil(E.sem_energia2010)} sem)`, `in 2010 (${mil(E.sem_energia2010)} without)`)]],
       [pc((100 * E.ilum_nao) / E.ilum_tot), [L(`sem luz na rua em 2022:`, 'no street light in 2022:'), L(`${mil(E.ilum_nao)} domicílios`, `${mil(E.ilum_nao)} households`)]],
       [dec(t.rho), [L('com a parte de responsáveis', 'with the share of women'), L(`mulheres; parcial ${dec(t.parcial)}`, `responsible; partial ${dec(t.parcial)}`)]],
       [pc(R.municipios.cobertura_entorno.med, 0), [L('das casas do município mediano', 'of homes in the median town'), L('estão na pesquisa do entorno', 'are in the surroundings survey')]],
@@ -439,6 +463,27 @@ function renda() {
   const a = mun('Lucélia'), b = mun('Pilar do Sul');
   const casa = (cd) => { const v = POR.get(cd)?.b109; return v == null ? null : BIV[(v % 10) - 1][Math.floor(v / 10) - 1]; };
   const fP = (v) => L(`${nf(v, 0)} %`, `${nf(v, 0)}%`);
+  /** Chave bivariada 3 × 3 com os eixos e os limites dos terços; `contagens` põe os municípios em cada casa. */
+  function chave(y, { contagens = true } = {}) {
+    const s = [rotuloPainel(L('RESPONSÁVEIS MULHERES × RAZÃO DE RENDA, EM TERÇOS', 'WOMEN RESPONSIBLE × INCOME RATIO, IN THIRDS'), y)];
+    const q = 44, x0 = 116, y0 = y + 28;
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
+      const xx = x0 + j * q, yy = y0 + (2 - i) * q;
+      s.push(`<rect x="${xx}" y="${yy}" width="${q}" height="${q}" fill="${BIV[i][j]}" stroke="#ffffff" stroke-width="1"/>`);
+      if (contagens) s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${i === 2 || (i === 1 && j === 2) ? '#ffffff' : TINTA}">${B.casas[i][j]}</text>`);
+    }
+    const eX = L('responsáveis mulheres', 'women responsible'), eY = L('renda delas / deles', 'her / his income');
+    s.push(`<path d="M${x0} ${y0 + 3 * q + 10}h${3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 + 3 * q - 6} ${y0 + 3 * q + 6}l6 4l-6 4" fill="none" stroke="${TINTA}"/>`);
+    s.push(`<text x="${x0 + 1.5 * q}" y="${y0 + 3 * q + 30}" text-anchor="middle" font-family="${MONO}" font-size="12">${esc(`${eX} →`)}</text>`);
+    s.push(`<path d="M${x0 - 10} ${y0 + 3 * q}v${-3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 - 14} ${y0 + 6}l4 -6l4 6" fill="none" stroke="${TINTA}"/>`);
+    s.push(`<text x="${x0 - 22}" y="${y0 + 1.5 * q}" text-anchor="middle" font-family="${MONO}" font-size="12" transform="rotate(-90 ${x0 - 22} ${y0 + 1.5 * q})">${esc(`${eY} →`)}</text>`);
+    const tx = x0 + 3 * q + 30;
+    const lin = L(
+      ['terços de responsáveis mulheres:', `até ${fP(B.tx[0])}, ${fP(B.tx[0])} a ${fP(B.tx[1])}`, `e mais de ${fP(B.tx[1])}`, '', 'terços da razão de renda:', `até ${fP(B.ty[0])}, ${fP(B.ty[0])} a ${fP(B.ty[1])}`, `e mais de ${fP(B.ty[1])}`, ...(contagens ? ['', 'municípios em cada casa'] : [])],
+      ['thirds of women responsible:', `up to ${fP(B.tx[0])}, ${fP(B.tx[0])} to ${fP(B.tx[1])}`, `and over ${fP(B.tx[1])}`, '', 'thirds of the income ratio:', `up to ${fP(B.ty[0])}, ${fP(B.ty[0])} to ${fP(B.ty[1])}`, `and over ${fP(B.ty[1])}`, ...(contagens ? ['', 'municipalities in each cell'] : [])]);
+    lin.forEach((l, k) => s.push(`<text x="${tx}" y="${y0 + 10 + k * 15}" font-family="${MONO}" font-size="12" fill="${CINZA}">${esc(l)}</text>`));
+    return { svg: s.join('\n'), y: Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8) };
+  }
   return () => ({
     layout: 'um',
     serie: serie('renda'),
@@ -463,25 +508,14 @@ function renda() {
       [nf(B.casas[2][2]), [L('municípios no terço de cima', 'municipalities in the top third'), L('dos dois', 'of both')]],
       [fP(R.municipios.razao_renda_sexo.med), [L('da renda dos homens: o que', 'of men’s income: what women'), L('as mulheres ganham, na mediana', 'earn, in the median town')]],
     ],
+    legendaFigura: () => {
+      const k = chave(0, { contagens: false });
+      return { svg: k.svg, altura: k.y, largura: 520 };
+    },
     painel: (y) => {
-      const s = [rotuloPainel(L('RESPONSÁVEIS MULHERES × RAZÃO DE RENDA, EM TERÇOS', 'WOMEN RESPONSIBLE × INCOME RATIO, IN THIRDS'), y)];
-      const q = 44, x0 = 116, y0 = y + 28;
-      for (let i = 0; i < 3; i++) for (let j = 0; j < 3; j++) {
-        const xx = x0 + j * q, yy = y0 + (2 - i) * q;
-        s.push(`<rect x="${xx}" y="${yy}" width="${q}" height="${q}" fill="${BIV[i][j]}" stroke="#ffffff" stroke-width="1"/>`);
-        s.push(`<text x="${xx + q / 2}" y="${yy + q / 2 + 5}" text-anchor="middle" font-family="${MONO}" font-size="13" fill="${i === 2 || (i === 1 && j === 2) ? '#ffffff' : TINTA}">${B.casas[i][j]}</text>`);
-      }
-      const eX = L('responsáveis mulheres', 'women responsible'), eY = L('renda delas / deles', 'her / his income');
-      s.push(`<path d="M${x0} ${y0 + 3 * q + 10}h${3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 + 3 * q - 6} ${y0 + 3 * q + 6}l6 4l-6 4" fill="none" stroke="${TINTA}"/>`);
-      s.push(`<text x="${x0 + 1.5 * q}" y="${y0 + 3 * q + 30}" text-anchor="middle" font-family="${MONO}" font-size="12">${esc(`${eX} →`)}</text>`);
-      s.push(`<path d="M${x0 - 10} ${y0 + 3 * q}v${-3 * q}" stroke="${TINTA}" stroke-width="1"/><path d="M${x0 - 14} ${y0 + 6}l4 -6l4 6" fill="none" stroke="${TINTA}"/>`);
-      s.push(`<text x="${x0 - 22}" y="${y0 + 1.5 * q}" text-anchor="middle" font-family="${MONO}" font-size="12" transform="rotate(-90 ${x0 - 22} ${y0 + 1.5 * q})">${esc(`${eY} →`)}</text>`);
-      const tx = x0 + 3 * q + 30;
-      const lin = L(
-        ['terços de responsáveis mulheres:', `até ${fP(B.tx[0])}, ${fP(B.tx[0])} a ${fP(B.tx[1])}`, `e mais de ${fP(B.tx[1])}`, '', 'terços da razão de renda:', `até ${fP(B.ty[0])}, ${fP(B.ty[0])} a ${fP(B.ty[1])}`, `e mais de ${fP(B.ty[1])}`, '', 'municípios em cada casa'],
-        ['thirds of women responsible:', `up to ${fP(B.tx[0])}, ${fP(B.tx[0])} to ${fP(B.tx[1])}`, `and over ${fP(B.tx[1])}`, '', 'thirds of the income ratio:', `up to ${fP(B.ty[0])}, ${fP(B.ty[0])} to ${fP(B.ty[1])}`, `and over ${fP(B.ty[1])}`, '', 'municipalities in each cell']);
-      lin.forEach((l, k) => s.push(`<text x="${tx}" y="${y0 + 10 + k * 15}" font-family="${MONO}" font-size="12" fill="${CINZA}">${esc(l)}</text>`));
-      let yy = Math.max(y0 + 3 * q + 50, y0 + 10 + lin.length * 15 + 8) + 10;
+      const k = chave(y);
+      const s = [k.svg];
+      let yy = k.y + 10;
       const qd = quadro([
         [L('correlação de postos (Spearman)', 'rank correlation (Spearman)'), `${dec(t.rho)} · ${nf(t.n)} mun.`, true],
         [L(`parcial, descontadas ${controles(t)}`, `partial, net of ${controles(t)}`), dec(t.parcial)],
@@ -524,8 +558,13 @@ function sintese() {
           L([`na mesma rua; no município inteiro, ${pp(b.dif_media, 0)}`, '(a maior diferença das pranchas 106 e 107)'], [`on the same street; for the whole town, ${pp(b.dif_media, 0)}`, '(the widest gap on plates 106 and 107)'])),
       ],
     }),
+    legendaFigura: () => {
+      const g = legenda(COR_DIF.map((c, i) => [c, ROT_DIF()[i], null]), 0,
+        { titulo: L('DENTRO DO SETOR: MULHERES − HOMENS', 'WITHIN THE TRACT: WOMEN − MEN'), unidade: '' });
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
-      [nf(n[1]), [L(`de ${nf(com.length)} municípios entre`, `of ${nf(com.length)} municipalities between`), L('−1 e +1 p.p.', '−1 and +1 pp')]],
+      [nf(n[1]),[L(`de ${nf(com.length)} municípios entre`, `of ${nf(com.length)} municipalities between`), L('−1 e +1 p.p.', '−1 and +1 pp')]],
       [pp(C.estServ.esgoto_rede.setor, 2), [L('esgoto na rede, no estado,', 'mains sewerage, statewide,'), L('dentro do mesmo setor', 'within the same tract')]],
       [pp(C.estServ.agua_rede.setor, 2), [L('água da rede, no estado,', 'mains water, statewide,'), L('dentro do mesmo setor', 'within the same tract')]],
       [pp(C.estServ.lixo_coletado.setor, 2), [L('lixo coletado, no estado,', 'refuse collection, statewide,'), L('dentro do mesmo setor', 'within the same tract')]],

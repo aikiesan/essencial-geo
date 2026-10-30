@@ -7,7 +7,8 @@
  *   node scripts/conferir-publicacao.mjs --dia 2026-10-19
  *
  * Para cada mapa confere: a página em português e em inglês (HTTP 200), a presença das
- * duas no sitemap, a imagem da prancha e cada download (o link responde e não é "em breve").
+ * duas no sitemap, a imagem da prancha, cada download (o link responde e não é "em breve") e as
+ * figuras de reuso, com e sem mapa de base, nas duas línguas.
  * Mapas no ar sem DOI cujas conferências passaram saem no relatório. Os aprovados de antemão
  * (`doi_automatico: true` no README) vão para o job "doi" do deploy.yml, que pede o DOI ao
  * Zenodo; os demais saem com o comando para pedir à mão. O DOI é permanente: a aprovação é por mapa.
@@ -111,6 +112,12 @@ for (const { pasta, fm } of alvo) {
     const r = await responde(imagem);
     if (!r.ok) problemas.push(`imagem da prancha responde ${r.status}`);
   } else problemas.push('página sem imagem da prancha (og:image)');
+
+  // Figuras de reuso: com e sem mapa de base, nas duas línguas (docs/ESTILO.md «Duas versões»).
+  for (const nome of ['mapa_figura.png', 'mapa_figura.en.png', 'mapa_figura_sem_base.png', 'mapa_figura_sem_base.en.png']) {
+    const r = await responde(`${SITE}mapas/${pasta}/${nome}`);
+    if (!r.ok) problemas.push(`figura ${nome} responde ${r.status}`);
+  }
 
   const doi = fm.doi ? `10…${String(fm.doi).split('.').pop()}` : 'sem DOI';
   linhas.push(`| ${String(fm.numero).padStart(3, '0')} | ${fm.titulo} | ${dia(fm.data)} | ${problemas.length ? '✗ ' + problemas.join('; ') : '✓'} | ${doi} |`);

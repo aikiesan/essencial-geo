@@ -171,3 +171,49 @@ A folha vai para o canto com menos território (excluído o do localizador); com
 que por acaso fique debaixo dela.
 Os microtextos usam o cinza da moldura. Na prancha em inglês só o lema é traduzido; a assinatura e os
 nomes das estrelas não mudam.
+
+## Figura (reuso)
+
+Cada mapa tem, além da prancha, uma **figura** feita para ser levada: artigo, tese, aula, apresentação. A
+prancha é a peça do atlas; a figura é o mapa sem a prancha em volta, como um mapa-base da Esri. Sai junto com
+a prancha (`mapa_figura.png` na pasta do mapa e `dados/<base>_figura.svg`, anexo de release como o SVG da
+prancha) e pode ser refeita sozinha com `node scripts/colecoes/figuras.mjs [coleção…|estados]`.
+
+**Duas versões.** Toda figura sai com e sem mapa de base. Com base: mar, linhas-d’água, países e UFs ou
+municípios vizinhos, com os rótulos deles. Sem base (`mapa_figura_sem_base.png`,
+`dados/<base>_figura_sem_base.svg`): só o recorte, sobre papel branco; raster e camadas extras são cortados no
+limite do recorte. Legenda, escala, sistema, norte e crédito são os mesmos nas duas.
+
+**Tudo escrito sobre o mapa.** O mapa cobre a figura inteira, de borda a borda. Legenda, escala, sistema de
+referência, norte e crédito são escritos em cima dele, com um halo da cor do papel, sem faixa, caixa nem
+coluna à parte: recortar a figura para tirar o crédito corta o mapa junto.
+
+| Fica | Sai |
+| --- | --- |
+| O mapa, sem moldura, até a borda | Moldura, painel, carimbo, cabeçalho, número grande |
+| A legenda num canto sem dado, 1,5 × a da prancha (1,15 × nos três mapas e nos estados), sem fios nem caixa | Graticulado e coordenadas nas bordas |
+| Escala de duas casas e, logo abaixo, o sistema em duas linhas: «SIRGAS 2000 · projeção» e «λ₀ · φ₀» | Localizador, norte em folha, microtextos, molécula |
+| Norte simples (seta meio cheia, N) no canto de cima que a legenda não ocupa | Chamadas, destaques, notas, números, estatísticas |
+| Rótulos de vizinhos, oceano, capital e regiões | Contagens por classe e barras dentro da legenda |
+| Linha de crédito na borda de baixo: fontes à esquerda; «Mapa: Essencial Geo Nº NNN · Cerejo, L. N. (ano) · CC BY 4.0 · DOI ou endereço» à direita | |
+
+**Regras.** Sem título dentro da figura: quem a usa escreve a legenda (caption) do próprio trabalho. A
+legenda do mapa explica todo símbolo que aparece nele, e nada além. As cores são as da prancha, para que
+a figura e a prancha se reconheçam. O DOI, quando existe, entra no lugar do endereço. A figura de um mapa
+em resguardo segue a prancha: fica onde a prancha fica. Nas coleções, a legenda vem de
+`tema.legendaFigura()`; o tamanho dela é medido no desenho (não é preciso acertar `altura` e `largura` à
+mão).
+
+**Enquadramento.** Legenda, norte e crédito não caem sobre o recorte. A figura testa os quatro cantos para o
+bloco da legenda; se todos cobrem o recorte, o mapa encolhe um pouco do lado do bloco, e fica o maior mapa
+que sai livre. Nos recortes regionais, em que o contexto só cobre a vizinhança, o quadro também pode alargar
+até 3:2, abrindo espaço ao lado com o mapa na mesma escala, desde que os vizinhos ainda cheguem à borda. Só
+quando nada disso basta (relevo cobrindo o quadro inteiro) a legenda ganha um fundo de papel translúcido. Sem mapa de base não há contexto a preencher, e o quadro
+fica livre para encolher ou alargar.
+
+Nos layouts de três mapas, cada título fica no alto do próprio mapa e cada legenda embaixo, à esquerda;
+escala, sistema e norte vão no último; o quarto quadro (notas) fica só na prancha. Nos estados, o contexto
+(UFs vizinhas, mar) se estende para a direita e a legenda fica sobre ele.
+
+**No site.** A ficha de cada mapa tem o bloco «Figura para usar»: o PNG da figura e o QR code do endereço
+permanente da página (também para baixar em SVG), para quem recebe a figura achar o atlas.

@@ -6,8 +6,8 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, gerarPrancha, rotuloPainel, usarRegiao } from '../lib/prancha-sp.mjs';
-import { L, NEUTRO, ZERO, pct, grande, barras, legendaBarras, caixaLegenda, nota } from '../lib/painel.mjs';
+import { RAIZ, LP, SERIF, MONO, TINTA, CINZA, esc, nf, f1, largura, gerarPrancha, rotuloPainel, usarRegiao } from '../lib/prancha-sp.mjs';
+import { L, NEUTRO, ZERO, pct, grande, barras, legendaBarras, legendaCategorias, caixaLegenda, nota } from '../lib/painel.mjs';
 import { LIM_FCU, CORES_FCU, LIM_ENT, CORES_ENT } from './preparar.mjs';
 
 const SERIE = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'favelas-sp', 'serie.json'), 'utf8'));
@@ -18,6 +18,17 @@ const SEM_FCU = () => L('sem favela registrada pelo IBGE', 'no favela recorded b
 /** Percentual que pode vir como intervalo (sigilo): "40 a 41 %". */
 const pc = (v) => (typeof v === 'number' ? pct(v, 0) : L(`${nf(Math.floor(v.de))} a ${nf(Math.ceil(v.ate))} %`, `${nf(Math.floor(v.de))} to ${nf(Math.ceil(v.ate))}%`));
 const val = (v) => (typeof v === 'number' ? v : (v.de + v.ate) / 2);
+
+/** Legenda da figura de reuso: as classes da legenda do painel, sem barras nem contagens, e as caixas
+ * avulsas ([cor, rótulo]) logo abaixo. */
+function legendaReuso(titulo, cores, rotulos, avulsas = []) {
+  const g = legendaCategorias(cores.map((k, i) => [k, rotulos[i]]), 0, { titulo });
+  const s = [g.svg];
+  let y = g.y;
+  for (const [cor, rot] of avulsas) { s.push(caixaLegenda(cor, rot, y)); y += 25; }
+  const larg = Math.max(largura(titulo, 15, { mono: true, espaco: 2.4 }), ...[...rotulos, ...avulsas.map((a) => a[1])].map((r) => 42 + largura(r, 16)));
+  return { svg: s.join('\n'), altura: y - 25 + 6, largura: Math.ceil(larg) };
+}
 
 /** Faixa de cores contínua, com os limites nas junções. */
 function faixa(cores, limites, { larg = 64 } = {}) {
@@ -33,7 +44,7 @@ function faixa(cores, limites, { larg = 64 } = {}) {
 async function fcu() {
   const c = await ler('fcu');
   const por = new Map(c.mun.map((m) => [m.CD_MUN, m]));
-  const rot = L(['até 2 %', '2 a 5 %', '5 a 10 %', '10 a 15 %', '15 a 20 %', 'mais de 20 %'], ['up to 2%', '2 to 5%', '5 to 10%', '10 to 15%', '15 to 20%', 'over 20%']);
+  const rot = () => L(['até 2 %', '2 a 5 %', '5 a 10 %', '10 a 15 %', '15 a 20 %', 'mais de 20 %'], ['up to 2%', '2 to 5%', '5 to 10%', '10 to 15%', '15 to 20%', 'over 20%']);
   const cl = new Array(6).fill(0), nm = new Array(6).fill(0);
   for (const m of c.mun) if (m.pessoas_fcu > 0) { const k = classe(m.pct_fcu, LIM_FCU); cl[k] += m.pessoas_fcu; nm[k]++; }
   const topo = c.mun_pct[0], cap = c.capital;
@@ -63,6 +74,7 @@ async function fcu() {
         },
       ],
     }),
+    legendaFigura: () => legendaReuso(L('PARTE DA POPULAÇÃO EM FAVELAS', 'SHARE OF POPULATION IN FAVELAS'), CORES_FCU, rot(), [[NEUTRO, SEM_FCU()]]),
     numeros: () => [
       [grande(c.pessoas), [L('pessoas em favelas e', 'people in favelas and'), L(`comunidades, ${pct(c.pct, 1)} do estado`, `communities, ${nf(c.pct, 1)}% of the state`)]],
       [nf(c.n_fcu), [L('favelas e comunidades', 'favelas and communities'), L(`em ${nf(c.n_mun)} municípios`, `in ${nf(c.n_mun)} municipalities`)]],
@@ -70,7 +82,7 @@ async function fcu() {
       [nf(t[3].n), [L('favelas de mais de 10 mil', 'favelas of over 10,000'), L(`moradores; ${nf(t[0].n)} têm menos de mil`, `people; ${nf(t[0].n)} have under 1,000`)]],
     ],
     painel: (y) => {
-      const itens = CORES_FCU.map((k, i) => [k, `${rot[i]} · ${nf(nm[i])} ${L('mun.', 'mun.')}`, cl[i], c.pessoas]);
+      const itens = CORES_FCU.map((k, i) => [k, `${rot()[i]} · ${nf(nm[i])} ${L('mun.', 'mun.')}`, cl[i], c.pessoas]);
       const lg = legendaBarras(itens, y, { titulo: L('PARTE DA POPULAÇÃO EM FAVELAS', 'SHARE OF POPULATION IN FAVELAS'), rotuloValor: L('parte dos moradores de favelas do estado', 'share of the state’s favela residents') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(NEUTRO, SEM_FCU(), yy)];
@@ -141,6 +153,11 @@ async function metropole() {
         },
       ],
     }),
+    // Uma camada só: a caixa basta, com a linha de base em y = 0 (no recorte regional, na coluna à direita).
+    legendaFigura: () => {
+      const rot = L('setor em favela ou comunidade urbana', 'tract in a favela or urban community');
+      return { svg: caixaLegenda(CORES_FCU[4], rot, 0), altura: 6, largura: Math.ceil(42 + largura(rot, 16)) };
+    },
     numeros: () => [
       [pct((100 * pesJ) / c.pessoas, 0), [L('dos moradores de favelas', 'of the state’s favela residents'), L('do estado estão neste recorte', 'are in this map')]],
       [nf(nJ), [L('favelas e comunidades', 'favelas and communities'), L(`em ${nf(munJ.length)} municípios`, `in ${nf(munJ.length)} municipalities`)]],
@@ -275,6 +292,7 @@ async function dentro() {
   const comFcu = new Set(c.mun.map((m) => m.CD_MUN));
   const LIM_R = [0.35, 0.45, 0.55, 0.65];
   const CORES_R = ['#62351f', '#97573a', '#bf8159', '#d8ad8a', '#efe0cf'];
+  const rotR = () => L(['até 35 %', '35 a 45 %', '45 a 55 %', '55 a 65 %', 'mais de 65 %'], ['up to 35%', '35 to 45%', '45 to 55%', '55 to 65%', 'over 65%']);
   const d = c.dentro, f = c.fora;
   const min = c.razao_min[0], max = c.razao_max[0];
   const PARES = [
@@ -310,6 +328,8 @@ async function dentro() {
         },
       ],
     }),
+    legendaFigura: () => legendaReuso(L('RENDA NA FAVELA SOBRE A RENDA FORA', 'INCOME IN THE FAVELA OVER INCOME OUTSIDE'), CORES_R, rotR(),
+      [[ZERO, L('menos de 5 mil moradores em favelas', 'under 5,000 favela residents')], [NEUTRO, SEM_FCU()]]),
     numeros: () => [
       [pct((100 * d.renda_media) / f.renda_media, 0), [L('da renda média de fora:', 'of the mean income outside:'), L(`R$ ${nf(d.renda_media)} e R$ ${nf(f.renda_media)}`, `R$ ${nf(d.renda_media)} and R$ ${nf(f.renda_media)}`)]],
       [pc(d.pct_esgoto_rede), [L('dos domicílios com esgoto', 'of homes with sewage to'), L(`na rede; ${pc(f.pct_esgoto_rede)} fora`, `the mains; ${pc(f.pct_esgoto_rede)} outside`)]],
@@ -317,7 +337,7 @@ async function dentro() {
       [nf(d.moradores_dom, 2), [L('moradores por domicílio,', 'residents per home,'), L(`e ${nf(f.moradores_dom, 2)} fora`, `and ${nf(f.moradores_dom, 2)} outside`)]],
     ],
     painel: (y) => {
-      const rot = L(['até 35 %', '35 a 45 %', '45 a 55 %', '55 a 65 %', 'mais de 65 %'], ['up to 35%', '35 to 45%', '45 to 55%', '55 to 65%', 'over 65%']);
+      const rot = rotR();
       const nCl = new Array(5).fill(0);
       for (const m of por.values()) nCl[classe(m.razao_renda, LIM_R)]++;
       const s = [rotuloPainel(L('RENDA NA FAVELA SOBRE A RENDA FORA', 'INCOME IN THE FAVELA OVER INCOME OUTSIDE'), y)];

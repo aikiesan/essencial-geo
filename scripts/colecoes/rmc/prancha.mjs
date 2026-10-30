@@ -45,6 +45,21 @@ function barras(itens, y, { max, passo = 19, x0 = 190, sufixo = ' %', casas = 0 
   return { svg: s.join('\n'), y: y + itens.length * passo };
 }
 
+/**
+ * Legenda da figura: título e uma caixa por classe, na ordem dada, sem áreas nem partes: [[cor, rótulo, hachura?]].
+ * `caixa` usa a caixa maior de caixaLegenda (a das legendas com barra); sem ela, a caixa das fitas.
+ */
+function colunaFigura(titulo, itens, { caixa = false } = {}) {
+  const s = [rotuloPainel(titulo, 0)];
+  let y = 24;
+  for (const [cor, rot, hachura] of itens) {
+    if (caixa) s.push(caixaLegenda(cor, rot, y, hachura));
+    else s.push(`<rect x="0" y="${y - 13}" width="26" height="15" fill="${cor}" stroke="#1a211a" stroke-width=".6"/><text x="38" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+    y += caixa ? 25 : 23;
+  }
+  return { svg: s.join('\n'), y };
+}
+
 /* ------------------------------------------------------------------ 1/4 uso e cobertura da terra */
 async function uso() {
   await usarRegiao('rmc');
@@ -78,6 +93,11 @@ async function uso() {
         linhas: L(['o maior fragmento', 'florestal da RMC,', `em ${c.fragmento.municipio}`], ['the largest forest', 'patch in the RMC,', `in ${c.fragmento.municipio}`]),
       }],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('USO E COBERTURA DA TERRA, 2024', 'LAND USE AND LAND COVER, 2024'),
+        [...c.grupos].sort((a, b) => b.pct - a.pct).map((x) => [x.cor, L(x.rotulo, x.rotulo_en)]));
+      return { svg: g.svg, altura: g.y, largura: 400 };
+    },
     numeros: () => [
       [`${nf(c.total_km2, 0)} km²`, [L('nos 20 municípios', 'across 20 municipalities')]],
       [pct(g.urbano.pct), [L('de área urbanizada', 'urban area')]],
@@ -157,9 +177,9 @@ async function domicilios() {
   const cor = (d) => (d === null ? SEM : d === 0 ? ZERO : cores[classe(d, c.limites)]);
   const mun = [...c.por_municipio].sort((a, z) => z.dom_km2 - a.dom_km2);
   const denso = mun[0];
-  const lim = c.limites.map((v) => nf(v));
-  const rotulos = [L(`até ${lim[0]}`, `up to ${lim[0]}`),
-    ...c.limites.slice(1).map((v, i) => `${lim[i]} – ${lim[i + 1]}`), L(`mais de ${lim[lim.length - 1]}`, `over ${lim[lim.length - 1]}`)];
+  // Rótulos por língua: os números mudam de formato (1.000 / 1,000).
+  const rotulos = () => { const lim = c.limites.map((v) => nf(v)); return [L(`até ${lim[0]}`, `up to ${lim[0]}`),
+    ...c.limites.slice(1).map((v, i) => `${lim[i]} – ${lim[i + 1]}`), L(`mais de ${lim[lim.length - 1]}`, `over ${lim[lim.length - 1]}`)]; };
   const pctMetade = (c.metade_km2 / c.area_km2) * 100;
   return () => ({
     layout: 'um',
@@ -185,14 +205,19 @@ async function domicilios() {
         linhas: L([`${denso.NM_MUN}, o município`, 'mais denso da região'], [`${denso.NM_MUN}, the densest`, 'municipality in the region']),
       }],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('DOMICÍLIOS POR KM²', 'HOUSEHOLDS PER KM²'),
+        [...cores.map((k, i) => [k, rotulos()[i]]), [ZERO, L('setor sem domicílio ocupado', 'tract with no occupied household')]], { caixa: true });
+      return { svg: g.svg, altura: g.y, largura: 380 };
+    },
     numeros: () => [
-      [nf(c.domicilios), [L('domicílios ocupados', 'occupied households')]],
+      [nf(c.domicilios),[L('domicílios ocupados', 'occupied households')]],
       [nf(c.pessoas), [L('pessoas', 'people')]],
       [`${nf(c.metade_km2, 0)} km²`, [L('abrigam metade', 'hold half'), L('dos domicílios', 'of the households')]],
       [nf(c.n_setores), [L('setores censitários,', 'census tracts,'), L(`${nf(c.sem_domicilio)} sem domicílio ocupado`, `${nf(c.sem_domicilio)} with none occupied`)]],
     ],
     painel: (y) => {
-      const itens = cores.map((k, i) => [k, rotulos[i], c.dom_por_classe[i], c.domicilios]);
+      const itens = cores.map((k, i) => [k, rotulos()[i], c.dom_por_classe[i], c.domicilios]);
       const lg = legendaBarras(itens, y, { titulo: L('DOMICÍLIOS POR KM²', 'HOUSEHOLDS PER KM²'), rotuloValor: L('parte dos domicílios da RMC', 'share of the region’s households') });
       let yy = lg.y + 4;
       const s = [lg.svg, caixaLegenda(ZERO, L('setor sem domicílio ocupado', 'tract with no occupied household'), yy)];
@@ -216,7 +241,7 @@ async function renda() {
   const b = await baseRmc();
   const cor = (m) => (m === null ? 'url(#semRm)' : c.cores[classe(m, c.limites)]);
   const sm = (k) => nf(k, k % 1 ? 1 : 0);
-  const rotulos = [L(`até 1 SM (R$ ${nf(c.sm)})`, `up to 1 MW (R$ ${nf(c.sm)})`),
+  const rotulos = () => [L(`até 1 SM (R$ ${nf(c.sm)})`, `up to 1 MW (R$ ${nf(c.sm)})`),
     ...[[1, 1.5], [1.5, 2], [2, 3], [3, 5]].map(([a, z]) => L(`${sm(a)} a ${sm(z)} SM`, `${sm(a)} to ${sm(z)} MW`)), L('mais de 5 SM', 'over 5 MW')];
   const ate2 = c.resp_por_classe.slice(0, 3).reduce((a, v) => a + v, 0);
   const acima5 = c.resp_por_classe[5];
@@ -245,6 +270,11 @@ async function renda() {
         linhas: L([`um setor de ${c.mais_alto.municipio}:`, `${nf(c.mais_alto.mediana / c.sm, 0)} salários mínimos`], [`a tract in ${c.mais_alto.municipio}:`, `${nf(c.mais_alto.mediana / c.sm, 0)} minimum wages`]),
       }],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('RENDIMENTO MEDIANO DO RESPONSÁVEL', 'MEDIAN INCOME OF HOUSEHOLD HEAD'),
+        [...c.cores.map((k, i) => [k, rotulos()[i]]), [SEM, L('sem informação', 'no data'), true]], { caixa: true });
+      return { svg: g.svg, altura: g.y, largura: 380 };
+    },
     numeros: () => [
       [`${nf((ate2 / c.responsaveis) * 100, 0)} %`, [L('dos responsáveis vivem em', 'of household heads live in'), L('setores com mediana até 2 SM', 'tracts with a median ≤ 2 MW')]],
       [`${nf((acima5 / c.responsaveis) * 100, 1)} %`, [L('em setores com mediana', 'in tracts with a median'), L('acima de 5 SM', 'above 5 MW')]],
@@ -252,7 +282,7 @@ async function renda() {
       [nf(c.sem_renda), [L(`dos ${nf(c.n_setores)} setores`, `of the ${nf(c.n_setores)} tracts`), L('sem informação de renda', 'with no income data')]],
     ],
     painel: (y) => {
-      const itens = c.cores.map((k, i) => [k, rotulos[i], c.resp_por_classe[i], c.responsaveis]);
+      const itens = c.cores.map((k, i) => [k, rotulos()[i], c.resp_por_classe[i], c.responsaveis]);
       const lg = legendaBarras(itens, y, { titulo: L('RENDIMENTO MEDIANO DO RESPONSÁVEL', 'MEDIAN INCOME OF HOUSEHOLD HEAD'), rotuloValor: L('parte dos responsáveis da RMC', 'share of the region’s household heads') });
       const yy = lg.y + 4;
       return { svg: [lg.svg, caixaLegenda(SEM, L('sem informação', 'no data'), yy, true)].join('\n'), y: yy + 16 };
@@ -302,6 +332,20 @@ async function app() {
         linhas: L(['a APP virou rua e telhado', 'na mancha urbana'], ['the reserve turned into', 'streets and roofs']),
       }],
     }),
+    legendaFigura: () => {
+      const g = colunaFigura(L('USO DO SOLO DENTRO DA APP', 'LAND USE INSIDE THE RESERVES'),
+        [...c.classes].sort((a, b) => b.pct - a.pct).map((x) => [x.cor, L(x.rotulo, x.rotulo_en)]));
+      let y = g.y + 6;
+      const s = [g.svg];
+      s.push(`<path d="M2 ${y - 5}h24" stroke="${AGUA}" stroke-width="1.6"/><text x="38" y="${y}" font-family="${SERIF}" font-size="16">${L('Curso d’água', 'Stream')}</text>`);
+      y += 23;
+      s.push(`<rect x="0" y="${y - 13}" width="26" height="15" fill="${LAGO}"/><text x="38" y="${y}" font-family="${SERIF}" font-size="16">${L('Rio largo, lago, represa', 'Wide river, lake, reservoir')}</text>`);
+      y += 23;
+      s.push(`<circle cx="13" cy="${y - 5}" r="4" fill="${AGUA}" stroke="${PAPEL}" stroke-width=".8"/><text x="38" y="${y}" font-family="${SERIF}" font-size="16">${L('Nascente', 'Spring')}</text>`);
+      // A sudoeste a ponta do município encosta na legenda; o sudeste é só entorno. A largura cobre também a
+      // escala, que nesta escala tem 10 km (~390 px) e começa no mesmo x da legenda.
+      return { svg: s.join('\n'), altura: y + 8, largura: 440, canto: 'se' };
+    },
     numeros: () => [
       [`${nf(c.app_km2, 0)} km²`, [L('de APP,', 'of reserves,'), L(`${pct((c.app_km2 / c.municipio_km2) * 100)} do município`, `${pct((c.app_km2 / c.municipio_km2) * 100)} of the municipality`)]],
       [pct(flo.pct), [L('da APP coberta', 'of the reserves'), L('por formação florestal', 'covered by forest')]],

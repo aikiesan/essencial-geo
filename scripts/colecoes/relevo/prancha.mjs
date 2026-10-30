@@ -57,17 +57,17 @@ function perfil(c, y, alt = 210) {
 }
 
 /** Régua hipsométrica horizontal, com o sombreado de exemplo. */
-function regua(c, y, zMax) {
+function regua(c, y, zMax, larg = LP) {
   const s = [`<defs>${gradiente('gregua', c.rampa, 0, zMax, { vertical: false })}</defs>`];
-  s.push(`<rect x="0" y="${y}" width="${LP}" height="16" fill="url(#gregua)" stroke="${TINTA}" stroke-width=".6"/>`);
+  s.push(`<rect x="0" y="${y}" width="${larg}" height="16" fill="url(#gregua)" stroke="${TINTA}" stroke-width=".6"/>`);
   const marcas = c.faixas.filter((v, i, a) => a.length <= 7 || i % 2 === 0);
   for (const v of [...new Set([0, ...marcas])]) {
     if (v > zMax) continue;
-    const x = (v / zMax) * LP;
+    const x = (v / zMax) * larg;
     s.push(`<path d="M${f1(x)} ${y + 16}v5" stroke="${TINTA}" stroke-width=".6"/>`);
-    s.push(`<text x="${f1(x)}" y="${y + 34}" text-anchor="${x < 10 ? 'start' : x > LP - 20 ? 'end' : 'middle'}" font-family="${MONO}" font-size="11">${nf(v)}</text>`);
+    s.push(`<text x="${f1(x)}" y="${y + 34}" text-anchor="${x < 10 ? 'start' : x > larg - 20 ? 'end' : 'middle'}" font-family="${MONO}" font-size="11">${nf(v)}</text>`);
   }
-  s.push(`<text x="${LP}" y="${y - 6}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">m</text>`);
+  s.push(`<text x="${larg}" y="${y - 6}" text-anchor="end" font-family="${MONO}" font-size="11" fill="${CINZA}">m</text>`);
   return { svg: s.join('\n'), y: y + 44 };
 }
 
@@ -120,6 +120,14 @@ function fazer(area, c, linhasRio, i, txt) {
       const [px, py] = proj(c.alto.coord);
       s.push(`<path d="M${f1(px)} ${f1(py - 9)}l8 14h-16z" fill="${TINTA}" stroke="${PAPEL}" stroke-width="1.6" paint-order="stroke"/>`);
       return s.join('\n');
+    },
+    // Na figura, o perfil A–B e o triângulo do ponto mais alto ficam de fora: sem o gráfico e a chamada, não dizem nada.
+    sobreMapaFigura: false,
+    legendaFigura: () => {
+      // Régua mais curta que a do painel: cabe na faixa livre ao lado do quadro.
+      const r = regua(c, 18, zMax, 360);
+      const rio = `<path d="M0 ${r.y + 19}H30" stroke="${RIO}" stroke-width="1.6" stroke-opacity=".85"/><text x="42" y="${r.y + 24}" font-family="${SERIF}" font-size="16">${esc(L('rios', 'rivers'))}</text>`;
+      return { svg: [rotuloPainel(L('ALTITUDE', 'ELEVATION'), 0), r.svg, rio].join('\n'), altura: r.y + 28, largura: 360 };
     },
     numeros: () => txt.numeros(),
     painel: (y) => {
