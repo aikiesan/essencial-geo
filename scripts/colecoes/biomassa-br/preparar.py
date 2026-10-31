@@ -413,8 +413,192 @@ def esterco() -> None:
     print(topo.head(6)[["NM_MUN", "SIGLA_UF", "ua_km2", "especie_lider", "cab_suínos", "cab_galináceos"]].to_string())
 
 
+# ------------------------------------------------------------------ PEVS (silvicultura e extração vegetal)
+PEVS = RAIZ / "scripts" / "colecoes" / "cache" / "downloads" / "ibge_pevs"
+
+
+def pevs(arquivo: str) -> pd.DataFrame:
+    """Tabela do SIDRA (API, JSON) em colunas cd, ano, cat, v; «-» é zero, «...» e «..» ficam vazios."""
+    d = pd.DataFrame(json.loads((PEVS / arquivo).read_text(encoding="utf-8"))[1:])
+    v = pd.to_numeric(d["V"], errors="coerce").where(d["V"] != "-", 0.0)
+    return pd.DataFrame({"cd": d["D1C"], "ano": d["D3C"].astype(int), "cat": d["D4C"], "v": v})
+
+
+def pevs_serie(d: pd.DataFrame, ano: int, cat: str) -> pd.Series:
+    return d[(d["ano"] == ano) & (d["cat"] == cat)].set_index("cd")["v"]
+
+
+# ------------------------------------------------------------------ 5 a floresta plantada
+# Parcela do município coberta por floresta plantada (PEVS 5930), com o matiz da espécie de maior área.
+ESPECIES = [("39326", "eucalipto", "eucalipto", "eucalyptus"), ("39327", "pinus", "pínus", "pine"),
+            ("39328", "outras", "outras espécies", "other species")]
+LIMITES_FLO = [1, 5, 15, 30]
+CORES_FLO = {
+    "eucalipto": ["#cfe0bf", "#97bd84", "#5a8f4e", "#2a5530"],
+    "pinus": ["#c6dbe0", "#8bb4bf", "#4f8494", "#1f4a59"],
+    "outras": ["#eadbb5", "#d1b06e", "#a8822f", "#6e5418"],
+}
+ROTULOS_FLO = [("1 a 5 %", "1 to 5%"), ("5 a 15 %", "5 to 15%"), ("15 a 30 %", "15 to 30%"), ("30 % ou mais", "30% or more")]
+POUCA_FLO = "#e6e9e2"
+
+
+def floresta() -> None:
+    area = pevs("t5930_area.json")
+    m = municipios()
+    m["area_km2"] = (m.to_crs(AREA_BR).area / 1e6).round(1)
+    for ano in (2015, 2025):
+        m[f"floresta_{ano}_ha"] = m["CD_MUN"].map(pevs_serie(area, ano, "0"))
+    for cat, k, *_ in ESPECIES:
+        m[f"{k}_2025_ha"] = m["CD_MUN"].map(pevs_serie(area, 2025, cat))
+    esp = m[[f"{k}_2025_ha" for _, k, *_ in ESPECIES]].fillna(0)
+    m["especie_lider"] = esp.idxmax(axis=1).str.replace("_2025_ha", "", regex=False).where(m["floresta_2025_ha"] > 0)
+    m["pct_area"] = (m["floresta_2025_ha"] / 100 / m["area_km2"] * 100).round(2)
+    # Municípios fora da tabela não têm registro de silvicultura na PEVS: contam como sem floresta
+    # plantada. «...» (não disponível) fica como sem dado.
+    m["situacao_pevs"] = np.where(~m["CD_MUN"].isin(set(area["cd"])), "sem registro",
+                                  np.where(m["floresta_2025_ha"].isna(), "nao disponivel", "valor"))
+    # classe: -2 sem dado, -1 sem floresta plantada, 0 abaixo de 1 %, 1 a 4 as faixas de cima.
+    m["classe"] = np.where(m["situacao_pevs"] == "nao disponivel", -2, np.where(m["floresta_2025_ha"].fillna(0) == 0, -1,
+                           np.digitize(m["pct_area"].fillna(0), LIMITES_FLO))).astype(int)
+
+    def faixa(r) -> str:
+        if r.classe == -2:
+            return "sem dado"
+        if r.classe == -1:
+            return "sem floresta plantada registrada"
+        if r.classe == 0:
+            return "menos de 1 %"
+        return f"{r.especie_lider}, {ROTULOS_FLO[r.classe - 1][0]}"
+
+    m["faixa"] = [faixa(r) for r in m.itertuples()]
+    m["cor"] = [CORES_FLO[r.especie_lider][r.classe - 1] if r.classe >= 1 else
+                {0: POUCA_FLO, -1: SEM_BOI, -2: SEM_DADO}[r.classe] for r in m.itertuples()]
+
+    ufs, lim = ufs_brasil(m)
+    regras = [(f"{igual('especie_lider', k)} AND {igual('classe', i + 1)}", f"{r}, {ROTULOS_FLO[i][0]}",
+               preenchimento(CORES_FLO[k][i], "#ffffff", 0.05))
+              for _, k, r, _ in ESPECIES for i in range(len(LIMITES_FLO))]
+    regras += [(igual("classe", 0), "menos de 1 % da área", preenchimento(POUCA_FLO, "#ffffff", 0.05)),
+               (igual("classe", -1), "sem floresta plantada registrada", preenchimento(SEM_BOI, "#ffffff", 0.05)),
+               (igual("classe", -2), "sem dado", preenchimento(SEM_DADO, "#ffffff", 0.05))]
+    estilos = {
+        "municipios": [("pct_area", "Floresta plantada, % da área do município", estilo_regras("poligono", regras), True)],
+        "ufs": [("ufs", "Limites estaduais", estilo_contorno("#5c6166", 0.3, "SIGLA_UF"), True)],
+        "limite_nacional": [("limite", "Limite do país", estilo_contorno(TINTA, 0.6), True)],
+    }
+    cols = (["CD_MUN", "NM_MUN", "SIGLA_UF", "regiao", "area_km2", "floresta_2015_ha", "floresta_2025_ha"]
+            + [f"{k}_2025_ha" for _, k, *_ in ESPECIES] + ["situacao_pevs", "especie_lider", "pct_area", "classe", "faixa"])
+    m = m[cols + ["cor", "geometry"]].sort_values("CD_MUN").reset_index(drop=True)
+    tam = gravar("floresta", {"municipios": m[cols + ["geometry"]], "ufs": ufs, "limite_nacional": lim}, estilos, m[cols])
+
+    qtd = pevs("t291_quantidade.json")
+    celulose = {ano: float(pevs_serie(qtd, ano, "3458").sum()) for ano in (2015, 2025)}
+    tora = {ano: float(pevs_serie(qtd, ano, "3457").sum()) for ano in (2015, 2025)}
+    pos = m.set_index("CD_MUN").geometry.to_crs(AREA_BR).representative_point().to_crs(GEO)
+    ok = m[m["classe"] >= -1]
+
+    def reg(r) -> dict:
+        return {"nome": r.NM_MUN, "uf": r.SIGLA_UF, "ha": float(r.floresta_2025_ha), "pct": float(r.pct_area),
+                "lider": r.especie_lider, "coord": [round(pos[r.CD_MUN].x, 3), round(pos[r.CD_MUN].y, 3)]}
+
+    especies = [{"chave": k, "rotulo": r, "rotulo_en": en, "cor": CORES_FLO[k][2],
+                 "ha_2015": float(pevs_serie(area, 2015, cat).sum()), "ha_2025": float(pevs_serie(area, 2025, cat).sum()),
+                 "municipios": int(((m["especie_lider"] == k) & (m["classe"] >= 1)).sum())} for cat, k, r, en in ESPECIES]
+    uf = ok.groupby("SIGLA_UF")["floresta_2025_ha"].sum().sort_values(ascending=False)
+    d3 = m.assign(cor=m["cor"])
+    gravar_cache("biomassa-br-floresta", {
+        "municipios": para_d3(d3, ["CD_MUN", "cor"], tol=0.012, casas=3),
+        "cores": CORES_FLO, "pouca": POUCA_FLO, "rotulos": ROTULOS_FLO,
+        "especies": especies,
+        "ha_2015": float(ok["floresta_2015_ha"].sum()), "ha_2025": float(ok["floresta_2025_ha"].sum()),
+        "pct_brasil": round(float(ok["floresta_2025_ha"].sum() / 100 / m["area_km2"].sum() * 100), 2),
+        "com_floresta": int((m["classe"] >= 0).sum()), "acima_1pct": int((m["classe"] >= 1).sum()),
+        "sem_floresta": int((m["classe"] == -1).sum()), "sem_dado": int((m["classe"] == -2).sum()),
+        "celulose_m3": celulose, "tora_m3": tora,
+        "maiores": [reg(r) for r in ok.sort_values("floresta_2025_ha", ascending=False).head(8).itertuples()],
+        "mais_pct": [reg(r) for r in ok.sort_values("pct_area", ascending=False).head(8).itertuples()],
+        "mais_pct_pinus": [reg(r) for r in ok[ok["especie_lider"] == "pinus"].sort_values("pct_area", ascending=False).head(4).itertuples()],
+        "ufs": [{"uf": k, "ha": float(v)} for k, v in uf.items()],
+        "tamanhos": tam,
+    })
+    print(tam, round(ok["floresta_2025_ha"].sum() / 1e6, 2), "Mha", celulose, tora)
+    print(pd.DataFrame(especies).to_string())
+    print(m["faixa"].value_counts().to_string())
+    print(ok.sort_values("floresta_2025_ha", ascending=False).head(5)[["NM_MUN", "SIGLA_UF", "floresta_2025_ha", "pct_area", "especie_lider"]].to_string())
+    print(ok[ok["especie_lider"] == "pinus"].sort_values("pct_area", ascending=False).head(4)[["NM_MUN", "SIGLA_UF", "floresta_2025_ha", "pct_area"]].to_string())
+    print(uf.head(6).to_string())
+
+
+# ------------------------------------------------------------------ 6 lenha da mata ou plantada
+# Parcela da lenha que vem da mata nativa (extração vegetal, PEVS 289) e não da silvicultura (PEVS 291).
+LIMITES_NATIVA = [0.1, 0.5, 0.9]
+CORES_NATIVA = ["#2f6f5e", "#9fbf8f", "#d9a77a", "#8a3b1f"]
+ROTULOS_NATIVA = [("quase toda plantada", "almost all planted"), ("mais plantada", "mostly planted"),
+                  ("mais nativa", "mostly native"), ("quase toda nativa", "almost all native")]
+
+
+def lenha() -> None:
+    ext, sil = pevs("t289_madeiras.json"), pevs("t291_quantidade.json")
+    m = municipios()
+    for ano in (2015, 2025):
+        m[f"lenha_nativa_{ano}_m3"] = m["CD_MUN"].map(pevs_serie(ext, ano, "3434"))
+        m[f"lenha_plantada_{ano}_m3"] = m["CD_MUN"].map(pevs_serie(sil, ano, "3456"))
+    m["carvao_nativo_2025_t"] = m["CD_MUN"].map(pevs_serie(ext, 2025, "3433"))
+    m["carvao_plantado_2025_t"] = m["CD_MUN"].map(pevs_serie(sil, 2025, "3455"))
+    m["lenha_2025_m3"] = m["lenha_nativa_2025_m3"].fillna(0) + m["lenha_plantada_2025_m3"].fillna(0)
+    m["parcela_nativa"] = (m["lenha_nativa_2025_m3"].fillna(0) / m["lenha_2025_m3"]).round(3)
+    m["classe"] = np.digitize(m["parcela_nativa"].fillna(0), LIMITES_NATIVA, right=True).astype(int)
+    m["faixa"] = [ROTULOS_NATIVA[c][0] for c in m["classe"]]
+    pos = m.set_index("CD_MUN").geometry.to_crs(AREA_BR).representative_point().to_crs(GEO)
+    p = m[m["lenha_2025_m3"] > 0].copy()
+    pts = gpd.GeoDataFrame(p.drop(columns="geometry"), geometry=p["CD_MUN"].map(pos).values, crs=GEO)
+    pts = pts.sort_values("lenha_2025_m3", ascending=False).reset_index(drop=True)
+
+    ufs, lim = ufs_brasil(m)
+    regras = [(igual("classe", i), ROTULOS_NATIVA[i][0], marcador(c, 2.4, tamanho_expr='1 + 0.012 * sqrt("lenha_2025_m3")'))
+              for i, c in enumerate(CORES_NATIVA)]
+    estilos = {
+        "lenha": [("parcela_nativa", "Lenha de 2025: nativa ou plantada", estilo_regras("ponto", regras, ordem='"lenha_2025_m3" DESC'), True)],
+        "ufs": [("ufs", "Limites estaduais", estilo_contorno("#5c6166", 0.3, "SIGLA_UF"), True)],
+        "limite_nacional": [("limite", "Limite do país", estilo_contorno(TINTA, 0.6), True)],
+    }
+    cols = ["CD_MUN", "NM_MUN", "SIGLA_UF", "regiao", "lenha_nativa_2015_m3", "lenha_plantada_2015_m3", "lenha_nativa_2025_m3",
+            "lenha_plantada_2025_m3", "lenha_2025_m3", "parcela_nativa", "classe", "faixa", "carvao_nativo_2025_t", "carvao_plantado_2025_t"]
+    pts = pts[cols + ["geometry"]]
+    tam = gravar("lenha", {"lenha": pts, "ufs": ufs, "limite_nacional": lim}, estilos, pts.drop(columns="geometry"))
+
+    def soma(d: pd.DataFrame, ano: int, cat: str) -> float:
+        return float(pevs_serie(d, ano, cat).sum())
+
+    totais = {str(ano): {"lenha_nativa": soma(ext, ano, "3434"), "lenha_plantada": soma(sil, ano, "3456"),
+                         "carvao_nativo": soma(ext, ano, "3433"), "carvao_plantado": soma(sil, ano, "3455")} for ano in (2015, 2025)}
+    uf = pts.groupby("SIGLA_UF")[["lenha_nativa_2025_m3", "lenha_plantada_2025_m3"]].sum()
+    uf = uf.assign(t=uf.sum(axis=1)).sort_values("t", ascending=False)
+
+    def reg(r) -> dict:
+        return {"nome": r.NM_MUN, "uf": r.SIGLA_UF, "m3": float(r.lenha_2025_m3), "nativa": float(r.parcela_nativa),
+                "coord": [round(r.geometry.x, 3), round(r.geometry.y, 3)]}
+
+    gravar_cache("biomassa-br-lenha", {
+        "pontos": [[int(r.classe), round(r.geometry.x, 3), round(r.geometry.y, 3), float(r.lenha_2025_m3)] for r in pts.itertuples()],
+        "classes": [{"classe": i, "rotulo": r, "rotulo_en": en, "cor": c, "municipios": int((pts["classe"] == i).sum()),
+                     "m3": float(pts.loc[pts["classe"] == i, "lenha_2025_m3"].sum())}
+                    for i, ((r, en), c) in enumerate(zip(ROTULOS_NATIVA, CORES_NATIVA))],
+        "totais": totais, "municipios": int(len(pts)),
+        "maiores": [reg(r) for r in pts.head(8).itertuples()],
+        "maiores_nativa": [reg(r) for r in pts.sort_values("lenha_nativa_2025_m3", ascending=False).head(4).itertuples()],
+        "maiores_plantada": [reg(r) for r in pts.sort_values("lenha_plantada_2025_m3", ascending=False).head(4).itertuples()],
+        "ufs": [{"uf": k, "nativa": float(v.lenha_nativa_2025_m3), "plantada": float(v.lenha_plantada_2025_m3)} for k, v in uf.head(8).iterrows()],
+        "tamanhos": tam,
+    })
+    print(tam, len(pts), json.dumps(totais))
+    print(pts.groupby("faixa")["lenha_2025_m3"].agg(["size", "sum"]).to_string())
+    print(pts.head(6)[["NM_MUN", "SIGLA_UF", "lenha_2025_m3", "parcela_nativa"]].to_string())
+    print(uf.head(8).to_string())
+
+
 if __name__ == "__main__":
-    temas = {"boi": boi, "eletricidade": eletricidade, "lavoura": lavoura, "esterco": esterco}
+    temas = {"boi": boi, "eletricidade": eletricidade, "lavoura": lavoura, "esterco": esterco, "floresta": floresta, "lenha": lenha}
     ap = argparse.ArgumentParser()
     ap.add_argument("tema", choices=list(temas))
     temas[ap.parse_args().tema]()

@@ -2,7 +2,7 @@
 /**
  * Coleção «Monitor da biomassa» (Brasil) — desenha uma prancha a partir do cache de preparar.py (uso interno).
  *
- *   node scripts/colecoes/biomassa-br/prancha.mjs boi|eletricidade
+ *   node scripts/colecoes/biomassa-br/prancha.mjs boi|eletricidade|lavoura|esterco|floresta|lenha
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -13,7 +13,7 @@ import {
 import { legendaCirculos } from '../lib/arte.mjs';
 
 export const SERIE = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'biomassa-br', 'serie.json'), 'utf8'));
-const TOTAL = 8; // pranchas previstas na coleção
+const TOTAL = 6; // pranchas da coleção
 const SEM_BOI = '#f6f6f4';
 const SEM_DADO = '#d5d9dd';
 
@@ -430,8 +430,251 @@ async function esterco() {
   });
 }
 
+/* ------------------------------------------------------------------ 5 a floresta que se planta */
+/** Friso: fileiras de eucalipto, troncos retos e copas estreitas, plantados em linha. */
+function talhao(w, h) {
+  const s = [];
+  const n = Math.floor(w / 22);
+  for (let i = 0; i < n; i++) {
+    const x = 11 + i * (w - 22) / (n - 1);
+    const alto = h * (0.7 + 0.3 * Math.abs(Math.sin(i * 1.7)));
+    const topo = h - alto;
+    s.push(`<path d="M${f1(x)} ${h}V${f1(topo + 6)}" stroke="#8a8f84" stroke-width="1.2"/>`);
+    s.push(`<path d="M${f1(x)} ${f1(topo)}c-6 ${f1(alto * 0.18)} -6 ${f1(alto * 0.4)} 0 ${f1(alto * 0.55)}c6 ${f1(-alto * 0.15)} 6 ${f1(-alto * 0.37)} 0 ${f1(-alto * 0.55)}z" fill="none" stroke="#5a8f4e" stroke-width="1.1"/>`);
+  }
+  return s.join('');
+}
+
+async function floresta() {
+  const c = await ler('floresta');
+  const br = JSON.parse(await readFile(join(RAIZ, 'scripts', 'colecoes', 'cache', 'brasil-base.json'), 'utf8'));
+  const mha = (ha, casas = 1) => nf(ha / 1e6, casas);
+  const eu = c.especies.find((e) => e.chave === 'eucalipto');
+  const pin = c.especies.find((e) => e.chave === 'pinus');
+  const ribas = c.maiores[0];
+  const arroio = c.mais_pct_pinus[0];
+  const cel = c.celulose_m3;
+  const ESP = () => c.especies.map((e) => [e.chave, L(e.rotulo, e.rotulo_en)]);
+  // Legenda em grade: uma linha por espécie, uma coluna por faixa da área do município.
+  const grade = (y0) => {
+    const s = [];
+    const cw = 44;
+    const x0 = 128;
+    c.rotulos.forEach(([pt, en], j) => s.push(`<text x="${x0 + j * cw + cw / 2 - 2}" y="${y0}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L(pt, en).replace(/ ?%| ou mais| or more/g, '').replace(' a ', '–').replace(' to ', '–') + (j === 3 ? '+' : ''))}</text>`));
+    let y = y0 + 8;
+    for (const [k, rot] of ESP()) {
+      s.push(`<text x="0" y="${y + 17}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`);
+      c.cores[k].forEach((cor, j) => s.push(`<rect x="${x0 + j * cw}" y="${y}" width="${cw - 4}" height="22" fill="${cor}" stroke="#c9ced3" stroke-width=".6"/>`));
+      y += 28;
+    }
+    s.push(`<text x="${x0 + 2 * cw - 2}" y="${y + 6}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('% da área do município', '% of municipal area'))}</text>`);
+    y += 22;
+    for (const [cor, rot] of [[c.pouca, L('menos de 1 %', 'under 1%')], [SEM_BOI, L('sem floresta plantada registrada', 'no planted forest recorded')], [SEM_DADO, L('sem dado na PEVS', 'no data in the PEVS')]]) {
+      s.push(`<rect x="0" y="${y}" width="34" height="19" fill="${cor}" stroke="#c9ced3" stroke-width=".8"/>`);
+      s.push(`<text x="48" y="${y + 15}" font-family="${SERIF}" font-size="15">${esc(rot)}</text>`);
+      y += 26;
+    }
+    return { svg: s.join('\n'), y };
+  };
+  return () => ({
+    layout: 'um',
+    motivo: talhao,
+    serie: serie(5),
+    titulo: () => L('A floresta que se planta', 'The forest that is planted'),
+    subtitulo: () => L('Eucalipto no Cerrado, pínus no Sul', 'Eucalyptus in the Cerrado, pine in the South'),
+    descricao: () => L(
+      `Área de floresta plantada em 31/12/2025 como parte da área de cada município, com a cor da espécie de maior área, na Produção da Extração Vegetal e da Silvicultura do IBGE`,
+      `Planted forest area on 31/12/2025 as a share of each municipality’s area, coloured by the species with the largest area, in IBGE’s Forestry and Plant Extraction Production survey`),
+    mapa: () => ({
+      preencher: () => '#f1f2f3',
+      bordaMunicipio: 0,
+      semRgint: true,
+      bordaEstado: 2,
+      tamanhoUnidade: 12,
+      camadas: [
+        { feats: c.municipios.features, cor: (f) => f.properties.cor, borda: 'none', largura: 0 },
+        { feats: br.ufs.features, cor: 'none', borda: '#4a4e52', largura: 0.9, opacidade: 1 },
+      ],
+      chamadas: [{
+        coord: ribas.coord, dx: -300, dy: 200,
+        titulo: L(`${nf(ribas.ha / 1000, 0)} MIL HECTARES`, `${nf(ribas.ha / 1000, 0)} THOUSAND HECTARES`),
+        linhas: L([`${ribas.nome} (${ribas.uf}), a maior área plantada:`, `eucalipto em ${nf(ribas.pct, 0)} % do município`],
+          [`${ribas.nome} (${ribas.uf}), the largest planted area:`, `eucalyptus on ${nf(ribas.pct, 0)} % of the municipality`]),
+      }, {
+        coord: arroio.coord, dx: 300, dy: -40,
+        titulo: L(`${nf(arroio.pct, 0)} % DO MUNICÍPIO`, `${nf(arroio.pct, 0)} % OF THE MUNICIPALITY`),
+        linhas: L([`${arroio.nome} (${arroio.uf}): o mais plantado`, 'do país, quase todo de pínus'],
+          [`${arroio.nome} (${arroio.uf}): the most planted`, 'in the country, almost all pine']),
+      }],
+    }),
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('FLORESTA PLANTADA', 'PLANTED FOREST'), 0)];
+      const g = grade(30);
+      s.push(g.svg);
+      return { svg: s.join('\n'), altura: g.y - 8, largura: 310, canto: 'se' };
+    },
+    numeros: () => [
+      [`${mha(c.ha_2025)} Mha`, [L('de floresta plantada,', 'of planted forest,'), L(`${nf(c.pct_brasil, 1)} % do território`, `${nf(c.pct_brasil, 1)} % of the land area`)]],
+      [`${nf((eu.ha_2025 / c.ha_2025) * 100, 0)} %`, [L('dela é eucalipto', 'of it is eucalyptus')]],
+      [L(`${nf(cel[2025] / 1e6, 0)} mi m³`, `${nf(cel[2025] / 1e6, 0)} M m³`), [L('de tora para celulose', 'of pulpwood logs'), L(`em 2025 (+${nf((cel[2025] / cel[2015] - 1) * 100, 0)} % em 10 anos)`, `in 2025 (+${nf((cel[2025] / cel[2015] - 1) * 100, 0)} % in 10 years)`)]],
+      [nf(c.acima_1pct), [L('municípios com mais de', 'municipalities with over'), L('1 % da área plantada', '1 % of their area planted')]],
+    ],
+    painel: (y) => {
+      const s = [rotuloPainel(L('ESPÉCIE DE MAIOR ÁREA · % DA ÁREA DO MUNICÍPIO', 'LEADING SPECIES · % OF MUNICIPAL AREA'), y)];
+      const g = grade(y + 26);
+      s.push(g.svg);
+      y = g.y + 22;
+      s.push(rotuloPainel(L('MILHÕES DE HECTARES · 2015 → 2025', 'MILLION HECTARES · 2015 → 2025'), y));
+      y += 30;
+      const maxH = Math.max(...c.especies.flatMap((e) => [e.ha_2015, e.ha_2025]));
+      for (const e of c.especies) {
+        const w15 = (e.ha_2015 / maxH) * (LP - 250);
+        const w25 = (e.ha_2025 / maxH) * (LP - 250);
+        const v = ((e.ha_2025 / e.ha_2015) - 1) * 100;
+        s.push(`<text x="0" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(e.rotulo, e.rotulo_en))}</text>`);
+        s.push(`<rect x="140" y="${y - 15}" width="${f1(w15)}" height="7" fill="${PAPEL}" stroke="${e.cor}" stroke-width=".8"/>`);
+        s.push(`<rect x="140" y="${y - 6}" width="${f1(w25)}" height="7" fill="${e.cor}"/>`);
+        s.push(`<text x="${f1(148 + Math.max(w15, w25))}" y="${y}" font-family="${MONO}" font-size="12.5">${mha(e.ha_2025, 2)}</text>`);
+        s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="12.5" fill="${v < 0 ? CINZA : '#2a5530'}">${v > 0 ? '+' : '−'}${nf(Math.abs(v), 0)} %</text>`);
+        y += 30;
+      }
+      y += 16;
+      s.push(rotuloPainel(L('ONDE ESTÁ · MIL HECTARES', 'WHERE IT IS · THOUSAND HECTARES'), y));
+      y += 26;
+      const maxU = c.ufs[0].ha;
+      for (const u of c.ufs.slice(0, 6)) {
+        const w = (u.ha / maxU) * (LP - 120);
+        s.push(`<text x="0" y="${y}" font-family="${MONO}" font-size="13">${u.uf}</text>`);
+        s.push(`<rect x="40" y="${y - 11}" width="${f1(w)}" height="12" fill="${eu.cor}" fill-opacity=".8"/>`);
+        s.push(`<text x="${f1(48 + w)}" y="${y}" font-family="${MONO}" font-size="12.5">${nf(u.ha / 1000)}</text>`);
+        y += 22;
+      }
+      return { svg: s.join('\n'), y: y - 8 };
+    },
+    fontes: () => [
+      L('IBGE, Extração Vegetal e Silvicultura (PEVS) 2015 e 2025', 'IBGE, Forestry and Plant Extraction (PEVS) 2015 and 2025'),
+      L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025'),
+    ],
+  });
+}
+
+/* ------------------------------------------------------------------ 6 lenha da mata ou plantada */
+async function lenha() {
+  const c = await ler('lenha');
+  const COR = Object.fromEntries(c.classes.map((k) => [k.classe, k.cor]));
+  const raio = (m3) => 1.4 + 0.021 * Math.sqrt(m3);
+  const mi3 = (v, casas = 1) => nf(v / 1e6, casas);
+  const t15 = c.totais['2015'];
+  const t25 = c.totais['2025'];
+  const lenhaTot = t25.lenha_nativa + t25.lenha_plantada;
+  const nat = c.maiores_nativa[0];
+  const pla = c.maiores_plantada[0];
+  const pontos = c.pontos.map(([k, lon, lat, m3]) => ({ coord: [lon, lat], r: raio(m3), cor: COR[k], opacidade: 0.82, bordaLargura: Math.min(0.9, 0.25 * raio(m3)) }));
+  const classe = (k, y) => `<circle cx="12" cy="${y - 6}" r="8" fill="${k.cor}" fill-opacity=".85" stroke="${PAPEL}"/>
+<text x="32" y="${y}" font-family="${SERIF}" font-size="16">${esc(L(k.rotulo, k.rotulo_en))}</text>`;
+  const ordem = () => [...c.classes].reverse();
+  const circulos = (y) => legendaCirculos([800000, 200000, 20000], raio, (v) => L(`${nf(v / 1000)} mil m³`, `${nf(v / 1000)} thousand m³`), { y, cor: CINZA });
+  const NAT = c.classes[3].cor;
+  const PLA = c.classes[0].cor;
+  // Barra dupla: nativa à esquerda, plantada em seguida, na mesma escala.
+  const barra = (rot, n, p, max, y, un) => {
+    const wn = (n / max) * (LP - 150);
+    const wp = (p / max) * (LP - 150);
+    return [`<text x="0" y="${y}" font-family="${SERIF}" font-size="16">${esc(rot)}</text>`,
+      `<rect x="60" y="${y - 13}" width="${f1(wn)}" height="14" fill="${NAT}"/>`,
+      `<rect x="${f1(60 + wn)}" y="${y - 13}" width="${f1(wp)}" height="14" fill="${PLA}"/>`,
+      `<text x="${f1(68 + wn + wp)}" y="${y}" font-family="${MONO}" font-size="12.5">${nf(((n) / (n + p)) * 100, 0)} % ${L('nativa', 'native')}</text>`].join('\n') + (un ?? '');
+  };
+  return () => ({
+    layout: 'um',
+    motivo: 'agro',
+    serie: serie(6),
+    titulo: () => L('Lenha da mata ou plantada', 'Firewood: native or planted'),
+    subtitulo: () => L('O Sul queima eucalipto; o Sertão, a mata', 'The South burns eucalyptus; the Sertão, native wood'),
+    descricao: () => L(
+      `Lenha produzida em 2025 em cada município: a da extração vegetal (mata nativa) e a da silvicultura (floresta plantada), na Produção da Extração Vegetal e da Silvicultura do IBGE`,
+      `Firewood produced in 2025 in each municipality: from plant extraction (native forest) and from forestry (planted forest), in IBGE’s Forestry and Plant Extraction Production survey`),
+    mapa: () => ({
+      preencher: () => '#f1f2f3',
+      bordaMunicipio: 0.9,
+      bordaUnidadeCor: '#c9ced3',
+      semRgint: true,
+      bordaEstado: 2,
+      tamanhoUnidade: 12,
+      pontos,
+      chamadas: [{
+        coord: nat.coord, dx: -250, dy: 170,
+        titulo: L(`${nf(nat.m3 / 1000, 0)} MIL M³ DE LENHA`, `${nf(nat.m3 / 1000, 0)} THOUSAND M³ OF FIREWOOD`),
+        linhas: L([`${nat.nome} (${nat.uf}), a maior do país:`, `${nf(nat.nativa * 100, 0)} % tirada da mata nativa`],
+          [`${nat.nome} (${nat.uf}), the country’s largest:`, `${nf(nat.nativa * 100, 0)} % cut from native forest`]),
+      }, {
+        coord: pla.coord, dx: 330, dy: -110,
+        titulo: L(`${nf(pla.m3 / 1000, 0)} MIL M³ PLANTADOS`, `${nf(pla.m3 / 1000, 0)} THOUSAND M³ PLANTED`),
+        linhas: L([`${pla.nome} (${pla.uf}): lenha de eucalipto`, 'para secar grão e tocar caldeira'],
+          [`${pla.nome} (${pla.uf}): eucalyptus firewood`, 'to dry grain and fire boilers']),
+      }],
+    }),
+    legendaFigura: () => {
+      const s = [rotuloPainel(L('ORIGEM DA LENHA', 'WHERE THE FIREWOOD COMES FROM'), 0)];
+      let y = 26;
+      for (const k of ordem()) { s.push(classe(k, y)); y += 25; }
+      y += 22;
+      s.push(rotuloPainel(L('LENHA EM 2025', 'FIREWOOD IN 2025'), y));
+      const lc = circulos(y + 18);
+      s.push(lc.svg);
+      y += 18 + lc.altura;
+      return { svg: s.join('\n'), altura: y, largura: 270, canto: 'se' };
+    },
+    numeros: () => [
+      [L(`${mi3(lenhaTot, 0)} mi m³`, `${mi3(lenhaTot, 0)} M m³`), [L('de lenha em 2025', 'of firewood in 2025')]],
+      [`${nf((t25.lenha_nativa / lenhaTot) * 100, 0)} %`, [L('vêm da mata nativa', 'come from native forest'), L(`(${nf((t15.lenha_nativa / (t15.lenha_nativa + t15.lenha_plantada)) * 100, 0)} % em 2015)`, `(${nf((t15.lenha_nativa / (t15.lenha_nativa + t15.lenha_plantada)) * 100, 0)} % in 2015)`)]],
+      [`${nf((t25.carvao_plantado / (t25.carvao_plantado + t25.carvao_nativo)) * 100, 0)} %`, [L('do carvão vegetal', 'of charcoal'), L('já é de floresta plantada', 'now comes from planted forest')]],
+      [nf(c.classes[3].municipios), [L('municípios queimam', 'municipalities burn'), L('quase só lenha nativa', 'almost only native wood')]],
+    ],
+    painel: (y) => {
+      const s = [rotuloPainel(L('ORIGEM DA LENHA · MUNICÍPIOS · MI M³', 'FIREWOOD ORIGIN · MUNICIPALITIES · MILLION M³'), y)];
+      y += 26;
+      for (const k of ordem()) {
+        s.push(classe(k, y));
+        s.push(`<text x="${LP - 92}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13" fill="${CINZA}">${nf(k.municipios)}</text>`);
+        s.push(`<text x="${LP}" y="${y}" text-anchor="end" font-family="${MONO}" font-size="13">${mi3(k.m3)}</text>`);
+        y += 25;
+      }
+      y += 30;
+      s.push(rotuloPainel(L('NATIVA E PLANTADA · 2015 → 2025', 'NATIVE AND PLANTED · 2015 → 2025'), y));
+      y += 28;
+      const maxL = Math.max(t15.lenha_nativa + t15.lenha_plantada, lenhaTot);
+      s.push(`<text x="0" y="${y}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('LENHA, MI M³', 'FIREWOOD, MILLION M³'))}</text>`);
+      y += 22;
+      for (const [ano, t] of [['2015', t15], ['2025', t25]]) {
+        s.push(barra(ano, t.lenha_nativa, t.lenha_plantada, maxL, y));
+        y += 24;
+      }
+      y += 8;
+      const maxC = Math.max(t15.carvao_nativo + t15.carvao_plantado, t25.carvao_nativo + t25.carvao_plantado);
+      s.push(`<text x="0" y="${y}" font-family="${MONO}" font-size="11" fill="${CINZA}">${esc(L('CARVÃO VEGETAL, MI T', 'CHARCOAL, MILLION T'))}</text>`);
+      y += 22;
+      for (const [ano, t] of [['2015', t15], ['2025', t25]]) {
+        s.push(barra(ano, t.carvao_nativo, t.carvao_plantado, maxC, y));
+        y += 24;
+      }
+      s.push(`<rect x="0" y="${y - 4}" width="22" height="10" fill="${NAT}"/><text x="30" y="${y + 5}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('mata nativa', 'native forest')}</text>`);
+      s.push(`<rect x="150" y="${y - 4}" width="22" height="10" fill="${PLA}"/><text x="180" y="${y + 5}" font-family="${MONO}" font-size="11" fill="${CINZA}">${L('floresta plantada', 'planted forest')}</text>`);
+      y += 40;
+      s.push(rotuloPainel(L('LENHA EM 2025', 'FIREWOOD IN 2025'), y));
+      const lc = circulos(y + 18);
+      s.push(lc.svg);
+      return { svg: s.join('\n'), y: y + 18 + lc.altura };
+    },
+    fontes: () => [
+      L('IBGE, Extração Vegetal e Silvicultura (PEVS) 2015 e 2025', 'IBGE, Forestry and Plant Extraction (PEVS) 2015 and 2025'),
+      L('IBGE, Malha Municipal 2025', 'IBGE, Municipal Mesh 2025'),
+    ],
+  });
+}
+
 /* ------------------------------------------------------------------ */
-const TEMAS = { boi, eletricidade, lavoura, esterco };
+const TEMAS = { boi, eletricidade, lavoura, esterco, floresta, lenha };
 const nome = process.argv[2];
 if (!TEMAS[nome]) {
   console.error(`uso: node scripts/colecoes/biomassa-br/prancha.mjs <${Object.keys(TEMAS).join('|')}>`);
