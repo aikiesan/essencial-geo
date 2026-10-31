@@ -1,5 +1,5 @@
 {
-  "title": "Essencial Geo: atlas aberto de mapas temáticos do Brasil",
+  "title": "Essencial: atlas aberto de mapas temáticos do Brasil",
   "description": "Feed cartográfico, repositório de dados abertos e portfólio contínuo de mapas temáticos do Brasil. Cada prancha acompanha as camadas em GeoPackage, com estilos do QGIS, sistema de referência declarado (SIRGAS 2000) e método descrito passo a passo.",
   "upload_type": "dataset",
   "license": "cc-by-4.0",

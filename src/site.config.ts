@@ -1,11 +1,11 @@
 /**
- * Configuração central do Essencial Geo.
+ * Configuração central do Essencial.
  * Tudo que é identidade, autoria e links vive aqui — os componentes só leem.
  * Itens marcados com TODO precisam ser preenchidos antes do primeiro deploy.
  */
 
 export const SITE = {
-  nome: 'Essencial Geo',
+  nome: 'Essencial',
   licenca: {
     nome: 'CC BY 4.0',
     url: { pt: 'https://creativecommons.org/licenses/by/4.0/deed.pt-br', en: 'https://creativecommons.org/licenses/by/4.0/deed.en' },
@@ -308,6 +308,16 @@ export const COLECOES = {
     en: {
       titulo: 'Bioenergy, crossed',
       resumo: 'Five crossings of São Paulo’s bioenergy with what filling stations sell, with the countryside and with town halls: cane and ethanol, biomethane and diesel, eucalyptus and forest, cattle and fertiliser, and small towns far from the pipeline.',
+    },
+  },
+  'biomassa-br': {
+    pt: {
+      titulo: 'Monitor da biomassa',
+      resumo: 'O que o Brasil produz de biomassa, município a município, com dados abertos que se renovam todo ano: rebanhos, lavouras, florestas plantadas, lenha e as usinas que transformam tudo isso em energia.',
+    },
+    en: {
+      titulo: 'Biomass monitor',
+      resumo: 'What Brazil produces as biomass, municipality by municipality, with open data renewed every year: herds, crops, planted forests, firewood and the plants that turn it all into energy.',
     },
   },
 } as const;

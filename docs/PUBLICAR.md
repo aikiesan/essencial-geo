@@ -1,4 +1,4 @@
-# Publicar no Essencial Geo
+# Publicar no Essencial
 
 Três guias trabalham juntos:
 

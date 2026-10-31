@@ -1,6 +1,6 @@
 # Estilo: o site e as pranchas
 
-O Essencial Geo deve parecer feito num ateliê de cartografia, não gerado por um painel corporativo.
+O Essencial deve parecer feito num ateliê de cartografia, não gerado por um painel corporativo.
 Referências: pranchas de arquitetura, atlas impressos, o selo (carimbo) de desenho técnico, a planta de
 Nolli, as ilustrações de Saint-Exupéry — estas só como eco distante (uma estrela, um pequeno planeta).
 
@@ -115,7 +115,7 @@ A série «Brasil, estado por estado» (`scripts/estados/prancha.mjs`, a partir 
 fixa a linguagem que os demais mapas devem seguir, também no layout do QGIS.
 
 **Formato.** Paisagem 4:3 (ex.: A3 ou 2400 × 1800 px na prévia). Área do mapa à esquerda; à direita, uma
-faixa vertical com: “ESSENCIAL GEO” em versal espaçada, número da prancha grande, título, subtítulo em
+faixa vertical com: “ESSENCIAL” em versal espaçada, número da prancha grande, título, subtítulo em
 itálico, legenda, norte e escala gráfica, e o **carimbo** (Projeto, Prancha, Data, CRS, Fonte, Licença).
 
 A faixa lateral é o modelo de partida, não uma regra fixa. Quando o recorte pede, por exemplo um
@@ -164,7 +164,7 @@ com os desenhos do CP2b (`cp2b-avatar-gradient.svg`).
 | 2 | **Molécula** | Carimbo, na linha da licença | A molécula do CP2b (biogás), 20 px, em laranja `#d37402`. É a marca do autor. |
 | 3 | **Lema** | Moldura de baixo | «O essencial é invisível aos olhos» (EN: *What is essential is invisible to the eye*), em mono de 3 px, repetido. Na tela é um fio pontilhado; só se lê ampliando. |
 | 4 | **Estrela** | Sob a estrela dourada do cabeçalho | A estrela que representa a UF na Bandeira Nacional (Lei 5.700/1971): designação de Bayer e nome próprio, em mono de 3,5 px — “α CRUCIS · ACRUX” para São Paulo. |
-| 5 | **Assinatura** | Moldura de cima | Autor, ORCID, NIPE/UNICAMP, CP2b e Essencial Geo, em mono de 3 px, como os cartógrafos suíços escondiam seus nomes nas cartas. |
+| 5 | **Assinatura** | Moldura de cima | Autor, ORCID, NIPE/UNICAMP, CP2b e Essencial, em mono de 3 px, como os cartógrafos suíços escondiam seus nomes nas cartas. |
 
 **Regras.** Os segredos são discretos por definição: não aumente tamanho nem opacidade para “aparecerem”.
 A folha vai para o canto com menos território (excluído o do localizador); como é sombra, não esconde o dado
@@ -195,7 +195,7 @@ coluna à parte: recortar a figura para tirar o crédito corta o mapa junto.
 | Escala de duas casas e, logo abaixo, o sistema em duas linhas: «SIRGAS 2000 · projeção» e «λ₀ · φ₀» | Localizador, norte em folha, microtextos, molécula |
 | Norte simples (seta meio cheia, N) no canto de cima que a legenda não ocupa | Chamadas, destaques, notas, números, estatísticas |
 | Rótulos de vizinhos, oceano, capital e regiões | Contagens por classe e barras dentro da legenda |
-| Linha de crédito na borda de baixo: fontes à esquerda; «Mapa: Essencial Geo Nº NNN · Cerejo, L. N. (ano) · CC BY 4.0 · DOI ou endereço» à direita | |
+| Linha de crédito na borda de baixo: fontes à esquerda; «Mapa: Essencial Nº NNN · Cerejo, L. N. (ano) · CC BY 4.0 · DOI ou endereço» à direita | |
 
 **Regras.** Sem título dentro da figura: quem a usa escreve a legenda (caption) do próprio trabalho. A
 legenda do mapa explica todo símbolo que aparece nele, e nada além. As cores são as da prancha, para que

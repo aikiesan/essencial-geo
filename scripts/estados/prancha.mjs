@@ -783,7 +783,7 @@ function painel() {
   let y = 0;
 
   // Cabeçalho.
-  s.push(`<text x="0" y="62" font-family="${MONO}" font-size="17" letter-spacing="5">ESSENCIAL GEO</text>`);
+  s.push(`<text x="0" y="62" font-family="${MONO}" font-size="17" letter-spacing="5">ESSENCIAL</text>`);
   s.push(`<path d="M0 86H${LP}" stroke="${TINTA}" stroke-width="1.6"/>`);
   s.push(`<text x="0" y="176" font-family="${SERIF}" font-size="76">${tr('Nº')} ${String(NUMERO).padStart(3, '0')}</text>`);
   s.push(`<path d="M${LP - 34} 132l5.2 12.3 13.3 1.1-10.1 8.8 3 13-11.4-6.9-11.4 6.9 3-13-10.1-8.8 13.3-1.1z" fill="${OURO}"/>`);
@@ -846,7 +846,7 @@ function painel() {
   const dataTxt = DATA.toLocaleDateString(LINGUA === 'en' ? 'en-GB' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
   const gr = (v, h) => `${nf(Math.abs(v), 1)}° ${h}`;
   const carimbo = [
-    ['PRANCHA', [`Essencial Geo · ${tr('Nº')} ${String(NUMERO).padStart(3, '0')}`]],
+    ['PRANCHA', [`Essencial · ${tr('Nº')} ${String(NUMERO).padStart(3, '0')}`]],
     ['DATA', [dataTxt]],
     ['PROJEÇÃO', [`SIRGAS 2000 · ${tr('Transversa de Mercator')}`, `λ₀ ${gr(LON0, LINGUA === 'en' ? 'W' : 'O')} · φ₀ ${gr(LAT0, 'S')}`]],
     ['FONTES', FONTES()],
@@ -955,7 +955,7 @@ function figura(doi, { semBase = false } = {}) {
   const yEsc = yL + leg.y * ESC_LEG + 40;
   const fonte = `${tr('Fonte')}: ${FONTES().join(' · ')}`;
   const onde = doi ? `doi.org/${doi}` : `aikiesan.github.io/essencial-geo/${LINGUA === 'en' ? 'en/maps' : 'mapas'}/${opt.pasta}`;
-  const credito = `${tr('Mapa')}: Essencial Geo ${tr('Nº')} ${String(NUMERO).padStart(3, '0')} · Cerejo, L. N. (${DATA.getUTCFullYear()}) · CC BY 4.0 · ${onde}`;
+  const credito = `${tr('Mapa')}: Essencial ${tr('Nº')} ${String(NUMERO).padStart(3, '0')} · Cerejo, L. N. (${DATA.getUTCFullYear()}) · CC BY 4.0 · ${onde}`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${FW}" height="${FH}" viewBox="0 0 ${FW} ${FH}">
 <title>${esc(`${N.nome} — ${tr('Divisão territorial e rodovias')}`)}</title>
 ${HALO}

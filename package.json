@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Essencial Geo — feed cartográfico, repositório de dados abertos e portfólio de mapas temáticos do Brasil.",
+  "description": "Essencial — feed cartográfico, repositório de dados abertos e portfólio de mapas temáticos do Brasil.",
   "license": "CC-BY-4.0",
   "scripts": {
     "sincronizar": "node scripts/sincronizar-mapas.mjs",

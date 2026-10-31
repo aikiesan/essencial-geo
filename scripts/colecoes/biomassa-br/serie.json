@@ -1,0 +1,8 @@
+[
+ { "tema": "boi", "numero": 126, "pasta": "126-mais-boi-que-gente-brasil", "base": "br_bois_por_habitante", "data": "2026-12-01", "categoria": "energia" },
+ { "tema": "eletricidade", "numero": 127, "pasta": "127-eletricidade-da-biomassa-brasil", "base": "br_usinas_biomassa", "data": "2026-12-02", "categoria": "energia" },
+ { "tema": "lavoura", "numero": 128, "pasta": "128-a-lavoura-que-manda-brasil", "base": "br_lavoura_lider", "data": "2026-12-03", "categoria": "uso-do-solo" },
+ { "tema": "esterco", "numero": 129, "pasta": "129-onde-esta-o-esterco-brasil", "base": "br_unidades_animais", "data": "2026-12-04", "categoria": "energia" },
+ { "tema": "floresta", "numero": 130, "pasta": "130-a-floresta-que-se-planta-brasil", "base": "br_floresta_plantada", "data": "2026-12-05", "categoria": "uso-do-solo" },
+ { "tema": "lenha", "numero": 131, "pasta": "131-lenha-da-mata-ou-plantada-brasil", "base": "br_lenha_origem", "data": "2026-12-06", "categoria": "energia" }
+]
