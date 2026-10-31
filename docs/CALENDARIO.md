@@ -29,7 +29,7 @@ Duas ressalvas do GitHub Actions:
 
 ## A rotina: produção em lote, publicação em dias fixos
 
-**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11). O resguardo de artigos de 21/10 pôs as três em rascunho, e em 28/10 «Bioenergia cruzada» (111 a 115) passou para 03/11; depois dela, a fila está vazia.
+**Cadência:** uma coleção por semana, inteira, toda terça às 9h de Brasília (12h UTC), no mesmo dia do post do LinkedIn. A série dos estados entrou em 17 e 18/10; as coleções 028 a 092 entraram juntas em 20/10. Fica sempre uma reserva de duas ou três coleções prontas na fila (em 20/10: «O Censo cruzado» em 27/10, «Mulheres responsáveis pelo domicílio» em 03/11, «O funil do biometano» em 10/11). O resguardo de artigos de 21/10 pôs as três em rascunho, e em 28/10 «Bioenergia cruzada» (111 a 115) passou para 03/11. Em 31/10 o «Monitor da biomassa» (126 a 131) entrou na fila, uma prancha por dia de 01 a 06/12, com DOI automático.
 
 | Quando | O quê |
 | --- | --- |
@@ -140,10 +140,16 @@ uma frase («A colheita que acende a rede»), e cada coleção tem um friso dese
 | 02/11 | seg | 042 | Energia elétrica no Brasil (`energia-eletrica`) 1/3 | Linhas de transmissão e subestações | EPE (via MapBiomas) |
 | 03/11 | ter | 043 | Energia elétrica no Brasil 2/3 | Usinas por fonte | ANEEL — SIGA (via MapBiomas) |
 | 04/11 | qua | 044 | Energia elétrica no Brasil 3/3 | Geração solar distribuída por habitante | ANEEL — GD (10/2026), IBGE — Censo 2022 |
+| 01/12 | ter | 126 | Monitor da biomassa (`biomassa-br`) 1/6 | Mais boi que gente | IBGE — PPM 2024, Censo 2022 |
+| 02/12 | qua | 127 | Monitor da biomassa 2/6 | Eletricidade da biomassa | ANEEL — SIGA |
+| 03/12 | qui | 128 | Monitor da biomassa 3/6 | A lavoura que manda | IBGE — PAM 2024 |
+| 04/12 | sex | 129 | Monitor da biomassa 4/6 | Onde está o esterco | IBGE — PPM 2024, FAO |
+| 05/12 | sáb | 130 | Monitor da biomassa 5/6 | A floresta que se planta | IBGE — PEVS 2025 |
+| 06/12 | dom | 131 | Monitor da biomassa 6/6 | Lenha da mata ou plantada | IBGE — PEVS 2025 |
 
 **Antes de cada saída:** os GPKG compactados e as pranchas em SVG de cada coleção vão para os anexos de
 uma release própria (`bioenergia-sp-2026`, `rmc-2026`, `agua-sp-2026`, `relevo-2026`,
-`energia-eletrica-2026`, `funil-sp-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
+`energia-eletrica-2026`, `funil-sp-2026`, `biomassa-br-2026`), referenciada por `url:`/`url_en:` nos READMEs. Suba a release da coleção antes
 do push da primeira prancha dela.
 
 ## Pautas para depois da série

@@ -3,7 +3,7 @@ numero: 127
 titulo: "A eletricidade da biomassa"
 subtitulo: "O bagaço que acende a rede"
 data: 2026-12-02
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: energia
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, eletricidade, termeletricas, bagaco-de-cana, licor-negro, biogas, aneel, siga]

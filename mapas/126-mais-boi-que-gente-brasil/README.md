@@ -3,7 +3,7 @@ numero: 126
 titulo: "Mais boi que gente"
 subtitulo: "O rebanho que pasta onde mora pouca gente"
 data: 2026-12-01
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: energia
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, pecuaria, bovinos, rebanho, ppm, censo-2022, municipios]

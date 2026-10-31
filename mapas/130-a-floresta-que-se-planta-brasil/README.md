@@ -3,7 +3,7 @@ numero: 130
 titulo: "A floresta que se planta"
 subtitulo: "Eucalipto no Cerrado, pínus no Sul"
 data: 2026-12-05
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: uso-do-solo
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, silvicultura, floresta-plantada, eucalipto, pinus, celulose, pevs, municipios]

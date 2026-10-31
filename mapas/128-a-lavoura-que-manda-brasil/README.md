@@ -3,7 +3,7 @@ numero: 128
 titulo: "A lavoura que manda"
 subtitulo: "A cultura de maior área em cada município"
 data: 2026-12-03
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: uso-do-solo
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, agricultura, lavouras, soja, milho, cana-de-acucar, pam, municipios]

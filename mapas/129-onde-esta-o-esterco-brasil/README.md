@@ -3,7 +3,7 @@ numero: 129
 titulo: "Onde está o esterco"
 subtitulo: "Boi, porco e galinha na mesma conta"
 data: 2026-12-04
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: energia
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, pecuaria, esterco, biogas, unidade-animal, suinos, galinaceos, ppm, municipios]

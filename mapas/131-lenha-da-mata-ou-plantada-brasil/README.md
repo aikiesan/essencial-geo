@@ -3,7 +3,7 @@ numero: 131
 titulo: "Lenha da mata ou plantada"
 subtitulo: "O Sul queima eucalipto; o Sertão, a mata"
 data: 2026-12-06
-rascunho: true                      # prévia: aguarda a aprovação da coleção e a data no calendário
+rascunho: false
 categoria: energia
 colecao: biomassa-br
 tags: [biomassa-br, brasil, biomassa, lenha, carvao-vegetal, extracao-vegetal, silvicultura, caatinga, pevs, municipios]
