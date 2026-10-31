@@ -93,14 +93,14 @@ const metadata = {
     `<p><strong>Recorte:</strong> ${escapar(fm.recorte)}<br><strong>Sistema de referência:</strong> ${ref(fm.crs)}${fm.escala ? `<br><strong>Escala:</strong> ${escapar(fm.escala)}` : ''}</p>`,
     `<p><strong>Fontes:</strong></p><ul>${lista('nome')}</ul>`,
     fm.metodo ? `<p><strong>Método:</strong> ${escapar(fm.metodo)}</p>` : '',
-    `<p>Prancha nº ${fm.numero} do atlas Essencial Geo — <a href="${paginaMapa}">${paginaMapa}</a></p>`,
+    `<p>Prancha nº ${fm.numero} do atlas Essencial — <a href="${paginaMapa}">${paginaMapa}</a></p>`,
     `<hr>`,
     `<p><strong>[EN-GB] ${escapar(tituloEn)}</strong></p>`,
     `<p>${escapar(en.contexto)}</p>`,
     `<p><strong>Extent:</strong> ${escapar(en.recorte ?? fm.recorte)}<br><strong>Reference system:</strong> ${ref(fm.crs)}${(en.escala ?? fm.escala) ? `<br><strong>Scale:</strong> ${escapar(en.escala ?? fm.escala)}` : ''}</p>`,
     `<p><strong>Sources:</strong></p><ul>${lista('nome_en')}</ul>`,
     (en.metodo ?? fm.metodo) ? `<p><strong>Method:</strong> ${escapar(en.metodo ?? fm.metodo)}</p>` : '',
-    `<p>Plate no. ${fm.numero} of the Essencial Geo atlas — <a href="${paginaMapaEn}">${paginaMapaEn}</a></p>`,
+    `<p>Plate no. ${fm.numero} of the Essencial atlas — <a href="${paginaMapaEn}">${paginaMapaEn}</a></p>`,
   ].join(''),
   notes: `English title: ${tituloEn}`,
   creators: criadores,
@@ -164,7 +164,7 @@ if (simular) {
 /* ---------- API ---------------------------------------------------------- */
 // O Zenodo barra clientes anônimos vindos de redes de nuvem (o fetch do Node se apresenta só
 // como "node"): o script se identifica, com o endereço do projeto.
-const AGENTE = 'EssencialGeo/1.0 (+https://github.com/aikiesan/essencial-geo)';
+const AGENTE = 'Essencial/1.0 (+https://github.com/aikiesan/essencial-geo)';
 
 async function chamar(metodo, url, corpo, tipo = 'application/json') {
   const r = await fetch(url.startsWith('http') ? url : `${API}${url}`, {

@@ -1,4 +1,4 @@
-# ESSENCIAL GEO
+# ESSENCIAL
 
 *O essencial é invisível aos olhos — até ser traduzido em um mapa.*
 

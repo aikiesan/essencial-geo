@@ -75,7 +75,7 @@ const PAGINA = (cofre) => `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Painel do atlas — Essencial Geo</title>
+<title>Painel do atlas — Essencial</title>
 <style>
 :root { --papel: #f6f7f8; --folha: #ffffff; --tinta: #1a211a; --tinta-3: #6d7165; --linha: #1a211a; --linha-fina: #d6d9d4; --acento: #3d6a82; --argila: #9c4a32; }
 @media (prefers-color-scheme: dark) { :root { --papel: #16181a; --folha: #1f2326; --tinta: #dfd5c4; --tinta-3: #9a9d92; --linha: #bfa88a; --linha-fina: #343a33; --acento: #749fb7; --argila: #d47a5c; } }
@@ -95,7 +95,7 @@ button:disabled { cursor: progress; opacity: 0.7; }
 </head>
 <body>
 <form id="entrar">
-  <p class="rotulo">Essencial Geo · Admin</p>
+  <p class="rotulo">Essencial · Admin</p>
   <h1>Painel do atlas</h1>
   <label for="senha">Senha</label>
   <input id="senha" type="password" autocomplete="current-password" required autofocus>

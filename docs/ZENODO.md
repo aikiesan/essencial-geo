@@ -1,6 +1,6 @@
 # Zenodo, DOI e ORCID
 
-Cada prancha do Essencial Geo vira um **registro próprio no Zenodo**, com DOI, arquivos e metadados nas duas
+Cada prancha do Essencial vira um **registro próprio no Zenodo**, com DOI, arquivos e metadados nas duas
 línguas. Este guia é a configuração — feita uma vez — e o uso no dia a dia.
 
 > **Segurança.** Tokens são senhas. Gere-os no Zenodo e cole-os direto no GitHub (passo 4); nunca os
@@ -21,7 +21,7 @@ A comunidade é a “estante” do atlas no Zenodo: todos os mapas aparecem junt
 `https://zenodo.org/communities/essencial-geo`.
 
 1. **Communities → New community.**
-2. *Identifier (URL)*: `essencial-geo` · *Title*: `Essencial Geo` · *Type*: `project`.
+2. *Identifier (URL)*: `essencial-geo` · *Title*: `Essencial` · *Type*: `project`.
 3. Descrição bilíngue curta, por exemplo:
    *Atlas aberto de mapas temáticos do Brasil — pranchas, bases vetoriais (GPKG/DXF) e método.
    / Open atlas of thematic maps of Brazil — plates, vector data (GPKG/DXF) and method.*

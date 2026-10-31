@@ -549,7 +549,7 @@ function escala(pxKm, alvoPx = 300) {
 /* ------------------------------------------------------------------ painel */
 function cabecalho(tema, numero) {
   const s = [];
-  s.push(`<text x="0" y="62" font-family="${MONO}" font-size="17" letter-spacing="5">ESSENCIAL GEO</text>`);
+  s.push(`<text x="0" y="62" font-family="${MONO}" font-size="17" letter-spacing="5">ESSENCIAL</text>`);
   s.push(`<path d="M0 86H${LP}" stroke="${TINTA}" stroke-width="1.6"/>`);
   s.push(`<text x="0" y="176" font-family="${SERIF}" font-size="76">${tr('Nº')} ${String(numero).padStart(3, '0')}</text>`);
   s.push(`<path d="M${LP - 34} 132l5.2 12.3 13.3 1.1-10.1 8.8 3 13-11.4-6.9-11.4 6.9 3-13-10.1-8.8 13.3-1.1z" fill="${OURO}"/>`);
@@ -602,7 +602,7 @@ function carimbo(tema, numero, data, yFim) {
   const dataTxt = data.toLocaleDateString(LINGUA === 'en' ? 'en-GB' : 'pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'UTC' });
   const fontes = tema.fontes();
   const linhas = [
-    ['PRANCHA', [`Essencial Geo · ${tr('Nº')} ${String(numero).padStart(3, '0')}`]],
+    ['PRANCHA', [`Essencial · ${tr('Nº')} ${String(numero).padStart(3, '0')}`]],
     ['DATA', [dataTxt]],
     ['PROJEÇÃO', B.carimbo()],
     ['FONTES', fontes],
@@ -764,7 +764,7 @@ function norteSimples(cx, cy, h = 64) {
 function credito(tema, numero, data, { pasta, doi }, w) {
   const fonte = `${tr('Fonte')}: ${tema.fontes().join(' · ')}`;
   const onde = doi ? `doi.org/${doi}` : `aikiesan.github.io/essencial-geo/${LINGUA === 'en' ? 'en/maps' : 'mapas'}/${pasta}`;
-  const mapa = `${tr('Mapa')}: Essencial Geo ${tr('Nº')} ${String(numero).padStart(3, '0')} · Cerejo, L. N. (${data.getUTCFullYear()}) · CC BY 4.0 · ${onde}`;
+  const mapa = `${tr('Mapa')}: Essencial ${tr('Nº')} ${String(numero).padStart(3, '0')} · Cerejo, L. N. (${data.getUTCFullYear()}) · CC BY 4.0 · ${onde}`;
   let t = 16;
   while (t > 12 && largura(fonte, t, { mono: true }) + largura(mapa, t, { mono: true }) > w - 120) t -= 1;
   // Ainda longa demais: as fontes sobem para uma linha própria.

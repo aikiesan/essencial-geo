@@ -1,5 +1,5 @@
 /**
- * Assinatura do Essencial Geo: cinco pequenos segredos que toda prancha leva.
+ * Assinatura do Essencial: cinco pequenos segredos que toda prancha leva.
  * Nenhum deles se confunde com geografia: a folha é a rosa dos ventos, o resto fica
  * no painel e na moldura.
  *
@@ -27,7 +27,7 @@ export const MOLECULA =
 export const LARANJA = '#d37402';
 
 /** Autor e ORCID (os mesmos de src/site.config.ts → AUTORIA). */
-export const ASSINATURA = 'LUCAS NAKAMURA CEREJO · ORCID 0000-0002-9292-2752 · NIPE/UNICAMP · CP2B · ESSENCIAL GEO';
+export const ASSINATURA = 'LUCAS NAKAMURA CEREJO · ORCID 0000-0002-9292-2752 · NIPE/UNICAMP · CP2B · ESSENCIAL';
 
 /**
  * A estrela de cada UF na Bandeira Nacional: [designação de Bayer, nome próprio (IAU)].

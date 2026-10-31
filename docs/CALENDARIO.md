@@ -1,6 +1,6 @@
 # Calendário editorial
 
-O Essencial Geo publica como um jornal: **todo mapa e toda nota têm data**, e a data aparece no topo, como
+O Essencial publica como um jornal: **todo mapa e toda nota têm data**, e a data aparece no topo, como
 linha de data de notícia (“Publicado em segunda-feira, 26 de outubro de 2026”). A data não é enfeite. Ela:
 
 - diz ao leitor **quando** aquele retrato do território foi feito, e com dados de que ano;

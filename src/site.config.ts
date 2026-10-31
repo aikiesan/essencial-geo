@@ -1,11 +1,11 @@
 /**
- * Configuração central do Essencial Geo.
+ * Configuração central do Essencial.
  * Tudo que é identidade, autoria e links vive aqui — os componentes só leem.
  * Itens marcados com TODO precisam ser preenchidos antes do primeiro deploy.
  */
 
 export const SITE = {
-  nome: 'Essencial Geo',
+  nome: 'Essencial',
   licenca: {
     nome: 'CC BY 4.0',
     url: { pt: 'https://creativecommons.org/licenses/by/4.0/deed.pt-br', en: 'https://creativecommons.org/licenses/by/4.0/deed.en' },
