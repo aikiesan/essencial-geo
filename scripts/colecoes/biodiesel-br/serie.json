@@ -1,0 +1,5 @@
+[
+ { "tema": "usinas", "numero": 150, "pasta": "150-as-usinas-de-biodiesel-brasil", "base": "br_biodiesel_usinas", "data": "2027-01-22", "categoria": "energia" },
+ { "tema": "sebo", "numero": 151, "pasta": "151-soja-sebo-e-o-resto-brasil", "base": "br_biodiesel_materia_prima", "data": "2027-01-25", "categoria": "energia" },
+ { "tema": "balanco", "numero": 152, "pasta": "152-quem-produz-quem-consome-biodiesel-brasil", "base": "br_biodiesel_balanco", "data": "2027-01-27", "categoria": "energia" }
+]

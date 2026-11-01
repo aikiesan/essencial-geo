@@ -1,0 +1,5 @@
+[
+ { "tema": "endereco", "numero": 132, "pasta": "132-o-etanol-muda-de-endereco-brasil", "base": "br_etanol_capacidade", "data": "2026-12-07", "categoria": "energia" },
+ { "tema": "milho", "numero": 133, "pasta": "133-o-milho-entra-na-destilaria-brasil", "base": "br_etanol_milho", "data": "2026-12-09", "categoria": "energia" },
+ { "tema": "recuperacao", "numero": 134, "pasta": "134-etanol-em-recuperacao-judicial-brasil", "base": "br_etanol_recuperacao_judicial", "data": "2026-12-11", "categoria": "energia" }
+]

@@ -320,6 +320,76 @@ export const COLECOES = {
       resumo: 'What Brazil produces as biomass, municipality by municipality, with open data renewed every year: herds, crops, planted forests, firewood and the plants that turn it all into energy.',
     },
   },
+  'etanol-br': {
+    pt: {
+      titulo: 'A nova geografia do etanol',
+      resumo: 'O etanol brasileiro muda de endereço: a capacidade das destilarias, usina a usina, de 2018 a 2026, o milho que entra onde só havia cana e as usinas que produzem em recuperação judicial.',
+    },
+    en: {
+      titulo: 'The new geography of ethanol',
+      resumo: 'Brazilian ethanol is moving: distillery capacity, plant by plant, from 2018 to 2026, the maize that comes in where there was only cane, and the plants that produce under judicial recovery.',
+    },
+  },
+  'ritmo-biomassa-br': {
+    pt: {
+      titulo: 'O ritmo da biomassa',
+      resumo: 'A eletricidade da biomassa tem calendário: a safra do Centro-Sul e a do Nordeste em meses opostos, o quanto cada usina gera de fato e o peso dela nos meses secos.',
+    },
+    en: {
+      titulo: 'The rhythm of biomass',
+      resumo: 'Biomass electricity keeps a calendar: the Centre-South and Northeast harvests in opposite months, how much each plant actually generates and its weight in the dry months.',
+    },
+  },
+  'lixo-sp': {
+    pt: {
+      titulo: 'Para onde vai o lixo',
+      resumo: 'O caminho dos resíduos urbanos paulistas, do município ao aterro: quem leva o lixo para longe, a nota de cada aterro e os que já transformam o gás em eletricidade.',
+    },
+    en: {
+      titulo: 'Where the rubbish goes',
+      resumo: 'The route of São Paulo’s urban waste, from town to landfill: who sends it far away, each landfill’s quality score and the ones that already turn the gas into electricity.',
+    },
+  },
+  'fogo-sp': {
+    pt: {
+      titulo: 'Biomassa que vira fumaça',
+      resumo: 'O fogo no campo paulista visto pelo que ele queima: a cobertura da terra sob os focos de agosto de 2024, o mês em que cada lugar queima e onde o fogo voltou depois do fim da queimada da cana.',
+    },
+    en: {
+      titulo: 'Biomass gone up in smoke',
+      resumo: 'Fire in the São Paulo countryside, read through what it burns: the land cover under the August 2024 hotspots, the month each place burns and where fire came back after cane burning ended.',
+    },
+  },
+  'energia-municipal-sp': {
+    pt: {
+      titulo: 'A energia de cada município',
+      resumo: 'Três leituras do Anuário de Energéticos por Município do Estado de São Paulo: a eletricidade da roça, o combustível de cada cidade e o gás que chega pela rede ou no botijão.',
+    },
+    en: {
+      titulo: 'Each town’s energy',
+      resumo: 'Three readings of São Paulo’s Municipal Energy Yearbook: electricity on the farm, each town’s fuel and the gas that arrives by pipe or by cylinder.',
+    },
+  },
+  'gd-biogas-br': {
+    pt: {
+      titulo: 'O biogás na geração distribuída',
+      resumo: 'As pequenas usinas a biogás ligadas à rede no Brasil: onde estão, para quem geram e como o biogás das granjas e dos laticínios chegou à conta de luz.',
+    },
+    en: {
+      titulo: 'Biogas in distributed generation',
+      resumo: 'Brazil’s small grid-connected biogas units: where they are, whom they generate for and how biogas from pig farms and dairies reached the electricity bill.',
+    },
+  },
+  'biodiesel-br': {
+    pt: {
+      titulo: 'De onde vem o biodiesel',
+      resumo: 'As usinas de biodiesel do Brasil e o que elas processam: a soja, o sebo do boi e os outros óleos, estado a estado, e a distância entre quem produz e quem mistura.',
+    },
+    en: {
+      titulo: 'Where biodiesel comes from',
+      resumo: 'Brazil’s biodiesel plants and what they process: soybean oil, beef tallow and other oils, state by state, and the distance between producers and blenders.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

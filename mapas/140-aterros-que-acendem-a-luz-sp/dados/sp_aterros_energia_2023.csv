@@ -1,0 +1,302 @@
+cd_mun,nome,t_recebida,municipios,de_outros,t_propria,locais,iqr_2023,mw_biogas,mw_rsu,usinas,usina_biogas
+3550308,São Paulo,7368.6,5,4,6827.1,São Paulo - CDR + próprio município,9.6,29.264,3.12,São João Biogás + Bandeirantes + Cdr Pedreira I,True
+3509007,Caieiras,5523.06,19,18,74.14,Caieiras - A.P.,9.5,29.547,0.0,Termoverde Caieiras,True
+3536505,Paulínia,2620.9,30,29,99.39,Paulínia - A.P.,9.8,0.0,0.0,,False
+3529401,Mauá,2153.38,8,7,376.43,Mauá - A.P.,9.3,0.0,0.0,,False
+3518800,Guarulhos,1420.95,1,0,1420.95,próprio município,9.6,0.0,0.0,,False
+3548500,Santos,1306.31,8,7,376.47,Santos - A.P.,9.3,0.0,0.0,,False
+3547304,Santana de Parnaíba,1290.5,6,5,138.69,Santana de Parnaíba - A.P.,9.4,4.278,0.0,TECIPAR,True
+3524907,Jambeiro,1201.31,15,14,2.14,Jambeiro - A.P.,10.0,0.0,0.0,,False
+3518859,Guatapará,1138.19,15,14,3.76,Guatapará - A.P.,9.8,5.704,0.0,Guatapará,True
+3521002,Iperó,1021.65,12,11,15.75,Iperó - A.P.,9.5,0.0,4.68,Veolia Iperó,False
+3547809,Santo André,823.81,1,0,823.81,próprio município,9.1,0.0,0.0,,False
+3534401,Osasco,801.48,1,0,801.48,próprio município,9.4,0.0,0.0,,False
+3549904,São José dos Campos,751.16,1,0,751.16,próprio município,10.0,0.0,0.0,,False
+3539400,Piratininga,719.83,28,27,9.07,Piratininga - A.P.,9.6,0.0,0.0,,False
+3534005,Onda Verde,613.1,20,19,2.62,Onda Verde - A.P.,10.0,0.0,0.0,,False
+3554805,Tremembé,569.76,10,9,36.9,Tremembé - A.P.,10.0,4.278,0.0,Tremembé,True
+3511102,Catanduva,492.48,30,29,103.37,Catanduva - A.P.,9.8,1.426,0.0,Valorgas Catanduva,True
+3501608,Americana,376.24,2,1,212.52,Americana - A.P.,10.0,0.0,0.0,,False
+3538709,Piracicaba,372.81,1,0,372.81,próprio município,9.2,0.0,0.0,,False
+3500105,Adamantina,360.49,13,12,26.23,Adamantina - A.P.,9.6,0.0,0.0,,False
+3510807,Casa Branca,339.36,8,7,16.08,Casa Branca - A.P.,9.8,0.0,0.0,,False
+3511607,Cesário Lange,337.14,12,11,9.0,Cesário Lange - A.P.,9.8,0.0,0.0,,False
+3508603,Cachoeira Paulista,325.51,15,14,20.62,Cachoeira Paulista - A.P.,9.4,0.0,0.0,,False
+3522505,Itapevi,315.31,2,1,209.07,Itapevi - A.P.,9.1,0.0,0.0,,False
+3516200,Franca,311.71,1,0,311.71,próprio município,8.1,0.0,0.0,,False
+3544905,Sales Oliveira,289.71,14,13,7.23,Sales Oliveira - A.P.,8.4,0.0,0.0,,False
+3520509,Indaiatuba,286.31,3,2,227.86,Indaiatuba - A.P.,9.8,0.0,0.0,,False
+3529005,Marília,261.29,9,8,204.27,Marília - A.P.,9.8,0.0,0.0,,False
+3526902,Limeira,254.84,1,0,254.84,próprio município,7.4,0.0,0.0,,False
+3541703,Quatá,245.77,18,17,8.65,Quatá - A.P.,9.5,0.0,0.0,,False
+3548906,São Carlos,220.19,1,0,220.19,próprio município,10.0,0.0,0.0,,False
+3524402,Jacareí,213.26,1,0,213.26,próprio município,10.0,0.0,0.0,,False
+3543907,Rio Claro,176.86,1,0,176.86,próprio município,8.9,0.0,0.0,,False
+3502804,Araçatuba,176.64,1,0,176.64,próprio município,9.7,0.0,0.0,,False
+3525102,Jardinópolis,171.17,4,3,34.76,Jardinópolis - A.P.,10.0,0.0,0.0,,False
+3529609,Meridiano,163.96,18,17,2.22,Meridiano - A.P.,10.0,0.0,0.0,,False
+3507605,Bragança Paulista,155.4,2,1,154.26,Bragança Paulista - A.P.,7.7,0.0,0.0,,False
+3505500,Barretos,149.99,3,2,106.88,Barretos - A.P.,8.4,0.0,0.0,,False
+3507506,Botucatu,141.95,3,2,125.87,Botucatu + próprio município,7.3,0.0,0.0,,False
+3523909,Itu,141.71,1,0,141.71,próprio município,9.3,0.0,0.0,,False
+3546801,Santa Isabel,137.04,5,4,33.38,Santa Isabel - A.P.,7.5,0.0,0.0,,False
+3545209,Salto,135.23,2,1,120.04,Salto - A.P.,9.4,0.0,0.0,,False
+3544004,Rio das Pedras,118.61,14,14,0.0,Rio das Pedras - A.P.,9.6,0.0,0.0,,False
+3557006,Votorantim,110.74,1,0,110.74,próprio município,2.5,0.0,0.0,,False
+3506508,Birigui,103.89,1,0,103.89,próprio município,4.2,0.0,0.0,,False
+3515004,Embu das Artes,101.53,1,0,101.53,próprio município,3.9,0.0,0.0,,False
+3523404,Itatiba,92.39,1,0,92.39,próprio município,7.9,0.0,0.0,,False
+3526704,Leme,76.91,1,0,76.91,próprio município,7.5,0.0,0.0,,False
+3504503,Avaré,71.07,1,0,71.07,próprio município,9.6,0.0,0.0,,False
+3512209,Conchal,68.53,3,2,21.24,Conchal - A.P.,9.5,0.0,0.0,,False
+3553609,Tapiratiba,62.27,5,4,6.82,Tapiratiba - A.P.,9.4,0.0,0.0,,False
+3529302,Matão,62.07,1,0,62.07,próprio município,6.6,0.0,0.0,,False
+3522406,Itapeva,60.5,1,0,60.5,próprio município,7.8,0.0,0.0,,False
+3524303,Jaboticabal,55.74,1,0,55.74,próprio município,10.0,0.0,0.0,,False
+3537602,Peruíbe,54.07,1,0,54.07,próprio município,5.1,0.0,0.0,,False
+3522604,Itapira,53.45,1,0,53.45,próprio município,9.4,0.0,0.0,,False
+3526803,Lençóis Paulista,52.01,1,0,52.01,próprio município,7.4,0.0,0.0,,False
+3530508,Mococa,49.95,1,0,49.95,próprio município,8.1,0.0,0.0,,False
+3530300,Mirassol,49.39,1,0,49.39,próprio município,9.8,0.0,0.0,,False
+3537305,Penápolis,47.13,1,0,47.13,próprio município,9.4,0.0,0.0,,False
+3542404,Regente Feijó,43.55,4,3,13.0,Regente Feijó - A.P.,9.8,0.0,0.0,,False
+3517703,Guará,42.66,4,3,12.61,Guará - A.P.,10.0,0.0,0.0,,False
+3542602,Registro,42.57,1,0,42.57,próprio município,7.5,0.0,0.0,,False
+3540705,Porto Ferreira,41.36,1,0,41.36,próprio município,9.0,0.0,0.0,,False
+3553708,Taquaritinga,39.62,1,0,39.62,próprio município,6.2,0.0,0.0,,False
+3524808,Jales,36.72,1,0,36.72,próprio município,7.3,0.0,0.0,,False
+3511508,Cerquilho,33.91,1,0,33.91,próprio município,8.6,0.0,0.0,,False
+3536703,Pederneiras,33.35,1,0,33.35,próprio município,8.3,0.0,0.0,,False
+3523206,Itararé,32.83,1,0,32.83,próprio município,9.1,0.0,0.0,,False
+3528403,Mairinque,32.12,1,0,32.12,próprio município,9.2,0.0,0.0,,False
+3508405,Cabreúva,31.88,1,0,31.88,próprio município,8.9,0.0,2.7,USITRAR ECO-ENERGY CABREUVA,False
+3556404,Vargem Grande do Sul,30.48,1,0,30.48,próprio município,7.8,0.0,0.0,,False
+3510203,Capão Bonito,30.36,1,0,30.36,próprio município,8.8,0.0,0.0,,False
+3541307,Presidente Epitácio,29.48,1,0,29.48,próprio município,7.3,0.0,0.0,,False
+3518602,Guariba,29.37,1,0,29.37,próprio município,8.5,0.0,0.0,,False
+3550100,São Manuel,29.11,1,0,29.11,próprio município,7.2,0.0,0.0,,False
+3546603,Santa Fé do Sul,28.95,2,1,26.74,Santa Fé do Sul + próprio município,8.4,0.0,0.0,,False
+3500709,Agudos,28.81,1,0,28.81,próprio município,7.1,0.0,0.0,,False
+3545308,Salto de Pirapora,27.44,1,0,27.44,próprio município,7.1,0.0,0.0,,False
+3505302,Barra Bonita,26.9,1,0,26.9,próprio município,7.8,0.0,0.0,,False
+3539202,Pirapozinho,25.77,4,3,16.86,Pirapozinho - A.P.,8.8,0.0,0.0,,False
+3519303,Ibaté,24.72,1,0,24.72,próprio município,7.5,0.0,0.0,,False
+3525201,Jarinu,23.21,1,0,23.21,próprio município,8.0,0.0,0.0,,False
+3500303,Aguaí,23.15,1,0,23.15,Aguaí - A.P.,9.8,0.0,0.0,,False
+3518206,Guararapes,22.98,1,0,22.98,próprio município,8.5,0.0,0.0,,False
+3534609,Osvaldo Cruz,22.48,1,0,22.48,Osvaldo Cruz - A.P.,9.2,0.0,0.0,,False
+3552106,Socorro,21.82,1,0,21.82,próprio município,8.4,0.0,0.0,,False
+3520442,Ilha Solteira,16.78,1,0,16.78,próprio município,7.9,0.0,0.0,,False
+3536208,Pariquera-Açu,16.58,2,1,9.24,Pariquera-Açu + próprio município,7.6,0.0,0.0,,False
+3514106,Dois Córregos,16.25,1,0,16.25,próprio município,8.2,0.0,0.0,,False
+3556305,Valparaíso,16.14,1,0,16.14,próprio município,9.0,0.0,0.0,,False
+3520004,Igaraçu do Tietê,16.08,1,0,16.08,próprio município,4.8,0.0,0.0,,False
+3537404,Pereira Barreto,15.7,1,0,15.7,próprio município,9.6,0.0,0.0,,False
+3547601,Santa Rosa de Viterbo,15.62,1,0,15.62,próprio município,9.2,0.0,0.0,,False
+3512407,Cordeirópolis,15.41,1,0,15.41,próprio município,5.1,0.0,0.0,,False
+3550209,São Miguel Arcanjo,15.33,1,0,15.33,próprio município,9.0,0.0,0.0,,False
+3502754,Araçariguama,15.07,1,0,15.07,próprio município,9.2,0.0,0.0,,False
+3553807,Taquarituba,14.97,1,0,14.97,próprio município,7.5,0.0,0.0,,False
+3509254,Cajati,14.58,1,0,14.58,próprio município,6.5,0.0,0.0,,False
+3521804,Itaí,13.84,1,0,13.84,próprio município,8.8,0.0,0.0,,False
+3511409,Cerqueira César,13.47,1,0,13.47,próprio município,6.1,0.0,0.0,,False
+3553302,Tambaú,13.33,1,0,13.33,próprio município,7.2,0.0,0.0,,False
+3554300,Teodoro Sampaio,12.6,1,0,12.6,próprio município,7.1,0.0,0.0,,False
+3512001,Colina,12.08,1,0,12.08,próprio município,9.6,0.0,0.0,,False
+3531506,Monte Azul Paulista,11.89,1,0,11.89,próprio município,8.8,0.0,0.0,,False
+3556800,Viradouro,11.83,1,0,11.83,próprio município,9.3,0.0,0.0,,False
+3526001,Junqueirópolis,11.77,1,0,11.77,próprio município,7.1,0.0,0.0,,False
+3508009,Buri,11.45,1,0,11.45,próprio município,5.0,0.0,0.0,,False
+3528007,Macatuba,11.43,1,0,11.43,próprio município,9.2,0.0,0.0,,False
+3508108,Buritama,11.35,1,0,11.35,próprio município,9.0,0.0,0.0,,False
+3535804,Paranapanema,11.04,1,0,11.04,próprio município,4.6,0.0,0.0,,False
+3511003,Castilho,10.55,1,0,10.55,próprio município,9.5,0.0,0.0,,False
+3523602,Itirapina,10.19,1,0,10.19,próprio município,4.4,0.0,0.0,,False
+3535408,Panorama,10.17,1,0,10.17,próprio município,6.6,0.0,0.0,,False
+3544251,Rosana,9.83,1,0,9.83,próprio município,8.5,0.0,0.0,,False
+3551900,Severínia,9.72,1,0,9.72,próprio município,7.8,0.0,0.0,,False
+3515400,Fartura,9.31,1,0,9.31,próprio município,7.9,0.0,0.0,,False
+3522901,Itapuí,9.14,1,0,9.14,próprio município,7.8,0.0,0.0,,False
+3556107,Valentim Gentil,9.01,1,0,9.01,próprio município,8.6,0.0,0.0,,False
+3507407,Borborema,8.98,1,0,8.98,próprio município,8.3,0.0,0.0,,False
+3525508,Joanópolis,8.97,1,0,8.97,próprio município,7.5,0.0,0.0,,False
+3520905,Ipaussu,8.84,1,0,8.84,próprio município,9.1,0.0,0.0,,False
+3504206,Auriflama,8.74,1,0,8.74,próprio município,9.1,0.0,0.0,,False
+3555109,Tupi Paulista,8.72,1,0,8.72,próprio município,9.5,0.0,0.0,,False
+3521705,Itaberá,8.56,1,0,8.56,próprio município,4.0,0.0,0.0,,False
+3528809,Maracaí,8.04,1,0,8.04,próprio município,8.5,0.0,0.0,,False
+3557204,Chavantes,7.86,1,0,7.86,próprio município,7.3,0.0,0.0,,False
+3514502,Duartina,7.75,1,0,7.75,próprio município,6.7,0.0,0.0,,False
+3534906,Pacaembu,7.67,1,0,7.67,próprio município,8.5,0.0,0.0,,False
+3529807,Mineiros do Tietê,7.51,1,0,7.51,próprio município,8.2,0.0,0.0,,False
+3510708,Cardoso,7.22,1,0,7.22,próprio município,7.8,0.0,0.0,,False
+3516002,Flórida Paulista,7.16,1,0,7.16,próprio município,7.5,0.0,0.0,,False
+3542909,Ribeirão Bonito,7.11,1,0,7.11,próprio município,7.3,0.0,0.0,,False
+3523305,Itariri,6.94,1,0,6.94,próprio município,7.5,0.0,0.0,,False
+3539004,Pirangi,6.83,1,0,6.83,próprio município,8.1,0.0,0.0,,False
+3504404,Avanhandava,6.67,1,0,6.67,próprio município,7.2,0.0,0.0,,False
+3543006,Ribeirão Branco,6.63,1,0,6.63,próprio município,5.5,0.0,0.0,,False
+3530201,Mirante do Paranapanema,6.56,1,0,6.56,próprio município,9.7,0.0,0.0,,False
+3517901,Guaraci,6.48,1,0,6.48,próprio município,8.8,0.0,0.0,,False
+3519105,Iacanga,6.37,1,0,6.37,próprio município,8.4,0.0,0.0,,False
+3553005,Taguaí,6.35,1,0,6.35,próprio município,7.3,0.0,0.0,,False
+3557303,Estiva Gerbi,6.31,1,0,6.31,próprio município,7.6,0.0,0.0,,False
+3503604,Areiópolis,6.3,1,0,6.3,próprio município,9.5,0.0,0.0,,False
+3504800,Bálsamo,6.15,1,0,6.15,próprio município,9.0,0.0,0.0,,False
+3516903,General Salgado,6.15,1,0,6.15,próprio município,8.6,0.0,0.0,,False
+3524600,Jacupiranga,6.13,1,0,6.13,próprio município,7.3,0.0,0.0,,False
+3536000,Parapuã,6.08,1,0,6.08,próprio município,8.5,0.0,0.0,,False
+3528601,Manduri,5.98,1,0,5.98,próprio município,7.3,0.0,0.0,,False
+3509304,Cajobi,5.98,1,0,5.98,próprio município,8.2,0.0,0.0,,False
+3544202,Riolândia,5.71,1,0,5.71,próprio município,8.0,0.0,0.0,,False
+3543808,Rinópolis,5.63,1,0,5.63,próprio município,10.0,0.0,0.0,,False
+3515202,Estrela d'Oeste,5.49,1,0,5.49,próprio município,8.3,0.0,0.0,,False
+3537206,Pedro de Toledo,5.44,1,0,5.44,próprio município,2.1,0.0,0.0,,False
+3554409,Terra Roxa,5.27,1,0,5.27,próprio município,3.4,0.0,0.0,,False
+3556909,Vista Alegre do Alto,5.24,1,0,5.24,próprio município,8.6,0.0,0.0,,False
+3555802,Urânia,5.2,1,0,5.2,próprio município,7.9,0.0,0.0,,False
+3514304,Dourado,5.18,1,0,5.18,próprio município,9.1,0.0,0.0,,False
+3534807,Ouro Verde,5.01,1,0,5.01,próprio município,8.0,0.0,0.0,,False
+3550803,São Sebastião da Grama,4.82,1,0,4.82,próprio município,8.2,0.0,0.0,,False
+3517604,Guapiara,4.8,1,0,4.8,próprio município,8.7,0.0,0.0,,False
+3549508,São José da Bela Vista,4.75,1,0,4.75,próprio município,7.1,0.0,0.0,,False
+3535200,Palmeira d'Oeste,4.73,1,0,4.73,próprio município,9.7,0.0,0.0,,False
+3506409,Bilac,4.71,1,0,4.71,próprio município,8.6,0.0,0.0,,False
+3546900,Santa Lúcia,4.7,1,0,4.7,próprio município,8.7,0.0,0.0,,False
+3536604,Paulo de Faria,4.67,1,0,4.67,próprio município,9.0,0.0,0.0,,False
+3506904,Bofete,4.67,1,0,4.67,próprio município,7.9,0.0,0.0,,False
+3511904,Clementina,4.66,1,0,4.66,próprio município,9.5,0.0,0.0,,False
+3528106,Macaubal,4.63,1,0,4.63,próprio município,7.9,0.0,0.0,,False
+3536406,Paulicéia,4.63,1,0,4.63,próprio município,7.1,0.0,0.0,,False
+3548054,Santo Antônio do Aracanguá,4.59,1,0,4.59,próprio município,7.2,0.0,0.0,,False
+3542008,Quintana,4.51,1,0,4.51,próprio município,9.5,0.0,0.0,,False
+3514809,Eldorado,4.5,1,0,4.5,próprio município,7.2,0.0,0.0,,False
+3503406,Arealva,4.48,1,0,4.48,próprio município,6.8,0.0,0.0,,False
+3552304,Sud Mennucci,4.42,1,0,4.42,próprio município,8.6,0.0,0.0,,False
+3521507,Irapuã,4.29,1,0,4.29,próprio município,9.6,0.0,0.0,,False
+3512902,Cosmorama,4.18,1,0,4.18,próprio município,7.1,0.0,0.0,,False
+3553203,Taiúva,4.18,1,0,4.18,próprio município,7.3,0.0,0.0,,False
+3519501,Ibirarema,4.13,1,0,4.13,próprio município,9.7,0.0,0.0,,False
+3517802,Guaraçaí,4.11,1,0,4.11,próprio município,7.5,0.0,0.0,,False
+3524204,Jaborandi,4.07,1,0,4.07,próprio município,7.3,0.0,0.0,,False
+3554904,Três Fronteiras,4.04,1,0,4.04,próprio município,7.1,0.0,0.0,,False
+3532827,Nova Campina,4.03,1,0,4.03,próprio município,7.2,0.0,0.0,,False
+3553500,Tapiraí,4.0,1,0,4.0,próprio município,9.0,0.0,0.0,,False
+3534104,Oriente,3.98,1,0,3.98,próprio município,9.5,0.0,0.0,,False
+3546504,Santa Ernestina,3.96,1,0,3.96,próprio município,6.9,0.0,0.0,,False
+3534203,Orindiúva,3.88,1,0,3.88,próprio município,9.0,0.0,0.0,,False
+3545704,Santa Albertina,3.82,1,0,3.82,próprio município,8.8,0.0,0.0,,False
+3552908,Taciba,3.72,1,0,3.72,próprio município,8.6,0.0,0.0,,False
+3550506,São Pedro do Turvo,3.61,1,0,3.61,próprio município,7.3,0.0,0.0,,False
+3553104,Taiaçu,3.6,1,0,3.6,próprio município,7.4,0.0,0.0,,False
+3515350,Euclides da Cunha Paulista,3.54,1,0,3.54,próprio município,7.1,0.0,0.0,,False
+3509452,Campina do Monte Alegre,3.53,1,0,3.53,próprio município,7.5,0.0,0.0,,False
+3515608,Fernando Prestes,3.53,1,0,3.53,próprio município,8.3,0.0,0.0,,False
+3542701,Restinga,3.52,1,0,3.52,próprio município,7.3,0.0,0.0,,False
+3547908,Santo Antônio da Alegria,3.51,1,0,3.51,próprio município,8.2,0.0,0.0,,False
+3539905,Poloni,3.48,1,0,3.48,próprio município,7.8,0.0,0.0,,False
+3501806,Américo de Campos,3.45,1,0,3.45,próprio município,8.1,0.0,0.0,,False
+3537701,Piacatu,3.41,1,0,3.41,próprio município,9.5,0.0,0.0,,False
+3517307,Guaimbê,3.37,1,0,3.37,próprio município,8.8,0.0,0.0,,False
+3512100,Colômbia,3.35,1,0,3.35,próprio município,7.2,0.0,0.0,,False
+3505104,Barbosa,3.34,1,0,3.34,próprio município,7.2,0.0,0.0,,False
+3526506,Lavínia,3.31,1,0,3.31,próprio município,8.5,0.0,0.0,,False
+3507704,Braúna,3.28,1,0,3.28,próprio município,9.5,0.0,0.0,,False
+3542503,Reginópolis,3.19,1,0,3.19,próprio município,7.1,0.0,0.0,,False
+3512506,Coroados,3.06,1,0,3.06,próprio município,8.2,0.0,0.0,,False
+3520608,Indiana,3.05,1,0,3.05,próprio município,8.1,0.0,0.0,,False
+3527702,Luiziânia,3.02,1,0,3.02,próprio município,9.5,0.0,0.0,,False
+3545100,Salmourão,3.02,1,0,3.02,próprio município,9.1,0.0,0.0,,False
+3502309,Anhembi,3.0,1,0,3.0,próprio município,8.9,0.0,0.0,,False
+3532702,Nipoã,2.95,1,0,2.95,próprio município,7.6,0.0,0.0,,False
+3543501,Riversul,2.86,1,0,2.86,próprio município,4.5,0.0,0.0,,False
+3525805,Júlio Mesquita,2.83,1,0,2.83,próprio município,7.4,0.0,0.0,,False
+3500204,Adolfo,2.74,1,0,2.74,próprio município,3.2,0.0,0.0,,False
+3541059,Pratânia,2.72,1,0,2.72,próprio município,7.7,0.0,0.0,,False
+3509809,Campos Novos Paulista,2.66,1,0,2.66,próprio município,9.3,0.0,0.0,,False
+3516853,Gavião Peixoto,2.66,1,0,2.66,próprio município,7.9,0.0,0.0,,False
+3530409,Mirassolândia,2.66,1,0,2.66,próprio município,9.5,0.0,0.0,,False
+3548401,Santópolis do Aguapeí,2.64,1,0,2.64,próprio município,8.7,0.0,0.0,,False
+3553856,Taquarivaí,2.63,1,0,2.63,próprio município,8.8,0.0,0.0,,False
+3500808,Alfredo Marcondes,2.6,1,0,2.6,próprio município,8.6,0.0,0.0,,False
+3539608,Planalto,2.59,1,0,2.59,próprio município,8.2,0.0,0.0,,False
+3543105,Ribeirão Corrente,2.56,1,0,2.56,próprio município,9.0,0.0,0.0,,False
+3518909,Guzolândia,2.51,1,0,2.51,próprio município,8.7,0.0,0.0,,False
+3535903,Paranapuã,2.51,1,0,2.51,próprio município,8.7,0.0,0.0,,False
+3543600,Rifaina,2.48,1,0,2.48,próprio município,9.0,0.0,0.0,,False
+3520707,Indiaporã,2.45,1,0,2.45,próprio município,8.7,0.0,0.0,,False
+3543204,Ribeirão do Sul,2.43,1,0,2.43,próprio município,5.7,0.0,0.0,,False
+3516101,Florínea,2.39,1,0,2.39,próprio município,8.5,0.0,0.0,,False
+3502606,Aparecida d'Oeste,2.34,1,0,2.34,próprio município,9.6,0.0,0.0,,False
+3531605,Monte Castelo,2.34,1,0,2.34,próprio município,8.9,0.0,0.0,,False
+3540408,Populina,2.33,1,0,2.33,próprio município,7.4,0.0,0.0,,False
+3512605,Coronel Macedo,2.32,1,0,2.32,próprio município,9.2,0.0,0.0,,False
+3502408,Anhumas,2.3,1,0,2.3,próprio município,9.5,0.0,0.0,,False
+3523008,Itapura,2.23,1,0,2.23,próprio município,7.8,0.0,0.0,,False
+3541109,Presidente Alves,2.22,1,0,2.22,próprio município,7.6,0.0,0.0,,False
+3520806,Inúbia Paulista,2.21,1,0,2.21,próprio município,9.5,0.0,0.0,,False
+3517109,Glicério,2.13,1,0,2.13,próprio município,7.4,0.0,0.0,,False
+3501103,Alto Alegre,2.12,1,0,2.12,próprio município,7.1,0.0,0.0,,False
+3551207,Sarutaiá,2.12,1,0,2.12,próprio município,8.6,0.0,0.0,,False
+3528205,Macedônia,2.1,1,0,2.1,próprio município,7.6,0.0,0.0,,False
+3532058,Motuca,2.05,1,0,2.05,próprio município,7.9,0.0,0.0,,False
+3516804,Gastão Vidigal,2.04,1,0,2.04,próprio município,9.7,0.0,0.0,,False
+3505401,Barra do Turvo,1.98,1,0,1.98,próprio município,7.6,0.0,0.0,,False
+3541802,Queiroz,1.94,1,0,1.94,próprio município,7.9,0.0,0.0,,False
+3554201,Tejupá,1.87,1,0,1.87,próprio município,7.2,0.0,0.0,,False
+3548302,Santo Expedito,1.86,1,0,1.86,próprio município,6.8,0.0,0.0,,False
+3522000,Itaju,1.84,1,0,1.84,próprio município,8.4,0.0,0.0,,False
+3553658,Taquaral,1.76,1,0,1.76,próprio município,8.1,0.0,0.0,,False
+3515129,Emilianópolis,1.74,1,0,1.74,próprio município,8.6,0.0,0.0,,False
+3507159,Bom Sucesso de Itararé,1.69,1,0,1.69,próprio município,4.1,0.0,0.0,,False
+3506201,Bento de Abreu,1.67,1,0,1.67,próprio município,9.0,0.0,0.0,,False
+3532157,Nantes,1.67,1,0,1.67,próprio município,9.0,0.0,0.0,,False
+3537156,Pedrinhas Paulista,1.66,1,0,1.66,próprio município,9.7,0.0,0.0,,False
+3507456,Borebi,1.66,1,0,1.66,próprio município,9.5,0.0,0.0,,False
+3543253,Ribeirão Grande,1.65,1,0,1.65,próprio município,8.9,0.0,0.0,,False
+3510104,Cândido Rodrigues,1.63,1,0,1.63,próprio município,7.5,0.0,0.0,,False
+3516507,Gabriel Monteiro,1.61,1,0,1.61,próprio município,9.5,0.0,0.0,,False
+3532108,Murutinga do Sul,1.61,1,0,1.61,próprio município,9.1,0.0,0.0,,False
+3512704,Corumbataí,1.59,1,0,1.59,próprio município,9.5,0.0,0.0,,False
+3552551,Suzanápolis,1.59,1,0,1.59,próprio município,8.7,0.0,0.0,,False
+3521200,Iporanga,1.58,1,0,1.58,próprio município,10.0,0.0,0.0,,False
+3515905,Floreal,1.55,1,0,1.55,próprio município,8.4,0.0,0.0,,False
+3505005,Barão de Antonina,1.52,1,0,1.52,próprio município,9.2,0.0,0.0,,False
+3557154,Zacarias,1.48,1,0,1.48,próprio município,9.0,0.0,0.0,,False
+3507753,Brejo Alegre,1.47,1,0,1.47,próprio município,3.7,0.0,0.0,,False
+3522653,Itapirapuã Paulista,1.47,1,0,1.47,próprio município,4.1,0.0,0.0,,False
+3509106,Caiuá,1.47,1,0,1.47,próprio município,6.6,0.0,0.0,,False
+3530003,Mira Estrela,1.46,1,0,1.46,próprio município,8.0,0.0,0.0,,False
+3528700,Marabá Paulista,1.43,1,0,1.43,próprio município,10.0,0.0,0.0,,False
+3540309,Pontes Gestal,1.41,1,0,1.41,próprio município,8.6,0.0,0.0,,False
+3549003,São Francisco,1.41,1,0,1.41,próprio município,7.9,0.0,0.0,,False
+3549201,São João das Duas Pontes,1.38,1,0,1.38,próprio município,9.0,0.0,0.0,,False
+3510906,Cássia dos Coqueiros,1.33,1,0,1.33,próprio município,7.6,0.0,0.0,,False
+3547403,Santa Rita d'Oeste,1.33,1,0,1.33,próprio município,7.1,0.0,0.0,,False
+3544707,Sagres,1.32,1,0,1.32,próprio município,8.5,0.0,0.0,,False
+3522158,Itaoca,1.31,1,0,1.31,próprio município,8.0,0.0,0.0,,False
+3533106,Nova Guataporanga,1.31,1,0,1.31,próprio município,7.8,0.0,0.0,,False
+3549300,São João do Pau d'Alho,1.27,1,0,1.27,próprio município,9.1,0.0,0.0,,False
+3554607,Timburi,1.25,1,0,1.25,próprio município,9.5,0.0,0.0,,False
+3543238,Ribeirão dos Índios,1.2,1,0,1.2,próprio município,8.8,0.0,0.0,,False
+3531001,Monções,1.17,1,0,1.17,próprio município,9.5,0.0,0.0,,False
+3533809,Óleo,1.16,1,0,1.16,próprio município,9.5,0.0,0.0,,False
+3527256,Lourdes,1.12,1,0,1.12,próprio município,8.7,0.0,0.0,,False
+3544400,Rubiácea,1.08,1,0,1.08,próprio município,9.0,0.0,0.0,,False
+3554755,Trabiju,1.08,1,0,1.08,próprio município,4.1,0.0,0.0,,False
+3505351,Barra do Chapéu,1.07,1,0,1.07,próprio município,4.4,0.0,0.0,,False
+3555208,Turiúba,1.04,1,0,1.04,próprio município,7.8,0.0,0.0,,False
+3556958,Vitória Brasil,1.04,1,0,1.04,próprio município,8.7,0.0,0.0,,False
+3529104,Marinópolis,1.03,1,0,1.03,próprio município,8.3,0.0,0.0,,False
+3546256,Santa Cruz da Esperança,1.0,1,0,1.0,próprio município,9.1,0.0,0.0,,False
+3536570,Paulistânia,1.0,1,0,1.0,próprio município,8.9,0.0,0.0,,False
+3513306,Cruzália,0.98,1,0,0.98,próprio município,7.8,0.0,0.0,,False
+3503950,Aspásia,0.9,1,0,0.9,próprio município,9.2,0.0,0.0,,False
+3504701,Balbinos,0.88,1,0,0.88,próprio município,7.9,0.0,0.0,,False
+3555703,União Paulista,0.86,1,0,0.86,próprio município,4.8,0.0,0.0,,False
+3513850,Dirce Reis,0.86,1,0,0.86,próprio município,8.6,0.0,0.0,,False
+3555307,Turmalina,0.83,1,0,0.83,próprio município,7.9,0.0,0.0,,False
+3503356,Arco-Íris,0.82,1,0,0.82,próprio município,9.5,0.0,0.0,,False
+3547650,Santa Salete,0.65,1,0,0.65,próprio município,7.7,0.0,0.0,,False
+3532843,Nova Canaã Paulista,0.59,1,0,0.59,próprio município,8.9,0.0,0.0,,False
+3532868,Nova Castilho,0.49,1,0,0.49,próprio município,9.5,0.0,0.0,,False

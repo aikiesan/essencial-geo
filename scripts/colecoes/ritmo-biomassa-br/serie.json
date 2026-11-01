@@ -1,0 +1,5 @@
+[
+ { "tema": "safras", "numero": 135, "pasta": "135-duas-safras-um-pais-brasil", "base": "br_biomassa_mes_de_pico", "data": "2026-12-14", "categoria": "energia" },
+ { "tema": "fator", "numero": 136, "pasta": "136-o-que-a-usina-gera-de-fato-brasil", "base": "br_biomassa_fator_de_capacidade", "data": "2026-12-16", "categoria": "energia" },
+ { "tema": "seca", "numero": 137, "pasta": "137-a-biomassa-na-seca-brasil", "base": "br_biomassa_meses_secos", "data": "2026-12-18", "categoria": "energia" }
+]

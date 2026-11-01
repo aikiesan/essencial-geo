@@ -1,0 +1,5 @@
+[
+ { "tema": "rede", "numero": 147, "pasta": "147-onde-o-biogas-entra-na-rede-brasil", "base": "br_gd_biogas_municipios", "data": "2027-01-15", "categoria": "energia" },
+ { "tema": "remoto", "numero": 148, "pasta": "148-gerar-aqui-consumir-la-brasil", "base": "br_gd_biogas_credito_remoto", "data": "2027-01-18", "categoria": "energia" },
+ { "tema": "tempo", "numero": 149, "pasta": "149-o-biogas-que-chegou-a-conta-de-luz-brasil", "base": "br_gd_biogas_por_ano", "data": "2027-01-20", "categoria": "energia" }
+]
