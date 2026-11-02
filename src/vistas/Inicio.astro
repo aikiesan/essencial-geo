@@ -9,11 +9,13 @@ import Base from '../layouts/Base.astro';
 import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
 import Progresso from '../components/Progresso.astro';
+import Perguntas from '../components/Perguntas.astro';
+import MapaDosMapas from '../components/MapaDosMapas.astro';
 import { colecoesNoAr } from '../lib/colecoes';
 import { ESCOPOS, contarPorCategoria, escopoDoMapa, linkMapa, mapasPublicados, numeroFormatado, proximosMapas } from '../lib/mapas';
 import { jsonLd, siteEAutor } from '../lib/metadados';
 import { CATEGORIA_IDS, COLECOES, SITE } from '../site.config';
-import { dataCurta, linguaDe, rota, t } from '../i18n';
+import { dataCurta, dataIso, linguaDe, rota, t } from '../i18n';
 
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
@@ -25,6 +27,12 @@ const proximos = await proximosMapas(lingua, 3);
 // Compilado antes das 9h, o mapa do dia ainda está na fila: aparece como "hoje", não como data passada.
 const hojeBrasilia = new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
 const contagem = contarPorCategoria(mapas);
+// Novo esta semana: pranchas no ar há até sete dias. Sem nenhuma, a leva mais recente ("as últimas no ar").
+const noArDeFato = mapas.filter((m) => !m.agendado && !m.data.rascunho);
+const semana = Date.now() - 7 * 86400_000;
+const daSemana = noArDeFato.filter((m) => m.data.data.getTime() >= semana);
+const ultimoDia = noArDeFato[0] && dataIso(noArDeFato[0].data.data);
+const novidades = (daSemana.length ? daSemana : noArDeFato.filter((m) => dataIso(m.data.data) === ultimoDia)).slice(0, 10);
 const temas = CATEGORIA_IDS.filter((c) => contagem[c] > 0).length;
 const categorias = CATEGORIA_IDS.filter((c) => contagem[c] > 0);
 const escopos = ESCOPOS.map((e) => ({ id: e, n: mapas.filter((m) => escopoDoMapa(m) === e).length })).filter((e) => e.n > 0);
@@ -51,7 +59,9 @@ const busca = (m: (typeof mapas)[number]) =>
   <script slot="head" type="application/ld+json" set:html={jsonLd(siteEAutor(lingua, tx.site.descricao, Astro.site))} />
 
   <div class="inicio">
-    <header class="abertura">
+    <header class="abertura moldura">
+      <span class="coord coord--n" aria-hidden="true">{i.latitude}</span>
+      <span class="coord coord--s" aria-hidden="true">{i.longitude}</span>
       <p class="rotulo">{i.sobre}</p>
       <h1 class="abertura__titulo"><span class="sr-only">{SITE.nome}: </span>{i.titulo}</h1>
       <p class="abertura__texto">{i.texto}</p>
@@ -81,7 +91,62 @@ const busca = (m: (typeof mapas)[number]) =>
         <div><dt>{i.temas}</dt><dd>{temas}</dd></div>
         <div><dt>{i.licenca}</dt><dd>{SITE.licenca.nome}</dd></div>
       </dl>
+      <p class="abertura__guia">
+        <Icone nome="guia" tamanho={14} />
+        <a href={rota(lingua, 'guia')}>{i.guia}</a>
+      </p>
     </header>
+    <p class="regua" aria-hidden="true">{tx.site.colofao}</p>
+
+    {
+      novidades.length > 0 && (
+        <section class="bloco" aria-labelledby="t-novidades">
+          <div class="bloco__cabeca">
+            <h2 id="t-novidades">{daSemana.length ? i.novidades : i.ultimas}</h2>
+            <p>
+              {daSemana.length
+                ? i.novidadesFina
+                : i.ultimasFina.replace('{data}', dataCurta(novidades[0].data.data, lingua))}
+            </p>
+          </div>
+          <ol class="novidades" role="list">
+            {novidades.map((m, n) => (
+              <li>
+                <a class="mapa" href={linkMapa(m)}>
+                  <span class="mapa__capa">
+                    <Image
+                      src={m.data.imagem}
+                      alt=""
+                      widths={[280, 420]}
+                      sizes="220px"
+                      loading={n < 4 ? 'eager' : 'lazy'}
+                      format="webp"
+                      quality={72}
+                    />
+                  </span>
+                  <span class="mapa__no rotulo">
+                    {tx.geral.no} {numeroFormatado(m.data.numero)} · <time datetime={dataIso(m.data.data)}>{dataCurta(m.data.data, lingua)}</time>
+                  </span>
+                  <span class="mapa__titulo">{m.data.titulo}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    {
+      series.length > 0 && (
+        <section class="bloco" aria-labelledby="t-perguntas">
+          <div class="bloco__cabeca">
+            <h2 id="t-perguntas">{i.perguntas}</h2>
+            <p>{i.perguntasFina}</p>
+          </div>
+          <Perguntas series={series} />
+        </section>
+      )
+    }
 
     {
       series.length > 0 && (
@@ -118,7 +183,15 @@ const busca = (m: (typeof mapas)[number]) =>
       )
     }
 
-    <section class="bloco" aria-labelledby="t-galeria-mapas">
+    <section class="bloco" aria-labelledby="t-mdm">
+      <div class="bloco__cabeca">
+        <h2 id="t-mdm">{i.mapaDosMapas}</h2>
+        <p>{i.mapaDosMapasFina}</p>
+      </div>
+      <MapaDosMapas mapas={mapas} />
+    </section>
+
+    <section class="bloco" id="galeria" aria-labelledby="t-galeria-mapas">
       <div class="bloco__cabeca">
         <h2 id="t-galeria-mapas">{i.galeriaMapas}</h2>
         <p>{i.galeriaMapasFina}</p>
@@ -258,8 +331,49 @@ const busca = (m: (typeof mapas)[number]) =>
 
   /* Abertura: uma frase, um parágrafo, três passos e quatro números */
   .abertura {
-    padding-bottom: var(--e-6);
-    border-bottom: 1px solid var(--linha);
+    padding: var(--e-6) var(--e-5);
+    background: var(--painel);
+  }
+  @media (min-width: 700px) {
+    .abertura {
+      padding: var(--e-7) var(--e-7) var(--e-6);
+    }
+  }
+  .abertura__guia {
+    display: flex;
+    align-items: baseline;
+    gap: var(--e-2);
+    margin: var(--e-5) 0 0;
+    font-size: var(--t-sm);
+    font-style: italic;
+    color: var(--tinta-2);
+  }
+  .abertura__guia :global(svg) {
+    flex: none;
+    align-self: center;
+    color: var(--cesto);
+  }
+  .abertura__guia a {
+    text-decoration-color: var(--cesto);
+  }
+  .abertura + .regua {
+    margin-top: var(--e-3);
+  }
+  /* Novidades: uma faixa que rola de lado, com encaixe */
+  .novidades {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min(62vw, 220px);
+    gap: var(--e-4);
+    margin: 0;
+    padding: 0 0 var(--e-3);
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+  .novidades li {
+    scroll-snap-align: start;
   }
   .abertura .rotulo {
     margin: 0 0 var(--e-3);
@@ -350,6 +464,7 @@ const busca = (m: (typeof mapas)[number]) =>
   /* Blocos da galeria */
   .bloco {
     margin-top: var(--e-7);
+    scroll-margin-top: calc(var(--topo) + var(--e-4));
   }
   .bloco__cabeca {
     display: flex;

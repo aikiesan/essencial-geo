@@ -1,0 +1,288 @@
+---
+/**
+ * O mapa dos mapas: as 27 UFs numa grade (cada uma onde fica, mais ou menos) com o número de pranchas
+ * cujo recorte cai nela, e o Brasil inteiro em volta. Um estado com uma prancha leva direto a ela;
+ * com várias, à galeria filtrada.
+ */
+import Icone from './Icone.astro';
+import { escopoDoMapa, linkMapa, type Mapa } from '../lib/mapas';
+import { GRADE_UF, ufDoRecorte } from '../lib/guia';
+import { linguaDe, rota, t } from '../i18n';
+
+interface Props { mapas: Mapa[] }
+const { mapas } = Astro.props;
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const i = tx.inicio;
+
+const porUf = new Map<string, Mapa[]>();
+for (const m of mapas) {
+  if (escopoDoMapa(m) === 'brasil') continue;
+  const uf = ufDoRecorte(m.original.recorte);
+  if (uf) porUf.set(uf, [...(porUf.get(uf) ?? []), m]);
+}
+const oeste = lingua === 'en' ? 'W' : 'O';
+const brasil = mapas.filter((m) => escopoDoMapa(m) === 'brasil').length;
+const maior = Math.max(1, ...[...porUf.values()].map((l) => l.length));
+// Dentro de São Paulo: os recortes menores que o estado (metrópoles, regiões, um município).
+const recortesSp = new Map<string, Mapa[]>();
+for (const m of porUf.get('SP') ?? []) {
+  if (/^Estado de São Paulo/.test(m.original.recorte)) continue;
+  recortesSp.set(m.data.recorte, [...(recortesSp.get(m.data.recorte) ?? []), m]);
+}
+const semAcento = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const galeria = (busca: string) => `${rota(lingua)}?${busca}#galeria`;
+const destinoUf = (uf: string, lista: Mapa[]) =>
+  lista.length === 1 ? linkMapa(lista[0]) : uf === 'SP' ? galeria('recorte=sp') : galeria(`q=${uf.toLowerCase()}`);
+---
+
+<figure class="mdm">
+  <div class="mdm__quadro">
+    <span class="mdm__tique mdm__tique--n mono" aria-hidden="true">5° N</span>
+    <span class="mdm__tique mdm__tique--s mono" aria-hidden="true">33° S</span>
+    <span class="mdm__tique mdm__tique--o mono" aria-hidden="true">74° {oeste}</span>
+    <span class="mdm__tique mdm__tique--l mono" aria-hidden="true">35° {oeste}</span>
+    <ul class="mdm__grade" role="list">
+      {
+        GRADE_UF.map(([uf, col, lin]) => {
+          const lista = porUf.get(uf) ?? [];
+          const peso = lista.length / maior;
+          const estilo = `grid-column:${col + 1};grid-row:${lin + 1};--peso:${peso.toFixed(2)}`;
+          return lista.length ? (
+            <li style={estilo}>
+              <a class="mdm__uf mdm__uf--com" href={destinoUf(uf, lista)}>
+                <span class="mdm__sigla">{uf}</span>
+                <span class="mdm__n mono">{lista.length}</span>
+                <span class="sr-only">
+                  {lista.length} {lista.length === 1 ? tx.colecoes.mapa : tx.colecoes.mapas}
+                </span>
+              </a>
+            </li>
+          ) : (
+            <li style={estilo}>
+              <span class="mdm__uf" title={i.semMapa}>
+                <span class="mdm__sigla">{uf}</span>
+                <span class="sr-only">{i.semMapa}</span>
+              </span>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+  <figcaption class="mdm__legenda">
+    <a class="mdm__brasil" href={galeria('recorte=brasil')}>
+      <span class="rotulo">{i.brasilInteiro}</span>
+      <span class="mdm__total">{brasil}</span>
+      <span class="rotulo">{tx.colecoes.mapas} <Icone nome="seta" tamanho={11} /></span>
+    </a>
+    {
+      recortesSp.size > 0 && (
+        <div class="mdm__sp">
+          <p class="rotulo">{i.dentroSp}</p>
+          <ul role="list">
+            {[...recortesSp].sort((a, b) => b[1].length - a[1].length).map(([recorte, lista]) => (
+              <li>
+                <a href={lista.length === 1 ? linkMapa(lista[0]) : galeria(`q=${encodeURIComponent(semAcento(recorte))}`)}>
+                  <span>{recorte.replace(/\s*\(SP\)$/, '')}</span>
+                  <span class="mono">{lista.length}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+    <p class="mdm__chave rotulo">
+      <span class="mdm__amostra mdm__amostra--com" aria-hidden="true"></span> {tx.colecoes.mapas}
+      <span class="mdm__amostra" aria-hidden="true"></span> {i.semMapa}
+    </p>
+  </figcaption>
+</figure>
+
+<style>
+  .mdm {
+    display: grid;
+    gap: var(--e-5);
+    margin: 0;
+    align-items: start;
+  }
+  @media (min-width: 700px) {
+    .mdm {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--e-6);
+    }
+  }
+  /* O quadro em volta da grade é o Brasil: moldura de prancha com tiques de coordenadas */
+  .mdm__quadro {
+    position: relative;
+    justify-self: start;
+    padding: var(--e-5);
+    border: 1px solid var(--linha);
+    background: var(--folha);
+    background-image:
+      linear-gradient(var(--linha-fina) 1px, transparent 1px),
+      linear-gradient(90deg, var(--linha-fina) 1px, transparent 1px);
+    /* graticule alinhada às células da grade */
+    background-size: calc(var(--lado) + 3px) calc(var(--lado) + 3px);
+    background-origin: content-box;
+    background-position: -2px -2px;
+    --lado: 42px;
+  }
+  .mdm__tique {
+    position: absolute;
+    font-size: 10px;
+    color: var(--tinta-3);
+    background: var(--folha);
+    padding: 0 3px;
+    line-height: 1;
+  }
+  .mdm__tique--n {
+    top: -6px;
+    left: var(--e-4);
+  }
+  .mdm__tique--s {
+    bottom: -6px;
+    right: var(--e-4);
+  }
+  .mdm__tique--o {
+    left: -1px;
+    bottom: var(--e-4);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 3px 0;
+  }
+  .mdm__tique--l {
+    right: -1px;
+    top: var(--e-4);
+    writing-mode: vertical-rl;
+    padding: 3px 0;
+  }
+  .mdm__grade {
+    display: grid;
+    grid-template-columns: repeat(6, var(--lado));
+    grid-template-rows: repeat(8, var(--lado));
+    gap: 3px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (min-width: 420px) {
+    .mdm__quadro {
+      --lado: 48px;
+    }
+  }
+  .mdm__uf {
+    position: relative;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed var(--linha-fina);
+    color: var(--tinta-3);
+    background: var(--folha);
+    text-decoration: none;
+    font-family: var(--f-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    line-height: 1.1;
+  }
+  .mdm__uf--com {
+    border: 1px solid var(--linha);
+    color: var(--tinta);
+    /* Wheat Sheaf cresce com o número de pranchas: só a borda inferior, como uma barra */
+    box-shadow: inset 0 calc(-4px - var(--peso) * 14px) 0 var(--trigo);
+    transition:
+      background-color 120ms linear,
+      color 120ms linear;
+  }
+  .mdm__uf--com:hover,
+  .mdm__uf--com:focus-visible {
+    background: var(--tinta);
+    color: var(--papel);
+    box-shadow: none;
+  }
+  .mdm__sigla {
+    font-weight: 600;
+  }
+  .mdm__n {
+    position: relative;
+    font-size: 10px;
+    color: inherit;
+  }
+  .mdm__legenda {
+    display: grid;
+    gap: var(--e-4);
+    align-content: start;
+  }
+  .mdm__brasil {
+    display: grid;
+    justify-items: start;
+    gap: var(--e-1);
+    padding: var(--e-3) var(--e-4);
+    border: 1px solid var(--linha);
+    text-decoration: none;
+    color: var(--tinta);
+    max-width: 260px;
+  }
+  .mdm__brasil:hover {
+    border-color: var(--acento);
+  }
+  .mdm__brasil .rotulo {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+  }
+  .mdm__total {
+    font-family: var(--f-titulo);
+    font-size: var(--t-xxl);
+    line-height: 1;
+  }
+  .mdm__sp .rotulo {
+    margin: 0 0 var(--e-2);
+  }
+  .mdm__sp ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--linha-fina);
+  }
+  .mdm__sp a {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--e-3);
+    padding: var(--e-1) 0;
+    border-bottom: 1px solid var(--linha-fina);
+    font-size: var(--t-sm);
+    line-height: 1.4;
+    text-decoration: none;
+    color: var(--tinta);
+  }
+  .mdm__sp a:hover {
+    color: var(--acento);
+  }
+  .mdm__sp .mono {
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+  .mdm__chave {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+    margin: 0;
+  }
+  .mdm__amostra {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px dashed var(--linha-fina);
+    background: var(--folha);
+  }
+  .mdm__amostra--com {
+    border: 1px solid var(--linha);
+    box-shadow: inset 0 -6px 0 var(--trigo);
+  }
+</style>
