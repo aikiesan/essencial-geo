@@ -10,7 +10,7 @@ import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
 import Progresso from '../components/Progresso.astro';
 import { colecoesNoAr } from '../lib/colecoes';
-import { contarPorCategoria, linkMapa, mapasPublicados, numeroFormatado, proximosMapas } from '../lib/mapas';
+import { ESCOPOS, contarPorCategoria, escopoDoMapa, linkMapa, mapasPublicados, numeroFormatado, proximosMapas } from '../lib/mapas';
 import { jsonLd, siteEAutor } from '../lib/metadados';
 import { CATEGORIA_IDS, COLECOES, SITE } from '../site.config';
 import { dataCurta, linguaDe, rota, t } from '../i18n';
@@ -26,7 +26,25 @@ const proximos = await proximosMapas(lingua, 3);
 const hojeBrasilia = new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
 const contagem = contarPorCategoria(mapas);
 const temas = CATEGORIA_IDS.filter((c) => contagem[c] > 0).length;
-const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
+const categorias = CATEGORIA_IDS.filter((c) => contagem[c] > 0);
+const escopos = ESCOPOS.map((e) => ({ id: e, n: mapas.filter((m) => escopoDoMapa(m) === e).length })).filter((e) => e.n > 0);
+// Texto em que a busca procura: número, título, subtítulo, recorte, coleção, tema e etiquetas, sem acentos.
+const semAcento = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const busca = (m: (typeof mapas)[number]) =>
+  semAcento(
+    [
+      numeroFormatado(m.data.numero),
+      m.data.titulo,
+      m.data.subtitulo,
+      m.data.recorte,
+      m.original.recorte,
+      m.data.colecao && COLECOES[m.data.colecao][lingua].titulo,
+      tx.categorias[m.data.categoria].rotulo,
+      m.data.tags.join(' ').replaceAll('-', ' '),
+    ]
+      .filter(Boolean)
+      .join(' '),
+  );
 ---
 
 <Base imagem={mapas[0]?.data.imagem.src}>
@@ -106,25 +124,72 @@ const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
         <p>{i.galeriaMapasFina}</p>
       </div>
 
-      {
-        filtros.length > 0 && (
-          <div class="filtros" role="group" aria-label={i.filtro} data-filtros>
-            <button type="button" data-filtro="" aria-pressed="true">
-              {i.todos} <span class="mono">{mapas.length}</span>
-            </button>
-            {filtros.map((c) => (
-              <button type="button" data-filtro={c.id} aria-pressed="false">
-                {c.titulo} <span class="mono">{c.mapas.length}</span>
-              </button>
-            ))}
-          </div>
-        )
-      }
+      <form class="filtros" data-filtros role="search" aria-label={i.filtro}>
+        <label class="filtros__campo filtros__busca">
+          <span class="rotulo">{i.buscar}</span>
+          <input type="search" name="q" placeholder={i.buscarDica} autocomplete="off" spellcheck="false" />
+        </label>
+        {
+          series.length > 1 && (
+            <label class="filtros__campo">
+              <span class="rotulo">{i.colecao}</span>
+              <select name="colecao">
+                <option value="">{i.colecaoTodas}</option>
+                {series.map((c) => (
+                  <option value={c.id}>
+                    {c.titulo} ({c.mapas.length})
+                  </option>
+                ))}
+              </select>
+            </label>
+          )
+        }
+        {
+          categorias.length > 1 && (
+            <label class="filtros__campo">
+              <span class="rotulo">{i.tema}</span>
+              <select name="tema">
+                <option value="">{i.temaTodos}</option>
+                {categorias.map((c) => (
+                  <option value={c}>
+                    {tx.categorias[c].curto} ({contagem[c]})
+                  </option>
+                ))}
+              </select>
+            </label>
+          )
+        }
+        {
+          escopos.length > 1 && (
+            <fieldset class="filtros__recorte">
+              <legend class="rotulo">{i.recorte}</legend>
+              <label>
+                <input type="radio" name="recorte" value="" checked />
+                <span>{i.escopos.todos}</span>
+              </label>
+              {escopos.map((e) => (
+                <label>
+                  <input type="radio" name="recorte" value={e.id} />
+                  <span>
+                    {i.escopos[e.id]} <span class="mono">{e.n}</span>
+                  </span>
+                </label>
+              ))}
+            </fieldset>
+          )
+        }
+        <div class="filtros__estado">
+          <p class="rotulo" data-filtro-contagem data-modelo={i.contagem} aria-live="polite">
+            {i.contagem.replace('{n}', String(mapas.length)).replace('{total}', String(mapas.length))}
+          </p>
+          <button type="reset" class="filtros__limpar rotulo">{i.limpar}</button>
+        </div>
+      </form>
 
       <ul class="mapas" role="list" data-galeria>
         {
           mapas.map((m, n) => (
-            <li data-colecao={m.data.colecao ?? ''}>
+            <li data-colecao={m.data.colecao ?? ''} data-tema={m.data.categoria} data-recorte={escopoDoMapa(m)} data-busca={busca(m)}>
               <a class="mapa" href={linkMapa(m)}>
                 <span class="mapa__capa">
                   <Image
@@ -138,7 +203,7 @@ const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
                   />
                 </span>
                 <span class="mapa__no rotulo">
-                  Nº {numeroFormatado(m.data.numero)}
+                  {tx.geral.no} {numeroFormatado(m.data.numero)}
                   {m.data.colecao && <> · {COLECOES[m.data.colecao][lingua].titulo}</>}
                 </span>
                 <span class="mapa__titulo">{m.data.titulo}</span>
@@ -148,6 +213,10 @@ const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
           ))
         }
       </ul>
+
+      <p class="galeria-vazia" data-galeria-vazia hidden>
+        <Estrela tamanho={12} /> {i.nenhum}
+      </p>
 
       <a class="feed-link rotulo" href={rota(lingua, 'mapas')}>
         {i.lerFeed} <Icone nome="seta" tamanho={12} />
@@ -351,39 +420,133 @@ const filtros = series.filter((c) => c.mapas.length > 1 || series.length > 1);
     color: var(--acento);
   }
 
-  /* Filtro por coleção: etiquetas; sem JavaScript, a galeria mostra tudo */
+  /* Busca e filtros: sem JavaScript, a galeria mostra tudo e o formulário some */
   .filtros {
     display: none;
-    flex-wrap: wrap;
-    gap: var(--e-2);
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--e-3) var(--e-4);
     margin-bottom: var(--e-5);
+    padding: var(--e-4);
+    border: 1px solid var(--linha-fina);
+    background: var(--painel);
   }
   :global(.js) .filtros {
-    display: flex;
+    display: grid;
   }
-  .filtros button {
+  @media (min-width: 700px) {
+    .filtros {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .filtros__recorte,
+    .filtros__estado {
+      grid-column: 1 / -1;
+    }
+  }
+  .filtros__campo {
+    display: grid;
+    gap: var(--e-1);
+    min-width: 0;
+  }
+  .filtros .rotulo {
+    margin: 0;
+  }
+  .filtros input[type='search'],
+  .filtros select {
+    width: 100%;
+    min-height: 40px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha-fina);
+    background: var(--papel);
+    color: var(--tinta);
+    font: inherit;
+    font-size: var(--t-sm);
+  }
+  .filtros input[type='search']:hover,
+  .filtros select:hover {
+    border-color: var(--tinta-3);
+  }
+  .filtros__recorte {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .filtros__recorte legend {
+    float: left;
+    margin-right: var(--e-2);
+  }
+  .filtros__recorte label {
+    position: relative;
+  }
+  .filtros__recorte input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  .filtros__recorte label > span {
     display: inline-flex;
     align-items: center;
     gap: var(--e-2);
     min-height: 32px;
     padding: 0 var(--e-3);
     border: 1px solid var(--linha-fina);
-    background: var(--painel);
     font-size: var(--t-sm);
     transition:
       border-color 120ms linear,
       background-color 120ms linear;
   }
-  .filtros button:hover {
+  .filtros__recorte label:hover > span {
     border-color: var(--tinta-3);
   }
-  .filtros button[aria-pressed='true'] {
+  .filtros__recorte input:checked + span {
     background: var(--trigo);
     border-color: var(--trigo);
   }
-  .filtros .mono {
+  .filtros__recorte input:focus-visible + span {
+    outline: 2px solid var(--foco);
+    outline-offset: 2px;
+  }
+  .filtros__recorte .mono {
     font-size: var(--t-xs);
     color: var(--tinta-3);
+  }
+  .filtros__estado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e-2);
+    padding-top: var(--e-3);
+    border-top: 1px solid var(--linha-fina);
+  }
+  .filtros__limpar {
+    min-height: 32px;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid var(--linha-fina);
+    background: transparent;
+    color: var(--tinta-2);
+  }
+  .filtros__limpar:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+  .galeria-vazia {
+    display: flex;
+    gap: var(--e-2);
+    align-items: center;
+    padding: var(--e-6);
+    border: 1px dashed var(--linha-fina);
+    font-style: italic;
+    color: var(--tinta-2);
+  }
+  .galeria-vazia[hidden] {
+    display: none;
   }
 
   /* Mapas: miniaturas em grade */

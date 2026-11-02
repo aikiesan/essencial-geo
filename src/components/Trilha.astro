@@ -1,0 +1,68 @@
+---
+/** Trilha de navegação (início → coleções → coleção → prancha). O último item é a página atual. */
+import { linguaDe, t } from '../i18n';
+
+interface Props { itens: { rotulo: string; href?: string }[] }
+const { itens } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
+---
+
+<nav class="trilha rotulo" aria-label={tx.mapa.trilha}>
+  <ol role="list">
+    {
+      itens.map((it, i) => (
+        <li>
+          {it.href && i < itens.length - 1 ? <a href={it.href}>{it.rotulo}</a> : <span aria-current="page">{it.rotulo}</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  .trilha {
+    margin: 0 0 var(--e-5);
+  }
+  .trilha ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .trilha li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-2);
+    min-width: 0;
+  }
+  .trilha li + li::before {
+    content: '/';
+    color: var(--linha-fina);
+  }
+  .trilha a {
+    display: inline-block;
+    padding-block: 4px;
+    color: var(--tinta-2);
+    text-decoration: none;
+  }
+  .trilha a:hover {
+    color: var(--acento);
+    text-decoration: underline;
+  }
+  .trilha [aria-current] {
+    color: var(--tinta);
+  }
+  /* No celular, a trilha vira um único passo atrás: "← coleção" */
+  @media (max-width: 559px) {
+    .trilha li:not(:nth-last-child(2)) {
+      display: none;
+    }
+    .trilha li:nth-last-child(2)::before {
+      content: '←';
+      color: var(--tinta-3);
+    }
+  }
+</style>

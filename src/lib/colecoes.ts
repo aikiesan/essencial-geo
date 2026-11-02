@@ -48,5 +48,7 @@ export async function colecaoDoMapa(m: Mapa): Promise<{ colecao: Colecao; posica
   const colecao = (await colecoes(m.lingua)).find((c) => c.id === m.data.colecao);
   if (!colecao) return undefined;
   const total = Math.max(colecao.ordem.length, colecao.mapas.length);
-  return { colecao, posicao: colecao.ordem.indexOf(m.id) + 1, total };
+  // Rascunhos (só em desenvolvimento) ficam fora de `ordem`: a posição sai da lista das pranchas no ar.
+  const posicao = colecao.ordem.indexOf(m.id) + 1 || colecao.mapas.findIndex((x) => x.id === m.id) + 1;
+  return { colecao, posicao, total };
 }

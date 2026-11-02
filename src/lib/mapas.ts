@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs';
+import { existsSync, openSync, readSync, closeSync } from 'node:fs';
 import { join } from 'node:path';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { AUTORIA, CATEGORIA_IDS, FORMATOS, SITE, type CategoriaId } from '../site.config';
@@ -126,6 +126,55 @@ export function arquivoDoMapa(m: { id: string }, arquivo: string): string {
 export function figuraDoMapa(m: Mapa, { semBase = false } = {}): string | undefined {
   const nome = `mapa_figura${semBase ? '_sem_base' : ''}${m.lingua === 'en' ? '.en' : ''}.png`;
   return existsSync(join(process.cwd(), 'mapas', m.id, nome)) ? arquivoDoMapa(m, nome) : undefined;
+}
+
+/** Largura e altura de um PNG, lidas do cabeçalho IHDR (bytes 16 a 23), sem decodificar a imagem. */
+function tamanhoPng(caminho: string): { largura: number; altura: number } | undefined {
+  try {
+    const fd = openSync(caminho, 'r');
+    const buf = Buffer.alloc(24);
+    readSync(fd, buf, 0, 24, 0);
+    closeSync(fd);
+    return { largura: buf.readUInt32BE(16), altura: buf.readUInt32BE(20) };
+  } catch {
+    return undefined;
+  }
+}
+
+export type VersaoId = 'prancha' | 'figura' | 'semBase';
+export interface VersaoFigura {
+  versao: Exclude<VersaoId, 'prancha'>;
+  src: string;
+  largura: number;
+  altura: number;
+}
+
+/**
+ * As outras duas versões da imagem, além da prancha: a figura sem moldura e a figura sem mapa de base,
+ * na língua da página. Só as que existem na pasta do mapa.
+ */
+export function versoesDoMapa(m: Mapa): VersaoFigura[] {
+  const versoes: VersaoFigura[] = [];
+  for (const [versao, semBase] of [['figura', false], ['semBase', true]] as const) {
+    const nome = `mapa_figura${semBase ? '_sem_base' : ''}${m.lingua === 'en' ? '.en' : ''}.png`;
+    const caminho = join(process.cwd(), 'mapas', m.id, nome);
+    const tam = existsSync(caminho) ? tamanhoPng(caminho) : undefined;
+    if (tam) versoes.push({ versao, src: arquivoDoMapa(m, nome), ...tam });
+  }
+  return versoes;
+}
+
+/**
+ * Abrangência do recorte, para o filtro da galeria: o estado de São Paulo (e recortes dentro dele),
+ * o Brasil inteiro ou outra unidade da federação. Lida do recorte em português.
+ */
+export type Escopo = 'sp' | 'brasil' | 'uf';
+export const ESCOPOS: Escopo[] = ['sp', 'brasil', 'uf'];
+export function escopoDoMapa(m: Mapa): Escopo {
+  const r = m.original.recorte.trim();
+  if (/^brasil\b/i.test(r)) return 'brasil';
+  if (/\(SP\)$/.test(r)) return 'sp';
+  return 'uf';
 }
 
 export interface DownloadResolvido {

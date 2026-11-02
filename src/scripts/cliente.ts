@@ -159,24 +159,101 @@ function iniciarGaveta() {
   });
 }
 
-/* ---------- Galeria da página inicial: filtro por coleção ---------------- */
+/* ---------- Versões da imagem na página do mapa ------------------------- */
+// Prancha, figura sem moldura e figura sem mapa de base: abas que trocam o painel visível.
+function iniciarVersoes() {
+  $$('[data-versoes]').forEach((fig) => {
+    const abas = $$<HTMLButtonElement>('[data-versao]', fig);
+    const paineis = $$('[data-painel-versao]', fig);
+    const escolher = (aba: HTMLButtonElement, foco = false) => {
+      abas.forEach((a) => a.setAttribute('aria-pressed', String(a === aba)));
+      paineis.forEach((p) => (p.hidden = p.dataset.painelVersao !== aba.dataset.versao));
+      if (foco) aba.focus();
+    };
+    abas.forEach((aba, i) => {
+      aba.addEventListener('click', () => escolher(aba));
+      // Setas esquerda/direita percorrem as abas, como num grupo de abas.
+      aba.addEventListener('keydown', (ev) => {
+        const passo = ev.key === 'ArrowRight' ? 1 : ev.key === 'ArrowLeft' ? -1 : 0;
+        if (!passo) return;
+        ev.preventDefault();
+        escolher(abas[(i + passo + abas.length) % abas.length], true);
+      });
+    });
+  });
+}
+
+/* ---------- Galeria da página inicial: busca e filtros ------------------- */
+// Coleção, tema, recorte e texto livre; o estado fica na URL (?colecao=…&tema=…&recorte=…&q=…).
+const semAcento = (s: string) =>
+  s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+
 function iniciarGaleria() {
-  const grupo = document.querySelector<HTMLElement>('[data-filtros]');
+  const form = document.querySelector<HTMLFormElement>('[data-filtros]');
   const itens = $$('[data-galeria] > li');
-  if (!grupo || !itens.length) return;
-  const botoes = $$<HTMLButtonElement>('[data-filtro]', grupo);
-  botoes.forEach((b) =>
-    b.addEventListener('click', () => {
-      const alvo = b.dataset.filtro ?? '';
-      botoes.forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
-      itens.forEach((li) => (li.hidden = alvo !== '' && li.dataset.colecao !== alvo));
-    }),
-  );
+  if (!form || !itens.length) return;
+  const contagem = form.querySelector<HTMLElement>('[data-filtro-contagem]');
+  const vazio = document.querySelector<HTMLElement>('[data-galeria-vazia]');
+  const modelo = contagem?.dataset.modelo ?? '{n} / {total}';
+  const campos = ['colecao', 'tema', 'recorte', 'q'] as const;
+
+  const ler = () => {
+    const f = new FormData(form);
+    return Object.fromEntries(campos.map((c) => [c, String(f.get(c) ?? '')])) as Record<(typeof campos)[number], string>;
+  };
+
+  const aplicar = (gravar = true) => {
+    const v = ler();
+    const termos = semAcento(v.q).split(/\s+/).filter(Boolean);
+    let n = 0;
+    itens.forEach((li) => {
+      const d = li.dataset;
+      const ok =
+        (!v.colecao || d.colecao === v.colecao) &&
+        (!v.tema || d.tema === v.tema) &&
+        (!v.recorte || d.recorte === v.recorte) &&
+        termos.every((t) => (d.busca ?? '').includes(t));
+      li.hidden = !ok;
+      if (ok) n++;
+    });
+    if (contagem) contagem.textContent = modelo.replace('{n}', String(n)).replace('{total}', String(itens.length));
+    if (vazio) vazio.hidden = n > 0;
+    if (gravar) {
+      const u = new URL(location.href);
+      campos.forEach((c) => (v[c] ? u.searchParams.set(c, v[c]) : u.searchParams.delete(c)));
+      history.replaceState(null, '', u);
+    }
+  };
+
+  // Estado inicial a partir da URL (?tag= também vale, como busca).
+  const params = new URLSearchParams(location.search);
+  campos.forEach((c) => {
+    const valor = params.get(c) ?? (c === 'q' ? params.get('tag') : null);
+    if (!valor) return;
+    const el = form.elements.namedItem(c);
+    if (el instanceof RadioNodeList) el.value = valor;
+    else if (el instanceof HTMLInputElement || el instanceof HTMLSelectElement) el.value = valor;
+  });
+
+  let espera = 0;
+  form.addEventListener('input', (ev) => {
+    window.clearTimeout(espera);
+    const texto = (ev.target as Element).matches('input[type="search"]');
+    espera = window.setTimeout(() => aplicar(), texto ? 140 : 0);
+  });
+  form.addEventListener('submit', (ev) => ev.preventDefault());
+  form.addEventListener('reset', () => window.setTimeout(() => aplicar()));
+  aplicar(false);
 }
 
 iniciarTema();
 iniciarMenu();
 iniciarGaleria();
+iniciarVersoes();
 iniciarCitacoes();
 iniciarGaveta();
 iniciarVisor();

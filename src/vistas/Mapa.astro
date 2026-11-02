@@ -6,9 +6,13 @@ import CartaoMapa from '../components/CartaoMapa.astro';
 import Ficha from '../components/Ficha.astro';
 import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
+import Trilha from '../components/Trilha.astro';
+import Downloads from '../components/Downloads.astro';
+import NavColecao from '../components/NavColecao.astro';
+import { colecaoDoMapa } from '../lib/colecoes';
 import { SITE } from '../site.config';
 import { linkMapa, momentoPublicacao, numeroFormatado, type Mapa } from '../lib/mapas';
-import { t } from '../i18n';
+import { rota, t } from '../i18n';
 import { datasetDoMapa, etiquetasCitacao, jsonLd } from '../lib/metadados';
 
 interface Props { mapa: Mapa; maisNovo?: Mapa; maisAntigo?: Mapa }
@@ -21,6 +25,19 @@ const arquivoReadme = mapa.lingua === 'en' && mapa.traducao ? 'README.en.md' : '
 const real = !mapa.data.exemplo;
 const dataset = real ? datasetDoMapa(mapa, Astro.site) : undefined;
 const citacaoMeta = real ? etiquetasCitacao(mapa, Astro.site) : [];
+const serie = await colecaoDoMapa(mapa);
+const num = numeroFormatado(mapa.data.numero);
+// Início → Coleções → coleção → prancha; sem coleção, Início → Mapas → prancha.
+const trilha = [
+  { rotulo: tx.mapa.inicio, href: rota(mapa.lingua) },
+  ...(serie
+    ? [
+        { rotulo: tx.topo.colecoes, href: rota(mapa.lingua, 'colecoes') },
+        { rotulo: serie.colecao.titulo, href: rota(mapa.lingua, 'colecoes', serie.colecao.id) },
+      ]
+    : [{ rotulo: tx.topo.mapas, href: rota(mapa.lingua, 'mapas') }]),
+  { rotulo: `${tx.geral.no} ${num}` },
+];
 const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoReadme}`;
 ---
 
@@ -38,13 +55,16 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
     {real && mapa.original.doi && <link rel="cite-as" href={`https://doi.org/${mapa.original.doi}`} />}
     {dataset && <script type="application/ld+json" set:html={jsonLd(dataset)} />}
   </Fragment>
-  <div class="feed">
+  <div class="pagina-mapa">
+    <Trilha itens={trilha} />
     <CartaoMapa mapa={mapa} prioridade destaque />
+
+    <Downloads mapa={mapa} />
 
     <div class="divisor" aria-hidden="true"><Estrela /></div>
 
     <section class="notas" aria-labelledby="t-notas">
-      <h2 class="secao" id="t-notas">{tx.mapa.notas} · {tx.geral.no} {numeroFormatado(mapa.data.numero)}</h2>
+      <h2 class="secao" id="t-notas">{tx.mapa.notas} · {tx.geral.no} {num}</h2>
       <div class="prosa">
         <Content />
       </div>
@@ -53,6 +73,10 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
       </p>
     </section>
 
+    {serie && <NavColecao mapa={mapa} colecao={serie.colecao} posicao={serie.posicao} total={serie.total} />}
+
+    {/* Sem coleção, a vizinhança é a do feed (do mais novo ao mais antigo). */}
+    {!serie && (
     <nav class="vizinhos" aria-label={tx.mapa.outros}>
       {
         maisAntigo ? (
@@ -79,6 +103,7 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
         )
       }
     </nav>
+    )}
   </div>
 
   <div slot="direita" class="direita-mapa" data-ficha-de={mapa.id}>
@@ -87,6 +112,19 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
 </Base>
 
 <style>
+  /* A página do mapa é mais larga que o feed: a prancha ocupa até 1040 px; o texto fica na medida do feed. */
+  .pagina-mapa {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .pagina-mapa > :global(*:not(.cartao)),
+  .pagina-mapa :global(.cartao > *:not(.prancha)) {
+    max-width: var(--feed-max);
+  }
+  .pagina-mapa > :global(.navcol),
+  .pagina-mapa > :global(.baixar) {
+    max-width: none;
+  }
   .notas .prosa :global(h2) {
     font-size: var(--t-lg);
     margin-top: var(--e-6);
