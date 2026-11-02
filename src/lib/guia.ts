@@ -10,8 +10,8 @@ type Bilingue = Record<Lingua, string>;
 
 /* ---------- Glossário ------------------------------------------------------ */
 
-export type GrupoTermo = 'cartografia' | 'cana' | 'biogas' | 'politica' | 'fontes';
-export const GRUPOS_TERMO: GrupoTermo[] = ['cartografia', 'cana', 'biogas', 'politica', 'fontes'];
+export type GrupoTermo = 'cartografia' | 'cana' | 'biogas' | 'terra' | 'politica' | 'fontes';
+export const GRUPOS_TERMO: GrupoTermo[] = ['cartografia', 'cana', 'biogas', 'terra', 'politica', 'fontes'];
 
 export interface Termo {
   id: string;
@@ -239,6 +239,57 @@ export const GLOSSARIO: Termo[] = [
     padrao: /biog[êe]nic/i,
   },
 
+  // Floresta e uso da terra
+  {
+    id: 'licor-negro',
+    grupo: 'terra',
+    termo: { pt: 'Licor negro', en: 'Black liquor' },
+    def: {
+      pt: 'O caldo escuro que sobra quando a fábrica de celulose cozinha a madeira para separar a fibra. Queimado na caldeira de recuperação, devolve os químicos do processo e gera vapor e eletricidade: é a maior biomassa elétrica do país depois do bagaço.',
+      en: 'The dark liquor left when a pulp mill cooks wood to free the fibre. Burnt in the recovery boiler, it returns the process chemicals and makes steam and electricity: the country’s largest source of biomass power after bagasse.',
+    },
+    padrao: /licor negro|black liquor/i,
+  },
+  {
+    id: 'extrativismo',
+    grupo: 'terra',
+    termo: { pt: 'Extração vegetal (extrativismo)', en: 'Wild harvesting (extraction)' },
+    def: {
+      pt: 'O que se colhe da vegetação nativa, sem plantar: açaí da várzea, amêndoa de babaçu, lenha e carvão da mata. O IBGE separa isso da lavoura (PAM) e da floresta plantada (silvicultura).',
+      en: 'What is gathered from native vegetation without planting it: floodplain açaí, babassu kernels, firewood and charcoal from the forest. IBGE counts it apart from crops (PAM) and from planted forest (silviculture).',
+    },
+    padrao: /extra(ç|c)[ãa]o vegetal|extrativis|extra(í|i)d[oa]s? (da|na) mata|wild[- ]harvest|extraction|from (the )?native forest/i,
+  },
+  {
+    id: 'silvicultura',
+    grupo: 'terra',
+    termo: { pt: 'Silvicultura · floresta plantada', en: 'Silviculture · planted forest' },
+    def: {
+      pt: 'Floresta cultivada como lavoura, quase toda de eucalipto e pinus, para celulose, carvão, lenha e madeira. O carvão “plantado” das pranchas vem daqui.',
+      en: 'Forest grown like a crop, almost all eucalyptus and pine, for pulp, charcoal, firewood and timber. The “planted” charcoal on the plates comes from here.',
+    },
+    padrao: /silvicultur|floresta plantada|planted forest|plantation|eucalipt|eucalypt/i,
+  },
+  {
+    id: 'carvao',
+    grupo: 'terra',
+    termo: { pt: 'Carvão vegetal', en: 'Charcoal' },
+    def: {
+      pt: 'Madeira queimada com pouco ar até virar carbono quase puro; no Brasil, abastece sobretudo a siderurgia de Minas Gerais. Em 1986, quase dois terços vinham da mata nativa; hoje, quase tudo vem de eucalipto plantado.',
+      en: 'Wood burnt with little air until it is almost pure carbon; in Brazil it mostly feeds the Minas Gerais steel industry. In 1986 nearly two thirds came from native forest; today almost all comes from planted eucalyptus.',
+    },
+    padrao: /carv[ãa]o vegetal|charcoal/i,
+  },
+  {
+    id: 'uso-da-terra',
+    grupo: 'terra',
+    termo: { pt: 'Cobertura e uso da terra', en: 'Land cover and land use' },
+    def: {
+      pt: 'O que cobre cada pedaço do chão (floresta, pasto, soja, cana, água, cidade), lido de imagens de satélite ano a ano. As pranchas de quarenta anos usam a série do MapBiomas, de 1985 a 2025, somada por município.',
+      en: 'What covers each patch of ground (forest, pasture, soy, cane, water, town), read from satellite images year by year. The forty-year plates use MapBiomas’ series, 1985 to 2025, summed by municipality.',
+    },
+    padrao: /uso da terra|cobertura (e uso )?da terra|land (cover|use)|MapBiomas/i,
+  },
   // Política
   {
     id: 'renovabio',
@@ -333,6 +384,46 @@ export const GLOSSARIO: Termo[] = [
     padrao: /\bANP\b/,
   },
   {
+    id: 'pevs',
+    grupo: 'fontes',
+    termo: { pt: 'PEVS (IBGE)', en: 'PEVS (IBGE)' },
+    def: {
+      pt: 'Produção da Extração Vegetal e da Silvicultura: a pesquisa anual do IBGE com o que cada município colhe da mata nativa e da floresta plantada, desde 1986.',
+      en: 'Produção da Extração Vegetal e da Silvicultura, IBGE’s yearly survey of what each municipality harvests from native and planted forest, since 1986.',
+    },
+    padrao: /PEVS/,
+  },
+  {
+    id: 'pam',
+    grupo: 'fontes',
+    termo: { pt: 'PAM (IBGE)', en: 'PAM (IBGE)' },
+    def: {
+      pt: 'Produção Agrícola Municipal: área, quantidade e valor de cada lavoura em cada município, ano a ano.',
+      en: 'Produção Agrícola Municipal: area, quantity and value of every crop in every municipality, year by year.',
+    },
+    padrao: /PAM|Produ[çc][ãa]o Agr[íi]cola Municipal/,
+  },
+  {
+    id: 'mapbiomas',
+    grupo: 'fontes',
+    termo: { pt: 'MapBiomas', en: 'MapBiomas' },
+    def: {
+      pt: 'Rede de universidades, ONGs e empresas que classifica a cobertura da terra do Brasil inteiro em imagens Landsat, um mapa por ano desde 1985, com dados abertos.',
+      en: 'A network of universities, NGOs and companies that classifies land cover across all of Brazil from Landsat images, one map a year since 1985, as open data.',
+    },
+    padrao: /MapBiomas/,
+  },
+  {
+    id: 'sapcana',
+    grupo: 'fontes',
+    termo: { pt: 'SAPCana (MAPA)', en: 'SAPCana (MAPA)' },
+    def: {
+      pt: 'O acompanhamento mensal da produção sucroalcooleira do Ministério da Agricultura: cana moída, açúcar e etanol por estado, acumulados desde o início da safra, em 1º de abril.',
+      en: 'The Ministry of Agriculture’s monthly sugar-and-ethanol tracker: cane crushed, sugar and ethanol by state, accumulated from the start of the season on 1 April.',
+    },
+    padrao: /SAPCana/i,
+  },
+  {
     id: 'aneel',
     grupo: 'fontes',
     termo: { pt: 'ANEEL', en: 'ANEEL' },
@@ -400,12 +491,17 @@ export const PERGUNTAS: Pergunta[] = [
   {
     id: 'eletricidade',
     pergunta: { pt: 'De onde vem a eletricidade?', en: 'Where does the electricity come from?' },
-    colecoes: ['energia-eletrica', 'ritmo-biomassa-br', 'gd-biogas-br', 'energia-municipal-sp'],
+    colecoes: ['energia-eletrica', 'ritmo-biomassa-br', 'combustivel-biomassa-br', 'gd-biogas-br', 'energia-municipal-sp'],
   },
   {
     id: 'campo',
     pergunta: { pt: 'O que o campo produz e o que sobra dele?', en: 'What does the countryside produce, and what is left over?' },
     colecoes: ['agro-sp', 'biomassa-br', 'animal-sp', 'abate-br', 'nutrientes-sp'],
+  },
+  {
+    id: 'terra',
+    pergunta: { pt: 'O que a mata e a lavoura deram em quarenta anos?', en: 'What have forest and farmland yielded over forty years?' },
+    colecoes: ['quarenta-anos-de-biomassa-br', 'biomassa-da-mata-br'],
   },
   {
     id: 'gente',
