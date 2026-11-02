@@ -1,0 +1,650 @@
+cd_mun,nm_mun,nome_cetesb,agencia,ugrhi,rsu_t_dia,iqr_2022,iqr_2023,dispoe_em,cd_destino,nm_destino,uf_destino,local_destino,tipo_destino,local,km_reta,t_km_dia
+3500105,Adamantina,ADAMANTINA,Dracena,21,26.23,9.1,9.6,Adamantina-A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,True,0.0,0.0
+3500204,Adolfo,ADOLFO,S J Rio Preto,16,2.74,9.8,3.2,,3500204,Adolfo,SP,,proprio,True,0.0,0.0
+3500303,Aguaí,AGUAÍ,S J Boa Vista,9,23.15,10.0,9.8,Aguaí-A.P.,3500303,Aguaí,SP,Aguaí - A.P.,particular,True,0.0,0.0
+3500709,Agudos,AGUDOS,Bauru,13,28.81,7.1,7.1,,3500709,Agudos,SP,,proprio,True,0.0,0.0
+3500758,Alambari,ALAMBARI,Itapetininga,10,3.23,9.4,9.8,CesárioLange-A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,36.3,117.2
+3500808,Alfredo Marcondes,ALFREDO MARCONDES,Pres. Prudente,21,2.6,9.5,8.6,,3500808,Alfredo Marcondes,SP,,proprio,True,0.0,0.0
+3500907,Altair,ALTAIR,Barretos,12,1.91,10.0,10.0,OndaVerde-A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,26.5,50.6
+3501004,Altinópolis,ALTINÓPOLIS,Ribeirão Preto,4,10.29,9.4,8.4,SalesOliveira-A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,56.2,578.3
+3501103,Alto Alegre,ALTO ALEGRE,Araçatuba,19,2.12,9.5,7.1,,3501103,Alto Alegre,SP,,proprio,True,0.0,0.0
+3501152,Alumínio,ALUMÍNIO,Itu,10,10.16,9.5,9.5,Iperó-A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,49.2,499.9
+3501509,Alvinlândia,ALVINLÂNDIA,Marília,17,1.81,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,64.9,117.5
+3501608,Americana,AMERICANA,Americana,5,212.52,10.0,10.0,Americana-A.P.,3501608,Americana,SP,Americana - A.P.,particular,True,0.0,0.0
+3501905,Amparo,AMPARO,Paulínia,5,42.82,9.8,9.8,Paulínia-A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,39.5,1691.4
+3501707,Américo Brasiliense,AMÉRICO BRASILIENSE,Araraquara,9,26.22,10.0,9.8,Guatapará-A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,26.7,700.1
+3501806,Américo de Campos,AMÉRICO DE CAMPOS,Votuporanga,15,3.45,6.5,8.1,,3501806,Américo de Campos,SP,,proprio,True,0.0,0.0
+3502002,Analândia,ANALÂNDIA,Piracicaba,5,2.55,10.0,9.8,Guatapará-A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,79.8,203.5
+3502101,Andradina,ANDRADINA,Dracena,19,44.64,,,Três Lagoas - MS,5008305,Três Lagoas,MS,Três Lagoas - MS,outro_estado,False,36.1,1611.5
+3502200,Angatuba,ANGATUBA,Itapetininga,14,12.08,9.4,9.8,CesárioLange-A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,55.6,671.6
+3502309,Anhembi,ANHEMBI,Botucatu,10,3.0,7.2,8.9,,3502309,Anhembi,SP,,proprio,True,0.0,0.0
+3502408,Anhumas,ANHUMAS,Pres. Prudente,22,2.3,9.5,9.5,,3502408,Anhumas,SP,,proprio,True,0.0,0.0
+3502507,Aparecida,APARECIDA,Taubaté,2,25.68,9.5,9.4,CachoeiraPaulista-A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,30.5,783.2
+3502606,Aparecida d'Oeste,APARECIDA D'OESTE,Jales,18,2.34,7.5,9.6,,3502606,Aparecida d'Oeste,SP,,proprio,True,0.0,0.0
+3502705,Apiaí,APIAÍ,Capão Bonito,11,12.45,9.5,9.5,Iperó-A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,174.0,2166.3
+3503000,Aramina,ARAMINA,Franca,8,3.55,7.4,,Uberaba - MG,3170107,Uberaba,MG,Uberaba - MG,outro_estado,False,41.5,147.3
+3503109,Arandu,ARANDU,Avaré,14,3.63,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,80.5,292.2
+3503158,Arapeí,ARAPEÍ,Taubaté,2,1.23,,,Barra Mansa - RJ,3300407,Barra Mansa,RJ,Barra Mansa - RJ,outro_estado,False,31.8,39.1
+3503208,Araraquara,ARARAQUARA,Araraquara,13,211.81,10.0,9.8,Guatapará-A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,35.8,7582.8
+3503307,Araras,ARARAS,Mogi Guaçu,9,111.44,9.8,9.8,Paulínia-A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,50.6,5638.9
+3502754,Araçariguama,ARAÇARIGUAMA,Itu,10,15.07,8.2,9.2,,3502754,Araçariguama,SP,,proprio,True,0.0,0.0
+3502804,Araçatuba,ARAÇATUBA,Araçatuba,19,176.64,9.7,9.7,,3502804,Araçatuba,SP,,proprio,True,0.0,0.0
+3502903,Araçoiaba da Serra,ARAÇOIABA DA SERRA,Sorocaba,10,15.61,9.5,9.5,Iperó-A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,18.8,293.5
+3503356,Arco-Íris,ARCO-ÍRIS,Marília,20,0.82,9.0,9.5,,3503356,Arco-Íris,SP,,proprio,True,0.0,0.0
+3503406,Arealva,AREALVA,Bauru,13,4.48,7.8,6.8,,3503406,Arealva,SP,,proprio,True,0.0,0.0
+3503505,Areias,AREIAS,Taubaté,2,1.68,9.5,9.4,CachoeiraPaulista-A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,33.2,55.8
+3503604,Areiópolis,AREIÓPOLIS,Botucatu,13,6.3,9.5,9.5,,3503604,Areiópolis,SP,,proprio,True,0.0,0.0
+3503703,Ariranha,ARIRANHA,S J Rio Preto,15,5.04,9.8,9.8,Catanduva-A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,20.2,101.8
+3503802,Artur Nogueira,ARTUR NOGUEIRA,Limeira,5,37.27,10.0,9.5,Conchal-A.P.,3512209,Conchal,SP,Conchal - A.P.,particular,False,26.7,995.1
+3503901,Arujá,ARUJÁ,Tatuapé,6,66.58,7.5,7.5,SantaIsabel-A.P.,3546801,Santa Isabel,SP,Santa Isabel - A.P.,particular,False,12.7,845.6
+3503950,Aspásia,ASPÁSIA,Jales,15,0.9,9.2,9.2,,3503950,Aspásia,SP,,proprio,True,0.0,0.0
+3504008,Assis,ASSIS,Assis,17,77.59,9.5,9.5,Quatá-A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,54.1,4197.6
+3504107,Atibaia,ATIBAIA,Atibaia,5,129.95,9.8,9.5,SãoPaulo-CDR,3550308,São Paulo,SP,São Paulo - CDR,particular,False,48.7,6328.6
+3504206,Auriflama,AURIFLAMA,Jales,18,8.74,7.8,9.1,,3504206,Auriflama,SP,,proprio,True,0.0,0.0
+3504404,Avanhandava,AVANHANDAVA,Araçatuba,19,6.67,7.6,7.2,,3504404,Avanhandava,SP,,proprio,True,0.0,0.0
+3504503,Avaré,AVARÉ,Avaré,17,71.07,7.4,9.6,,3504503,Avaré,SP,,proprio,True,0.0,0.0
+3504305,Avaí,AVAÍ,Bauru,16,2.11,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,34.8,73.4
+3504602,Bady Bassitt,BADY BASSITT,S J Rio Preto,16,20.4,10.0,10.0,OndaVerde-A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,37.7,769.1
+3504701,Balbinos,BALBINOS,Bauru,16,0.88,7.2,7.9,,3504701,Balbinos,SP,,proprio,True,0.0,0.0
+3504909,Bananal,BANANAL,Taubaté,2,5.57,,,Barra Mansa - RJ,3300407,Barra Mansa,RJ,Barra Mansa - RJ,outro_estado,False,21.3,118.6
+3505104,Barbosa,BARBOSA,Araçatuba,19,3.34,9.0,7.2,,3505104,Barbosa,SP,,proprio,True,0.0,0.0
+3505203,Bariri,BARIRI,Bauru,13,23.98,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,55.0,1318.9
+3505302,Barra Bonita,BARRA BONITA,Bauru,13,26.9,7.6,7.8,,3505302,Barra Bonita,SP,,proprio,True,0.0,0.0
+3505351,Barra do Chapéu,BARRA DO CHAPÉU,Capão Bonito,11,1.07,7.2,4.4,,3505351,Barra do Chapéu,SP,,proprio,True,0.0,0.0
+3505401,Barra do Turvo,BARRA DO TURVO,Registro,11,1.98,7.4,7.6,,3505401,Barra do Turvo,SP,,proprio,True,0.0,0.0
+3505500,Barretos,BARRETOS,Barretos,12,106.88,9.4,8.4,Barretos-A.P.,3505500,Barretos,SP,Barretos - A.P.,particular,True,0.0,0.0
+3505609,Barrinha,BARRINHA,Jaboticabal,9,25.39,10.0,9.8,Guatapará-A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,35.8,909.0
+3505708,Barueri,BARUERI,Osasco,6,284.83,8.2,9.4,SantanadeParnaíba-A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,False,8.4,2392.6
+3505005,Barão de Antonina,BARÃO DE ANTONINA,Capão Bonito,14,1.52,10.0,9.2,,3505005,Barão de Antonina,SP,,proprio,True,0.0,0.0
+3505807,Bastos,BASTOS,Marília,21,12.96,9.5,9.5,Quatá-A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,36.7,475.6
+3505906,Batatais,BATATAIS,Franca,8,41.32,9.4,8.4,SalesOliveira-A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,29.5,1218.9
+3506003,Bauru,BAURU,Bauru,13,335.52,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,11.0,3690.7
+3506102,Bebedouro,BEBEDOURO,Barretos,12,58.22,9.8,9.8,Catanduva-A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,54.7,3184.6
+3506201,Bento de Abreu,BENTO DE ABREU,Araçatuba,19,1.67,8.7,9.0,,3506201,Bento de Abreu,SP,,proprio,True,0.0,0.0
+3506300,Bernardino de Campos,BERNARDINO DE CAMPOS,Assis,14,7.28,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,75.3,548.2
+3506359,Bertioga,BERTIOGA,Cubatão,7,50.51,9.5,9.3,Santos-A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,21.3,1075.9
+3506409,Bilac,BILAC,Araçatuba,19,4.71,9.5,8.6,,3506409,Bilac,SP,,proprio,True,0.0,0.0
+3506508,Birigui,BIRIGUI,Araçatuba,19,103.89,7.7,4.2,,3506508,Birigui,SP,,proprio,True,0.0,0.0
+3506607,Biritiba Mirim,BIRITIBA MIRIM,Mogi das Cruzes,6,20.38,7.5,7.5,Santa Isabel - A.P.,3546801,Santa Isabel,SP,Santa Isabel - A.P.,particular,False,34.0,692.9
+3506706,Boa Esperança do Sul,BOA ESPERANÇA DO SUL,Araraquara,13,8.11,3.2,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,66.0,535.3
+3506805,Bocaina,BOCAINA,Bauru,13,7.26,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,70.2,509.7
+3506904,Bofete,BOFETE,Botucatu,10,4.67,7.8,7.9,,3506904,Bofete,SP,,proprio,True,0.0,0.0
+3507001,Boituva,BOITUVA,Sorocaba,10,45.97,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,29.0,1333.1
+3507100,Bom Jesus dos Perdões,BOM JESUS DOS PERDÕES,Atibaia,5,13.58,9.5,9.5,São Paulo - CDR,3550308,São Paulo,SP,São Paulo - CDR,particular,False,47.8,649.1
+3507159,Bom Sucesso de Itararé,BOM SUCESSO DE ITARARÉ,Capão Bonito,14,1.69,4.5,4.1,,3507159,Bom Sucesso de Itararé,SP,,proprio,True,0.0,0.0
+3507308,Boracéia,BORACEIA,Bauru,13,2.96,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,43.7,129.4
+3507407,Borborema,BORBOREMA,Araraquara,16,8.98,8.3,8.3,,3507407,Borborema,SP,,proprio,True,0.0,0.0
+3507456,Borebi,BOREBI,Bauru,13,1.66,6.6,9.5,,3507456,Borebi,SP,,proprio,True,0.0,0.0
+3507209,Borá,BORÁ,Assis,21,0.49,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,15.8,7.7
+3507506,Botucatu,BOTUCATU,Botucatu,10,125.87,7.3,7.3,,3507506,Botucatu,SP,,proprio,True,0.0,0.0
+3507605,Bragança Paulista,BRAGANÇA PAULISTA,Atibaia,5,154.26,9.6,7.7,Bragança Paulista - A.P.,3507605,Bragança Paulista,SP,Bragança Paulista - A.P.,particular,True,0.0,0.0
+3507704,Braúna,BRAÚNA,Araçatuba,19,3.28,9.5,9.5,,3507704,Braúna,SP,,proprio,True,0.0,0.0
+3507753,Brejo Alegre,BREJO ALEGRE,Araçatuba,19,1.47,7.5,3.7,,3507753,Brejo Alegre,SP,,proprio,True,0.0,0.0
+3507803,Brodowski,BRODOWSKI,Ribeirão Preto,4,17.21,10.0,10.0,Jardinópolis - A.P.,3525102,Jardinópolis,SP,Jardinópolis - A.P.,particular,False,11.4,196.2
+3507902,Brotas,BROTAS,São Carlos,13,14.42,9.0,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,81.4,1173.8
+3508009,Buri,BURI,Capão Bonito,14,11.45,8.2,5.0,,3508009,Buri,SP,,proprio,True,0.0,0.0
+3508108,Buritama,BURITAMA,Araçatuba,19,11.35,9.0,9.0,,3508108,Buritama,SP,,proprio,True,0.0,0.0
+3508207,Buritizal,BURITIZAL,Franca,8,2.49,10.0,,Uberaba - MG,3170107,Uberaba,MG,Uberaba - MG,outro_estado,False,55.2,137.4
+3504800,Bálsamo,BÁLSAMO,S J Rio Preto,15,6.15,8.4,9.0,,3504800,Bálsamo,SP,,proprio,True,0.0,0.0
+3508405,Cabreúva,CABREÚVA,Jundiaí,10,31.88,9.0,8.9,,3508405,Cabreúva,SP,,proprio,True,0.0,0.0
+3508306,Cabrália Paulista,CABRÁLIA PAULISTA,Bauru,17,2.6,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,21.5,55.9
+3508603,Cachoeira Paulista,CACHOEIRA PAULISTA,Taubaté,2,20.62,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,True,0.0,0.0
+3508702,Caconde,CACONDE,S J Boa Vista,4,8.16,9.8,9.4,Tapiratiba - A.P.,3553609,Tapiratiba,SP,Tapiratiba - A.P.,particular,False,12.8,104.4
+3508801,Cafelândia,CAFELÂNDIA,Marília,16,10.13,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,99.3,1005.9
+3508900,Caiabu,CAIABU,Pres. Prudente,21,2.12,4.0,9.8,Regente Feijó - A.P.,3542404,Regente Feijó,SP,Regente Feijó - A.P.,particular,False,24.6,52.2
+3509007,Caieiras,CAIEIRAS,Santana,6,74.14,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,True,0.0,0.0
+3509106,Caiuá,CAIUÁ,Pres. Prudente,22,1.47,7.3,6.6,,3509106,Caiuá,SP,,proprio,True,0.0,0.0
+3509205,Cajamar,CAJAMAR,Osasco,6,72.66,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,12.6,915.5
+3509254,Cajati,CAJATI,Registro,11,14.58,9.0,6.5,,3509254,Cajati,SP,,proprio,True,0.0,0.0
+3509304,Cajobi,CAJOBI,Barretos,15,5.98,8.7,8.2,,3509304,Cajobi,SP,,proprio,True,0.0,0.0
+3509403,Cajuru,CAJURU,Ribeirão Preto,4,14.84,10.0,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,79.0,1172.4
+3509452,Campina do Monte Alegre,CAMPINA DO MONTE ALEGRE,Itapetininga,14,3.53,7.3,7.5,,3509452,Campina do Monte Alegre,SP,,proprio,True,0.0,0.0
+3509502,Campinas,CAMPINAS,Campinas,5,1231.41,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,18.4,22657.9
+3509601,Campo Limpo Paulista,CAMPO LIMPO PAULISTA,Jundiaí,5,62.11,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,18.2,1130.4
+3509809,Campos Novos Paulista,CAMPOS NOVOS PAULISTA,Assis,17,2.66,5.1,9.3,,3509809,Campos Novos Paulista,SP,,proprio,True,0.0,0.0
+3509700,Campos do Jordão,CAMPOS DO JORDÃO,Taubaté,1,37.34,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,24.9,929.8
+3509908,Cananéia,CANANÉIA,Registro,11,7.34,10.0,7.6,Pariquera-Açu,3536208,Pariquera-Açu,SP,Pariquera-Açu,publico,False,33.2,243.7
+3509957,Canas,CANAS,Taubaté,2,3.2,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,6.3,20.2
+3510153,Canitar,CANITAR,Assis,17,4.17,5.1,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,94.0,392.0
+3510302,Capela do Alto,CAPELA DO ALTO,Sorocaba,10,13.26,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,13.6,180.3
+3510401,Capivari,CAPIVARI,Campinas,5,37.85,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,44.5,1684.3
+3510203,Capão Bonito,CAPÃO BONITO,Capão Bonito,14,30.36,8.1,8.8,,3510203,Capão Bonito,SP,,proprio,True,0.0,0.0
+3510500,Caraguatatuba,CARAGUATATUBA,São Sebastião,3,116.37,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,49.5,5760.3
+3510609,Carapicuíba,CARAPICUÍBA,Osasco,6,348.29,8.2,9.4,Santana de Parnaíba - A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,False,11.0,3831.2
+3510708,Cardoso,CARDOSO,Votuporanga,15,7.22,7.9,7.8,,3510708,Cardoso,SP,,proprio,True,0.0,0.0
+3510807,Casa Branca,CASA BRANCA,S J Boa Vista,4,16.08,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,True,0.0,0.0
+3511003,Castilho,CASTILHO,Dracena,19,10.55,9.5,9.5,,3511003,Castilho,SP,,proprio,True,0.0,0.0
+3511102,Catanduva,CATANDUVA,S J Rio Preto,15,103.37,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,True,0.0,0.0
+3511201,Catiguá,CATIGUÁ,S J Rio Preto,15,4.52,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,12.5,56.5
+3508504,Caçapava,CAÇAPAVA,S J Campos,2,65.85,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,22.4,1475.0
+3511300,Cedral,CEDRAL,S J Rio Preto,15,6.99,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,32.4,226.5
+3511409,Cerqueira César,CERQUEIRA CÉSAR,Avaré,17,13.47,6.1,6.1,,3511409,Cerqueira César,SP,,proprio,True,0.0,0.0
+3511508,Cerquilho,CERQUILHO,Itu,10,33.91,7.1,8.6,,3511508,Cerquilho,SP,,proprio,True,0.0,0.0
+3511607,Cesário Lange,CESÁRIO LANGE,Botucatu,10,9.0,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,True,0.0,0.0
+3511706,Charqueada,CHARQUEADA,Piracicaba,5,9.87,9.0,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,40.7,401.7
+3557204,Chavantes,CHAVANTES,Assis,17,7.86,5.1,7.3,,3557204,Chavantes,SP,,proprio,True,0.0,0.0
+3511904,Clementina,CLEMENTINA,Araçatuba,20,4.66,8.7,9.5,,3511904,Clementina,SP,,proprio,True,0.0,0.0
+3512001,Colina,COLINA,Barretos,12,12.08,9.3,9.6,,3512001,Colina,SP,,proprio,True,0.0,0.0
+3512100,Colômbia,COLÔMBIA,Barretos,12,3.35,8.0,7.2,,3512100,Colômbia,SP,,proprio,True,0.0,0.0
+3512209,Conchal,CONCHAL,Mogi Guaçu,9,21.24,9.4,9.5,Conchal - A.P.,3512209,Conchal,SP,Conchal - A.P.,particular,True,0.0,0.0
+3512308,Conchas,CONCHAS,Botucatu,10,8.64,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,45.2,390.5
+3512407,Cordeirópolis,CORDEIRÓPOLIS,Limeira,5,15.41,5.7,5.1,,3512407,Cordeirópolis,SP,,proprio,True,0.0,0.0
+3512506,Coroados,COROADOS,Araçatuba,19,3.06,8.2,8.2,,3512506,Coroados,SP,,proprio,True,0.0,0.0
+3512605,Coronel Macedo,CORONEL MACEDO,Avaré,14,2.32,9.6,9.2,,3512605,Coronel Macedo,SP,,proprio,True,0.0,0.0
+3512704,Corumbataí,CORUMBATAÍ,Piracicaba,5,1.59,8.7,9.5,,3512704,Corumbataí,SP,,proprio,True,0.0,0.0
+3512902,Cosmorama,COSMORAMA,Votuporanga,15,4.18,7.9,7.1,,3512902,Cosmorama,SP,,proprio,True,0.0,0.0
+3512803,Cosmópolis,COSMÓPOLIS,Limeira,5,44.41,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,13.6,604.0
+3513009,Cotia,COTIA,Embu das Artes,6,246.97,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,31.5,7779.6
+3513108,Cravinhos,CRAVINHOS,Ribeirão Preto,4,25.96,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,36.2,939.8
+3513207,Cristais Paulista,CRISTAIS PAULISTA,Franca,8,4.73,10.0,10.0,Guará - A.P.,3517703,Guará,SP,Guará - A.P.,particular,False,42.2,199.6
+3513405,Cruzeiro,CRUZEIRO,Taubaté,2,58.44,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,11.0,642.8
+3513306,Cruzália,CRUZÁLIA,Assis,17,0.98,7.4,7.8,,3513306,Cruzália,SP,,proprio,True,0.0,0.0
+3513504,Cubatão,CUBATÃO,Cubatão,7,101.23,9.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,11.1,1123.7
+3513603,Cunha,CUNHA,Taubaté,2,8.61,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,45.8,394.3
+3510906,Cássia dos Coqueiros,CÁSSIA DOS COQUEIROS,Ribeirão Preto,4,1.33,4.8,7.6,,3510906,Cássia dos Coqueiros,SP,,proprio,True,0.0,0.0
+3510005,Cândido Mota,CÂNDIDO MOTA,Assis,17,22.15,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,63.1,1397.7
+3510104,Cândido Rodrigues,CÂNDIDO RODRIGUES,Jaboticabal,15,1.63,7.5,7.5,,3510104,Cândido Rodrigues,SP,,proprio,True,0.0,0.0
+3513702,Descalvado,DESCALVADO,São Carlos,9,22.67,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,62.6,1419.1
+3513801,Diadema,DIADEMA,ABC II,6,353.91,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,15.3,5414.8
+3513850,Dirce Reis,DIRCE REIS,Jales,18,0.86,7.1,8.6,,3513850,Dirce Reis,SP,,proprio,True,0.0,0.0
+3513900,Divinolândia,DIVINOLÂNDIA,S J Boa Vista,4,5.23,9.8,9.4,Tapiratiba - A.P.,3553609,Tapiratiba,SP,Tapiratiba - A.P.,particular,False,21.5,112.4
+3514007,Dobrada,DOBRADA,Araraquara,16,5.99,7.2,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,36.9,221.0
+3514106,Dois Córregos,DOIS CÓRREGOS,Bauru,13,16.25,7.6,8.2,,3514106,Dois Córregos,SP,,proprio,True,0.0,0.0
+3514205,Dolcinópolis,DOLCINÓPOLIS,Jales,15,1.44,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,43.5,62.6
+3514304,Dourado,DOURADO,São Carlos,13,5.18,9.1,9.1,,3514304,Dourado,SP,,proprio,True,0.0,0.0
+3514403,Dracena,DRACENA,Dracena,20,33.59,3.7,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,52.7,1770.2
+3514502,Duartina,DUARTINA,Bauru,17,7.75,7.9,6.7,,3514502,Duartina,SP,,proprio,True,0.0,0.0
+3514601,Dumont,DUMONT,Jaboticabal,9,6.39,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,29.2,186.6
+3514700,Echaporã,ECHAPORÃ,Assis,17,3.46,8.4,9.8,Marília - A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,35.0,121.1
+3514809,Eldorado,ELDORADO,Registro,11,4.5,9.0,7.2,,3514809,Eldorado,SP,,proprio,True,0.0,0.0
+3514908,Elias Fausto,ELIAS FAUSTO,Campinas,5,9.86,9.1,9.8,Indaiatuba - A.P.,3520509,Indaiatuba,SP,Indaiatuba - A.P.,particular,False,15.7,154.8
+3514924,Elisiário,ELISIÁRIO,S J Rio Preto,16,2.01,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,15.0,30.2
+3514957,Embaúba,EMBAÚBA,Barretos,15,1.38,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,21.8,30.1
+3515004,Embu das Artes,EMBU DAS ARTES,Embu das Artes,6,101.53,4.2,3.9,,3515004,Embu das Artes,SP,,proprio,True,0.0,0.0
+3515004,Embu das Artes,EMBU DAS ARTES - SANTANA PARNA,Embu das Artes,6,124.09,8.2,9.4,Santana de Parnaíba - A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,False,23.3,2891.3
+3515103,Embu-Guaçu,EMBU-GUAÇU,Embu das Artes,6,52.15,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,51.6,2690.9
+3515129,Emilianópolis,EMILIANÓPOLIS,Pres. Prudente,21,1.74,5.5,8.6,,3515129,Emilianópolis,SP,,proprio,True,0.0,0.0
+3515152,Engenheiro Coelho,ENGENHEIRO COELHO,Mogi Guaçu,9,10.02,9.4,9.5,Conchal - A.P.,3512209,Conchal,SP,Conchal - A.P.,particular,False,18.1,181.4
+3515186,Espírito Santo do Pinhal,ESPÍRITO SANTO DO PINHAL,S J Boa Vista,9,28.31,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,58.2,1647.6
+3515194,Espírito Santo do Turvo,ESPÍRITO SANTO DO TURVO,Assis,17,2.49,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,43.5,108.3
+3557303,Estiva Gerbi,ESTIVA GERBI,Mogi Guaçu,9,6.31,7.1,7.6,,3557303,Estiva Gerbi,SP,,proprio,True,0.0,0.0
+3515202,Estrela d'Oeste,ESTRELA D'OESTE,Jales,15,5.49,7.9,8.3,,3515202,Estrela d'Oeste,SP,,proprio,True,0.0,0.0
+3515301,Estrela do Norte,ESTRELA DO NORTE,Pres. Prudente,22,1.49,9.5,9.8,Regente Feijó - A.P.,3542404,Regente Feijó,SP,Regente Feijó - A.P.,particular,False,46.2,68.8
+3515350,Euclides da Cunha Paulista,EUCLIDES DA CUNHA PAULISTA,Pres. Prudente,22,3.54,7.2,7.1,,3515350,Euclides da Cunha Paulista,SP,,proprio,True,0.0,0.0
+3515400,Fartura,FARTURA,Avaré,14,9.31,8.0,7.9,,3515400,Fartura,SP,,proprio,True,0.0,0.0
+3515608,Fernando Prestes,FERNANDO PRESTES,Jaboticabal,15,3.53,7.3,8.3,,3515608,Fernando Prestes,SP,,proprio,True,0.0,0.0
+3515509,Fernandópolis,FERNANDÓPOLIS,Jales,15,55.2,10.0,10.0,Meridiano-A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,11.1,612.7
+3515657,Fernão,FERNÃO,Marília,17,0.63,9.8,9.8,Marília-A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,46.8,29.5
+3515707,Ferraz de Vasconcelos,FERRAZ DE VASCONCELOS,Mogi das Cruzes,6,154.04,9.1,10.0,Jambeiro-A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,76.2,11737.8
+3515806,Flora Rica,FLORA RICA,Dracena,21,0.84,9.1,9.6,Adamantina-A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,31.8,26.7
+3515905,Floreal,FLOREAL,Votuporanga,18,1.55,10.0,8.4,,3515905,Floreal,SP,,proprio,True,0.0,0.0
+3516101,Florínea,FLORÍNEA,Assis,17,2.39,8.2,8.5,,3516101,Florínea,SP,,proprio,True,0.0,0.0
+3516002,Flórida Paulista,FLÓRIDA PAULISTA,Dracena,21,7.16,7.8,7.5,,3516002,Flórida Paulista,SP,,proprio,True,0.0,0.0
+3516200,Franca,FRANCA,Franca,8,311.71,7.1,8.1,,3516200,Franca,SP,,proprio,True,0.0,0.0
+3516309,Francisco Morato,FRANCISCO MORATO,Santana,6,148.32,9.5,9.5,Caieiras-A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,9.3,1379.4
+3516408,Franco da Rocha,FRANCO DA ROCHA,Santana,6,120.1,9.5,9.5,Caieiras-A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,4.5,540.4
+3516507,Gabriel Monteiro,GABRIEL MONTEIRO,Araçatuba,20,1.61,9.5,9.5,,3516507,Gabriel Monteiro,SP,,proprio,True,0.0,0.0
+3516705,Garça,GARÇA,Marília,20,30.62,8.4,9.8,Marília-A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,30.4,930.8
+3516804,Gastão Vidigal,GASTÃO VIDIGAL,Votuporanga,19,2.04,8.8,9.7,,3516804,Gastão Vidigal,SP,,proprio,True,0.0,0.0
+3516853,Gavião Peixoto,GAVIÃO PEIXOTO,Araraquara,13,2.66,7.9,7.9,,3516853,Gavião Peixoto,SP,,proprio,True,0.0,0.0
+3516903,General Salgado,GENERAL SALGADO,Votuporanga,18,6.15,7.2,8.6,,3516903,General Salgado,SP,,proprio,True,0.0,0.0
+3517000,Getulina,GETULINA,Marília,20,5.54,8.4,9.8,Marília-A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,46.6,258.2
+3517109,Glicério,GLICÉRIO,Araçatuba,19,2.13,7.4,7.4,,3517109,Glicério,SP,,proprio,True,0.0,0.0
+3517307,Guaimbê,GUAIMBÊ,Marília,20,3.37,9.6,8.8,,3517307,Guaimbê,SP,,proprio,True,0.0,0.0
+3517208,Guaiçara,GUAIÇARA,Marília,16,7.15,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,110.9,792.9
+3517604,Guapiara,GUAPIARA,Capão Bonito,14,4.8,7.2,8.7,,3517604,Guapiara,SP,,proprio,True,0.0,0.0
+3517505,Guapiaçu,GUAPIAÇU,S J Rio Preto,15,13.44,10.0,10.0,OndaVerde-A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,22.0,295.7
+3517901,Guaraci,GUARACI,Barretos,12,6.48,8.5,8.8,,3517901,Guaraci,SP,,proprio,True,0.0,0.0
+3518008,Guarani d'Oeste,GUARANI D'OESTE,Jales,15,1.21,10.0,10.0,Meridiano-A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,35.5,43.0
+3518107,Guarantã,GUARANTÃ,Marília,16,3.84,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,73.8,283.4
+3518206,Guararapes,GUARARAPES,Araçatuba,19,22.98,8.6,8.5,,3518206,Guararapes,SP,,proprio,True,0.0,0.0
+3518305,Guararema,GUARAREMA,Mogi das Cruzes,2,21.5,9.1,10.0,Jambeiro-A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,39.5,849.2
+3518404,Guaratinguetá,GUARATINGUETÁ,Taubaté,2,101.21,9.5,9.4,CachoeiraPaulista-A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,25.4,2570.7
+3517802,Guaraçaí,GUARAÇAÍ,Dracena,19,4.11,8.7,7.5,,3517802,Guaraçaí,SP,,proprio,True,0.0,0.0
+3518503,Guareí,GUAREÍ,Itapetininga,14,6.07,5.7,9.8,CesárioLange-A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,28.7,174.2
+3518602,Guariba,GUARIBA,Jaboticabal,9,29.37,7.6,8.5,,3518602,Guariba,SP,,proprio,True,0.0,0.0
+3518701,Guarujá,GUARUJÁ,Santos,7,258.82,9.5,9.3,Santos-A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,9.8,2536.4
+3518800,Guarulhos,GUARULHOS,Guarulhos,6,1420.95,9.6,9.6,,3518800,Guarulhos,SP,,proprio,True,0.0,0.0
+3517703,Guará,GUARÁ,Franca,8,12.61,10.0,10.0,Guará-A.P.,3517703,Guará,SP,Guará - A.P.,particular,True,0.0,0.0
+3518859,Guatapará,GUATAPARÁ,Jaboticabal,9,3.76,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,True,0.0,0.0
+3517406,Guaíra,GUAÍRA,Barretos,8,30.29,10.0,8.4,Barretos-A.P.,3505500,Barretos,SP,Barretos - A.P.,particular,False,38.8,1175.3
+3518909,Guzolândia,GUZOLÂNDIA,Jales,18,2.51,7.1,8.7,,3518909,Guzolândia,SP,,proprio,True,0.0,0.0
+3516606,Gália,GÁLIA,Marília,17,3.33,9.8,9.8,Marília-A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,41.4,137.9
+3519006,Herculândia,HERCULÂNDIA,Marília,20,5.82,9.5,9.8,Marília - A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,51.1,297.4
+3519055,Holambra,HOLAMBRA,Paulínia,5,7.65,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,17.9,136.9
+3519071,Hortolândia,HORTOLÂNDIA,Americana,5,212.98,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,13.6,2896.5
+3519105,Iacanga,IACANGA,Bauru,13,6.37,8.4,8.4,,3519105,Iacanga,SP,,proprio,True,0.0,0.0
+3519204,Iacri,IACRI,Marília,20,3.38,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,43.6,147.4
+3519253,Iaras,IARAS,Avaré,17,2.49,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,51.2,127.5
+3519303,Ibaté,IBATÉ,São Carlos,13,24.72,8.6,7.5,,3519303,Ibaté,SP,,proprio,True,0.0,0.0
+3519501,Ibirarema,IBIRAREMA,Assis,17,4.13,9.3,9.7,,3519501,Ibirarema,SP,,proprio,True,0.0,0.0
+3519402,Ibirá,IBIRÁ,S J Rio Preto,16,7.54,4.5,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,28.6,215.6
+3519600,Ibitinga,IBITINGA,Araraquara,13,46.13,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,71.0,3275.2
+3519709,Ibiúna,IBIÚNA,Sorocaba,10,21.18,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,58.8,1245.4
+3519808,Icém,ICÉM,S J Rio Preto,12,4.7,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,31.5,148.0
+3519907,Iepê,IEPÊ,Pres. Prudente,22,4.74,7.6,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,60.1,284.9
+3520103,Igarapava,IGARAPAVA,Franca,8,17.3,,10.0,Guará - A.P.,3517703,Guará,SP,Guará - A.P.,particular,False,43.9,759.5
+3520202,Igaratá,IGARATÁ,S J Campos,2,5.89,7.5,7.5,Santa Isabel - A.P.,3546801,Santa Isabel,SP,Santa Isabel - A.P.,particular,False,14.7,86.6
+3520004,Igaraçu do Tietê,IGARAÇU DO TIETÊ,Bauru,13,16.08,7.1,4.8,,3520004,Igaraçu do Tietê,SP,,proprio,True,0.0,0.0
+3520301,Iguape,IGUAPE,Registro,11,17.45,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,169.9,2964.8
+3520426,Ilha Comprida,ILHA COMPRIDA,Registro,11,9.39,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,171.5,1610.4
+3520442,Ilha Solteira,ILHA SOLTEIRA,Jales,18,16.78,9.1,7.9,,3520442,Ilha Solteira,SP,,proprio,True,0.0,0.0
+3520400,Ilhabela,ILHABELA,São Sebastião,3,27.76,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,70.3,1951.5
+3520509,Indaiatuba,INDAIATUBA,Jundiaí,5,227.86,9.1,9.8,Indaiatuba - A.P.,3520509,Indaiatuba,SP,Indaiatuba - A.P.,particular,True,0.0,0.0
+3520608,Indiana,INDIANA,Pres. Prudente,21,3.05,7.3,8.1,,3520608,Indiana,SP,,proprio,True,0.0,0.0
+3520707,Indiaporã,INDIAPORÃ,Jales,15,2.45,9.5,8.7,,3520707,Indiaporã,SP,,proprio,True,0.0,0.0
+3520806,Inúbia Paulista,INÚBIA PAULISTA,Dracena,21,2.21,10.0,9.5,,3520806,Inúbia Paulista,SP,,proprio,True,0.0,0.0
+3520905,Ipaussu,IPAUSSU,Assis,14,8.84,7.4,9.1,,3520905,Ipaussu,SP,,proprio,True,0.0,0.0
+3521002,Iperó,IPERÓ,Sorocaba,10,15.75,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,True,0.0,0.0
+3521101,Ipeúna,IPEÚNA,Piracicaba,5,4.12,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,46.6,192.0
+3521150,Ipiguá,IPIGUÁ,S J Rio Preto,15,2.86,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,10.9,31.2
+3521200,Iporanga,IPORANGA,Registro,11,1.58,10.0,10.0,,3521200,Iporanga,SP,,proprio,True,0.0,0.0
+3521309,Ipuã,IPUÃ,Franca,8,9.7,7.7,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,40.3,390.9
+3521408,Iracemápolis,IRACEMÁPOLIS,Limeira,5,15.06,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,30.6,460.8
+3521606,Irapuru,IRAPURU,Dracena,21,3.51,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,31.9,112.0
+3521507,Irapuã,IRAPUÃ,S J Rio Preto,16,4.29,9.6,9.6,,3521507,Irapuã,SP,,proprio,True,0.0,0.0
+3521705,Itaberá,ITABERÁ,Capão Bonito,14,8.56,4.6,4.0,,3521705,Itaberá,SP,,proprio,True,0.0,0.0
+3521903,Itajobi,ITAJOBI,S J Rio Preto,16,9.92,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,22.4,222.2
+3522000,Itaju,ITAJU,Bauru,13,1.84,8.4,8.4,,3522000,Itaju,SP,,proprio,True,0.0,0.0
+3522109,Itanhaém,ITANHAÉM,Cubatão,7,100.28,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,66.1,6628.5
+3522158,Itaoca,ITAOCA,Capão Bonito,11,1.31,8.0,8.0,,3522158,Itaoca,SP,,proprio,True,0.0,0.0
+3522208,Itapecerica da Serra,ITAPECERICA DA SERRA,Embu das Artes,6,141.49,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,40.3,5702.0
+3522307,Itapetininga,ITAPETININGA,Itapetininga,14,128.9,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,41.0,5284.9
+3522406,Itapeva,ITAPEVA,Capão Bonito,14,60.5,1.2,7.8,,3522406,Itapeva,SP,,proprio,True,0.0,0.0
+3522505,Itapevi,ITAPEVI,Osasco,6,209.07,8.5,9.1,Itapevi - A.P.,3522505,Itapevi,SP,Itapevi - A.P.,particular,True,0.0,0.0
+3522604,Itapira,ITAPIRA,Mogi Guaçu,9,53.45,9.4,9.4,,3522604,Itapira,SP,,proprio,True,0.0,0.0
+3522653,Itapirapuã Paulista,ITAPIRAPUÃ PAULISTA,Capão Bonito,11,1.47,4.3,4.1,,3522653,Itapirapuã Paulista,SP,,proprio,True,0.0,0.0
+3522802,Itaporanga,ITAPORANGA,Capão Bonito,14,7.48,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,147.7,1104.8
+3523008,Itapura,ITAPURA,Jales,19,2.23,7.9,7.8,,3523008,Itapura,SP,,proprio,True,0.0,0.0
+3522901,Itapuí,ITAPUÍ,Bauru,13,9.14,7.3,7.8,,3522901,Itapuí,SP,,proprio,True,0.0,0.0
+3523107,Itaquaquecetuba,ITAQUAQUECETUBA,Tatuapé,6,332.35,9.5,9.5,São Paulo - CDR,3550308,São Paulo,SP,São Paulo - CDR,particular,False,24.4,8109.3
+3523206,Itararé,ITARARÉ,Capão Bonito,14,32.83,7.2,9.1,,3523206,Itararé,SP,,proprio,True,0.0,0.0
+3523305,Itariri,ITARIRI,Registro,11,6.94,9.7,7.5,,3523305,Itariri,SP,,proprio,True,0.0,0.0
+3523404,Itatiba,ITATIBA,Paulínia,5,92.39,7.1,7.9,,3523404,Itatiba,SP,,proprio,True,0.0,0.0
+3523503,Itatinga,ITATINGA,Botucatu,17,12.14,7.3,7.3,Botucatu,3507506,Botucatu,SP,Botucatu,publico,False,29.8,361.8
+3521804,Itaí,ITAÍ,Avaré,14,13.84,7.6,8.8,,3521804,Itaí,SP,,proprio,True,0.0,0.0
+3523602,Itirapina,ITIRAPINA,São Carlos,13,10.19,8.1,4.4,,3523602,Itirapina,SP,,proprio,True,0.0,0.0
+3523701,Itirapuã,ITIRAPUÃ,Franca,8,3.37,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,66.1,222.8
+3523800,Itobi,ITOBI,S J Boa Vista,4,5.08,8.0,9.4,Tapiratiba - A.P.,3553609,Tapiratiba,SP,Tapiratiba - A.P.,particular,False,37.4,190.0
+3523909,Itu,ITU,Itu,10,141.71,9.0,9.3,,3523909,Itu,SP,,proprio,True,0.0,0.0
+3524006,Itupeva,ITUPEVA,Jundiaí,5,49.06,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,44.5,2183.2
+3524105,Ituverava,ITUVERAVA,Franca,8,28.3,,,Uberaba - MG,3170107,Uberaba,MG,Uberaba - MG,outro_estado,False,67.8,1918.7
+3522703,Itápolis,ITÁPOLIS,Araraquara,16,28.66,1.6,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,54.2,1553.4
+3524204,Jaborandi,JABORANDI,Barretos,12,4.07,7.6,7.3,,3524204,Jaborandi,SP,,proprio,True,0.0,0.0
+3524303,Jaboticabal,JABOTICABAL,Jaboticabal,9,55.74,10.0,10.0,,3524303,Jaboticabal,SP,,proprio,True,0.0,0.0
+3524402,Jacareí,JACAREÍ,S J Campos,2,213.26,9.1,10.0,,3524402,Jacareí,SP,,proprio,True,0.0,0.0
+3524501,Jaci,JACI,S J Rio Preto,16,4.59,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,41.7,191.4
+3524600,Jacupiranga,JACUPIRANGA,Registro,11,6.13,9.6,7.3,,3524600,Jacupiranga,SP,,proprio,True,0.0,0.0
+3524709,Jaguariúna,JAGUARIÚNA,Paulínia,5,46.11,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,18.5,853.0
+3524808,Jales,JALES,Jales,18,36.72,7.9,7.3,,3524808,Jales,SP,,proprio,True,0.0,0.0
+3524907,Jambeiro,JAMBEIRO,S J Campos,2,2.14,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,True,0.0,0.0
+3525003,Jandira,JANDIRA,Osasco,6,106.24,8.5,9.1,Itapevi - A.P.,3522505,Itapevi,SP,Itapevi - A.P.,particular,False,3.8,403.7
+3525102,Jardinópolis,JARDINÓPOLIS,Ribeirão Preto,4,34.76,10.0,10.0,Jardinópolis - A.P.,3525102,Jardinópolis,SP,Jardinópolis - A.P.,particular,True,0.0,0.0
+3525201,Jarinu,JARINU,Jundiaí,5,23.21,8.2,8.0,,3525201,Jarinu,SP,,proprio,True,0.0,0.0
+3525300,Jaú,JAÚ,Bauru,13,116.39,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,60.6,7053.2
+3525409,Jeriquara,JERIQUARA,Franca,8,2.23,10.0,,Uberaba - MG,3170107,Uberaba,MG,Uberaba - MG,outro_estado,False,72.9,162.6
+3525508,Joanópolis,JOANÓPOLIS,Atibaia,5,8.97,7.5,7.5,,3525508,Joanópolis,SP,,proprio,True,0.0,0.0
+3525706,José Bonifácio,JOSÉ BONIFÁCIO,S J Rio Preto,19,26.55,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,63.8,1693.9
+3525607,João Ramalho,JOÃO RAMALHO,Assis,17,2.61,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,7.4,19.3
+3525854,Jumirim,JUMIRIM,Itu,10,1.24,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,32.4,40.2
+3525904,Jundiaí,JUNDIAÍ,Jundiaí,5,381.74,8.2,9.4,Santana de Parnaíba - A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,False,28.6,10917.8
+3526001,Junqueirópolis,JUNQUEIRÓPOLIS,Dracena,21,11.77,9.0,7.1,,3526001,Junqueirópolis,SP,,proprio,True,0.0,0.0
+3526209,Juquitiba,JUQUITIBA,Embu das Artes,11,14.85,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,70.7,1049.9
+3526100,Juquiá,JUQUIÁ,Registro,11,7.57,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,139.2,1053.7
+3525805,Júlio Mesquita,JÚLIO MESQUITA,Marília,20,2.83,7.7,7.4,,3525805,Júlio Mesquita,SP,,proprio,True,0.0,0.0
+3526308,Lagoinha,LAGOINHA,Taubaté,2,2.31,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,39.1,90.3
+3526407,Laranjal Paulista,LARANJAL PAULISTA,Botucatu,10,16.46,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,22.7,373.6
+3526605,Lavrinhas,LAVRINHAS,Taubaté,2,4.61,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,14.9,68.7
+3526506,Lavínia,LAVÍNIA,Araçatuba,19,3.31,9.0,8.5,,3526506,Lavínia,SP,,proprio,True,0.0,0.0
+3526704,Leme,LEME,Mogi Guaçu,9,76.91,8.5,7.5,,3526704,Leme,SP,,proprio,True,0.0,0.0
+3526803,Lençóis Paulista,LENÇÓIS PAULISTA,Bauru,13,52.01,7.5,7.4,,3526803,Lençóis Paulista,SP,,proprio,True,0.0,0.0
+3526902,Limeira,LIMEIRA,Limeira,5,254.84,8.7,7.4,,3526902,Limeira,SP,,proprio,True,0.0,0.0
+3527009,Lindóia,LINDOIA,Mogi Guaçu,9,4.91,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,58.6,287.7
+3527108,Lins,LINS,Marília,16,59.12,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,99.8,5900.2
+3527207,Lorena,LORENA,Taubaté,2,65.94,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,13.8,910.0
+3527256,Lourdes,LOURDES,Araçatuba,19,1.12,9.0,8.7,,3527256,Lourdes,SP,,proprio,True,0.0,0.0
+3527306,Louveira,LOUVEIRA,Campinas,5,39.88,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,41.8,1667.0
+3527504,Lucianópolis,LUCIANÓPOLIS,Bauru,17,1.31,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,40.0,52.4
+3527405,Lucélia,LUCÉLIA,Dracena,20,12.16,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,6.8,82.7
+3527702,Luiziânia,LUIZIÂNIA,Araçatuba,20,3.02,9.5,9.5,,3527702,Luiziânia,SP,,proprio,True,0.0,0.0
+3527801,Lupércio,LUPÉRCIO,Marília,17,2.47,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,70.3,173.6
+3527900,Lutécia,LUTÉCIA,Assis,21,1.48,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,32.8,48.5
+3527603,Luís Antônio,LUÍS ANTÔNIO,Jaboticabal,9,8.29,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,35.3,292.6
+3528007,Macatuba,MACATUBA,Bauru,13,11.43,8.4,9.2,,3528007,Macatuba,SP,,proprio,True,0.0,0.0
+3528106,Macaubal,MACAUBAL,Votuporanga,19,4.63,8.6,7.9,,3528106,Macaubal,SP,,proprio,True,0.0,0.0
+3528205,Macedônia,MACEDÔNIA,Votuporanga,15,2.1,7.2,7.6,,3528205,Macedônia,SP,,proprio,True,0.0,0.0
+3528304,Magda,MAGDA,Votuporanga,19,1.84,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,32.3,59.4
+3528403,Mairinque,MAIRINQUE,Itu,10,32.12,8.5,9.2,,3528403,Mairinque,SP,,proprio,True,0.0,0.0
+3528502,Mairiporã,MAIRIPORÃ,Guarulhos,6,65.62,9.5,9.5,São Paulo - CDR,3550308,São Paulo,SP,São Paulo - CDR,particular,False,26.0,1706.1
+3528601,Manduri,MANDURI,Avaré,14,5.98,7.2,7.3,,3528601,Manduri,SP,,proprio,True,0.0,0.0
+3528700,Marabá Paulista,MARABÁ PAULISTA,Pres. Prudente,22,1.43,9.0,10.0,,3528700,Marabá Paulista,SP,,proprio,True,0.0,0.0
+3528809,Maracaí,MARACAÍ,Assis,17,8.04,8.5,8.5,,3528809,Maracaí,SP,,proprio,True,0.0,0.0
+3528858,Marapoama,MARAPOAMA,S J Rio Preto,16,1.92,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,21.7,41.7
+3529104,Marinópolis,MARINÓPOLIS,Jales,18,1.03,8.5,8.3,,3529104,Marinópolis,SP,,proprio,True,0.0,0.0
+3528908,Mariápolis,MARIÁPOLIS,Dracena,21,1.97,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,16.6,32.7
+3529203,Martinópolis,MARTINÓPOLIS,Pres. Prudente,21,14.63,9.1,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,50.3,735.9
+3529005,Marília,MARÍLIA,Marília,21,204.27,8.4,9.8,Marília - A.P.,3529005,Marília,SP,Marília - A.P.,particular,True,0.0,0.0
+3529302,Matão,MATÃO,Araraquara,16,62.07,7.5,6.6,,3529302,Matão,SP,,proprio,True,0.0,0.0
+3529401,Mauá,MAUÁ,ABC I,6,376.43,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,True,0.0,0.0
+3529500,Mendonça,MENDONÇA,S J Rio Preto,16,3.52,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,63.6,223.9
+3529609,Meridiano,MERIDIANO,Votuporanga,15,2.22,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,True,0.0,0.0
+3529658,Mesópolis,MESÓPOLIS,Jales,15,1.06,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,63.2,67.0
+3529708,Miguelópolis,MIGUELÓPOLIS,Barretos,8,12.82,10.0,8.4,Barretos - A.P.,3505500,Barretos,SP,Barretos - A.P.,particular,False,71.2,912.8
+3529807,Mineiros do Tietê,MINEIROS DO TIETÊ,Bauru,13,7.51,7.6,8.2,,3529807,Mineiros do Tietê,SP,,proprio,True,0.0,0.0
+3530003,Mira Estrela,MIRA ESTRELA,Votuporanga,15,1.46,8.1,8.0,,3530003,Mira Estrela,SP,,proprio,True,0.0,0.0
+3529906,Miracatu,MIRACATU,Registro,11,6.68,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,124.8,833.7
+3530102,Mirandópolis,MIRANDÓPOLIS,Araçatuba,19,17.43,,,Três Lagoas - MS,5008305,Três Lagoas,MS,Três Lagoas - MS,outro_estado,False,73.6,1282.8
+3530201,Mirante do Paranapanema,MIRANTE DO PARANAPANEMA,Pres. Prudente,22,6.56,9.6,9.7,,3530201,Mirante do Paranapanema,SP,,proprio,True,0.0,0.0
+3530300,Mirassol,MIRASSOL,S J Rio Preto,15,49.39,9.1,9.8,,3530300,Mirassol,SP,,proprio,True,0.0,0.0
+3530409,Mirassolândia,MIRASSOLÂNDIA,S J Rio Preto,15,2.66,9.2,9.5,,3530409,Mirassolândia,SP,,proprio,True,0.0,0.0
+3530508,Mococa,MOCOCA,S J Boa Vista,4,49.95,8.7,8.1,,3530508,Mococa,SP,,proprio,True,0.0,0.0
+3530706,Mogi Guaçu,MOGI GUAÇU,Mogi Guaçu,9,131.29,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,67.5,8862.1
+3530805,Mogi Mirim,MOGI MIRIM,Mogi Guaçu,9,69.29,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,74.0,5127.5
+3530607,Mogi das Cruzes,MOGI DAS CRUZES,Mogi das Cruzes,6,374.43,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,58.5,21904.2
+3530904,Mombuca,MOMBUCA,Campinas,5,2.14,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,10.4,22.3
+3531100,Mongaguá,MONGAGUÁ,Santos,7,49.34,9.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,34.5,1702.2
+3531209,Monte Alegre do Sul,MONTE ALEGRE DO SUL,Paulínia,5,3.45,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,49.6,171.1
+3531308,Monte Alto,MONTE ALTO,Jaboticabal,15,36.35,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,87.3,3173.4
+3531407,Monte Aprazível,MONTE APRAZÍVEL,Votuporanga,18,14.2,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,47.2,670.2
+3531506,Monte Azul Paulista,MONTE AZUL PAULISTA,Barretos,15,11.89,9.6,8.8,,3531506,Monte Azul Paulista,SP,,proprio,True,0.0,0.0
+3531605,Monte Castelo,MONTE CASTELO,Dracena,20,2.34,9.5,8.9,,3531605,Monte Castelo,SP,,proprio,True,0.0,0.0
+3531803,Monte Mor,MONTE MOR,Campinas,5,48.59,9.1,9.8,Indaiatuba - A.P.,3520509,Indaiatuba,SP,Indaiatuba - A.P.,particular,False,18.4,894.1
+3531704,Monteiro Lobato,MONTEIRO LOBATO,S J Campos,2,1.25,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,30.1,37.6
+3531001,Monções,MONÇÕES,Votuporanga,19,1.17,9.0,9.5,,3531001,Monções,SP,,proprio,True,0.0,0.0
+3531902,Morro Agudo,MORRO AGUDO,Ribeirão Preto,12,21.42,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,23.3,499.1
+3532009,Morungaba,MORUNGABA,Paulínia,5,8.2,9.8,9.8,Paulínia-A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,39.2,321.4
+3532058,Motuca,MOTUCA,Araraquara,9,2.05,8.4,7.9,,3532058,Motuca,SP,,proprio,True,0.0,0.0
+3532108,Murutinga do Sul,MURUTINGA DO SUL,Dracena,19,1.61,8.7,9.1,,3532108,Murutinga do Sul,SP,,proprio,True,0.0,0.0
+3532157,Nantes,NANTES,Pres. Prudente,22,1.67,9.0,9.0,,3532157,Nantes,SP,,proprio,True,0.0,0.0
+3532207,Narandiba,NARANDIBA,Pres. Prudente,22,2.9,8.3,8.8,Pirapozinho - A.P.,3539202,Pirapozinho,SP,Pirapozinho - A.P.,particular,False,14.9,43.2
+3532306,Natividade da Serra,NATIVIDADE DA SERRA,Taubaté,2,2.05,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,47.3,97.0
+3532405,Nazaré Paulista,NAZARÉ PAULISTA,Atibaia,5,10.81,7.5,7.5,Santa Isabel - A.P.,3546801,Santa Isabel,SP,Santa Isabel - A.P.,particular,False,23.1,249.7
+3532504,Neves Paulista,NEVES PAULISTA,S J Rio Preto,18,6.13,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,43.5,266.7
+3532603,Nhandeara,NHANDEARA,Votuporanga,18,5.59,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,40.1,224.2
+3532702,Nipoã,NIPOÃ,S J Rio Preto,19,2.95,7.6,7.6,,3532702,Nipoã,SP,,proprio,True,0.0,0.0
+3532801,Nova Aliança,NOVA ALIANÇA,S J Rio Preto,16,3.88,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,49.5,192.1
+3532827,Nova Campina,NOVA CAMPINA,Capão Bonito,14,4.03,7.5,7.2,,3532827,Nova Campina,SP,,proprio,True,0.0,0.0
+3532843,Nova Canaã Paulista,NOVA CANAÃ PAULISTA,Jales,18,0.59,7.1,8.9,,3532843,Nova Canaã Paulista,SP,,proprio,True,0.0,0.0
+3532868,Nova Castilho,NOVA CASTILHO,Votuporanga,19,0.49,8.3,9.5,,3532868,Nova Castilho,SP,,proprio,True,0.0,0.0
+3532900,Nova Europa,NOVA EUROPA,Araraquara,13,6.04,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,83.3,503.1
+3533007,Nova Granada,NOVA GRANADA,S J Rio Preto,15,12.6,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,8.9,112.1
+3533106,Nova Guataporanga,NOVA GUATAPORANGA,Dracena,20,1.31,9.2,7.8,,3533106,Nova Guataporanga,SP,,proprio,True,0.0,0.0
+3533205,Nova Independência,NOVA INDEPENDÊNCIA,Dracena,20,2.57,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,77.7,199.7
+3533304,Nova Luzitânia,NOVA LUZITÂNIA,Araçatuba,19,1.78,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,56.1,99.9
+3533403,Nova Odessa,NOVA ODESSA,Americana,5,48.81,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,14.9,727.3
+3533254,Novais,NOVAIS,S J Rio Preto,15,2.81,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,16.3,45.8
+3533502,Novo Horizonte,NOVO HORIZONTE,S J Rio Preto,16,28.53,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,45.6,1301.0
+3533601,Nuporanga,NUPORANGA,Franca,8,4.69,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,10.0,46.9
+3533700,Ocauçu,OCAUÇU,Assis,17,2.42,8.4,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,81.3,196.7
+3533908,Olímpia,OLÍMPIA,Barretos,15,41.61,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,42.2,1755.9
+3534005,Onda Verde,ONDA VERDE,S J Rio Preto,15,2.62,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,True,0.0,0.0
+3534104,Oriente,ORIENTE,Marília,21,3.98,9.5,9.5,,3534104,Oriente,SP,,proprio,True,0.0,0.0
+3534203,Orindiúva,ORINDIÚVA,Votuporanga,15,3.88,10.0,9.0,,3534203,Orindiúva,SP,,proprio,True,0.0,0.0
+3534302,Orlândia,ORLÂNDIA,Ribeirão Preto,12,29.87,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,7.4,221.0
+3534401,Osasco,OSASCO,Osasco,6,801.48,9.4,9.4,,3534401,Osasco,SP,,proprio,True,0.0,0.0
+3534500,Oscar Bressane,OSCAR BRESSANE,Assis,21,1.43,4.9,9.8,Marília - A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,36.2,51.8
+3534609,Osvaldo Cruz,OSVALDO CRUZ,Dracena,21,22.48,9.6,9.2,Osvaldo Cruz - A.P.,3534609,Osvaldo Cruz,SP,Osvaldo Cruz - A.P.,particular,True,0.0,0.0
+3534708,Ourinhos,OURINHOS,Assis,17,91.16,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,98.2,8951.9
+3534807,Ouro Verde,OURO VERDE,Dracena,21,5.01,9.5,8.0,,3534807,Ouro Verde,SP,,proprio,True,0.0,0.0
+3534757,Ouroeste,OUROESTE,Jales,15,6.47,,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,44.3,286.6
+3534906,Pacaembu,PACAEMBU,Dracena,20,7.67,8.3,8.5,,3534906,Pacaembu,SP,,proprio,True,0.0,0.0
+3535002,Palestina,PALESTINA,S J Rio Preto,15,6.68,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,28.2,188.4
+3535101,Palmares Paulista,PALMARES PAULISTA,S J Rio Preto,15,6.56,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,18.5,121.4
+3535200,Palmeira d'Oeste,PALMEIRA D'OESTE,Jales,18,4.73,10.0,9.7,,3535200,Palmeira d'Oeste,SP,,proprio,True,0.0,0.0
+3535309,Palmital,PALMITAL,Assis,17,12.58,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,76.8,966.1
+3535408,Panorama,PANORAMA,Dracena,20,10.17,8.3,6.6,,3535408,Panorama,SP,,proprio,True,0.0,0.0
+3535507,Paraguaçu Paulista,PARAGUAÇU PAULISTA,Assis,17,29.81,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,22.3,664.8
+3535606,Paraibuna,PARAIBUNA,S J Campos,2,3.73,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,14.9,55.6
+3535804,Paranapanema,PARANAPANEMA,Itapetininga,14,11.04,7.3,4.6,,3535804,Paranapanema,SP,,proprio,True,0.0,0.0
+3535903,Paranapuã,PARANAPUÃ,Jales,15,2.51,7.7,8.7,,3535903,Paranapuã,SP,,proprio,True,0.0,0.0
+3536000,Parapuã,PARAPUÃ,Marília,20,6.08,9.3,8.5,,3536000,Parapuã,SP,,proprio,True,0.0,0.0
+3535705,Paraíso,PARAÍSO,S J Rio Preto,15,3.76,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,24.0,90.2
+3536109,Pardinho,PARDINHO,Botucatu,17,3.94,7.3,7.3,Botucatu,3507506,Botucatu,SP,Botucatu,publico,False,22.9,90.2
+3536208,Pariquera-Açu,PARIQUERA-AÇU,Registro,11,9.24,10.0,7.6,,3536208,Pariquera-Açu,SP,,proprio,True,0.0,0.0
+3536257,Parisi,PARISI,Votuporanga,15,1.64,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,18.1,29.7
+3536307,Patrocínio Paulista,PATROCÍNIO PAULISTA,Franca,8,8.2,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,59.8,490.4
+3536406,Paulicéia,PAULICÉIA,Dracena,20,4.63,5.0,7.1,,3536406,Paulicéia,SP,,proprio,True,0.0,0.0
+3536570,Paulistânia,PAULISTÂNIA,Bauru,17,1.0,7.7,8.9,,3536570,Paulistânia,SP,,proprio,True,0.0,0.0
+3536604,Paulo de Faria,PAULO DE FARIA,Votuporanga,15,4.67,8.4,9.0,,3536604,Paulo de Faria,SP,,proprio,True,0.0,0.0
+3536505,Paulínia,PAULÍNIA,Paulínia,5,99.39,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,True,0.0,0.0
+3536703,Pederneiras,PEDERNEIRAS,Bauru,13,33.35,7.3,8.3,,3536703,Pederneiras,SP,,proprio,True,0.0,0.0
+3536802,Pedra Bela,PEDRA BELA,Atibaia,5,1.14,9.6,7.7,Bragança Paulista - A.P.,3507605,Bragança Paulista,SP,Bragança Paulista - A.P.,particular,False,21.2,24.2
+3536901,Pedranópolis,PEDRANÓPOLIS,Votuporanga,15,1.21,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,13.7,16.6
+3537008,Pedregulho,PEDREGULHO,Franca,8,8.02,10.0,10.0,Guará - A.P.,3517703,Guará,SP,Guará - A.P.,particular,False,40.8,327.2
+3537107,Pedreira,PEDREIRA,Paulínia,5,34.2,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,26.0,889.2
+3537156,Pedrinhas Paulista,PEDRINHAS PAULISTA,Assis,17,1.66,8.1,9.7,,3537156,Pedrinhas Paulista,SP,,proprio,True,0.0,0.0
+3537206,Pedro de Toledo,PEDRO DE TOLEDO,Registro,11,5.44,3.7,2.1,,3537206,Pedro de Toledo,SP,,proprio,True,0.0,0.0
+3537305,Penápolis,PENÁPOLIS,Araçatuba,19,47.13,9.4,9.4,,3537305,Penápolis,SP,,proprio,True,0.0,0.0
+3537404,Pereira Barreto,PEREIRA BARRETO,Jales,19,15.7,9.0,9.6,,3537404,Pereira Barreto,SP,,proprio,True,0.0,0.0
+3537503,Pereiras,PEREIRAS,Botucatu,10,4.08,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,16.8,68.5
+3537602,Peruíbe,PERUÍBE,Santos,7,54.07,4.9,5.1,,3537602,Peruíbe,SP,,proprio,True,0.0,0.0
+3537701,Piacatu,PIACATU,Araçatuba,20,3.41,9.5,9.5,,3537701,Piacatu,SP,,proprio,True,0.0,0.0
+3537800,Piedade,PIEDADE,Sorocaba,10,16.9,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,49.4,834.9
+3537909,Pilar do Sul,PILAR DO SUL,Sorocaba,14,15.19,7.1,9.4,Salto - A.P.,3545209,Salto,SP,Salto - A.P.,particular,False,79.8,1212.2
+3538006,Pindamonhangaba,PINDAMONHANGABA,Taubaté,2,143.53,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,8.9,1277.4
+3538105,Pindorama,PINDORAMA,S J Rio Preto,15,9.64,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,9.2,88.7
+3538204,Pinhalzinho,PINHALZINHO,Atibaia,5,5.25,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,57.8,303.4
+3538303,Piquerobi,PIQUEROBI,Pres. Prudente,21,1.72,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,114.0,196.1
+3538501,Piquete,PIQUETE,Taubaté,2,8.19,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,18.7,153.2
+3538600,Piracaia,PIRACAIA,Atibaia,5,20.82,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,88.2,1836.3
+3538709,Piracicaba,PIRACICABA,Piracicaba,5,372.81,8.5,9.2,,3538709,Piracicaba,SP,,proprio,True,0.0,0.0
+3538808,Piraju,PIRAJU,Avaré,14,21.17,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,90.5,1915.9
+3538907,Pirajuí,PIRAJUÍ,Bauru,16,12.8,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,56.9,728.3
+3539004,Pirangi,PIRANGI,Barretos,15,6.83,8.0,8.1,,3539004,Pirangi,SP,,proprio,True,0.0,0.0
+3539103,Pirapora do Bom Jesus,PIRAPORA DO BOM JESUS,Osasco,6,12.86,8.2,9.4,Santana de Parnaíba - A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,False,10.5,135.0
+3539202,Pirapozinho,PIRAPOZINHO,Pres. Prudente,22,16.86,8.3,8.8,Pirapozinho - A.P.,3539202,Pirapozinho,SP,Pirapozinho - A.P.,particular,True,0.0,0.0
+3539301,Pirassununga,PIRASSUNUNGA,São Carlos,9,53.91,5.1,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,42.6,2296.6
+3539400,Piratininga,PIRATININGA,Bauru,16,9.07,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,True,0.0,0.0
+3539509,Pitangueiras,PITANGUEIRAS,Jaboticabal,9,25.9,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,79.2,2051.3
+3539608,Planalto,PLANALTO,Araçatuba,19,2.59,7.6,8.2,,3539608,Planalto,SP,,proprio,True,0.0,0.0
+3539707,Platina,PLATINA,Assis,17,1.67,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,65.9,110.1
+3539905,Poloni,POLONI,Votuporanga,19,3.48,7.2,7.8,,3539905,Poloni,SP,,proprio,True,0.0,0.0
+3540002,Pompéia,POMPEIA,Marília,20,13.15,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,55.7,732.5
+3540101,Pongaí,PONGAÍ,Marília,16,2.0,8.4,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,77.8,155.6
+3540200,Pontal,PONTAL,Ribeirão Preto,9,29.52,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,34.9,1030.2
+3540259,Pontalinda,PONTALINDA,Jales,18,2.4,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,37.3,89.5
+3540309,Pontes Gestal,PONTES GESTAL,Votuporanga,15,1.41,9.7,8.6,,3540309,Pontes Gestal,SP,,proprio,True,0.0,0.0
+3540408,Populina,POPULINA,Jales,15,2.33,8.5,7.4,,3540408,Populina,SP,,proprio,True,0.0,0.0
+3540507,Porangaba,PORANGABA,Botucatu,10,3.53,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,18.6,65.7
+3540606,Porto Feliz,PORTO FELIZ,Itu,10,37.99,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,23.2,881.4
+3540705,Porto Ferreira,PORTO FERREIRA,Ribeirão Preto,9,41.36,8.1,9.0,,3540705,Porto Ferreira,SP,,proprio,True,0.0,0.0
+3540754,Potim,POTIM,Taubaté,2,10.82,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,32.0,346.2
+3540804,Potirendaba,POTIRENDABA,S J Rio Preto,16,11.64,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,48.7,566.9
+3539806,Poá,POÁ,Mogi das Cruzes,6,91.91,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,73.0,6709.4
+3540853,Pracinha,PRACINHA,Dracena,21,0.86,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,18.4,15.8
+3540903,Pradópolis,PRADÓPOLIS,Jaboticabal,9,11.08,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,15.6,172.8
+3541000,Praia Grande,PRAIA GRANDE,Santos,7,157.45,7.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,20.0,3149.0
+3541000,Praia Grande,PRAIA GRANDE,Santos,7,157.45,9.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,40.1,6313.7
+3541059,Pratânia,PRATÂNIA,Botucatu,17,2.72,9.5,7.7,,3541059,Pratânia,SP,,proprio,True,0.0,0.0
+3541109,Presidente Alves,PRESIDENTE ALVES,Bauru,16,2.22,7.6,7.6,,3541109,Presidente Alves,SP,,proprio,True,0.0,0.0
+3541208,Presidente Bernardes,PRESIDENTE BERNARDES,Pres. Prudente,22,7.85,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,92.5,726.1
+3541307,Presidente Epitácio,PRESIDENTE EPITÁCIO,Pres. Prudente,22,29.48,8.1,7.3,,3541307,Presidente Epitácio,SP,,proprio,True,0.0,0.0
+3541406,Presidente Prudente,PRESIDENTE PRUDENTE,Pres. Prudente,22,198.96,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,58.1,11559.6
+3541505,Presidente Venceslau,PRESIDENTE VENCESLAU,Pres. Prudente,22,26.94,7.9,9.8,Regente Feijó - A.P.,3542404,Regente Feijó,SP,Regente Feijó - A.P.,particular,False,67.2,1810.4
+3541604,Promissão,PROMISSÃO,Araçatuba,19,23.69,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,102.5,2428.2
+3541653,Quadra,QUADRA,Itapetininga,10,0.61,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,13.3,8.1
+3541703,Quatá,QUATÁ,Assis,17,8.65,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,True,0.0,0.0
+3541802,Queiroz,QUEIROZ,Marília,20,1.94,8.7,7.9,,3541802,Queiroz,SP,,proprio,True,0.0,0.0
+3541901,Queluz,QUELUZ,Taubaté,2,5.26,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,27.8,146.2
+3542008,Quintana,QUINTANA,Marília,20,4.51,9.5,9.5,,3542008,Quintana,SP,,proprio,True,0.0,0.0
+3542107,Rafard,RAFARD,Campinas,5,5.53,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,20.5,113.4
+3542206,Rancharia,RANCHARIA,Pres. Prudente,17,20.51,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,20.6,422.5
+3542305,Redenção da Serra,REDENÇÃO DA SERRA,Taubaté,2,1.8,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,16.3,29.3
+3542404,Regente Feijó,REGENTE FEIJÓ,Pres. Prudente,22,13.0,7.6,9.8,Regente Feijó - A.P.,3542404,Regente Feijó,SP,Regente Feijó - A.P.,particular,True,0.0,0.0
+3542503,Reginópolis,REGINÓPOLIS,Bauru,16,3.19,7.1,7.1,,3542503,Reginópolis,SP,,proprio,True,0.0,0.0
+3542602,Registro,REGISTRO,Registro,11,42.57,9.4,7.5,,3542602,Registro,SP,,proprio,True,0.0,0.0
+3542701,Restinga,RESTINGA,Franca,8,3.52,5.8,7.3,,3542701,Restinga,SP,,proprio,True,0.0,0.0
+3542800,Ribeira,RIBEIRA,Capão Bonito,11,0.81,,,Rio Negrinho - SC,4215000,Rio Negrinho,SC,Rio Negrinho - SC,outro_estado,False,183.8,148.9
+3542909,Ribeirão Bonito,RIBEIRÃO BONITO,São Carlos,13,7.11,7.3,7.3,,3542909,Ribeirão Bonito,SP,,proprio,True,0.0,0.0
+3543006,Ribeirão Branco,RIBEIRÃO BRANCO,Capão Bonito,14,6.63,7.9,5.5,,3543006,Ribeirão Branco,SP,,proprio,True,0.0,0.0
+3543105,Ribeirão Corrente,RIBEIRÃO CORRENTE,Franca,8,2.56,9.0,9.0,,3543105,Ribeirão Corrente,SP,,proprio,True,0.0,0.0
+3543253,Ribeirão Grande,RIBEIRÃO GRANDE,Capão Bonito,14,1.65,5.6,8.9,,3543253,Ribeirão Grande,SP,,proprio,True,0.0,0.0
+3543303,Ribeirão Pires,RIBEIRÃO PIRES,ABC I,6,104.0,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,6.6,686.4
+3543402,Ribeirão Preto,RIBEIRÃO PRETO,Ribeirão Preto,4,766.32,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,42.8,32798.5
+3543204,Ribeirão do Sul,RIBEIRÃO DO SUL,Assis,17,2.43,8.8,5.7,,3543204,Ribeirão do Sul,SP,,proprio,True,0.0,0.0
+3543238,Ribeirão dos Índios,RIBEIRÃO DOS ÍNDIOS,Pres. Prudente,21,1.2,9.5,8.8,,3543238,Ribeirão dos Índios,SP,,proprio,True,0.0,0.0
+3543600,Rifaina,RIFAINA,Franca,8,2.48,8.1,9.0,,3543600,Rifaina,SP,,proprio,True,0.0,0.0
+3543709,Rincão,RINCÃO,Araraquara,9,5.17,10.0,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,10.9,56.4
+3543808,Rinópolis,RINÓPOLIS,Marília,20,5.63,9.2,10.0,,3543808,Rinópolis,SP,,proprio,True,0.0,0.0
+3543907,Rio Claro,RIO CLARO,Piracicaba,5,176.86,9.4,8.9,,3543907,Rio Claro,SP,,proprio,True,0.0,0.0
+3544103,Rio Grande da Serra,RIO GRANDE DA SERRA,ABC I,6,35.34,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,10.9,385.2
+3544004,Rio das Pedras,RIO DAS PEDRAS,Piracicaba,5,24.26,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,47.4,1149.9
+3544202,Riolândia,RIOLÂNDIA,Votuporanga,15,5.71,8.8,8.0,,3544202,Riolândia,SP,,proprio,True,0.0,0.0
+3543501,Riversul,RIVERSUL,Capão Bonito,14,2.86,4.5,4.5,,3543501,Riversul,SP,,proprio,True,0.0,0.0
+3544251,Rosana,ROSANA,Pres. Prudente,22,9.83,8.8,8.5,,3544251,Rosana,SP,,proprio,True,0.0,0.0
+3544301,Roseira,ROSEIRA,Taubaté,2,7.2,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,40.2,289.4
+3544509,Rubinéia,RUBINEIA,Jales,18,2.21,8.2,8.4,Santa Fé do Sul,3546603,Santa Fé do Sul,SP,Santa Fé do Sul,publico,False,9.0,19.9
+3544400,Rubiácea,RUBIÁCEA,Araçatuba,19,1.08,9.0,9.0,,3544400,Rubiácea,SP,,proprio,True,0.0,0.0
+3544608,Sabino,SABINO,Marília,16,3.14,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,72.7,228.3
+3544707,Sagres,SAGRES,Dracena,21,1.32,8.7,8.5,,3544707,Sagres,SP,,proprio,True,0.0,0.0
+3544806,Sales,SALES,S J Rio Preto,16,4.06,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,59.4,241.2
+3544905,Sales Oliveira,SALES OLIVEIRA,Ribeirão Preto,4,7.23,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,True,0.0,0.0
+3545001,Salesópolis,SALESÓPOLIS,Mogi das Cruzes,6,6.77,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,34.5,233.6
+3545100,Salmourão,SALMOURÃO,Dracena,20,3.02,8.5,9.1,,3545100,Salmourão,SP,,proprio,True,0.0,0.0
+3545159,Saltinho,SALTINHO,Piracicaba,5,4.77,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,7.0,33.4
+3545209,Salto,SALTO,Itu,5,120.04,9.6,9.4,Salto - A.P.,3545209,Salto,SP,Salto - A.P.,particular,True,0.0,0.0
+3545407,Salto Grande,SALTO GRANDE,Assis,17,5.72,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,102.4,585.7
+3545308,Salto de Pirapora,SALTO DE PIRAPORA,Sorocaba,10,27.44,8.0,7.1,,3545308,Salto de Pirapora,SP,,proprio,True,0.0,0.0
+3545506,Sandovalina,SANDOVALINA,Pres. Prudente,22,1.78,8.3,8.8,Pirapozinho - A.P.,3539202,Pirapozinho,SP,Pirapozinho - A.P.,particular,False,33.9,60.3
+3545605,Santa Adélia,SANTA ADÉLIA,S J Rio Preto,15,9.28,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,21.3,197.7
+3545704,Santa Albertina,SANTA ALBERTINA,Jales,15,3.82,8.8,8.8,,3545704,Santa Albertina,SP,,proprio,True,0.0,0.0
+3546009,Santa Branca,SANTA BRANCA,S J Campos,2,8.63,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,25.2,217.5
+3545803,Santa Bárbara d'Oeste,SANTA BÁRBARA D'OESTE,Americana,5,163.72,10.0,10.0,Americana - A.P.,3501608,Americana,SP,Americana - A.P.,particular,False,9.9,1620.8
+3546108,Santa Clara d'Oeste,SANTA CLARA D'OESTE,Jales,15,1.37,7.3,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,83.6,114.5
+3546207,Santa Cruz da Conceição,SANTA CRUZ DA CONCEIÇÃO,Mogi Guaçu,9,2.03,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,75.7,153.7
+3546256,Santa Cruz da Esperança,SANTA CRUZ DA ESPERANÇA,Ribeirão Preto,4,1.0,9.5,9.1,,3546256,Santa Cruz da Esperança,SP,,proprio,True,0.0,0.0
+3546306,Santa Cruz das Palmeiras,SANTA CRUZ DAS PALMEIRAS,S J Boa Vista,9,22.37,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,17.8,398.2
+3546405,Santa Cruz do Rio Pardo,SANTA CRUZ DO RIO PARDO,Assis,17,33.97,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,74.6,2534.2
+3546504,Santa Ernestina,SANTA ERNESTINA,Araraquara,16,3.96,9.8,6.9,,3546504,Santa Ernestina,SP,,proprio,True,0.0,0.0
+3546603,Santa Fé do Sul,SANTA FÉ DO SUL,Jales,18,26.74,8.2,8.4,,3546603,Santa Fé do Sul,SP,,proprio,True,0.0,0.0
+3546702,Santa Gertrudes,SANTA GERTRUDES,Limeira,5,16.35,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,43.8,716.1
+3546801,Santa Isabel,SANTA ISABEL,S J Campos,2,33.38,7.5,7.5,Santa Isabel - A.P.,3546801,Santa Isabel,SP,Santa Isabel - A.P.,particular,True,0.0,0.0
+3546900,Santa Lúcia,SANTA LÚCIA,Araraquara,9,4.7,8.3,8.7,,3546900,Santa Lúcia,SP,,proprio,True,0.0,0.0
+3547007,Santa Maria da Serra,SANTA MARIA DA SERRA,Piracicaba,5,3.24,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,63.7,206.4
+3547106,Santa Mercedes,SANTA MERCEDES,Dracena,20,1.8,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,79.5,143.1
+3547403,Santa Rita d'Oeste,SANTA RITA D'OESTE,Jales,15,1.33,8.5,7.1,,3547403,Santa Rita d'Oeste,SP,,proprio,True,0.0,0.0
+3547502,Santa Rita do Passa Quatro,SANTA RITA DO PASSA QUATRO,Ribeirão Preto,9,15.56,3.9,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,41.1,639.5
+3547601,Santa Rosa de Viterbo,SANTA ROSA DE VITERBO,Ribeirão Preto,4,15.62,9.2,9.2,,3547601,Santa Rosa de Viterbo,SP,,proprio,True,0.0,0.0
+3547650,Santa Salete,SANTA SALETE,Jales,18,0.65,7.5,7.7,,3547650,Santa Salete,SP,,proprio,True,0.0,0.0
+3547205,Santana da Ponte Pensa,SANTANA DA PONTE PENSA,Jales,18,0.78,9.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,65.9,51.4
+3547304,Santana de Parnaíba,SANTANA DE PARNAÍBA,Osasco,6,138.69,8.2,9.4,Santana de Parnaíba - A.P.,3547304,Santana de Parnaíba,SP,Santana de Parnaíba - A.P.,particular,True,0.0,0.0
+3547700,Santo Anastácio,SANTO ANASTÁCIO,Pres. Prudente,22,11.72,9.1,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,67.9,795.8
+3547809,Santo André,SANTO ANDRÉ,ABC I,6,823.81,9.1,9.1,,3547809,Santo André,SP,,proprio,True,0.0,0.0
+3547908,Santo Antônio da Alegria,SANTO ANTÔNIO DA ALEGRIA,Ribeirão Preto,8,3.51,7.3,8.2,,3547908,Santo Antônio da Alegria,SP,,proprio,True,0.0,0.0
+3548005,Santo Antônio de Posse,SANTO ANTÔNIO DE POSSE,Paulínia,5,14.84,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,30.3,449.7
+3548054,Santo Antônio do Aracanguá,SANTO ANTÔNIO DO ARACANGUÁ,Araçatuba,19,4.59,9.5,7.2,,3548054,Santo Antônio do Aracanguá,SP,,proprio,True,0.0,0.0
+3548104,Santo Antônio do Jardim,SANTO ANTÔNIO DO JARDIM,S J Boa Vista,9,2.55,9.8,9.8,Casa Branca - A.P.,3510807,Casa Branca,SP,Casa Branca - A.P.,particular,False,56.1,143.1
+3548203,Santo Antônio do Pinhal,SANTO ANTÔNIO DO PINHAL,Taubaté,1,2.97,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,19.3,57.3
+3548302,Santo Expedito,SANTO EXPEDITO,Pres. Prudente,21,1.86,8.5,6.8,,3548302,Santo Expedito,SP,,proprio,True,0.0,0.0
+3548500,Santos,SANTOS,Santos,7,376.47,9.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,True,0.0,0.0
+3548401,Santópolis do Aguapeí,SANTÓPOLIS DO AGUAPEÍ,Araçatuba,20,2.64,9.5,8.7,,3548401,Santópolis do Aguapeí,SP,,proprio,True,0.0,0.0
+3551108,Sarapuí,SARAPUÍ,Itapetininga,10,5.34,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,35.0,186.9
+3551207,Sarutaiá,SARUTAIÁ,Avaré,14,2.12,10.0,8.6,,3551207,Sarutaiá,SP,,proprio,True,0.0,0.0
+3551306,Sebastianópolis do Sul,SEBASTIANÓPOLIS DO SUL,Votuporanga,18,1.7,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,42.6,72.4
+3551405,Serra Azul,SERRA AZUL,Ribeirão Preto,4,6.35,10.0,10.0,Jardinópolis - A.P.,3525102,Jardinópolis,SP,Jardinópolis - A.P.,particular,False,38.4,243.8
+3551603,Serra Negra,SERRA NEGRA,Mogi Guaçu,9,20.75,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,49.6,1029.2
+3551504,Serrana,SERRANA,Ribeirão Preto,4,34.76,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,53.8,1870.1
+3551702,Sertãozinho,SERTÃOZINHO,Ribeirão Preto,9,112.85,10.0,10.0,Jardinópolis - A.P.,3525102,Jardinópolis,SP,Jardinópolis - A.P.,particular,False,27.1,3058.2
+3551801,Sete Barras,SETE BARRAS,Registro,11,4.93,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,165.1,813.9
+3551900,Severínia,SEVERÍNIA,Barretos,15,9.72,8.5,7.8,,3551900,Severínia,SP,,proprio,True,0.0,0.0
+3552007,Silveiras,SILVEIRAS,Taubaté,2,2.15,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,15.9,34.2
+3552106,Socorro,SOCORRO,Mogi Guaçu,9,21.82,7.9,8.4,,3552106,Socorro,SP,,proprio,True,0.0,0.0
+3552205,Sorocaba,SOROCABA,Sorocaba,10,787.95,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,31.0,24426.4
+3552304,Sud Mennucci,SUD MENNUCCI,Jales,19,4.42,7.7,8.6,,3552304,Sud Mennucci,SP,,proprio,True,0.0,0.0
+3552403,Sumaré,SUMARÉ,Americana,5,248.63,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,13.4,3331.6
+3552502,Suzano,SUZANO,Mogi das Cruzes,6,266.95,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,71.1,18980.1
+3552551,Suzanápolis,SUZANÁPOLIS,Jales,18,1.59,9.1,8.7,,3552551,Suzanápolis,SP,,proprio,True,0.0,0.0
+3548609,São Bento do Sapucaí,SÃO BENTO DO SAPUCAÍ,Taubaté,1,3.93,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,35.7,140.3
+3548708,São Bernardo do Campo,SÃO BERNARDO DO CAMPO,ABC II,6,876.88,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,9.6,8418.0
+3548807,São Caetano do Sul,SÃO CAETANO DO SUL,ABC I,6,149.09,7.5,9.3,Mauá - A.P.,3529401,Mauá,SP,Mauá - A.P.,particular,False,12.2,1818.9
+3548906,São Carlos,SÃO CARLOS,São Carlos,13,220.19,10.0,10.0,,3548906,São Carlos,SP,,proprio,True,0.0,0.0
+3549003,São Francisco,SÃO FRANCISCO,Jales,18,1.41,4.7,7.9,,3549003,São Francisco,SP,,proprio,True,0.0,0.0
+3549409,São Joaquim da Barra,SÃO JOAQUIM DA BARRA,Franca,8,38.15,9.4,8.4,Sales Oliveira - A.P.,3544905,Sales Oliveira,SP,Sales Oliveira - A.P.,particular,False,20.4,778.3
+3549508,São José da Bela Vista,SÃO JOSÉ DA BELA VISTA,Franca,8,4.75,7.1,7.1,,3549508,São José da Bela Vista,SP,,proprio,True,0.0,0.0
+3549607,São José do Barreiro,SÃO JOSÉ DO BARREIRO,Taubaté,2,1.9,9.5,9.4,Cachoeira Paulista - A.P.,3508603,Cachoeira Paulista,SP,Cachoeira Paulista - A.P.,particular,False,44.3,84.2
+3549706,São José do Rio Pardo,SÃO JOSÉ DO RIO PARDO,S J Boa Vista,4,36.98,9.8,9.4,Tapiratiba - A.P.,3553609,Tapiratiba,SP,Tapiratiba - A.P.,particular,False,20.7,765.5
+3549805,São José do Rio Preto,SÃO JOSÉ DO RIO PRETO,S J Rio Preto,15,406.12,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,24.1,9787.5
+3549904,São José dos Campos,SÃO JOSÉ DOS CAMPOS,S J Campos,2,751.16,10.0,10.0,,3549904,São José dos Campos,SP,,proprio,True,0.0,0.0
+3549102,São João da Boa Vista,SÃO JOÃO DA BOA VISTA,S J Boa Vista,9,71.08,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,95.1,6759.7
+3549201,São João das Duas Pontes,SÃO JOÃO DAS DUAS PONTES,Jales,18,1.38,7.4,9.0,,3549201,São João das Duas Pontes,SP,,proprio,True,0.0,0.0
+3549250,São João de Iracema,SÃO JOÃO DE IRACEMA,Votuporanga,18,1.05,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,25.3,26.6
+3549300,São João do Pau d'Alho,SÃO JOÃO DO PAU D'ALHO,Dracena,20,1.27,9.5,9.1,,3549300,São João do Pau d'Alho,SP,,proprio,True,0.0,0.0
+3549953,São Lourenço da Serra,SÃO LOURENÇO DA SERRA,Embu das Artes,11,10.24,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,57.6,589.8
+3550001,São Luiz do Paraitinga,SÃO LUÍS DO PARAITINGA,Taubaté,2,4.3,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,39.0,167.7
+3550100,São Manuel,SÃO MANUEL,Botucatu,13,29.11,5.5,7.2,,3550100,São Manuel,SP,,proprio,True,0.0,0.0
+3550209,São Miguel Arcanjo,SÃO MIGUEL ARCANJO,Itapetininga,14,15.33,8.6,9.0,,3550209,São Miguel Arcanjo,SP,,proprio,True,0.0,0.0
+3550308,São Paulo,SÃO PAULO,Pinheiros,6,4143.3,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,27.2,112697.8
+3550308,São Paulo,SÃO PAULO,Tatuapé,6,6827.1,9.6,9.6,,3550308,São Paulo,SP,,proprio,True,0.0,0.0
+3550407,São Pedro,SÃO PEDRO,Piracicaba,5,25.72,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,45.1,1160.0
+3550506,São Pedro do Turvo,SÃO PEDRO DO TURVO,Assis,17,3.61,7.7,7.3,,3550506,São Pedro do Turvo,SP,,proprio,True,0.0,0.0
+3550605,São Roque,SÃO ROQUE,Itu,10,57.67,8.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,61.4,3540.9
+3550704,São Sebastião,SÃO SEBASTIÃO,São Sebastião,3,16.13,9.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,95.5,1540.4
+3550704,São Sebastião,SÃO SEBASTIÃO,São Sebastião,3,48.38,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,67.7,3275.3
+3550803,São Sebastião da Grama,SÃO SEBASTIÃO DA GRAMA,S J Boa Vista,4,4.82,8.2,8.2,,3550803,São Sebastião da Grama,SP,,proprio,True,0.0,0.0
+3550902,São Simão,SÃO SIMÃO,Ribeirão Preto,4,8.48,5.1,9.8,Guatapará - A.P.,3518859,Guatapará,SP,Guatapará - A.P.,particular,False,50.3,426.5
+3551009,São Vicente,SÃO VICENTE,Santos,7,296.36,9.5,9.3,Santos - A.P.,3548500,Santos,SP,Santos - A.P.,particular,False,6.7,1985.6
+3552601,Tabapuã,TABAPUÃ,S J Rio Preto,15,7.34,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,19.7,144.6
+3552700,Tabatinga,TABATINGA,Araraquara,13,8.85,7.6,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,72.9,645.2
+3552809,Taboão da Serra,TABOÃO DA SERRA,Pinheiros,6,246.19,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,26.5,6524.0
+3552908,Taciba,TACIBA,Pres. Prudente,22,3.72,8.5,8.6,,3552908,Taciba,SP,,proprio,True,0.0,0.0
+3553005,Taguaí,TAGUAÍ,Avaré,14,6.35,7.5,7.3,,3553005,Taguaí,SP,,proprio,True,0.0,0.0
+3553104,Taiaçu,TAIAÇU,Jaboticabal,15,3.6,7.9,7.4,,3553104,Taiaçu,SP,,proprio,True,0.0,0.0
+3553203,Taiúva,TAIÚVA,Jaboticabal,15,4.18,9.0,7.3,,3553203,Taiúva,SP,,proprio,True,0.0,0.0
+3553302,Tambaú,TAMBAÚ,S J Boa Vista,4,13.33,7.9,7.2,,3553302,Tambaú,SP,,proprio,True,0.0,0.0
+3553401,Tanabi,TANABI,Votuporanga,15,15.98,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,36.6,584.9
+3553609,Tapiratiba,TAPIRATIBA,S J Boa Vista,4,6.82,9.8,9.4,Tapiratiba - A.P.,3553609,Tapiratiba,SP,Tapiratiba - A.P.,particular,True,0.0,0.0
+3553500,Tapiraí,TAPIRAÍ,Sorocaba,11,4.0,9.0,9.0,,3553500,Tapiraí,SP,,proprio,True,0.0,0.0
+3553658,Taquaral,TAQUARAL,Jaboticabal,9,1.76,8.1,8.1,,3553658,Taquaral,SP,,proprio,True,0.0,0.0
+3553708,Taquaritinga,TAQUARITINGA,Jaboticabal,16,39.62,7.1,6.2,,3553708,Taquaritinga,SP,,proprio,True,0.0,0.0
+3553807,Taquarituba,TAQUARITUBA,Avaré,14,14.97,7.8,7.5,,3553807,Taquarituba,SP,,proprio,True,0.0,0.0
+3553856,Taquarivaí,TAQUARIVAÍ,Capão Bonito,14,2.63,8.8,8.8,,3553856,Taquarivaí,SP,,proprio,True,0.0,0.0
+3553906,Tarabai,TARABAI,Pres. Prudente,22,4.23,8.3,8.8,Pirapozinho - A.P.,3539202,Pirapozinho,SP,Pirapozinho - A.P.,particular,False,7.1,30.0
+3553955,Tarumã,TARUMÃ,Assis,17,9.8,9.5,9.5,Quatá - A.P.,3541703,Quatá,SP,Quatá - A.P.,particular,False,56.5,553.7
+3554003,Tatuí,TATUÍ,Sorocaba,10,106.28,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,17.1,1817.4
+3554102,Taubaté,TAUBATÉ,Taubaté,2,273.63,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,False,7.9,2161.7
+3554201,Tejupá,TEJUPÁ,Avaré,14,1.87,7.2,7.2,,3554201,Tejupá,SP,,proprio,True,0.0,0.0
+3554300,Teodoro Sampaio,TEODORO SAMPAIO,Pres. Prudente,22,12.6,7.4,7.1,,3554300,Teodoro Sampaio,SP,,proprio,True,0.0,0.0
+3554409,Terra Roxa,TERRA ROXA,Barretos,12,5.27,6.1,3.4,,3554409,Terra Roxa,SP,,proprio,True,0.0,0.0
+3554508,Tietê,TIETÊ,Itu,10,27.39,9.5,9.5,Iperó - A.P.,3521002,Iperó,SP,Iperó - A.P.,particular,False,28.1,769.7
+3554607,Timburi,TIMBURI,Assis,14,1.25,9.5,9.5,,3554607,Timburi,SP,,proprio,True,0.0,0.0
+3554656,Torre de Pedra,TORRE DE PEDRA,Botucatu,10,0.93,9.4,9.8,Cesário Lange - A.P.,3511607,Cesário Lange,SP,Cesário Lange - A.P.,particular,False,24.8,23.1
+3554706,Torrinha,TORRINHA,São Carlos,13,5.56,9.8,9.6,Rio das Pedras - A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,73.4,408.1
+3554755,Trabiju,TRABIJU,Araraquara,13,1.08,8.0,4.1,,3554755,Trabiju,SP,,proprio,True,0.0,0.0
+3554805,Tremembé,TREMEMBÉ,Taubaté,2,36.9,9.4,10.0,Tremembé - A.P.,3554805,Tremembé,SP,Tremembé - A.P.,particular,True,0.0,0.0
+3554904,Três Fronteiras,TRÊS FRONTEIRAS,Jales,18,4.04,7.3,7.1,,3554904,Três Fronteiras,SP,,proprio,True,0.0,0.0
+3554953,Tuiuti,TUIUTI,Atibaia,5,2.38,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,47.5,113.0
+3555109,Tupi Paulista,TUPI PAULISTA,Dracena,20,8.72,8.6,9.5,,3555109,Tupi Paulista,SP,,proprio,True,0.0,0.0
+3555000,Tupã,TUPÃ,Marília,20,49.09,9.5,9.6,Adamantina - A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,64.1,3146.7
+3555208,Turiúba,TURIÚBA,Araçatuba,19,1.04,7.8,7.8,,3555208,Turiúba,SP,,proprio,True,0.0,0.0
+3555307,Turmalina,TURMALINA,Jales,15,0.83,8.4,7.9,,3555307,Turmalina,SP,,proprio,True,0.0,0.0
+3555356,Ubarana,UBARANA,S J Rio Preto,19,3.44,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,75.7,260.4
+3555406,Ubatuba,UBATUBA,São Sebastião,3,72.6,9.1,10.0,Jambeiro - A.P.,3524907,Jambeiro,SP,Jambeiro - A.P.,particular,False,65.6,4762.6
+3555505,Ubirajara,UBIRAJARA,Bauru,17,2.62,9.8,9.6,Piratininga - A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,56.0,146.7
+3555604,Uchoa,UCHOA,S J Rio Preto,15,6.76,10.0,10.0,Onda Verde - A.P.,3534005,Onda Verde,SP,Onda Verde - A.P.,particular,False,40.8,275.8
+3555703,União Paulista,UNIÃO PAULISTA,S J Rio Preto,19,0.86,6.0,4.8,,3555703,União Paulista,SP,,proprio,True,0.0,0.0
+3555901,Uru,URU,Marília,16,0.84,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,79.1,66.4
+3556008,Urupês,URUPÊS,S J Rio Preto,16,8.56,9.8,9.8,Catanduva - A.P.,3511102,Catanduva,SP,Catanduva - A.P.,particular,False,34.1,291.9
+3555802,Urânia,URÂNIA,Jales,15,5.2,7.5,7.9,,3555802,Urânia,SP,,proprio,True,0.0,0.0
+3556107,Valentim Gentil,VALENTIM GENTIL,Votuporanga,15,9.01,8.4,8.6,,3556107,Valentim Gentil,SP,,proprio,True,0.0,0.0
+3556206,Valinhos,VALINHOS,Campinas,5,108.23,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,28.5,3084.6
+3556305,Valparaíso,VALPARAÍSO,Araçatuba,19,16.14,8.7,9.0,,3556305,Valparaíso,SP,,proprio,True,0.0,0.0
+3556354,Vargem,VARGEM,Atibaia,5,3.7,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,77.3,286.0
+3556453,Vargem Grande Paulista,VARGEM GRANDE PAULISTA,Embu das Artes,10,40.33,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,38.7,1560.8
+3556404,Vargem Grande do Sul,VARGEM GRANDE DO SUL,S J Boa Vista,4,30.48,7.1,7.8,,3556404,Vargem Grande do Sul,SP,,proprio,True,0.0,0.0
+3556602,Vera Cruz,VERA CRUZ,Marília,20,6.19,8.4,9.8,Marília - A.P.,3529005,Marília,SP,Marília - A.P.,particular,False,13.2,81.7
+3556701,Vinhedo,VINHEDO,Campinas,5,59.31,9.8,9.8,Paulínia - A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,35.0,2075.8
+3556800,Viradouro,VIRADOURO,Barretos,12,11.83,9.3,9.3,,3556800,Viradouro,SP,,proprio,True,0.0,0.0
+3556909,Vista Alegre do Alto,VISTA ALEGRE DO ALTO,Jaboticabal,15,5.24,8.0,8.6,,3556909,Vista Alegre do Alto,SP,,proprio,True,0.0,0.0
+3556958,Vitória Brasil,VITÓRIA BRASIL,Jales,15,1.04,9.0,8.7,,3556958,Vitória Brasil,SP,,proprio,True,0.0,0.0
+3557006,Votorantim,VOTORANTIM,Sorocaba,10,110.74,7.8,2.5,,3557006,Votorantim,SP,,proprio,True,0.0,0.0
+3557105,Votuporanga,VOTUPORANGA,Votuporanga,15,75.14,10.0,10.0,Meridiano - A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,22.1,1660.6
+3556503,Várzea Paulista,VÁRZEA PAULISTA,Jundiaí,5,104.19,9.5,9.5,Caieiras - A.P.,3509007,Caieiras,SP,Caieiras - A.P.,particular,False,19.1,1990.0
+3557154,Zacarias,ZACARIAS,Araçatuba,19,1.48,7.8,9.0,,3557154,Zacarias,SP,,proprio,True,0.0,0.0
+3500402,Águas da Prata,ÁGUAS DA PRATA,S J Boa Vista,9,4.61,9.8,9.8,Paulínia-A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,102.0,470.2
+3500501,Águas de Lindóia,ÁGUAS DE LINDÓIA,Mogi Guaçu,9,12.44,9.8,9.8,Paulínia-A.P.,3536505,Paulínia,SP,Paulínia - A.P.,particular,False,62.6,778.7
+3500550,Águas de Santa Bárbara,ÁGUAS DE SANTA BÁRBARA,Avaré,17,3.82,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,53.2,203.2
+3500600,Águas de São Pedro,ÁGUAS DE SÃO PEDRO,Piracicaba,5,1.95,9.8,9.6,RiodasPedras-A.P.,3544004,Rio das Pedras,SP,Rio das Pedras - A.P.,particular,False,38.7,75.5
+3501202,Álvares Florence,ÁLVARES FLORENCE,Votuporanga,15,1.86,10.0,10.0,Meridiano-A.P.,3529609,Meridiano,SP,Meridiano - A.P.,particular,False,28.1,52.3
+3501301,Álvares Machado,ÁLVARES MACHADO,Pres. Prudente,21,17.19,9.5,9.6,Adamantina-A.P.,3500105,Adamantina,SP,Adamantina - A.P.,particular,False,59.6,1024.5
+3501400,Álvaro de Carvalho,ÁLVARO DE CARVALHO,Marília,20,2.14,9.8,9.6,Piratininga-A.P.,3539400,Piratininga,SP,Piratininga - A.P.,particular,False,70.7,151.3
+3533809,Óleo,ÓLEO,Assis,17,1.16,9.1,9.5,,3533809,Óleo,SP,,proprio,True,0.0,0.0

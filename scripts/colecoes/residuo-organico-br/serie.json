@@ -1,0 +1,5 @@
+[
+ { "tema": "composto", "numero": 159, "pasta": "159-quem-faz-composto-brasil", "base": "br_residuo_organico_tratamento", "data": "2027-02-12", "categoria": "energia" },
+ { "tema": "consorcio", "numero": 160, "pasta": "160-o-lixo-em-consorcio-brasil", "base": "br_residuos_consorcio", "data": "2027-02-15", "categoria": "divisao-territorial" },
+ { "tema": "taxa", "numero": 161, "pasta": "161-a-taxa-e-o-lixao-brasil", "base": "br_residuos_taxa_lixao", "data": "2027-02-17", "categoria": "biomas" }
+]

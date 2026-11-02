@@ -1,0 +1,62 @@
+CD_MUN,NM_MUN,SIGLA_UF,regiao,usinas_2018,cap_2018,usinas_2026,cap_2026,variacao_m3d,categoria,lon,lat
+5107602,Rondonópolis,MT,Centro-Oeste,4,1512.0,3,3002.0,1490.0,cresceu,-54.7499,-16.5825
+4113205,Lapa,PR,Sul,1,1063.0,1,2500.0,1437.0,cresceu,-49.895,-25.8007
+4310207,Ijuí,RS,Sul,2,1150.0,2,2300.0,1150.0,cresceu,-53.9125,-28.296
+5218003,Porangatu,GO,Centro-Oeste,0,0.0,1,1800.0,1800.0,nova,-49.2315,-13.2779
+2914406,Iraquara,BA,Nordeste,1,500.0,1,1650.0,1150.0,cresceu,-41.5964,-12.2684
+5105259,Lucas do Rio Verde,MT,Centro-Oeste,1,563.0,2,1585.7,1022.7,cresceu,-56.1892,-13.0464
+5201108,Anápolis,GO,Centro-Oeste,1,1550.0,1,1550.0,0.0,igual,-48.9072,-16.3045
+5108501,Vera,MT,Centro-Oeste,0,0.0,1,1500.0,1500.0,nova,-55.3211,-12.4745
+4314100,Passo Fundo,RS,Sul,1,800.0,1,1500.0,700.0,cresceu,-52.4767,-28.2661
+4114807,Marialva,PR,Sul,1,800.0,1,1500.0,700.0,cresceu,-51.8,-23.4946
+4210100,Mafra,SC,Sul,0,0.0,1,1370.0,1370.0,nova,-49.7329,-26.2465
+4322806,Veranópolis,RS,Sul,1,1050.0,1,1300.0,250.0,cresceu,-51.5375,-28.9806
+4307005,Erechim,RS,Sul,1,600.0,1,1200.0,600.0,cresceu,-52.2639,-27.6018
+4304606,Canoas,RS,Sul,1,900.0,1,1150.0,250.0,cresceu,-51.1764,-29.9123
+5103403,Cuiabá,MT,Centro-Oeste,1,150.0,2,1150.0,1000.0,cresceu,-55.8879,-15.5308
+2930709,Simões Filho,BA,Nordeste,0,0.0,1,1000.0,1000.0,nova,-38.3967,-12.772
+5008305,Três Lagoas,MS,Centro-Oeste,1,700.0,1,965.0,265.0,cresceu,-52.3266,-20.4049
+4303004,Cachoeira do Sul,RS,Sul,1,933.33,1,933.33,0.0,igual,-53.0066,-30.2327
+3304110,Porto Real,RJ,Sudeste,1,450.0,1,850.0,400.0,cresceu,-44.3309,-22.4477
+2906501,Candeias,BA,Nordeste,1,603.42,1,845.46,242.04000000000008,cresceu,-38.4922,-12.6904
+1718204,Porto Nacional,TO,Norte,1,800.0,1,800.0,0.0,igual,-48.5567,-10.5553
+1508001,Tomé-Açu,PA,Norte,0,0.0,1,800.0,800.0,nova,-48.259,-2.6584
+3527108,Lins,SP,Sudeste,1,560.23,1,744.6,184.37,cresceu,-49.6731,-21.6449
+5106372,Pedra Preta,MT,Centro-Oeste,0,0.0,1,680.0,680.0,nova,-54.2355,-16.7825
+5100300,Alto Araguaia,MT,Centro-Oeste,0,0.0,1,680.0,680.0,nova,-53.4554,-17.4204
+5218805,Rio Verde,GO,Centro-Oeste,0,0.0,1,650.0,650.0,nova,-51.1446,-17.7182
+5208004,Formosa,GO,Centro-Oeste,1,450.0,1,650.0,200.0,cresceu,-47.231,-15.2862
+5210109,Ipameri,GO,Centro-Oeste,1,625.0,1,625.0,0.0,igual,-48.0196,-17.4536
+5220405,São Simão,GO,Centro-Oeste,1,625.0,1,625.0,0.0,igual,-50.5877,-19.0164
+5007208,Rio Brilhante,MS,Centro-Oeste,1,300.0,1,600.0,300.0,cresceu,-54.6445,-21.6479
+1100049,Cacoal,RO,Norte,0,0.0,1,600.0,600.0,nova,-61.251,-11.3155
+5108857,Nova Marilândia,MT,Centro-Oeste,1,338.0,1,568.0,230.0,cresceu,-57.2848,-14.2975
+3143302,Montes Claros,MG,Sudeste,1,422.73,1,545.45,122.72000000000003,cresceu,-43.8939,-16.6107
+4209003,Joaçaba,SC,Sul,1,510.0,1,510.0,0.0,igual,-51.5855,-27.1424
+4312617,Muitos Capões,RS,Sul,1,300.0,1,500.0,200.0,cresceu,-51.1978,-28.4008
+4303558,Camargo,RS,Sul,1,300.0,1,500.0,200.0,cresceu,-52.2234,-28.6112
+5106224,Nova Mutum,MT,Centro-Oeste,2,513.79,1,497.0,-16.789999999999964,encolheu,-56.081,-13.5248
+5215702,Palmeiras de Goiás,GO,Centro-Oeste,1,45.0,1,450.0,405.0,cresceu,-49.9285,-16.8424
+5102678,Campo Verde,MT,Centro-Oeste,1,300.0,1,410.0,110.0,cresceu,-55.015,-15.4251
+5002407,Caarapó,MS,Centro-Oeste,0,0.0,1,400.0,400.0,nova,-54.9135,-22.6264
+3534302,Orlândia,SP,Sudeste,1,367.0,1,367.0,0.0,igual,-47.8964,-20.7029
+4115200,Maringá,PR,Sul,0,0.0,1,353.0,353.0,nova,-51.9632,-23.4033
+5107925,Sorriso,MT,Centro-Oeste,1,285.0,1,285.0,0.0,igual,-55.825,-12.5725
+1507003,Santo Antônio do Tauá,PA,Norte,0,0.0,1,250.0,250.0,nova,-48.1428,-1.0954
+2203909,Floriano,PI,Nordeste,0,0.0,1,250.0,250.0,nova,-43.1078,-7.0618
+5108402,Várzea Grande,MT,Centro-Oeste,1,18.0,2,222.0,204.0,cresceu,-56.2943,-15.5582
+3552403,Sumaré,SP,Sudeste,0,0.0,1,200.0,200.0,nova,-47.2983,-22.8473
+5101704,Barra do Bugres,MT,Centro-Oeste,1,190.46,1,190.46,0.0,igual,-57.2319,-15.1904
+3306305,Volta Redonda,RJ,Sudeste,1,166.7,1,166.7,0.0,igual,-44.0884,-22.526
+1501402,Belém,PA,Norte,0,0.0,1,100.0,100.0,nova,-48.5025,-1.2712
+4128104,Umuarama,PR,Sul,0,0.0,1,100.0,100.0,nova,-53.3338,-23.7072
+5220207,São Miguel do Araguaia,GO,Centro-Oeste,0,0.0,1,95.0,95.0,nova,-50.2263,-12.9839
+1100122,Ji-Paraná,RO,Norte,1,90.0,1,90.0,0.0,igual,-61.6937,-10.4534
+4122404,Rolândia,PR,Sul,1,120.0,0,0.0,-120.0,zerou,-51.4258,-23.2807
+3503208,Araraquara,SP,Sudeste,1,194.44,0,0.0,-194.44,zerou,-48.2393,-21.7572
+3511706,Charqueada,SP,Sudeste,1,400.0,0,0.0,-400.0,zerou,-47.7448,-22.5233
+1716109,Paraíso do Tocantins,TO,Norte,1,81.0,0,0.0,-81.0,zerou,-48.866,-10.2114
+2311306,Quixadá,CE,Nordeste,1,301.71,0,0.0,-301.71,zerou,-39.0291,-4.9188
+5101803,Barra do Garças,MT,Centro-Oeste,1,98.0,0,0.0,-98.0,zerou,-52.4687,-15.3591
+5103700,Feliz Natal,MT,Centro-Oeste,1,10.0,0,0.0,-10.0,zerou,-53.9326,-11.8553
+5211909,Jataí,GO,Centro-Oeste,1,50.0,0,0.0,-50.0,zerou,-51.7173,-17.906

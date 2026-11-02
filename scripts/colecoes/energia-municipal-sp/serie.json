@@ -1,0 +1,5 @@
+[
+ { "tema": "roca", "numero": 144, "pasta": "144-a-luz-da-roca-sp", "base": "sp_eletricidade_rural_2024", "data": "2027-01-08", "categoria": "energia" },
+ { "tema": "tanque", "numero": 145, "pasta": "145-o-tanque-de-cada-cidade-sp", "base": "sp_combustiveis_rodoviarios_2024", "data": "2027-01-11", "categoria": "energia" },
+ { "tema": "gas", "numero": 146, "pasta": "146-gas-de-cano-gas-de-botijao-sp", "base": "sp_gas_canalizado_e_glp_2024", "data": "2027-01-13", "categoria": "energia" }
+]

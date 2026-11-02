@@ -1,0 +1,5 @@
+[
+ { "tema": "agosto", "numero": 141, "pasta": "141-o-que-queimou-em-agosto-sp", "base": "sp_focos_agosto_2024_cobertura", "data": "2026-12-30", "categoria": "uso-do-solo" },
+ { "tema": "mes", "numero": 142, "pasta": "142-o-mes-do-fogo-sp", "base": "sp_focos_data_media", "data": "2027-01-04", "categoria": "biomas" },
+ { "tema": "lugar", "numero": 143, "pasta": "143-o-fogo-mudou-de-lugar-sp", "base": "sp_focos_densidade_mudanca", "data": "2027-01-06", "categoria": "uso-do-solo" }
+]

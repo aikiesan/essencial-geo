@@ -1,0 +1,162 @@
+---
+/**
+ * Faixa de downloads da página do mapa, logo abaixo da prancha: os arquivos de dados do README
+ * (GeoPackage, CSV, SVG…) e as duas figuras de reuso. A ficha completa (metadados, citação, QR)
+ * continua na gaveta.
+ */
+import Icone from './Icone.astro';
+import { SITE } from '../site.config';
+import { resolverDownloads, versoesDoMapa, type Mapa } from '../lib/mapas';
+import { t } from '../i18n';
+
+interface Props { mapa: Mapa }
+const { mapa } = Astro.props;
+const lingua = mapa.lingua;
+const tx = t(lingua);
+const dados = resolverDownloads(mapa);
+const figuras = versoesDoMapa(mapa).map((v) => ({
+  ...v,
+  rotulo: v.versao === 'figura' ? tx.cartao.versaoFigura : tx.cartao.versaoSemBase,
+}));
+---
+
+<section class="baixar" aria-labelledby="t-baixar">
+  <div class="baixar__cab">
+    <h2 class="secao" id="t-baixar">{tx.mapa.baixar}</h2>
+    <p class="baixar__fina">
+      {tx.mapa.baixarFina.split('{licenca}')[0]}<a href={SITE.licenca.url[lingua]} rel="license noopener">{SITE.licenca.nome}</a>{tx.mapa.baixarFina.split('{licenca}')[1]}
+    </p>
+  </div>
+  <ul class="baixar__lista" role="list">
+    {
+      dados.map((a) => (
+        <li>
+          {a.href ? (
+            <a
+              class="baixar__item"
+              href={a.href}
+              download={a.externo ? undefined : ''}
+              rel={a.externo ? 'noopener' : undefined}
+              data-goatcounter-click={`baixar/${mapa.id}/${a.formato}/${lingua}`}
+              data-goatcounter-title={`${a.rotulo} (${a.ext})`}
+            >
+              <span class="baixar__sigla mono">{a.sigla}</span>
+              <span class="baixar__rotulo">{a.rotulo}</span>
+              <span class="baixar__tam mono">{a.tamanho ?? a.ext}</span>
+              <Icone nome={a.externo ? 'externo' : 'baixar'} class="baixar__icone" />
+            </a>
+          ) : (
+            <span class="baixar__item" aria-disabled="true" title={tx.ficha.naoPublicado}>
+              <span class="baixar__sigla mono">{a.sigla}</span>
+              <span class="baixar__rotulo">{a.rotulo}</span>
+              <span class="baixar__tam mono">{tx.ficha.emBreve}</span>
+            </span>
+          )}
+        </li>
+      ))
+    }
+    {
+      figuras.map((f) => (
+        <li>
+          <a
+            class="baixar__item"
+            href={f.src}
+            download
+            data-goatcounter-click={`baixar/${mapa.id}/${f.versao === 'figura' ? 'figura' : 'figura-sem-base'}/${lingua}`}
+          >
+            <span class="baixar__sigla mono">PNG</span>
+            <span class="baixar__rotulo">{f.rotulo}</span>
+            <span class="baixar__tam mono">{f.largura}×{f.altura}</span>
+            <Icone nome="baixar" class="baixar__icone" />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <a class="botao abrir-ficha baixar__ficha" href="#ficha" data-abrir-ficha={mapa.id} aria-haspopup="dialog">
+    <Icone nome="ficha" /> {tx.mapa.fichaCompleta}
+  </a>
+</section>
+
+<style>
+  .baixar {
+    margin: var(--e-6) 0 0;
+  }
+  .baixar__fina {
+    margin: 0 0 var(--e-4);
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+  }
+  .baixar__fina a {
+    color: inherit;
+  }
+  .baixar__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+    gap: var(--e-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .baixar__item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'sigla rotulo icone'
+      'sigla tam icone';
+    align-items: center;
+    gap: 0 var(--e-3);
+    height: 100%;
+    min-height: 52px;
+    padding: var(--e-2) var(--e-3);
+    border: 1px solid var(--linha-fina);
+    background: var(--painel);
+    color: var(--tinta);
+    text-decoration: none;
+    transition: border-color 120ms linear;
+  }
+  a.baixar__item:hover,
+  a.baixar__item:focus-visible {
+    border-color: var(--acento);
+  }
+  a.baixar__item:hover .baixar__sigla {
+    background: var(--acento);
+    border-color: var(--acento);
+    color: var(--papel);
+  }
+  .baixar__item[aria-disabled='true'] {
+    border-style: dashed;
+    color: var(--tinta-3);
+    background: transparent;
+  }
+  .baixar__sigla {
+    grid-area: sigla;
+    min-width: 3.4em;
+    padding: 2px var(--e-1);
+    border: 1px solid var(--linha);
+    font-size: var(--t-xs);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.06em;
+    transition:
+      background-color 120ms linear,
+      color 120ms linear;
+  }
+  .baixar__rotulo {
+    grid-area: rotulo;
+    font-size: var(--t-sm);
+    line-height: 1.3;
+  }
+  .baixar__tam {
+    grid-area: tam;
+    font-size: var(--t-xs);
+    color: var(--tinta-3);
+  }
+  .baixar__item :global(.baixar__icone) {
+    grid-area: icone;
+    color: var(--tinta-3);
+  }
+  .baixar__ficha {
+    margin-top: var(--e-4);
+  }
+</style>

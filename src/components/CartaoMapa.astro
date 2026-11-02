@@ -6,7 +6,7 @@
 import { Image, getImage } from 'astro:assets';
 import Ficha from './Ficha.astro';
 import Icone from './Icone.astro';
-import { linkMapa, nomeFonte, numeroFormatado, type Mapa } from '../lib/mapas';
+import { linkMapa, nomeFonte, numeroFormatado, versoesDoMapa, type Mapa } from '../lib/mapas';
 import { colecaoDoMapa } from '../lib/colecoes';
 import { dataExtensa, dataIso, rota, t } from '../i18n';
 
@@ -37,6 +37,14 @@ const alta = await getImage({
 });
 const fontes = [...new Set(d.fontes.map((f) => nomeFonte(f, lingua).split(' — ')[0]))].join(', ');
 const serie = await colecaoDoMapa(mapa);
+// Na página do mapa, a prancha divide o espaço com as outras duas versões da imagem (figura e sem mapa de base).
+const versoes = destaque ? versoesDoMapa(mapa) : [];
+const ROTULO_VERSAO = {
+  prancha: [tx.cartao.versaoPrancha, tx.cartao.versaoPranchaDica],
+  figura: [tx.cartao.versaoFigura, tx.cartao.versaoFiguraDica],
+  semBase: [tx.cartao.versaoSemBase, tx.cartao.versaoSemBaseDica],
+} as const;
+const legenda = `${tx.geral.no} ${num} — ${d.titulo}`;
 ---
 
 <article class:list={['cartao', { 'cartao--destaque': destaque }]} id={mapa.id} data-mapa={mapa.id}>
@@ -84,23 +92,39 @@ const serie = await colecaoDoMapa(mapa);
     }
   </header>
 
-  <figure class="prancha">
+  <figure class="prancha" data-versoes={versoes.length ? '' : undefined}>
+    {
+      versoes.length > 0 && (
+        <div class="versoes" role="group" aria-label={tx.cartao.versoes}>
+          {(['prancha', ...versoes.map((v) => v.versao)] as const).map((v, n) => (
+            <button type="button" data-versao={v} aria-pressed={n === 0 ? 'true' : 'false'} title={ROTULO_VERSAO[v][1]}>
+              {ROTULO_VERSAO[v][0]}
+            </button>
+          ))}
+        </div>
+      )
+    }
     <button
       type="button"
       class="prancha__moldura"
       data-lightbox
+      data-painel-versao="prancha"
       data-src={alta.src}
       data-largura={alta.attributes.width ?? d.imagem.width}
       data-altura={alta.attributes.height ?? d.imagem.height}
-      data-legenda={`${tx.geral.no} ${num} — ${d.titulo}`}
+      data-legenda={legenda}
       aria-label={`${tx.cartao.ampliarMapa}: ${d.titulo}`}
     >
       <span class="prancha__folha">
         <Image
           src={d.imagem}
           alt={d.imagem_alt}
-          widths={[480, 760, 1140, 1520]}
-          sizes="(min-width: 1100px) 750px, (min-width: 860px) calc(100vw - 340px), calc(100vw - 48px)"
+          widths={destaque ? [480, 760, 1140, 1520, 2080] : [480, 760, 1140, 1520]}
+          sizes={
+            destaque
+              ? '(min-width: 1440px) 1040px, (min-width: 860px) calc(100vw - 368px), calc(100vw - 32px)'
+              : '(min-width: 1100px) 750px, (min-width: 860px) calc(100vw - 340px), calc(100vw - 48px)'
+          }
           loading={prioridade ? 'eager' : 'lazy'}
           fetchpriority={prioridade ? 'high' : 'auto'}
           decoding="async"
@@ -110,6 +134,27 @@ const serie = await colecaoDoMapa(mapa);
       </span>
       <span class="prancha__lupa rotulo" aria-hidden="true"><Icone nome="ampliar" tamanho={12} /> {tx.cartao.ampliar}</span>
     </button>
+    {
+      versoes.map((v) => (
+        <button
+          type="button"
+          class="prancha__moldura prancha__moldura--figura"
+          data-lightbox
+          data-painel-versao={v.versao}
+          data-src={v.src}
+          data-largura={v.largura}
+          data-altura={v.altura}
+          data-legenda={`${legenda} · ${ROTULO_VERSAO[v.versao][0]}`}
+          aria-label={`${tx.cartao.ampliarMapa} (${ROTULO_VERSAO[v.versao][0]}): ${d.titulo}`}
+          hidden
+        >
+          <span class="prancha__folha">
+            <img src={v.src} alt={d.imagem_alt} width={v.largura} height={v.altura} loading="lazy" decoding="async" />
+          </span>
+          <span class="prancha__lupa rotulo" aria-hidden="true"><Icone nome="ampliar" tamanho={12} /> {tx.cartao.ampliar}</span>
+        </button>
+      ))
+    }
     <figcaption class="prancha__legenda">
       <span>Fig. {num}</span>
       <span>{d.recorte}</span>
@@ -276,6 +321,50 @@ const serie = await colecaoDoMapa(mapa);
     background: var(--folha);
     cursor: zoom-in;
   }
+  .prancha__moldura[hidden] {
+    display: none;
+  }
+  .prancha__moldura--figura .prancha__folha :global(img) {
+    max-height: 82vh;
+    object-fit: contain;
+  }
+
+  /* Versões da imagem: abas em versalete; sem JavaScript, só a prancha aparece */
+  .versoes {
+    display: none;
+    flex-wrap: wrap;
+    margin-bottom: -1px;
+  }
+  :global(.js) .versoes {
+    display: flex;
+  }
+  .versoes button {
+    min-height: 36px;
+    padding: 0 var(--e-3);
+    border: 1px solid var(--linha-fina);
+    border-bottom-color: var(--linha);
+    margin-right: -1px;
+    background: transparent;
+    color: var(--tinta-2);
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .versoes button:hover {
+    color: var(--tinta);
+    border-color: var(--tinta-3);
+    border-bottom-color: var(--linha);
+  }
+  .versoes button[aria-pressed='true'] {
+    position: relative;
+    z-index: 1;
+    border-color: var(--linha);
+    border-bottom-color: var(--folha);
+    background: var(--folha);
+    color: var(--tinta);
+  }
+
   .prancha__folha {
     display: block;
     border: 1px solid var(--linha-fina);
