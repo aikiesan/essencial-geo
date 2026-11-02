@@ -15,6 +15,7 @@ import { colecoesNoAr } from '../lib/colecoes';
 import { ESCOPOS, contarPorCategoria, escopoDoMapa, linkMapa, mapasPublicados, numeroFormatado, proximosMapas } from '../lib/mapas';
 import { jsonLd, siteEAutor } from '../lib/metadados';
 import { CATEGORIA_IDS, COLECOES, SITE } from '../site.config';
+import { PERGUNTAS } from '../lib/guia';
 import { dataCurta, dataIso, linguaDe, rota, t } from '../i18n';
 
 const lingua = linguaDe(Astro.url.pathname);
@@ -35,6 +36,16 @@ const ultimoDia = noArDeFato[0] && dataIso(noArDeFato[0].data.data);
 const novidades = (daSemana.length ? daSemana : noArDeFato.filter((m) => dataIso(m.data.data) === ultimoDia)).slice(0, 10);
 const temas = CATEGORIA_IDS.filter((c) => contagem[c] > 0).length;
 const categorias = CATEGORIA_IDS.filter((c) => contagem[c] > 0);
+// Perguntas como filtro: uma prancha responde às perguntas da sua coleção.
+const perguntas = PERGUNTAS.map((p) => ({
+  id: p.id,
+  texto: p.pergunta[lingua],
+  n: mapas.filter((m) => m.data.colecao && p.colecoes.includes(m.data.colecao)).length,
+})).filter((p) => p.n > 0);
+const perguntasDo = (m: (typeof mapas)[number]) =>
+  PERGUNTAS.filter((p) => m.data.colecao && p.colecoes.includes(m.data.colecao))
+    .map((p) => p.id)
+    .join(' ');
 const escopos = ESCOPOS.map((e) => ({ id: e, n: mapas.filter((m) => escopoDoMapa(m) === e).length })).filter((e) => e.n > 0);
 // Texto em que a busca procura: número, título, subtítulo, recorte, coleção, tema e etiquetas, sem acentos.
 const semAcento = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -203,6 +214,21 @@ const busca = (m: (typeof mapas)[number]) =>
           <input type="search" name="q" placeholder={i.buscarDica} autocomplete="off" spellcheck="false" />
         </label>
         {
+          perguntas.length > 1 && (
+            <label class="filtros__campo filtros__pergunta">
+              <span class="rotulo">{i.pergunta}</span>
+              <select name="pergunta">
+                <option value="">{i.perguntaTodas}</option>
+                {perguntas.map((p) => (
+                  <option value={p.id}>
+                    {p.texto} ({p.n})
+                  </option>
+                ))}
+              </select>
+            </label>
+          )
+        }
+        {
           series.length > 1 && (
             <label class="filtros__campo">
               <span class="rotulo">{i.colecao}</span>
@@ -262,7 +288,7 @@ const busca = (m: (typeof mapas)[number]) =>
       <ul class="mapas" role="list" data-galeria>
         {
           mapas.map((m, n) => (
-            <li data-colecao={m.data.colecao ?? ''} data-tema={m.data.categoria} data-recorte={escopoDoMapa(m)} data-busca={busca(m)}>
+            <li data-colecao={m.data.colecao ?? ''} data-perguntas={perguntasDo(m)} data-tema={m.data.categoria} data-recorte={escopoDoMapa(m)} data-busca={busca(m)}>
               <a class="mapa" href={linkMapa(m)}>
                 <span class="mapa__capa">
                   <Image

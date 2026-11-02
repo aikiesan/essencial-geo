@@ -40,6 +40,12 @@ const perguntas = PERGUNTAS.map((p) => ({
             </li>
           ))}
         </ul>
+        {p.respostas.length > 1 && (
+          <a class="pergunta__juntas rotulo" href={`${rota(lingua)}?pergunta=${p.id}#galeria`}>
+            {tx.inicio.verJuntas.replace('{n}', String(p.respostas.reduce((s, c) => s + c.mapas.length, 0)))}
+            <Icone nome="seta" tamanho={11} />
+          </a>
+        )}
       </li>
     ))
   }
@@ -59,7 +65,7 @@ const perguntas = PERGUNTAS.map((p) => ({
   .pergunta {
     position: relative;
     display: grid;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto 1fr auto;
     gap: var(--e-2);
     padding: var(--e-4) var(--e-4) var(--e-3);
     border-right: 1px solid var(--linha-fina);
@@ -123,6 +129,22 @@ const perguntas = PERGUNTAS.map((p) => ({
   .pergunta__respostas a:hover :global(svg) {
     transform: translateX(3px);
     color: var(--acento);
+  }
+  /* A pergunta inteira numa grade só: a galeria da página inicial filtrada por ?pergunta= */
+  .pergunta__juntas {
+    display: inline-flex;
+    align-items: center;
+    justify-self: start;
+    gap: var(--e-1);
+    min-height: 32px;
+    margin: 0;
+    color: var(--tinta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--cesto);
+  }
+  .pergunta__juntas:hover {
+    color: var(--acento);
+    border-color: var(--acento);
   }
   .pergunta__qtd {
     font-size: var(--t-xs);

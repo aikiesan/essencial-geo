@@ -192,7 +192,7 @@ function iniciarVersoes() {
 }
 
 /* ---------- Galeria da página inicial: busca e filtros ------------------- */
-// Coleção, tema, recorte e texto livre; o estado fica na URL (?colecao=…&tema=…&recorte=…&q=…).
+// Pergunta, coleção, tema, recorte e texto livre; o estado fica na URL (?pergunta=…&colecao=…&tema=…&recorte=…&q=…).
 const semAcento = (s: string) =>
   s
     .normalize('NFD')
@@ -207,7 +207,7 @@ function iniciarGaleria() {
   const contagem = form.querySelector<HTMLElement>('[data-filtro-contagem]');
   const vazio = document.querySelector<HTMLElement>('[data-galeria-vazia]');
   const modelo = contagem?.dataset.modelo ?? '{n} / {total}';
-  const campos = ['colecao', 'tema', 'recorte', 'q'] as const;
+  const campos = ['pergunta', 'colecao', 'tema', 'recorte', 'q'] as const;
 
   const ler = () => {
     const f = new FormData(form);
@@ -221,6 +221,7 @@ function iniciarGaleria() {
     itens.forEach((li) => {
       const d = li.dataset;
       const ok =
+        (!v.pergunta || (d.perguntas ?? '').split(' ').includes(v.pergunta)) &&
         (!v.colecao || d.colecao === v.colecao) &&
         (!v.tema || d.tema === v.tema) &&
         (!v.recorte || d.recorte === v.recorte) &&
