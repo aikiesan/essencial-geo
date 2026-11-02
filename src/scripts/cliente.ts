@@ -167,7 +167,15 @@ function iniciarVersoes() {
     const paineis = $$('[data-painel-versao]', fig);
     const escolher = (aba: HTMLButtonElement, foco = false) => {
       abas.forEach((a) => a.setAttribute('aria-pressed', String(a === aba)));
-      paineis.forEach((p) => (p.hidden = p.dataset.painelVersao !== aba.dataset.versao));
+      paineis.forEach((p) => {
+        const mostrar = p.dataset.painelVersao === aba.dataset.versao;
+        if (mostrar && p.hidden) {
+          p.classList.remove('surgir');
+          void p.offsetWidth; // reinicia a animação
+          p.classList.add('surgir');
+        }
+        p.hidden = !mostrar;
+      });
       if (foco) aba.focus();
     };
     abas.forEach((aba, i) => {
@@ -250,6 +258,24 @@ function iniciarGaleria() {
   aplicar(false);
 }
 
+/* ---------- Entrada ao rolar: paradas do percurso, perguntas ------------- */
+function iniciarRevelar() {
+  const alvos = $$('[data-revelar]');
+  if (!alvos.length || !('IntersectionObserver' in window)) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('revela');
+  const obs = new IntersectionObserver(
+    (entradas) =>
+      entradas.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visto');
+        obs.unobserve(e.target);
+      }),
+    { rootMargin: '0px 0px -8% 0px' },
+  );
+  alvos.forEach((el) => obs.observe(el));
+}
+
 iniciarTema();
 iniciarMenu();
 iniciarGaleria();
@@ -257,3 +283,4 @@ iniciarVersoes();
 iniciarCitacoes();
 iniciarGaveta();
 iniciarVisor();
+iniciarRevelar();
