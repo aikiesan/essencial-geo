@@ -37,6 +37,7 @@ const secoes = [
   { icone: 'ficha', rotulo: n.mapas, href: rota(lingua, 'mapas'), ativo: categoriaAtiva !== undefined || comeca(rota(lingua, 'mapas')) },
   { icone: 'colecoes', rotulo: n.colecoes, href: rota(lingua, 'colecoes'), ativo: comeca(rota(lingua, 'colecoes')) },
   { icone: 'lista', rotulo: n.indice, href: rota(lingua, 'indice'), ativo: comeca(rota(lingua, 'indice')) },
+  { icone: 'guia', rotulo: n.guia, href: rota(lingua, 'guia'), ativo: comeca(rota(lingua, 'guia')) },
   { icone: 'nota', rotulo: n.notas, href: rota(lingua, 'notas'), ativo: comeca(rota(lingua, 'notas')) },
   { icone: 'info', rotulo: n.sobre, href: rota(lingua, 'sobre'), ativo: comeca(rota(lingua, 'sobre')) },
 ] as const;
@@ -123,6 +124,12 @@ const iniciais = AUTOR.nomeCompleto
             <li>
               <a href={rota(lingua, 'colecoes', c.id)} aria-current={comeca(rota(lingua, 'colecoes', c.id)) ? 'page' : undefined}>
                 <span class="series__titulo">{c.titulo}</span>
+                {c.proxima && (
+                  <span class="series__vem mono">
+                    {b.vemAi}{' '}
+                    <time datetime={dataIso(c.proxima)} data-contagem="trocar">{dataCurta(c.proxima, lingua)}</time>
+                  </span>
+                )}
                 <Progresso feitos={c.mapas.length} total={Math.max(c.ordem.length, c.mapas.length)} compacto />
               </a>
             </li>
@@ -360,6 +367,11 @@ const iniciais = AUTOR.nomeCompleto
   .series a[aria-current='page'] {
     background: var(--papel);
     box-shadow: inset 2px 0 0 var(--nilo);
+  }
+  .series__vem {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--cesto);
   }
   .series__titulo {
     font-family: var(--f-titulo);

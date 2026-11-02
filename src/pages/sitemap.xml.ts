@@ -54,6 +54,7 @@ export const GET: APIRoute = async ({ site }) => {
     { caminhos: nas((l) => rota(l, 'indice')), ultima: recente(mapas.map(dataDe)) },
     { caminhos: nas((l) => rota(l, 'notas')), ultima: recente(notas.map(dataDe)) },
     ...notas.map((n) => ({ caminhos: nas((l) => rota(l, 'notas', n.pasta)), ultima: dataDe(n) })),
+    { caminhos: nas((l) => rota(l, 'guia')) },
     { caminhos: nas((l) => rota(l, 'sobre')) },
   ];
 

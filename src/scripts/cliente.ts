@@ -167,7 +167,15 @@ function iniciarVersoes() {
     const paineis = $$('[data-painel-versao]', fig);
     const escolher = (aba: HTMLButtonElement, foco = false) => {
       abas.forEach((a) => a.setAttribute('aria-pressed', String(a === aba)));
-      paineis.forEach((p) => (p.hidden = p.dataset.painelVersao !== aba.dataset.versao));
+      paineis.forEach((p) => {
+        const mostrar = p.dataset.painelVersao === aba.dataset.versao;
+        if (mostrar && p.hidden) {
+          p.classList.remove('surgir');
+          void p.offsetWidth; // reinicia a animação
+          p.classList.add('surgir');
+        }
+        p.hidden = !mostrar;
+      });
       if (foco) aba.focus();
     };
     abas.forEach((aba, i) => {
@@ -184,7 +192,7 @@ function iniciarVersoes() {
 }
 
 /* ---------- Galeria da página inicial: busca e filtros ------------------- */
-// Coleção, tema, recorte e texto livre; o estado fica na URL (?colecao=…&tema=…&recorte=…&q=…).
+// Pergunta, coleção, tema, recorte e texto livre; o estado fica na URL (?pergunta=…&colecao=…&tema=…&recorte=…&q=…).
 const semAcento = (s: string) =>
   s
     .normalize('NFD')
@@ -199,7 +207,7 @@ function iniciarGaleria() {
   const contagem = form.querySelector<HTMLElement>('[data-filtro-contagem]');
   const vazio = document.querySelector<HTMLElement>('[data-galeria-vazia]');
   const modelo = contagem?.dataset.modelo ?? '{n} / {total}';
-  const campos = ['colecao', 'tema', 'recorte', 'q'] as const;
+  const campos = ['pergunta', 'colecao', 'tema', 'recorte', 'q'] as const;
 
   const ler = () => {
     const f = new FormData(form);
@@ -213,6 +221,7 @@ function iniciarGaleria() {
     itens.forEach((li) => {
       const d = li.dataset;
       const ok =
+        (!v.pergunta || (d.perguntas ?? '').split(' ').includes(v.pergunta)) &&
         (!v.colecao || d.colecao === v.colecao) &&
         (!v.tema || d.tema === v.tema) &&
         (!v.recorte || d.recorte === v.recorte) &&
@@ -250,6 +259,45 @@ function iniciarGaleria() {
   aplicar(false);
 }
 
+/* ---------- Contagem regressiva das agendadas --------------------------- */
+// <time datetime="AAAA-MM-DD" data-contagem="somar|trocar">: o build escreve a data; aqui ela ganha
+// "daqui a 4 dias" (somar) ou vira isso (trocar), contando os dias no fuso de Brasília.
+function iniciarContagem() {
+  const alvos = $$<HTMLTimeElement>('time[data-contagem]');
+  if (!alvos.length || !('RelativeTimeFormat' in Intl)) return;
+  const hoje = Date.parse(new Date(Date.now() - 3 * 3600_000).toISOString().slice(0, 10));
+  const rtf = new Intl.RelativeTimeFormat(document.documentElement.lang || undefined, { numeric: 'auto' });
+  alvos.forEach((el) => {
+    const dias = Math.round((Date.parse(el.dateTime) - hoje) / 86400_000);
+    if (!Number.isFinite(dias) || dias < 0) return;
+    const quando = dias > 60 ? rtf.format(Math.round(dias / 30), 'month') : rtf.format(dias, 'day');
+    if (el.dataset.contagem === 'trocar') {
+      el.title = el.textContent ?? '';
+      el.textContent = quando;
+    } else {
+      el.textContent = `${el.textContent} · ${quando}`;
+    }
+  });
+}
+
+/* ---------- Entrada ao rolar: paradas do percurso, perguntas ------------- */
+function iniciarRevelar() {
+  const alvos = $$('[data-revelar]');
+  if (!alvos.length || !('IntersectionObserver' in window)) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('revela');
+  const obs = new IntersectionObserver(
+    (entradas) =>
+      entradas.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('visto');
+        obs.unobserve(e.target);
+      }),
+    { rootMargin: '0px 0px -8% 0px' },
+  );
+  alvos.forEach((el) => obs.observe(el));
+}
+
 iniciarTema();
 iniciarMenu();
 iniciarGaleria();
@@ -257,3 +305,5 @@ iniciarVersoes();
 iniciarCitacoes();
 iniciarGaveta();
 iniciarVisor();
+iniciarRevelar();
+iniciarContagem();

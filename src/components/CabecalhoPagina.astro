@@ -1,7 +1,10 @@
 ---
-/** Cabeçalho editorial das páginas internas: sobretítulo técnico, título, linha fina. */
+/** Cabeçalho editorial das páginas internas: sobretítulo técnico, título, linha fina e a régua das pranchas. */
+import { linguaDe, t } from '../i18n';
+
 interface Props { sobre?: string; titulo: string; linhaFina?: string }
 const { sobre, titulo, linhaFina } = Astro.props;
+const tx = t(linguaDe(Astro.url.pathname));
 ---
 <header class="cab-pagina">
   {sobre && <p class="rotulo">{sobre}</p>}
@@ -9,15 +12,18 @@ const { sobre, titulo, linhaFina } = Astro.props;
   {linhaFina && <p class="cab-pagina__fina">{linhaFina}</p>}
   <slot />
 </header>
+<p class="regua cab-pagina__regua" aria-hidden="true">{tx.site.colofao}</p>
 
 <style>
   .cab-pagina {
     padding-bottom: var(--e-5);
-    margin-bottom: var(--e-7);
     border-bottom: 1px solid var(--linha);
   }
   .cab-pagina .rotulo {
     margin: 0 0 var(--e-3);
+  }
+  .cab-pagina__regua {
+    margin: var(--e-2) 0 var(--e-7);
   }
   h1 {
     font-size: var(--t-xxl);

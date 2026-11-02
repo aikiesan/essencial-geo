@@ -9,6 +9,7 @@ import Estrela from '../components/Estrela.astro';
 import Trilha from '../components/Trilha.astro';
 import Downloads from '../components/Downloads.astro';
 import NavColecao from '../components/NavColecao.astro';
+import ComoLer from '../components/ComoLer.astro';
 import { colecaoDoMapa } from '../lib/colecoes';
 import { SITE } from '../site.config';
 import { linkMapa, momentoPublicacao, numeroFormatado, type Mapa } from '../lib/mapas';
@@ -58,6 +59,7 @@ const pastaGithub = `${SITE.repositorio}/blob/main/mapas/${mapa.id}/${arquivoRea
   <div class="pagina-mapa">
     <Trilha itens={trilha} />
     <CartaoMapa mapa={mapa} prioridade destaque />
+    <ComoLer mapa={mapa} />
 
     <Downloads mapa={mapa} />
 

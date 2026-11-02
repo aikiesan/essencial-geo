@@ -425,6 +425,96 @@ hr {
   mask: var(--meandro) repeat-x left center / 12px 10px;
 }
 
+/* ---------- Identidade de prancha: moldura, tiques e régua --------------- */
+/*
+ * Tirados das próprias pranchas: a moldura de 1px com a grade de coordenadas na borda
+ * e a escala gráfica. Tiques na cor da tinta, fundo neutro (a moldura não pinta nada).
+ */
+.moldura {
+  position: relative;
+  border: 1px solid var(--linha);
+  outline: 1px solid var(--linha-fina);
+  outline-offset: 5px;
+}
+.moldura::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  --tq: var(--linha-fina);
+  background:
+    repeating-linear-gradient(90deg, var(--tq) 0 1px, transparent 1px 56px) top left / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, var(--tq) 0 1px, transparent 1px 56px) bottom left / 100% 7px no-repeat,
+    repeating-linear-gradient(180deg, var(--tq) 0 1px, transparent 1px 56px) top left / 7px 100% no-repeat,
+    repeating-linear-gradient(180deg, var(--tq) 0 1px, transparent 1px 56px) top right / 7px 100% no-repeat;
+}
+/* Rótulo de coordenada na borda da moldura, como "22° 54′ S" nas pranchas */
+.coord {
+  position: absolute;
+  z-index: 1;
+  padding: 0 4px;
+  background: var(--papel);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--tinta-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.coord--n {
+  top: -5px;
+  left: var(--e-6);
+}
+.coord--s {
+  bottom: -5px;
+  right: var(--e-6);
+}
+
+/* Régua: a escala gráfica das pranchas, em barras alternadas, sob os cabeçalhos */
+.regua {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--e-2);
+  margin-top: var(--e-1);
+  font-family: var(--f-mono);
+  font-size: 10px;
+  color: var(--tinta-3);
+}
+.regua::before {
+  content: '';
+  width: min(240px, 50%);
+  height: 5px;
+  border: 1px solid var(--linha);
+  background: repeating-linear-gradient(90deg, var(--linha) 0 25%, transparent 25% 50%);
+}
+
+/* Entrada suave ao rolar (cliente.ts liga .revela só sem prefers-reduced-motion) */
+.revela [data-revelar] {
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+}
+.revela [data-revelar]:not(.visto) {
+  opacity: 0;
+  transform: translateY(12px);
+}
+@media print {
+  .revela [data-revelar]:not(.visto) {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Troca entre as versões da imagem (prancha, figura, sem mapa de base) */
+.surgir {
+  animation: surgir 320ms ease both;
+}
+@keyframes surgir {
+  from {
+    opacity: 0;
+  }
+}
+
 /* ---------- Divisor de cartões: filete com estrela ---------------------- */
 .divisor {
   display: flex;

@@ -1,0 +1,381 @@
+---
+/**
+ * Guia de leitura: a anatomia de uma prancha (com marcas sobre uma prancha real), as perguntas
+ * de entrada e o glossário. Cada prancha aponta para cá a partir do seu "Como ler esta prancha".
+ */
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import CabecalhoPagina from '../components/CabecalhoPagina.astro';
+import Perguntas from '../components/Perguntas.astro';
+import Icone from '../components/Icone.astro';
+import { colecoesNoAr } from '../lib/colecoes';
+import { linkMapa, mapasPublicados, numeroFormatado } from '../lib/mapas';
+import { GLOSSARIO, GRUPOS_TERMO } from '../lib/guia';
+import { linguaDe, t } from '../i18n';
+
+const lingua = linguaDe(Astro.url.pathname);
+const tx = t(lingua);
+const g = tx.guia;
+
+// Prancha de exemplo: o desenho-padrão das pranchas de São Paulo (painel à direita, grade na borda).
+const EXEMPLO = '089-co2-das-dornas-sp';
+const exemplo = (await mapasPublicados(lingua)).find((m) => m.id === EXEMPLO);
+/** Onde fica cada parte na prancha de exemplo, em % da largura e da altura (as do painel ficam na margem dele). */
+const MARCAS: [number, number][] = [
+  [70.4, 12.4], // 1 número e coleção
+  [70.4, 20], // 2 título
+  [70.4, 33.5], // 3 em números
+  [36.5, 27.5], // 4 o mapa (chamada de Guaíra)
+  [70.4, 47], // 5 legenda e gráficos
+  [3.2, 9.6], // 6 grade de coordenadas
+  [62.2, 9.5], // 7 norte e localização
+  [70.4, 74.5], // 8 escala gráfica
+  [70.4, 86.5], // 9 colofão
+  [51.5, 72.5], // 10 mapa de base (oceano)
+];
+const partes = Object.values(g.partes);
+const series = await colecoesNoAr(lingua);
+const grupos = GRUPOS_TERMO.map((id) => ({ id, termos: GLOSSARIO.filter((x) => x.grupo === id) }));
+---
+
+<Base titulo={g.titulo} descricao={g.descricao}>
+  <div class="guia">
+    <CabecalhoPagina sobre={g.sobre} titulo={g.h1} linhaFina={g.fina}>
+      <nav class="guia__sumario" aria-label={g.sumario}>
+        <ol role="list">
+          {exemplo && <li><a href="#anatomia">{g.anatomia}</a></li>}
+          <li><a href="#perguntas">{g.perguntas}</a></li>
+          <li><a href="#glossario">{g.glossario}</a></li>
+        </ol>
+      </nav>
+    </CabecalhoPagina>
+
+    {
+      exemplo && (
+        <section class="bloco" id="anatomia" aria-labelledby="t-anatomia">
+          <h2 class="bloco__titulo" id="t-anatomia">{g.anatomia}</h2>
+          <p class="bloco__fina">{g.anatomiaFina}</p>
+          <div class="anatomia" data-anatomia>
+            <figure class="anatomia__prancha">
+              <div class="anatomia__folha">
+                <Image
+                  src={exemplo.data.imagem}
+                  alt={exemplo.data.imagem_alt}
+                  widths={[640, 960, 1280, 1600]}
+                  sizes="(min-width: 1200px) 720px, (min-width: 860px) 60vw, calc(100vw - 32px)"
+                  format="webp"
+                  quality={80}
+                />
+                {MARCAS.map(([x, y], n) => (
+                  <a
+                    class="anatomia__marca mono"
+                    href={`#parte-${n + 1}`}
+                    style={`left:${x}%;top:${y}%`}
+                    data-parte={n + 1}
+                    aria-label={partes[n][0]}
+                  >
+                    {n + 1}
+                  </a>
+                ))}
+              </div>
+              <figcaption class="rotulo">
+                <a href={linkMapa(exemplo)}>
+                  {g.anatomiaExemplo.replace('{n}', numeroFormatado(exemplo.data.numero))} · {exemplo.data.titulo}
+                </a>
+              </figcaption>
+            </figure>
+            <ol class="anatomia__partes" role="list">
+              {partes.map(([nome, texto], n) => (
+                <li id={`parte-${n + 1}`} data-parte={n + 1} tabindex="-1">
+                  <span class="anatomia__n mono" aria-hidden="true">
+                    {n + 1}
+                  </span>
+                  <span>
+                    <strong>{nome}</strong> {texto}
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <aside class="versoes-nota">
+            <p class="rotulo">{g.versoes}</p>
+            <p>{g.versoesTexto}</p>
+          </aside>
+        </section>
+      )
+    }
+
+    <section class="bloco" id="perguntas" aria-labelledby="t-perguntas">
+      <h2 class="bloco__titulo" id="t-perguntas">{g.perguntas}</h2>
+      <p class="bloco__fina">{g.perguntasFina}</p>
+      <Perguntas series={series} />
+    </section>
+
+    <section class="bloco" id="glossario" aria-labelledby="t-glossario">
+      <h2 class="bloco__titulo" id="t-glossario">{g.glossario}</h2>
+      <p class="bloco__fina">{g.glossarioFina}</p>
+      <p class="glossario__indice rotulo">
+        {GLOSSARIO.map((x) => <a href={`#termo-${x.id}`}>{x.termo[lingua].split(' (')[0].split(' · ')[0]}</a>)}
+      </p>
+      {
+        grupos.map((gr) => (
+          <section class="glossario__grupo" aria-labelledby={`g-${gr.id}`}>
+            <h3 class="secao" id={`g-${gr.id}`}>{g.grupos[gr.id]}</h3>
+            <dl>
+              {gr.termos.map((x) => (
+                <div id={`termo-${x.id}`} tabindex="-1">
+                  <dt>{x.termo[lingua]}</dt>
+                  <dd>{x.def[lingua]}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ))
+      }
+      <p class="rotulo topo-guia">
+        <a href="#conteudo"><Icone nome="voltar" tamanho={11} /> {g.voltarTopo}</a>
+      </p>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .guia {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .guia__sumario ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2) var(--e-5);
+    margin: var(--e-5) 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: s;
+  }
+  .guia__sumario li {
+    counter-increment: s;
+  }
+  .guia__sumario a {
+    font-family: var(--f-mono);
+    font-size: var(--t-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--rastreio);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .guia__sumario a::before {
+    content: counter(s, upper-roman) '. ';
+    color: var(--tinta-3);
+  }
+  .guia__sumario a:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+  .bloco {
+    margin-bottom: var(--e-8);
+  }
+  .bloco__titulo {
+    font-size: var(--t-xl);
+    margin-bottom: var(--e-2);
+  }
+  .bloco__fina {
+    color: var(--tinta-3);
+    font-size: var(--t-sm);
+    margin-bottom: var(--e-5);
+    max-width: 62ch;
+  }
+
+  /* Anatomia: a prancha com marcas numeradas e a lista ao lado */
+  .anatomia {
+    display: grid;
+    gap: var(--e-5);
+  }
+  @media (min-width: 1000px) {
+    .anatomia {
+      grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+      align-items: start;
+    }
+    .anatomia__prancha {
+      position: sticky;
+      top: calc(var(--topo) + var(--e-4));
+    }
+  }
+  .anatomia__prancha {
+    margin: 0;
+  }
+  .anatomia__folha {
+    position: relative;
+    padding: 6px;
+    border: 1px solid var(--linha);
+    background: var(--folha);
+  }
+  .anatomia__folha :global(img) {
+    width: 100%;
+    background: #fff;
+  }
+  .anatomia__marca {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    margin: -11px 0 0 -11px;
+    border: 1px solid var(--tinta);
+    background: var(--papel);
+    color: var(--tinta);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 0 2px var(--folha);
+    transition:
+      transform 160ms ease,
+      background-color 120ms linear;
+  }
+  @media (min-width: 600px) {
+    .anatomia__marca {
+      width: 26px;
+      height: 26px;
+      margin: -13px 0 0 -13px;
+      font-size: 12px;
+    }
+  }
+  .anatomia__marca:hover,
+  .anatomia__marca.ativa {
+    background: var(--tinta);
+    color: var(--papel);
+    transform: scale(1.18);
+  }
+  .anatomia__prancha figcaption {
+    margin-top: var(--e-2);
+  }
+  .anatomia__prancha figcaption a {
+    color: var(--tinta-3);
+  }
+  .anatomia__partes {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--linha);
+  }
+  .anatomia__partes li {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: var(--e-3);
+    padding: var(--e-2) var(--e-2) var(--e-2) 0;
+    border-bottom: 1px solid var(--linha-fina);
+    font-size: var(--t-sm);
+    line-height: 1.5;
+    color: var(--tinta-2);
+    transition: background-color 120ms linear;
+    outline-offset: -2px;
+  }
+  .anatomia__partes li.ativa,
+  .anatomia__partes li:target {
+    background: var(--papel-2);
+  }
+  .anatomia__partes strong {
+    font-family: var(--f-titulo);
+    font-weight: 500;
+    font-size: var(--t-md);
+    color: var(--tinta);
+    display: block;
+  }
+  .anatomia__n {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    border: 1px solid var(--linha);
+    font-size: 11px;
+    color: var(--tinta);
+  }
+  .anatomia__partes li.ativa .anatomia__n {
+    background: var(--tinta);
+    color: var(--papel);
+  }
+  .versoes-nota {
+    margin-top: var(--e-5);
+    padding: var(--e-3) var(--e-4);
+    border-left: 1px solid var(--cesto);
+    max-width: 68ch;
+  }
+  .versoes-nota p {
+    margin: 0;
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+  }
+  .versoes-nota .rotulo {
+    margin-bottom: var(--e-1);
+  }
+
+  /* Glossário */
+  .glossario__indice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-1) var(--e-3);
+    margin: 0 0 var(--e-6);
+    line-height: 2;
+  }
+  .glossario__indice a {
+    color: var(--tinta-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linha-fina);
+    letter-spacing: 0.06em;
+  }
+  .glossario__indice a:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+  .glossario__grupo {
+    margin-bottom: var(--e-6);
+  }
+  .glossario__grupo dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 0 var(--e-5);
+    margin: 0;
+  }
+  .glossario__grupo dl > div {
+    padding: var(--e-3) 0;
+    border-bottom: 1px solid var(--linha-fina);
+    scroll-margin-top: calc(var(--topo) + var(--e-5));
+    transition: background-color 400ms linear;
+  }
+  .glossario__grupo dl > div:target {
+    background: var(--papel-2);
+    box-shadow: -8px 0 0 var(--papel-2), 8px 0 0 var(--papel-2);
+  }
+  .glossario__grupo dt {
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+    margin-bottom: var(--e-1);
+  }
+  .glossario__grupo dd {
+    margin: 0;
+    font-size: var(--t-sm);
+    line-height: 1.55;
+    color: var(--tinta-2);
+  }
+  .topo-guia a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    color: var(--tinta);
+    text-decoration: none;
+  }
+</style>
+
+<script>
+  // Passar o mouse ou o foco numa parte acende a marca na prancha, e vice-versa.
+  document.querySelectorAll<HTMLElement>('[data-anatomia]').forEach((raiz) => {
+    const todos = Array.from(raiz.querySelectorAll<HTMLElement>('[data-parte]'));
+    const acender = (n?: string) => todos.forEach((el) => el.classList.toggle('ativa', el.dataset.parte === n));
+    todos.forEach((el) => {
+      el.addEventListener('mouseenter', () => acender(el.dataset.parte));
+      el.addEventListener('focus', () => acender(el.dataset.parte));
+    });
+    raiz.addEventListener('mouseleave', () => acender());
+  });
+</script>

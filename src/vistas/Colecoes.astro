@@ -7,7 +7,7 @@ import Progresso from '../components/Progresso.astro';
 import Icone from '../components/Icone.astro';
 import Estrela from '../components/Estrela.astro';
 import { colecoes } from '../lib/colecoes';
-import { dataCurta, linguaDe, rota, t } from '../i18n';
+import { dataCurta, dataIso, linguaDe, rota, t } from '../i18n';
 
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
@@ -47,7 +47,7 @@ const emPreparo = todas.filter((c) => c.mapas.length === 0);
                 <Progresso feitos={c.mapas.length} total={total} />
                 {c.proxima && (
                   <p class="colecao__proxima rotulo">
-                    {tx.colecoes.proxima}: <span class="mono">{dataCurta(c.proxima, lingua)}</span>
+                    {tx.colecoes.proxima}: <time class="mono" datetime={dataIso(c.proxima)} data-contagem="somar">{dataCurta(c.proxima, lingua)}</time>
                   </p>
                 )}
                 <a class="colecao__ver rotulo" href={rota(lingua, 'colecoes', c.id)}>
