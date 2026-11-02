@@ -259,6 +259,27 @@ function iniciarGaleria() {
   aplicar(false);
 }
 
+/* ---------- Contagem regressiva das agendadas --------------------------- */
+// <time datetime="AAAA-MM-DD" data-contagem="somar|trocar">: o build escreve a data; aqui ela ganha
+// "daqui a 4 dias" (somar) ou vira isso (trocar), contando os dias no fuso de Brasília.
+function iniciarContagem() {
+  const alvos = $$<HTMLTimeElement>('time[data-contagem]');
+  if (!alvos.length || !('RelativeTimeFormat' in Intl)) return;
+  const hoje = Date.parse(new Date(Date.now() - 3 * 3600_000).toISOString().slice(0, 10));
+  const rtf = new Intl.RelativeTimeFormat(document.documentElement.lang || undefined, { numeric: 'auto' });
+  alvos.forEach((el) => {
+    const dias = Math.round((Date.parse(el.dateTime) - hoje) / 86400_000);
+    if (!Number.isFinite(dias) || dias < 0) return;
+    const quando = dias > 60 ? rtf.format(Math.round(dias / 30), 'month') : rtf.format(dias, 'day');
+    if (el.dataset.contagem === 'trocar') {
+      el.title = el.textContent ?? '';
+      el.textContent = quando;
+    } else {
+      el.textContent = `${el.textContent} · ${quando}`;
+    }
+  });
+}
+
 /* ---------- Entrada ao rolar: paradas do percurso, perguntas ------------- */
 function iniciarRevelar() {
   const alvos = $$('[data-revelar]');
@@ -285,3 +306,4 @@ iniciarCitacoes();
 iniciarGaveta();
 iniciarVisor();
 iniciarRevelar();
+iniciarContagem();

@@ -8,6 +8,7 @@ import ListaFeed from '../components/ListaFeed.astro';
 import PainelFichas from '../components/PainelFichas.astro';
 import Progresso from '../components/Progresso.astro';
 import Icone from '../components/Icone.astro';
+import VemAi from '../components/VemAi.astro';
 import type { Colecao } from '../lib/colecoes';
 import { linkMapa, numeroFormatado, proximosMapas, type Mapa } from '../lib/mapas';
 import { primeiraFrase } from '../lib/guia';
@@ -26,6 +27,8 @@ const paradas: { mapa: Mapa; noAr: boolean; frase: string }[] = [
   ...c.mapas.map((m) => ({ mapa: m, noAr: true, frase: m.data.subtitulo ?? primeiraFrase(m.data.contexto) })),
   ...agendadas.map((m) => ({ mapa: m, noAr: false, frase: '' })),
 ];
+// Vem aí: a próxima agendada da série (em desenvolvimento, a primeira com selo de agendada).
+const vemAi = agendadas[0] ?? c.mapas.find((m) => m.agendado);
 ---
 
 <Base titulo={c.titulo} descricao={c.resumo} imagem={c.mapas[0]?.data.imagem.src}>
@@ -44,14 +47,8 @@ const paradas: { mapa: Mapa; noAr: boolean; frase: string }[] = [
     >
       <div class="andamento">
         <Progresso feitos={c.mapas.length} total={total} />
-        {
-          c.proxima && (
-            <p class="rotulo">
-              {tx.colecoes.proxima}: <span class="mono">{dataCurta(c.proxima, lingua)}</span>
-            </p>
-          )
-        }
       </div>
+      {vemAi && <VemAi mapa={vemAi} />}
       <p class="ordem">
         <span>{tx.colecoes.ordem}</span>
         <a class="rotulo" href={rota(lingua, 'colecoes')}><Icone nome="voltar" tamanho={11} /> {tx.colecoes.todas}</a>
@@ -102,7 +99,7 @@ const paradas: { mapa: Mapa; noAr: boolean; frase: string }[] = [
                     <span class="parada__capa parada__capa--vazia" aria-hidden="true" />
                     <span class="parada__texto">
                       <span class="rotulo">
-                        {tx.colecoes.emBreve} · <time datetime={dataIso(p.mapa.data.data)}>{dataCurta(p.mapa.data.data, lingua)}</time>
+                        {tx.colecoes.emBreve} · <time datetime={dataIso(p.mapa.data.data)} data-contagem="somar">{dataCurta(p.mapa.data.data, lingua)}</time>
                       </span>
                       <span class="parada__titulo">{p.mapa.data.titulo}</span>
                       {p.mapa.data.subtitulo && <span class="parada__frase">{p.mapa.data.subtitulo}</span>}

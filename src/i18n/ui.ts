@@ -45,6 +45,7 @@ const pt = {
     objetivo:
       'Um atlas aberto do território brasileiro. Toda semana, uma coleção nova de mapas temáticos, com as camadas em GeoPackage, o método explicado passo a passo e um DOI para citar — para quem pesquisa, planeja ou simplesmente gosta de mapas.',
     proximoMapa: 'Próxima coleção',
+    vemAi: 'Próxima:',
     quemFaz: 'Quem faz',
     autorResumo:
       'Arquiteto e urbanista, pesquisador de pós-doutorado no NIPE/UNICAMP. Mapeia resíduos de biomassa e o potencial de bioenergia do território.',
@@ -206,6 +207,7 @@ const pt = {
     emPreparo: 'Em preparação',
     emPreparoFina: 'As próximas séries do atlas. Cada uma ganha sua página quando a primeira prancha entra no ar.',
     proxima: 'Próxima prancha',
+    vemAi: 'Vem aí',
     sumario: 'Sumário da coleção',
     percurso: 'O percurso',
     percursoFina: 'Leia na ordem: cada prancha acrescenta uma camada à anterior.',
@@ -390,6 +392,7 @@ const en: Forma<Textos> = {
     objetivo:
       'An open atlas of the Brazilian territory. Every week, a new collection of thematic maps with their layers in GeoPackage, the method explained step by step and a DOI to cite — for anyone who researches, plans or simply enjoys maps.',
     proximoMapa: 'Next collection',
+    vemAi: 'Next:',
     quemFaz: 'Who makes it',
     autorResumo:
       'Architect and urban planner, postdoctoral researcher at NIPE/UNICAMP. Maps biomass residues and the bioenergy potential of the territory.',
@@ -551,6 +554,7 @@ const en: Forma<Textos> = {
     emPreparo: 'In preparation',
     emPreparoFina: 'The next series in the atlas. Each gets its own page once its first plate is published.',
     proxima: 'Next plate',
+    vemAi: 'Coming next',
     sumario: 'Collection contents',
     percurso: 'The route',
     percursoFina: 'Read in order: each plate adds a layer to the one before.',
