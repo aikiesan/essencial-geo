@@ -1,0 +1,244 @@
+---
+/**
+ * "Como ler esta prancha": a chave de leitura logo abaixo da imagem, com os dados da própria prancha
+ * (recorte, projeção, escala, camadas, fontes) e os termos do glossário que ela usa.
+ * É um <details>: fechado, ocupa uma linha; sem JavaScript, abre e fecha do mesmo jeito.
+ */
+import Icone from './Icone.astro';
+import { nomeFonte, type Mapa } from '../lib/mapas';
+import { projecaoDaPrancha, termosDaPrancha } from '../lib/guia';
+import { rota, t } from '../i18n';
+
+interface Props { mapa: Mapa }
+const { mapa } = Astro.props;
+const d = mapa.data;
+const lingua = mapa.lingua;
+const tx = t(lingua);
+const l = tx.leitura;
+
+const projecao = projecaoDaPrancha(mapa);
+const termos = termosDaPrancha(mapa);
+const tipos = [...new Set(d.camadas.map((c) => tx.ficha.tipos[c.tipo]))].join(', ');
+const camadas = d.camadas.length === 1 ? l.camada : l.camadas.replace('{n}', String(d.camadas.length));
+const fontes = [
+  ...new Set(d.fontes.map((f) => `${nomeFonte(f, lingua).split(' — ')[0]}${f.ano ? ` (${f.ano})` : ''}`)),
+];
+const linhas = [
+  { chave: l.recorte, valor: d.recorte, nota: l.recorteNota },
+  {
+    chave: l.projecao,
+    valor: d.crs,
+    nota: [projecao && l[projecao], l.projecaoNota].filter(Boolean).join(' '),
+  },
+  { chave: l.escala, valor: d.escala ?? l.escalaPadrao, nota: l.escalaNota },
+  { chave: l.legenda, valor: d.camadas.length ? `${camadas}${tipos ? ` · ${tipos}` : ''}` : '—', nota: l.legendaNota },
+  { chave: l.fonte, valor: fontes.join('; '), nota: l.fonteNota },
+];
+const guia = rota(lingua, 'guia');
+---
+
+<details class="leitura">
+  <summary>
+    <Icone nome="guia" tamanho={16} />
+    <span class="leitura__titulo">{l.titulo}</span>
+    <span class="leitura__resumo rotulo">
+      {l.resumo}{termos.length > 0 && ` · ${termos.length} ${l.termos}`}
+    </span>
+    <span class="leitura__mais mono" aria-hidden="true"></span>
+  </summary>
+
+  <div class="leitura__corpo">
+    <dl class="leitura__chave">
+      {
+        linhas.map((x, n) => (
+          <div>
+            <dt class="rotulo">
+              <span class="mono">{n + 1}</span> {x.chave}
+            </dt>
+            <dd>
+              <span class="leitura__valor">{x.valor}</span>
+              <span class="leitura__nota">{x.nota}</span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    {
+      termos.length > 0 && (
+        <section class="leitura__termos" aria-label={l.termosTitulo}>
+          <h2 class="secao">{l.termosTitulo}</h2>
+          <dl>
+            {termos.map((x) => (
+              <div>
+                <dt>
+                  <a href={`${guia}#termo-${x.id}`}>{x.termo[lingua]}</a>
+                </dt>
+                <dd>{x.def[lingua]}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )
+    }
+
+    <p class="leitura__links rotulo">
+      <a href={`${guia}#anatomia`}>{l.anatomia} <Icone nome="seta" tamanho={11} /></a>
+      <a href={`${guia}#glossario`}>{l.glossario} <Icone nome="seta" tamanho={11} /></a>
+    </p>
+  </div>
+</details>
+
+<style>
+  .leitura {
+    margin: var(--e-5) 0 0;
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .leitura summary {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'icone titulo mais' '. resumo mais';
+    align-items: center;
+    gap: 2px var(--e-3);
+    padding: var(--e-3) 0;
+    cursor: pointer;
+    list-style: none;
+  }
+  .leitura summary::-webkit-details-marker {
+    display: none;
+  }
+  .leitura summary > :global(svg) {
+    grid-area: icone;
+    color: var(--cesto);
+    transition: transform 300ms ease;
+  }
+  .leitura[open] summary > :global(svg) {
+    transform: rotate(90deg);
+  }
+  .leitura__titulo {
+    grid-area: titulo;
+    font-family: var(--f-titulo);
+    font-size: var(--t-lg);
+  }
+  .leitura summary:hover .leitura__titulo {
+    color: var(--acento);
+  }
+  .leitura__resumo {
+    grid-area: resumo;
+    margin: 0;
+  }
+  .leitura__mais {
+    grid-area: mais;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--linha-fina);
+    font-size: var(--t-md);
+  }
+  .leitura__mais::before {
+    content: '+';
+  }
+  .leitura[open] .leitura__mais::before {
+    content: '−';
+  }
+  .leitura__corpo {
+    padding: var(--e-2) 0 var(--e-5);
+  }
+  .leitura[open] .leitura__corpo {
+    animation: abrir 260ms ease both;
+  }
+  @keyframes abrir {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+  }
+
+  /* A chave imita o colofão da prancha: rótulo mono à esquerda, valor e nota à direita */
+  .leitura__chave {
+    margin: 0;
+  }
+  .leitura__chave > div {
+    display: grid;
+    gap: var(--e-1) var(--e-4);
+    padding: var(--e-3) 0;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  @media (min-width: 620px) {
+    .leitura__chave > div {
+      grid-template-columns: 13em minmax(0, 1fr);
+    }
+  }
+  .leitura__chave dt {
+    margin: 0;
+    color: var(--tinta);
+  }
+  .leitura__chave dt .mono {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    margin-right: var(--e-1);
+    border: 1px solid var(--linha);
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+  .leitura__chave dd {
+    display: grid;
+    gap: 2px;
+    margin: 0;
+  }
+  .leitura__valor {
+    font-size: var(--t-sm);
+    overflow-wrap: anywhere;
+  }
+  .leitura__nota {
+    font-size: var(--t-sm);
+    font-style: italic;
+    color: var(--tinta-3);
+    line-height: 1.5;
+  }
+  .leitura__termos {
+    margin-top: var(--e-5);
+  }
+  .leitura__termos dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: var(--e-3) var(--e-5);
+    margin: 0;
+  }
+  .leitura__termos dt {
+    font-family: var(--f-titulo);
+    font-size: var(--t-md);
+  }
+  .leitura__termos dt a {
+    text-decoration-color: var(--cesto);
+  }
+  .leitura__termos dd {
+    margin: 2px 0 0;
+    font-size: var(--t-sm);
+    line-height: 1.5;
+    color: var(--tinta-2);
+  }
+  .leitura__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--e-2) var(--e-5);
+    margin: var(--e-5) 0 0;
+  }
+  .leitura__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    min-height: 24px;
+    color: var(--tinta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linha-fina);
+  }
+  .leitura__links a:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+</style>
