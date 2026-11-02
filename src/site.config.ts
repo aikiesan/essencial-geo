@@ -390,6 +390,46 @@ export const COLECOES = {
       resumo: 'Brazil’s biodiesel plants and what they process: soybean oil, beef tallow and other oils, state by state, and the distance between producers and blenders.',
     },
   },
+  'sapcana-br': {
+    pt: {
+      titulo: 'A safra de cada estado',
+      resumo: 'Cana moída, açúcar e calendário da moagem em cada UF nas safras 2023/24 a 2025/26, dos relatórios do SAPCana.',
+    },
+    en: {
+      titulo: 'Each state’s cane harvest',
+      resumo: 'Cane crushed, sugar output and the crushing calendar in each state over the 2023/24 to 2025/26 harvests, from the SAPCana reports.',
+    },
+  },
+  'renovabio-br': {
+    pt: {
+      titulo: 'A nota de cada usina',
+      resumo: 'A nota de carbono, o volume elegível e a renovação dos certificados das 338 usinas do RenovaBio, usina a usina.',
+    },
+    en: {
+      titulo: 'Each plant’s score',
+      resumo: 'The carbon score, eligible volume and certificate renewals of RenovaBio’s 338 plants, plant by plant.',
+    },
+  },
+  'residuo-organico-br': {
+    pt: {
+      titulo: 'O que a prefeitura faz com o resto',
+      resumo: 'Composto, consórcio e taxa: como as prefeituras do Brasil cuidam do lixo, segundo a MUNIC 2023, e onde o lixão ainda resiste.',
+    },
+    en: {
+      titulo: 'The town hall and the leftovers',
+      resumo: 'Compost, consortia and fees: how Brazil’s town halls handle their waste, from the 2023 MUNIC survey, and where open dumps persist.',
+    },
+  },
+  'abate-br': {
+    pt: {
+      titulo: 'Onde o bicho vira resíduo',
+      resumo: 'Abatedouros sob inspeção federal, o abate comparado ao rebanho de cada UF e o ciclo do boi: onde o resíduo orgânico do abate se concentra no Brasil.',
+    },
+    en: {
+      titulo: 'Where livestock becomes residue',
+      resumo: 'Federally inspected slaughterhouses, slaughter set against each state’s herd, and the cattle cycle: where slaughter’s organic residue gathers in Brazil.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

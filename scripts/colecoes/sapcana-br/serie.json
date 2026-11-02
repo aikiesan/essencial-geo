@@ -1,0 +1,5 @@
+[
+ { "tema": "safras", "numero": 153, "pasta": "153-tres-safras-menos-cana-brasil", "base": "br_sapcana_moagem", "data": "2027-01-29", "categoria": "energia" },
+ { "tema": "acucar", "numero": 154, "pasta": "154-acucar-ou-etanol-brasil", "base": "br_sapcana_acucar", "data": "2027-02-01", "categoria": "energia" },
+ { "tema": "calendario", "numero": 155, "pasta": "155-o-ano-inteiro-moendo-brasil", "base": "br_sapcana_calendario", "data": "2027-02-03", "categoria": "energia" }
+]

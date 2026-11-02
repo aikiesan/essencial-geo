@@ -1,0 +1,5 @@
+[
+ { "tema": "sif", "numero": 162, "pasta": "162-os-abatedouros-do-sif-brasil", "base": "br_abate_estabelecimentos_sif", "data": "2027-02-19", "categoria": "energia" },
+ { "tema": "rebanho", "numero": 163, "pasta": "163-criado-aqui-abatido-la-brasil", "base": "br_abate_rebanho", "data": "2027-02-22", "categoria": "energia" },
+ { "tema": "ciclo", "numero": 164, "pasta": "164-o-ano-das-vacas-brasil", "base": "br_abate_femeas", "data": "2027-02-24", "categoria": "energia" }
+]
