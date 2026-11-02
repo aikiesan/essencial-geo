@@ -430,6 +430,36 @@ export const COLECOES = {
       resumo: 'Federally inspected slaughterhouses, slaughter set against each state’s herd, and the cattle cycle: where slaughter’s organic residue gathers in Brazil.',
     },
   },
+  'combustivel-biomassa-br': {
+    pt: {
+      titulo: 'O que mais a usina queima',
+      resumo: 'Fora do bagaço de cana: o licor negro da celulose, a lenha, a casca de arroz e o biogás de aterro, onde ficam e quando chegaram à rede.',
+    },
+    en: {
+      titulo: 'What else the plant burns',
+      resumo: 'Beyond cane bagasse: pulp mills’ black liquor, firewood, rice husk and landfill biogas, where they are and when they reached the grid.',
+    },
+  },
+  'biomassa-da-mata-br': {
+    pt: {
+      titulo: 'O que se colhe na mata',
+      resumo: 'Açaí, babaçu e carvão vegetal: o que ainda sai da mata nativa, o que passou para a lavoura e a floresta plantada, por município, de 1986 a 2025.',
+    },
+    en: {
+      titulo: 'Gathered from the forest',
+      resumo: 'Açaí, babassu and charcoal: what still comes from native forest and what has moved to orchards and plantations, by municipality, 1986 to 2025.',
+    },
+  },
+  'quarenta-anos-de-biomassa-br': {
+    pt: {
+      titulo: 'Quarenta anos de biomassa',
+      resumo: 'Como a terra que produz biomassa no Brasil se moveu de 1985 a 2025: quando a soja chegou, para onde andou cada lavoura e onde uma cultura tomou o município.',
+    },
+    en: {
+      titulo: 'Forty years of biomass',
+      resumo: 'How Brazil’s biomass-producing land moved from 1985 to 2025: when soy arrived, where each crop headed and where one crop took over a municipality.',
+    },
+  },
 } as const;
 export type ColecaoId = keyof typeof COLECOES;
 export const COLECAO_IDS = Object.keys(COLECOES) as [ColecaoId, ...ColecaoId[]];

@@ -1,0 +1,5 @@
+[
+ { "tema": "licor", "numero": 165, "pasta": "165-o-licor-da-celulose-brasil", "base": "br_licor_negro_celulose", "data": "2027-02-26", "categoria": "energia" },
+ { "tema": "combustiveis", "numero": 166, "pasta": "166-um-mapa-por-combustivel-brasil", "base": "br_biomassa_sem_cana_combustiveis", "data": "2027-03-01", "categoria": "energia" },
+ { "tema": "chegada", "numero": 167, "pasta": "167-quando-cada-combustivel-chegou-brasil", "base": "br_biomassa_sem_cana_inicio", "data": "2027-03-03", "categoria": "energia" }
+]

@@ -1,0 +1,658 @@
+nome,ceg,uf,municipio,combustivel,grupo,potencia_kw,ano_inicio,periodo,proprietario,regime,posicao,lon,lat
+Bracell,UTE.FL.SP.043249-0.1,SP,Lençóis Paulista - SP,Licor Negro,licor,409307.0,2021,2020,BRACELL SP CELULOSE LTDA,PIE,coordenada do SIGA,-48.815,-22.54139
+Central Geradora Suzano RRP1,UTE.FL.MS.049647-2.1,MS,Ribas do Rio Pardo - MS,Licor Negro,licor,384000.0,2025,2020,SUZANO S.A.,PIE,coordenada do SIGA,-53.6754,-20.47551
+Klabin Celulose,UTE.FL.PR.031098-0.1,PR,Ortigueira - PR,Licor Negro,licor,330000.0,2016,2015,KLABIN S.A.,PIE,coordenada do SIGA,-50.74139,-24.24361
+Fibria MS-II,UTE.FL.MS.037624-8.1,MS,Três Lagoas - MS,Licor Negro,licor,269580.0,2017,2015,SUZANO S.A.,PIE,coordenada do SIGA,-51.79611,-20.99611
+CMPC (Antiga Aracruz Unidade Guaíba),UTE.FL.RS.030666-5.1,RS,Guaíba - RS,Licor Negro,licor,264967.0,2015,2015,CMPC CELULOSE RIOGRANDENSE LTDA,APE,coordenada do SIGA,-51.29753,-30.13144
+Suzano Maranhão,UTE.FL.MA.030959-1.1,MA,Imperatriz - MA,Licor Negro,licor,254840.0,2014,2010,SUZANO S.A.,APE,coordenada do SIGA,-47.56577,-5.33578
+Aracruz,UTE.FL.ES.000127-9.1,ES,Aracruz - ES,Licor Negro,licor,238000.0,2002,2000,SUZANO S.A.,APE,coordenada do SIGA,-40.0747,-19.84295
+Eldorado Brasil,UTE.FL.MS.030583-9.1,MS,Três Lagoas - MS,Licor Negro,licor,214103.0,2013,2010,Eldorado Brasil Celulose S.A,APE,coordenada do SIGA,-51.6096,-20.59878
+Suzano Mucuri (Antiga Bahia Sul),UTE.FL.BA.000187-2.1,BA,Mucuri - BA,Licor Negro,licor,214080.0,1992,antes,SUZANO S.A.,APE,coordenada do SIGA,-39.91966,-18.04246
+LD Celulose,UTE.FL.MG.040854-9.1,MG,Indianópolis - MG,Licor Negro,licor,202700.0,2022,2020,LD  CELULOSE S.A.,APE,coordenada do SIGA,-47.91823,-18.83704
+Fibria - MS (Antiga VCP - MS),UTE.FL.MS.029694-5.1,MS,Três Lagoas - MS,Licor Negro,licor,175100.0,2009,2000,SUZANO S.A.,PIE,coordenada do SIGA,-51.79697,-20.99525
+Puma II,UTE.FL.PR.045824-4.1,PR,Ortigueira - PR,Licor Negro,licor,134800.0,2022,2020,KLABIN S.A.,PIE,coordenada do SIGA,-50.74347,-24.24429
+Veracel,UTE.FL.BA.029014-9.1,BA,Eunápolis - BA,Licor Negro,licor,126600.0,2006,2000,VERACEL CELULOSE S.A.,APE,coordenada do SIGA,-39.57053,-16.37401
+Klabin,UTE.FL.PR.027769-0.1,PR,Telêmaco Borba - PR,Licor Negro,licor,113250.0,1961,antes,KLABIN S.A.,PIE,coordenada do SIGA,-50.59942,-24.30907
+Bahia Pulp (Antiga Bacell),UTE.FL.BA.000182-1.1,BA,Camaçari - BA,Licor Negro,licor,108600.0,1995,antes,BRACELL BAHIA SPECIALTY CELLULOSE S.A.,PIE,coordenada do SIGA,-38.33717,-12.64308
+Jacareí I (Antiga Celpav IV),UTE.GN.SP.002904-1.1,SP,Jacareí - SP,Resíduos Florestais,residuos,108163.0,1994,antes,SUZANO S.A.,PIE,coordenada do SIGA,-45.98104,-23.29489
+Cenibra,UTE.FL.MG.027941-2.1,MG,Belo Oriente - MG,Licor Negro,licor,100000.0,1976,antes,Celulose Nipo,APE,coordenada do SIGA,-42.47453,-19.21601
+Inpasa,UTE.FL.MT.040821-2.1,MT,Sinop - MT,Lenha,lenha,82675.0,2019,2015,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-55.51276,-12.01686
+Rigesa,UTE.FL.SC.027395-3.1,SC,Três Barras - SC,Resíduos Florestais,residuos,79193.0,2009,2000,"WESTROCK, CELULOSE, PAPEL E EMBALAGENS LTDA",APE,coordenada do SIGA,-50.31253,-26.10201
+Usiminas 2,UTE.FL.MG.029480-2.1,MG,Ipatinga - MG,Gás de Alto Forno - Biomassa,carvao,63155.0,2009,2000,USINAS SIDERURGICAS DE MINAS GERAIS S/A. USIMINAS,APE,coordenada do SIGA,-42.55484,-19.491
+FS Sorriso,UTE.FL.MT.044865-6.1,MT,Sorriso - MT,Resíduos Florestais,residuos,55000.0,2022,2020,FS INDUSTRIA DE BIOCOMBUSTIVEIS LTDA,APE,coordenada do SIGA,-55.94618,-13.00155
+Jari Celulose,UTE.FL.PA.001240-8.1,PA,Almeirim - PA,Licor Negro,licor,55000.0,1976,antes,"JARI CELULOSE, PAPEL E EMBALAGENS S/A EM RECUPERACAO JUDICIAL",PIE,coordenada do SIGA,-52.57684,-1.52734
+Ripasa,UTE.FL.SP.002534-8.1,SP,Limeira - SP,Resíduos Florestais,residuos,53480.0,1974,antes,SUZANO S.A.,APE,coordenada do SIGA,-47.35424,-22.59452
+Inpasa Sidrolândia,UTE.FL.MS.072774-1.1,MS,Sidrolândia - MS,Resíduos Florestais,residuos,53125.0,2025,2020,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-54.90167,-20.89694
+Inpasa LEM,UTE.FL.BA.075297-5.1,BA,Luís Eduardo Magalhães - BA,Lenha,lenha,52360.0,2026,2020,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-45.95137,-12.1125
+Inpasa Dourados,UTE.FL.MS.050519-6.1,MS,Dourados - MS,Lenha,lenha,52000.0,2022,2020,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-54.81422,-22.33436
+Onça Pintada,UTE.FL.MS.035085-0.1,MS,Três Lagoas - MS,Resíduos Florestais,residuos,50000.0,2021,2020,Eldorado Brasil Celulose S.A,PIE,coordenada do SIGA,-51.42583,-20.38389
+Inpasa Mutum,UTE.FL.MT.045074-0.1,MT,Nova Mutum - MT,Lenha,lenha,48860.0,2020,2020,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-56.05272,-13.77692
+FS Primavera,UTE.FL.MT.054855-3.1,MT,Primavera do Leste - MT,Resíduos Florestais,residuos,47945.0,2023,2020,FS I INDÚSTRIA DE ETANOL S.A,APE,coordenada do SIGA,-54.20889,-15.34419
+Cerradinho MS1,UTE.FL.MS.060305-8.1,MS,Maracaju - MS,Resíduos Florestais,residuos,39000.0,2024,2020,NEOMILLE S.A.,PIE,coordenada do SIGA,-54.96574,-21.77628
+Klabin Correia Pinto (Antiga Celucat),UTE.FL.SC.030027-6.1,SC,Correia Pinto - SC,Licor Negro,licor,37822.0,1969,antes,KLABIN S.A.,APE,coordenada do SIGA,-50.36376,-27.58481
+Lwarcel (Antiga Lençóis Paulista),UTE.FL.SP.028620-6.1,SP,Lençóis Paulista - SP,Licor Negro,licor,36420.0,1987,antes,BRACELL SP CELULOSE LTDA,PIE,coordenada do SIGA,-48.80893,-22.5442
+Klabin Otacílio Costa (Antiga Igaras),UTE.FL.SC.001103-7.1,SC,Otacílio Costa - SC,Licor Negro,licor,33745.0,1955,antes,KLABIN S.A.,APE,coordenada do SIGA,-50.10109,-27.51049
+Fênix,UTE.FL.MT.029649-0.2,MT,Alto Araguaia - MT,Lenha,lenha,32500.0,2021,2020,QRZ COMPLEXO INDUSTRIAL S/A,PIE,coordenada do SIGA,-53.2767,-17.29406
+Guaçu,UTE.FL.MT.030863-3.1,MT,Aripuanã - MT,Resíduos Florestais,residuos,30000.0,2013,2010,GUACU GERACAO DE ENERGIA LTDA,PIE,coordenada do SIGA,-59.46033,-10.18549
+F&S Agri Solutions,UTE.FL.MT.034035-9.1,MT,Lucas do Rio Verde - MT,Resíduos Florestais,residuos,30000.0,2017,2015,FS INDUSTRIA DE BIOCOMBUSTIVEIS LTDA,APE,coordenada do SIGA,-55.94618,-13.00155
+CGVE INNOVA,UTE.AI.RS.040886-7.2,RS,Triunfo - RS,Casca de Arroz,arroz,30000.0,2021,2020,VIDEOLAR-INNOVA S/A,APE,coordenada do SIGA,-51.399,-29.87056
+Termoverde Caieiras,UTE.RU.SP.031436-6.1,SP,Caieiras - SP,Biogás - RU,aterro,29547.0,2016,2015,TERMOVERDE CAIEIRAS LTDA,PIE,coordenada do SIGA,-46.7721,-23.33844
+Berneck Lages,UTE.FL.SC.066989-0.1,SC,Lages - SC,Resíduos Florestais,residuos,28600.0,2023,2020,BERNECK S.A. PAINEIS E SERRADOS,APE,coordenada do SIGA,-50.39678,-27.86753
+Asja Jaboatão,UTE.RU.PE.040643-0.1,PE,Jaboatão dos Guararapes - PE,Biogás - RU,aterro,28520.0,2019,2015,UTE ORIZON PERNAMBUCO LTDA,PIE,coordenada do SIGA,-34.97773,-8.17205
+Lages,UTE.FL.SC.028745-8.1,SC,Lages - SC,Resíduos Florestais,residuos,28000.0,2003,2000,J&amp-F S.A.,PIE,coordenada do SIGA,-50.326,-27.816
+Inpasa Balsas,UTE.FL.MA.073226-5.1,MA,Balsas - MA,Lenha,lenha,26180.0,2025,2020,INPASA AGROINDUSTRIAL S/A,APE,coordenada do SIGA,-46.22111,-7.46583
+Cargill Uberlândia,UTE.FL.MG.030431-0.1,MG,Uberlândia - MG,Resíduos Florestais,residuos,25000.0,2011,2010,CARGILL AGRICOLA S A,APE,coordenada do SIGA,-48.27653,-18.8483
+São João Biogás,UTE.RU.SP.028648-6.1,SP,São Paulo - SP,Biogás - RU,aterro,24640.0,2008,2000,SAO JOAO ENERGIA AMBIENTAL S/A,PIE,coordenada do SIGA,-46.41526,-23.6349
+LAR Cooperativa Agroindustrial,UTE.FL.MS.048551-9.1,MS,Caarapó - MS,Resíduos Florestais,residuos,21471.0,2023,2020,LAR COOPERATIVA AGROINDUSTRIAL,APE,coordenada do SIGA,-54.81376,-22.61076
+Biogás Bonfim,UTE.AI.SP.035109-1.1,SP,Guariba - SP,Biogás-AGR,biogas_rural,20893.0,2020,2020,RAIZEN-GEO BIOGAS S.A.,PIE,coordenada do SIGA,-48.2925,-21.41897
+Floraplac,UTE.FL.PA.032116-8.1,PA,Paragominas - PA,Resíduos Florestais,residuos,20000.0,2015,2015,FLORAPLAC MDF LTDA,PIE,coordenada do SIGA,-47.3708,-3.0182
+Salvador,UTE.RU.BA.002683-2.1,BA,Salvador - BA,Biogás - RU,aterro,19730.0,2010,2010,TERMOVERDE SALVADOR S.A.,PIE,coordenada do SIGA,-38.35208,-12.86034
+Usiminas,UTE.FL.MG.028604-4.1,MG,Ipatinga - MG,Gás de Alto Forno - Biomassa,carvao,18810.0,2003,2000,USINAS SIDERURGICAS DE MINAS GERAIS S/A. USIMINAS,APE,coordenada do SIGA,-42.52753,-19.46401
+BBF Baliza,UTE.AI.RR.044586-0.1,RR,São João da Baliza - RR,Capim Elefante,capim,17936.0,2023,2020,BBF SAO JOAO DA BALIZA S/A,PIE,coordenada do SIGA,-59.95328,0.95973
+Nova Iguaçu,UTE.RU.RJ.040566-3.1,RJ,Nova Iguaçu - RJ,Biogás - RU,aterro,16932.0,2019,2015,NOVA IGUACU ENERGIA E GAS RENOVAVEL LTDA,PIE,coordenada do SIGA,-43.47745,-22.67522
+ERB Candeias,UTE.FL.BA.030979-6.1,BA,Candeias - BA,Resíduos Florestais,residuos,16790.0,2014,2010,ERB ARATINGA S.A,PIE,coordenada do SIGA,-38.48151,-12.76746
+Miguel Forte,UTE.FL.PR.028137-9.1,PR,União da Vitória - PR,Resíduos Florestais,residuos,16000.0,1998,antes,MIGUEL FORTE INDUSTRIAL S.A.,PIE,coordenada do SIGA,-51.09026,-26.25295
+Berneck Curitibanos,UTE.FL.SC.037739-2.1,SC,Curitibanos - SC,Resíduos Florestais,residuos,14300.0,2015,2015,BERNECK S.A. PAINEIS E SERRADOS,APE,coordenada do SIGA,-50.50939,-27.31936
+Berneck,UTE.FL.PR.029993-6.1,PR,Araucária - PR,Resíduos Florestais,residuos,13600.0,2019,2015,BERNECK S.A. PAINEIS E SERRADOS,PIE,coordenada do SIGA,-49.37208,-25.54332
+Orsa,UTE.FL.SP.027846-7.2,SP,Nova Campina - SP,Lenha,lenha,13100.0,1987,antes,KLINGELE PAPER NOVA CAMPINA LTDA.,APE,coordenada do SIGA,-48.9311,-24.21308
+Biotérmica Recreio,UTE.RU.RS.030541-3.1,RS,Minas do Leão - RS,Biogás - RU,aterro,12744.0,2015,2015,BIOTERMICA ENERGIA S.A.,PIE,coordenada do SIGA,-52.02603,-30.15078
+São Borja,UTE.AI.RS.029583-3.1,RS,São Borja - RS,Casca de Arroz,arroz,12500.0,2011,2010,UTE IGUACU BORJA ENERGETICA LTDA,PIE,coordenada do SIGA,-55.9147,-28.67101
+Ecoluz,UTE.FL.PR.028246-4.1,PR,Guarapuava - PR,Resíduos Florestais,residuos,12330.0,2008,2000,ASPERBRAS ENERGIA LTDA,PIE,coordenada do SIGA,-51.48126,-25.35786
+Viena,UTE.FL.MA.028917-5.1,MA,Açailândia - MA,Carvão Vegetal,carvao,12200.0,2008,2000,VIENA SIDERURGICA S/A,APE,coordenada do SIGA,-47.39193,-4.88861
+Palmaplan Energia 2,UTE.BL.RR.044588-6.1,RR,Rorainópolis - RR,Óleos vegetais,oleos,11550.0,2022,2020,PALMAPLAN ENERGIA SPE S.A,PIE,coordenada do SIGA,-60.40574,0.93642
+Santa Luz,UTE.FL.RR.044606-8.1,RR,Boa Vista - RR,Resíduos Florestais,residuos,11500.0,2022,2020,SANTA LUZ GERACAO E COMERCIO DE ENERGIA SPE S/A,PIE,coordenada do SIGA,-60.82639,3.1797
+Bonfim,UTE.FL.RR.044603-3.1,RR,Cantá - RR,Resíduos Florestais,residuos,11500.0,2022,2020,BONFIM GERACAO E COMERCIO DE ENERGIA SPE S/A,PIE,coordenada do SIGA,-60.48446,2.90516
+Pau Rainha,UTE.FL.RR.044605-0.1,RR,Boa Vista - RR,Resíduos Florestais,residuos,11500.0,2022,2020,PAU RAINHA GERACAO E COMERCIO DE ENERGIA SPE S/A,PIE,coordenada do SIGA,-60.82783,3.20357
+Cantá,UTE.FL.RR.044604-1.1,RR,Cantá - RR,Resíduos Florestais,residuos,11500.0,2022,2020,CANTA GERACAO E COMERCIO DE ENERGIA SPE S/A,PIE,coordenada do SIGA,-60.68227,2.72582
+Granol PO,UTE.FL.TO.035081-8.1,TO,Porto Nacional - TO,Lenha,lenha,11500.0,2015,2015,CARGILL NOVOS HORIZONTES LTDA,APE,coordenada do SIGA,-48.37341,-10.60711
+Geo Elétrica Tamboara,UTE.AI.PR.030724-6.1,PR,Tamboara - PR,Biogás-AGR,biogas_rural,10026.0,2012,2010,GEO ELETRICA TAMBOARA BIOENERGIA LTDA,PIE,coordenada do SIGA,-52.49214,-23.2659
+Alvorada Bioenergia,UTE.FL.MT.074532-4.1,MT,Canarana - MT,Lenha,lenha,10000.0,2026,2020,AGRICOLA ALVORADA S.A.,APE,coordenada do SIGA,-52.28125,-13.53108
+Piratini,UTE.FL.RS.028239-1.1,RS,Piratini - RS,Resíduos Florestais,residuos,10000.0,2003,2000,PIRATINI ENERGIA S.A.,PIE,coordenada do SIGA,-53.07387,-31.41268
+Vetorial Corumbá,UTE.FL.MS.030384-4.1,MS,Corumbá - MS,Gás de Alto Forno - Biomassa,carvao,10000.0,2009,2000,VETORIAL SIDERURGIA S/A,PIE,coordenada do SIGA,-57.64898,-19.00637
+Irani,UTE.FL.SC.029228-1.1,SC,Vargem Bonita - SC,Resíduos Florestais,residuos,10000.0,2004,2000,IRANI PAPEL E EMBALAGEM S.A.,APE,coordenada do SIGA,-51.79053,-26.92934
+Curitiba Energia,UTE.RU.PR.035069-9.4,PR,Fazenda Rio Grande - PR,Biogás - RU,aterro,9982.0,2016,2015,CURITIBA ENERGIA SPE LTDA.,PIE,coordenada do SIGA,-49.34416,-25.66027
+Piraí,UTE.FL.PR.029282-6.1,PR,Piraí do Sul - PR,Resíduos Florestais,residuos,9000.0,2006,2000,CMPC IGUACU EMBALAGENS LTDA,PIE,coordenada do SIGA,-49.94133,-24.53236
+Itacoatiara,UTE.FL.AM.028348-7.1,AM,Itacoatiara - AM,Resíduos Florestais,residuos,9000.0,2002,2000,MIL ENERGIA RENOVAVEL LTDA,PIE,coordenada do SIGA,-58.7294,-3.05328
+Algar Agro,UTE.FL.MG.035567-4.1,MG,Uberlândia - MG,Lenha,lenha,8950.0,2018,2015,ADM DO BRASIL LTDA,APE,coordenada do SIGA,-48.27768,-18.86196
+Metalsider,UTE.FL.MG.030256-2.2,MG,Betim - MG,Gás de Alto Forno - Biomassa,carvao,8800.0,2010,2010,METALSIDER LTDA,PIE,coordenada do SIGA,-44.21321,-19.97102
+São Gonçalo,UTE.RU.RJ.048949-2.1,RJ,São Gonçalo - RJ,Biogás - RU,aterro,8466.0,2025,2020,SAO GONCALO ENERGIA E GAS RENOVAVEL LTDA,PIE,coordenada do SIGA,-42.98083,-22.85667
+São Sepé,UTE.AI.RS.034046-4.1,RS,São Sepé - RS,Casca de Arroz,arroz,8000.0,2019,2015,SEPE GERACAO DE ENERGIA LTDA,PIE,coordenada do SIGA,-53.65444,-30.10145
+Primavera do Leste,UTE.FL.MT.030089-6.1,MT,Primavera do Leste - MT,Resíduos Florestais,residuos,8000.0,2009,2000,CARGILL AGRICOLA S A,APE,coordenada do SIGA,-54.30005,-15.55229
+TG 04,UTE.FL.SC.072820-9.1,SC,Vargem Bonita - SC,Licor Negro,licor,7586.0,2023,2020,IRANI PAPEL E EMBALAGEM S.A.,APE,centro do município,-51.73151,-26.94481
+Asja Sabará,UTE.RU.MG.035528-3.1,MG,Sabará - MG,Biogás - RU,aterro,7130.0,2017,2015,ASJA SABARA SERVICOS PARA O MEIO AMBIENTE S/A,PIE,coordenada do SIGA,-43.84414,-19.85033
+Energir,UTE.FL.RS.035434-1.1,RS,Erechim - RS,Resíduos Florestais,residuos,7000.0,2018,2015,ENERGIR GERACAO DE ENERGIA ELETRICA LTDA,APE,coordenada do SIGA,-52.2875,-27.67389
+Oleoplan Veranópolis,UTE.FL.RS.052115-9.1,RS,Veranópolis - RS,Resíduos Florestais,residuos,6780.0,2022,2020,OLEOPLAN S.A. OLEOS VEGETAIS PLANALTO,APE,coordenada do SIGA,-51.53815,-28.92461
+Santa Maria,UTE.FL.PR.029768-2.1,PR,Guarapuava - PR,Resíduos Florestais,residuos,6400.0,2009,2000,SANTA MARIA CIA DE PAPEL E CELULOSE,APE,coordenada do SIGA,-51.64526,-25.44295
+Cargil Três Lagoas,UTE.FL.MS.031001-8.1,MS,Três Lagoas - MS,Resíduos Florestais,residuos,6000.0,2013,2010,CARGILL AGRICOLA S A,APE,coordenada do SIGA,-51.63183,-20.79778
+PCT SLC Alimentos,UTE.AI.RS.031292-4.1,RS,Capão do Leão - RS,Casca de Arroz,arroz,5800.0,2015,2015,CAMIL ENERGIAS RENOVAVEIS LTDA.,PIE,coordenada do SIGA,-52.42458,-31.7455
+Asja João Pessoa,UTE.RU.PB.043199-0.2,PB,João Pessoa - PB,Biogás - RU,aterro,5704.0,2019,2015,UTE ORIZON PARAIBA LTDA,PIE,coordenada do SIGA,-34.95647,-7.21758
+Guatapará,UTE.RU.SP.031440-4.1,SP,Guatapará - SP,Biogás - RU,aterro,5704.0,2014,2010,GUATAPARA ENERGIA S.A.,PIE,coordenada do SIGA,-47.95279,-21.39216
+3 Tentos Ijuí,UTE.FL.RS.048608-6.1,RS,Ijuí - RS,Resíduos Florestais,residuos,5500.0,2022,2020,Três Tentos Agroindustrial S.A.,APE,coordenada do SIGA,-53.90972,-28.41778
+Plantar,UTE.FL.MG.030757-2.1,MG,lagoas - MG,Gás de Alto Forno - Biomassa,carvao,5000.0,2009,2000,GELF SIDERURGIA S/A,REG,coordenada do SIGA,-44.338,-19.444
+Energy Green,UTE.FL.PR.029738-0.1,PR,Carambeí - PR,Resíduos Florestais,residuos,5000.0,2008,2000,E G Brasil Energia Ltda.,REG,coordenada do SIGA,-50.1095,-24.95617
+Comigo,UTE.FL.GO.030157-4.1,GO,Carmo do Rio Verde - GO,Resíduos Florestais,residuos,5000.0,2008,2000,COOPERATIVA AGROINDUSTRIAL DOS PRODUTORES RURAIS DO SUDOESTE GOIANO,REG,coordenada do SIGA,-49.73435,-15.42121
+Siderúrgica União,UTE.FL.MG.031975-9.1,MG,Divinópolis - MG,Gás de Alto Forno - Biomassa,carvao,5000.0,2014,2010,BICUIBA ENERGIA S.A.,REG,coordenada do SIGA,-44.94543,-20.02714
+Fergusa Siderurgia,UTE.FL.MG.029473-0.1,MG,Pitangui - MG,Carvão Vegetal,carvao,4997.0,2007,2000,FERGUSA SIDERURGIA LTDA,REG,coordenada do SIGA,-44.92574,-19.69431
+SVA,UTE.AI.RS.029148-0.1,RS,Alegrete - RS,Casca de Arroz,arroz,4900.0,2008,2000,Silica Verde do Arroz Ltda,REG,coordenada do SIGA,-55.81619,-29.80335
+Celulose Irani,UTE.FL.SC.000744-7.1,SC,Vargem Bonita - SC,Licor Negro,licor,4900.0,1998,antes,IRANI PAPEL E EMBALAGEM S.A.,REG,coordenada do SIGA,-51.74662,-26.94161
+AVG I-II,UTE.FL.MG.031329-7.1,MG,Sete Lagoas - MG,Carvão Vegetal,carvao,4800.0,2009,2000,AVG ENERGETICA SA,REG,coordenada do SIGA,-44.29665,-19.46685
+Bio Fuel,UTE.FL.RR.029943-0.1,RR,São João da Baliza - RR,Resíduos Florestais,residuos,4800.0,2008,2000,BRASIL BIO FUELS S.A.,REG,coordenada do SIGA,-59.95628,0.96179
+Thermoazul,UTE.FL.SC.030055-1.1,SC,Tangará - SC,Resíduos Florestais,residuos,4700.0,2009,2000,Thermoazul,REG,coordenada do SIGA,-51.22331,-27.11657
+Veolia Iperó,UTE.RU.SP.049624-3.1,SP,Iperó - SP,Resíduos Sólidos Urbanos - RU,lixo,4680.0,2021,2020,VEOLIA ENERGIA LTDA.,REG,coordenada do SIGA,-47.54889,-23.42917
+Veolia Biguaçu,UTE.RU.SC.052078-0.1,SC,Biguaçu - SC,Resíduos Sólidos Urbanos - RU,lixo,4680.0,2021,2020,VEOLIA ENERGIA LTDA.,REG,coordenada do SIGA,-48.63917,-27.36222
+Bandeirantes,UTE.RU.SP.031732-2.1,SP,São Paulo - SP,Biogás - RU,aterro,4624.0,2014,2010,BIOGAS ENERGIA AMBIENTAL S.A,REG,coordenada do SIGA,-46.75582,-23.41978
+Lanxess Cogeração,UTE.FL.SP.035461-9.1,SP,Porto Feliz - SP,Resíduos Florestais,residuos,4500.0,2010,2010,LANXESS,REG,coordenada do SIGA,-47.57551,-23.21212
+Tremembé,UTE.RU.SP.040200-1.1,SP,Tremembé - SP,Biogás - RU,aterro,4278.0,2018,2015,SPE TREMEMBÉ ENERGIA LTDA,REG,coordenada do SIGA,-45.61358,-22.91542
+Uberlândia,UTE.RU.MG.030728-9.1,MG,Uberlândia - MG,Resíduos Sólidos Urbanos - RU,lixo,4278.0,2011,2010,ENERGAS GERACAO DE ENERGIA LTDA.,REG,coordenada do SIGA,-48.32088,-18.8803
+CTR Juiz de Fora,UTE.RU.MG.031206-1.1,MG,Juiz de Fora - MG,Biogás - RU,aterro,4278.0,2013,2010,VALORGAS,REG,coordenada do SIGA,-43.42172,-21.61872
+TECIPAR,UTE.RU.SP.075455-2.1,SP,Santana de Parnaíba - SP,Biogás - RU,aterro,4278.0,2016,2015,Biopar Soluções Ambientas Ltda.,REG,centro do município,-46.91091,-23.4483
+GAS VERDE,UTE.RU.RJ.076104-4.1,RJ,"Rio de Janeiro - RJ, Seropédica - RJ",Biogás - RU,aterro,4254.0,2025,2020,GAS VERDE SEROPEDICA S.A.,REG,centro do município,-43.45529,-22.94085
+Itaqui,UTE.AI.RS.027948-0.1,RS,Itaqui - RS,Casca de Arroz,arroz,4200.0,2001,2000,CAMIL ENERGIAS RENOVAVEIS LTDA.,PIE,coordenada do SIGA,-56.54353,-29.12577
+SUAPE II_ETANOL,UTE.BL.PE.076779-4.1,PE,Cabo de Santo Agostinho - PE,Etanol,oleos,4172.8,2026,2020,ENERGETICA SUAPE II S.A.,REG,centro do município,-35.04807,-8.27458
+Chapecó,UTE.FL.SC.028741-5.1,SC,Chapecó - SC,Resíduos Florestais,residuos,4000.0,,sem data,Sadia S.A,REG,coordenada do SIGA,-52.65165,-27.09741
+Novagerar,UTE.RU.RJ.028870-5.1,RJ,Nova Iguaçu - RJ,Biogás - RU,aterro,4000.0,2003,2000,NOVAGERAR ECO-ENERGIA LTDA,REG,coordenada do SIGA,-43.47502,-22.67125
+Camil Alimentos - Camaquã,UTE.AI.RS.029807-7.1,RS,Itaqui - RS,Casca de Arroz,arroz,4000.0,2008,2000,Camil Alimentos S.A.,REG,coordenada do SIGA,-56.5579,-29.13774
+Energia Madeiras,UTE.FL.SC.028140-9.1,SC,Canoinhas - SC,Resíduos Florestais,residuos,4000.0,2008,2000,ENERGIA MADEIRAS,REG,coordenada do SIGA,-50.3692,-26.18917
+Terranova I,UTE.FL.SC.028961-2.1,SC,Rio Negrinho - SC,Resíduos Florestais,residuos,3840.0,2000,2000,SOLIDA BRASIL MADEIRAS LTDA,REG,coordenada do SIGA,-49.50853,-26.25001
+CAAL,UTE.AI.RS.028600-1.1,RS,Alegrete - RS,Casca de Arroz,arroz,3825.0,2012,2010,Cooperativa Agroindustrial Alegrete Ltda,PIE,coordenada do SIGA,-55.76953,-29.78251
+Fazenda Santa Marta,UTE.FL.MG.028659-1.1,MG,Grão Mogol - MG,Resíduos Florestais,residuos,3600.0,,sem data,Rio Rancho Agropecuária S.A,REG,coordenada do SIGA,-43.31904,-16.61703
+Vetorial Siderurgia - Unidade Ribas Do Rio Pardo,UTE.FL.MS.072263-4.1,MS,Ribas do Rio Pardo - MS,Gás de Alto Forno - Biomassa,carvao,3500.0,2004,2000,VETORIAL SIDERURGIA S/A,REG,coordenada do SIGA,-53.77389,-20.44528
+João Neiva,UTE.FL.ES.028347-9.1,ES,João Neiva - ES,Carvão Vegetal,carvao,3500.0,2002,2000,CBF Indústria de Gusa S.A,REG,coordenada do SIGA,-40.37653,-19.75401
+Rohden,UTE.FL.SC.028868-3.1,SC,Salete - SC,Resíduos Florestais,residuos,3500.0,2003,2000,ROHDEN PORTAS E ARTEFATOS DE MADEIRA LTDA,REG,coordenada do SIGA,-49.99053,-26.97601
+Santa Lucia - Blue Ville,UTE.AI.RS.072846-2.1,RS,Camaquã - RS,Casca de Arroz,arroz,3500.0,2023,2020,SANTALÚCIA ALIMENTOS LTDA,REG,coordenada do SIGA,-51.77829,-30.85664
+Nobrecel,UTE.FL.SP.028336-3.1,SP,Pindamonhangaba - SP,Licor Negro,licor,3200.0,2001,2000,NOBRECEL S/A CELULOSE E PAPEL,REG,coordenada do SIGA,-45.46205,-22.92667
+Caldeira 6 Kairós,UTE.FL.PR.044809-5.1,PR,Sengés - PR,Lenha,lenha,3200.0,2019,2015,SENGES PAPEL E CELULOSE LTDA,REG,coordenada do SIGA,-49.46914,-24.11882
+Tate & Lyle,UTE.FL.SP.072717-2.1,SP,Santa Rosa de Viterbo - SP,Resíduos Florestais,residuos,3160.0,2022,2020,PRIMARY PRODUCTS INGREDIENTS BRASIL S A,REG,coordenada do SIGA,-47.3492,-21.43868
+Battistella,UTE.FL.SC.028945-0.1,SC,Rio Negrinho - SC,Resíduos Florestais,residuos,3150.0,1992,antes,BATTISTELLA INDUSTRIA E COMERCIO LIMITADA,REG,coordenada do SIGA,-49.48341,-26.23803
+Citrus,UTE.FL.SP.035850-9.1,SP,Itajobi - SP,Lenha,lenha,3150.0,2016,2015,CITRUS JUICE EIRELI,REG,coordenada do SIGA,-49.04314,-21.3054
+Cdr Pedreira I,UTE.RU.SP.048863-1.1,SP,"Guarulhos - SP, São Paulo - SP",Resíduos Sólidos Urbanos - RU,lixo,3120.0,2021,2020,VEOLIA ENERGIA LTDA.,REG,coordenada do SIGA,-46.5625,-23.40694
+Iguaçu-Ibicuí-Termo-1-2-4,UTE.FL.SC.035583-6.1,SC,Campos Novos - SC,Resíduos Florestais,residuos,3100.0,1970,antes,IGUACU EMBALAGENS INDUSTRIAIS LTDA,REG,coordenada do SIGA,-51.17473,-27.54524
+Atos,UTE.FL.MT.031471-4.1,MT,Nova Bandeirantes - MT,Resíduos Florestais,residuos,3000.0,2014,2010,USINA SAO JOSE LTDA,REG,coordenada do SIGA,-57.81848,-9.84295
+Tedesco,UTE.FL.SC.072845-4.1,SC,Caçador - SC,Lenha,lenha,3000.0,2021,2020,PRIMO TEDESCO SA,REG,coordenada do SIGA,-51.01083,-26.8125
+SORGATTO,UTE.FL.GO.038223-0.1,GO,Cristalina - GO,Resíduos Florestais,residuos,3000.0,2017,2015,AGROPECUARIA SORGATTO LTDA,REG,coordenada do SIGA,-47.54917,-16.35028
+Amazon Polpas,UTE.FL.PA.054544-9.1,PA,Castanhal - PA,Resíduos Florestais,residuos,3000.0,2021,2020,Amazon Polpas Ind. e Com. de Polpas da Amazônia LTDA.,REG,coordenada do SIGA,-47.92641,-1.25229
+Rações Patense - Itaúna,UTE.FL.MG.032981-9.2,MG,Itaúna - MG,Resíduos Florestais,residuos,3000.0,2015,2015,INDUSTRIA DE RACOES PATENSE LTDA EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-44.59739,-20.00844
+Usitrar Agrorio Manaus,UTE.RU.AM.046229-2.1,AM,Manaus - AM,Carvão - RU,lixo,3000.0,2019,2015,ECO Business Indústria Comércio e Serviços LTDA.,REG,coordenada do SIGA,-59.91771,-3.0847
+Dois Vizinhos,UTE.FL.PR.028774-1.1,PR,Dois Vizinhos - PR,Resíduos Florestais,residuos,3000.0,2003,2000,Sadia S.A,REG,coordenada do SIGA,-53.72958,-24.74875
+Ciclus,UTE.RU.RJ.057167-9.1,RJ,Seropédica - RJ,Biogás - RU,aterro,2858.0,2021,2020,Ciclus Ambiental do Brasil S.A.,REG,coordenada do SIGA,-43.75778,-22.78583
+Ugm Brasília 1,UTE.RU.DF.054314-4.1,DF,Brasília - DF,Resíduos Sólidos Urbanos - RU,lixo,2850.0,2020,2020,Sergio Baumann e Welshman Gomes Consultoria Empresarial Ltda,REG,coordenada do SIGA,-48.08139,-15.875
+Usitrar Barreirinhas - Ma,UTE.RU.MA.063852-8.1,MA,Barreirinhas - MA,Resíduos Sólidos Urbanos - RU,lixo,2805.0,2021,2020,ECO Business Indústria Comércio e Serviços LTDA.,REG,coordenada do SIGA,-42.77194,-2.75083
+Cargill Pgo,UTE.FL.PR.072057-7.1,PR,Ponta Grossa - PR,Lenha,lenha,2752.8,2023,2020,CARGILL AGRICOLA S A,REG,coordenada do SIGA,-50.08,-25.18667
+Indústria Agropalma,UTE.BL.PA.030433-6.1,PA,Tailândia - PA,Óleos vegetais,oleos,2710.4,,sem data,COMPANHIA REFINADORA DA AMAZONIA,REG,coordenada do SIGA,-48.79792,-2.52592
+Sguário Itapeva,UTE.FL.SP.028073-9.1,SP,Nova Campina - SP,Resíduos Florestais,residuos,2708.0,2008,2000,SGUARIO INDUSTRIA DE MADEIRAS LTDA.,REG,coordenada do SIGA,-48.96344,-24.18663
+USITRAR ECO-ENERGY RIO,UTE.FL.RJ.035640-9.1,RJ,Rio de Janeiro - RJ,Carvão Vegetal,carvao,2700.0,2016,2015,ECO Business Indústria Comércio e Serviços LTDA.,REG,coordenada do SIGA,-43.34016,-22.82922
+USITRAR ECO-ENERGY CABREUVA,UTE.RU.SP.037363-0.1,SP,Cabreúva - SP,Carvão - RU,lixo,2700.0,2016,2015,ECO Business Indústria Comércio e Serviços LTDA.,REG,coordenada do SIGA,-47.09191,-23.25182
+Fumacense Alimentos,UTE.AI.SC.073554-0.1,SC,Morro da Fumaça - SC,Casca de Arroz,arroz,2625.6,2023,2020,FUMACENSE ALIMENTOS E BEBIDAS LTDA,REG,coordenada do SIGA,-49.23059,-28.66898
+PCT Barueri Biogás,UTE.RU.SP.028223-5.1,SP,Carapicuíba - SP,Biogás - RU,aterro,2601.0,2002,2000,COMPANHIA DE SANEAMENTO BASICO DO ESTADO DE SAO PAULO,REG,coordenada do SIGA,-46.83556,-23.5225
+Fátima do Sul,UTE.RU.MS.040799-2.1,MS,Fátima do Sul - MS,Carvão - RU,lixo,2550.0,2018,2015,ECO Business Indústria Comércio e Serviços LTDA.,REG,coordenada do SIGA,-54.50624,-22.40815
+Florevale,UTE.FL.MG.000962-8.1,MG,Grão Mogol - MG,Resíduos Florestais,residuos,2520.0,,sem data,Florestal do Vale do Jequitinhonha Ltda,REG,coordenada do SIGA,-42.67888,-16.29931
+R9 Energia,UTE.FL.SC.062073-4.1,SC,Vargem Bonita - SC,Resíduos Florestais,residuos,2500.0,2022,2020,R9 Energia LTDA.,REG,coordenada do SIGA,-51.73056,-27.00889
+USITRAR ECO-ENERGY,UTE.FL.MA.035557-7.1,MA,São José de Ribamar - MA,Gás de Alto Forno - Biomassa,carvao,2400.0,2015,2015,Sergio Luis Salmão Aquino,REG,coordenada do SIGA,-44.09555,-2.5825
+Arrudas,UTE.RU.MG.030224-4.1,MG,Belo Horizonte - MG,Biogás - RU,aterro,2400.0,2009,2000,Companhia de Saneamento de Minas Gerais,REG,coordenada do SIGA,-43.88,-19.89722
+Siderpa,UTE.FL.MG.028668-0.1,MG,Sete Lagoas - MG,Gás de Alto Forno - Biomassa,carvao,2400.0,2004,2000,SIDERPAM SIDERURGICA LTDA,REG,coordenada do SIGA,-44.2396,-19.45829
+Conselvan,UTE.FL.MT.030928-1.1,MT,Aripuanã - MT,Resíduos Florestais,residuos,2300.0,2012,2010,CONSELVAN GERACAO DE ENERGIA LTDA,REG,coordenada do SIGA,-59.92025,-9.92664
+Rical,UTE.AI.RO.029747-0.1,RO,Vilhena - RO,Casca de Arroz,arroz,2288.0,2008,2000,,,coordenada do SIGA,-60.12825,-12.7276
+Itajaí,UTE.RU.SC.050640-0.1,SC,Itajaí - SC,Biogás - RU,aterro,2264.0,2021,2020,Itajaí Biogás e Energia S.A.,REG,coordenada do SIGA,-48.70361,-26.97722
+Urbano São Gabriel,UTE.AI.RS.028200-6.1,RS,São Gabriel - RS,Casca de Arroz,arroz,2220.0,1995,antes,URBANO AGROINDUSTRIAL LTDA,REG,coordenada do SIGA,-54.31053,-30.33201
+Oleoplan Pará,UTE.FL.PA.073711-9.1,PA,Tomé-Açu - PA,Resíduos Florestais,residuos,2000.0,2023,2020,OLEOPLAN PARÁ INDÚSTRIA DE BIOCOMBUSTÍVEL LTDA,REG,coordenada do SIGA,-48.23579,-2.85512
+Cisam,UTE.FL.MG.028939-6.1,MG,Pará de Minas - MG,Carvão Vegetal,carvao,2000.0,,sem data,CISAM SIDERURGIA S.A  EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-44.61276,-19.84401
+Pizzatto,UTE.FL.PR.028227-8.1,PR,General Carneiro - PR,Resíduos Florestais,residuos,2000.0,2001,2000,INDUSTRIAS PEDRO N. PIZZATTO LTDA,REG,coordenada do SIGA,-51.30653,-26.42401
+Calsete,UTE.FL.MG.029266-4.2,MG,Sete Lagoas - MG,Gás de Alto Forno - Biomassa,carvao,2000.0,2005,2000,GERDAU ACOS LONGOS S.A.,REG,coordenada do SIGA,-44.26389,-19.525
+Valinho,UTE.FL.MG.029595-7.2,MG,Divinópolis - MG,Gás de Alto Forno - Biomassa,carvao,2000.0,2007,2000,SIDERURGICA VALINHO SA,REG,coordenada do SIGA,-44.884,-20.13901
+Martins,UTE.FL.MT.031486-2.1,MT,Colniza - MT,Resíduos Florestais,residuos,2000.0,2004,2000,USIMART – Usina Termoelétrica Martins Ltda,REG,coordenada do SIGA,-59.21895,-9.4579
+AREVALE,UTE.AI.SP.032860-0.1,SP,Roseira - SP,Casca de Arroz,arroz,2000.0,2014,2010,AREVALE INDUSTRIA E COMERCIO DE ARTEFATOS DE CONCRETO LTDA,REG,coordenada do SIGA,-45.33694,-22.8916
+Safra Bioenergia,UTE.FL.MT.071336-8.1,MT,Sorriso - MT,Lenha,lenha,2000.0,2021,2020,Safras Industria e Comércio Biocombustíveis Ltda.,REG,coordenada do SIGA,-55.5676,-12.30096
+APE ROHDEN,UTE.FL.RS.074693-2.1,RS,Encruzilhada do Sul - RS,Resíduos Florestais,residuos,1800.0,2017,2015,ROHDEN PORTAS E ARTEFATOS DE MADEIRA LTDA,REG,centro do município,-52.66821,-30.5872
+Central Termelétrica de Geração (Antiga Forjasul),UTE.FL.RS.027794-0.1,RS,Encruzilhada do Sul - RS,Resíduos Florestais,residuos,1800.0,2000,2000,ROHDEN MADEIRAS LTDA.,REG,coordenada do SIGA,-52.51253,-30.54001
+Flórida Clean Power do Amapá,UTE.AI.AP.030335-6.1,AP,Macapá - AP,Capim Elefante,capim,1700.0,2010,2010,Flórida Clean Power do Amapá Ltda,REG,coordenada do SIGA,-51.14457,0.03684
+Indústria Palmares,UTE.BL.PA.030427-1.1,PA,Acará - PA,Óleos vegetais,oleos,1640.0,2011,2010,COMPANHIA REFINADORA DA AMAZONIA,REG,coordenada do SIGA,-48.79792,-2.52592
+Destilaria Meneghetti,UTE.FL.MG.046741-3.1,MG,São João do Paraíso - MG,Resíduos Florestais,residuos,1600.0,2008,2000,DESTILARIA MENEGHETTI LTDA,REG,coordenada do SIGA,-41.93951,-15.30909
+MANTO AZUL,UTE.FL.MT.075324-6.1,MT,Primavera do Leste - MT,Lenha,lenha,1600.0,2025,2020,INDUSTRIA E COMERCIO DESTILARIA MANTO AZUL LTDA,REG,centro do município,-54.21513,-15.13919
+Ipiranga do Norte I,UTE.RA.MT.037741-4.1,MT,"Tapurah - MT, Ipiranga do Norte - MT",Biogás - RA,biogas_rural,1560.0,2017,2015,INOVAGRID ENERGIA LTDA,REG,coordenada do SIGA,-56.2975,-12.36722
+Tramontina,UTE.FL.PA.002867-3.1,PA,Belém - PA,Resíduos Florestais,residuos,1500.0,1998,antes,AVIDES BELEM S/A,REG,coordenada do SIGA,-48.49453,-1.45201
+Ambient,UTE.RU.SP.030472-7.1,SP,Ribeirão Preto - SP,Biogás - RU,aterro,1500.0,2011,2010,AMBIENT SERVICOS AMBIENTAIS DE RIBEIRAO PRETO S/A,REG,coordenada do SIGA,-47.81309,-21.10477
+Laminados Triunfo,UTE.FL.AC.030249-0.1,AC,Rio Branco - AC,Resíduos Florestais,residuos,1500.0,2007,2000,LAMINADOS TRIUNFO LTDA,REG,coordenada do SIGA,-67.81053,-9.9783
+Valorgas Catanduva,UTE.RU.SP.054854-5.1,SP,Catanduva - SP,Biogás - RU,aterro,1426.0,2021,2020,Valorgas Energia Catanduva SPE LTDA,PIE,coordenada do SIGA,-48.93361,-21.1265
+Nortao,UTE.FL.MT.029858-1.1,MT,Aripuanã - MT,Resíduos Florestais,residuos,1275.0,2011,2010,USINA TERMELETRICA NORTAO LTDA,REG,coordenada do SIGA,-59.44778,-10.19667
+Bragagnolo,UTE.FL.SC.029275-3.1,SC,Faxinal dos Guedes - SC,Resíduos Florestais,residuos,1200.0,2001,2000,Avelino Bragagnolo S.A. Indústria e Comércio,REG,coordenada do SIGA,-52.19134,-26.7709
+Kiarroz,UTE.AI.SC.030607-0.1,SC,Morro da Fumaça - SC,Casca de Arroz,arroz,1200.0,,sem data,FUMACENSE ALIMENTOS E BEBIDAS LTDA,REG,coordenada do SIGA,-49.24214,-28.63778
+Siderurgica Barão de Maua,UTE.FL.MG.036922-5.2,MG,Sete Lagoas - MG,Gás de Alto Forno - Biomassa,carvao,1200.0,2016,2015,SIDERURGICA BARAO DE MAUA LTDA,REG,coordenada do SIGA,-44.2261,-19.45391
+Urbano Sinop,UTE.AI.MT.030067-5.1,MT,Sinop - MT,Casca de Arroz,arroz,1200.0,2008,2000,URBANO AGROINDUSTRIAL LTDA,REG,coordenada do SIGA,-55.50192,-11.93768
+Araguassu,UTE.FL.MT.028683-4.1,MT,Porto Alegre do Norte - MT,Resíduos Florestais,residuos,1200.0,2002,2000,Araguassu Óleos Vegetais Indústria e Comércio Ltda,REG,coordenada do SIGA,-51.63299,-10.87797
+CATIVA I,UTE.FL.SC.032546-5.1,SC,Apiúna - SC,Resíduos Florestais,residuos,1200.0,2015,2015,CATIVA BENEFICIAMENTOS TEXTEIS LTDA,REG,coordenada do SIGA,-49.36387,-27.00157
+Engenho Coradini,UTE.AI.RS.031795-0.1,RS,Dom Pedrito - RS,Casca de Arroz,arroz,1200.0,2010,2010,ENGENHO CORADINI LTDA,REG,coordenada do SIGA,-54.64368,-30.97621
+Castanhal I,UTE.FL.PA.060667-7.1,PA,Prainha - PA,Resíduos Florestais,residuos,1200.0,2007,2000,Pena Florestal e Madeireira LTDA,REG,coordenada do SIGA,-53.95694,-2.535
+USINA BIOMETANO CAMPOS NOVOS,UTE.RA.SC.076093-5.1,SC,Campos Novos - SC,Biogás - RA,biogas_rural,1141.0,2025,2020,AGRIC ADUBOS E GESTAO DE RESIDUOS INDUSTRIAIS E COMERCIAIS S.A.,REG,centro do município,-51.27416,-27.42322
+Guama Ambiental,UTE.RA.PA.067993-3.1,PA,Marituba - PA,Biogás - RA,biogas_rural,1141.0,2022,2020,GUAMÁ,REG,coordenada do SIGA,-48.3369,-1.39696
+Folhito,UTE.RU.RS.061651-6.1,RS,Estrela - RS,Resíduos Sólidos Urbanos - RU,lixo,1000.0,2022,2020,Folhito LTDA,REG,coordenada do SIGA,-51.94919,-29.55475
+Biotermica Energia Sa - Victor Graeff,UTE.RU.RS.065119-2.1,RS,Victor Graeff - RS,Biogás - RU,aterro,1000.0,2022,2020,BIOTERMICA ENERGIA S.A.,REG,coordenada do SIGA,-52.645,-28.5014
+Biotermica Energia Sa - Santa Maria,UTE.RU.RS.066003-5.1,RS,Santa Maria - RS,Biogás - RU,aterro,1000.0,2022,2020,BIOTERMICA ENERGIA S.A.,REG,coordenada do SIGA,-53.86088,-29.65985
+Natureza Limpa,UTE.FL.MG.030225-2.1,MG,Unaí - MG,Resíduos Florestais,residuos,1000.0,2009,2000,TJMC Empreendimentos Ltda.,REG,coordenada do SIGA,-46.89538,-16.32942
+Biotermica Energia Sa - Girua,UTE.RU.RS.066946-6.1,RS,Giruá - RS,Resíduos Sólidos Urbanos - RU,lixo,1000.0,2022,2020,BIOTERMICA ENERGIA S.A.,REG,coordenada do SIGA,-54.38861,-28.02862
+Madem,UTE.FL.RS.027380-5.1,RS,Mostardas - RS,Resíduos Florestais,residuos,1000.0,,sem data,MADEM SA INDUSTRIA E COMERCIO DE MADEIRAS E EMBALAGENS,REG,coordenada do SIGA,-50.89514,-31.07475
+Fazenda Lucion,UTE.RA.MT.071746-0.1,MT,Vera - MT,Biogás - RA,biogas_rural,920.0,2020,2020,FRIGORIFICO NUTRIBRAS S. A.,REG,coordenada do SIGA,-55.73464,-12.50018
+Cogeração Bio Springer,UTE.AI.SP.031197-9.1,SP,Valinhos - SP,Biogás-AGR,biogas_rural,848.0,2011,2010,Bio Springer do Brasil Indústria de Alimentos S.A.,REG,coordenada do SIGA,-47.02634,-23.02096
+Fazenda Da Luz,UTE.RA.SC.031075-1.1,SC,Abelardo Luz - SC,Biogás - RA,biogas_rural,810.0,2011,2010,Da Luz Energia Ltda.,REG,coordenada do SIGA,-52.21096,-26.58758
+Ebata,UTE.FL.PA.030647-9.1,PA,Belém - PA,Resíduos Florestais,residuos,800.0,2011,2010,EBATA,REG,coordenada do SIGA,-48.47335,-1.2942
+C.VALE Upl - Biogás 300 Kw,UTE.RA.PR.049660-0.1,PR,Palotina - PR,Biogás - RA,biogas_rural,780.0,2020,2020,C.VALE,REG,coordenada do SIGA,-53.70385,-24.23672
+Nossa Senhora Aparecida I,UTE.RA.MT.037738-4.1,MT,Sorriso - MT,Biogás - RA,biogas_rural,780.0,2017,2015,INOVAGRID ENERGIA LTDA,REG,coordenada do SIGA,-55.80814,-12.60281
+Amitec,UTE.AI.PR.071935-8.1,PR,Goioerê - PR,Biogás-AGR,biogas_rural,748.8,2021,2020,AMITEC INDÚSTRIA E COMÉRCIO DE AMIDOS LTDA,REG,coordenada do SIGA,-52.97058,-24.19938
+BBF Água Branca,UTE.BL.PA.051439-0.1,PA,Itaituba - PA,Óleos vegetais,oleos,630.0,2025,2020,BRASIL BIOFUELS PARÁ II S.A.,PIE,coordenada do SIGA,-55.97361,-6.42808
+Pampa,UTE.FL.PA.028485-8.1,PA,Belém - PA,Resíduos Florestais,residuos,550.0,2001,2000,PAMPA EXPORTACOES LTDA,REG,coordenada do SIGA,-48.48002,-1.35776
+Centro Tecnológico Usinaverde,UTE.RU.RJ.029528-0.2,RJ,Rio de Janeiro - RJ,Biogás - RU,aterro,440.0,2013,2010,USINAVERDE S/A,REG,coordenada do SIGA,-43.23226,-22.84035
+Granja São Roque,UTE.RA.SC.030848-0.1,SC,Videira - SC,Biogás - RA,biogas_rural,424.0,2009,2000,MASTER AGROPECUARIA LTDA,REG,coordenada do SIGA,-51.09222,-27.04361
+Juruá Florestal,UTE.FL.PA.031190-1.1,PA,Ananindeua - PA,Resíduos Florestais,residuos,400.0,2013,2010,JURUA FLORESTAL LTDA,REG,coordenada do SIGA,-48.35319,-1.34922
+Telecontato Call Center e Telemarketing,UTE.BL.RS.037223-4.1,RS,Porto Alegre - RS,Etanol,oleos,320.0,2016,2015,TELECONTATO CALL CENTER E TELEMARKETING LTDA.,REG,coordenada do SIGA,-51.33792,-30.05106
+Soft Pig 01,UTE.RA.SP.073631-7.1,SP,Leme - SP,Biogás - RA,biogas_rural,320.0,2023,2020,Frigorífico Santa Rosa de Leme Ltda,REG,coordenada do SIGA,-47.4525,-22.20278
+Biogas Folhito,UTE.AI.RS.073618-0.1,RS,Estrela - RS,Biogás-AGR,biogas_rural,230.4,2021,2020,Folhito LTDA,REG,coordenada do SIGA,-51.94912,-29.55505
+SERAFINI TUNAPOLIS,UTE.RA.SC.076783-2.1,SC,Tunápolis - SC,Biogás - RA,biogas_rural,208.0,2026,2020,MARIOCIR SERAFINI,REG,centro do município,-53.63809,-26.98934
+USINA BIOGÁS AGROTER,UTE.FL.SC.075466-8.1,SC,Marema - SC,Biogás - Floresta,biogas_rural,192.0,2021,2020,AGROTER AGROPECUARIA &amp- FERRAGEM LTDA,REG,centro do município,-52.63466,-26.80832
+Fazenda Nossa Senhora de Fátima,UTE.RA.MG.037127-0.1,MG,Perdizes - MG,Biogás - RA,biogas_rural,175.2,2016,2015,Ricardo de Aguiar Rezende,REG,coordenada do SIGA,-47.23022,-19.20723
+Unidade Industrial de Aves,UTE.RA.PR.029966-9.1,PR,Matelândia - PR,Biogás - RA,biogas_rural,160.0,2008,2000,LAR COOPERATIVA AGROINDUSTRIAL,REG,coordenada do SIGA,-53.95533,-25.20507
+Zucoloto Suimartin,UTE.RA.ES.062063-7.1,ES,Viana - ES,Biogás - RA,biogas_rural,150.0,2020,2020,Suimartin Industria e Comercio LTDA.,REG,coordenada do SIGA,-40.49772,-20.42842
+Ronaldo de Freitas Silva,UTE.RA.MG.035315-9.1,MG,Uberlândia - MG,Biogás - RA,biogas_rural,120.0,2013,2010,Ronaldo de Freitas Silva,REG,coordenada do SIGA,-48.73953,-19.08683
+Star Milk,UTE.RA.PR.029985-5.1,PR,Céu Azul - PR,Biogás - RA,biogas_rural,110.0,2010,2010,Ibrahim Faiad,REG,coordenada do SIGA,-53.78358,-25.04587
+Adelar Piaia,UTE.AI.RS.035793-6.1,RS,Três Passos - RS,Biogás-AGR,biogas_rural,100.0,2014,2010,Adelar Piaia,REG,coordenada do SIGA,-53.91408,-27.44406
+Ajuricaba,UTE.RA.PR.030635-5.1,PR,Marechal Cândido Rondon - PR,Biogás - RA,biogas_rural,80.0,2011,2010,Município de  Marechal Cândido Rondon,REG,coordenada do SIGA,-54.1176,-24.57956
+Fazenda Nossa Senhora do Carmo,UTE.RA.MG.030720-3.1,MG,Ituiutaba - MG,Biogás - RA,biogas_rural,80.0,2012,2010,Sérgio Elias Saraiva,REG,coordenada do SIGA,-49.54552,-18.9925
+Granja Makena,UTE.RA.MG.030594-4.1,MG,Patrocínio - MG,Biogás - RA,biogas_rural,80.0,2008,2000,Altair Olimpio de Oliveira,REG,coordenada do SIGA,-46.9975,-18.92855
+Santo Antônio,UTE.FL.PA.030366-6.1,PA,Breves - PA,Resíduos Florestais,residuos,60.0,2010,2010,Cooperativa de desenvolvimento Sustentável Santo Antônio do rio Ituquiara,REG,coordenada do SIGA,-50.4809,-1.69074
+Frigorífico D talia,UTE.RA.SC.029550-7.1,SC,Pedras Grandes - SC,Biogás - RA,biogas_rural,42.0,,sem data,DTALIA AGROINDUSTRIA LTDA,REG,coordenada do SIGA,-49.2426,-28.57403
+Unidade Industrial de Vegetais,UTE.RA.PR.029967-7.1,PR,Itaipulândia - PR,Biogás - RA,biogas_rural,40.0,2008,2000,LAR COOPERATIVA AGROINDUSTRIAL,REG,coordenada do SIGA,-54.305,-25.16211
+Energ-Biog,UTE.RU.SP.028686-9.1,SP,Barueri - SP,Biogás - RU,aterro,30.0,2002,2000,BIOMASS USERS NETWORK DO BRASIL,REG,coordenada do SIGA,-46.876,-23.511
+Gaseifamaz II,UTE.FL.AM.028733-4.1,AM,Manaus - AM,Resíduos Florestais,residuos,27.0,,sem data,BIOMASS USERS NETWORK DO BRASIL,REG,coordenada do SIGA,-59.96291,-3.08989
+Gaseifamaz I,UTE.FL.SP.028687-7.1,SP,São Paulo - SP,Resíduos Florestais,residuos,27.0,2003,2000,BIOMASS USERS NETWORK DO BRASIL,REG,coordenada do SIGA,-46.63603,-23.54801
+ETE Ouro Verde,UTE.RA.PR.029968-5.1,PR,Foz do Iguaçu - PR,Biogás - RA,biogas_rural,20.0,2008,2000,Companhia de Saneamento do Paraná – Sanepar,REG,coordenada do SIGA,-54.58432,-25.55099
+MARFRIG SÃO GABRIEL RS,UTE.FL.RS.033173-2.2,RS,São Gabriel - RS,Lenha,lenha,15.0,2017,2015,Marfrig Alimentos S.A.,REG,coordenada do SIGA,-54.34639,-30.375
+Eldorado,UTE.AI.MS.029193-5.1,MS,Rio Brilhante - MS,Bagaço de Cana de Açúcar,cana,140000.0,2011,2010,ATVOS BIOENERGIA ELDORADO S.A.,PIE,coordenada do SIGA,-54.02225,-21.86475
+Barra Bioenergia,UTE.AI.SP.030047-0.1,SP,Barra Bonita - SP,Bagaço de Cana de Açúcar,cana,136000.0,2010,2010,BIOENERGIA BARRA LTDA.,PIE,coordenada do SIGA,-48.532,-22.47792
+Caçú I,UTE.AI.GO.030025-0.1,GO,Caçu - GO,Bagaço de Cana de Açúcar,cana,130000.0,2010,2010,ATVOS BIOENERGIA RIO CLARO S.A,PIE,coordenada do SIGA,-51.19128,-18.60127
+Santa Luzia I,UTE.AI.MS.030006-3.1,MS,Nova Alvorada do Sul - MS,Bagaço de Cana de Açúcar,cana,130000.0,2010,2010,ATVOS BIOENERGIA SANTA LUZIA S.A.,PIE,coordenada do SIGA,-54.3828,-21.46663
+Vale do Rosário,UTE.AI.SP.002958-0.1,SP,Morro Agudo - SP,Bagaço de Cana de Açúcar,cana,124000.0,1994,antes,RAIZEN CENTRO-SUL PAULISTA S.A,PIE,coordenada do SIGA,-48.00081,-20.61332
+Caarapó,UTE.AI.MS.030104-3.1,MS,Caarapó - MS,Bagaço de Cana de Açúcar,cana,114000.0,2010,2010,BIOENERGIA CAARAPO LTDA,PIE,coordenada do SIGA,-54.68484,-22.61045
+Bonfim,UTE.AI.SP.029665-1.1,SP,Guariba - SP,Bagaço de Cana de Açúcar,cana,111000.0,2010,2010,BIOENERGIA BARRA LTDA.,PIE,coordenada do SIGA,-48.27863,-21.41381
+Conquista do Pontal,UTE.AI.SP.030024-1.1,SP,Mirante do Paranapanema - SP,Bagaço de Cana de Açúcar,cana,110000.0,2010,2010,ATVOS BIOENERGIA CONQUISTA DO PONTAL S.A.,PIE,coordenada do SIGA,-51.75683,-22.12021
+Jataí,UTE.AI.GO.030043-8.1,GO,Jataí - GO,Bagaço de Cana de Açúcar,cana,105000.0,2013,2010,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-51.61553,-17.69184
+Delta,UTE.AI.MG.028219-7.1,MG,Delta - MG,Bagaço de Cana de Açúcar,cana,101875.0,2001,2000,DELTA SUCROENERGIA S.A,PIE,coordenada do SIGA,-47.81276,-19.94484
+Colombo Ariranha,UTE.AI.SP.000796-0.1,SP,Ariranha - SP,Bagaço de Cana de Açúcar,cana,96795.0,1994,antes,COLOMBO BIOENERGIA S.A. UTE 1,PIE,coordenada do SIGA,-48.82963,-21.21161
+LDC Bioenergia Rio Brilhante (Antiga Louis Dreyfus Rio Brilhante),UTE.AI.MS.029718-6.1,MS,Rio Brilhante - MS,Bagaço de Cana de Açúcar,cana,90000.0,2009,2000,RAIZEN IGUARA RIO BRILHANTE AGROINDUSTRIAL LTDA,PIE,coordenada do SIGA,-54.70183,-21.51391
+Mandu,UTE.AI.SP.027787-8.1,SP,Guaíra - SP,Bagaço de Cana de Açúcar,cana,90000.0,2006,2000,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-48.40153,-20.47901
+Moema,UTE.AI.SP.027886-6.1,SP,Orindiúva - SP,Bagaço de Cana de Açúcar,cana,89000.0,1994,antes,BUNGE AÇÚCAR E BIOENERGIA S.A.,PIE,coordenada do SIGA,-49.35565,-20.20183
+Santo Ângelo,UTE.AI.MG.029116-1.1,MG,Pirajuba - MG,Bagaço de Cana de Açúcar,cana,86000.0,2014,2010,U.S.A.,APE,coordenada do SIGA,-48.69664,-19.95935
+LDC Bioenergia Lagoa da Prata (Antiga Louis Dreyfus Lagoa da Prata),UTE.AI.MG.029717-8.1,MG,Lagoa da Prata - MG,Bagaço de Cana de Açúcar,cana,85000.0,2009,2000,RAIZEN CENTRO-SUL S.A,PIE,coordenada do SIGA,-45.54294,-20.07091
+UJU Bio,UTE.AI.PR.051729-1.1,PR,Colorado - PR,Bagaço de Cana de Açúcar,cana,85000.0,2022,2020,USINA ALTO ALEGRE S/A,PIE,coordenada do SIGA,-51.95167,-22.93176
+Santa Cruz AB (Antiga Ometto),UTE.AI.SP.001609-8.1,SP,Américo Brasiliense - SP,Bagaço de Cana de Açúcar,cana,84000.0,2009,2000,BIOENERGETICA SANTA CRUZ LTDA,PIE,coordenada do SIGA,-48.08389,-21.76278
+São José Colina,UTE.AI.SP.028975-2.1,SP,Colina - SP,Bagaço de Cana de Açúcar,cana,83000.0,2008,2000,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-48.53389,-20.66194
+Santa Juliana,UTE.AI.MG.030166-3.1,MG,Santa Juliana - MG,Bagaço de Cana de Açúcar,cana,82000.0,2010,2010,Agroindustrial Santa Juliana S.A.,PIE,coordenada do SIGA,-47.46403,-19.30231
+São José,UTE.AI.SP.026847-0.1,SP,Macatuba - SP,Bagaço de Cana de Açúcar,cana,80300.0,1988,antes,ACUCAREIRA QUATA S/A,PIE,coordenada do SIGA,-48.77101,-22.48352
+Barra Grande 2,UTE.AI.SP.051532-9.1,SP,Lençóis Paulista - SP,Bagaço de Cana de Açúcar,cana,80000.0,2024,2020,ACUCAREIRA QUATA S/A,PIE,coordenada do SIGA,-48.80214,-22.62908
+Porto das Águas II,UTE.AI.GO.055534-7.1,GO,Chapadão do Céu - GO,Bagaço de Cana de Açúcar,cana,80000.0,2011,2010,CERRADINHO BIOENERGIA S.A.,PIE,coordenada do SIGA,-52.60906,-18.46697
+Amandina,UTE.AI.MS.030115-9.1,MS,Ivinhema - MS,Bagaço de Cana de Açúcar,cana,80000.0,2014,2010,ADECOAGRO VALE DO IVINHEMA S.A.,PIE,coordenada do SIGA,-53.57806,-22.4381
+Tropical Bioenergia,UTE.AI.GO.030080-2.1,GO,Edéia - GO,Bagaço de Cana de Açúcar,cana,80000.0,2009,2000,TROPICAL BIOENERGIA S.A.,APE,coordenada do SIGA,-49.93442,-17.33808
+Equipav II,UTE.AI.SP.029765-8.1,SP,Promissão - SP,Bagaço de Cana de Açúcar,cana,80000.0,2008,2000,RENUKA GERADORA DE ENERGIA ELETRICA LTDA EM RECUPERACAO JUDICIAL EM RECUPERACAO JUDICIAL,PIE,coordenada do SIGA,-49.86948,-21.5602
+Quirinópolis,UTE.AI.GO.029268-0.1,GO,Quirinópolis - GO,Bagaço de Cana de Açúcar,cana,80000.0,2007,2000,CARGILL BIOENERGIA LTDA.,PIE,coordenada do SIGA,-50.44173,-18.42521
+Porto das Águas,UTE.AI.GO.029999-5.1,GO,Chapadão do Céu - GO,Bagaço de Cana de Açúcar,cana,80000.0,2011,2010,CERRADINHO BIOENERGIA S.A.,PIE,coordenada do SIGA,-52.60906,-18.46697
+Pedro Afonso,UTE.AI.TO.030518-9.1,TO,Pedro Afonso - TO,Bagaço de Cana de Açúcar,cana,80000.0,2013,2010,Pedro Afonso Bioenergia Ltda.,PIE,coordenada do SIGA,-48.14334,-9.19802
+Unidade de Bioenergia Costa Rica,UTE.AI.MS.030037-3.1,MS,Costa Rica - MS,Bagaço de Cana de Açúcar,cana,79828.0,2011,2010,ATVOS BIOENERGIA BRENCO S.A.,PIE,coordenada do SIGA,-53.13305,-18.54355
+Unidade de Bioenergia Água Emendada,UTE.AI.GO.030039-0.1,GO,Perolândia - GO,Bagaço de Cana de Açúcar,cana,79828.0,2013,2010,ATVOS BIOENERGIA BRENCO S.A.,PIE,coordenada do SIGA,-52.03963,-17.52016
+Codora,UTE.AI.GO.030355-0.1,GO,Goianésia - GO,Bagaço de Cana de Açúcar,cana,78000.0,2011,2010,ALBIOMA CODORA ENERGIA S.A,PIE,coordenada do SIGA,-49.29945,-15.08284
+Gasa,UTE.AI.SP.027950-1.1,SP,Andradina - SP,Bagaço de Cana de Açúcar,cana,78000.0,1996,antes,BIOENERGIA GASA S.A.,PIE,coordenada do SIGA,-51.2587,-20.7699
+Ipaussu Bioenergia,UTE.AI.SP.030199-0.1,SP,Ipauçu - SP,Bagaço de Cana de Açúcar,cana,76000.0,2011,2010,BIOENERGIA BARRA LTDA.,PIE,coordenada do SIGA,-49.58359,-23.09573
+Bela Vista,UTE.AI.SP.027917-0.1,SP,Pontal - SP,Bagaço de Cana de Açúcar,cana,75000.0,1977,antes,Usina Bela Vista S.A,APE,coordenada do SIGA,-48.08339,-20.94366
+Costa Pinto,UTE.AI.SP.028221-9.1,SP,Piracicaba - SP,Bagaço de Cana de Açúcar,cana,75000.0,1977,antes,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-47.67492,-22.63571
+Nardini Aporé,UTE.AI.GO.030105-1.1,GO,Aporé - GO,Bagaço de Cana de Açúcar,cana,75000.0,2024,2020,NARDINI AGROINDUSTRIAL LTDA,PIE,coordenada do SIGA,-51.99167,-18.92083
+Bazan,UTE.AI.SP.027835-1.1,SP,Pontal - SP,Bagaço de Cana de Açúcar,cana,75000.0,2001,2000,USINA BAZAN SA,APE,coordenada do SIGA,-47.99237,-21.00967
+Univalem Bioenergia,UTE.AI.SP.030264-3.1,SP,Valparaíso - SP,Bagaço de Cana de Açúcar,cana,75000.0,2012,2010,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-50.94941,-21.3245
+Catanduva I (Antiga Cerradinho),UTE.AI.SP.028042-9.1,SP,Catanduva - SP,Bagaço de Cana de Açúcar,cana,75000.0,2001,2000,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-48.93353,-21.09657
+Angélica,UTE.AI.MS.029670-8.1,MS,Angélica - MS,Bagaço de Cana de Açúcar,cana,74841.0,2009,2000,ADECOAGRO VALE DO IVINHEMA S.A.,PIE,coordenada do SIGA,-53.84194,-22.04092
+Buriti,UTE.AI.SP.030420-4.1,SP,Buritizal - SP,Bagaço de Cana de Açúcar,cana,74250.0,2011,2010,BCE,PIE,coordenada do SIGA,-47.65388,-20.21873
+Passa Tempo,UTE.AI.MS.028111-5.1,MS,Rio Brilhante - MS,Bagaço de Cana de Açúcar,cana,73800.0,2001,2000,RAIZEN IGUARA PASSA TEMPO AGROINDUSTRIAL LTDA,PIE,coordenada do SIGA,-54.55733,-21.6962
+São Martinho,UTE.AI.SP.026874-7.1,SP,Pradópolis - SP,Bagaço de Cana de Açúcar,cana,73000.0,1975,antes,SAO MARTINHO S/A,PIE,coordenada do SIGA,-48.06558,-21.35805
+Unidade de Bioenergia Morro Vermelho,UTE.AI.GO.030040-3.1,GO,Mineiros - GO,Bagaço de Cana de Açúcar,cana,72700.0,2013,2010,ATVOS BIOENERGIA BRENCO S.A.,PIE,coordenada do SIGA,-53.02192,-17.72462
+Unidade de Bioenergia Alto Taquari,UTE.AI.MT.030038-1.1,MT,Alto Taquari - MT,Bagaço de Cana de Açúcar,cana,72700.0,2013,2010,ATVOS BIOENERGIA BRENCO S.A.,PIE,coordenada do SIGA,-53.28199,-17.83474
+Ferrari,UTE.AI.SP.028058-5.1,SP,Pirassununga - SP,Bagaço de Cana de Açúcar,cana,72500.0,1982,antes,FERRARI TERMOELETRICA S/A,PIE,coordenada do SIGA,-47.36028,-21.84495
+Iaco Agrícola,UTE.AI.MS.030269-4.1,MS,Chapadão do Sul - MS,Bagaço de Cana de Açúcar,cana,71500.0,2014,2010,IACO AGRICOLA S/A,APE,coordenada do SIGA,-52.90987,-18.80008
+Alta Mogiana,UTE.AI.SP.000060-4.1,SP,São Joaquim da Barra - SP,Bagaço de Cana de Açúcar,cana,71000.0,1994,antes,USINA ALTA MOGIANA S/A-ACUCAR E ALCOOL,PIE,coordenada do SIGA,-47.86622,-20.48185
+São Luiz,UTE.AI.SP.026869-0.1,SP,Pirassununga - SP,Bagaço de Cana de Açúcar,cana,70000.0,1999,antes,SAO LUIZ TERMOELETRICA S/A,PIE,coordenada do SIGA,-47.30533,-21.8856
+Da Mata 2,UTE.AI.SP.035773-1.1,SP,Valparaíso - SP,Bagaço de Cana de Açúcar,cana,70000.0,2009,2000,DA MATA S.A.,PIE,coordenada do SIGA,-50.84392,-21.05069
+Da Pedra,UTE.AI.SP.030453-0.1,SP,Serrana - SP,Bagaço de Cana de Açúcar,cana,70000.0,2012,2010,CESE CENTRAL ENERGETICA SERRANA S/A,PIE,coordenada do SIGA,-47.62999,-21.17428
+São João da Boa Vista,UTE.AI.SP.027709-6.1,SP,São João da Boa Vista - SP,Bagaço de Cana de Açúcar,cana,70000.0,1997,antes,COX BIOENERGIA AGROINDUSTRIA LTDA,PIE,coordenada do SIGA,-46.79635,-21.97201
+Sebastianópolis I (Antiga Noroeste Paulista),UTE.AI.SP.029775-5.1,SP,Sebastianópolis do Sul - SP,Bagaço de Cana de Açúcar,cana,68000.0,2009,2000,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-49.94242,-20.58105
+Esplanada (Antiga Jalles Machado),UTE.AI.GO.028112-3.1,GO,Goianésia - GO,Bagaço de Cana de Açúcar,cana,65000.0,2003,2000,ALBIOMA ESPLANADA ENERGIA S.A,PIE,coordenada do SIGA,-48.98869,-15.217
+Guarani Cruz Alta,UTE.AI.SP.027796-7.1,SP,Olímpia - SP,Bagaço de Cana de Açúcar,cana,64800.0,1982,antes,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-49.11125,-20.68838
+Bioflex Caeté,UTE.AI.AL.031371-8.1,AL,São Miguel dos Campos - AL,Bagaço de Cana de Açúcar,cana,62500.0,2014,2010,COMPANHIA ENERGETICA DE SAO MIGUEL DOS CAMPOS,PIE,coordenada do SIGA,-36.08537,-9.77705
+Fartura,UTE.AI.SP.029203-6.1,SP,Mendonça - SP,Bagaço de Cana de Açúcar,cana,62000.0,2006,2000,MENDONCA BIOENERGIA LTDA,PIE,coordenada do SIGA,-49.6114,-21.1528
+Itumbiara,UTE.AI.GO.030090-0.1,GO,Itumbiara - GO,Bagaço de Cana de Açúcar,cana,61500.0,2010,2010,ITUMBIARA BIOENERGIA S.A.,PIE,coordenada do SIGA,-49.26053,-18.36901
+Paranapanema,UTE.AI.SP.030561-8.1,SP,Sandovalina - SP,Bagaço de Cana de Açúcar,cana,60000.0,2012,2010,UMOE BIOENERGY S.A.,PIE,coordenada do SIGA,-51.81887,-22.54629
+Boa Esperança (Antiga Cerradão 3),UTE.AI.MG.040785-2.1,MG,Frutal - MG,Bagaço de Cana de Açúcar,cana,60000.0,2022,2020,BIOENERGIA SAO MATHEUS LTDA.,PIE,coordenada do SIGA,-49.15639,-19.92336
+Meridiano I (Antiga Meridiano),UTE.AI.SP.030303-8.1,SP,Meridiano - SP,Bagaço de Cana de Açúcar,cana,60000.0,2012,2010,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-50.18183,-20.35411
+Rio Pardo,UTE.AI.SP.030065-9.1,SP,Cerqueira César - SP,Bagaço de Cana de Açúcar,cana,60000.0,2009,2000,AVARE TERMOELETRICA LTDA,PIE,coordenada do SIGA,-49.1264,-23.0618
+Bioenergética Vale do Paracatu - BEVAP,UTE.AI.MG.030063-2.1,MG,João Pinheiro - MG,Bagaço de Cana de Açúcar,cana,60000.0,2011,2010,BIOENERGETICA VALE DO PARACATU SA,PIE,coordenada do SIGA,-46.18358,-17.06218
+Vista Alegre I (Antiga Energética Vista Alegre),UTE.AI.MS.029994-4.1,MS,Maracaju - MS,Bagaço de Cana de Açúcar,cana,60000.0,2009,2000,GERACAO BIOMASSA  VISTA  ALEGRE I S.A.,PIE,coordenada do SIGA,-55.5766,-21.78022
+Vista Alegre,UTE.AI.SP.028462-9.1,SP,Itapetininga - SP,Bagaço de Cana de Açúcar,cana,60000.0,2010,2010,AGROINDUSTRIAL VISTA ALEGRE S.A.,PIE,coordenada do SIGA,-48.12474,-23.48906
+Equipav,UTE.AI.SP.028101-8.1,SP,Promissão - SP,Bagaço de Cana de Açúcar,cana,58400.0,2002,2000,RENUKA DO BRASIL S.A.,PIE,coordenada do SIGA,-49.86999,-21.56073
+Santa Elisa - Unidade I,UTE.AI.SP.028232-4.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,58000.0,2002,2000,RAIZEN CENTRO-SUL PAULISTA S.A,PIE,coordenada do SIGA,-48.06798,-21.10567
+Colorado,UTE.AI.SP.028094-1.1,SP,Guaíra - SP,Bagaço de Cana de Açúcar,cana,56715.0,1981,antes,ACUCAR E ETANOL OSWALDO RIBEIRO DE MENDONCA S.A.,PIE,coordenada do SIGA,-48.17553,-20.27921
+Quatá,UTE.AI.SP.028288-0.1,SP,Quatá - SP,Bagaço de Cana de Açúcar,cana,56078.0,1999,antes,ACUCAREIRA QUATA S/A,APE,coordenada do SIGA,-50.6525,-22.24911
+Ituiutaba,UTE.AI.MG.030094-2.1,MG,Ituiutaba - MG,Bagaço de Cana de Açúcar,cana,56000.0,2010,2010,BP Bioenergia Ituiutaba Ltda,PIE,coordenada do SIGA,-49.46224,-18.97307
+São Judas Tadeu,UTE.AI.MG.029759-3.1,MG,Jaíba - MG,Bagaço de Cana de Açúcar,cana,56000.0,2009,2000,SADA BIOENERGIA E AGRICULTURA LTDA.,PIE,coordenada do SIGA,-43.88478,-15.19972
+Guaíra Energética,UTE.AI.SP.030026-8.1,SP,Guaíra - SP,Bagaço de Cana de Açúcar,cana,55000.0,2010,2010,Central Energética Guaíra Ltda.,PIE,coordenada do SIGA,-48.2114,-20.4184
+Santa Cândida II,UTE.AI.SP.031739-0.2,SP,Bocaina - SP,Bagaço de Cana de Açúcar,cana,55000.0,2016,2015,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-48.48138,-22.10472
+Vale do São Simão,UTE.AI.MG.030046-2.1,MG,Santa Vitória - MG,Bagaço de Cana de Açúcar,cana,55000.0,2010,2010,Companhia Energética Vale do São Simão,PIE,coordenada do SIGA,-50.36259,-19.06568
+Volta Grande,UTE.AI.MG.028540-4.1,MG,Conceição das Alagoas - MG,Bagaço de Cana de Açúcar,cana,54938.0,,sem data,DELTA SUCROENERGIA S.A,PIE,coordenada do SIGA,-48.2645,-19.9799
+Nardini,UTE.AI.SP.001528-8.1,SP,Vista Alegre do Alto - SP,Bagaço de Cana de Açúcar,cana,54000.0,1994,antes,COMPANHIA ENERGETICA NARDINI,PIE,coordenada do SIGA,-48.6447,-21.18147
+Cevasa,UTE.AI.SP.028458-0.1,SP,Patrocínio Paulista - SP,Bagaço de Cana de Açúcar,cana,54000.0,2006,2000,CENTRAL ENERGETICA VALE DO SAPUCAI LTDA,APE,coordenada do SIGA,-47.42183,-20.74781
+Cerradão,UTE.AI.MG.029709-7.1,MG,Frutal - MG,Bagaço de Cana de Açúcar,cana,54000.0,2009,2000,BIOENERGIA CERRADAO LTDA,PIE,coordenada do SIGA,-49.14583,-19.91833
+BEN Bioenergia,UTE.AI.AL.030048-9.1,AL,Teotônio Vilela - AL,Bagaço de Cana de Açúcar,cana,53000.0,2013,2010,BEN,PIE,coordenada do SIGA,-36.33397,-9.91639
+Vertente,UTE.AI.SP.029270-2.1,SP,Guaraci - SP,Bagaço de Cana de Açúcar,cana,53000.0,2005,2000,USINA VERTENTE LTDA.,PIE,coordenada do SIGA,-48.99113,-20.40151
+Iacanga,UTE.AI.SP.029636-8.1,SP,Iacanga - SP,Bagaço de Cana de Açúcar,cana,53000.0,2010,2010,IPIRANGA BIOENERGIA IACANGA S/A,PIE,coordenada do SIGA,-49.01213,-21.79718
+Agropéu,UTE.AI.MG.032677-1.1,MG,Pompéu - MG,Bagaço de Cana de Açúcar,cana,51600.0,2016,2015,AGROPEU-AGRO INDUSTRIAL DE POMPEU S/A,PIE,coordenada do SIGA,-44.98497,-19.25169
+Vista Alegre II,UTE.AI.SP.031702-0.2,SP,Narandiba - SP,Bagaço de Cana de Açúcar,cana,51300.0,2015,2015,GERACAO BIOELETRICIDADE VISTA ALEGRE II S.A.,PIE,coordenada do SIGA,-55.5766,-21.78022
+Maracaí,UTE.AI.SP.001405-2.1,SP,Maracaí - SP,Bagaço de Cana de Açúcar,cana,51000.0,2000,2000,BIOENERGIA MARACAI LTDA.,PIE,coordenada do SIGA,-50.64415,-22.57109
+Santa Terezinha,UTE.AI.PR.028149-2.1,PR,Tapejara - PR,Bagaço de Cana de Açúcar,cana,50500.0,2006,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,PIE,coordenada do SIGA,-52.87333,-23.74801
+Bio Coopcana,UTE.AI.PR.028148-4.1,PR,São Carlos do Ivaí - PR,Bagaço de Cana de Açúcar,cana,50000.0,2013,2010,SPE BIO COOPCANA LTDA.,PIE,coordenada do SIGA,-52.48755,-23.27076
+Viralcool Castilho,UTE.AI.SP.030445-0.1,SP,Castilho - SP,Bagaço de Cana de Açúcar,cana,50000.0,2006,2000,VIRALCOOL,APE,coordenada do SIGA,-51.54406,-20.91015
+Bio Alvorada,UTE.AI.MG.030975-3.1,MG,Araporã - MG,Bagaço de Cana de Açúcar,cana,50000.0,2013,2010,SPE BIO ALVORADA LTDA.,PIE,coordenada do SIGA,-49.1901,-18.44112
+Rafard,UTE.AI.SP.002903-3.1,SP,Rafard - SP,Bagaço de Cana de Açúcar,cana,50000.0,1941,antes,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-47.52019,-22.99735
+Colombo Santa Albertina,UTE.AI.SP.030267-8.1,SP,Santa Albertina - SP,Bagaço de Cana de Açúcar,cana,50000.0,2009,2000,COLOMBO BIOENERGIA S.A. UTE 4,PIE,coordenada do SIGA,-50.66621,-20.03609
+São José 2 (Antiga Planalto Bioenergia),UTE.AI.SP.037515-2.1,SP,Macatuba - SP,Bagaço de Cana de Açúcar,cana,50000.0,2023,2020,ACUCAREIRA QUATA S/A,PIE,coordenada do SIGA,-48.78368,-22.49169
+Uberaba 2,UTE.AI.MG.044551-7.1,MG,Uberaba - MG,Bagaço de Cana de Açúcar,cana,50000.0,2024,2020,UBERABA ENERGIA LTDA,PIE,coordenada do SIGA,-47.81694,-19.39139
+Da Mata,UTE.AI.SP.029774-7.1,SP,Valparaíso - SP,Bagaço de Cana de Açúcar,cana,50000.0,2022,2020,DA MATA S.A.,PIE,coordenada do SIGA,-50.84411,-21.0509
+Central Energética Alta Mogiana,UTE.AI.SP.049301-5.1,SP,São Joaquim da Barra - SP,Bagaço de Cana de Açúcar,cana,50000.0,2021,2020,CENTRAL ENERGETICA ALTA MOGIANA S.A,PIE,coordenada do SIGA,-47.88306,-20.47806
+Entre Rios,UTE.AI.GO.050746-6.1,GO,Turvelândia - GO,Bagaço de Cana de Açúcar,cana,50000.0,2022,2020,Energética Entre Rios LTDA.,PIE,coordenada do SIGA,-50.30139,-17.96944
+Vale do Paraná,UTE.AI.SP.035073-7.1,SP,Suzanápolis - SP,Bagaço de Cana de Açúcar,cana,48500.0,2020,2020,UTE VALE DO PARANÁ ALBIOMA S/A,PIE,coordenada do SIGA,-51.02917,-20.40611
+Cedro,UTE.AI.MS.060307-4.1,MS,Paranaíba - MS,Bagaço de Cana de Açúcar,cana,48000.0,2025,2020,PACE PARANAIBA CENTRAL ENERGETICA S/A,PIE,coordenada do SIGA,-51.32468,-19.40154
+Itaenga,UTE.AI.PE.028539-0.1,PE,Lagoa do Itaenga - PE,Bagaço de Cana de Açúcar,cana,47000.0,2007,2000,TERMOELETRICA ITAENGA LTDA,PIE,coordenada do SIGA,-35.28467,-7.90578
+NG Bioenergia I,UTE.AI.GO.031033-6.1,GO,Paraúna - GO,Bagaço de Cana de Açúcar,cana,47000.0,2017,2015,Nova Gália Bioenergia Ltda,APE,coordenada do SIGA,-50.49572,-17.33042
+Goiasa,UTE.AI.GO.028118-2.1,GO,Goiatuba - GO,Bagaço de Cana de Açúcar,cana,46520.0,2005,2000,GOIATUBA ÁLCOOL LTDA,PIE,coordenada do SIGA,-49.67077,-18.07076
+UFL,UTE.AI.PR.031034-4.1,PR,Florestópolis - PR,Bagaço de Cana de Açúcar,cana,46000.0,2014,2010,USINA ALTO ALEGRE S/A,PIE,coordenada do SIGA,-51.37748,-22.85851
+WD,UTE.AI.MG.029122-6.1,MG,João Pinheiro - MG,Bagaço de Cana de Açúcar,cana,46000.0,1988,antes,WD AGROINDUSTRIAL LTDA,PIE,coordenada do SIGA,-45.9907,-18.21528
+Bioenergia Mococa,UTE.AI.SP.040824-7.1,SP,Mococa - SP,Bagaço de Cana de Açúcar,cana,45000.0,2020,2020,IPIRANGA BIOENERGIA MOCOCA S.A.,PIE,coordenada do SIGA,-47.15592,-21.3432
+Clealco Queiroz,UTE.AI.SP.030036-5.1,SP,Queiroz - SP,Bagaço de Cana de Açúcar,cana,45000.0,2010,2010,Clealco Açúcar e Álcool Ltda,PIE,coordenada do SIGA,-50.24723,-21.85031
+Baldin,UTE.AI.SP.030169-8.1,SP,Pirassununga - SP,Bagaço de Cana de Açúcar,cana,45000.0,2010,2010,CPFL BIOENERGIA LTDA.,PIE,coordenada do SIGA,-47.45007,-21.98752
+Vale do Tijuco,UTE.AI.MG.030034-9.1,MG,Uberaba - MG,Bagaço de Cana de Açúcar,cana,45000.0,2010,2010,VALE DO TIJUCO ACUCAR E ALCOOL S.A.,PIE,coordenada do SIGA,-48.23246,-19.3468
+Usina da Pedra,UTE.AI.SP.002019-2.1,SP,Serrana - SP,Bagaço de Cana de Açúcar,cana,45000.0,2003,2000,Central Energética Rio Pardo S.A,PIE,coordenada do SIGA,-47.61887,-21.17198
+Nova Pitangueiras,UTE.AI.SP.072098-4.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,45000.0,2025,2020,PITANGUEIRAS BIOENERGIA LTDA,PIE,centro do município,-48.26052,-21.00369
+São Martinho Boa Vista,UTE.AI.GO.051982-0.1,GO,Quirinópolis - GO,Bagaço de Cana de Açúcar,cana,44500.0,2008,2000,SAO MARTINHO S/A,PIE,coordenada do SIGA,-50.43611,-18.54436
+Biolins,UTE.AI.SP.030125-6.1,SP,Lins - SP,Bagaço de Cana de Açúcar,cana,44000.0,2010,2010,JBS S/A,APE,coordenada do SIGA,-49.78066,-21.67628
+Canabrava,UTE.AI.RJ.030066-7.1,RJ,Campos dos Goytacazes - RJ,Bagaço de Cana de Açúcar,cana,44000.0,2012,2010,CANABRAVA ENERGETICA S/A,PIE,coordenada do SIGA,-41.39566,-21.64913
+Santa Isabel,UTE.AI.SP.028401-7.1,SP,Novo Horizonte - SP,Bagaço de Cana de Açúcar,cana,44000.0,1980,antes,HORIZONTE BIOENERGIA LTDA,PIE,coordenada do SIGA,-49.21244,-21.50856
+Viralcool,UTE.AI.SP.003035-0.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,43000.0,1983,antes,VIRALCOOL,APE,coordenada do SIGA,-48.25026,-20.93855
+USI BIO,UTE.AI.PR.031968-6.1,PR,Santo Inácio - PR,Bagaço de Cana de Açúcar,cana,43000.0,2015,2015,USINA ALTO ALEGRE S/A,PIE,coordenada do SIGA,-51.79771,-22.65241
+São José da Estiva,UTE.AI.SP.027814-9.1,SP,Novo Horizonte - SP,Bagaço de Cana de Açúcar,cana,42500.0,,sem data,UTE SÃO JOSÉ DA ESTIVA S.A.,PIE,coordenada do SIGA,-49.18583,-21.48722
+Santa Adélia,UTE.AI.SP.027343-0.1,SP,Jaboticabal - SP,Bagaço de Cana de Açúcar,cana,42000.0,2002,2000,TERMOELETRICA SANTA ADELIA LTDA,PIE,coordenada do SIGA,-48.29298,-21.33719
+Santa Vitória,UTE.AI.MG.031268-1.1,MG,Santa Vitória - MG,Bagaço de Cana de Açúcar,cana,41400.0,2015,2015,SANTA VITORIA ACUCAR E ALCOOL LTDA,PIE,coordenada do SIGA,-50.22397,-18.77092
+São João,UTE.AI.SP.026832-1.1,SP,Araras - SP,Bagaço de Cana de Açúcar,cana,40750.0,1975,antes,U.S.J.,APE,coordenada do SIGA,-47.3575,-22.4264
+Itamarati,UTE.AI.MT.028121-2.1,MT,Nova Olímpia - MT,Bagaço de Cana de Açúcar,cana,40500.0,2001,2000,USINAS ITAMARATI S/A,APE,coordenada do SIGA,-57.19577,-14.7588
+Potirendaba I (Antiga Cerradinho Potirendaba),UTE.AI.SP.029655-4.1,SP,Potirendaba - SP,Bagaço de Cana de Açúcar,cana,40200.0,2008,2000,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-49.31768,-21.09992
+Cachoeira Dourada,UTE.AI.GO.030033-0.1,GO,Cachoeira Dourada - GO,Bagaço de Cana de Açúcar,cana,40000.0,2013,2010,CARGILL BIOENERGIA LTDA.,PIE,coordenada do SIGA,-49.64453,-18.49445
+Vale do Tijuco II,UTE.AI.MG.030473-5.1,MG,Uberaba - MG,Bagaço de Cana de Açúcar,cana,40000.0,2012,2010,VALE DO TIJUCO ACUCAR E ALCOOL S.A.,PIE,coordenada do SIGA,-48.2322,-19.3468
+Rio Vermelho,UTE.AI.SP.030543-0.1,SP,Junqueirópolis - SP,Bagaço de Cana de Açúcar,cana,40000.0,2014,2010,Viterra Bioenergia S.A.,PIE,coordenada do SIGA,-51.36043,-21.48741
+Destilaria Melhoramentos,UTE.AI.PR.028074-7.1,PR,Jussara - PR,Bagaço de Cana de Açúcar,cana,40000.0,2002,2000,Melhoramentos  Bioenergia Ltda.,PIE,coordenada do SIGA,-52.4285,-23.56777
+Colombo Palestina,UTE.AI.SP.030032-2.1,SP,Palestina - SP,Bagaço de Cana de Açúcar,cana,40000.0,2007,2000,COLOMBO BIOENERGIA S.A. UTE 3,PIE,coordenada do SIGA,-49.58983,-20.31066
+Colombo Ariranha 2,UTE.AI.SP.031112-0.1,SP,Ariranha - SP,Bagaço de Cana de Açúcar,cana,40000.0,2015,2015,COLOMBO BIOENERGIA S.A. UTE 2,PIE,coordenada do SIGA,-48.82803,-21.21184
+Rio Vermelho 2,UTE.AI.SP.031793-4.1,SP,Junqueirópolis - SP,Bagaço de Cana de Açúcar,cana,40000.0,2014,2010,Viterra Bioenergia S.A.,PIE,coordenada do SIGA,-51.35639,-21.35237
+Boa Vista,UTE.AI.GO.029588-4.1,GO,Quirinópolis - GO,Bagaço de Cana de Açúcar,cana,40000.0,2008,2000,Bioenergética Boa Vista S.A.,PIE,coordenada do SIGA,-50.43478,-18.54618
+Triângulo,UTE.AI.MG.050155-7.1,MG,Tupaciguara - MG,Bagaço de Cana de Açúcar,cana,40000.0,2024,2020,TRIÂNGULO ENERGIA LTDA,PIE,coordenada do SIGA,-48.61131,-18.75634
+São Martinho Bioenergia,UTE.AI.SP.032371-3.1,SP,Pradópolis - SP,Bagaço de Cana de Açúcar,cana,40000.0,2024,2020,BIOENERGIA SÃO MARTINHO LTDA,PIE,coordenada do SIGA,-48.12135,-21.32324
+CVW Energética,UTE.AI.AL.049853-0.1,AL,Coruripe - AL,Bagaço de Cana de Açúcar,cana,40000.0,2023,2020,CVW Energética Ltda.,PIE,coordenada do SIGA,-36.27518,-10.11225
+Asolo 2,UTE.AI.GO.054823-5.1,GO,Goiatuba - GO,Bagaço de Cana de Açúcar,cana,40000.0,2025,2020,ASOLO ENERGIA RENOVÁVEL LTDA,PIE,coordenada do SIGA,-49.8544,-17.94781
+Cocal II,UTE.AI.SP.029713-5.1,SP,Narandiba - SP,Bagaço de Cana de Açúcar,cana,40000.0,2010,2010,USINA TERMELETRICA G1 NRD LTDA,PIE,coordenada do SIGA,-51.494,-22.52681
+Cerradão 2,UTE.AI.MG.038336-8.1,MG,Frutal - MG,Bagaço de Cana de Açúcar,cana,40000.0,2020,2020,BIOENERGIA CERRADAO II LTDA,PIE,coordenada do SIGA,-49.15503,-19.92416
+Cooper-Rubi,UTE.AI.GO.029153-6.1,GO,Rubiataba - GO,Bagaço de Cana de Açúcar,cana,40000.0,1987,antes,RUBIATABA INDUSTRIAL S.A.,PIE,coordenada do SIGA,-49.74883,-15.17541
+Baía Formosa,UTE.AI.RN.028605-2.1,RN,Baía Formosa - RN,Bagaço de Cana de Açúcar,cana,40000.0,2011,2010,VALE VERDE BIO FORMOSA LTDA,PIE,coordenada do SIGA,-35.05573,-6.41613
+Usaciga,UTE.AI.PR.029144-7.1,PR,Cidade Gaúcha - PR,Bagaço de Cana de Açúcar,cana,40000.0,2007,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,PIE,coordenada do SIGA,-52.905,-23.3726
+Amandina II,UTE.AI.MS.038375-9.1,MS,Ivinhema - MS,Bagaço de Cana de Açúcar,cana,40000.0,2018,2015,ADECOAGRO ENERGIA LTDA,PIE,coordenada do SIGA,-53.82117,-22.32506
+G2 NRD,UTE.AI.SP.074707-6.1,SP,Narandiba - SP,Bagaço de Cana de Açúcar,cana,40000.0,2026,2020,USINA TERMELETRICA G2 NRD LTDA,PIE,coordenada do SIGA,-51.50388,-22.53119
+Interlagos,UTE.AI.SP.029461-6.1,SP,Pereira Barreto - SP,Bagaço de Cana de Açúcar,cana,40000.0,2007,2000,Termoelétrica Interlagos Ltda,PIE,coordenada do SIGA,-51.23453,-20.52648
+Ester,UTE.AI.SP.000912-1.1,SP,Cosmópolis - SP,Bagaço de Cana de Açúcar,cana,40000.0,1954,antes,CPFL BIO BURITI LTDA,PIE,coordenada do SIGA,-47.2109,-22.6573
+LDC Bioenergia Leme (Antiga Coinbra - Cresciumal),UTE.AI.SP.027059-8.1,SP,Leme - SP,Bagaço de Cana de Açúcar,cana,39600.0,1986,antes,COGERACAO NAUTILUS LTDA,PIE,coordenada do SIGA,-47.33762,-22.17216
+São Martinho Energia,UTE.AI.SP.030994-0.1,SP,Pradópolis - SP,Bagaço de Cana de Açúcar,cana,39500.0,2013,2010,BIOENERGETICA SAO MARTINHO LTDA,PIE,coordenada do SIGA,-48.10986,-21.31738
+Alcídia,UTE.AI.SP.027913-7.1,SP,Teodoro Sampaio - SP,Bagaço de Cana de Açúcar,cana,38100.0,2010,2010,ATVOS BIOENERGIA ALCIDIA S.A.,PIE,coordenada do SIGA,-52.52397,-22.34972
+Guarani - Tanabi,UTE.AI.SP.030095-0.1,SP,Tanabi - SP,Bagaço de Cana de Açúcar,cana,38000.0,2014,2010,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-49.53905,-20.48623
+Barra Grande Lençóis,UTE.AI.SP.027055-5.1,SP,Lençóis Paulista - SP,Bagaço de Cana de Açúcar,cana,36600.0,2003,2000,ACUCAREIRA QUATA S/A,PIE,coordenada do SIGA,-48.75682,-22.62529
+São José,UTE.AI.PE.029113-7.1,PE,Igarassu - PE,Bagaço de Cana de Açúcar,cana,36205.0,1976,antes,USINA SAO JOSE S/A,PIE,coordenada do SIGA,-35.00133,-7.81755
+São Luiz II,UTE.AI.SP.073228-1.1,SP,Não Informado,Bagaço de Cana de Açúcar,cana,36000.0,2024,2020,CENTRAL ENERGETICA SAO LUIZ LTDA,PIE,coordenada do SIGA,-49.77,-22.94083
+Santa Terezinha Paranacity,UTE.AI.PR.028139-5.1,PR,Paranacity - PR,Bagaço de Cana de Açúcar,cana,36000.0,2009,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,PIE,coordenada do SIGA,-52.18083,-22.87556
+Laguna,UTE.AI.MS.030482-4.1,MS,Bataiporã - MS,Bagaço de Cana de Açúcar,cana,35200.0,2011,2010,USINA LAGUNA,PIE,coordenada do SIGA,-53.30467,-22.45413
+Brotas,UTE.AI.SP.030782-3.1,SP,Brotas - SP,Bagaço de Cana de Açúcar,cana,35000.0,2013,2010,COGERACAO DE ENERGIA ELETRICA RHODIA BROTAS S.A.,APE,coordenada do SIGA,-48.10599,-22.35042
+Sonora,UTE.AI.MS.027385-6.1,MS,Sonora - MS,Bagaço de Cana de Açúcar,cana,35000.0,2019,2015,SONORA ESTÂNCIA S/A,PIE,coordenada do SIGA,-54.76152,-17.61732
+Pioneiros II,UTE.AI.SP.029642-2.1,SP,Sud Mennucci - SP,Bagaço de Cana de Açúcar,cana,35000.0,2013,2010,Pioneiros Termoelétrica Ilha Solteira S.A.,PIE,coordenada do SIGA,-50.95253,-20.72629
+Brotas II,UTE.AI.SP.034649-7.1,SP,Brotas - SP,Bagaço de Cana de Açúcar,cana,35000.0,2016,2015,RHODIA BRASIL S.A.,APE,coordenada do SIGA,-48.10599,-22.35042
+USI (Antiga Unidade Santo Inácio - USI),UTE.AI.PR.029575-2.1,PR,Santo Inácio - PR,Bagaço de Cana de Açúcar,cana,35000.0,2007,2000,USINA ALTO ALEGRE S/A,PIE,coordenada do SIGA,-51.7774,-22.7088
+Angélica I,UTE.AI.MS.051752-6.1,MS,Angélica - MS,Bagaço de Cana de Açúcar,cana,35000.0,2010,2010,ANGELICA ENERGIA LTDA,PIE,coordenada do SIGA,-53.83926,-22.03902
+Energética Tupaciguara (Antiga Central Energética Tupaciguara),UTE.AI.MG.038176-4.1,MG,Tupaciguara - MG,Bagaço de Cana de Açúcar,cana,35000.0,2020,2020,CENTRAL ENERGÉTICA TUPACIGUARA LTDA,PIE,coordenada do SIGA,-48.61181,-18.7557
+Guarani Tanabi 2,UTE.AI.SP.031445-5.1,SP,Tanabi - SP,Bagaço de Cana de Açúcar,cana,34000.0,2015,2015,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-49.53905,-20.48623
+Paulicéia,UTE.AI.SP.030683-5.1,SP,Paulicéia - SP,Bagaço de Cana de Açúcar,cana,33750.0,2013,2010,USINA CAETE S A,PIE,coordenada do SIGA,-51.84714,-21.30928
+Alcon,UTE.AI.ES.029150-1.1,ES,Conceição da Barra - ES,Bagaço de Cana de Açúcar,cana,33000.0,2001,2000,Companhia de Álcool Conceição da Barra S.A,PIE,coordenada do SIGA,-39.94536,-18.45736
+Mogiana Bio-Energia,UTE.AI.SP.030447-6.1,SP,São Joaquim da Barra - SP,Bagaço de Cana de Açúcar,cana,33000.0,2012,2010,USINA ALTA MOGIANA S/A-ACUCAR E ALCOOL,PIE,coordenada do SIGA,-47.87488,-20.47239
+Decasa,UTE.AI.SP.028051-8.1,SP,Ibirarema - SP,Bagaço de Cana de Açúcar,cana,33000.0,2004,2000,ENERCASA,PIE,coordenada do SIGA,-50.1128,-22.76735
+Lasa,UTE.AI.ES.029107-2.1,ES,Linhares - ES,Bagaço de Cana de Açúcar,cana,33000.0,1982,antes,LASA LINHARES AGROINDUSTRIAL SA,PIE,coordenada do SIGA,-40.01046,-19.3406
+Ibitiúva Bioenergética (Antiga Destilaria Andrade),UTE.AI.SP.027768-1.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,33000.0,1987,antes,USINA ANDRADE LTDA,PIE,coordenada do SIGA,-48.27609,-21.00129
+Tropical Bioenergia II,UTE.AI.GO.031769-1.1,GO,Edéia - GO,Bagaço de Cana de Açúcar,cana,32000.0,2014,2010,TROPICAL BIOENERGIA S.A.,PIE,coordenada do SIGA,-50.10314,-17.68194
+Pioneiros,UTE.AI.SP.028047-0.1,SP,Sud Mennucci - SP,Bagaço de Cana de Açúcar,cana,32000.0,2006,2000,Pioneiros Termoelétrica Sud Menucci S.A.,PIE,coordenada do SIGA,-50.95972,-20.72833
+Coruripe,UTE.AI.AL.029161-7.1,AL,Coruripe - AL,Bagaço de Cana de Açúcar,cana,32000.0,2006,2000,S A USINA CORURIPE ACUCAR E ALCOOL,PIE,coordenada do SIGA,-36.27422,-10.12339
+Enervale,UTE.AI.MG.030850-1.1,MG,João Pinheiro - MG,Bagaço de Cana de Açúcar,cana,30000.0,2012,2010,CENTRAL BIOENERGETICA ENERVALE S/A,PIE,coordenada do SIGA,-46.18,-17.06379
+Meridiano II (Antiga Noble Energia II),UTE.AI.SP.030271-6.1,SP,Meridiano - SP,Bagaço de Cana de Açúcar,cana,30000.0,2012,2010,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-50.18183,-20.35411
+Santa Cândida I,UTE.AI.SP.027767-3.1,SP,Bocaina - SP,Bagaço de Cana de Açúcar,cana,30000.0,2002,2000,"GERACAO BIOELETRICIDADE SANTA CANDIDA I S.A,",PIE,coordenada do SIGA,-48.4817,-22.1056
+Bambuí,UTE.AI.MG.031413-7.1,MG,Bambuí - MG,Bagaço de Cana de Açúcar,cana,30000.0,2014,2010,BAMBUI BIOENERGIA S.A.,PIE,coordenada do SIGA,-46.03991,-20.08714
+Furlan Avaré,UTE.AI.SP.031189-8.1,SP,Avaré - SP,Bagaço de Cana de Açúcar,cana,30000.0,2014,2010,USINA ACUCAREIRA FURLAN S/A-EM RECUPERACAO JUDICIAL,PIE,coordenada do SIGA,-48.92925,-22.92363
+Viralcool 2,UTE.AI.SP.030851-0.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,30000.0,2013,2010,VIRALCOOL,APE,coordenada do SIGA,-48.25278,-20.9375
+Sebastianópolis II (Antiga Noble Energia),UTE.AI.SP.030004-7.1,SP,Sebastianópolis do Sul - SP,Bagaço de Cana de Açúcar,cana,30000.0,2010,2010,COFCO INTERNATIONAL BRASIL S.A.,PIE,coordenada do SIGA,-49.94242,-20.58105
+Canaã,UTE.AI.SP.029138-2.1,SP,Paraguaçu Paulista - SP,Bagaço de Cana de Açúcar,cana,30000.0,2006,2000,COCAL UTE PPT LTDA,PIE,coordenada do SIGA,-47.60201,-22.94272
+Coruripe Energética - Filial Campo Florido,UTE.AI.MG.029703-8.1,MG,Campo Florido - MG,Bagaço de Cana de Açúcar,cana,30000.0,2008,2000,CORURIPE ENERGETICA S.A.,PIE,coordenada do SIGA,-48.72954,-19.80893
+Central Olho D Água,UTE.AI.PE.028692-3.1,PE,Camutanga - PE,Bagaço de Cana de Açúcar,cana,30000.0,2015,2015,USINA CENTRAL OLHO D'AGUA S/A,PIE,coordenada do SIGA,-35.24413,-7.41762
+Giasa II,UTE.AI.PB.028957-4.1,PB,Pedras de Fogo - PB,Bagaço de Cana de Açúcar,cana,30000.0,2003,2000,USINA GIASA LTDA,PIE,coordenada do SIGA,-35.02967,-7.35328
+JB,UTE.AI.PE.028392-4.1,PE,Vitória de Santo Antão - PE,Bagaço de Cana de Açúcar,cana,30000.0,2006,2000,COMPANHIA ALCOOLQUIMICA NACIONAL-ALCOOLQUIMICA,PIE,coordenada do SIGA,-35.27178,-8.22389
+Campo Florido,UTE.AI.MG.028478-5.1,MG,Campo Florido - MG,Bagaço de Cana de Açúcar,cana,30000.0,2002,2000,S A USINA CORURIPE ACUCAR E ALCOOL,PIE,coordenada do SIGA,-48.72553,-19.80915
+BVE (Antiga Ceni),UTE.AI.SP.037341-9.1,SP,Nova Independência - SP,Bagaço de Cana de Açúcar,cana,30000.0,2018,2015,BVE,PIE,coordenada do SIGA,-51.40821,-21.09911
+Barralcool,UTE.AI.MT.000227-5.1,MT,Barra do Bugres - MT,Bagaço de Cana de Açúcar,cana,30000.0,2002,2000,USINA BARRALCOOL S/A,PIE,coordenada do SIGA,-57.21053,-15.03297
+Japungu,UTE.AI.PB.028515-3.1,PB,Santa Rita - PB,Bagaço de Cana de Açúcar,cana,28800.0,1998,antes,Japungu Agroindustrial S.A,PIE,coordenada do SIGA,-35.01433,-6.98691
+UFA,UTE.AI.SP.028366-5.1,SP,Presidente Prudente - SP,Bagaço de Cana de Açúcar,cana,28700.0,1997,antes,USINA ALTO ALEGRE S/A,PIE,coordenada do SIGA,-51.26058,-21.86567
+Ruette,UTE.AI.SP.027345-7.1,SP,Paraíso - SP,Bagaço de Cana de Açúcar,cana,28000.0,2006,2000,TIETE BIOENERGIA S.A.,PIE,coordenada do SIGA,-48.71079,-21.04089
+N O Bioenergia,UTE.AI.SP.032525-2.1,SP,Araras - SP,Bagaço de Cana de Açúcar,cana,28000.0,2016,2015,J O Bioenergia S.A.,PIE,coordenada do SIGA,-47.40839,-22.33668
+DVPA,UTE.AI.MG.030266-0.1,MG,Paracatu - MG,Bagaço de Cana de Açúcar,cana,28000.0,2010,2010,Destilaria Vale do Paracatu Agroenergia Ltda.,PIE,coordenada do SIGA,-46.66339,-17.1229
+Tarumã (Antiga Nova América),UTE.AI.SP.028096-8.1,SP,Tarumã - SP,Bagaço de Cana de Açúcar,cana,27500.0,2001,2000,BIOENERGIA TARUMA LTDA.,PIE,coordenada do SIGA,-50.54834,-22.78501
+Jitituba Santo Antônio,UTE.AI.AL.028708-3.1,AL,São Luís do Quitunde - AL,Bagaço de Cana de Açúcar,cana,27400.0,,sem data,CENTRAL ENERGETICA JITITUBA LTDA,PIE,coordenada do SIGA,-35.55658,-9.29071
+Coprodia,UTE.AI.MT.028120-4.1,MT,Campo Novo do Parecis - MT,Bagaço de Cana de Açúcar,cana,27200.0,1994,antes,COOPERATIVA AGR PROD CANA DE CAMPO NOVO DO PARECIS LTDA,APE,coordenada do SIGA,-57.84057,-13.78095
+São Francisco,UTE.AI.SP.027335-0.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,25200.0,1987,antes,USINA SAO FRANCISCO S/A,PIE,coordenada do SIGA,-48.00938,-21.12346
+Vale do Pontal 2,UTE.AI.MG.038172-1.1,MG,Limeira do Oeste - MG,Bagaço de Cana de Açúcar,cana,25000.0,2022,2020,VALE DO PONTAL ACUCAR E ETANOL S.A.,PIE,coordenada do SIGA,-50.7232,-19.31306
+Viralcool Castilho 2,UTE.AI.SP.040784-4.1,SP,Castilho - SP,Bagaço de Cana de Açúcar,cana,25000.0,2022,2020,VIRALCOOL,APE,coordenada do SIGA,-51.58386,-21.08931
+JACAREZINHO 2,UTE.AI.PR.074637-1.1,PR,Jacarezinho - PR,Bagaço de Cana de Açúcar,cana,25000.0,2026,2020,MARINGÁ ENERGIA LTDA.,PIE,centro do município,-49.9864,-23.14797
+Guarani Cruz Alta 2,UTE.AI.SP.033380-8.1,SP,Olímpia - SP,Bagaço de Cana de Açúcar,cana,25000.0,2019,2015,TEREOS ACUCAR E ENERGIA BRASIL S.A.,PIE,coordenada do SIGA,-49.11048,-20.68856
+Total,UTE.AI.MG.029724-0.1,MG,Bambuí - MG,Bagaço de Cana de Açúcar,cana,25000.0,2010,2010,BAMBUI BIOENERGIA S.A.,PIE,coordenada do SIGA,-46.04417,-20.08556
+Cocal,UTE.AI.SP.027974-9.1,SP,Paraguaçu Paulista - SP,Bagaço de Cana de Açúcar,cana,25000.0,,sem data,COCAL TERMOELETRICA S/A,PIE,coordenada do SIGA,-50.77933,-22.46996
+IPIRANGA BIOENERGIA MOCOCA II,UTE.AI.SP.061587-0.1,SP,Mococa - SP,Bagaço de Cana de Açúcar,cana,25000.0,2025,2020,IPIRANGA BIOENERGIA MOCOCA II S/A,PIE,coordenada do SIGA,-47.15592,-21.3432
+Ipê (Antiga Ceni),UTE.AI.SP.030268-6.1,SP,Nova Independência - SP,Bagaço de Cana de Açúcar,cana,25000.0,2012,2010,CENI,PIE,coordenada do SIGA,-51.48213,-21.10037
+Vale do Pontal (Antiga Cabrera),UTE.AI.MG.030371-2.1,MG,Limeira do Oeste - MG,Bagaço de Cana de Açúcar,cana,25000.0,2009,2000,VALE DO PONTAL ACUCAR E ETANOL S.A.,PIE,coordenada do SIGA,-50.70825,-19.30737
+Campo Lindo,UTE.AI.SE.030396-8.1,SE,Nossa Senhora das Dores - SE,Bagaço de Cana de Açúcar,cana,25000.0,2011,2010,Agro Industrial Campo Lindo Ltda,PIE,coordenada do SIGA,-37.18153,-10.46812
+Pitangueiras,UTE.AI.SP.028859-4.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,25000.0,2002,2000,PITANGUEIRAS AÇÚCAR E ÁLCOOL LTDA,APE,coordenada do SIGA,-48.26262,-21.05223
+Uruaçu Açúcar e Álcool,UTE.AI.GO.060595-6.1,GO,Uruaçu - GO,Bagaço de Cana de Açúcar,cana,25000.0,2013,2010,RUBIATABA INDUSTRIAL S.A.,PIE,coordenada do SIGA,-49.0652,-14.41741
+CEM (Antiga Camen),UTE.AI.GO.029546-9.1,GO,Morrinhos - GO,Bagaço de Cana de Açúcar,cana,24000.0,2013,2010,CENTRAL ENERGETICA MORRINHOS SA,PIE,coordenada do SIGA,-49.18953,-17.92371
+Carneirinho,UTE.AI.MG.029619-8.1,MG,Carneirinho - MG,Bagaço de Cana de Açúcar,cana,24000.0,2008,2000,S A USINA CORURIPE ACUCAR E ALCOOL,PIE,coordenada do SIGA,-50.77506,-19.81177
+Coruripe Iturama,UTE.AI.MG.028479-3.1,MG,Iturama - MG,Bagaço de Cana de Açúcar,cana,24000.0,2002,2000,CORURIPE ENERGETICA S.A.,PIE,coordenada do SIGA,-50.32885,-19.70462
+Comvap,UTE.AI.PI.029773-9.1,PI,União - PI,Bagaço de Cana de Açúcar,cana,23500.0,2006,2000,COMVAP ACUCAR E ALCOOL LTDA,APE,coordenada do SIGA,-42.88611,-4.85472
+Santo Antônio,UTE.AI.SP.028344-4.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,23000.0,1990,antes,USINA SANTO ANTONIO S/A,PIE,coordenada do SIGA,-47.95136,-21.11629
+Santa Fé,UTE.AI.SP.027922-6.1,SP,Nova Europa - SP,Bagaço de Cana de Açúcar,cana,22000.0,1976,antes,USINA SANTA FE S/A.,PIE,coordenada do SIGA,-48.61221,-21.81781
+Monções,UTE.AI.SP.029779-8.1,SP,Monções - SP,Bagaço de Cana de Açúcar,cana,22000.0,2010,2010,Açucareira Virgolino de Oliveira S.A.,PIE,coordenada do SIGA,-50.07932,-20.86324
+Petribu,UTE.AI.PE.029218-4.1,PE,Lagoa do Itaenga - PE,Bagaço de Cana de Açúcar,cana,22000.0,1970,antes,USINA PETRIBU SA,APE,coordenada do SIGA,-35.24402,-7.88777
+Lago Azul,UTE.AI.GO.029173-0.1,GO,Ipameri - GO,Bagaço de Cana de Açúcar,cana,21700.0,1982,antes,Lasa Lago Azul S.A.,APE,coordenada do SIGA,-47.68992,-17.25758
+Estivas,UTE.AI.RN.028660-5.1,RN,Arês - RN,Bagaço de Cana de Açúcar,cana,21000.0,1976,antes,USINA ESTIVAS LTDA,PIE,coordenada do SIGA,-35.19802,-6.22664
+Marituba,UTE.AI.AL.028542-0.1,AL,Igreja Nova - AL,Bagaço de Cana de Açúcar,cana,20500.0,2001,2000,USINA CAETE S A,PIE,coordenada do SIGA,-36.542,-10.15064
+Monteverde,UTE.AI.MS.029990-1.1,MS,Ponta Porã - MS,Bagaço de Cana de Açúcar,cana,20000.0,2010,2010,BUNGE AÇÚCAR E BIOENERGIA S.A.,PIE,coordenada do SIGA,-55.0938,-22.29161
+Jacarezinho,UTE.AI.PR.028153-0.1,PR,Jacarezinho - PR,Bagaço de Cana de Açúcar,cana,20000.0,1977,antes,MARINGÁ ENERGIA LTDA.,PIE,coordenada do SIGA,-49.94126,-23.09315
+Cambuí,UTE.AI.GO.035044-3.1,GO,Santa Helena de Goiás - GO,Bagaço de Cana de Açúcar,cana,20000.0,2013,2010,Energética Cambuí LTDA.,APE,coordenada do SIGA,-50.63523,-17.92397
+Coruripe Açúcar e Álcool,UTE.AI.MG.030533-2.1,MG,Iturama - MG,Bagaço de Cana de Açúcar,cana,20000.0,2011,2010,S A USINA CORURIPE ACUCAR E ALCOOL,PIE,coordenada do SIGA,-50.3347,-19.70962
+Pagrisa,UTE.AI.PA.035756-1.1,PA,Ulianópolis - PA,Bagaço de Cana de Açúcar,cana,20000.0,1982,antes,PAGRISA PARA PASTORIL E AGRICOLA S/A,APE,coordenada do SIGA,-47.4876,-3.71751
+Rio Vermelho 3,UTE.AI.SP.035093-1.1,SP,Junqueirópolis - SP,Bagaço de Cana de Açúcar,cana,20000.0,2021,2020,Viterra Bioenergia S.A.,PIE,coordenada do SIGA,-51.36586,-21.33969
+Panorama,UTE.AI.GO.034582-2.1,GO,Itumbiara - GO,Bagaço de Cana de Açúcar,cana,20000.0,2008,2000,Usina Panorama S.A,APE,coordenada do SIGA,-49.41785,-18.35347
+São Luiz,UTE.AI.SP.028060-7.1,SP,Ourinhos - SP,Bagaço de Cana de Açúcar,cana,20000.0,2001,2000,USINA SAO LUIZ S A,APE,coordenada do SIGA,-49.77,-22.94083
+Floresta,UTE.AI.GO.035804-5.1,GO,Santo Antônio da Barra - GO,Bagaço de Cana de Açúcar,cana,20000.0,2009,2000,FLORESTA S/A ACUCAR E ALCOOL,APE,coordenada do SIGA,-50.71439,-17.61775
+Monte Alegre,UTE.AI.PB.034891-0.1,PB,Mamanguape - PB,Bagaço de Cana de Açúcar,cana,19200.0,1995,antes,USINA MONTE ALEGRE SA,APE,coordenada do SIGA,-35.14897,-6.68319
+José Bonifácio,UTE.AI.SP.030270-8.1,SP,José Bonifácio - SP,Bagaço de Cana de Açúcar,cana,19000.0,2006,2000,Açucareira Virgolino de Oliveira S.A.,APE,coordenada do SIGA,-49.91196,-21.08204
+Vale do Ivaí,UTE.AI.PR.028146-8.1,PR,São Pedro do Ivaí - PR,Bagaço de Cana de Açúcar,cana,18400.0,2001,2000,RENUKA VALE DO IVAÍ S.A.,PIE,coordenada do SIGA,-51.83653,-23.87401
+Sinimbu,UTE.AI.AL.028750-4.1,AL,Jequiá da Praia - AL,Bagaço de Cana de Açúcar,cana,18000.0,,sem data,Central Energética Vale do Jequiá Ltda,PIE,coordenada do SIGA,-36.15073,-9.88114
+São José do Pinheiro,UTE.AI.SE.029685-6.1,SE,Laranjeiras - SE,Bagaço de Cana de Açúcar,cana,17500.0,2009,2000,Usina São José do Pinheiro Ltda,PIE,coordenada do SIGA,-37.20453,-10.76471
+Serra Grande,UTE.AI.AL.028543-9.1,AL,São José da Laje - AL,Bagaço de Cana de Açúcar,cana,17200.0,2001,2000,Usina Serra Grande S.A.,APE,coordenada do SIGA,-36.05739,-9.01107
+Água Bonita,UTE.AI.SP.027891-2.1,SP,Tarumã - SP,Bagaço de Cana de Açúcar,cana,17000.0,2006,2000,TERMELÉTRICA ÁGUA BONITA LTDA,PIE,coordenada do SIGA,-50.59851,-22.74073
+Trapiche,UTE.AI.PE.028651-6.1,PE,Sirinhaém - PE,Bagaço de Cana de Açúcar,cana,16830.0,1981,antes,USINA TRAPICHE S/A,APE,coordenada do SIGA,-35.1164,-8.59337
+Ibéria,UTE.AI.SP.030439-5.1,SP,Borá - SP,Bagaço de Cana de Açúcar,cana,16520.0,2005,2000,IBERIA INDUSTRIAL E COMERCIAL LTDA,APE,coordenada do SIGA,-50.47443,-22.16161
+Usaçúcar - Terra Rica,UTE.AI.PR.029780-1.1,PR,Terra Rica - PR,Bagaço de Cana de Açúcar,cana,16500.0,2009,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,APE,coordenada do SIGA,-52.70404,-22.78308
+MB,UTE.AI.SP.001449-4.1,SP,Morro Agudo - SP,Bagaço de Cana de Açúcar,cana,16400.0,1980,antes,RAIZEN CENTRO-SUL PAULISTA S.A,PIE,coordenada do SIGA,-48.19187,-20.77866
+Casa de Força,UTE.AI.SP.028063-1.1,SP,Fernandópolis - SP,Bagaço de Cana de Açúcar,cana,16400.0,2014,2010,ALCOESTE BIOENERGIA FERNANDOPOLIS S.A,APE,coordenada do SIGA,-50.34387,-20.23457
+Usina da Serra,UTE.AI.SP.028209-0.1,SP,Ibaté - SP,Bagaço de Cana de Açúcar,cana,16200.0,2002,2000,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-47.99263,-22.00951
+Frutal,UTE.AI.MG.029290-7.1,MG,Frutal - MG,Bagaço de Cana de Açúcar,cana,16092.0,,sem data,Usina Frutal Açúcar e Álcool Ltda.,APE,coordenada do SIGA,-48.82075,-20.08255
+Lins,UTE.AI.SP.030890-0.1,SP,Lins - SP,Bagaço de Cana de Açúcar,cana,16000.0,2007,2000,Lins Agroindustrial S.A.,PIE,coordenada do SIGA,-49.54,-21.59974
+Bom Sucesso,UTE.AI.GO.030530-8.1,GO,Goiatuba - GO,Bagaço de Cana de Açúcar,cana,16000.0,2011,2010,BOM SUCESSO AGROINDUSTRIA S.A.,PIE,coordenada do SIGA,-49.8883,-17.95103
+Santa Helena,UTE.AI.MS.030173-6.1,MS,Nova Andradina - MS,Bagaço de Cana de Açúcar,cana,16000.0,2011,2010,ENERGETICA SANTA HELENA S/A,PIE,coordenada do SIGA,-53.42626,-21.99716
+Zanin,UTE.AI.SP.028325-8.1,SP,Araraquara - SP,Bagaço de Cana de Açúcar,cana,16000.0,1983,antes,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-48.17444,-21.79036
+Agrovale,UTE.AI.BA.028696-6.1,BA,Juazeiro - BA,Bagaço de Cana de Açúcar,cana,16000.0,1979,antes,AGRO INDUSTRIAS DO VALE DO SAO FRANCISCO SA AGROVALE,PIE,coordenada do SIGA,-40.36593,-9.49785
+CET (Antiga Bioenergética Aroeira),UTE.AI.MG.030313-5.1,MG,Tupaciguara - MG,Bagaço de Cana de Açúcar,cana,16000.0,2014,2010,CENTRAL ENERGÉTICA TUPACIGUARA LTDA,APE,coordenada do SIGA,-48.61297,-18.75548
+Monte Alegre,UTE.AI.MG.029688-0.1,MG,Monte Belo - MG,Bagaço de Cana de Açúcar,cana,16000.0,2009,2000,USINA MONTE ALEGRE LTDA,APE,coordenada do SIGA,-46.24767,-21.38492
+Nova Moreno,UTE.AI.SP.029645-7.1,SP,Monte Aprazível - SP,Bagaço de Cana de Açúcar,cana,15504.0,2005,2000,CENTRAL ENERGETICA MORENO DE MONTE APRAZIVEL ACUCAR E ALCOOL LTDA.,APE,coordenada do SIGA,-49.76524,-20.82783
+Goioerê,UTE.AI.PR.028150-6.1,PR,Moreira Sales - PR,Bagaço de Cana de Açúcar,cana,15000.0,1978,antes,USINA DE ACUCAR SANTA TEREZINHA LTDA,PIE,coordenada do SIGA,-53.088,-23.93961
+Canápolis,UTE.AI.MG.045313-7.1,MG,Canápolis - MG,Bagaço de Cana de Açúcar,cana,15000.0,2020,2020,CANÁPOLIS AÇUCAR E ETANOL S.A,APE,coordenada do SIGA,-49.26574,-18.8777
+Branco Peres,UTE.AI.SP.027947-1.1,SP,Adamantina - SP,Bagaço de Cana de Açúcar,cana,15000.0,2020,2020,BRANCO PERES AGRO S/A,PIE,coordenada do SIGA,-51.02833,-21.48778
+Citrovita Catanduva,UTE.AI.SP.029572-8.1,SP,Catanduva - SP,Bagaço de Cana de Açúcar,cana,15000.0,2011,2010,CITROSUCO S/A AGROINDÚSTRIA,APE,coordenada do SIGA,-48.96353,-21.13401
+Vale do Verdão,UTE.AI.GO.028116-6.1,GO,Turvelândia - GO,Bagaço de Cana de Açúcar,cana,15000.0,2002,2000,VALE DO VERDAO S/A,APE,coordenada do SIGA,-50.31692,-17.96928
+Costa Bioenergia,UTE.AI.PR.030627-4.1,PR,Umuarama - PR,Bagaço de Cana de Açúcar,cana,15000.0,2010,2010,USINA DE ACUCAR SANTA TEREZINHA LTDA,PIE,coordenada do SIGA,-53.39944,-23.65917
+São Manoel,UTE.AI.SP.027535-2.1,SP,São Manuel - SP,Bagaço de Cana de Açúcar,cana,14800.0,2001,2000,USINA ACUCAREIRA S. MANOEL S/A.,APE,coordenada do SIGA,-48.5425,-22.67167
+Junqueira,UTE.AI.SP.001281-5.1,SP,Igarapava - SP,Bagaço de Cana de Açúcar,cana,14700.0,,sem data,RAIZEN ENERGIA S.A,APE,coordenada do SIGA,-47.79816,-19.9881
+Guaxuma,UTE.AI.AL.028052-6.1,AL,Coruripe - AL,Bagaço de Cana de Açúcar,cana,14312.0,,sem data,LAGINHA AGRO INDUSTRIAL S/A,APE,coordenada do SIGA,-36.22782,-9.98332
+Passos,UTE.AI.MG.030126-4.1,MG,Passos - MG,Bagaço de Cana de Açúcar,cana,14090.0,2008,2000,ITAIQUARA ALIMENTOS S.A. EM RECUPERACAO JUDICIAL,APE,coordenada do SIGA,-46.62199,-20.71858
+Iracema,UTE.AI.SP.001142-8.1,SP,Iracemápolis - SP,Bagaço de Cana de Açúcar,cana,14000.0,1905,antes,SAO MARTINHO S/A,PIE,coordenada do SIGA,-47.52161,-22.58237
+Guarani - Andrade,UTE.AI.SP.030538-3.1,SP,Pitangueiras - SP,Bagaço de Cana de Açúcar,cana,14000.0,2009,2000,USINA ANDRADE LTDA,APE,coordenada do SIGA,-48.28531,-21.00234
+Raízen Paraguaçu,UTE.AI.SP.028078-0.1,SP,Paraguaçu Paulista - SP,Bagaço de Cana de Açúcar,cana,14000.0,2001,2000,Raizen Paraguaçu LTDA,APE,coordenada do SIGA,-50.49197,-22.46578
+Triunfo,UTE.AI.AL.029370-9.1,AL,Boca da Mata - AL,Bagaço de Cana de Açúcar,cana,14000.0,2001,2000,TRIUNFO AGROINDUSTRIAL LTDA EM RECUPERACAO JUDICIAL,APE,coordenada do SIGA,-36.19892,-9.62667
+Cocamar Maringá,UTE.AI.PR.029201-0.1,PR,Maringá - PR,Bagaço de Cana de Açúcar,cana,13000.0,2010,2010,Cocamar Cooperativa Agroindustrial,PIE,coordenada do SIGA,-51.97737,-23.43027
+Cucaú,UTE.AI.PE.028558-7.1,PE,Rio Formoso - PE,Bagaço de Cana de Açúcar,cana,12600.0,,sem data,CUCAU ACUCAR E ETANOL S/A,PIE,coordenada do SIGA,-35.26173,-8.63693
+Tabu,UTE.AI.PB.030099-3.1,PB,Caaporã - PB,Bagaço de Cana de Açúcar,cana,12200.0,2004,2000,AGRO INDUSTRIAL TABU S.A,APE,coordenada do SIGA,-34.87588,-7.50839
+Uberaba,UTE.AI.MG.029776-3.1,MG,Uberaba - MG,Bagaço de Cana de Açúcar,cana,12000.0,2008,2000,Usina Uberaba S.A.,APE,coordenada do SIGA,-47.98362,-19.71354
+Guariroba,UTE.AI.SP.029766-6.1,SP,Pontes Gestal - SP,Bagaço de Cana de Açúcar,cana,12000.0,2009,2000,Usina Guariroba Ltda.,APE,coordenada do SIGA,-49.7603,-20.11378
+São Domingos,UTE.AI.SP.027867-0.1,SP,Catanduva - SP,Bagaço de Cana de Açúcar,cana,12000.0,1990,antes,USINA SAO DOMINGOS-ACUCAR E ETANOL S/A,PIE,coordenada do SIGA,-49.02051,-21.09831
+Lucélia,UTE.AI.SP.027338-4.1,SP,Lucélia - SP,Bagaço de Cana de Açúcar,cana,12000.0,2002,2000,SALTO BOTELHO AGROENERGIA S.A.,PIE,coordenada do SIGA,-50.95939,-21.56487
+Novo Milênio,UTE.AI.MT.035588-7.1,MT,Mirassol d'Oeste - MT,Bagaço de Cana de Açúcar,cana,12000.0,2021,2020,AGROPECUARIA NOVO MILENIO LTDA,PIE,coordenada do SIGA,-58.1253,-15.7044
+Coopernavi,UTE.AI.MS.028107-7.1,MS,Naviraí - MS,Bagaço de Cana de Açúcar,cana,12000.0,,sem data,RIO AMAMBAI AGROENERGIA S.A,PIE,coordenada do SIGA,-54.19243,-23.12601
+Catanduva,UTE.AI.SP.028093-3.1,SP,Ariranha - SP,Bagaço de Cana de Açúcar,cana,12000.0,2003,2000,VIRGOLINO DE OLIVEIRA BIOENERGIA LTDA,APE,coordenada do SIGA,-48.83585,-21.12949
+Limeira do Oeste,UTE.AI.MG.029232-0.1,MG,Limeira do Oeste - MG,Bagaço de Cana de Açúcar,cana,12000.0,2004,2000,S A USINA CORURIPE ACUCAR E ALCOOL,APE,coordenada do SIGA,-50.66037,-19.52268
+COAF,UTE.AI.PE.044864-8.1,PE,Timbaúba - PE,Bagaço de Cana de Açúcar,cana,12000.0,2022,2020,COOPERATIVA DO AGRONEGÓCIO DOS ASSOCIADOS DA ASSOCIAÇÃO DOS FORNECEDORES DE CANA-DE-AÇÚCAR,PIE,coordenada do SIGA,-35.27556,-7.55083
+Ouroeste,UTE.AI.SP.029292-3.1,SP,Ouroeste - SP,Bagaço de Cana de Açúcar,cana,12000.0,2008,2000,Usina Ouroeste Açúcar e Álcool Ltda,PIE,coordenada do SIGA,-50.40199,-19.92249
+Galvani,UTE.AI.SP.001017-0.1,SP,Paulínia - SP,Bagaço de Cana de Açúcar,cana,11500.0,1996,antes,YARA BRASIL FERTILIZANTES S/A,APE,coordenada do SIGA,-47.12506,-22.799
+Selecta,UTE.AI.MG.030450-6.1,MG,Araguari - MG,Bagaço de Cana de Açúcar,cana,11400.0,2011,2010,CJ SELECTA S.A.,APE,coordenada do SIGA,-48.15806,-18.68306
+Miriri,UTE.AI.PB.034893-7.1,PB,Santa Rita - PB,Bagaço de Cana de Açúcar,cana,11300.0,1995,antes,MIRIRI ALIMENTOS E BIOENERGIA S/A.,PIE,coordenada do SIGA,-35.13555,-6.95722
+Clealco Clementina,UTE.AI.SP.028247-2.1,SP,Clementina - SP,Bagaço de Cana de Açúcar,cana,11200.0,1983,antes,Clealco Açúcar e Álcool Ltda,APE,coordenada do SIGA,-50.43167,-21.57972
+Ipojuca,UTE.AI.PE.028707-5.1,PE,Ipojuca - PE,Bagaço de Cana de Açúcar,cana,11200.0,1984,antes,USINA IPOJUCA S/A,PIE,coordenada do SIGA,-35.0897,-8.39368
+Bortolo Carolo,UTE.AI.SP.027339-2.1,SP,Pontal - SP,Bagaço de Cana de Açúcar,cana,11000.0,1994,antes,USINA CAROLO S/A,APE,coordenada do SIGA,-48.02482,-21.00072
+Destilaria Melhoramentos - Nova Londrina,UTE.AI.PR.050872-1.1,PR,Nova Londrina - PR,Bagaço de Cana de Açúcar,cana,10400.0,2021,2020,Melhoramentos  Bioenergia Ltda.,APE,coordenada do SIGA,-52.98918,-22.80011
+Vale,UTE.AI.SP.029678-3.1,SP,Onda Verde - SP,Bagaço de Cana de Açúcar,cana,10000.0,1994,antes,ONDA VERDE AGROCOMERCIAL S/A,PIE,coordenada do SIGA,-49.19,-20.59805
+Uruba,UTE.AI.AL.028037-2.1,AL,Atalaia - AL,Bagaço de Cana de Açúcar,cana,10000.0,2000,2000,LAGINHA AGRO INDUSTRIAL S/A,PIE,coordenada do SIGA,-36.02143,-9.50139
+Serranópolis,UTE.AI.GO.029989-8.1,GO,Serranópolis - GO,Bagaço de Cana de Açúcar,cana,10000.0,2012,2010,ENERGETICA SERRANOPOLIS LTDA,APE,coordenada do SIGA,-52.10639,-18.38361
+Coocarol,UTE.AI.PR.028041-0.1,PR,Rondon - PR,Bagaço de Cana de Açúcar,cana,10000.0,1995,antes,USINA DE ACUCAR SANTA TEREZINHA LTDA,APE,coordenada do SIGA,-52.70888,-23.37084
+CRV,UTE.AI.GO.029162-5.1,GO,Carmo do Rio Verde - GO,Bagaço de Cana de Açúcar,cana,10000.0,2001,2000,CRV INDUSTRIAL LTDA,PIE,coordenada do SIGA,-49.72003,-15.34291
+União,UTE.AI.PE.028694-0.1,PE,Primavera - PE,Bagaço de Cana de Açúcar,cana,10000.0,2010,2010,USINA UNIAO E INDUSTRIA SA,PIE,coordenada do SIGA,-35.34803,-8.34958
+Coplasa,UTE.AI.SP.030395-0.1,SP,Planalto - SP,Bagaço de Cana de Açúcar,cana,10000.0,2007,2000,COPLASA ACUCAR E ALCOOL LTDA,APE,coordenada do SIGA,-49.91838,-21.02856
+Moreno,UTE.AI.SP.028236-7.1,SP,Luís Antônio - SP,Bagaço de Cana de Açúcar,cana,10000.0,1994,antes,Central Energética Moreno Açúcar e Álcool Ltda,APE,coordenada do SIGA,-47.76943,-21.48338
+Sali,UTE.AI.AL.029607-4.1,AL,Rio Largo - AL,Bagaço de Cana de Açúcar,cana,9900.0,,sem data,UTINGA ACUCAR E ETANOL S/A,APE,coordenada do SIGA,-35.85242,-9.48616
+Caramuru Sorriso,UTE.AI.MT.034012-0.1,MT,Sorriso - MT,Bagaço de Cana de Açúcar,cana,9696.0,2016,2015,CARAMURU ALIMENTOS  S/A,PIE,coordenada do SIGA,-55.71807,-12.57417
+Seresta,UTE.AI.AL.029142-0.1,AL,Teotônio Vilela - AL,Bagaço de Cana de Açúcar,cana,9500.0,2004,2000,CENTRAL ENERGETICA SERESTA LTDA,PIE,coordenada do SIGA,-36.35556,-9.9075
+Termocana,UTE.AI.PR.028884-5.1,PR,São Carlos do Ivaí - PR,Bagaço de Cana de Açúcar,cana,9500.0,1994,antes,COOPERATIVA AGRICOLA REGIONAL DE PRODUTORES DE CANA LTDA- COOPCANA,PIE,coordenada do SIGA,-52.48046,-23.34217
+Guarani,UTE.AI.SP.028028-3.1,SP,Severínia - SP,Bagaço de Cana de Açúcar,cana,9400.0,1980,antes,TEREOS ACUCAR E ENERGIA BRASIL S.A.,APE,coordenada do SIGA,-48.8227,-20.8211
+Central Energética Ribeirão Preto (Antiga Galo Bravo),UTE.AI.SP.001016-2.1,SP,Ribeirão Preto - SP,Bagaço de Cana de Açúcar,cana,9000.0,1986,antes,"CENTRAL ENERGETICA RIBEIRAO PRETO, ACUCAR E ALCOOL LTDA",APE,coordenada do SIGA,-47.81657,-21.11119
+Santa Terezinha (Ivaté),UTE.AI.PR.028143-3.1,PR,Ivaté - PR,Bagaço de Cana de Açúcar,cana,9000.0,2009,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,APE,coordenada do SIGA,-53.37388,-23.40959
+Destil,UTE.AI.SP.028045-3.1,SP,Marapoama - SP,Bagaço de Cana de Açúcar,cana,8949.0,1981,antes,USINA ITAJOBI LTDA,APE,coordenada do SIGA,-49.13722,-21.1932
+Della Coletta,UTE.AI.SP.027929-3.1,SP,Bariri - SP,Bagaço de Cana de Açúcar,cana,8600.0,2023,2020,DELLA COLETTA BIOENERGIA S/A,PIE,coordenada do SIGA,-48.7116,-22.0576
+Caramuru Itumbiara,UTE.AI.GO.035527-5.1,GO,Itumbiara - GO,Bagaço de Cana de Açúcar,cana,8500.0,2017,2015,CARAMURU ALIMENTOS  S/A,PIE,coordenada do SIGA,-49.20444,-18.39083
+Batatais,UTE.AI.SP.000236-4.1,SP,Batatais - SP,Bagaço de Cana de Açúcar,cana,8400.0,1990,antes,Usina Batatais S.A,APE,coordenada do SIGA,-47.56862,-20.74957
+Usiban (Antiga Açúcar e Álcool Bandeirantes),UTE.AI.PR.028157-3.1,PR,Bandeirantes - PR,Bagaço de Cana de Açúcar,cana,8200.0,1998,antes,Açúcar e Álcool Bandeirantes S.A.,PIE,centro do município,-50.34079,-23.1525
+Alvorada,UTE.AI.MG.028580-3.1,MG,Guaranésia - MG,Bagaço de Cana de Açúcar,cana,8000.0,2002,2000,Energylev Ltda,APE,coordenada do SIGA,-46.81348,-21.29405
+Coinbra - Frutesp,UTE.AI.SP.029168-4.1,SP,Matão - SP,Bagaço de Cana de Açúcar,cana,8000.0,2004,2000,Louis Dreyfus Commodities Agroindustrial S.A.,APE,coordenada do SIGA,-48.34211,-21.63349
+Pumaty,UTE.AI.PE.002946-7.1,PE,Joaquim Nabuco - PE,Bagaço de Cana de Açúcar,cana,8000.0,,sem data,USINA PUMATY S/A  EM RECUPERACAO JUDICIAL,APE,coordenada do SIGA,-35.53499,-8.5579
+Continental,UTE.AI.SP.031446-3.1,SP,Colômbia - SP,Bagaço de Cana de Açúcar,cana,8000.0,2006,2000,RAIZEN MICHELIN AGROINDUSTRIAL LTDA,PIE,coordenada do SIGA,-48.62445,-20.23
+Taquari,UTE.AI.SE.030677-0.1,SE,Capela - SE,Bagaço de Cana de Açúcar,cana,8000.0,2011,2010,AGRO INDUSTRIAL CAPELA LTDA EM RECUPERACAO JUDICIAL,PIE,coordenada do SIGA,-37.05483,-10.5061
+Monterey,UTE.AI.SP.030162-0.1,SP,Paraíso - SP,Bagaço de Cana de Açúcar,cana,8000.0,2017,2015,TIETE AGROINDUSTRIAL S.A.,APE,coordenada do SIGA,-49.73165,-21.20629
+Univalem,UTE.AI.SP.002906-8.1,SP,Valparaíso - SP,Bagaço de Cana de Açúcar,cana,8000.0,1995,antes,RAIZEN ENERGIA S.A,APE,coordenada do SIGA,-50.95549,-21.32897
+Iolando Leite,UTE.AI.SE.029152-8.1,SE,Capela - SE,Bagaço de Cana de Açúcar,cana,8000.0,2008,2000,USINA TERMO ELETRICA IOLANDO LEITE LTDA,PIE,coordenada do SIGA,-37.05483,-10.5061
+Goianésia,UTE.AI.GO.028113-1.1,GO,Goianésia - GO,Bagaço de Cana de Açúcar,cana,7300.0,2006,2000,USINA GOIANÉSIA S/A EM RECUPERAÇÃO JUDICIAL,PIE,coordenada do SIGA,-49.0969,-15.2152
+Citrosuco,UTE.AI.SP.028237-5.1,SP,Matão - SP,Bagaço de Cana de Açúcar,cana,7000.0,1985,antes,CITROSUCO S/A AGROINDÚSTRIA,APE,coordenada do SIGA,-48.36364,-21.59471
+Diamante,UTE.AI.SP.028893-4.1,SP,Jaú - SP,Bagaço de Cana de Açúcar,cana,7000.0,1989,antes,RAIZEN ENERGIA S.A,PIE,coordenada do SIGA,-48.68797,-22.36953
+Granol OC,UTE.AI.SP.031300-9.1,SP,Osvaldo Cruz - SP,Bagaço de Cana de Açúcar,cana,7000.0,2014,2010,GRANOL AGRICOLA LTDA,APE,coordenada do SIGA,-50.88741,-21.77737
+Unialco,UTE.AI.SP.027750-9.1,SP,Guararapes - SP,Bagaço de Cana de Açúcar,cana,6800.0,1982,antes,Viterra Bioenergia S.A.,APE,coordenada do SIGA,-50.79379,-21.45894
+Nova Tamoio,UTE.AI.SP.028065-8.1,SP,Araraquara - SP,Bagaço de Cana de Açúcar,cana,6600.0,2010,2010,RAIZEN ENERGIA S.A,APE,coordenada do SIGA,-48.11469,-21.9131
+Dois Córregos,UTE.AI.SP.028072-0.1,SP,Dois Córregos - SP,Bagaço de Cana de Açúcar,cana,6500.0,2001,2000,RAIZEN ENERGIA S.A,APE,coordenada do SIGA,-48.4066,-22.3388
+Santa Rita,UTE.AI.SP.028189-1.1,SP,Santa Rita do Passa Quatro - SP,Bagaço de Cana de Açúcar,cana,6400.0,1978,antes,USINA SANTA RITA S/A ACUCAR E ALCOOL EM RECUPERACAO JUDICIAL,APE,coordenada do SIGA,-47.64046,-21.72037
+Nova Geração,UTE.AI.GO.029156-0.1,GO,Jandaia - GO,Bagaço de Cana de Açúcar,cana,6200.0,1982,antes,DENUSA DESTILARIA NOVA UNIAO S/A,APE,coordenada do SIGA,-50.13953,-17.27426
+Dacalda,UTE.AI.PR.028155-7.1,PR,Jacarezinho - PR,Bagaço de Cana de Açúcar,cana,6000.0,2010,2010,Dacalda Açúcar e Álcool Ltda,APE,coordenada do SIGA,-50.1041,-23.15999
+Itapagipe,UTE.AI.MG.029545-0.1,MG,Itapagipe - MG,Bagaço de Cana de Açúcar,cana,6000.0,2006,2000,Usina Itapagipe Açúcar e Álcool Ltda.,PIE,coordenada do SIGA,-49.68972,-19.88944
+Bahia Etanol Energia Renovável,UTE.AI.BA.043202-4.1,BA,Ibirapuã - BA,Bagaço de Cana de Açúcar,cana,6000.0,2022,2020,Bahia Etanol Holding Ltda.,PIE,coordenada do SIGA,-40.18176,-17.6419
+Diana,UTE.AI.SP.027890-4.1,SP,Avanhandava - SP,Bagaço de Cana de Açúcar,cana,6000.0,2000,2000,DIANA BIOENERGIA AVANHANDAVA SA,APE,coordenada do SIGA,-49.8935,-21.4013
+Virgolino de Oliveira - Itapira,UTE.AI.SP.001181-9.1,SP,Itapira - SP,Bagaço de Cana de Açúcar,cana,5800.0,1975,antes,VIRGOLINO DE OLIVEIRA S/A,APE,coordenada do SIGA,-46.80531,-22.41211
+São Tomé,UTE.AI.PR.029202-8.1,PR,São Tomé - PR,Bagaço de Cana de Açúcar,cana,5775.0,2004,2000,USINA DE ACUCAR SANTA TEREZINHA LTDA,APE,coordenada do SIGA,-52.64556,-23.54472
+Coinbra - Frutesp,UTE.AI.SP.028328-2.1,SP,Bebedouro - SP,Bagaço de Cana de Açúcar,cana,5000.0,2001,2000,Louis Dreyfus Commodities Agroindustrial S.A.,REG,coordenada do SIGA,-48.50721,-20.92946
+Pantanal,UTE.AI.MT.027828-9.1,MT,Jaciara - MT,Bagaço de Cana de Açúcar,cana,5000.0,2000,2000,USINA PANTANAL DE ACUCAR E ALCOOL LTDA FALIDO,REG,coordenada do SIGA,-55.21499,-15.92129
+Fischer,UTE.AI.SP.030603-7.1,SP,Limeira - SP,Bagaço de Cana de Açúcar,cana,5000.0,2010,2010,CITROSUCO S/A AGROINDÚSTRIA,REG,coordenada do SIGA,-47.38696,-22.5313
+Buriti,UTE.AI.SP.029527-2.1,SP,Buritizal - SP,Bagaço de Cana de Açúcar,cana,5000.0,2004,2000,PEDRA AGROINDUSTRIAL S/A,REG,coordenada do SIGA,-47.65333,-20.21832
+JAYORO,UTE.AI.AM.037509-8.1,AM,Presidente Figueiredo - AM,Bagaço de Cana de Açúcar,cana,5000.0,2008,2000,AGROPECUARIA JAYORO LTDA,REG,coordenada do SIGA,-60.234,-1.16639
+Manacá,UTE.AI.GO.030418-2.1,GO,Itumbiara - GO,Bagaço de Cana de Açúcar,cana,5000.0,2009,2000,UTEMA – Usina Termelétrica Manacá Ltda,REG,coordenada do SIGA,-49.22087,-18.41768
+Destivale,UTE.AI.SP.028460-2.1,SP,Araçatuba - SP,Bagaço de Cana de Açúcar,cana,5000.0,2012,2010,RAIZEN ENERGIA S.A,REG,coordenada do SIGA,-50.46474,-21.05867
+Agrisa Agroindustrial São João Sa,UTE.AI.RJ.046580-1.1,RJ,"Araruama - RJ, Cabo Frio - RJ",Bagaço de Cana de Açúcar,cana,5000.0,2014,2010,AGRISA AGROINDUSTRIAL SÃO JOÃO S/A,REG,coordenada do SIGA,-42.15583,-22.60472
+Veríssimo,UTE.AI.MG.029608-2.1,MG,Veríssimo - MG,Bagaço de Cana de Açúcar,cana,5000.0,2007,2000,Central Energética de Veríssimo Ltda.,REG,coordenada do SIGA,-48.33144,-19.59848
+Virgolino de Oliveira - Fazenda Canoas,UTE.AI.SP.029904-9.1,SP,José Bonifácio - SP,Bagaço de Cana de Açúcar,cana,5000.0,,sem data,Açucareira Virgolino de Oliveira S.A.,REG,coordenada do SIGA,-49.92194,-21.08611
+Cepasa,UTE.AI.PE.031479-0.1,PE,Jaboatão dos Guararapes - PE,Bagaço de Cana de Açúcar,cana,5000.0,2014,2010,CELULOSE E PAPEL DE PERNAMBUCO S/A,REG,coordenada do SIGA,-35.00387,-8.10962
+TG AGRO,UTE.AI.MA.035114-8.1,MA,Aldeias Altas - MA,Bagaço de Cana de Açúcar,cana,5000.0,2006,2000,TG Agro Industrial LTDA,REG,coordenada do SIGA,-43.61417,-4.62389
+Santa Lúcia,UTE.AI.SP.027912-9.1,SP,Araras - SP,Bagaço de Cana de Açúcar,cana,4968.0,1999,antes,Usina Santa Lúcia S.A.,REG,coordenada do SIGA,-47.40833,-22.33556
+Laginha-Matrix,UTE.AI.AL.028581-1.1,AL,União dos Palmares - AL,Bagaço de Cana de Açúcar,cana,4950.0,2002,2000,LAGINHA AGRO INDUSTRIAL S/A,REG,coordenada do SIGA,-36.01421,-9.12085
+Trombini,UTE.AI.SC.027901-3.1,SC,Fraiburgo - SC,Bagaço de Cana de Açúcar,cana,4870.0,2000,2000,,,coordenada do SIGA,-50.92508,-27.02345
+Laranjeiras,UTE.AI.PE.030190-6.1,PE,Vicência - PE,Bagaço de Cana de Açúcar,cana,4825.0,2004,2000,Usivale Indústria e Comércio Ltda.,REG,coordenada do SIGA,-35.36083,-7.65667
+Aralco,UTE.AI.SP.028488-2.1,SP,Santo Antônio do Aracanguá - SP,Bagaço de Cana de Açúcar,cana,4800.0,2002,2000,ARALCO S A,REG,coordenada do SIGA,-50.41105,-20.90855
+São José,UTE.AI.SP.026851-8.1,SP,Rio das Pedras - SP,Bagaço de Cana de Açúcar,cana,4800.0,2011,2010,USINA SAO JOSE SA ACUCAR E ALCOOL EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-47.56806,-22.81639
+Santa Helena,UTE.AI.SP.028213-8.1,SP,Rio das Pedras - SP,Bagaço de Cana de Açúcar,cana,4800.0,1990,antes,RAIZEN ENERGIA S.A,REG,coordenada do SIGA,-47.66111,-22.79889
+Vale do Verdão 2,UTE.AI.GO.029548-5.1,GO,Itumbiara - GO,Bagaço de Cana de Açúcar,cana,4720.0,,sem data,VALE DO VERDAO S/A,REG,coordenada do SIGA,-49.86525,-18.33715
+Mundial,UTE.AI.SP.030192-2.1,SP,Mirandópolis - SP,Bagaço de Cana de Açúcar,cana,4650.0,2008,2000,RAIZEN ENERGIA S.A,REG,coordenada do SIGA,-51.215,-21.19722
+Safi,UTE.AI.MS.029624-4.1,MS,Nova Alvorada do Sul - MS,Bagaço de Cana de Açúcar,cana,4640.0,2007,2000,Safi Brasil Energia Ltda,REG,coordenada do SIGA,-54.35953,-21.4274
+Santa Maria Açucareira,UTE.AI.AL.031179-0.1,AL,Porto Calvo - AL,Bagaço de Cana de Açúcar,cana,4600.0,2002,2000,Central Açucareira Usina Santa Maria S.A.,REG,coordenada do SIGA,-35.39833,-9.05245
+Artivinco (Antiga Rio Pardo),UTE.AI.SP.028815-2.1,SP,Santa Rosa de Viterbo - SP,Bagaço de Cana de Açúcar,cana,4500.0,2002,2000,INDUSTRIA DE PAPEIS E EMBALAGENS MAREA LINEA LTDA,REG,coordenada do SIGA,-47.34203,-21.43659
+Energética Itajubara,UTE.AI.MA.030969-9.1,MA,Coelho Neto - MA,Bagaço de Cana de Açúcar,cana,4400.0,2012,2010,ITAJUBARA S/A  ACUCAR E ALCOOL,REG,coordenada do SIGA,-42.98832,-4.28625
+Figueira Indústria e Comércio,UTE.AI.SP.030580-4.1,SP,Buritama - SP,Bagaço de Cana de Açúcar,cana,4400.0,,sem data,ARALCO FIGUEIRA S/A,REG,coordenada do SIGA,-50.23017,-21.10355
+Santa Helena Açúcar e Álcool,UTE.AI.GO.028115-8.1,GO,Santa Helena de Goiás - GO,Bagaço de Cana de Açúcar,cana,4400.0,2001,2000,USINA SANTA HELENA DE ACUCAR E ALCOOL S/A,REG,coordenada do SIGA,-50.5393,-17.8225
+Dacal,UTE.AI.SP.027999-4.1,SP,Parapuã - SP,Bagaço de Cana de Açúcar,cana,4400.0,2010,2010,PARAPUA AGROINDUSTRIAL S/A,REG,coordenada do SIGA,-50.8655,-21.91459
+Paísa,UTE.AI.AL.028578-1.1,AL,Penedo - AL,Bagaço de Cana de Açúcar,cana,4400.0,1980,antes,CENTRAL BIOENERGETICA LTDA.,REG,coordenada do SIGA,-36.49978,-10.292
+Sabarálcool,UTE.AI.PR.028151-4.1,PR,Engenheiro Beltrão - PR,Bagaço de Cana de Açúcar,cana,4365.0,2001,2000,Sabarálcool S.A. – Açúcar e Álcool,REG,coordenada do SIGA,-52.20847,-23.69424
+Vitória,UTE.AI.PE.030359-3.1,PE,Palmares - PE,Bagaço de Cana de Açúcar,cana,4225.0,2011,2010,Norte e Sul Energia Ltda,REG,coordenada do SIGA,-35.60583,-8.6925
+Benálcool,UTE.AI.SP.027906-4.1,SP,Bento de Abreu - SP,Bagaço de Cana de Açúcar,cana,4200.0,2008,2000,BENALCOOL ACUCAR E ALCOOL LTDA,REG,coordenada do SIGA,-50.77812,-21.23071
+São Simão,UTE.AI.GO.030761-0.1,GO,São Simão - GO,Bagaço de Cana de Açúcar,cana,4200.0,2008,2000,ENERGETICA SAO SIMAO S/A,REG,coordenada do SIGA,-50.64028,-18.97056
+Fátima do Sul Agro-energética Álcool E. Açúcar,UTE.AI.MS.040189-7.1,MS,Fátima do Sul - MS,Bagaço de Cana de Açúcar,cana,4200.0,2011,2010,FATIMA DO SUL AGRO-ENERGETICA S/A,REG,coordenada do SIGA,-54.54855,-22.26464
+Alcoolvale,UTE.AI.MS.029299-0.1,MS,Aparecida do Taboado - MS,Bagaço de Cana de Açúcar,cana,4200.0,2002,2000,Alcoovale S.A,REG,coordenada do SIGA,-51.29901,-20.08729
+Dasa,UTE.AI.MG.029147-1.1,MG,Serra dos Aimorés - MG,Bagaço de Cana de Açúcar,cana,4200.0,1986,antes,Destilaria de Álcool Serra dos Aimorés S/A,REG,coordenada do SIGA,-40.18805,-17.83747
+São Francisco,UTE.AI.SP.028178-6.1,SP,Elias Fausto - SP,Bagaço de Cana de Açúcar,cana,4200.0,1986,antes,RAIZEN ENERGIA S.A,REG,coordenada do SIGA,-47.37063,-23.07075
+Pau D´Alho,UTE.AI.SP.029657-0.1,SP,Ibirarema - SP,Bagaço de Cana de Açúcar,cana,4160.0,2006,2000,USINA PAU D'ALHO S/A FALIDO,REG,coordenada do SIGA,-50.11046,-22.76501
+Gameleira,UTE.AI.MT.028601-0.1,MT,Confresa - MT,Bagaço de Cana de Açúcar,cana,4032.0,,sem data,DESTILARIA GAMELEIRA SOCIEDADE ANONIMA,REG,coordenada do SIGA,-51.41868,-10.65454
+Ipiranga Descalvado,UTE.AI.SP.027367-8.1,SP,Descalvado - SP,Bagaço de Cana de Açúcar,cana,4000.0,2010,2010,IPIRANGA AGROINDUSTRIAL S.A.,REG,coordenada do SIGA,-47.7505,-21.8318
+Santa Elisa - Unidade II,UTE.AI.SP.027537-9.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,4000.0,2002,2000,COMPANHIA ENERGETICA SANTA ELISA,REG,coordenada do SIGA,-47.99945,-21.119
+Cooperval,UTE.AI.PR.028162-0.1,PR,Jandaia do Sul - PR,Bagaço de Cana de Açúcar,cana,4000.0,2022,2020,Cooperval Cooperativa Agroindustrial Vale do Ivaí LTDA.,REG,coordenada do SIGA,-51.68313,-23.68191
+Sumaúma,UTE.AI.AL.028577-3.1,AL,Marechal Deodoro - AL,Bagaço de Cana de Açúcar,cana,4000.0,2002,2000,CENTRAL BIOENERGETICA LTDA.,REG,coordenada do SIGA,-35.89307,-9.73916
+Cofercatu,UTE.AI.PR.028159-0.1,PR,Florestópolis - PR,Bagaço de Cana de Açúcar,cana,4000.0,2001,2000,Cooperativa Agropecuária dos Cafeicultores de Porecatu Ltda,REG,coordenada do SIGA,-51.39313,-22.88916
+Albertina,UTE.AI.SP.027536-0.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,4000.0,1992,antes,Companhia Albertina Mercantil e Industrial,REG,coordenada do SIGA,-47.97,-21.0375
+Cooperfrigo,UTE.AI.SP.028459-9.1,SP,Promissão - SP,Bagaço de Cana de Açúcar,cana,4000.0,2001,2000,Cooperativa de Autogestionária dos Trabalhadores na Produção Frigorífica,REG,coordenada do SIGA,-49.86985,-21.56051
+Destilaria Malosso,UTE.AI.SP.027895-5.1,SP,Itápolis - SP,Bagaço de Cana de Açúcar,cana,4000.0,2008,2000,MALOSSO BIOENERGIA S.A,REG,coordenada do SIGA,-48.83048,-21.62773
+Pindorama,UTE.AI.AL.029871-9.1,AL,Coruripe - AL,Bagaço de Cana de Açúcar,cana,4000.0,,sem data,COOPERATIVA DE COLONIZACAO AGROPECUARIA E INDUSTRIAL PINDORAMA LTDA,REG,coordenada do SIGA,-36.34778,-10.16056
+Lwarcel,UTE.AI.SP.027923-4.1,SP,Lençóis Paulista - SP,Bagaço de Cana de Açúcar,cana,4000.0,,sem data,BRACELL SP CELULOSE LTDA,REG,coordenada do SIGA,-48.81557,-22.67213
+Centro Oeste Iguatemi,UTE.AI.MS.029566-3.1,MS,Iguatemi - MS,Bagaço de Cana de Açúcar,cana,4000.0,2007,2000,Destilaria Centro Oeste Iguatemi Ltda,REG,coordenada do SIGA,-54.38453,-23.16268
+Louis Dreyfus Commodities Agroindustrial,UTE.AI.SP.029903-0.1,SP,São Paulo - SP,Bagaço de Cana de Açúcar,cana,4000.0,2008,2000,Louis Dreyfus Commodities Agroindustrial S.A.,REG,coordenada do SIGA,-46.63864,-23.64609
+Londra,UTE.AI.SP.028050-0.1,SP,Itaí - SP,Bagaço de Cana de Açúcar,cana,3880.0,2006,2000,LONDRA ACUCAR E ALCOOL LTDA,REG,coordenada do SIGA,-48.92873,-23.52433
+Sobar,UTE.AI.SP.028048-8.1,SP,Espírito Santo do Turvo - SP,Bagaço de Cana de Açúcar,cana,3864.0,2001,2000,SOBAR S/A ALCOOL E DERIVADOS,REG,coordenada do SIGA,-49.4202,-22.6777
+Jatiboca,UTE.AI.MG.028179-4.1,MG,Urucânia - MG,Bagaço de Cana de Açúcar,cana,3800.0,,sem data,Cia Agrícola Pontenovense,REG,coordenada do SIGA,-42.69056,-20.30131
+Bertolo Açúcar e Álcool,UTE.AI.SP.029382-2.1,SP,Pirangi - SP,Bagaço de Cana de Açúcar,cana,3800.0,2001,2000,Usina Bertolo Açúcar e Álcool Ltda.,REG,coordenada do SIGA,-48.66984,-21.09963
+J. Pilon,UTE.AI.SP.027333-3.1,SP,Cerquilho - SP,Bagaço de Cana de Açúcar,cana,3800.0,1996,antes,J.Pilon S/A Açúcar e Álcool,REG,coordenada do SIGA,-47.7832,-23.1615
+Generalco,UTE.AI.SP.028059-3.1,SP,General Salgado - SP,Bagaço de Cana de Açúcar,cana,3800.0,2001,2000,DESTILARIA GENERALCO S/A,REG,coordenada do SIGA,-50.3844,-20.5751
+Panorâmica,UTE.AI.SP.028062-3.1,SP,Itaí - SP,Bagaço de Cana de Açúcar,cana,3700.0,1995,antes,INDUSTRIA E COMERCIO IRACEMA LTDA,REG,coordenada do SIGA,-49.03806,-23.50046
+Conquista de Minas,UTE.AI.MG.030798-0.1,MG,Conquista - MG,Bagaço de Cana de Açúcar,cana,3600.0,2012,2010,DELTA SUCROENERGIA S.A,REG,coordenada do SIGA,-47.61587,-20.01673
+Vale do Ivaí - Cambuí,UTE.AI.PR.030364-0.1,PR,São João do Ivaí - PR,Bagaço de Cana de Açúcar,cana,3600.0,2012,2010,RENUKA VALE DO IVAÍ S.A.,REG,coordenada do SIGA,-51.83861,-23.98865
+Salgado,UTE.AI.PE.030383-6.1,PE,Ipojuca - PE,Bagaço de Cana de Açúcar,cana,3600.0,1973,antes,Usina Salgado S.A,REG,coordenada do SIGA,-35.06347,-8.39699
+Furlan,UTE.AI.SP.027342-2.1,SP,Santa Bárbara d´Oeste - SP,Bagaço de Cana de Açúcar,cana,3600.0,1976,antes,USINA ACUCAREIRA FURLAN S/A-EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-47.47836,-22.76161
+Destilaria de Álcool Ibaiti,UTE.AI.PR.028154-9.1,PR,Ibaiti - PR,Bagaço de Cana de Açúcar,cana,3600.0,2001,2000,DAIL S/A DESTILARIA DE ALCOOL IBAITI,REG,coordenada do SIGA,-50.41425,-23.68217
+Bom Retiro,UTE.AI.SP.028043-7.1,SP,Capivari - SP,Bagaço de Cana de Açúcar,cana,3600.0,2013,2010,RAIZEN ENERGIA S.A,REG,coordenada do SIGA,-47.45355,-22.87331
+Iguatemi (Antiga Santa Terezinha - Iguatemi),UTE.AI.PR.028152-2.1,PR,Maringá - PR,Bagaço de Cana de Açúcar,cana,3400.0,1990,antes,USINA DE ACUCAR SANTA TEREZINHA LTDA,REG,coordenada do SIGA,-52.0839,-23.39528
+Paineiras,UTE.AI.ES.027687-1.1,ES,Itapemirim - ES,Bagaço de Cana de Açúcar,cana,3200.0,1974,antes,Usina Paineiras S.A,REG,coordenada do SIGA,-40.9468,-20.96691
+Bom Jesus,UTE.AI.PE.030226-0.1,PE,Cabo de Santo Agostinho - PE,Bagaço de Cana de Açúcar,cana,3200.0,2009,2000,Usina Bom Jesus S.A.,REG,coordenada do SIGA,-35.03807,-8.28206
+Itaiquara,UTE.AI.SP.027918-8.1,SP,Tapiratiba - SP,Bagaço de Cana de Açúcar,cana,3200.0,2014,2010,ITAIQUARA ALIMENTOS S.A. EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-46.80583,-21.47667
+Madecal,UTE.AI.SC.030149-3.1,SC,Caçador - SC,Bagaço de Cana de Açúcar,cana,3200.0,2000,2000,MADECAL ADMINISTRADORA DE BENS LTDA,REG,coordenada do SIGA,-51.01904,-26.77535
+Energética Santa Helena,UTE.AI.MS.029599-0.1,MS,Nova Andradina - MS,Bagaço de Cana de Açúcar,cana,3200.0,1981,antes,ENERGETICA SANTA HELENA S/A,REG,coordenada do SIGA,-53.42531,-21.9996
+Santa Maria de Lençóis,UTE.AI.SP.028337-1.1,SP,Lençóis Paulista - SP,Bagaço de Cana de Açúcar,cana,3040.0,2008,2000,DESTILARIA SANTA MARIA S/A,REG,coordenada do SIGA,-48.77639,-22.58944
+Urbano Jaraguá,UTE.AI.SC.027951-0.1,SC,Jaraguá do Sul - SC,Bagaço de Cana de Açúcar,cana,3000.0,2000,2000,URBANO AGROINDUSTRIAL LTDA,REG,coordenada do SIGA,-49.15049,-26.47728
+Usalpa,UTE.AI.SP.031065-4.1,SP,Junqueirópolis - SP,Bagaço de Cana de Açúcar,cana,3000.0,2002,2000,Alta Paulista Indústria e Comercio Ltda,REG,coordenada do SIGA,-51.43401,-21.51128
+Una Açúcar e Energia,UTE.AI.PE.028726-1.1,PE,Tamandaré - PE,Bagaço de Cana de Açúcar,cana,3000.0,2002,2000,UNA ACUCAR E ENERGIA LTDA EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-35.31622,-8.76422
+ATENA,UTE.AI.SP.035104-0.1,SP,Martinópolis - SP,Bagaço de Cana de Açúcar,cana,2800.0,1995,antes,,,coordenada do SIGA,-51.02866,-22.15061
+Jaciara,UTE.AI.MT.027829-7.1,MT,Jaciara - MT,Bagaço de Cana de Açúcar,cana,2800.0,2000,2000,USINA JACIARA S A FALIDO,REG,coordenada do SIGA,-54.96419,-15.96484
+Água Limpa,UTE.AI.SP.027919-6.1,SP,Monte Aprazível - SP,Bagaço de Cana de Açúcar,cana,2760.0,2000,2000,OESTE PAULISTA ADMINISTRACAO DE PATRIMONIO LTDA,REG,coordenada do SIGA,-49.71901,-20.74808
+Santa Rosa,UTE.AI.SP.027920-0.1,SP,Boituva - SP,Bagaço de Cana de Açúcar,cana,2760.0,1987,antes,USINA SANTA ROSA LTDA EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-47.613,-23.23833
+Fronteira,UTE.AI.MG.029199-4.1,MG,Fronteira - MG,Bagaço de Cana de Açúcar,cana,2600.0,2007,2000,RENUKA VALE DO IVAÍ S.A.,REG,coordenada do SIGA,-49.20602,-20.3037
+Pederneiras,UTE.AI.SP.027949-8.1,SP,Tietê - SP,Bagaço de Cana de Açúcar,cana,2400.0,2000,2000,ZAMBIANCO,REG,coordenada do SIGA,-47.70765,-23.04944
+Destilaria Porto Alegre,UTE.AI.AL.029635-0.1,AL,Colônia Leopoldina - AL,Bagaço de Cana de Açúcar,cana,2400.0,1989,antes,Destilaria Autônoma Porto Alegre Ltda.,REG,coordenada do SIGA,-35.66661,-8.89748
+Capricho,UTE.AI.AL.028579-0.1,AL,Cajueiro - AL,Bagaço de Cana de Açúcar,cana,2400.0,2002,2000,CENTRAL BIOENERGETICA LTDA.,REG,coordenada do SIGA,-36.15008,-9.33353
+Perobálcool,UTE.AI.PR.028144-1.1,PR,Perobal - PR,Bagaço de Cana de Açúcar,cana,2400.0,2001,2000,Perobálcool Indústria de Açúcar e Álcool Ltda,REG,coordenada do SIGA,-53.47242,-23.90917
+Alcomira,UTE.AI.SP.028049-6.1,SP,Mirandopólis - SP,Bagaço de Cana de Açúcar,cana,2400.0,2001,2000,Alcomira S.A,REG,coordenada do SIGA,-51.21636,-21.19896
+Porto Alegre,UTE.AI.AL.030017-9.1,AL,Colônia Leopoldina - AL,Bagaço de Cana de Açúcar,cana,2400.0,2005,2000,Destilaria Autônoma Porto Alegre Ltda.,REG,coordenada do SIGA,-35.71978,-8.91269
+Müller Destilaria,UTE.AI.SP.029196-0.1,SP,Porto Ferreira - SP,Bagaço de Cana de Açúcar,cana,2180.0,2004,2000,COMPANHIA MULLER DE BEBIDAS,REG,coordenada do SIGA,-47.50694,-21.91806
+Bem Brasil,UTE.AI.MG.029497-7.1,MG,Araxá - MG,Bagaço de Cana de Açúcar,cana,2125.0,2006,2000,BEM BRASIL ALIMENTOS S/A,REG,coordenada do SIGA,-46.91343,-19.56994
+Vicentina,UTE.AI.MS.030298-8.1,MS,Vicentina - MS,Bagaço de Cana de Açúcar,cana,2000.0,2010,2010,Central Energética Vicentina Ltda.,REG,coordenada do SIGA,-54.44212,-22.44806
+Grizzo,UTE.AI.SP.028461-0.1,SP,Jaú - SP,Bagaço de Cana de Açúcar,cana,1968.0,2002,2000,DESTILARIA GRIZZO LTDA,REG,coordenada do SIGA,-48.47626,-22.23871
+Dulcini,UTE.AI.SP.027977-3.1,SP,Santo Antônio de Posse - SP,Bagaço de Cana de Açúcar,cana,1851.2,2004,2000,Dulcini S.A,REG,coordenada do SIGA,-46.92949,-22.60321
+Destilaria Guaricanga,UTE.AI.SP.027894-7.1,SP,Presidente Alves - SP,Bagaço de Cana de Açúcar,cana,1600.0,2000,2000,DESTILARIA GUARICANGA LTDA.,REG,coordenada do SIGA,-49.32095,-22.05632
+J. L. G.,UTE.AI.SP.029131-5.1,SP,Dobrada - SP,Bagaço de Cana de Açúcar,cana,1600.0,2007,2000,KB CITRUS AGROINDÚSTRIA LTDA.,REG,coordenada do SIGA,-48.40024,-21.5148
+Mumbuca,UTE.AI.SP.028217-0.1,SP,Platina - SP,Bagaço de Cana de Açúcar,cana,1520.0,2002,2000,Destilaria Pyles Ltda,REG,coordenada do SIGA,-50.21668,-22.66365
+Coraci,UTE.AI.SP.027896-3.1,SP,São Pedro do Turvo - SP,Bagaço de Cana de Açúcar,cana,1384.0,2000,2000,USINA CORACI DESTILARIA DE ALCOOL LTDA,REG,coordenada do SIGA,-49.76271,-22.67515
+Boituva,UTE.AI.SP.027320-1.1,SP,Boituva - SP,Bagaço de Cana de Açúcar,cana,1380.0,,sem data,USINA SANTA ROSA LTDA EM RECUPERACAO JUDICIAL,REG,coordenada do SIGA,-47.61333,-23.23835
+Rosa S.A. Indústria e Comércio de Produtos Agrícolas,UTE.AI.SP.030466-2.1,SP,Boituva - SP,Bagaço de Cana de Açúcar,cana,1280.0,1989,antes,Rosa S.A. Indústria e Comércio de Produtos Agrícolas,REG,coordenada do SIGA,-47.67147,-23.28194
+Floraplac,UTE.AI.PA.027926-9.1,PA,Paragominas - PA,Bagaço de Cana de Açúcar,cana,1250.0,2000,2000,FLORAPLAC INDUSTRIAL LTDA,REG,coordenada do SIGA,-47.37137,-3.01823
+Fany,UTE.AI.SP.028046-1.1,SP,Regente Feijó - SP,Bagaço de Cana de Açúcar,cana,1200.0,2001,2000,Destilaria Santa Fany Ltda,REG,coordenada do SIGA,-51.221,-22.3091
+Santa Hermínia,UTE.AI.SP.028452-1.1,SP,Ibirarema - SP,Bagaço de Cana de Açúcar,cana,1200.0,2001,2000,Usina Santa Hermínia S.A,REG,coordenada do SIGA,-50.07912,-22.81454
+TGN,UTE.AI.SP.029632-5.1,SP,Cerqueira César - SP,Bagaço de Cana de Açúcar,cana,1200.0,2001,2000,TGM Indústria e Comércio de Álcool e Aguardente Ltda.,REG,coordenada do SIGA,-49.16841,-23.08722
+Junco Novo,UTE.AI.SE.029669-4.1,SE,Capela - SE,Bagaço de Cana de Açúcar,cana,1200.0,2007,2000,JUNCO NOVO LTDA,REG,coordenada do SIGA,-37.05483,-10.5061
+PAM Destilaria,UTE.AI.MG.031133-2.1,MG,Paracatu - MG,Bagaço de Cana de Açúcar,cana,1200.0,1987,antes,,,coordenada do SIGA,-46.87542,-17.21974
+Agroalcool,UTE.AI.SP.029929-4.1,SP,Monte Aprazível - SP,Bagaço de Cana de Açúcar,cana,1200.0,2008,2000,Destilaria Agroalcool Ltda.,REG,coordenada do SIGA,-49.76593,-20.73729
+Santo Antônio,UTE.AI.SP.027924-2.1,SP,Piracicaba - SP,Bagaço de Cana de Açúcar,cana,1160.0,1999,antes,BAL,REG,coordenada do SIGA,-47.64685,-22.72372
+Delos,UTE.AI.SP.027927-7.1,SP,Sertãozinho - SP,Bagaço de Cana de Açúcar,cana,700.0,2000,2000,Destilaria Lopes da Silva Ltda.,REG,coordenada do SIGA,-47.92843,-21.155
+Bellão & Schiavon,UTE.AI.SP.027914-5.1,SP,Santa Cruz das Palmeiras - SP,Bagaço de Cana de Açúcar,cana,650.0,1999,antes,Destilaria Bellão &amp- Schiavon Ltda.,REG,coordenada do SIGA,-47.2495,-21.82748
+Córrego Azul,UTE.AI.SP.029532-9.1,SP,Promissão - SP,Bagaço de Cana de Açúcar,cana,520.0,2004,2000,Destilaria Córrego Azul Ltda,REG,coordenada do SIGA,-49.85853,-21.55581
+Cerba,UTE.AI.SP.029422-5.1,SP,Piracicaba - SP,Bagaço de Cana de Açúcar,cana,360.0,2003,2000,CERBA DESTILARIA DE ALCOOL LTDA,REG,coordenada do SIGA,-47.56453,-22.73879
+Santa Clara,UTE.AI.SP.028403-3.1,SP,Jaboticabal - SP,Bagaço de Cana de Açúcar,cana,302.0,2001,2000,Destilaria Santa Clara Ltda,REG,coordenada do SIGA,-48.23506,-21.2424

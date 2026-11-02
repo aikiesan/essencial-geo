@@ -1,0 +1,5 @@
+[
+ { "tema": "chegada", "numero": 171, "pasta": "171-o-ano-em-que-a-soja-chegou-brasil", "base": "br_soja_ano_de_chegada", "data": "2027-03-12", "categoria": "uso-do-solo" },
+ { "tema": "rumo", "numero": 172, "pasta": "172-cada-lavoura-no-seu-rumo-brasil", "base": "br_biomassa_centro_de_gravidade", "data": "2027-03-15", "categoria": "uso-do-solo" },
+ { "tema": "monocultura", "numero": 173, "pasta": "173-cidades-de-uma-cultura-so-brasil", "base": "br_municipios_de_uma_cultura", "data": "2027-03-17", "categoria": "uso-do-solo" }
+]
