@@ -520,21 +520,24 @@ export const PERGUNTAS: Pergunta[] = [
   },
 ];
 
-/* ---------- Mapa dos mapas: grade das UFs ---------------------------------- */
-
-/** Cada UF numa célula de uma grade 6 × 8, mais ou menos onde fica no mapa. [sigla, coluna, linha] */
-export const GRADE_UF: [string, number, number][] = [
-  ['RR', 1, 0], ['AP', 3, 0],
-  ['AM', 1, 1], ['PA', 2, 1], ['MA', 3, 1], ['CE', 4, 1], ['RN', 5, 1],
-  ['AC', 0, 2], ['RO', 1, 2], ['TO', 2, 2], ['PI', 3, 2], ['PE', 4, 2], ['PB', 5, 2],
-  ['MT', 1, 3], ['GO', 2, 3], ['BA', 3, 3], ['SE', 4, 3], ['AL', 5, 3],
-  ['MS', 1, 4], ['DF', 2, 4], ['MG', 3, 4], ['ES', 4, 4],
-  ['PR', 1, 5], ['SP', 2, 5], ['RJ', 3, 5],
-  ['SC', 1, 6],
-  ['RS', 1, 7],
-];
+/* ---------- Mapa dos mapas ------------------------------------------------ */
 
 /** Sigla da UF no fim do recorte em português: "Estado do Acre (AC)" → AC. */
 export function ufDoRecorte(recorte: string): string | undefined {
-  return recorte.trim().match(/\(([A-Z]{2})\)$/)?.[1];
+  return recorte.trim().match(/\(([A-Z]{2})\)/)?.[1];
 }
+
+/**
+ * Caixas aproximadas (oeste, sul, leste, norte, em graus) dos recortes menores que o estado de SP,
+ * para a lupa do mapa dos mapas. Recorte novo dentro de SP → uma linha aqui; sem caixa, ele fica só
+ * na lista. Um município vira ponto.
+ */
+export const CAIXAS_SP: { padrao: RegExp; caixa: [number, number, number, number]; ponto?: boolean }[] = [
+  { padrao: /^Município de Campinas/, caixa: [-47.06, -22.9, -47.06, -22.9], ponto: true },
+  { padrao: /^Região Metropolitana de Campinas/, caixa: [-47.6, -23.2, -46.65, -22.5] },
+  { padrao: /^Concentrações urbanas de São Paulo e de Santos/, caixa: [-47.2, -24.1, -45.9, -23.15] },
+  { padrao: /^Grande São Paulo e Baixada Santista/, caixa: [-47.25, -24.3, -45.7, -23.05] },
+  { padrao: /^Baixada Santista, Serra do Mar/, caixa: [-46.8, -24.15, -45.95, -23.4] },
+  { padrao: /^Vale do Paraíba/, caixa: [-45.75, -23.35, -44.55, -22.35] },
+  { padrao: /^Centro do estado de São Paulo/, caixa: [-48.7, -23.0, -47.6, -21.9] },
+];
