@@ -9,14 +9,23 @@ import PainelFichas from '../components/PainelFichas.astro';
 import Progresso from '../components/Progresso.astro';
 import Icone from '../components/Icone.astro';
 import type { Colecao } from '../lib/colecoes';
-import { linkMapa, numeroFormatado } from '../lib/mapas';
-import { dataCurta, linguaDe, rota, t } from '../i18n';
+import { linkMapa, numeroFormatado, proximosMapas, type Mapa } from '../lib/mapas';
+import { primeiraFrase } from '../lib/guia';
+import { dataCurta, dataIso, linguaDe, rota, t } from '../i18n';
 
 interface Props { colecao: Colecao }
 const { colecao: c } = Astro.props;
 const lingua = linguaDe(Astro.url.pathname);
 const tx = t(lingua);
 const total = Math.max(c.ordem.length, c.mapas.length);
+// Cada parada diz o que a prancha acrescenta: o subtítulo (a tese) ou, sem ele, a primeira frase do contexto.
+// Em desenvolvimento as agendadas já estão em c.mapas (com selo): não repetem no fim.
+const noArIds = new Set(c.mapas.map((m) => m.id));
+const agendadas = (await proximosMapas(lingua, 500)).filter((m) => m.data.colecao === c.id && !noArIds.has(m.id));
+const paradas: { mapa: Mapa; noAr: boolean; frase: string }[] = [
+  ...c.mapas.map((m) => ({ mapa: m, noAr: true, frase: m.data.subtitulo ?? primeiraFrase(m.data.contexto) })),
+  ...agendadas.map((m) => ({ mapa: m, noAr: false, frase: '' })),
+];
 ---
 
 <Base titulo={c.titulo} descricao={c.resumo} imagem={c.mapas[0]?.data.imagem.src}>
@@ -50,87 +59,200 @@ const total = Math.max(c.ordem.length, c.mapas.length);
     </CabecalhoPagina>
 
     {
-      /* Sumário: as pranchas em miniatura, em ordem de leitura, para pular direto a uma delas. */
-      c.mapas.length > 1 && (
-        <section class="sumario" aria-labelledby="t-sumario">
-          <h2 class="secao" id="t-sumario">{tx.colecoes.sumario}</h2>
-          <ol class="sumario__grade" role="list">
-            {c.mapas.map((m, n) => (
-              <li>
-                <a href={linkMapa(m)}>
-                  <span class="sumario__capa">
-                    <Image
-                      src={m.data.imagem}
-                      alt=""
-                      widths={[200, 320]}
-                      sizes="(min-width: 700px) 170px, 45vw"
-                      loading={n < 4 ? 'eager' : 'lazy'}
-                      format="webp"
-                      quality={70}
-                    />
+      /* O percurso: as pranchas em ordem de leitura, cada uma com a frase do que acrescenta,
+         e as agendadas no fim, tracejadas. */
+      paradas.length > 1 && (
+        <section class="percurso" aria-labelledby="t-percurso">
+          <div class="percurso__cabeca">
+            <h2 class="secao" id="t-percurso">{tx.colecoes.percurso}</h2>
+            <p>{tx.colecoes.percursoFina}</p>
+            <a class="botao" href={linkMapa(c.mapas[0])}>
+              {tx.colecoes.comecar} <Icone nome="seta" tamanho={12} />
+            </a>
+          </div>
+          <ol class="percurso__lista" role="list">
+            {paradas.map((p, n) => (
+              <li class:list={['parada', { 'parada--breve': !p.noAr }]} data-revelar>
+                <span class="parada__n mono" aria-hidden="true">
+                  {String(n + 1).padStart(2, '0')}
+                </span>
+                {p.noAr ? (
+                  <a class="parada__corpo" href={linkMapa(p.mapa)}>
+                    <span class="parada__capa">
+                      <Image
+                        src={p.mapa.data.imagem}
+                        alt=""
+                        widths={[200, 320, 400]}
+                        sizes="(min-width: 700px) 200px, 34vw"
+                        loading={n < 3 ? 'eager' : 'lazy'}
+                        format="webp"
+                        quality={70}
+                      />
+                    </span>
+                    <span class="parada__texto">
+                      <span class="rotulo">
+                        {tx.colecoes.parada} {n + 1}/{paradas.length} · {tx.geral.no} {numeroFormatado(p.mapa.data.numero)}
+                      </span>
+                      <span class="parada__titulo">{p.mapa.data.titulo}</span>
+                      <span class="parada__frase">{p.frase}</span>
+                    </span>
+                  </a>
+                ) : (
+                  <span class="parada__corpo">
+                    <span class="parada__capa parada__capa--vazia" aria-hidden="true" />
+                    <span class="parada__texto">
+                      <span class="rotulo">
+                        {tx.colecoes.emBreve} · <time datetime={dataIso(p.mapa.data.data)}>{dataCurta(p.mapa.data.data, lingua)}</time>
+                      </span>
+                      <span class="parada__titulo">{p.mapa.data.titulo}</span>
+                      {p.mapa.data.subtitulo && <span class="parada__frase">{p.mapa.data.subtitulo}</span>}
+                    </span>
                   </span>
-                  <span class="rotulo">{tx.geral.no} {numeroFormatado(m.data.numero)}</span>
-                  <span class="sumario__titulo">{m.data.titulo}</span>
-                </a>
+                )}
               </li>
             ))}
           </ol>
+          <a class="percurso__tudo rotulo" href="#feed-colecao">
+            {tx.colecoes.lerTudo} <Icone nome="seta" tamanho={11} />
+          </a>
         </section>
       )
     }
   </div>
+  <div id="feed-colecao" class="feed-ancora"></div>
   <ListaFeed mapas={c.mapas} />
   <PainelFichas slot="direita" mapas={c.mapas} />
 </Base>
 
 <style>
-  .sumario {
-    margin-top: var(--e-6);
-    margin-bottom: var(--e-7);
+  .percurso {
+    margin: var(--e-6) 0 var(--e-7);
   }
-  .sumario__grade {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(46%, 160px), 1fr));
-    gap: var(--e-4) var(--e-3);
-    margin: 0;
+  .percurso__cabeca p {
+    margin: 0 0 var(--e-4);
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+  }
+  .percurso__lista {
+    margin: var(--e-6) 0 0;
     padding: 0;
     list-style: none;
   }
-  .sumario__grade a {
+  /* Cada parada: número num quadrado sobre um trilho vertical, como as estações de um itinerário */
+  .parada {
+    position: relative;
     display: grid;
-    gap: 2px;
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: var(--e-3);
+    padding-bottom: var(--e-5);
+  }
+  .parada::before {
+    content: '';
+    position: absolute;
+    left: 15.5px;
+    top: 32px;
+    bottom: 0;
+    border-left: 1px solid var(--linha);
+  }
+  .parada:last-child::before {
+    display: none;
+  }
+  .parada--breve::before {
+    border-left-style: dashed;
+    border-color: var(--tinta-3);
+  }
+  .parada__n {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--linha);
+    background: var(--papel);
+    font-size: var(--t-xs);
+    font-weight: 600;
+  }
+  .parada--breve .parada__n {
+    border-style: dashed;
+    color: var(--tinta-3);
+    font-weight: 400;
+  }
+  .parada__corpo {
+    display: grid;
+    grid-template-columns: minmax(96px, 34%) minmax(0, 1fr);
+    gap: var(--e-3) var(--e-4);
+    align-items: start;
     text-decoration: none;
     color: var(--tinta);
   }
-  .sumario__capa {
+  @media (min-width: 700px) {
+    .parada__corpo {
+      grid-template-columns: 200px minmax(0, 1fr);
+    }
+  }
+  .parada__capa {
     display: block;
-    margin-bottom: var(--e-1);
     padding: 3px;
     border: 1px solid var(--linha-fina);
     background: var(--folha);
     transition: border-color 120ms linear;
   }
-  .sumario__capa :global(img) {
+  .parada__capa :global(img) {
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     background: #fff;
   }
-  .sumario__grade a:hover .sumario__capa,
-  .sumario__grade a:focus-visible .sumario__capa {
+  .parada__capa--vazia {
+    aspect-ratio: 4 / 3;
+    border-style: dashed;
+    background: transparent;
+  }
+  a.parada__corpo:hover .parada__capa,
+  a.parada__corpo:focus-visible .parada__capa {
     border-color: var(--acento);
   }
-  .sumario__grade .rotulo {
+  .parada__texto {
+    display: grid;
+    gap: var(--e-1);
+  }
+  .parada__texto .rotulo {
     margin: 0;
   }
-  .sumario__titulo {
+  .parada__titulo {
     font-family: var(--f-titulo);
-    font-size: var(--t-sm);
-    line-height: 1.3;
+    font-size: var(--t-lg);
+    line-height: 1.2;
+    transition: color 120ms linear;
   }
-  .sumario__grade a:hover .sumario__titulo {
+  a.parada__corpo:hover .parada__titulo {
     color: var(--acento);
+  }
+  .parada__frase {
+    font-size: var(--t-sm);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--tinta-2);
+  }
+  .parada--breve .parada__titulo,
+  .parada--breve .parada__frase {
+    color: var(--tinta-3);
+  }
+  .percurso__tudo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--e-1);
+    margin-left: calc(32px + var(--e-3));
+    color: var(--tinta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--linha);
+  }
+  .percurso__tudo:hover {
+    color: var(--acento);
+    border-color: var(--acento);
+  }
+  .feed-ancora {
+    scroll-margin-top: calc(var(--topo) + var(--e-5));
   }
   .andamento {
     margin-top: var(--e-5);
