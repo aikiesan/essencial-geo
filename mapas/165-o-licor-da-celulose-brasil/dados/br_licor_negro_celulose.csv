@@ -1,0 +1,25 @@
+nome,ceg,uf,municipio,fase,potencia_kw,ano_inicio,proprietario,regime,posicao,combustivel,lon,lat
+Sucuriú,UTE.FL.MS.074134-5.1,MS,Inocência - MS,Construção,420450.0,,ARAUCO CELULOSE DO BRASIL S.A.,PIE,coordenada do SIGA,Licor Negro,-52.1025,-19.5742
+Bracell,UTE.FL.SP.043249-0.1,SP,Lençóis Paulista - SP,Operação,409307.0,2021,BRACELL SP CELULOSE LTDA,PIE,coordenada do SIGA,Licor Negro,-48.815,-22.54139
+Central Geradora Suzano RRP1,UTE.FL.MS.049647-2.1,MS,Ribas do Rio Pardo - MS,Operação,384000.0,2025,SUZANO S.A.,PIE,coordenada do SIGA,Licor Negro,-53.6754,-20.47551
+Klabin Celulose,UTE.FL.PR.031098-0.1,PR,Ortigueira - PR,Operação,330000.0,2016,KLABIN S.A.,PIE,coordenada do SIGA,Licor Negro,-50.74139,-24.24361
+Fibria MS-II,UTE.FL.MS.037624-8.1,MS,Três Lagoas - MS,Operação,269580.0,2017,SUZANO S.A.,PIE,coordenada do SIGA,Licor Negro,-51.79611,-20.99611
+CMPC (Antiga Aracruz Unidade Guaíba),UTE.FL.RS.030666-5.1,RS,Guaíba - RS,Operação,264967.0,2015,CMPC CELULOSE RIOGRANDENSE LTDA,APE,coordenada do SIGA,Licor Negro,-51.29753,-30.13144
+Suzano Maranhão,UTE.FL.MA.030959-1.1,MA,Imperatriz - MA,Operação,254840.0,2014,SUZANO S.A.,APE,coordenada do SIGA,Licor Negro,-47.56577,-5.33578
+Aracruz,UTE.FL.ES.000127-9.1,ES,Aracruz - ES,Operação,238000.0,2002,SUZANO S.A.,APE,coordenada do SIGA,Licor Negro,-40.0747,-19.84295
+Eldorado Brasil,UTE.FL.MS.030583-9.1,MS,Três Lagoas - MS,Operação,214103.0,2013,Eldorado Brasil Celulose S.A,APE,coordenada do SIGA,Licor Negro,-51.6096,-20.59878
+Suzano Mucuri (Antiga Bahia Sul),UTE.FL.BA.000187-2.1,BA,Mucuri - BA,Operação,214080.0,1992,SUZANO S.A.,APE,coordenada do SIGA,Licor Negro,-39.91966,-18.04246
+LD Celulose,UTE.FL.MG.040854-9.1,MG,Indianópolis - MG,Operação,202700.0,2022,LD  CELULOSE S.A.,APE,coordenada do SIGA,Licor Negro,-47.91823,-18.83704
+Fibria - MS (Antiga VCP - MS),UTE.FL.MS.029694-5.1,MS,Três Lagoas - MS,Operação,175100.0,2009,SUZANO S.A.,PIE,coordenada do SIGA,Licor Negro,-51.79697,-20.99525
+Puma II,UTE.FL.PR.045824-4.1,PR,Ortigueira - PR,Operação,134800.0,2022,KLABIN S.A.,PIE,coordenada do SIGA,Licor Negro,-50.74347,-24.24429
+Veracel,UTE.FL.BA.029014-9.1,BA,Eunápolis - BA,Operação,126600.0,2006,VERACEL CELULOSE S.A.,APE,coordenada do SIGA,Licor Negro,-39.57053,-16.37401
+Klabin,UTE.FL.PR.027769-0.1,PR,Telêmaco Borba - PR,Operação,113250.0,1961,KLABIN S.A.,PIE,coordenada do SIGA,Licor Negro,-50.59942,-24.30907
+Bahia Pulp (Antiga Bacell),UTE.FL.BA.000182-1.1,BA,Camaçari - BA,Operação,108600.0,1995,BRACELL BAHIA SPECIALTY CELLULOSE S.A.,PIE,coordenada do SIGA,Licor Negro,-38.33717,-12.64308
+Cenibra,UTE.FL.MG.027941-2.1,MG,Belo Oriente - MG,Operação,100000.0,1976,Celulose Nipo,APE,coordenada do SIGA,Licor Negro,-42.47453,-19.21601
+Jari Celulose,UTE.FL.PA.001240-8.1,PA,Almeirim - PA,Operação,55000.0,1976,"JARI CELULOSE, PAPEL E EMBALAGENS S/A EM RECUPERACAO JUDICIAL",PIE,coordenada do SIGA,Licor Negro,-52.57684,-1.52734
+Klabin Correia Pinto (Antiga Celucat),UTE.FL.SC.030027-6.1,SC,Correia Pinto - SC,Operação,37822.0,1969,KLABIN S.A.,APE,coordenada do SIGA,Licor Negro,-50.36376,-27.58481
+Lwarcel (Antiga Lençóis Paulista),UTE.FL.SP.028620-6.1,SP,Lençóis Paulista - SP,Operação,36420.0,1987,BRACELL SP CELULOSE LTDA,PIE,coordenada do SIGA,Licor Negro,-48.80893,-22.5442
+Klabin Otacílio Costa (Antiga Igaras),UTE.FL.SC.001103-7.1,SC,Otacílio Costa - SC,Operação,33745.0,1955,KLABIN S.A.,APE,coordenada do SIGA,Licor Negro,-50.10109,-27.51049
+TG 04,UTE.FL.SC.072820-9.1,SC,Vargem Bonita - SC,Operação,7586.0,2023,IRANI PAPEL E EMBALAGEM S.A.,APE,centro do município,Licor Negro,-51.73151,-26.94481
+Celulose Irani,UTE.FL.SC.000744-7.1,SC,Vargem Bonita - SC,Operação,4900.0,1998,IRANI PAPEL E EMBALAGEM S.A.,REG,coordenada do SIGA,Licor Negro,-51.74662,-26.94161
+Nobrecel,UTE.FL.SP.028336-3.1,SP,Pindamonhangaba - SP,Operação,3200.0,2001,NOBRECEL S/A CELULOSE E PAPEL,REG,coordenada do SIGA,Licor Negro,-45.46205,-22.92667

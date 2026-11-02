@@ -1,0 +1,206 @@
+classe,rotulo,ano,lon,lat,area_mha
+soja,soja,1985,-52.8197,-23.9127,4.47
+soja,soja,1986,-52.4885,-23.205,6.52
+soja,soja,1987,-52.4811,-22.9503,8.49
+soja,soja,1988,-52.5496,-22.4897,9.75
+soja,soja,1989,-52.5147,-22.3926,10.09
+soja,soja,1990,-52.5033,-22.321,10.65
+soja,soja,1991,-52.5515,-22.3102,11.03
+soja,soja,1992,-52.4939,-22.503,11.13
+soja,soja,1993,-52.6294,-22.1752,11.57
+soja,soja,1994,-52.5147,-22.0295,12.24
+soja,soja,1995,-52.4833,-21.9381,12.55
+soja,soja,1996,-52.4719,-21.501,12.83
+soja,soja,1997,-52.5109,-21.5214,12.98
+soja,soja,1998,-52.7835,-21.3006,13.35
+soja,soja,1999,-52.7318,-21.1401,14.48
+soja,soja,2000,-52.6151,-20.921,16.25
+soja,soja,2001,-52.5364,-20.8035,16.3
+soja,soja,2002,-52.3901,-20.5542,17.71
+soja,soja,2003,-52.4048,-20.4254,18.79
+soja,soja,2004,-52.3696,-20.2419,20.39
+soja,soja,2005,-52.4159,-20.1511,22.81
+soja,soja,2006,-52.4663,-20.0287,23.46
+soja,soja,2007,-52.4803,-20.1617,23.51
+soja,soja,2008,-52.5218,-20.0823,22.92
+soja,soja,2009,-52.4621,-19.981,23.61
+soja,soja,2010,-52.4051,-19.8598,24.93
+soja,soja,2011,-52.337,-19.8229,25.23
+soja,soja,2012,-52.335,-19.7706,26.45
+soja,soja,2013,-52.3632,-19.7549,26.92
+soja,soja,2014,-52.2935,-19.5016,28.9
+soja,soja,2015,-52.2825,-19.2642,31.43
+soja,soja,2016,-52.1626,-19.0906,33.16
+soja,soja,2017,-52.0732,-18.9681,35.56
+soja,soja,2018,-52.0687,-18.9721,36.61
+soja,soja,2019,-52.07,-18.8978,37.44
+soja,soja,2020,-52.0516,-18.8725,38.13
+soja,soja,2021,-52.0308,-18.7155,39.32
+soja,soja,2022,-51.9964,-18.5627,40.76
+soja,soja,2023,-51.9799,-18.496,41.78
+soja,soja,2024,-51.9357,-18.3829,43.04
+soja,soja,2025,-52.0135,-18.3668,44.19
+cana,cana-de-açúcar,1985,-43.9631,-17.4065,2.15
+cana,cana-de-açúcar,1986,-44.1835,-17.6374,2.3
+cana,cana-de-açúcar,1987,-44.5186,-17.9597,2.48
+cana,cana-de-açúcar,1988,-45.0266,-18.3353,2.76
+cana,cana-de-açúcar,1989,-44.915,-18.206,2.97
+cana,cana-de-açúcar,1990,-45.0237,-18.3209,3.14
+cana,cana-de-açúcar,1991,-45.0452,-18.3043,3.31
+cana,cana-de-açúcar,1992,-45.0532,-18.2755,3.47
+cana,cana-de-açúcar,1993,-45.1775,-18.3454,3.74
+cana,cana-de-açúcar,1994,-45.29,-18.4174,3.92
+cana,cana-de-açúcar,1995,-45.4332,-18.5106,4.08
+cana,cana-de-açúcar,1996,-45.5965,-18.6333,4.32
+cana,cana-de-açúcar,1997,-45.6974,-18.7056,4.46
+cana,cana-de-açúcar,1998,-45.7531,-18.7473,4.53
+cana,cana-de-açúcar,1999,-45.8551,-18.8105,4.64
+cana,cana-de-açúcar,2000,-45.9058,-18.8037,4.68
+cana,cana-de-açúcar,2001,-45.9613,-18.8206,4.72
+cana,cana-de-açúcar,2002,-46.0733,-18.8316,5.02
+cana,cana-de-açúcar,2003,-46.2023,-18.9006,5.28
+cana,cana-de-açúcar,2004,-46.3672,-18.9744,5.59
+cana,cana-de-açúcar,2005,-46.5138,-19.0326,5.88
+cana,cana-de-açúcar,2006,-46.6784,-19.1029,6.23
+cana,cana-de-açúcar,2007,-46.9873,-19.2551,6.9
+cana,cana-de-açúcar,2008,-47.3378,-19.4467,7.85
+cana,cana-de-açúcar,2009,-47.5717,-19.5416,8.44
+cana,cana-de-açúcar,2010,-47.6777,-19.5573,8.72
+cana,cana-de-açúcar,2011,-47.7769,-19.5788,9.02
+cana,cana-de-açúcar,2012,-47.9086,-19.6145,9.4
+cana,cana-de-açúcar,2013,-48.0669,-19.6272,9.97
+cana,cana-de-açúcar,2014,-48.2065,-19.6463,10.46
+cana,cana-de-açúcar,2015,-48.2627,-19.6425,10.74
+cana,cana-de-açúcar,2016,-48.2816,-19.6112,10.87
+cana,cana-de-açúcar,2017,-48.2573,-19.5475,10.93
+cana,cana-de-açúcar,2018,-48.2486,-19.525,10.95
+cana,cana-de-açúcar,2019,-48.2725,-19.524,10.92
+cana,cana-de-açúcar,2020,-48.3362,-19.5074,11.02
+cana,cana-de-açúcar,2021,-48.3574,-19.5264,10.98
+cana,cana-de-açúcar,2022,-48.4086,-19.5711,11.0
+cana,cana-de-açúcar,2023,-48.4685,-19.6264,10.95
+cana,cana-de-açúcar,2024,-48.4085,-19.6172,10.95
+cana,cana-de-açúcar,2025,-48.357,-19.5832,11.15
+pastagem,pastagem,1985,-47.2308,-17.5527,104.0
+pastagem,pastagem,1986,-47.2477,-17.2319,112.2
+pastagem,pastagem,1987,-47.2769,-16.9719,117.25
+pastagem,pastagem,1988,-47.3306,-16.7924,121.02
+pastagem,pastagem,1989,-47.3891,-16.6549,124.02
+pastagem,pastagem,1990,-47.427,-16.5246,126.56
+pastagem,pastagem,1991,-47.47,-16.3935,128.78
+pastagem,pastagem,1992,-47.5541,-16.2612,131.93
+pastagem,pastagem,1993,-47.6309,-16.1413,134.73
+pastagem,pastagem,1994,-47.7631,-16.0301,137.88
+pastagem,pastagem,1995,-47.8987,-15.8918,141.29
+pastagem,pastagem,1996,-48.0022,-15.7627,144.25
+pastagem,pastagem,1997,-48.0857,-15.6417,146.89
+pastagem,pastagem,1998,-48.1484,-15.5013,149.92
+pastagem,pastagem,1999,-48.2275,-15.385,152.33
+pastagem,pastagem,2000,-48.3109,-15.282,154.36
+pastagem,pastagem,2001,-48.3795,-15.1697,156.25
+pastagem,pastagem,2002,-48.4754,-15.066,158.01
+pastagem,pastagem,2003,-48.5888,-14.92,160.8
+pastagem,pastagem,2004,-48.6908,-14.79,162.47
+pastagem,pastagem,2005,-48.7579,-14.6575,163.82
+pastagem,pastagem,2006,-48.8092,-14.542,164.29
+pastagem,pastagem,2007,-48.8514,-14.4272,164.58
+pastagem,pastagem,2008,-48.8735,-14.3077,164.79
+pastagem,pastagem,2009,-48.8851,-14.2209,164.75
+pastagem,pastagem,2010,-48.8933,-14.1499,164.66
+pastagem,pastagem,2011,-48.9034,-14.0893,164.58
+pastagem,pastagem,2012,-48.8753,-14.0079,164.53
+pastagem,pastagem,2013,-48.8432,-13.9243,163.94
+pastagem,pastagem,2014,-48.8373,-13.8687,163.33
+pastagem,pastagem,2015,-48.8484,-13.8271,163.11
+pastagem,pastagem,2016,-48.8757,-13.7869,162.91
+pastagem,pastagem,2017,-48.9092,-13.7552,162.36
+pastagem,pastagem,2018,-48.9509,-13.7227,162.23
+pastagem,pastagem,2019,-48.981,-13.6713,162.4
+pastagem,pastagem,2020,-49.0144,-13.6103,162.49
+pastagem,pastagem,2021,-49.036,-13.5415,163.12
+pastagem,pastagem,2022,-49.0332,-13.4635,164.17
+pastagem,pastagem,2023,-49.0502,-13.3669,165.47
+pastagem,pastagem,2024,-49.0548,-13.2884,165.45
+pastagem,pastagem,2025,-49.0228,-13.2079,165.62
+silvicultura,silvicultura,1985,-47.6702,-22.7349,1.88
+silvicultura,silvicultura,1986,-47.975,-23.0705,2.09
+silvicultura,silvicultura,1987,-48.0165,-22.9348,2.29
+silvicultura,silvicultura,1988,-47.9161,-22.7114,2.69
+silvicultura,silvicultura,1989,-47.9777,-22.7135,2.84
+silvicultura,silvicultura,1990,-47.9271,-22.5547,2.97
+silvicultura,silvicultura,1991,-47.6939,-22.3033,3.2
+silvicultura,silvicultura,1992,-47.6355,-22.2296,3.34
+silvicultura,silvicultura,1993,-47.6537,-22.1822,3.48
+silvicultura,silvicultura,1994,-47.6897,-22.0872,3.62
+silvicultura,silvicultura,1995,-47.7184,-21.9676,3.71
+silvicultura,silvicultura,1996,-47.7749,-21.9119,3.77
+silvicultura,silvicultura,1997,-47.8014,-21.9128,3.9
+silvicultura,silvicultura,1998,-47.828,-21.9109,3.95
+silvicultura,silvicultura,1999,-47.79,-21.8438,4.03
+silvicultura,silvicultura,2000,-47.7483,-21.7515,4.12
+silvicultura,silvicultura,2001,-47.7455,-21.7544,4.16
+silvicultura,silvicultura,2002,-47.7068,-21.7268,4.24
+silvicultura,silvicultura,2003,-47.6702,-21.7301,4.34
+silvicultura,silvicultura,2004,-47.5879,-21.69,4.51
+silvicultura,silvicultura,2005,-47.5436,-21.6703,4.73
+silvicultura,silvicultura,2006,-47.5357,-21.7082,4.97
+silvicultura,silvicultura,2007,-47.5659,-21.7686,5.26
+silvicultura,silvicultura,2008,-47.6576,-21.8711,5.62
+silvicultura,silvicultura,2009,-47.7079,-21.8944,6.09
+silvicultura,silvicultura,2010,-47.7804,-21.9044,6.56
+silvicultura,silvicultura,2011,-47.8233,-21.88,6.96
+silvicultura,silvicultura,2012,-47.9151,-21.8518,7.43
+silvicultura,silvicultura,2013,-47.9872,-21.6808,8.02
+silvicultura,silvicultura,2014,-48.0441,-21.6386,8.34
+silvicultura,silvicultura,2015,-48.1232,-21.6092,8.6
+silvicultura,silvicultura,2016,-48.1708,-21.5947,8.78
+silvicultura,silvicultura,2017,-48.1869,-21.5488,8.94
+silvicultura,silvicultura,2018,-48.1926,-21.5381,9.08
+silvicultura,silvicultura,2019,-48.1947,-21.5003,9.26
+silvicultura,silvicultura,2020,-48.2009,-21.4932,9.42
+silvicultura,silvicultura,2021,-48.2232,-21.4897,9.59
+silvicultura,silvicultura,2022,-48.2443,-21.4766,9.7
+silvicultura,silvicultura,2023,-48.2869,-21.4513,9.8
+silvicultura,silvicultura,2024,-48.3447,-21.4306,9.9
+silvicultura,silvicultura,2025,-48.3495,-21.4367,9.88
+floresta,formação florestal,1985,-57.1988,-7.6912,424.55
+floresta,formação florestal,1986,-57.2195,-7.6621,423.17
+floresta,formação florestal,1987,-57.2533,-7.6296,420.57
+floresta,formação florestal,1988,-57.2884,-7.595,418.06
+floresta,formação florestal,1989,-57.3122,-7.5635,416.1
+floresta,formação florestal,1990,-57.3313,-7.5451,414.64
+floresta,formação florestal,1991,-57.3507,-7.5269,413.0
+floresta,formação florestal,1992,-57.3706,-7.5124,411.05
+floresta,formação florestal,1993,-57.3883,-7.4981,409.22
+floresta,formação florestal,1994,-57.4076,-7.4789,406.96
+floresta,formação florestal,1995,-57.433,-7.4586,404.12
+floresta,formação florestal,1996,-57.4561,-7.4413,401.66
+floresta,formação florestal,1997,-57.4831,-7.4238,399.16
+floresta,formação florestal,1998,-57.5071,-7.4107,396.87
+floresta,formação florestal,1999,-57.5312,-7.3961,394.52
+floresta,formação florestal,2000,-57.5503,-7.3855,392.64
+floresta,formação florestal,2001,-57.5703,-7.3773,390.51
+floresta,formação florestal,2002,-57.5863,-7.3646,388.18
+floresta,formação florestal,2003,-57.6083,-7.3466,385.02
+floresta,formação florestal,2004,-57.63,-7.3335,382.14
+floresta,formação florestal,2005,-57.6473,-7.3261,379.89
+floresta,formação florestal,2006,-57.6608,-7.3257,378.25
+floresta,formação florestal,2007,-57.6727,-7.3298,377.06
+floresta,formação florestal,2008,-57.6877,-7.3324,375.82
+floresta,formação florestal,2009,-57.6967,-7.3372,375.07
+floresta,formação florestal,2010,-57.6972,-7.3413,374.78
+floresta,formação florestal,2011,-57.6991,-7.3422,374.31
+floresta,formação florestal,2012,-57.6994,-7.3462,374.02
+floresta,formação florestal,2013,-57.7036,-7.3514,373.48
+floresta,formação florestal,2014,-57.7053,-7.3556,372.92
+floresta,formação florestal,2015,-57.7065,-7.3614,372.2
+floresta,formação florestal,2016,-57.7064,-7.3669,371.43
+floresta,formação florestal,2017,-57.7073,-7.3696,370.78
+floresta,formação florestal,2018,-57.7079,-7.3703,370.09
+floresta,formação florestal,2019,-57.7129,-7.3686,368.67
+floresta,formação florestal,2020,-57.7231,-7.3677,367.23
+floresta,formação florestal,2021,-57.7327,-7.36,365.39
+floresta,formação florestal,2022,-57.742,-7.3561,363.5
+floresta,formação florestal,2023,-57.7645,-7.3558,361.71
+floresta,formação florestal,2024,-57.7772,-7.3545,360.5
+floresta,formação florestal,2025,-57.7912,-7.3498,359.5

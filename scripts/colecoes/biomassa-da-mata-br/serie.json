@@ -1,0 +1,5 @@
+[
+ { "tema": "acai", "numero": 168, "pasta": "168-a-mata-e-o-acaizal-brasil", "base": "br_acai_mata_cultivo", "data": "2027-03-05", "categoria": "biomas" },
+ { "tema": "babacu", "numero": 169, "pasta": "169-menos-coco-quebrado-brasil", "base": "br_babacu_amendoa", "data": "2027-03-08", "categoria": "biomas" },
+ { "tema": "carvao", "numero": 170, "pasta": "170-carvao-da-mata-carvao-plantado-brasil", "base": "br_carvao_nativo_plantado", "data": "2027-03-10", "categoria": "energia" }
+]
