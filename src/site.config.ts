@@ -250,16 +250,6 @@ export const COLECOES = {
       resumo: 'The nitrogen and phosphorus from São Paulo’s herds, the load per hectare of cropland and the place of biogas digestate in the state’s fertiliser.',
     },
   },
-  'suprimento-sp': {
-    pt: {
-      titulo: 'Bacias de suprimento',
-      resumo: 'Quanto biometano cabe num raio de caminhão: a biomassa ao alcance da rede de gás e de energia, as curvas de oferta pela distância e onde as usinas disputariam o mesmo resíduo.',
-    },
-    en: {
-      titulo: 'Supply catchments',
-      resumo: 'How much biomethane fits within a lorry’s radius: the biomass within reach of the gas and power grids, supply curves by distance and where plants would compete for the same residue.',
-    },
-  },
   'carbono-sp': {
     pt: {
       titulo: 'Carbono biogênico',
@@ -268,36 +258,6 @@ export const COLECOES = {
     en: {
       titulo: 'Biogenic carbon',
       resumo: 'The CO₂ released by ethanol fermentation and biogas upgrading: where it is, how much there is and what it could become.',
-    },
-  },
-  'censo-cruzado-sp': {
-    pt: {
-      titulo: 'O Censo cruzado',
-      resumo: 'Dez pares de variáveis do Censo 2022 que andam juntos nos municípios paulistas, escolhidos numa triagem de 4.455 cruzamentos e lidos como padrão, não como causa.',
-    },
-    en: {
-      titulo: 'The Census, crossed',
-      resumo: 'Ten pairs of 2022 Census variables that move together across São Paulo’s municipalities, picked from a screen of 4,455 crossings and read as patterns, not causes.',
-    },
-  },
-  'mulheres-responsaveis-sp': {
-    pt: {
-      titulo: 'Mulheres responsáveis pelo domicílio',
-      resumo: 'Quase metade das casas paulistas tem uma mulher como responsável. Oito mapas cruzam esse dado com esgoto, água, iluminação e renda e mostram que a diferença de serviços vem do endereço.',
-    },
-    en: {
-      titulo: 'Women heading households',
-      resumo: 'Nearly half of São Paulo’s homes name a woman as the person responsible. Eight maps cross this with sewerage, water, lighting and income, and show that the service gap comes from address.',
-    },
-  },
-  'funil-sp': {
-    pt: {
-      titulo: 'O funil do biometano',
-      resumo: 'Do potencial teórico ao acessível, nos quatro níveis do CP2B: o que fica no campo, o que vai para a caldeira, o que a estrada leva e quanto muda entre o cenário mínimo e o máximo.',
-    },
-    en: {
-      titulo: 'The biomethane funnel',
-      resumo: 'From theoretical to accessible potential, through CP2B’s four levels: what stays in the field, what goes to the boiler, what the road takes and how much changes between the lowest and highest scenarios.',
     },
   },
   'bioenergia-cruzada-sp': {

@@ -486,7 +486,7 @@ export const PERGUNTAS: Pergunta[] = [
   {
     id: 'biometano',
     pergunta: { pt: 'Quanto biometano São Paulo poderia fazer?', en: 'How much biomethane could São Paulo make?' },
-    colecoes: ['funil-sp', 'biogas-territorio-sp', 'suprimento-sp', 'bioenergia-sp'],
+    colecoes: ['biogas-territorio-sp', 'bioenergia-sp'],
   },
   {
     id: 'eletricidade',
@@ -506,7 +506,7 @@ export const PERGUNTAS: Pergunta[] = [
   {
     id: 'gente',
     pergunta: { pt: 'Onde e como vive a gente?', en: 'Where and how do people live?' },
-    colecoes: ['gente-sp', 'favelas-sp', 'mulheres-responsaveis-sp', 'renda-solar-sp', 'censo-cruzado-sp'],
+    colecoes: ['gente-sp', 'favelas-sp', 'renda-solar-sp'],
   },
   {
     id: 'fumaca',

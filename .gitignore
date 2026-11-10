@@ -45,3 +45,15 @@ mapas/037-drenagem-sp/dados/sp_drenagem.csv
 ELEITORAL-TSE-DADOS/
 # Listas de terceiros baixadas para consulta
 /*.csv
+
+# Resguardo de artigos (2026-11-10): estas pranchas vivem no repositório privado
+# aikiesan/essencial-geo-resguardo até a publicação dos artigos. Os scripts das coleções
+# ainda as geram aqui; o Git as ignora para que não voltem ao repositório público.
+/mapas/050-*/
+/mapas/08[5-8]-*/
+/mapas/09[3-9]-*/
+/mapas/10[0-9]-*/
+/mapas/110-*/
+/mapas/11[6-9]-*/
+/mapas/120-*/
+/mapas/12[1-5]-*/
